@@ -1,0 +1,4 @@
+if exists ("#98")
+    reject()
+end
+move_field("#70","source[]")

@@ -2,6 +2,7 @@ FLUX_DIR + "RPB-Export_HBZ_Titel_Test.txt"
 | open-file(encoding="IBM437")
 | as-lines
 | rpb.Decode
+| fix(FLUX_DIR + "rpb.fix")
 | encode-json(prettyPrinting="true")
-| print
+| write(FLUX_DIR + "output/test-output.json")
 ;

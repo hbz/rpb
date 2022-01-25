@@ -11,6 +11,7 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-strings" % "5.3.1",
   "org.metafacture" % "metafacture-json" % "5.3.1",
   "org.metafacture" % "metafacture-flux" % "5.3.1",
+  "org.metafacture" % "metafacture-triples" % "5.3.1",
   "org.metafacture" % "metafix" % "0.2.0-SNAPSHOT"
 )
 

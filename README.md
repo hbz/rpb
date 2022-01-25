@@ -5,7 +5,7 @@ https://service-wiki.hbz-nrw.de/pages/viewpage.action?pageId=712998955
 ## metafix
 
 ```
-git clone git@github.com:metafacture/metafacture-fix.git
+git clone git@github.com:metafacture/metafacture-fix.git -b rpb
 cd metafacture-fix
 ./gradlew publishToMavenLocal
 ```

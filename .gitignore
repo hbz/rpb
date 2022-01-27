@@ -6,3 +6,5 @@ bin
 .settings
 /conf/output/*
 !/conf/output/.empty
+/data/*
+!/data/.empty

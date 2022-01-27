@@ -1,3 +1,5 @@
+/* Copyright 2022 Fabian Steeg, hbz. Licensed under the GPLv2 */
+
 package rpb;
 
 import org.apache.log4j.Logger;

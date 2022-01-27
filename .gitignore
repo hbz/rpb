@@ -5,6 +5,6 @@ bin
 .classpath
 .settings
 /conf/output/*
-!/conf/output/.empty
+!/conf/output/test-output.json
 /data/*
 !/data/.empty

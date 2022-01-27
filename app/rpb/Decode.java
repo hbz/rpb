@@ -3,6 +3,7 @@
 package rpb;
 
 import org.apache.log4j.Logger;
+import org.metafacture.framework.MetafactureException;
 import org.metafacture.framework.StreamReceiver;
 import org.metafacture.framework.helpers.DefaultObjectPipe;
 
@@ -10,26 +11,31 @@ import org.metafacture.framework.helpers.DefaultObjectPipe;
  * Decode RPB Allegro export data.
  */
 public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
-    
+
+    private static final int FIELD_NAME_SIZE = 4; // e.g. '#983'
     private static final Logger LOG = Logger.getLogger(Decode.class);
 
     @Override
     public void process(final String obj) {
-        final String[] vals = obj.replace("[/]", "\uFFFF").split("\uFFFF");
-        final String[] idKeyVal = vals[1].trim().split(" ");
-        LOG.info("Process record: " + idKeyVal[1]);
-        getReceiver().startRecord(idKeyVal[1]);
-        getReceiver().literal(idKeyVal[0], idKeyVal[1]);
+        LOG.info("Process record: " + obj);
+        final String[] vals = obj.split("\\[/\\]");
+        getReceiver().startRecord(getId(obj, vals));
         processFields(vals);
         getReceiver().endRecord();
     }
 
+    private String getId(final String obj, final String[] vals) {
+        if (vals.length < 2 || !vals[1].trim().startsWith("#00 ")) {
+            throw new MetafactureException("Can't get ID from input: " + obj);
+        }
+        return vals[1].trim().substring(FIELD_NAME_SIZE);
+    }
+
     private void processFields(final String[] vals) {
-        for (int i = 2; i < vals.length; i++) {
-            final String[] keyVal = vals[i].trim().split("(?<=#\\d{2}).*?");
-            if (keyVal.length == 2) {
-                getReceiver().literal(keyVal[0], keyVal[1]);
-            }
+        for (int i = 1; i < vals.length; i++) {
+            final String k = vals[i].substring(0, FIELD_NAME_SIZE);
+            final String v = vals[i].substring(FIELD_NAME_SIZE);
+            getReceiver().literal(k, v);
         }
     }
 }

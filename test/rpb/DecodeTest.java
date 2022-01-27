@@ -2,6 +2,7 @@
 
 package rpb;
 
+import static org.hamcrest.CoreMatchers.startsWith;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.verifyZeroInteractions;
 
@@ -9,6 +10,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.metafacture.framework.MetafactureException;
 import org.metafacture.framework.StreamReceiver;
 import org.mockito.InOrder;
 import org.mockito.Mock;
@@ -49,11 +51,12 @@ public final class DecodeTest {
 
     @Test
     public void processRecord() {
-        test("[/]#00 123[/]#20 abc[/]", () -> {
+        test("[/]#00 123[/]#20 abc[/]#983HT011020818[/]", () -> {
             final InOrder ordered = inOrder(receiver);
             ordered.verify(receiver).startRecord("123");
-            ordered.verify(receiver).literal("#00", "123");
-            ordered.verify(receiver).literal("#20", " abc");
+            ordered.verify(receiver).literal("#00 ", "123");
+            ordered.verify(receiver).literal("#20 ", "abc");
+            ordered.verify(receiver).literal("#983", "HT011020818");
             ordered.verify(receiver).endRecord();
             ordered.verifyNoMoreInteractions();
         });
@@ -61,8 +64,8 @@ public final class DecodeTest {
 
     @Test
     public void processError() {
-        exception.expect(ArrayIndexOutOfBoundsException.class);
-        exception.expectMessage("1");
+        exception.expect(MetafactureException.class);
+        exception.expectMessage(startsWith("Can't get ID from input"));
         decode.process("[/]#01something[/]");
     }
 

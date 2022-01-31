@@ -3,6 +3,7 @@ FLUX_DIR + "RPB-Export_HBZ_Titel_Test.txt"
 | as-lines
 | rpb.Decode
 | fix(FLUX_DIR + "rpb.fix")
+| batch-reset(batchsize="1")
 | encode-json(prettyPrinting="true")
-| write(FLUX_DIR + "output/test-output.json")
+| write(FLUX_DIR + "output/test-output-${i}.json")
 ;

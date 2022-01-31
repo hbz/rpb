@@ -27,7 +27,7 @@ public class EtlTest {
 
     @Test
     public void runMain() throws FileNotFoundException, RecognitionException, IOException {
-        File output = new File("conf/output/test-output.json");
+        File output = new File("conf/output/test-output-0.json");
         output.delete();
         assertThat(output).as("test output").doesNotExist();
         ETL.main(new String[] { "conf/rpb-test.flux" });

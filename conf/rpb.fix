@@ -8,10 +8,34 @@
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
 
+# Set "type"
+
+set_array("type[]", "BibliographicResource")
+if all_equal("#36 ", "u")
+  set_field("type[].$append", "Article")
+end
+if all_equal("#36 ", "s")
+  set_field("type[].$append", "Book")
+end
+
+# "id", using https URIs
+
+move_field("#00 ", "id")
+prepend("id","https://lobid.org/resources/RPB") 
+
 # "title" field
 
 move_field("#20 ","title")
 replace_all("title", "\\s\\+", "")
 
+# "extent"
+
+move_field("#77 ", "extent")
+
+# "responsibilityStatement"
+# Dafür scheint es in RPB kein Feld zu geben. Evtl. Teil von #70er Feldern
+
+# "medium"
+# Dafür scheint es keine explizite Angabe zu geben.
 
 retain("type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id" )

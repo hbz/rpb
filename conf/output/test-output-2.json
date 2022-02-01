@@ -1,0 +1,7 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "id" : "https://lobid.org/resources/RPB929t123954",
+  "title" : "Jahreschronik von Juli 2011 bis Juni 2012 : Energiewende - Ortsjubiläen - Gebietsreform",
+  "extent" : "Ill."
+}

@@ -1,4 +1,6 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "id" : "https://lobid.org/resources/RPB929t123959",
   "title" : "¬Die¬ Andernacher Bäckerjungen"
 }

@@ -1,4 +1,7 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "title" : "Burg Nister/Froneck bei der Abtei Marienstatt : weitere Namen für die Burg: Nistria, Nysteria, Fronecke, Vroneck"
+  "type" : [ "BibliographicResource", "Article" ],
+  "id" : "https://lobid.org/resources/RPB929t123957",
+  "title" : "Burg Nister/Froneck bei der Abtei Marienstatt : weitere Namen für die Burg: Nistria, Nysteria, Fronecke, Vroneck",
+  "extent" : "zahlr. Ill., Kt."
 }

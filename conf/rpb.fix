@@ -1,14 +1,8 @@
-# Remove titles that are already in lobid-resources
-#
-# if exists ("#983")
-#    reject()
-# end
-
-# Set JSON-LD context
+# ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
 
-# Set "type"
+# ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
 if all_equal("#36 ", "u")
@@ -18,24 +12,53 @@ if all_equal("#36 ", "s")
   set_field("type[].$append", "Book")
 end
 
-# "id", using https URIs
+# ------- "id", using https URIs -------
 
 move_field("#00 ", "id")
 prepend("id","https://lobid.org/resources/RPB") 
 
-# "title" field
+# ------- hbzId -------
+# Remove titles that are already in lobid-resources
+#
+# if exists ("#983")
+#    reject()
+# end
+
+move_field("#983", "hbzId")
+
+# ------- "title" field -------
 
 move_field("#20 ","title")
 replace_all("title", "\\s\\+", "")
 
-# "extent"
+# ------- "extent" -------
 
 move_field("#77 ", "extent")
 
-# "responsibilityStatement"
+# ------- "responsibilityStatement" -------
 # Dafür scheint es in RPB kein Feld zu geben. Evtl. Teil von #70er Feldern
 
-# "medium"
+# ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
+
+
+# -------- "responsibilityStatement" --------
+# #39  ist nach Quelldatendoku die "Verfasserangabe (Vorlageform)"
+
+set_array("responsibilityStatement")
+move_field("#39 ", "responsibilityStatement[].$append")
+
+# ------- "language" -------
+# Dafür scheint es keine explizite Angabe zu geben.
+
+# ------- "publication" object -------
+
+# Funktioniert nicht:
+# set_array("publication[]")
+# move_field("#74  ", "publication[].location")
+
+# Funktioniert auch nicht:
+# add_field("publication[0].type[].$append", "PublicationEvent")
+
 
 retain("type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id" )

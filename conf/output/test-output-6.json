@@ -5,5 +5,9 @@
   "hbzId" : "HT017227822",
   "title" : "Niederfischbach : mit dem Raiffeisenbank-Kalender durch 1994",
   "extent" : "[13] Bl. : überw. Ill. ; 298 x 419 mm",
-  "responsibilityStatement" : [ "Raiffeisenbank Niederfischbach eG. [Idee und Gestaltung: Karl Heinz Hof]" ]
+  "responsibilityStatement" : [ "Raiffeisenbank Niederfischbach eG. [Idee und Gestaltung: Karl Heinz Hof]" ],
+  "publication" : [ {
+    "location" : "Niederfischbach",
+    "type" : [ "PublicationEvent" ]
+  } ]
 }

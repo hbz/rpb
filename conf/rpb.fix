@@ -53,12 +53,9 @@ move_field("#39 ", "responsibilityStatement[].$append")
 
 # ------- "publication" object -------
 
-# Funktioniert nicht:
-# set_array("publication[]")
-# move_field("#74  ", "publication[].location")
-
-# Funktioniert auch nicht:
-# add_field("publication[0].type[].$append", "PublicationEvent")
-
+set_array("publication[]")
+copy_field("#74 ", "publication[].$append.location")
+add_field("publication[].$last.type[].$append", "PublicationEvent")
 
 retain("type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id" )
+vacuum()

@@ -11,6 +11,9 @@ end
 if all_equal("#36 ", "s")
   set_field("type[].$append", "Book")
 end
+if any_equal("#36 ", "sm")
+  set_field("type[].$append", "Periodical")
+end
 
 # ------- "id", using https URIs -------
 
@@ -35,9 +38,6 @@ replace_all("title", "\\s\\+", "")
 
 move_field("#77 ", "extent")
 
-# ------- "responsibilityStatement" -------
-# Dafür scheint es in RPB kein Feld zu geben. Evtl. Teil von #70er Feldern
-
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 
@@ -60,7 +60,40 @@ replace_all("publication[].*.startDate","^\\[(\\d{4})\\]","$1")
 move_field("#75 ", "publication[].publishedBy")
 add_field("publication[].$last.type[].$append", "PublicationEvent")
 
+# ------- "zdbId" -------
 
+if any_equal("#36 ", "sm")
+  move_field("#88 ", "zdbId")
+end
 
-retain("type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id" )
+# -------RPB-Sachnotationen --------
+
+set_array("subject[]")
+
+if exists ("#30*")
+  move_field("#30*", "subject[].$append.id")
+  replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
+end
+
+# To DO: Ergänze source
+# "source": {
+#    "id": "https://w3id.org/lobid/rpb",
+#    "label": "Systematik der Rheinland-Pfälzischen Bibliographie"
+#    } 
+#
+# Das hier klappt nicht:
+#
+# add_field("subject[].*.source.id", "https://w3id.org/lobid/rpb")
+# add_field("subject[].*.source.label", "Systematik der Rheinland-Pfälzischen Bibliographie")
+
+# ------- Ortsnotation -------
+
+set_array("spatial[]")
+
+if exists ("#31*")
+  move_field("#31*", "spatial[].$append.id")
+  replace_all("spatial[].*.id","_r99_\\s_o(\\d+)_","rpb-spatial:n$1")
+end
+
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]" )
 vacuum()

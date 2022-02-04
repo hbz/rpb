@@ -7,5 +7,11 @@
   "publication" : [ {
     "startDate" : "2012",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n522050"
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n13800045"
   } ]
 }

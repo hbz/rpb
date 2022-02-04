@@ -1,0 +1,24 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Periodical" ],
+  "id" : "https://lobid.org/resources/RPB929t123588",
+  "hbzId" : "HT015397255",
+  "title" : "Damenhandball",
+  "publication" : [ {
+    "location" : "Neuwied-Engers"
+  }, {
+    "startDate" : "2003",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "zdbId" : "2402792-3",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n736030"
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n736050"
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n138000450200"
+  }, {
+    "id" : "rpb-spatial:n138000450200"
+  } ]
+}

@@ -13,5 +13,11 @@
   }, {
     "publishedBy" : "Kontrast-Verl.",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n768010"
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n11100000"
   } ]
 }

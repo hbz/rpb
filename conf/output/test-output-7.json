@@ -7,5 +7,15 @@
   "publication" : [ {
     "startDate" : "1973",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n240400"
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n706040"
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n13700003"
+  }, {
+    "id" : "rpb-spatial:n13700003"
   } ]
 }

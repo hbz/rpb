@@ -1,0 +1,23 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Periodical" ],
+  "id" : "https://lobid.org/resources/RPB929t123267",
+  "hbzId" : "HT008744820",
+  "title" : "Quartalsbericht der Stadt Koblenz",
+  "responsibilityStatement" : [ "Stadt Koblenz" ],
+  "publication" : [ {
+    "location" : "Koblenz"
+  }, {
+    "startDate" : "1997"
+  }, {
+    "publishedBy" : "Stadt",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "zdbId" : "1437275-7",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102050"
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n11100000"
+  } ]
+}

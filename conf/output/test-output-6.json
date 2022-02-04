@@ -11,5 +11,11 @@
   }, {
     "startDate" : "1993",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102050"
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n13207076"
   } ]
 }

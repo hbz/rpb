@@ -12,6 +12,7 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-json" % "5.3.1",
   "org.metafacture" % "metafacture-flux" % "5.3.1",
   "org.metafacture" % "metafacture-triples" % "5.3.1",
+  "org.metafacture" % "metafacture-formatting" % "5.3.1",
   "org.metafacture" % "metafix" % "0.2.0-SNAPSHOT",
   "org.easytesting" % "fest-assert" % "1.4" % "test",
   "org.mockito" % "mockito-core" % "2.27.0" % "test",

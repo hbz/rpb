@@ -3,5 +3,9 @@
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123955",
   "title" : "Graffiti im Kreis Altenkirchen: Vom Vandalismus zur legalen Kunst : eine Dokumentation",
-  "extent" : "zahlr. Ill."
+  "extent" : "zahlr. Ill.",
+  "publication" : [ {
+    "startDate" : "2012",
+    "type" : [ "PublicationEvent" ]
+  } ]
 }

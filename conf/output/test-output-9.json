@@ -1,0 +1,17 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "id" : "https://lobid.org/resources/RPB929t124035",
+  "hbzId" : "HT017439171",
+  "title" : "Dunkelgeld : Kriminalroman",
+  "extent" : "238 S.",
+  "responsibilityStatement" : [ "Anja Balschun" ],
+  "publication" : [ {
+    "location" : "Pfalzfeld"
+  }, {
+    "startDate" : "2012"
+  }, {
+    "publishedBy" : "Kontrast-Verl.",
+    "type" : [ "PublicationEvent" ]
+  } ]
+}

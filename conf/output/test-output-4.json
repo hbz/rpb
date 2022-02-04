@@ -2,6 +2,10 @@
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123956",
-  "title" : "Diehls gehen Kirstins Weg weiter und weiter : Kampf gegen den Krebs: Neuwieder Ehepaar führt Vermächtnis der Tochter fort ; Ehrung durch Gauck",
-  "extent" : "Ill."
+  "title" : "Diehls gehen Kirstins Weg weiter und weiter : Kampf gegen den Krebs: Neuwieder Ehepaar f∩┐╜hrt Verm∩┐╜chtnis der Tochter fort ; Ehrung durch Gauck",
+  "extent" : "Ill.",
+  "publication" : [ {
+    "startDate" : "2012",
+    "type" : [ "PublicationEvent" ]
+  } ]
 }

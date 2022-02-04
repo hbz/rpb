@@ -3,5 +3,9 @@
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123959",
   "hbzId" : "HT011020818",
-  "title" : "¬Die¬ Andernacher Bäckerjungen"
+  "title" : "∩┐╜Die∩┐╜ Andernacher B∩┐╜ckerjungen",
+  "publication" : [ {
+    "startDate" : "1973",
+    "type" : [ "PublicationEvent" ]
+  } ]
 }

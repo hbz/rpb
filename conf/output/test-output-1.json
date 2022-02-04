@@ -3,5 +3,9 @@
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123953",
   "title" : "Hildegard Sayn",
-  "extent" : "Ill."
+  "extent" : "Ill.",
+  "publication" : [ {
+    "startDate" : "2012",
+    "type" : [ "PublicationEvent" ]
+  } ]
 }

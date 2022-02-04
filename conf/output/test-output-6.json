@@ -4,10 +4,12 @@
   "id" : "https://lobid.org/resources/RPB929t123958",
   "hbzId" : "HT017227822",
   "title" : "Niederfischbach : mit dem Raiffeisenbank-Kalender durch 1994",
-  "extent" : "[13] Bl. : überw. Ill. ; 298 x 419 mm",
+  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 298 x 419 mm",
   "responsibilityStatement" : [ "Raiffeisenbank Niederfischbach eG. [Idee und Gestaltung: Karl Heinz Hof]" ],
   "publication" : [ {
-    "location" : "Niederfischbach",
+    "location" : "Niederfischbach"
+  }, {
+    "startDate" : "1993",
     "type" : [ "PublicationEvent" ]
   } ]
 }

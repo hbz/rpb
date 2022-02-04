@@ -4,10 +4,12 @@
   "id" : "https://lobid.org/resources/RPB929t123960",
   "hbzId" : "HT017227834",
   "title" : "Niederfischbach und seine Vereine : [Kalender] 1995",
-  "extent" : "[13] Bl. : überw. Ill. ; 300 x 420 mm",
+  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 300 x 420 mm",
   "responsibilityStatement" : [ "Raiffeisenbank Niederfischbach eG. [Idee und Gestaltung: Karl Heinz Hof]" ],
   "publication" : [ {
-    "location" : "Niederfischbach",
+    "location" : "Niederfischbach"
+  }, {
+    "startDate" : "1994",
     "type" : [ "PublicationEvent" ]
   } ]
 }

@@ -23,8 +23,5 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n11100000"
-  } ],
-  "contribution" : [ {
-    "type" : [ "Contribution" ]
   } ]
 }

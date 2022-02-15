@@ -111,7 +111,6 @@ if none_contain("#40 ", "00Gn")
   do list(path: "contribution[]")
       set_array("type[]", "Contribution")
   end
-  add_field("contribution[].*.type[].$append", "Contribution")
 end
 
 

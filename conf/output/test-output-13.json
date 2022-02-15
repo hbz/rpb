@@ -1,21 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "id" : "https://lobid.org/resources/RPB929t124035",
-  "hbzId" : "HT017439171",
-  "title" : "Dunkelgeld : Kriminalroman",
-  "extent" : "238 S.",
-  "responsibilityStatement" : [ "Anja Balschun" ],
+  "id" : "https://lobid.org/resources/RPB929t123942",
+  "hbzId" : "HT017193464",
+  "title" : "Koblenz 2012 - etwas anders gesehen : [Kalender]",
+  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 455 mm x 480 mm",
+  "responsibilityStatement" : [ "[Christian Nentwig]" ],
   "publication" : [ {
-    "location" : "Pfalzfeld"
+    "location" : "Aichach"
   }, {
-    "startDate" : "2012"
+    "startDate" : "2011"
   }, {
-    "publishedBy" : "Kontrast-Verl.",
+    "publishedBy" : "Korsch-Verl.",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768010",
+    "id" : "http://purl.org/lobid/rpb#n102050",
     "source" : {
       "id" : "https://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
@@ -26,7 +26,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/142532460"
+      "id" : "https://d-nb.info/gnd/00Pn09k3332766b"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

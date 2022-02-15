@@ -1,26 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "id" : "https://lobid.org/resources/RPB929t123953",
-  "title" : "Hildegard Sayn",
+  "id" : "https://lobid.org/resources/RPB929t123950",
+  "title" : "\"∩┐╜Eine∩┐╜ wichtige Koblenzer Institution : Dr. Rudolf Feld erinnert an Ursulinenschule in schwierigen Zeiten",
   "extent" : "Ill.",
   "publication" : [ {
     "startDate" : "2012",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n109000",
+    "id" : "http://purl.org/lobid/rpb#n784044",
     "source" : {
       "id" : "https://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13210501"
+    "id" : "rpb-spatial:n11100000"
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/00Pn02k1556a"
+      "id" : "https://d-nb.info/gnd/1051164982"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

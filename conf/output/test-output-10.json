@@ -15,9 +15,16 @@
   } ],
   "zdbId" : "1437275-7",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n102050"
+    "id" : "http://purl.org/lobid/rpb#n102050",
+    "source" : {
+      "id" : "https://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n11100000"
+  } ],
+  "contribution" : [ {
+    "type" : [ "Contribution" ]
   } ]
 }

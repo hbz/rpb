@@ -1,0 +1,28 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "id" : "https://lobid.org/resources/RPB929t123944",
+  "hbzId" : "HT017433652",
+  "title" : "Volkesfeld : die Geschichte des Dorfes und seiner Bewohner",
+  "extent" : "524 S. : zahlr. Ill., Kt.",
+  "responsibilityStatement" : [ "Rudi Merten" ],
+  "publication" : [ {
+    "location" : "Lahnstein"
+  }, {
+    "startDate" : "2012"
+  }, {
+    "publishedBy" : "Imprimatur-Verl. Kring",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "source" : {
+      "id" : "https://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n13704106"
+  } ],
+  "contribution" : [ ]
+}

@@ -12,13 +12,24 @@
   } ],
   "zdbId" : "2402792-3",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n736030"
+    "id" : "http://purl.org/lobid/rpb#n736030",
+    "source" : {
+      "id" : "https://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n736050"
+    "id" : "http://purl.org/lobid/rpb#n736050",
+    "source" : {
+      "id" : "https://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n138000450200"
   }, {
     "id" : "rpb-spatial:n138000450200"
+  } ],
+  "contribution" : [ {
+    "type" : [ "Contribution" ]
   } ]
 }

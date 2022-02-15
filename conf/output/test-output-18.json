@@ -1,39 +1,32 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "id" : "https://lobid.org/resources/RPB929t123959",
-  "hbzId" : "HT011020818",
-  "title" : "∩┐╜Die∩┐╜ Andernacher B∩┐╜ckerjungen",
+  "id" : "https://lobid.org/resources/RPB929t123947",
+  "title" : "\"Wir gehen stiften\" : Gr∩┐╜ndung der Stiftung \"Bisch∩┐╜fliches Cusanus-Gymnasium Koblenz\"",
+  "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1973",
+    "startDate" : "2012",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
+    "id" : "http://purl.org/lobid/rpb#n784044",
     "source" : {
       "id" : "https://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n706040",
+    "id" : "http://purl.org/lobid/rpb#n522050",
     "source" : {
       "id" : "https://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13700003"
+    "id" : "rpb-spatial:n11100000"
   }, {
-    "id" : "rpb-spatial:n13700003"
+    "id" : "rpb-spatial:n11100000"
   } ],
   "contribution" : [ {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/00Pn01s22411622a"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
     "type" : [ "Contribution" ]
   } ]
 }

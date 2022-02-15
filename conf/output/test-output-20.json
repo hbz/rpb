@@ -1,32 +1,32 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "id" : "https://lobid.org/resources/RPB929t124035",
-  "hbzId" : "HT017439171",
-  "title" : "Dunkelgeld : Kriminalroman",
-  "extent" : "238 S.",
-  "responsibilityStatement" : [ "Anja Balschun" ],
+  "id" : "https://lobid.org/resources/RPB929t123949",
+  "hbzId" : "HT017293231",
+  "title" : "\"Resurescat Polonia\" : das Verh∩┐╜ltnis der Bev∩┐╜lkerung der preu∩┐╜ischen Rheinprovinz zum polnischen Novemberaufstand 1830/31 im Licht der heimischen Presse",
+  "extent" : "327 S.",
+  "responsibilityStatement" : [ "Erhard Br∩┐╜dner" ],
   "publication" : [ {
-    "location" : "Pfalzfeld"
+    "location" : "N∩┐╜mbrecht"
   }, {
     "startDate" : "2012"
   }, {
-    "publishedBy" : "Kontrast-Verl.",
+    "publishedBy" : "Kirsch",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768010",
+    "id" : "http://purl.org/lobid/rpb#n246100",
     "source" : {
       "id" : "https://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n11100000"
+    "id" : "_r51_"
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/142532460"
+      "id" : "https://d-nb.info/gnd/1024109305"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -1,0 +1,35 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "id" : "https://lobid.org/resources/RPB929t123940",
+  "hbzId" : "HT017193456",
+  "title" : "Neuwied und die F∩┐╜rsten zu Wied : [Kalender] 2012",
+  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 450 mm x 320 mm",
+  "responsibilityStatement" : [ "[Hans Scharenberg]" ],
+  "publication" : [ {
+    "location" : "[Neuwied]"
+  }, {
+    "startDate" : "2011",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n844000",
+    "source" : {
+      "id" : "https://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n13800045"
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1051171504"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

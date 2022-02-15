@@ -13,9 +13,16 @@
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n735090"
+    "id" : "http://purl.org/lobid/rpb#n735090",
+    "source" : {
+      "id" : "https://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13207076"
+  } ],
+  "contribution" : [ {
+    "type" : [ "Contribution" ]
   } ]
 }

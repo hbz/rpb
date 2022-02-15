@@ -1,26 +1,32 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "id" : "https://lobid.org/resources/RPB929t123953",
-  "title" : "Hildegard Sayn",
-  "extent" : "Ill.",
+  "type" : [ "BibliographicResource", "Book" ],
+  "id" : "https://lobid.org/resources/RPB929t123943",
+  "hbzId" : "HT017385524",
+  "title" : "Loreley singt nicht mehr : Kriminalroman",
+  "extent" : "379 S.",
+  "responsibilityStatement" : [ "Judith Merchant" ],
   "publication" : [ {
-    "startDate" : "2012",
+    "location" : "M∩┐╜nchen"
+  }, {
+    "startDate" : "2012"
+  }, {
+    "publishedBy" : "Knaur-Taschenbuch-Verl.",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n109000",
+    "id" : "http://purl.org/lobid/rpb#n768010",
     "source" : {
       "id" : "https://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13210501"
+    "id" : "_r22_"
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/00Pn02k1556a"
+      "id" : "https://d-nb.info/gnd/1011378183"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -55,9 +55,10 @@ move_field("#39 ", "responsibilityStatement[].$append")
 
 set_array("publication[]")
 copy_field("#74 ", "publication[].$append.location")
-move_field("#76a", "publication[].startDate")
-replace_all("publication[].*.startDate","^\\[(\\d{4})\\]","$1")
-move_field("#75 ", "publication[].publishedBy")
+copy_field("#76a", "publication[].$last.startDate")
+replace_all("publication[].$last.startDate","^\\[(\\d{4})\\]","$1")
+copy_field("#75 ", "publication[].publishedBy")
+set_array("publication[].$last.type[]")
 add_field("publication[].$last.type[].$append", "PublicationEvent")
 
 # ------- "zdbId" -------

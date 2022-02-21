@@ -7,10 +7,8 @@
   "extent" : "524 S. : zahlr. Ill., Kt.",
   "responsibilityStatement" : [ "Rudi Merten" ],
   "publication" : [ {
-    "location" : "Lahnstein"
-  }, {
-    "startDate" : "2012"
-  }, {
+    "location" : "Lahnstein",
+    "startDate" : "2012",
     "publishedBy" : "Imprimatur-Verl. Kring",
     "type" : [ "PublicationEvent" ]
   } ],
@@ -23,6 +21,5 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13704106"
-  } ],
-  "contribution" : [ ]
+  } ]
 }

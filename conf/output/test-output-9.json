@@ -7,10 +7,8 @@
   "extent" : "238 S.",
   "responsibilityStatement" : [ "Anja Balschun" ],
   "publication" : [ {
-    "location" : "Pfalzfeld"
-  }, {
-    "startDate" : "2012"
-  }, {
+    "location" : "Pfalzfeld",
+    "startDate" : "2012",
     "publishedBy" : "Kontrast-Verl.",
     "type" : [ "PublicationEvent" ]
   } ],

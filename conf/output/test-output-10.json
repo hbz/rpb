@@ -6,10 +6,8 @@
   "title" : "Quartalsbericht der Stadt Koblenz",
   "responsibilityStatement" : [ "Stadt Koblenz" ],
   "publication" : [ {
-    "location" : "Koblenz"
-  }, {
-    "startDate" : "1997"
-  }, {
+    "location" : "Koblenz",
+    "startDate" : "1997",
     "publishedBy" : "Stadt",
     "type" : [ "PublicationEvent" ]
   } ],

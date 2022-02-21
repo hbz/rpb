@@ -7,10 +7,8 @@
   "extent" : "206 S. : zahlr. Ill.",
   "responsibilityStatement" : [ "[Hrsg. Cornelia M∩┐╜ller ... Autoren Hans-Ulrich Brandenburger" ],
   "publication" : [ {
-    "location" : "Willmenrod"
-  }, {
-    "startDate" : "2012"
-  }, {
+    "location" : "Willmenrod",
+    "startDate" : "2012",
     "publishedBy" : "Spotpress-Verl.",
     "type" : [ "PublicationEvent" ]
   } ],
@@ -23,6 +21,5 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n14309312"
-  } ],
-  "contribution" : [ ]
+  } ]
 }

@@ -7,10 +7,8 @@
   "extent" : "327 S.",
   "responsibilityStatement" : [ "Erhard Br∩┐╜dner" ],
   "publication" : [ {
-    "location" : "N∩┐╜mbrecht"
-  }, {
-    "startDate" : "2012"
-  }, {
+    "location" : "N∩┐╜mbrecht",
+    "startDate" : "2012",
     "publishedBy" : "Kirsch",
     "type" : [ "PublicationEvent" ]
   } ],

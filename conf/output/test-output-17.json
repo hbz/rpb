@@ -7,8 +7,7 @@
   "extent" : "[68] S. : zahlr. Ill.",
   "responsibilityStatement" : [ "[Texte: Trudelies Frorath ... Fotos: Willy Klein ... ]" ],
   "publication" : [ {
-    "location" : "Rheinbrohl"
-  }, {
+    "location" : "Rheinbrohl",
     "startDate" : "2012",
     "type" : [ "PublicationEvent" ]
   } ],

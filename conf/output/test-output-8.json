@@ -7,8 +7,7 @@
   "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 300 x 420 mm",
   "responsibilityStatement" : [ "Raiffeisenbank Niederfischbach eG. [Idee und Gestaltung: Karl Heinz Hof]" ],
   "publication" : [ {
-    "location" : "Niederfischbach"
-  }, {
+    "location" : "Niederfischbach",
     "startDate" : "1994",
     "type" : [ "PublicationEvent" ]
   } ],

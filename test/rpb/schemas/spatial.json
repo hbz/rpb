@@ -30,7 +30,10 @@
                     "id": {
                         "type": "string",
                         "format": "uri",
-                        "const": "https://nwbib.de/spatial"
+                        "enum": [
+                            "https://nwbib.de/spatial",
+                            "https://example.org/rpb-spatial"
+                        ]
                     },
                     "label": {
                         "type": "string"

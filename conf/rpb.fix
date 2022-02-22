@@ -88,17 +88,12 @@ set_array("subject[]")
 if exists ("#30*")
   move_field("#30*", "subject[].$append.id")
   replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
-end
-
-# To DO: Ergänze source
-# "source": {
-#    "id": "https://purl.org/lobid/rpb",
-#    "label": "Systematik der Rheinland-Pfälzischen Bibliographie"
-#    } 
-
-do list(path: "subject[]")
-    add_field("source.id", "https://purl.org/lobid/rpb")
+  do list(path: "subject[]")
+    set_array("type[]")
+    add_field("type[].$append", "Concept")
+    add_field("source.id", "http://purl.org/lobid/rpb")
     add_field("source.label", "Systematik der Rheinland-Pfälzischen Bibliographie")
+  end
 end
 
 # ------- Ortsnotation -------
@@ -108,6 +103,12 @@ set_array("spatial[]")
 if exists ("#31*")
   move_field("#31*", "spatial[].$append.id")
   replace_all("spatial[].*.id","_r99_\\s_o(\\d+)_","rpb-spatial:n$1")
+  do list(path: "spatial[]")
+    set_array("type[]")
+    add_field("type[].$append", "Concept")
+    add_field("source.id", "https://example.org/rpb-spatial")
+    add_field("source.label", "Raumsystematik der Rheinland-Pfälzischen Bibliographie")
+  end
 end
 
 # ------- Contribution -------

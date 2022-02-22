@@ -19,13 +19,19 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n246100",
+    "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://purl.org/lobid/rpb",
+      "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   } ],
   "spatial" : [ {
-    "id" : "_r51_"
+    "id" : "_r51_",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
   } ],
   "contribution" : [ {
     "agent" : {

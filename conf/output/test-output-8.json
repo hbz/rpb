@@ -18,12 +18,18 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n735090",
+    "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://purl.org/lobid/rpb",
+      "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13207076"
+    "id" : "rpb-spatial:n13207076",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
   } ]
 }

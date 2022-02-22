@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Periodical" ],
   "id" : "https://lobid.org/resources/RPB929t123588",
   "hbzId" : "HT015397255",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Damenhandball",
   "publication" : [ {
     "location" : "Neuwied-Engers",

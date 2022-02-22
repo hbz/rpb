@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Book" ],
   "id" : "https://lobid.org/resources/RPB929t123942",
   "hbzId" : "HT017193464",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Koblenz 2012 - etwas anders gesehen : [Kalender]",
   "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 455 mm x 480 mm",
   "responsibilityStatement" : [ "[Christian Nentwig]" ],

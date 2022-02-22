@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123959",
   "hbzId" : "HT011020818",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "∩┐╜Die∩┐╜ Andernacher B∩┐╜ckerjungen",
   "publication" : [ {
     "startDate" : "1973",

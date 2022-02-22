@@ -2,6 +2,11 @@
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123954",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Jahreschronik von Juli 2011 bis Juni 2012 : Energiewende - Ortsjubil∩┐╜en - Gebietsreform",
   "extent" : "Ill.",
   "publication" : [ {

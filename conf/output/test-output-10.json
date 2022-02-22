@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Periodical" ],
   "id" : "https://lobid.org/resources/RPB929t123267",
   "hbzId" : "HT008744820",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Quartalsbericht der Stadt Koblenz",
   "responsibilityStatement" : [ "Stadt Koblenz" ],
   "publication" : [ {

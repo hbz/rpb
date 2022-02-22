@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Book" ],
   "id" : "https://lobid.org/resources/RPB929t123943",
   "hbzId" : "HT017385524",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Loreley singt nicht mehr : Kriminalroman",
   "extent" : "379 S.",
   "responsibilityStatement" : [ "Judith Merchant" ],

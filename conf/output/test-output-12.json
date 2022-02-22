@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Book" ],
   "id" : "https://lobid.org/resources/RPB929t123940",
   "hbzId" : "HT017193456",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Neuwied und die F∩┐╜rsten zu Wied : [Kalender] 2012",
   "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 450 mm x 320 mm",
   "responsibilityStatement" : [ "[Hans Scharenberg]" ],

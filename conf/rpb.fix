@@ -29,6 +29,16 @@ prepend("id","https://lobid.org/resources/RPB")
 
 move_field("#983", "hbzId")
 
+# ------- "inCollection" -------
+
+set_hash("coll")
+set_field("coll.id", "http://lobid.org/resources/HT013494180#!")
+set_array("coll.type[]")
+add_field("coll.type[].$append", "Collection")
+add_field("coll.label", "Rheinland-Pfälzische Bibliographie")
+set_array("inCollection[]")
+move_field("coll", "inCollection[]")
+
 # ------- "title" field -------
 
 move_field("#20 ","title")
@@ -117,5 +127,5 @@ if none_contain("#40 ", "00Gn")
 end
 
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]" )
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]" )
 vacuum()

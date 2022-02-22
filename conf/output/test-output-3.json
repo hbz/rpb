@@ -2,6 +2,11 @@
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123955",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Graffiti im Kreis Altenkirchen: Vom Vandalismus zur legalen Kunst : eine Dokumentation",
   "extent" : "zahlr. Ill.",
   "publication" : [ {

@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Book" ],
   "id" : "https://lobid.org/resources/RPB929t123945",
   "hbzId" : "HT017387033",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "1212 - 2012, Willmenrod : Geschichte(n) vom Dorf",
   "extent" : "206 S. : zahlr. Ill.",
   "responsibilityStatement" : [ "[Hrsg. Cornelia M∩┐╜ller ... Autoren Hans-Ulrich Brandenburger" ],

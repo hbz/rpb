@@ -3,6 +3,11 @@
   "type" : [ "BibliographicResource", "Book" ],
   "id" : "https://lobid.org/resources/RPB929t123944",
   "hbzId" : "HT017433652",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Volkesfeld : die Geschichte des Dorfes und seiner Bewohner",
   "extent" : "524 S. : zahlr. Ill., Kt.",
   "responsibilityStatement" : [ "Rudi Merten" ],

@@ -2,6 +2,11 @@
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
   "id" : "https://lobid.org/resources/RPB929t123948",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
   "title" : "Ehrengeleit der Sch∩┐╜tzengesellschaft f∩┐╜r St. Severus-Reliquie : Erinnerungen an einen kirchlichen Festtag am 20. September 1957",
   "extent" : "Ill.",
   "publication" : [ {

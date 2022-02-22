@@ -10,7 +10,7 @@
   } ],
   "title" : "Damenhandball",
   "publication" : [ {
-    "location" : "Neuwied-Engers",
+    "location" : [ "Neuwied-Engers" ],
     "startDate" : "2003",
     "type" : [ "PublicationEvent" ]
   } ],

@@ -12,7 +12,7 @@
   "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 450 mm x 320 mm",
   "responsibilityStatement" : [ "[Hans Scharenberg]" ],
   "publication" : [ {
-    "location" : "[Neuwied]",
+    "location" : [ "[Neuwied]" ],
     "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],

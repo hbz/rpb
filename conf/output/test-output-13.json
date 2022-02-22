@@ -12,9 +12,9 @@
   "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 455 mm x 480 mm",
   "responsibilityStatement" : [ "[Christian Nentwig]" ],
   "publication" : [ {
-    "location" : "Aichach",
+    "location" : [ "Aichach" ],
     "startDate" : "2011",
-    "publishedBy" : "Korsch-Verl.",
+    "publishedBy" : [ "Korsch-Verl." ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

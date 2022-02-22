@@ -12,9 +12,9 @@
   "extent" : "379 S.",
   "responsibilityStatement" : [ "Judith Merchant" ],
   "publication" : [ {
-    "location" : "M∩┐╜nchen",
+    "location" : [ "M∩┐╜nchen" ],
     "startDate" : "2012",
-    "publishedBy" : "Knaur-Taschenbuch-Verl.",
+    "publishedBy" : [ "Knaur-Taschenbuch-Verl." ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

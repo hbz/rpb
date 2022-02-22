@@ -11,9 +11,9 @@
   "title" : "Quartalsbericht der Stadt Koblenz",
   "responsibilityStatement" : [ "Stadt Koblenz" ],
   "publication" : [ {
-    "location" : "Koblenz",
+    "location" : [ "Koblenz" ],
     "startDate" : "1997",
-    "publishedBy" : "Stadt",
+    "publishedBy" : [ "Stadt" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "zdbId" : "1437275-7",

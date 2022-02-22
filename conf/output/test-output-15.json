@@ -12,9 +12,9 @@
   "extent" : "524 S. : zahlr. Ill., Kt.",
   "responsibilityStatement" : [ "Rudi Merten" ],
   "publication" : [ {
-    "location" : "Lahnstein",
+    "location" : [ "Lahnstein" ],
     "startDate" : "2012",
-    "publishedBy" : "Imprimatur-Verl. Kring",
+    "publishedBy" : [ "Imprimatur-Verl. Kring" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

@@ -1,3 +1,7 @@
+# Remove empty fields
+
+vacuum()
+
 # ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
@@ -89,6 +93,7 @@ if exists ("#30*")
   move_field("#30*", "subject[].$append.id")
   replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
   do list(path: "subject[]")
+    add_field("label", "Platzhalter Schlagwortlabel")
     set_array("type[]")
     add_field("type[].$append", "Concept")
     add_field("source.id", "http://purl.org/lobid/rpb")
@@ -97,36 +102,40 @@ if exists ("#30*")
 end
 
 # ------- Ortsnotation -------
+# ToDo: Zu analyiseren: In den Testdaten sind die Werte in "#31 " und "#31a" identisch und ergeben eine Dublette. 
 
 set_array("spatial[]")
 
-if exists ("#31*")
-  move_field("#31*", "spatial[].$append.id")
-  replace_all("spatial[].*.id","_r99_\\s_o(\\d+)_","rpb-spatial:n$1")
-  do list(path: "spatial[]")
-    set_array("type[]")
-    add_field("type[].$append", "Concept")
-    add_field("source.id", "https://example.org/rpb-spatial")
-    add_field("source.label", "Raumsystematik der Rheinland-Pfälzischen Bibliographie")
-  end
+
+move_field("#31*", "spatial[].$append.id")
+replace_all("spatial[].*.id","^_r99_\\s_o(\\d+)_$","rpb-spatial:n$1")
+replace_all("spatial[].*.id","^_(r\\d{2})_$","rpb-spatial:$1")
+
+do list(path: "spatial[]")
+  set_array("type[]")
+  add_field("type[].$append", "Concept")
+  add_field("source.id", "https://example.org/rpb-spatial")
+  add_field("source.label", "Raumsystematik der Rheinland-Pfälzischen Bibliographie")
 end
 
 # ------- Contribution -------
+# ToDo: 
+# 1. Unterscheiden zwischen GND- und Nicht-GND-IDs.
+# 2. GND-IDs enthalten ein "n" anstatt einem Minus
 
 if exists("#4*")
   set_array("contribution[]")
 end
 
-if none_contain("#40 ", "00Gn")
-  move_field("#40 ", "contribution[].$append.agent.id")
-  replace_all("contribution[].*.agent.id","_(.*)_","https://d-nb.info/gnd/$1")
-  do list(path: "contribution[]")
-    add_field("role.id", "http://id.loc.gov/vocabulary/relators/aut")
-    add_field("role.label", "Autor/in")
-  end
-  do list(path: "contribution[]")
-      set_array("type[]", "Contribution")
-  end
+move_field("#40 ", "contribution[].$append.agent.id")
+replace_all("contribution[].*.agent.id","_(.*)_","https://d-nb.info/gnd/$1")
+do list(path: "contribution[]")
+  add_field("role.id", "http://id.loc.gov/vocabulary/relators/aut")
+  add_field("role.label", "Autor/in")
+  add_field("agent.label", "Platzhalter-Autor:in-Name")
+end
+do list(path: "contribution[]")
+    set_array("type[]", "Contribution")
 end
 
 

@@ -19,6 +19,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

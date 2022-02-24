@@ -15,6 +15,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -22,6 +23,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n706040",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -45,7 +47,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/00Pn01s22411622a"
+      "id" : "https://d-nb.info/gnd/00Pn01s22411622a",
+      "label" : "Platzhalter-Autor:in-Name"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

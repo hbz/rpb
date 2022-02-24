@@ -19,6 +19,7 @@
   "zdbId" : "1437275-7",
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n102050",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

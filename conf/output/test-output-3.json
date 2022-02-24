@@ -15,6 +15,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n841000",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -28,5 +29,16 @@
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/00Gn12k3955713a",
+      "label" : "Platzhalter-Autor:in-Name"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

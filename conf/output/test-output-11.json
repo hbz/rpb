@@ -17,6 +17,7 @@
   "zdbId" : "2402792-3",
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n736030",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,6 +25,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n736050",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

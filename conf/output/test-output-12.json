@@ -18,6 +18,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n844000",
+    "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -34,7 +35,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1051171504"
+      "id" : "https://d-nb.info/gnd/1051171504",
+      "label" : "Platzhalter-Autor:in-Name"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

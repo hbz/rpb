@@ -7,6 +7,7 @@ scalaVersion := "2.11.11"
 resolvers += Resolver.mavenLocal
 
 libraryDependencies ++= Seq(
+  "org.metafacture" % "metafacture-elasticsearch" % "5.3.1",
   "org.metafacture" % "metafacture-io" % "5.3.1",
   "org.metafacture" % "metafacture-strings" % "5.3.1",
   "org.metafacture" % "metafacture-json" % "5.3.1",

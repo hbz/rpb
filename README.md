@@ -25,3 +25,11 @@ sbt "runMain rpb.ETL conf/rpb-test.flux"
 ```
 sbt "eclipse with-source=true"
 ```
+
+## web
+
+```
+sbt run
+```
+
+http://localhost:9000

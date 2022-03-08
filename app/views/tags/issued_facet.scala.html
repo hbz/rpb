@@ -13,7 +13,7 @@ var freqs = [];
 var yearsObject = {};
 var thisYear = new Date().getFullYear();
 
-for(i = 1983; i <= thisYear; i++) {
+for(i = 1991; i <= thisYear; i++) {
 	years.push(i);
 }
 
@@ -21,7 +21,7 @@ $(".@(Application.ISSUED_FIELD.hashCode.abs)-facet-link").each(function(index) {
 	var yearAndFreq = $(this).text().split(" ")
 	var year = yearAndFreq[0].trim();
 	var freq = parseInt(yearAndFreq[1].replace(/[()]/,""));
-	if(parseInt(year) >= 1983 && parseInt(year) <= thisYear){
+	if(parseInt(year) >= 1991 && parseInt(year) <= thisYear){
 		yearsObject[year]=freq;
 	}
 });
@@ -46,10 +46,10 @@ for(i = min; i<=max; i++){
 var data = {
 	labels: chartYears,
 	datasets: [{
-		fillColor: "rgba(47,153,76,0.2)",
-		strokeColor: "rgba(47,153,76,0.5)",
-		highlightFill: "rgba(47,153,76,0.45)",
-		highlightStroke: "rgba(47,153,76,0.7)",
+		fillColor: "rgba(233,48,28,0.2)",
+		strokeColor: "rgba(233,48,28,0.5)",
+		highlightFill: "rgba(233,48,28,0.45)",
+		highlightStroke: "rgba(233,48,28,0.7)",
 		data: freqs
 	}]
 };

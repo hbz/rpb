@@ -35,10 +35,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="@nwbib.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> NWBib</a>
+                    <a class="navbar-brand" href="@nwbib.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> RPB</a>
                   </div>
                   <div class="navbar-collapse collapse" id="nwbib-nav">
                     <ul class="nav navbar-nav">
+                      <li @if(title=="RPB - Ergebnisliste"){class="active"}>
+                        <a href="@nwbib.routes.Application.search()">Suche</a>
+                      </li>
+                      @*
                       <li @if(title=="NWBib - Erweiterte Suche"){class="active"}>
                         <a href="@nwbib.routes.Application.advanced()">Erweiterte Suche</a>
                       </li>
@@ -64,16 +68,20 @@
                           <li><a href="https://biographie-nrw.uni-muenster.de/">Biographisches Portal NRW</a></li>
                         </ul>
                       </li>
+                      *@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                      <li @if(title=="NWBib - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
+                      <li @if(title=="RPB - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
                       <li class="divider"></li>
                       <li @if(title=="NWBib: Kontakt"){class="active"} class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                          @*
                           <li><a href="http://www.landesbibliothek-nrw.de/aufgaben/nrw_bibliographie/">Über die NWBib</a></li>
                           <li><a href="@nwbib.routes.Application.journals()">Ausgewertete Zeitschriften</a></li>
-                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20NWBib,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback</a></li>
+                          *@
+                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zum%20RPB-Prototyp,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback</a></li>
+                          @*
                           <li class="divider"></li>
                           <li class="dropdown-header">Fachliche Kontakte</li>
                           <li><a href="https://www.ulb.uni-bonn.de/die-ulb/organisation-ansprechpartner/ansprechpartner-von-a-z/albrink">ULB Bonn</a></li>
@@ -87,6 +95,7 @@
                           <li class="dropdown-header">Rechtliche Informationen</li>
                           <li><a href="http://www.hbz-nrw.de/impressum/">Impressum</a></li>
                           <li><a href="https://github.com/hbz/nwbib/blob/master/conf/Datenschutzerklaerung_NWBib.textile">Datenschutz</a></li>
+                          *@
                         </ul>
                       </li>
                     </ul>
@@ -95,7 +104,7 @@
             </div>
             <div class="page-header">
                 <img class="media-object nrw-logo pull-right" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW">
-                <h1>Die Nordrhein-Westfälische Bibliographie<br/><small>Mehr als 400.000 Publikationen über NRW seit 1983</small></h1>
+                <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Ein Entwicklungsprojekt von lbz &amp; hbz <span class="label label-default">Prototyp</span></small></h1>
             </div>
             @content
             <div class="panel panel-default nwbib-footer">
@@ -103,7 +112,7 @@
                 @defining(controllers.nwbib.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
                 <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW-Wappen"> 
                 <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo">
-                Die NWBib bietet @if(hits>0){aktuell @hits}else{mehr als 400.000 (Stand: Januar 2018)} Literaturnachweise. Sie wird von der <a href="http://www.ulb.hhu.de/">Universitäts- und Landesbibliothek (ULB) Düsseldorf</a> und der <a href="http://www.ulb.uni-muenster.de/">ULB Münster</a> in Zusammenarbeit mit der <a href="http://www.ulb.uni-bonn.de/">ULB Bonn</a> und dem <a href="http://www.hbz-nrw.de/">Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen (hbz)</a> herausgegeben.
+                Dieser RPB-Prototyp enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
                 }
               </div>
             </div>

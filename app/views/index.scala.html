@@ -7,10 +7,10 @@
 @import play.api.libs.json.JsValue
 @import controllers.nwbib.Lobid
 
-@main("NWBib") {
+@main("RPB") {
     @tags.search_form("")
     <div class="row">
-	    <div class="col-md-7 intro">
+	    @*<div class="col-md-7 intro">
 	        @defining(controllers.nwbib.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
 	       <p class="lead">
            Die Nordrhein-Westfälische Bibliographie (NWBib) verzeichnet die Literatur über das Land Nordrhein-Westfalen, seine Regionen, 
@@ -34,7 +34,23 @@
 	    <div class="col-md-5">
 	       @tags.nrw_map(map)
 	    </div>
+	    *@
+	    <div class="col-md-12 intro">
+	       <p class="lead">
+           Die Rheinland-Pfälzische Bibliographie (RPB) ist eine regionale Literaturdokumentation des Landes Rheinland-Pfalz, die seit 1991 im Auftrag des damaligen 
+           Ministeriums für Wissenschaft und Weiterbildung erstellt wird. Sie erfasst Bücher, Aufsätze aus Zeitschriften, Jahrbüchern, Tages- und Wochenzeitungen sowie 
+           Einzelbeiträge aus Sammelwerken.
+           </p>
+           <p>
+           Die Bibliographie wird von Mitarbeitern des Landesbibliothekszentrums an den Standorten Speyer und Koblenz sowie den wissenschaftlichen Stadtbibliotheken in 
+           Mainz und Trier gemeinsam erarbeitet. Die einzelnen Bibliotheken sind schwerpunktmäßig für die Literatur aus ihrer und über ihre Region zuständig. Rund 1400 
+           Zeitschriften des Berichtszeitraums 1991 bis heute und andere fortlaufende Werke werden durchgesehen. Die Titel werden in den einzelnen Bibliotheken dezentral 
+           erfasst. Die Rheinische Landesbibliothek des lbz führt das Titelmaterial redaktionell zusammen und betreut mit dem hbz die für die Herstellung der Bibliographie 
+           erforderliche Datenverarbeitung.
+	       </p>
+	    </div>
     </div>
+    @*
     <script type="application/ld+json">
     {
       "@@context": "http://schema.org",
@@ -47,4 +63,5 @@
       }
     }
     </script>
+    *@
 }

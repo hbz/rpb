@@ -60,7 +60,11 @@
 	}
 }
 
-@main("NWBib - Ergebnisliste") {
+@shortId(json: JsValue) = @{
+	(json\"hbzId").asOpt[String].getOrElse((json\"id").asOpt[String].map(_.replaceAll("https?://lobid.org/resources/","").replaceAll("#!","")).getOrElse(""))
+}
+
+@main("RPB - Ergebnisliste") {
     @if(Seq(person, name, subject, id, publisher, issued, word, corporation).exists(!_.isEmpty)){
       @tags.search_advanced("Suche aktualisieren", q, person, name, subject, nwbibspatial, nwbibsubject, id, publisher, issued, sortParam, word=word, corporation=corporation)
     } else {
@@ -92,7 +96,11 @@
              <div class="panel panel-default">
                  <div class="panel-body" style="text-align:center">
                  <div class="row">
-                    <div class="col-md-1"></div>
+                    <div class="col-md-1" style="text-align: left; padding-left: 4px;">
+                    <a rel='alternate' type='application/ld+json' href='@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,from,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw,format="json")'>
+                        <img class='json-ld-icon' src='@routes.Assets.at("images/json-ld.png")' title='JSON-LD für diese Suchanfrage'>
+                    </a>
+                    </div>
                     <div class="col-md-10">
                      @allHits @if(!raw.isEmpty && !raw.contains(Lobid.escapeUri(Application.COVERAGE_FIELD.replace(".raw","")))){
                       @defining(String.format(Application.CONFIG.getString("indexUrlFormat"), raw.substring(raw.lastIndexOf("/")+1))) { lobidUrl =>
@@ -118,7 +126,7 @@
                   <th style="width: 5%; text-align: right"></th>
                   <th style="width: 5%; text-align: right"></th>
                  </tr>
-                 @for((doc,i) <- hits; id = (doc\\"hbzId")(0).as[String]) {
+                 @for((doc,i) <- hits; id = shortId(doc)) {
                     @tags.result_short(id,doc,i,(Json.parse(result)\\"hbzId").map(_.as[String]))
                  }
                  </table>
@@ -140,5 +148,7 @@
         @if(allHits > 0) {@facets(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,owner,t,sortParam,location,word,corporation,raw,from,size)}
       </div>
     }
+    @*
     @if(allHits > 0) {<p>@map_credits()</p>}
+    *@
 }

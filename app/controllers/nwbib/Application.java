@@ -282,7 +282,7 @@ public class Application extends Controller {
 		} else {
 			Logger.warn("No pagination session data for {}", id);
 		}
-		return search("hbzId:" + id, "", "", "", "", "", "", "", "", "", 0, 1, "",
+		return search("hbzId:" + id + " OR id:\"https://lobid.org/resources/"+id+"\"", "", "", "", "", "", "", "", "", "", 0, 1, "",
 				"", "", true, "", "", "", "", "");
 	}
 
@@ -532,7 +532,7 @@ public class Application extends Controller {
 			if (showDetails) {
 				String json = "";
 				JsonNode nodes = Json.parse(s).get("member");
-				if (nodes.isArray() && nodes.size() == 1) {
+				if (nodes != null && nodes.isArray() && nodes.size() == 1) {
 					json = nodes.get(0).toString();
 				} else {
 					Logger.warn("No suitable data to show details for: {}", nodes);

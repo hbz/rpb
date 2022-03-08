@@ -1,0 +1,13 @@
+@* Copyright 2014 Fabian Steeg, hbz. Licensed under the GPLv2 *@
+
+@(q: String, location:String = "")
+
+@helper.form(action = controllers.nwbib.routes.Application.search(q, location=location), 'id -> "nwbib-form") {
+    <div class="input-group">
+      <input type="hidden" name="location" value="@location"/>
+      <input type="text" name="q" id="nwbibQuery" value="@q" class="form-control" autocomplete="off" 
+          title='Suchanfrage. Boolesche Operatoren: AND, OR, AND NOT; Phrasensuche mit ""; Trunkierung mit *'/>
+      <span class="input-group-btn"><button class="btn btn-default" type="submit" title="Suchen">
+        <span class="glyphicon glyphicon-search"></span></button></span>
+    </div>
+}

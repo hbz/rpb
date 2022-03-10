@@ -1,23 +1,24 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "id" : "https://lobid.org/resources/RPB929t123946",
-  "hbzId" : "HT017445387",
+  "id" : "https://lobid.org/resources/RPB929t123949",
+  "hbzId" : "HT017293231",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "∩┐╜Die∩┐╜ Maria-Hilf-Kapelle in Rheinbrohl",
-  "extent" : "[68] S. : zahlr. Ill.",
-  "responsibilityStatement" : [ "[Texte: Trudelies Frorath ... Fotos: Willy Klein ... ]" ],
+  "title" : "\"Resurescat Polonia\" : das Verh∩┐╜ltnis der Bev∩┐╜lkerung der preu∩┐╜ischen Rheinprovinz zum polnischen Novemberaufstand 1830/31 im Licht der heimischen Presse",
+  "extent" : "327 S.",
+  "responsibilityStatement" : [ "Erhard Br∩┐╜dner" ],
   "publication" : [ {
-    "location" : [ "Rheinbrohl" ],
+    "location" : [ "N∩┐╜mbrecht" ],
     "startDate" : "2012",
+    "publishedBy" : [ "Kirsch" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844030",
+    "id" : "http://purl.org/lobid/rpb#n246100",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -26,11 +27,22 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13802063",
+    "id" : "rpb-spatial:r51",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1024109305",
+      "label" : "Platzhalter-Autor:in-Name"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

@@ -1,0 +1,59 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "id" : "https://lobid.org/resources/RPB929t123948",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Ehrengeleit der Sch∩┐╜tzengesellschaft f∩┐╜r St. Severus-Reliquie : Erinnerungen an einen kirchlichen Festtag am 20. September 1957",
+  "extent" : "Ill.",
+  "publication" : [ {
+    "startDate" : "2012",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n611030",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n611090",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:n14000501",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "rpb-spatial:n14000501",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/131477447",
+      "label" : "Platzhalter-Autor:in-Name"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

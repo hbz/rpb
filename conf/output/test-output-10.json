@@ -1,6 +1,7 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Periodical" ],
+  "rpbId" : "RPB929t123267",
   "id" : "https://lobid.org/resources/RPB929t123267",
   "hbzId" : "HT008744820",
   "inCollection" : [ {

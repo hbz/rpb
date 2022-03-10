@@ -19,10 +19,15 @@ if any_equal("#36 ", "sm")
   set_field("type[].$append", "Periodical")
 end
 
+# ------- rpbId -------
+
+copy_field("#00 ", "rpbId")
+prepend("rpbId","RPB") 
+
 # ------- "id", using https URIs -------
 
-move_field("#00 ", "id")
-prepend("id","https://lobid.org/resources/RPB") 
+copy_field("rpbId", "id")
+prepend("id","https://lobid.org/resources/") 
 
 # ------- hbzId -------
 # Remove titles that are already in lobid-resources
@@ -139,5 +144,5 @@ do list(path: "contribution[]")
 end
 
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]" )
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId" )
 vacuum()

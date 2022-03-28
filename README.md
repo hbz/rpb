@@ -17,6 +17,7 @@ cd metafacture-fix
 ```
 git clone https://github.com/hbz/rpb.git
 cd rpb
+sbt "runMain rpb.ETL conf/rpb-sw.flux"
 sbt "runMain rpb.ETL conf/rpb-test.flux"
 ```
 

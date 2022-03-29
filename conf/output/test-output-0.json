@@ -32,7 +32,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn02k1556a"
+      "id" : "https://rpb.lobid.org/sw/00Pn02k1556a",
+      "label" : "00Pn02k1556a"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

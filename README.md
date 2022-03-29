@@ -21,6 +21,12 @@ sbt "runMain rpb.ETL conf/rpb-sw.flux"
 sbt "runMain rpb.ETL conf/rpb-test.flux"
 ```
 
+## validation
+
+```
+sh validateJsonOutput.sh
+```
+
 ## eclipse
 
 ```

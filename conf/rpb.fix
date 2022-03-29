@@ -137,7 +137,7 @@ do list(path: "contribution[]")
 end
 
 replace_all("contribution[].*.agent.id","_(.*)_","$1")
-lookup("contribution[].*.agent.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t", "delete": "true")
+lookup("contribution[].*.agent.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t")
 
 do list(path: "contribution[]")
   if all_match("agent.id","^00.*|^107n.*|^929n.*")

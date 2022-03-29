@@ -48,8 +48,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/131477447",
-      "label" : "Platzhalter-Autor:in-Name"
+      "label" : "Johann, Jürgen / 1958-",
+      "id" : "https://d-nb.info/gnd/131477447"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

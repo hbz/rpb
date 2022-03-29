@@ -37,8 +37,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/00Pn09k3332766b",
-      "label" : "Platzhalter-Autor:in-Name"
+      "label" : "Nentwig, Christian",
+      "id" : "https://rpb.lobid.org/sw/00Pn09k3332766b"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

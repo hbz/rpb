@@ -1,0 +1,115 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t084128",
+  "id" : "https://lobid.org/resources/RPB929t084128",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Nachhaltige Entwicklung xerothermer Hanglagen am Beispiel des Mittelrheintales",
+  "extent" : "Ill.",
+  "publication" : [ {
+    "startDate" : "2006",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n584090",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "rpb-spatial:r22",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "label" : "Driessen, Nadja",
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128877a"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Albrech, Joachim",
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128400b"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Bonn, Susanne",
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128517c"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Bylebyl, Kathrin",
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128697d"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Poschlod, Peter",
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128623e"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Sander, Ulrich",
+      "id" : "https://rpb.lobid.org/sw/00Pn02k0338a"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Sound, Peter / 1968-",
+      "id" : "https://d-nb.info/gnd/131405578"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Veith, Michael / 1957-",
+      "id" : "https://d-nb.info/gnd/1030501130"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

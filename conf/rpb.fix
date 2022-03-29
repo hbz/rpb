@@ -131,21 +131,16 @@ copy_field("#40?", "contribution[].$append.agent.id")
 do list(path: "contribution[]")
   replace_all("agent.id","_(.*)_","$1")
   copy_field("agent.id", "agent.label")
+  lookup("agent.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+  if all_match("agent.id","^00.*|^107n.*|^929n.*")
+    prepend("agent.id", "https://rpb.lobid.org/sw/")
+  else
+    replace_all("agent.id", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("agent.id", "https://d-nb.info/gnd/")
+  end
   add_field("role.id", "http://id.loc.gov/vocabulary/relators/aut")
   add_field("role.label", "Autor/in")
   set_array("type[]", "Contribution")
-end
-
-replace_all("contribution[].*.agent.id","_(.*)_","$1")
-lookup("contribution[].*.agent.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-
-do list(path: "contribution[]")
-  if all_match("agent.id","^00.*|^107n.*|^929n.*")
-    replace_all("agent.id", "(^.*)", "https://rpb.lobid.org/sw/$1")
-  else
-    replace_all("agent.id", "(^\\d*)n(\\d)", "$1-$2")
-    replace_all("agent.id", "(^.*)","https://d-nb.info/gnd/$1")
-  end
 end
 
 retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId" )

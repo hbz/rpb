@@ -6,7 +6,7 @@ https://service-wiki.hbz-nrw.de/pages/viewpage.action?pageId=712998955
 
 ## metafix
 
-```
+```bash
 git clone https://github.com/metafacture/metafacture-fix.git -b rpb
 cd metafacture-fix
 ./gradlew publishToMavenLocal
@@ -14,21 +14,28 @@ cd metafacture-fix
 
 ## etl
 
-```
+```bash
 git clone https://github.com/hbz/rpb.git
 cd rpb
 sbt "runMain rpb.ETL conf/rpb-sw.flux"
 sbt "runMain rpb.ETL conf/rpb-test.flux"
 ```
 
-## validation
+## validate
 
-```
+```bash
 sh validateJsonOutput.sh
+```
+
+## index
+
+```bash
+sbt "runMain rpb.ETL conf/rpb2lobid.flux"
+curl -XPOST --header 'Content-Type: application/x-ndjson' --data-binary @bulk.ndjson 'weywot3:9200/_bulk'
 ```
 
 ## eclipse
 
-```
+```bash
 sbt "eclipse with-source=true"
 ```

@@ -8,3 +8,4 @@ bin
 !/conf/output/test-output-*.json
 /data/*
 !/data/.empty
+bulk.ndjson

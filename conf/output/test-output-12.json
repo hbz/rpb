@@ -36,8 +36,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Scharenberg, Hans / 1930-",
-      "id" : "https://d-nb.info/gnd/1051171504"
+      "id" : "https://d-nb.info/gnd/1051171504",
+      "label" : "Scharenberg, Hans / 1930-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

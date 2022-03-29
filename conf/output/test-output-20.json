@@ -37,8 +37,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Brödner, Erhard / 1937-",
-      "id" : "https://d-nb.info/gnd/1024109305"
+      "id" : "https://d-nb.info/gnd/1024109305",
+      "label" : "Brödner, Erhard / 1937-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -48,8 +48,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Johann, Jürgen / 1958-",
-      "id" : "https://d-nb.info/gnd/131477447"
+      "id" : "https://d-nb.info/gnd/131477447",
+      "label" : "Johann, Jürgen / 1958-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

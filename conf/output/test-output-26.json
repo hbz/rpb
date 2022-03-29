@@ -33,8 +33,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Markovic, Peter / 1960-",
-      "id" : "https://d-nb.info/gnd/1051164982"
+      "id" : "https://d-nb.info/gnd/1051164982",
+      "label" : "Markovic, Peter / 1960-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

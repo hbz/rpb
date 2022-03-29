@@ -37,8 +37,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Balschun, Anja / 1966-",
-      "id" : "https://d-nb.info/gnd/142532460"
+      "id" : "https://d-nb.info/gnd/142532460",
+      "label" : "Balschun, Anja / 1966-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

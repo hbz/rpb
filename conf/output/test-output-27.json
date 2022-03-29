@@ -34,8 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Pius / Papa, VI.",
-      "id" : "https://d-nb.info/gnd/16278772-8"
+      "id" : "https://d-nb.info/gnd/16278772-8",
+      "label" : "Pius / Papa, VI."
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -33,8 +33,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Hübner, Valeska",
-      "id" : "https://rpb.lobid.org/sw/00Gn12k3955713a"
+      "id" : "https://rpb.lobid.org/sw/00Gn12k3955713a",
+      "label" : "Hübner, Valeska"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

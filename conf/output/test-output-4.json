@@ -33,8 +33,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Steffenfauseweh, Ulf",
-      "id" : "https://rpb.lobid.org/sw/00Pn06k3120560a"
+      "id" : "https://rpb.lobid.org/sw/00Pn06k3120560a",
+      "label" : "Steffenfauseweh, Ulf"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

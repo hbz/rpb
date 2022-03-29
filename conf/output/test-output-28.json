@@ -33,8 +33,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Driessen, Nadja",
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128877a"
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128877a",
+      "label" : "Driessen, Nadja"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -43,8 +43,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "label" : "Albrech, Joachim",
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128400b"
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128400b",
+      "label" : "Albrech, Joachim"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -53,8 +53,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "label" : "Bonn, Susanne",
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128517c"
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128517c",
+      "label" : "Bonn, Susanne"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -63,8 +63,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "label" : "Bylebyl, Kathrin",
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128697d"
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128697d",
+      "label" : "Bylebyl, Kathrin"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -73,8 +73,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "label" : "Poschlod, Peter",
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128623e"
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4128623e",
+      "label" : "Poschlod, Peter"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -83,8 +83,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "label" : "Sander, Ulrich",
-      "id" : "https://rpb.lobid.org/sw/00Pn02k0338a"
+      "id" : "https://rpb.lobid.org/sw/00Pn02k0338a",
+      "label" : "Sander, Ulrich"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -93,8 +93,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "label" : "Sound, Peter / 1968-",
-      "id" : "https://d-nb.info/gnd/131405578"
+      "id" : "https://d-nb.info/gnd/131405578",
+      "label" : "Sound, Peter / 1968-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -103,8 +103,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "label" : "Veith, Michael / 1957-",
-      "id" : "https://d-nb.info/gnd/1030501130"
+      "id" : "https://d-nb.info/gnd/1030501130",
+      "label" : "Veith, Michael / 1957-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -37,8 +37,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Nentwig, Christian",
-      "id" : "https://rpb.lobid.org/sw/00Pn09k3332766b"
+      "id" : "https://rpb.lobid.org/sw/00Pn09k3332766b",
+      "label" : "Nentwig, Christian"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -48,8 +48,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "label" : "Schäfer, Wilhelm",
-      "id" : "https://rpb.lobid.org/sw/00Pn01s22411622a"
+      "id" : "https://rpb.lobid.org/sw/00Pn01s22411622a",
+      "label" : "Schäfer, Wilhelm"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

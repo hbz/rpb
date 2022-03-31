@@ -1,27 +1,36 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Periodical" ],
-  "rpbId" : "RPB929t124030",
-  "id" : "https://lobid.org/resources/RPB929t124030",
-  "hbzId" : "HT015910174",
+  "rpbId" : "RPB929t130101",
+  "id" : "https://lobid.org/resources/RPB929t130101",
+  "hbzId" : "HT017448659",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Deutsche Binnenwasserstra∩┐╜en",
-  "title" : "∩┐╜Der∩┐╜ Rhein - Rheinfelden bis Koblenz",
-  "title" : "∩┐╜Der∩┐╜ Rhein - Koblenz bis Tolkamer",
-  "extent" : "13 S., 46 Bl.; Ill., graph. Darst., ∩┐╜berw. Kt.; 1 CD-ROM",
-  "extent" : "13 S., Bl. 46 - 74 ; Ill., graph. Darst., ∩┐╜berw. Kt. ; 1 CD-ROM ; 12 cm",
+  "title" : "Filmsch∩┐╜tze unserer Heimat",
+  "title" : "20er- und 30er-Jahre [Bildtontr∩┐╜ger]",
+  "title" : "40er- und 50er-Jahre [Bildtontr∩┐╜ger]",
+  "title" : "60er-Jahre [Bildtontr∩┐╜ger]",
+  "title" : "70er- und 80er-Jahre [Bildtontr∩┐╜ger]",
+  "extent" : "4 DVD-Videos ; 12 cm",
+  "extent" : "1 DVD-Video; Umfang: 35 Min.; Gr∩┐╜∩┐╜e: 12 cm",
+  "extent" : "1 DVD-Video; Umfang: 42 Min.; Gr∩┐╜∩┐╜e: 12 cm",
+  "extent" : "1 DVD-Video; Umfang: 43 Min.; Gr∩┐╜∩┐╜e: 12 cm",
+  "extent" : "1 DVD-Video; Umfang: 44 Min.; Gr∩┐╜∩┐╜e: 12 cm",
+  "responsibilityStatement" : [ "Rhein-Zeitung" ],
   "publication" : [ {
-    "location" : [ "Hamburg" ],
+    "location" : [ "Koblenz" ],
     "startDate" : "2012",
-    "publishedBy" : [ "Ed. Maritim" ],
+    "startDate" : "[2012]",
+    "startDate" : "[2012]",
+    "startDate" : "[2012]",
+    "startDate" : "[2012]",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n142320",
+    "id" : "http://purl.org/lobid/rpb#n240300",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -29,7 +38,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n557000",
+    "id" : "http://purl.org/lobid/rpb#n804000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -38,14 +47,14 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:r22",
+    "id" : "_r01_ _4417112n2_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "rpb-spatial:r22",
+    "id" : "_r01_ _4417112n2_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",

@@ -51,7 +51,10 @@ move_field("coll", "inCollection[]")
 # ------- "title" field -------
 
 move_field("#20 ","title")
-replace_all("title", "\\s\\+", "")
+
+# Folgendes rausgenommen wegen 929t124030, 
+# wo die sich wiederholenden #20er Probleme machen
+# replace_all("title", "\\s\\+", "")
 
 # ------- "extent" -------
 
@@ -76,7 +79,9 @@ set_hash("pub")
 set_array("pub.location[]")
 copy_field("#74 ", "pub.location[].$append")
 copy_field("#76a", "pub.startDate")
-replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")
+
+# Folgendes rausgenommen wegen 929t130101, in dem sich #76a wiederholt
+# replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")
 set_array("pub.publishedBy[]")
 copy_field("#75 ", "pub.publishedBy[].$append")
 set_array("pub.type[]")

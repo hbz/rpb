@@ -38,7 +38,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/1011378183",
-      "label" : "Platzhalter-Autor:in-Name"
+      "label" : "Merchant, Judith / 1976-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

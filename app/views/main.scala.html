@@ -1,0 +1,121 @@
+@* Copyright 2014 Fabian Steeg, hbz. Licensed under the GPLv2 *@
+
+@(title: String, docJson: Option[String] = None)(content: Html)
+
+@import controllers.nwbib.Lobid
+@import play.api.libs.json._
+
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/bootstrap.min.css")">
+        <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/octicons.css")">
+        <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/jquery-ui.min.css")">
+        <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/font-awesome.min.css")">
+        <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/nwbib.css")">
+        <link rel="shortcut icon" type="image/png" href="@controllers.routes.Assets.at("images/favicon.png")">
+        <script src="@controllers.routes.Assets.at("javascripts/jquery-1.10.2.min.js")"></script>
+        <script src="@controllers.routes.Assets.at("javascripts/jquery-ui.min.js")"></script>
+        <script src="@controllers.routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+        <script src="@controllers.routes.Assets.at("javascripts/Chart.min.js")"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    </head>
+    <body onload="var q = document.getElementById('nwbibQuery'); if(q!=null){ q.focus(); };">
+        <div class="container">
+            <p/>
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nwbib-nav">
+                        <span class="sr-only">Navigation ein/ausblenden</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@nwbib.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> RPB</a>
+                  </div>
+                  <div class="navbar-collapse collapse" id="nwbib-nav">
+                    <ul class="nav navbar-nav">
+                      <li @if(title=="RPB - Ergebnisliste"){class="active"}>
+                        <a href="@nwbib.routes.Application.search()">Suche</a>
+                      </li>
+                      @*
+                      <li @if(title=="NWBib - Erweiterte Suche"){class="active"}>
+                        <a href="@nwbib.routes.Application.advanced()">Erweiterte Suche</a>
+                      </li>
+                      <li @if(title=="NWBib - Themensuche"){class="active"}>
+                        <a href="@nwbib.routes.Application.topics()">Themensuche</a>
+                      </li>
+                      <li @if(title.contains("Raumsystematik")){class="active"}>
+                        <a href="@nwbib.routes.Application.spatial()">Regionen</a>
+                      </li>
+                      <li @if(title.contains("Sachsystematik")){class="active"}>
+                        <a href="@nwbib.routes.Application.subjects()">Sachgebiete</a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ergänzende Suche<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-header">Vorläufer der NWBib (Titel vor 1983)</li>
+                          <li><a href="http://digital.ub.uni-duesseldorf.de/nav/classification/5975540">Rheinland-Bibliographien</a></li>
+                          <li><a href="http://www.ulb.uni-muenster.de/landesbibliothek/recherche/westfaelische-bibliographien/">Westfalen-Bibliographien</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Sonstige</li>
+                          <li><a href="http://www.landesbibliothek-nrw.de/">Die NRW-Landesbibliotheken</a></li>
+                          <li><a href="http://kvk.bibliothek.kit.edu/vdl/">Virtuelle Deutsche Landesbibliographie (VDL)</a></li>
+                          <li><a href="https://biographie-nrw.uni-muenster.de/">Biographisches Portal NRW</a></li>
+                        </ul>
+                      </li>
+                      *@
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li @if(title=="RPB - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
+                      <li class="divider"></li>
+                      <li @if(title=="NWBib: Kontakt"){class="active"} class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          @*
+                          <li><a href="http://www.landesbibliothek-nrw.de/aufgaben/nrw_bibliographie/">Über die NWBib</a></li>
+                          <li><a href="@nwbib.routes.Application.journals()">Ausgewertete Zeitschriften</a></li>
+                          *@
+                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zum%20RPB-Prototyp,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback</a></li>
+                          @*
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Fachliche Kontakte</li>
+                          <li><a href="https://www.ulb.uni-bonn.de/die-ulb/organisation-ansprechpartner/ansprechpartner-von-a-z/albrink">ULB Bonn</a></li>
+                          <li><a href="http://www.ulb.uni-muenster.de/landesbibliothek/profil/ansprechpartner/index.html">ULB Münster</a></li>
+                          <li><a href="https://www.ulb.hhu.de/sammlungen/landesbibliothek/nordrhein-westfaelische-bibliographie">ULB Düsseldorf</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Technische Informationen</li>
+                          <li><a href="https://www.hbz-nrw.de/produkte/linked-open-data">Kontakt</a></li>
+                          <li><a href="@nwbib.routes.Application.info()">Daten und Software</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Rechtliche Informationen</li>
+                          <li><a href="http://www.hbz-nrw.de/impressum/">Impressum</a></li>
+                          <li><a href="https://github.com/hbz/nwbib/blob/master/conf/Datenschutzerklaerung_NWBib.textile">Datenschutz</a></li>
+                          *@
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </div>
+            <div class="page-header">
+                <img class="media-object nrw-logo pull-right" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW">
+                <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Ein Entwicklungsprojekt von lbz &amp; hbz <span class="label label-default">Prototyp</span></small></h1>
+            </div>
+            @content
+            <div class="panel panel-default nwbib-footer">
+              <div class="panel-body">
+                @defining(controllers.nwbib.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
+                <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW-Wappen"> 
+                <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo">
+                Dieser RPB-Prototyp enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
+                }
+              </div>
+            </div>
+        </div>
+    </body>
+</html>

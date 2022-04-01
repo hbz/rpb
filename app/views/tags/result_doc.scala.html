@@ -1,0 +1,263 @@
+@* Copyright 2014-2015 Fabian Steeg, hbz. Licensed under the GPLv2 *@
+
+@(doc: play.api.libs.json.JsValue)
+@import play.api.libs.json._
+@import views.TableRow
+@import controllers.nwbib.Lobid
+@import controllers.nwbib.Application.CONFIG
+
+@labelled(label: String, key: String) = {
+  @if((doc\key).asOpt[Seq[JsValue]].isDefined) {
+    <tr>
+      <td>@label</td>
+      <td><a href='@(((doc\key)(0)\"id").asOpt[String].getOrElse("--"))'>@(((doc\key)(0)\"label").asOpt[String].getOrElse("--"))</a></td>
+    </tr>
+  }
+}
+
+@optional(label: String, key: String, v: JsValue) = {
+  @if((v\key).asOpt[String].isDefined) {
+   <br/> @((v\key).as[String])
+  }
+}
+
+@publication(pub: JsValue) = {
+  @defining(((pub\"startDate"),(pub\"endDate"))) { case (start,end) =>
+    <tr>
+      <td>
+        @if((pub \ "type").toString.contains("SecondaryPublicationEvent")){
+          Sekundärpublikation
+        } else {
+          Erschienen
+        }
+      </td>
+      <td>
+        @if(start != end && !(pub \ "type").toString.contains("SecondaryPublicationEvent") &&
+            ((start.asOpt[String].isDefined && end.asOpt[String].isDefined) ||
+            (doc\"type").toString.contains("Series") || (doc\"type").toString.contains("Periodical"))) {
+          @* Show range if either both start and end are given, or if we want open ranges like "- 2015" *@
+          @start.asOpt[String].getOrElse("") &ndash; @end.asOpt[String].getOrElse("")
+        } else {
+          @* Otherwise show only one date, no range (no periodical or series, and just one date given) *@
+          @start.asOpt[String].getOrElse(end.asOpt[String].getOrElse(""))
+        }
+        @optional("Erscheinungsort", "location", pub)
+        @optional("Verlag", "publishedBy", pub)
+        @((pub\"frequency").asOpt[Seq[JsValue]].map { freq =>
+          optional("Erscheinungsweise", "label", freq.head)
+        })
+      </td>
+    </tr>
+  }
+}
+
+@table()(body: Html) = {
+   <table class="table table-striped table-condensed">
+  <tr>
+        <th style="width: 30%"></th>
+        <th style="width: 70%"></th>
+  </tr>
+  @body
+  </table>
+}
+
+@nestedIds(property: String) = @{
+	(doc\property).get.asOpt[Seq[JsValue]].getOrElse(Seq()).map((v: JsValue) => (v \ "id").get.asOpt[String].getOrElse("No id in " + v))
+}
+
+@singleOrMultiString(property: String) = @{
+	(doc\property).get.asOpt[Seq[String]].getOrElse(Seq((doc\property).get.asOpt[String].getOrElse("--")))
+}
+
+@with_icon(label: String, property: String, fullField: String) = {
+  @if((doc\property).asOpt[JsValue].isDefined) {
+    @defining(if(property != "type") { nestedIds(property) } else { singleOrMultiString(property) }){ v =>
+      <tr><td>@label</td><td><span class="@Lobid.facetIcon(v,fullField)"></span> @Lobid.facetLabel(v,fullField,"")</td></tr>
+    }
+  }
+}
+
+@subordinate(field:String, id:String, label:String, values:(String,String)) = {
+  @defining(Lobid.getTotalHits(field, id, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT)){ hits => @if(hits > 0) {
+    @defining(if(hits==1){values._1} else {values._2}){ value =>
+    <tr><td>@label</td><td><a title="@value" href="@nwbib.routes.Application.search(raw=field+":\""+Lobid.escapeUri(id)+"\"")">@hits @value</a></td></tr>
+  }}}
+}
+
+@lobidUrl(hbzId: String) = @{
+  "http://lobid.org/resources/" + hbzId + "#!"
+}
+
+@part_of(field: String, subField: String) = {
+  @if(!(doc \ field).isInstanceOf[JsUndefined]){
+      @Html(TableRow.VALUES_MULTI.process(new com.fasterxml.jackson.databind.ObjectMapper().readTree(doc.toString()),
+      field,
+      "q",
+      if(((doc \ field)(0) \ "numbering").asOpt[String].isDefined) {"Erschienen als"} else {"Erschienen in"},
+      Seq((((doc \ field)(0) \ subField)(0) \ "id").asOpt[String].getOrElse("--")),
+      Optional.of(Seq(subField, "numbering"))))
+  }
+}
+
+@contributions(contributions: Seq[JsValue]) = {
+  @for((role, cs) <- (contributions.groupBy((c: JsValue) => ((if((c \ "role").asOpt[Seq[JsValue]].isDefined){(c \ "role")(0)}else{(c \ "role")}) \ "label").asOpt[String].getOrElse("--")))) {
+    <tr>
+      <td>@role</td>
+      <td>@for(
+              c <- cs;
+              agent <- (c \ "agent").toOption;
+              agents = agent.asOpt[Seq[JsValue]].getOrElse(Seq(agent));
+              label = (agents(0) \ "label").asOpt[String].getOrElse("--");
+              id = (agents(0) \ "id").asOpt[String]) {
+        <a title="Nach weiteren Titeln von '@label' suchen" 
+          href='@if(((agents(0) \ "type").asOpt[Seq[String]]).contains("CorporateBody")){ @nwbib.routes.Application.search(corporation=id.getOrElse(label)) }else{ @nwbib.routes.Application.search(person=id.getOrElse(label)) }'/>@label</a>
+        @if(id.isDefined){<a title="Linked-Data-Quelle zu '@label' abrufen" href='@id'><span class='glyphicon glyphicon-link'></span></a>}
+        @if(c!=cs.last){ | }
+      }</td>
+    </tr>
+  }
+}
+
+@subjects(subjects: Seq[JsValue]) = {
+  @if(subjects.toString.contains("GND")){
+  <tr>
+    <td>Schlagwörter</td>
+    <td>
+    @for(subject <- subjects;
+         components = (subject \ "componentList").asOpt[Seq[JsValue]].getOrElse(Seq(subject));
+         component <- components;
+         sourceLabel = (component\"source"\"label").asOpt[String];
+         if !sourceLabel.getOrElse("").contains("Nordrhein-Westfälischen");
+         if !sourceLabel.getOrElse("").contains("RPB-Sachgruppen");
+         if !sourceLabel.getOrElse("").contains("Dewey");
+         label <- (component \ "label").asOpt[String];
+         id = (component \ "id").asOpt[String]) {
+      <span style="white-space: nowrap;"><a title="Nach weiteren Titeln zu '@label' suchen" href='@nwbib.routes.Application.search(subject=id.getOrElse("\""+label+"\""))'/>@label</a></span>
+      <a title="Nach Themen mit '@label' suchen" href='@nwbib.routes.Application.topics(q=label.replace(":","\\:"))'><span class='octicon octicon-ellipsis'></span></a>
+      @if(components.last == component) {
+        @for(topic <- (subject\"label").asOpt[String]; hits = Lobid.getTotalHits("subject.label.raw", topic.trim, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT); if hits > 1){
+          | <a href='@nwbib.routes.Application.search(q="subject.label.raw:\""+topic.trim+"\"")' title="Alle @hits Titel zum Thema '@topic.trim' anzeigen"><span class='badge progress-bar-success'>@hits</span></a>
+        }<br/>
+      } else { | }
+    }</td>
+  </tr>
+  }
+}
+
+@sortedPublications(seq: Seq[JsValue]) = @{
+  seq.sortBy((v: JsValue) => ((v\"startDate").asOpt[String].getOrElse((v\"endDate").asOpt[String].getOrElse("0")).toInt))
+}
+
+@withPrefixedLink(label: String, prefix: String, node: JsReadable) = {
+	@for(array <- node.asOpt[Seq[JsValue]]; if array.size > 0; value <- array.head.asOpt[String]){
+		<tr><td>@label</td><td><a href='@prefix@value'>@value</a></td></tr>
+	}
+}
+
+@subject_source_links(source: String, searchParam: String) = {
+    @for(
+        subject <- (doc \ "subject").as[Seq[JsValue]];
+        sourceId <- (subject \ "source" \ "id").asOpt[String];
+        if sourceId == source;
+        subjectId <- (subject \ "id").asOpt[String];
+        if !(doc\"spatial").asOpt[JsValue].isDefined || !Seq(10, 12, 14, 24, 28, 35, 36, 37, 52, 54, 72, 74, 96, 97).find((i: Int) => subjectId.endsWith("#N"+i));
+        subjectLabel <- (subject \ "label").asOpt[String];
+        notation = subjectId.split("#").last.substring(1)) {
+      @breadcrumb(if(searchParam == "nwbibsubject"){subjectId}else{""},if(searchParam == "nwbibspatial"){subjectId}else{""})
+      | <a href='@nwbib.routes.Application.search()?@searchParam=@subjectId.replace("#", "%23")' title='Nach weiteren Titeln zu @subjectLabel (@notation) suchen'><span class='glyphicon glyphicon-search'></span></a><br/>
+    }
+}
+
+@raumsystematik(source: String) = {
+  @defining(((doc\"spatial").asOpt[Seq[JsValue]],(doc\"coverage").asOpt[Seq[JsValue]])) { case (spatial, coverage) =>
+      @for(vs <- spatial.orElse(coverage)) {
+        <tr>
+          <td>Raumsystematik</td>
+          <td>
+          @for(v <- vs; id = (v\"id").asOpt[String].getOrElse("--"); if(!Seq(35, 37, 96, 97).find((i: Int) => id.endsWith("#N"+i)))) {
+              @breadcrumb("",id) 
+              @if(spatial.isDefined){
+                   | <a href='@nwbib.routes.Application.search()?nwbibspatial=@((v\"id").asOpt[String].getOrElse("--").replace("#", "%23"))' title='Nach weiteren Titeln zu @((v\"label").asOpt[String].getOrElse("--")) (@(id.split("#").last)) suchen'>
+                  <span class='glyphicon glyphicon-search'></span>
+                  </a>
+              } else {
+                   | <a href='@nwbib.routes.Application.search()?q=coverage:"@(v.as[String])"' title='Nach weiteren Titeln zu @(v.as[String]) suchen'> | <span class='glyphicon glyphicon-search'></span></a>
+              }
+              <br/>
+          }
+      }
+      @if((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()).toString.contains(source)) {
+        @if(!spatial.orElse(coverage).isDefined) { @* No opening <tr> and label <td> from above *@
+        <tr>
+          <td>Raumsystematik</td>
+          <td>}
+          @subject_source_links(source, "nwbibspatial")}
+          </td>
+        </tr>
+  }
+}
+
+@sachsystematik(source: String) = {
+  @if((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()).toString.contains(source)) {
+    <tr>
+      <td>Sachsystematik</td>
+      <td>@subject_source_links(source, "nwbibsubject")</td>
+    </tr>
+  }
+}
+
+@parallelausgabe() = {
+  @for(
+      related <- (doc \ "related").asOpt[Seq[JsValue]].getOrElse(Seq());
+      id <- (related \ "id").asOpt[String];
+      hbzId = id.split("\\/").last.replace("#!", "");
+      note <- (related \ "note").asOpt[Seq[String]]) {
+    <tr>
+        <td>Parallelausgabe</td>
+        <td><a href="@hbzId">@note</a></td>
+    </tr>
+  }
+}
+
+@table(){
+  <tr><td>Titel</td><td><b>@((doc \ "title").asOpt[String].getOrElse(""))</b></td></tr>
+  @for(x <- (doc \ "otherTitleInformation").asOpt[Seq[JsValue]]) {
+    <tr><td>Titelzusatz</td><td><i>@x.head.asOpt[String].getOrElse("")</i></td></tr>
+  }
+  @result_field("Unterreihe", "titleOfSubSeries", doc, TableRow.VALUES)
+  @result_field("Verantwortlich", "responsibilityStatement", doc, TableRow.VALUES)
+  @contributions((doc \ "contribution").asOpt[Seq[JsValue]].getOrElse(Seq()))
+  @with_icon("Medientyp", "medium", controllers.nwbib.Application.MEDIUM_FIELD)
+  @with_icon("Publikationstyp", "type", controllers.nwbib.Application.TYPE_FIELD)
+  @result_field("", "thesisInformation", doc, TableRow.VALUES)
+
+  @for(pub <- sortedPublications((doc\"publication").asOpt[Seq[JsValue]].getOrElse(Seq()))){ @publication(pub) }
+  @result_field("Auflage", "edition", doc, TableRow.VALUES)
+  @result_field("Inhalt", "abstract", doc, TableRow.VALUES)
+  @result_field("Anmerkungen", "note", doc, TableRow.VALUES, node = Option(doc))
+  @result_field("ISBN", "isbn", doc, TableRow.VALUES)
+  @result_field("ISSN", "issn", doc, TableRow.VALUES)
+  @withPrefixedLink("DOI", "https://dx.doi.org/", doc \ "doi")
+  @withPrefixedLink("URN", "https://nbn-resolving.org/", doc \ "urn")
+  @result_field("Umfang", "extent", doc, TableRow.VALUES)
+  @result_field("Quelle", "bibliographicCitation", doc, TableRow.VALUES)
+  @result_field("In", "containedIn", doc, TableRow.LINKS)
+
+  @part_of("isPartOf", "hasSuperordinate")
+  @defining(lobidUrl((doc \ "hbzId").asOpt[String].getOrElse(""))){ id =>
+   @subordinate("isPartOf.hasSuperordinate.id", id, "Bände", ("zugehöriger Band", "zugehörige Bände"))
+   @subordinate("containedIn.id", id, "Enthält", ("Beitrag", "Beiträge"))
+  }
+  @parallelausgabe()
+  @raumsystematik("https://nwbib.de/spatial")
+  @sachsystematik("https://nwbib.de/subjects")
+
+  @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()))
+
+  @result_field("Schlagwortfolge", "subjectChain", doc, TableRow.VALUES, valueLabel = Option(Seq()))
+
+  @labelled("Inhaltsangabe", "description")
+  @labelled("Inhaltsverzeichnis", "tableOfContents")
+}
+
+@schema_org(doc)

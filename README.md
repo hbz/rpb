@@ -39,3 +39,11 @@ curl -XPOST --header 'Content-Type: application/x-ndjson' --data-binary @bulk.nd
 ```bash
 sbt "eclipse with-source=true"
 ```
+
+## web
+
+```
+sbt run
+```
+
+http://localhost:9000

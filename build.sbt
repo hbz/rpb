@@ -7,6 +7,9 @@ scalaVersion := "2.11.11"
 resolvers += Resolver.mavenLocal
 
 libraryDependencies ++= Seq(
+  cache,
+  javaWs,
+  "com.typesafe.play" % "play-test_2.11" % "2.4.11",
   "org.metafacture" % "metafacture-elasticsearch" % "5.3.1",
   "org.metafacture" % "metafacture-io" % "5.3.1",
   "org.metafacture" % "metafacture-strings" % "5.3.1",
@@ -15,6 +18,12 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-triples" % "5.3.1",
   "org.metafacture" % "metafacture-formatting" % "5.3.1",
   "org.metafacture" % "metafix" % "0.2.0-SNAPSHOT",
+  "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
+  "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
+  "org.apache.commons" % "commons-rdf-jena" % "0.5.0",
+  "org.apache.commons" % "commons-csv" % "1.6",
+  "org.apache.jena" % "jena-arq" % "3.0.1",
+  "org.apache.jena" % "jena-core" % "3.0.1",
   "org.easytesting" % "fest-assert" % "1.4" % "test",
   "org.mockito" % "mockito-core" % "2.27.0" % "test",
   "org.mockito" % "mockito-junit-jupiter" % "2.27.0" % "test"

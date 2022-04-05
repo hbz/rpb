@@ -9,3 +9,5 @@ bin
 /data/*
 !/data/.empty
 bulk.ndjson
+application-log-*.gz
+conf/RPB-Export_HBZ_Alles/

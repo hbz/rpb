@@ -17,7 +17,7 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
 
     @Override
     public void process(final String obj) {
-        LOG.info("Process record: " + obj);
+        LOG.debug("Process record: " + obj);
         final String[] vals = obj.split("\\[/\\]");
         getReceiver().startRecord(getId(obj, vals));
         processFields(vals);

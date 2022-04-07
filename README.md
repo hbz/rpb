@@ -1,49 +1,76 @@
-# rpb
+# RPB
 
 https://service-wiki.hbz-nrw.de/pages/viewpage.action?pageId=712998955
 
 [![Build](https://github.com/hbz/rpb/workflows/Build/badge.svg)](https://github.com/hbz/rpb/actions?query=workflow%3ABuild)
 
-## metafix
+This repo contains the RPB data transformation and the RPB web application.
+
+## Setup
+
+### Install metafix dependency
 
 ```bash
 git clone https://github.com/metafacture/metafacture-fix.git -b rpb
 cd metafacture-fix
 ./gradlew publishToMavenLocal
+cd ..
 ```
 
-## etl
+### Clone RPB project repo
 
 ```bash
 git clone https://github.com/hbz/rpb.git
 cd rpb
-sbt "runMain rpb.ETL conf/rpb-sw.flux"
+```
+
+## Transformation development
+
+### Run transformation
+
+```bash
 sbt "runMain rpb.ETL conf/rpb-test.flux"
 ```
 
-## validate
+### Validate output
 
 ```bash
 sh validateJsonOutput.sh
 ```
 
-## index
+### Create lookup table
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb2lobid.flux"
-curl -XPOST --header 'Content-Type: application/x-ndjson' --data-binary @bulk.ndjson 'weywot3:9200/_bulk'
+sbt "runMain rpb.ETL conf/rpb-sw.flux"
 ```
 
-## eclipse
+### Run full transformation and indexing
 
 ```bash
-sbt "eclipse with-source=true"
+
+sh transformAndIndex.sh
 ```
 
-## web
+## Web application
+
+Start the web application:
 
 ```
 sbt run
 ```
 
 http://localhost:9000
+
+## Java development
+
+## Run tests
+
+```bash
+sbt "test-only tests.CITests"
+```
+
+## Generate Eclipse project for import
+
+```bash
+sbt "eclipse with-source=true"
+```

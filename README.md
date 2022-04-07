@@ -30,7 +30,6 @@ cd rpb
 
 ```bash
 sbt "runMain rpb.ETL conf/rpb-test.flux"
-sh validateJsonOutput.sh
 ```
 
 ### Validate output

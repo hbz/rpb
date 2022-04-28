@@ -11,7 +11,7 @@ This repo contains the RPB data transformation and the RPB web application.
 ### Install metafix dependency
 
 ```bash
-git clone https://github.com/metafacture/metafacture-fix.git -b rpb
+git clone https://github.com/metafacture/metafacture-fix.git
 cd metafacture-fix
 ./gradlew publishToMavenLocal
 cd ..

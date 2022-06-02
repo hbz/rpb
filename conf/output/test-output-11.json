@@ -1,30 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Periodical" ],
-  "rpbId" : "RPB929t123588",
-  "id" : "https://lobid.org/resources/RPB929t123588",
-  "hbzId" : "HT015397255",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093398",
+  "id" : "https://lobid.org/resources/RPB929t093398",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Damenhandball",
+  "title" : "Geschäftsbericht 1984 (vom damaligen Geschäftsführer Edgar Diel)",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Edgar Diel" ],
   "publication" : [ {
-    "location" : [ "Neuwied-Engers" ],
-    "startDate" : "2003",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
-  "zdbId" : "2402792-3",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n736030",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
     "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
@@ -34,18 +25,22 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n138000450200",
+    "id" : "rpb-spatial:n111000002000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
-  }, {
-    "id" : "rpb-spatial:n138000450200",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
-    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/sw/00Pn09k3398961a",
+      "label" : "Diel, Edgar"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

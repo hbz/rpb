@@ -119,6 +119,7 @@ set_array("spatial[]")
 
 move_field("#31*", "spatial[].$append.id")
 replace_all("spatial[].*.id","^_r99_\\s_o(\\d+)_$","rpb-spatial:n$1")
+replace_all("spatial[].*.id","^_r10_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
 replace_all("spatial[].*.id","^_(r\\d{2})_$","rpb-spatial:$1")
 
 do list(path: "spatial[]")

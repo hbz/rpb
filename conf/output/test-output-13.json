@@ -1,25 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123942",
-  "id" : "https://lobid.org/resources/RPB929t123942",
-  "hbzId" : "HT017193464",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093400",
+  "id" : "https://lobid.org/resources/RPB929t093400",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Koblenz 2012 - etwas anders gesehen : [Kalender]",
-  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 455 mm x 480 mm",
-  "responsibilityStatement" : [ "[Christian Nentwig]" ],
+  "title" : "D-Mädchen mit erfolreichem Saisonverlauf",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Jürgen Mohrs" ],
   "publication" : [ {
-    "location" : [ "Aichach" ],
-    "startDate" : "[2011]",
-    "publishedBy" : [ "Korsch-Verl." ],
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n102050",
+    "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -28,7 +25,7 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "rpb-spatial:n111000002000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -37,8 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn09k3332766b",
-      "label" : "Nentwig, Christian"
+      "id" : "https://rpb.lobid.org/sw/00Pn97k2589a",
+      "label" : "Mohrs, Jürgen"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

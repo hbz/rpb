@@ -1,25 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t124035",
-  "id" : "https://lobid.org/resources/RPB929t124035",
-  "hbzId" : "HT017439171",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093394",
+  "id" : "https://lobid.org/resources/RPB929t093394",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Dunkelgeld : Kriminalroman",
-  "extent" : "238 S.",
-  "responsibilityStatement" : [ "Anja Balschun" ],
+  "title" : "Maximiliane Brentano, geb. La Roche",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Pfalzfeld" ],
-    "startDate" : "2012",
-    "publishedBy" : [ "Kontrast-Verl." ],
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768010",
+    "id" : "http://purl.org/lobid/rpb#n768030",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -28,7 +24,7 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "rpb-spatial:n111000000500",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -37,8 +33,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/142532460",
-      "label" : "Balschun, Anja / 1966-"
+      "id" : "https://d-nb.info/gnd/132220458",
+      "label" : "Engelke, Erich / 1955-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

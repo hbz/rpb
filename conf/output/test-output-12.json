@@ -1,24 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123940",
-  "id" : "https://lobid.org/resources/RPB929t123940",
-  "hbzId" : "HT017193456",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093399",
+  "id" : "https://lobid.org/resources/RPB929t093399",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Neuwied und die F∩┐╜rsten zu Wied : [Kalender] 2012",
-  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 450 mm x 320 mm",
-  "responsibilityStatement" : [ "[Hans Scharenberg]" ],
+  "title" : "Geschäftsbericht 1985 (vom damaligen Geschäftsführer Fred Alff)",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Fred Alff" ],
   "publication" : [ {
-    "location" : [ "[Neuwied]" ],
-    "startDate" : "[2011]",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844000",
+    "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,7 +25,7 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13800045",
+    "id" : "rpb-spatial:n111000002000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -36,8 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1051171504",
-      "label" : "Scharenberg, Hans / 1930-"
+      "id" : "https://rpb.lobid.org/sw/00Pn09k3399281a",
+      "label" : "Alff, Fred"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

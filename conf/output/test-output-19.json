@@ -1,29 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t123948",
-  "id" : "https://lobid.org/resources/RPB929t123948",
+  "rpbId" : "RPB929t093372",
+  "id" : "https://lobid.org/resources/RPB929t093372",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Ehrengeleit der Sch∩┐╜tzengesellschaft f∩┐╜r St. Severus-Reliquie : Erinnerungen an einen kirchlichen Festtag am 20. September 1957",
+  "title" : "Energie aus der Tiefe immer beliebter : Im Kreis Mayen-Koblenz zapfen so viele Hausbesitzer wie noch nie Erdwärme an - Bohrlöcher reichen rund 100 Meter tief",
   "extent" : "Ill.",
+  "responsibilityStatement" : [ "sil" ],
   "publication" : [ {
-    "startDate" : "2012",
+    "startDate" : "2009",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n611030",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n611090",
+    "id" : "http://purl.org/lobid/rpb#n546028",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,29 +25,11 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n14000501",
+    "id" : "rpb-spatial:n137",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
-  }, {
-    "id" : "rpb-spatial:n14000501",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/131477447",
-      "label" : "Johann, Jürgen / 1958-"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
   } ]
 }

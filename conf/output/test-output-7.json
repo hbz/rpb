@@ -1,29 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t123959",
-  "id" : "https://lobid.org/resources/RPB929t123959",
-  "hbzId" : "HT011020818",
+  "rpbId" : "RPB929t093392",
+  "id" : "https://lobid.org/resources/RPB929t093392",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "∩┐╜Die∩┐╜ Andernacher B∩┐╜ckerjungen",
+  "title" : "Mädchen auf der Balljagd : \"Rheingold\"-Fußballerinnen sind mit Herz dabei",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Peter Karges" ],
   "publication" : [ {
-    "startDate" : "[1973]",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n706040",
+    "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,14 +25,7 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13700003",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "rpb-spatial:n13700003",
+    "id" : "rpb-spatial:n111000002000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -48,8 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn01s22411622a",
-      "label" : "Schäfer, Wilhelm"
+      "id" : "https://rpb.lobid.org/sw/929n003318",
+      "label" : "Karges, Peter"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

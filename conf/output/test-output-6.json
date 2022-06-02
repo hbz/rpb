@@ -1,24 +1,46 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123958",
-  "id" : "https://lobid.org/resources/RPB929t123958",
-  "hbzId" : "HT017227822",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093389",
+  "id" : "https://lobid.org/resources/RPB929t093389",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Niederfischbach : mit dem Raiffeisenbank-Kalender durch 1994",
-  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 298 x 419 mm",
-  "responsibilityStatement" : [ "Raiffeisenbank Niederfischbach eG. [Idee und Gestaltung: Karl Heinz Hof]" ],
+  "title" : "Klimawandel erfordert Waldumbau : Bericht der Bundesregierung stellt nach wie vor hohe Schadstoffeinträge fest - Forstamt Koblenz: Wichtiger Trendmesser",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Ulrike Hochgesand" ],
   "publication" : [ {
-    "location" : [ "Niederfischbach" ],
-    "startDate" : "[1993]",
+    "startDate" : "2009",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n102050",
+    "id" : "http://purl.org/lobid/rpb#n142560",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544400",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n142560",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544400",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,11 +49,43 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13207076",
+    "id" : "rpb-spatial:n11100000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "id" : "rpb-spatial:n11100000",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "rpb-spatial:n137",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "rpb-spatial:n137",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/sw/00Pn05k2120256b",
+      "label" : "Hochgesand, Ulrike"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

@@ -1,24 +1,37 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123946",
-  "id" : "https://lobid.org/resources/RPB929t123946",
-  "hbzId" : "HT017445387",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093375",
+  "id" : "https://lobid.org/resources/RPB929t093375",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "∩┐╜Die∩┐╜ Maria-Hilf-Kapelle in Rheinbrohl",
-  "extent" : "[68] S. : zahlr. Ill.",
-  "responsibilityStatement" : [ "[Texte: Trudelies Frorath ... Fotos: Willy Klein ... ]" ],
+  "title" : "Weinbau in Güls und seinen Nachbargemeinden : - von den Anfängen bis zum Ende des 18. Jahrhunderts -",
+  "extent" : "Ill., Kt.",
   "publication" : [ {
-    "location" : [ "Rheinbrohl" ],
-    "startDate" : "2012",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844030",
+    "id" : "http://purl.org/lobid/rpb#n544300",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544300",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544300",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,11 +40,36 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13802063",
+    "id" : "rpb-spatial:n111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "id" : "rpb-spatial:n111000001100",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "rpb-spatial:n111000001400",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/sw/00Pn02k0405a",
+      "label" : "Morbach, Rolf"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

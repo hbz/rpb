@@ -1,21 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t123947",
-  "id" : "https://lobid.org/resources/RPB929t123947",
+  "rpbId" : "RPB929t093371",
+  "id" : "https://lobid.org/resources/RPB929t093371",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "\"Wir gehen stiften\" : Gr∩┐╜ndung der Stiftung \"Bisch∩┐╜fliches Cusanus-Gymnasium Koblenz\"",
+  "title" : "Erinnerungen an das gesellschaftliche Leben im Neuendorf der Nachkriegsjahre",
   "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "2012",
+    "startDate" : "2009",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n784044",
+    "id" : "http://purl.org/lobid/rpb#n732000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -23,7 +23,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n522050",
+    "id" : "http://purl.org/lobid/rpb#n722000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,18 +32,29 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "rpb-spatial:n111000001500",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "rpb-spatial:n111000001500",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/sw/00Pn01t42566702a",
+      "label" : "Kiefer, Irmgard"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

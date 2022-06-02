@@ -1,25 +1,25 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123945",
-  "id" : "https://lobid.org/resources/RPB929t123945",
-  "hbzId" : "HT017387033",
+  "rpbId" : "RPB929t093369",
+  "id" : "https://lobid.org/resources/RPB929t093369",
+  "hbzId" : "HT015597977",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "1212 - 2012, Willmenrod : Geschichte(n) vom Dorf",
-  "extent" : "206 S. : zahlr. Ill.",
-  "responsibilityStatement" : [ "[Hrsg. Cornelia M∩┐╜ller ... Autoren Hans-Ulrich Brandenburger" ],
+  "title" : "¬Der¬ Arbeiterverein St. Josef : Gestapo beim Kassierer",
+  "extent" : "16 S. : Ill., Notenbeisp.",
+  "responsibilityStatement" : [ "Helmut Schneider" ],
   "publication" : [ {
-    "location" : [ "Willmenrod" ],
-    "startDate" : "2012",
-    "publishedBy" : [ "Spotpress-Verl." ],
+    "location" : [ "Weißenthurm" ],
+    "startDate" : "2007",
+    "publishedBy" : [ "¬H.¬ Schneider" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
+    "id" : "http://purl.org/lobid/rpb#n611044",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -28,11 +28,22 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n14309312",
+    "id" : "rpb-spatial:n13708228",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/sw/00Pn02k2569a",
+      "label" : "Schneider, Helmut"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

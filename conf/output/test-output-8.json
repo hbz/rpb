@@ -1,24 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123960",
-  "id" : "https://lobid.org/resources/RPB929t123960",
-  "hbzId" : "HT017227834",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093393",
+  "id" : "https://lobid.org/resources/RPB929t093393",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Niederfischbach und seine Vereine : [Kalender] 1995",
-  "extent" : "[13] Bl. : ∩┐╜berw. Ill. ; 300 x 420 mm",
-  "responsibilityStatement" : [ "Raiffeisenbank Niederfischbach eG. [Idee und Gestaltung: Karl Heinz Hof]" ],
+  "title" : "Dieser Garten ist zum Essen da : Teil 6 unserer Serie führt uns nach Rheinhessen, wo sich ein barockes Bauerngut zu einem Kräuterparadies gemausert hat",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Katrin Steinert" ],
   "publication" : [ {
-    "location" : [ "Niederfischbach" ],
-    "startDate" : "[1994]",
+    "startDate" : "2009",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n735090",
+    "id" : "http://purl.org/lobid/rpb#n544240",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,11 +25,22 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13207076",
+    "id" : "rpb-spatial:n33105017",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/sw/00Pn08k2236138a",
+      "label" : "Steinert, Katrin"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

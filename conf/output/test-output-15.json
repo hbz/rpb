@@ -1,24 +1,31 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123944",
-  "id" : "https://lobid.org/resources/RPB929t123944",
-  "hbzId" : "HT017433652",
+  "rpbId" : "RPB929t093368",
+  "id" : "https://lobid.org/resources/RPB929t093368",
+  "hbzId" : "HT015946355",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Volkesfeld : die Geschichte des Dorfes und seiner Bewohner",
-  "extent" : "524 S. : zahlr. Ill., Kt.",
-  "responsibilityStatement" : [ "Rudi Merten" ],
+  "title" : "Bassenheim von 1894 - 1946 : Aufzeichnung aus der Schulchronik",
+  "extent" : "99 S. : Ill.",
+  "responsibilityStatement" : [ "hrsg. vom Heimatverein Bassenheim e.V." ],
   "publication" : [ {
-    "location" : [ "Lahnstein" ],
-    "startDate" : "[2012]",
-    "publishedBy" : [ "Imprimatur-Verl. Kring" ],
+    "location" : [ "Bassenheim" ],
+    "startDate" : "2004",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n783000",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
     "id" : "http://purl.org/lobid/rpb#n240400",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
@@ -28,22 +35,18 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13704106",
+    "id" : "rpb-spatial:n13708202",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
-  } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Gn12k3944744a",
-      "label" : "00Gn12k3944744a"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
+  }, {
+    "id" : "rpb-spatial:n13708202",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
   } ]
 }

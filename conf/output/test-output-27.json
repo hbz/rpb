@@ -1,22 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t01017517",
-  "id" : "https://lobid.org/resources/RPB929t01017517",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093380",
+  "id" : "https://lobid.org/resources/RPB929t093380",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sanctissimi Domini Nostri Pii Papae Sexti Responsio ad Metropolitanos Moguntinum, Trevirensem, Coloniensem et Salisburgensem Super Nunciaturis Apostolicis",
-  "extent" : "III, 336 S.",
+  "title" : "¬Die¬ Natur rettet sich auf den Truppenübungsplatz : Nr. 19: FFH- und Vogelschutzgebiet auf dem Lager Stegskopf ; viele Rote-Liste-Arten im Derscher Geschwemm",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "goeb" ],
   "publication" : [ {
-    "location" : [ "Romae" ],
-    "startDate" : "1789",
+    "startDate" : "2009",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240000",
+    "id" : "http://purl.org/lobid/rpb#n584060",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,7 +24,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n610100",
+    "id" : "http://purl.org/lobid/rpb#n584070",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,10 +32,25 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   } ],
+  "spatial" : [ {
+    "id" : "https://d-nb.info/gnd/4095533-3",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "https://d-nb.info/gnd/4095533-3",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/16278772-8",
-      "label" : "Pius / Papa, VI."
+      "id" : "https://rpb.lobid.org/sw/929n002003",
+      "label" : "Goebel, Andreas"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -1,21 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t084128",
-  "id" : "https://lobid.org/resources/RPB929t084128",
+  "rpbId" : "RPB929t093381",
+  "id" : "https://lobid.org/resources/RPB929t093381",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Nachhaltige Entwicklung xerothermer Hanglagen am Beispiel des Mittelrheintales",
-  "extent" : "Ill.",
+  "title" : "Sprengbombenfunde in Güls : Relikte aus dem Zweiten Weltkrieg",
+  "extent" : "zahlr. Ill.",
+  "responsibilityStatement" : [ "jwi/Christian Schulz/DPA" ],
   "publication" : [ {
-    "startDate" : "2006",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n584090",
+    "id" : "http://purl.org/lobid/rpb#n240400",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,7 +25,7 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:r22",
+    "id" : "rpb-spatial:n111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -33,78 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128877a",
-      "label" : "Driessen, Nadja"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128400b",
-      "label" : "Albrech, Joachim"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128517c",
-      "label" : "Bonn, Susanne"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128697d",
-      "label" : "Bylebyl, Kathrin"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn08k4128623e",
-      "label" : "Poschlod, Peter"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn02k0338a",
-      "label" : "Sander, Ulrich"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/131405578",
-      "label" : "Sound, Peter / 1968-"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/1030501130",
-      "label" : "Veith, Michael / 1957-"
+      "id" : "https://rpb.lobid.org/sw/00Pn09k3381116b",
+      "label" : "Freund, Hans-Dieter"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

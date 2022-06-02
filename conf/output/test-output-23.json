@@ -1,29 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t123947",
-  "id" : "https://lobid.org/resources/RPB929t123947",
+  "rpbId" : "RPB929t093376",
+  "id" : "https://lobid.org/resources/RPB929t093376",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "\"Wir gehen stiften\" : Gr∩┐╜ndung der Stiftung \"Bisch∩┐╜fliches Cusanus-Gymnasium Koblenz\"",
+  "title" : "Obstanbau \"gestern und heute\"",
   "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "2012",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n784044",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n522050",
+    "id" : "http://purl.org/lobid/rpb#n544250",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,14 +24,7 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n11100000",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "rpb-spatial:n111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",

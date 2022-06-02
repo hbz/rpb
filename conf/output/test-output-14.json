@@ -1,25 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t123943",
-  "id" : "https://lobid.org/resources/RPB929t123943",
-  "hbzId" : "HT017385524",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093367",
+  "id" : "https://lobid.org/resources/RPB929t093367",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Loreley singt nicht mehr : Kriminalroman",
-  "extent" : "379 S.",
-  "responsibilityStatement" : [ "Judith Merchant" ],
+  "title" : "¬Der¬ FC Meisenheim feierte 100. Geburtstag",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "von Hans-Otto Thomas" ],
   "publication" : [ {
-    "location" : [ "M∩┐╜nchen" ],
-    "startDate" : "2012",
-    "publishedBy" : [ "Knaur-Taschenbuch-Verl." ],
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768010",
+    "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -28,7 +25,7 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:r22",
+    "id" : "rpb-spatial:n13310065",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -37,8 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1011378183",
-      "label" : "Merchant, Judith / 1976-"
+      "id" : "https://rpb.lobid.org/sw/00Pn07k5464537b",
+      "label" : "Thomas, Hans-Otto"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

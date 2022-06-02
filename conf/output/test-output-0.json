@@ -1,20 +1,30 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t123952",
-  "id" : "https://lobid.org/resources/RPB929t123952",
+  "rpbId" : "RPB929t093383",
+  "id" : "https://lobid.org/resources/RPB929t093383",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Josef Marko +",
+  "title" : "¬Der¬ Moselübergang der 87. US-Infanteriedivision bei Güls im März 1945",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "von Hans-Dieter Freund" ],
   "publication" : [ {
-    "startDate" : "2012",
+    "startDate" : "2009",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n109000",
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n263050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -23,7 +33,14 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n13210116",
+    "id" : "rpb-spatial:n111000000600",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "rpb-spatial:n111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -32,8 +49,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn02k1556a",
-      "label" : "00Pn02k1556a"
+      "id" : "https://rpb.lobid.org/sw/00Pn09k3381116b",
+      "label" : "Freund, Hans-Dieter"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

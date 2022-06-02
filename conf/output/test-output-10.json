@@ -1,25 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Periodical" ],
-  "rpbId" : "RPB929t123267",
-  "id" : "https://lobid.org/resources/RPB929t123267",
-  "hbzId" : "HT008744820",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t093397",
+  "id" : "https://lobid.org/resources/RPB929t093397",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Quartalsbericht der Stadt Koblenz",
-  "responsibilityStatement" : [ "Stadt Koblenz" ],
+  "title" : "Geschäftsbericht 1983 vom damaligen Geschäftsführer Lothar Krause",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Lothar Krause" ],
   "publication" : [ {
-    "location" : [ "Koblenz" ],
-    "startDate" : "1997",
-    "publishedBy" : [ "Stadt" ],
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
-  "zdbId" : "1437275-7",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n102050",
+    "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -28,11 +25,22 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "rpb-spatial:n111000002000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
       "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/sw/00Pn08k4865407a",
+      "label" : "Krause, Lothar"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

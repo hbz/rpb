@@ -1,21 +1,30 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t123954",
-  "id" : "https://lobid.org/resources/RPB929t123954",
+  "rpbId" : "RPB929t093385",
+  "id" : "https://lobid.org/resources/RPB929t093385",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Jahreschronik von Juli 2011 bis Juni 2012 : Energiewende - Ortsjubil∩┐╜en - Gebietsreform",
+  "title" : "¬Der¬ \"Renner\": Im Eilschritt durchs Glan- und Nahetal",
   "extent" : "Ill.",
+  "responsibilityStatement" : [ "von Julius Reisek" ],
   "publication" : [ {
-    "startDate" : "2012",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240300",
+    "id" : "http://purl.org/lobid/rpb#n102060",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n102060",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,7 +33,14 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n132",
+    "id" : "rpb-spatial:r26",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://example.org/rpb-spatial",
+      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "rpb-spatial:r18",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
@@ -33,8 +49,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn02k1556a",
-      "label" : "00Pn02k1556a"
+      "id" : "https://d-nb.info/gnd/1051165563",
+      "label" : "Reisek, Jörg Julius"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

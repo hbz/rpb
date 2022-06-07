@@ -13,7 +13,7 @@
 			<span style='color: #777777'>@Classification.notation(uri, Type.SPATIAL)</span> @label
 		</a>
 	} else {
-		<a title='@Classification.shortId(uri) @Lobid.facetLabel(Seq(uri),"","")' href='@if(uri.contains("spatial")){@nwbib.routes.Application.spatial()}else{@nwbib.routes.Application.subjects()}#@(if(uri.contains("#")){"N"+uri.split("#")(1).substring(1)}else{uri})'>
+		<a title='@Classification.shortId(uri) @Lobid.facetLabel(Seq(uri),"","")' href='@if(uri.contains("spatial")){@nwbib.routes.Application.spatial()}else{@nwbib.routes.Application.subjects()}#@(if(uri.contains("#")){"n"+uri.split("#")(1).substring(1)}else{uri})'>
 			<span style='color: #777777'>@Classification.shortId(uri)</span> @if(!uri.endsWith("#n9")){@label}
 		</a>
 	}

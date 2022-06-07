@@ -18,7 +18,7 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-triples" % "5.3.1",
   "org.metafacture" % "metafacture-formatting" % "5.3.1",
   "org.eclipse.emf" % "org.eclipse.emf.common" % "2.24.0",
-  "org.metafacture" % "metafix" % "0.2.0-SNAPSHOT" exclude("org.eclipse.emf", "org.eclipse.emf.common"),
+  "org.metafacture" % "metafix" % "0.3.0-SNAPSHOT" exclude("org.eclipse.emf", "org.eclipse.emf.common"),
   "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
   "org.apache.commons" % "commons-rdf-jena" % "0.5.0",

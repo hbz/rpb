@@ -179,7 +179,7 @@ public class Lobid {
 		return String.format("contribution:(contribution.agent.label:(%s) "
 				+ "OR contribution.agent.altLabel:(%s) "
 				+ "OR contribution.agent.id:(%s)) "//
-				+ "AND contribution.agent.type:(%s)", p, p, p, type);
+				+ "AND ((NOT _exists_:contribution.agent.type) OR contribution.agent.type:(%s))", p, p, p, type);
 	}
 
 	static WSRequest topicRequest(final String q, int from, int size) {

@@ -31,21 +31,10 @@
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
-  } ],
-  "spatial" : [ {
-    "id" : "https://d-nb.info/gnd/4095533-3",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
-    }
   }, {
-    "id" : "https://d-nb.info/gnd/4095533-3",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
-    }
+    "id" : "https://d-nb.info/gnd/4095533-3"
+  }, {
+    "id" : "https://d-nb.info/gnd/4095533-3"
   } ],
   "contribution" : [ {
     "agent" : {

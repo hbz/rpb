@@ -116,17 +116,24 @@ end
 
 set_array("spatial[]")
 
+# Einige Ortsschlagwörter in "#31~"" stammen aus der GND und werden nach "subject" verschoben
 
-move_field("#31*", "spatial[].$append.id")
-replace_all("spatial[].*.id","^_r99_\\s_o(\\d+)_$","rpb-spatial:n$1")
-replace_all("spatial[].*.id","^_r10_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
-replace_all("spatial[].*.id","^_(r\\d{2})_$","rpb-spatial:$1")
+do list (path:"#31?", "var": "$i")
+  if any_contain("$i", "_r10_")
+    replace_all("$i","^_r10_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
+    move_field("$i", "subject[].$append.id")
+  else
+    replace_all("$i","^_r99_\\s_o(\\d+)_$","rpb-spatial:n$1")
+    replace_all("$i","^_(r\\d{2})_$","rpb-spatial:$1")
+    move_field("$i", "spatial[].$append.id")
+  end
+end
 
 do list(path: "spatial[]")
-  set_array("type[]")
-  add_field("type[].$append", "Concept")
-  add_field("source.id", "https://example.org/rpb-spatial")
-  add_field("source.label", "Raumsystematik der Rheinland-Pfälzischen Bibliographie")
+    set_array("type[]")
+    add_field("type[].$append", "Concept")
+    add_field("source.id", "https://example.org/rpb-spatial")
+    add_field("source.label", "Raumsystematik der Rheinland-Pfälzischen Bibliographie")
 end
 
 # ------- Contribution -------

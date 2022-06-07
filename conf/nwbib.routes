@@ -30,4 +30,4 @@ DELETE /stars/:id             controllers.nwbib.Application.unstar(id)
 GET    /assets/*file          controllers.Assets.at(path="/public", file)
 GET    /robots.txt            controllers.Assets.at(path="/public",file="robots.txt")
 
-GET    /:id                   controllers.nwbib.Application.show(id)
+GET    /:id                   controllers.nwbib.Application.show(id, format ?= "")

@@ -611,7 +611,7 @@ public class Lobid {
 				|| field.equals(Application.ITEM_FIELD))
 			return "octicon octicon-home";
 		else if ((uris.size() == 1 && isNwBibClass(uris.get(0)))
-				|| field.equals(Application.NWBIB_SUBJECT_FIELD))
+				|| field.equals(Application.RPB_SUBJECT_FIELD))
 			return "octicon octicon-list-unordered";
 		else if ((uris.size() == 1 && isNwBibSpatial(uris.get(0)))
 				|| field.equals(Application.NWBIB_SPATIAL_FIELD)

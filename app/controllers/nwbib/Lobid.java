@@ -672,7 +672,7 @@ public class Lobid {
 	}
 
 	static boolean isNwBibClass(String term) {
-		return term.startsWith("http://purl.org/lobid/nwbib#")
+		return term.startsWith("http://purl.org/lobid/rpb#")
 				|| term.startsWith("https://nwbib.de/subjects#");
 	}
 

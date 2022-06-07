@@ -20,7 +20,8 @@
 
 .treeFolder {
 	cursor: pointer;
-	color: #2F994C;
+	margin-bottom: -2px;
+	color: rgba(233, 48, 28, 0.75);
 }
 
 .treeFolder:before {

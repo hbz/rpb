@@ -76,8 +76,8 @@ public class ApplicationTest {
 				.toJsonLd(new URL(CONFIG.getString("index.data.nwbibsubject")));
 		nwbibsubjects.forEach(System.out::println);
 		assertThat(nwbibsubjects.size()).isGreaterThan(1000);
-		assertThat(nwbibsubjects.toString()).contains("Allgemeine Landeskunde")
-				.contains("Landesbeschreibungen").contains("Reiseberichte");
+		assertThat(nwbibsubjects.toString()).contains("Landeskunde allgemein")
+				.contains("Landesbeschreibung").contains("Hydroökologie");
 	}
 
 	@Test

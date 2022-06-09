@@ -244,7 +244,7 @@
   @result_field("In", "containedIn", doc, TableRow.LINKS)
 
   @part_of("isPartOf", "hasSuperordinate")
-  @defining(lobidUrl((doc \ "hbzId").asOpt[String].getOrElse(""))){ id =>
+  @defining(lobidUrl((doc \ "rpbId").asOpt[String].getOrElse(""))){ id =>
    @subordinate("isPartOf.hasSuperordinate.id", id, "Bände", ("zugehöriger Band", "zugehörige Bände"))
    @subordinate("containedIn.id", id, "Enthält", ("Beitrag", "Beiträge"))
   }

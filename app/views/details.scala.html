@@ -25,7 +25,7 @@
 }
 
 @shortId(json: JsValue) = @{
-	(json\"hbzId").asOpt[String].getOrElse((json\"id").asOpt[String].map(_.replaceAll("https?://lobid.org/resources/","").replaceAll("#!","")).getOrElse(""))
+	(json\"rpbId").asOpt[String].getOrElse((json\"id").asOpt[String].map(_.replaceAll("https?://lobid.org/resources/","").replaceAll("#!","")).getOrElse(""))
 }
 
 @if(docJson.isEmpty){
@@ -48,7 +48,7 @@
               <ul class="pager">
                 @pageLink(last, "prev", "&larr;", "Voriger Treffer")
                 @defining(session("lastSearchUrl")){ lastSearchUrl =>
-                  <li><a href="@lastSearchUrl">Treffer @(last.indexOf((doc\\"hbzId")(0).as[String])+1) von @last.size in der 
+                  <li><a href="@lastSearchUrl">Treffer @(last.indexOf((doc\\"rpbId")(0).as[String])+1) von @last.size in der 
                   @if(lastSearchUrl==nwbib.routes.Application.showStars().toString()) {Merkliste} else {letzten Trefferliste}</a></li>
                 }
                 @pageLink(last, "next", "&rarr;", "Nächster Treffer")
@@ -69,7 +69,7 @@
         @defining(!(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>
           <div class="col-md-@if(items.isEmpty && !doc.toString.contains("fulltextOnline") && !superordination){12} else {8}">
             <dl>
-            @defining((doc\"hbzId").asOpt[String].getOrElse(q)){ id =>
+            @defining((doc\"rpbId").asOpt[String].getOrElse(q)){ id =>
               <dt>@tags.star_button(id) Titeldetails:
               <small style='float:right'>
               <a target="_top" href="@(String.format(Application.CONFIG.getString("indexUrlFormat"), id))"><img class="json-ld-icon" src="/assets/images/json-ld.png" title="JSON-LD für diesen Titel"></a>

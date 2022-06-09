@@ -78,7 +78,9 @@ move_field("#39 ", "responsibilityStatement[]")
 set_hash("pub")
 set_array("pub.location[]")
 copy_field("#74 ", "pub.location[].$append")
-copy_field("#76a", "pub.startDate")
+if all_match("#76a", "\\d{4}")
+  copy_field("#76a", "pub.startDate")
+end
 
 # Folgendes rausgenommen wegen 929t130101, in dem sich #76a wiederholt
 # replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")

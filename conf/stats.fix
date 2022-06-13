@@ -1,0 +1,17 @@
+# Remove empty fields
+
+vacuum()
+
+# #31-Werte zählen
+
+# set_array("spatial[]")
+
+# Einige Ortsschlagwörter in "#31~"" stammen aus der GND und werden nach "subject" verschoben
+
+do list (path:"#31?", "var": "$i")
+    move_field("$i", "spatial")
+end
+
+
+retain( "spatial")
+vacuum()

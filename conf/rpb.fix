@@ -138,6 +138,14 @@ do list(path: "spatial[]")
     add_field("source.label", "Raumsystematik der Rheinland-Pfälzischen Bibliographie")
 end
 
+# ------- GND-Schlagwörter -------
+# To Do:
+# 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
+# #32 _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
+# 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
+# 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
+# "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
+
 # ------- Contribution -------
 
 set_array("contribution[]")

@@ -114,7 +114,7 @@ if exists ("#30*")
 end
 
 # ------- Ortsnotation -------
-# ToDo: Zu analyiseren: In den Testdaten sind die Werte in "#31 " und "#31a" identisch und ergeben eine Dublette. 
+# In den Testdaten sind die Werte in "#31 " und "#31a" identisch und ergeben eine Dublette. Der Grund ist, dass sie kombiniert mit "#30" und "#31a" eine Schlagwortfolge ergeben. Beim Treffen am 14.6.2022 wurde – wenn AP sich richtig erinnert – beschlossen, diese Ketten aufzuspalten in `spatial`- und `subject` -Einräge (analog zur NWbib).
 
 set_array("spatial[]")
 
@@ -146,6 +146,49 @@ end
 # 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
 # "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
 
+set_array("@subject[]")
+
+do list (path:"#32?", "var": "$i")
+  copy_field("$i", "@subject[].$append.@swf[]")
+end
+
+do list (path:"@subject[]", "var": "$i")
+    set_array("subject[].$append.type[]","ComplexSubject")
+    set_array("subject[].$last.label")
+    set_array("subject[].$last.componentList[]")
+    split_field("$i.@swf[]", " ; ")
+    copy_field("$i.@swf[]", "subject[].$last.componentList[].$append.id")
+end
+
+do list (path:"subject[].*.componentList[]", "var": "$i")
+  replace_all("$i.id","_(.*)_","$1")
+  copy_field("$i.id", "$i.label")
+  lookup("$i.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+  if all_match("$i,id","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
+    prepend("$i.id", "https://rpb.lobid.org/sw/")
+    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
+    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
+  else
+    replace_all("$i.id", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.id", "https://d-nb.info/gnd/")
+    add_field("$i.source.id", "http://rpb.lobid.org/sw")
+    add_field("$i.source.label", "RPB-Sachsystematik")
+  end
+end
+
+# Was nocht fehlt: Das Pipe-separaierte Label für eine gesamte Schlagwortfolge ("subject.label").
+# Der folgende Ansatz funktioniert nicht, denn, anstatt den String zu appenden wird das Feld "subject.label" wiederholt:
+#
+# do list (path:"subject[]", "var": "$i")
+#  copy_field("$i.*.componentList[].label", "$i.label")
+# end
+#
+# This also does not work:
+#
+# do list (path:"subject[]", "var": "$i")
+#  paste("$i.label", "$i.*.componentList[].label", "join_char": "")
+# end
+
 # ------- Contribution -------
 
 set_array("contribution[]")
@@ -156,7 +199,7 @@ do list(path: "contribution[]")
   copy_field("agent.id", "agent.label")
   lookup("agent.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t")
   if all_match("agent.id","^00.*|^107n.*|^929n.*")
-    prepend("agent.id", "https://rpb.lobid.org/sw/")
+    prepend("agent.id", "https://rpb.lobid.org/agent/")
   else
     replace_all("agent.id", "(^\\d*)n(\\d)", "$1-$2")
     prepend("agent.id", "https://d-nb.info/gnd/")

@@ -23,6 +23,37 @@
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/00Sn09k3388332a",
+      "label" : "Minick-Kaserne",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4239597-5",
+      "label" : "Konversion / Wirtschaft",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4125149-0",
+      "label" : "Gehölz",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/00Sn08t0441758a",
+      "label" : "Geschichte 1993-2008",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13300006",

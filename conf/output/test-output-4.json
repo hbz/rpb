@@ -23,6 +23,30 @@
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/118550993",
+      "label" : "Hildegard / Bingen, Äbtissin, Heilige / 1098-1179",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4409901-0",
+      "label" : "Geburtsort",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/z34",
+      "label" : "Geschichte 1024-1254",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:r01",
@@ -34,7 +58,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/929n041146",
+      "id" : "https://rpb.lobid.org/agent/929n041146",
       "label" : "Vesper-Stumm, Karin"
     },
     "role" : {

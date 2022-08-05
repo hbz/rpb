@@ -22,6 +22,30 @@
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4528513-5",
+      "label" : "Koblenz-Güls",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4008491-7",
+      "label" : "Brunnen",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/z28",
+      "label" : "Geschichte 500-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000000600",
@@ -33,7 +57,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn02k2659a",
+      "id" : "https://rpb.lobid.org/agent/00Pn02k2659a",
       "label" : "Pickel, Alois / 1932-"
     },
     "role" : {

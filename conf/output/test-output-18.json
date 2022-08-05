@@ -30,6 +30,30 @@
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4515648-7",
+      "label" : "Koblenz-Neuendorf",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4518119-6",
+      "label" : "Vereinsleben",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/00Sn05k2020982a",
+      "label" : "Geschichte 1945-1950",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000001500",
@@ -48,7 +72,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn01t42566702a",
+      "id" : "https://rpb.lobid.org/agent/00Pn01t42566702a",
       "label" : "Kiefer, Irmgard"
     },
     "role" : {

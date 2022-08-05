@@ -35,10 +35,20 @@
     "id" : "https://d-nb.info/gnd/4095533-3"
   }, {
     "id" : "https://d-nb.info/gnd/4095533-3"
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/929-090683",
+      "label" : "Derscher Geschwämm",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/929n002003",
+      "id" : "https://rpb.lobid.org/agent/929n002003",
       "label" : "Goebel, Andreas"
     },
     "role" : {

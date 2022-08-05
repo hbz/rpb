@@ -23,6 +23,23 @@
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/00Sn07k3082199a",
+      "label" : "Therapiezentrum Bassenheim",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/00Sn08t1622278a",
+      "label" : "Geschichte 2009",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13708202",
@@ -34,7 +51,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn03k4004c",
+      "id" : "https://rpb.lobid.org/agent/00Pn03k4004c",
       "label" : "Lui, Tobias"
     },
     "role" : {

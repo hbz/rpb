@@ -26,6 +26,16 @@
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/7667208-6",
+      "label" : "Katholischer Arbeiterverein Sankt Josef Weißenthurm",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13708228",
@@ -37,7 +47,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/sw/00Pn02k2569a",
+      "id" : "https://rpb.lobid.org/agent/00Pn02k2569a",
       "label" : "Schneider, Helmut"
     },
     "role" : {

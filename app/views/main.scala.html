@@ -45,12 +45,12 @@
                       <li @if(title.contains("Sachsystematik")){class="active"}>
                         <a href="@nwbib.routes.Application.subjects()">Sachgebiete</a>
                       </li>
+                      <li @if(title=="NWBib - Themensuche"){class="active"}>
+                        <a href="@nwbib.routes.Application.topics()">Themensuche</a>
+                      </li>
                       @*
                       <li @if(title=="NWBib - Erweiterte Suche"){class="active"}>
                         <a href="@nwbib.routes.Application.advanced()">Erweiterte Suche</a>
-                      </li>
-                      <li @if(title=="NWBib - Themensuche"){class="active"}>
-                        <a href="@nwbib.routes.Application.topics()">Themensuche</a>
                       </li>
                       <li @if(title.contains("Raumsystematik")){class="active"}>
                         <a href="@nwbib.routes.Application.spatial()">Regionen</a>

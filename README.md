@@ -46,6 +46,8 @@ sbt "runMain rpb.ETL conf/rpb-sw.flux"
 
 ### Run full transformation and indexing
 
+Get full data at: http://lobid.org/download/rpb-gesamtexport/2022-03-11/
+
 ```bash
 
 sh transformAndIndex.sh

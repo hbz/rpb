@@ -25,29 +25,30 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Nahetal | Landschaft | Änderung | Geschichte 1800-",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4102346-8",
       "label" : "Nahetal",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4034343-1",
       "label" : "Landschaft",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4128256-5",
       "label" : "Änderung",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/z48",
+      "id" : "https://rpb.lobid.org/sw/z48",
       "label" : "Geschichte 1800-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -56,11 +57,12 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:r26",
+    "id" : "rpb-spatial:n26",
+    "label" : "_r26_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

@@ -25,29 +25,30 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Schultz, Friedrich Wilhelm / 1804-1876 | Nahetal | Reisebericht | Geschichte 1861",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/117192244",
       "label" : "Schultz, Friedrich Wilhelm / 1804-1876",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4102346-8",
       "label" : "Nahetal",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4076645-7",
       "label" : "Reisebericht",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn05k2122256a",
+      "id" : "https://rpb.lobid.org/sw/00Sn05k2122256a",
       "label" : "Geschichte 1861",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -56,11 +57,12 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:r26",
+    "id" : "rpb-spatial:n26",
+    "label" : "_r26_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

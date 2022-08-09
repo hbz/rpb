@@ -33,22 +33,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Güls | USA / Army / 3 | Geschichte 1945",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5034613-1",
       "label" : "Güls",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/1089008-7",
       "label" : "USA / Army / 3",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn05s0084938a",
+      "id" : "https://rpb.lobid.org/sw/00Sn05s0084938a",
       "label" : "Geschichte 1945",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -58,17 +59,19 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000000600",
+    "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n111000000600",
+    "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

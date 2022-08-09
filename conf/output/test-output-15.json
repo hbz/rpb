@@ -35,22 +35,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Bassenheim | Schule | Geschichte 1894-1946",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4252261-4",
       "label" : "Bassenheim",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4053474-1",
       "label" : "Schule",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09k3368351a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k3368351a",
       "label" : "Geschichte 1894-1946",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -60,17 +61,19 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13708202",
+    "label" : "o13708202",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n13708202",
+    "label" : "o13708202",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ]
 }

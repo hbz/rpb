@@ -25,8 +25,7 @@
                     "id": {
                         "title": "Subject URI",
                         "type": "string",
-                        "format": "uri",
-                        "pattern": "^https:\/\/d-nb.info\/gnd\/1[012]?\\d{7}[0-9X]|[47]\\d{6}-\\d|[1-9]\\d{0,7}-[0-9X]|3\\d{7}[0-9X]"
+                        "format": "uri"
                     },
                     "type": {
                         "type": "array",
@@ -50,13 +49,11 @@
                             "id": {
                                 "title": "Authority File URI",
                                 "type": "string",
-                                "format": "uri",
-                                "const": "https://d-nb.info/gnd/7749153-1"
+                                "format": "uri"
                             },
                             "label": {
                                 "title": "German name of the role",
-                                "type": "string",
-                                "const": "Gemeinsame Normdatei (GND)"
+                                "type": "string"
                             }
                         },
                         "required": [
@@ -91,7 +88,6 @@
                     
                 },
                 "required": [
-                    "type",
                     "label"
                 ]
             }

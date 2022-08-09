@@ -27,15 +27,16 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Diez | Geschichte 1866-1922",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4012241-4",
       "label" : "Diez",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09k3370774a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k3370774a",
       "label" : "Geschichte 1866-1922",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -45,10 +46,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n14103029",
+    "label" : "o14103029",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

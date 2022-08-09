@@ -49,29 +49,30 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Koblenz | Stadtwald | Klimaänderung | Geschichte 2009",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4031410-8",
       "label" : "Koblenz",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4194638-8",
       "label" : "Stadtwald",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4164199-1",
       "label" : "Klimaänderung",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn08t1622278a",
+      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
       "label" : "Geschichte 2009",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -80,29 +81,30 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Landkreis Mayen-Koblenz | Wald | Klimaänderung | Geschichte 2009",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4038117-1",
       "label" : "Landkreis Mayen-Koblenz",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4064354-2",
       "label" : "Wald",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4164199-1",
       "label" : "Klimaänderung",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn08t1622278a",
+      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
       "label" : "Geschichte 2009",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -112,31 +114,35 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n11100000",
+    "label" : "o11100000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n11100000",
+    "label" : "o11100000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n137",
+    "label" : "o137",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n137",
+    "label" : "o137",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

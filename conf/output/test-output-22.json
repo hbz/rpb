@@ -40,22 +40,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Güls | Weinbau | Geschichte Anfänge-1811",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5034613-1",
       "label" : "Güls",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4065136-8",
       "label" : "Weinbau",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09k3375778a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k3375778a",
       "label" : "Geschichte Anfänge-1811",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -64,22 +65,23 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Koblenz-Lay | Weinbau | Geschichte Anfänge-1811",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4363232-4",
       "label" : "Koblenz-Lay",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4065136-8",
       "label" : "Weinbau",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09k3375778a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k3375778a",
       "label" : "Geschichte Anfänge-1811",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -88,22 +90,23 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Koblenz-Moselweiß | Weinbau | Geschichte Anfänge-1811",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4265680-1",
       "label" : "Koblenz-Moselweiß",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4065136-8",
       "label" : "Weinbau",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09k3375778a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k3375778a",
       "label" : "Geschichte Anfänge-1811",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -113,24 +116,27 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000000600",
+    "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n111000001100",
+    "label" : "o111000001100",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n111000001400",
+    "label" : "o111000001400",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

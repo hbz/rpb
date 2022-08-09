@@ -25,15 +25,16 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Therapiezentrum Bassenheim | Geschichte 2009",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/00Sn07k3082199a",
+      "id" : "https://rpb.lobid.org/sw/00Sn07k3082199a",
       "label" : "Therapiezentrum Bassenheim",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn08t1622278a",
+      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
       "label" : "Geschichte 2009",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -43,10 +44,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13708202",
+    "label" : "o13708202",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

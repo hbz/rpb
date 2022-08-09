@@ -25,22 +25,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Güls | Blindgänger | Geschichte 1944-2002",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5034613-1",
       "label" : "Güls",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4462894-8",
       "label" : "Blindgänger",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09k3381305a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k3381305a",
       "label" : "Geschichte 1944-2002",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -50,10 +51,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000000600",
+    "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

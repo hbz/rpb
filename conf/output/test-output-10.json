@@ -25,15 +25,16 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Fussballverein Rheingold / Rübenach | Geschichte 1983",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/2111110-8",
       "label" : "Fussballverein Rheingold / Rübenach",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn05k2218672a",
+      "id" : "https://rpb.lobid.org/sw/00Sn05k2218672a",
       "label" : "Geschichte 1983",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -43,10 +44,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000002000",
+    "label" : "o111000002000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

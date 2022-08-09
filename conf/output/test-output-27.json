@@ -32,19 +32,33 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "https://d-nb.info/gnd/4095533-3"
-  }, {
-    "id" : "https://d-nb.info/gnd/4095533-3"
-  }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Derscher Geschwämm",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/929-090683",
+      "id" : "https://rpb.lobid.org/sw/929n090683",
       "label" : "Derscher Geschwämm",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://d-nb.info/gnd/4095533-3",
+    "label" : "Hoher Westerwald",
+    "type" : [ "PlaceOrGeographicName" ],
+    "source" : {
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
+    }
+  }, {
+    "id" : "https://d-nb.info/gnd/4095533-3",
+    "label" : "Hoher Westerwald",
+    "type" : [ "PlaceOrGeographicName" ],
+    "source" : {
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
+    }
   } ],
   "contribution" : [ {
     "agent" : {

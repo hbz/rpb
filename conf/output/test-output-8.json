@@ -25,15 +25,16 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Erb-Frey-Hof / Eckelsheim | Geschichte 2009",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/929-090685",
+      "id" : "https://rpb.lobid.org/sw/929n090685",
       "label" : "Erb-Frey-Hof / Eckelsheim",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn08t1622278a",
+      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
       "label" : "Geschichte 2009",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -43,10 +44,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n33105017",
+    "label" : "o33105017",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

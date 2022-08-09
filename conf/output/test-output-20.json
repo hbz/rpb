@@ -25,15 +25,16 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Beyer-Mietservice KG | Geschichte 1994-2009",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/929-090681",
+      "id" : "https://rpb.lobid.org/sw/929n090681",
       "label" : "Beyer-Mietservice KG",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09s1030285a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09s1030285a",
       "label" : "Geschichte 1994-2009",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -43,10 +44,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n132060280101",
+    "label" : "o132060280101",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

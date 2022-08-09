@@ -24,28 +24,30 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Brentano, Maximiliane / 1756-1793 | Biografie",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/116799889",
       "label" : "Brentano, Maximiliane / 1756-1793",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4006804-3",
       "label" : "Biografie",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000000500",
+    "label" : "o111000000500",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

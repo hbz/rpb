@@ -32,22 +32,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Koblenz-Neuendorf | Vereinsleben | Geschichte 1945-1950",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4515648-7",
       "label" : "Koblenz-Neuendorf",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4518119-6",
       "label" : "Vereinsleben",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn05k2020982a",
+      "id" : "https://rpb.lobid.org/sw/00Sn05k2020982a",
       "label" : "Geschichte 1945-1950",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -57,17 +58,19 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000001500",
+    "label" : "o111000001500",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n111000001500",
+    "label" : "o111000001500",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

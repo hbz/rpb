@@ -14,8 +14,7 @@
             "type": {
                 "type": "array",
                 "items": {
-                    "type": "string",
-                    "const": "Concept"
+                    "type": "string"
                 }
             },
             "label": {
@@ -32,7 +31,8 @@
                         "format": "uri",
                         "enum": [
                             "https://nwbib.de/spatial",
-                            "https://example.org/rpb-spatial"
+                            "https://example.org/rpb-spatial",
+                            "https://d-nb.info/gnd/7749153-1"
                         ]
                     },
                     "label": {

@@ -33,22 +33,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Koblenz-Güls | Zur Stadt Koblenz | Geschichte 1890-2008",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4528513-5",
       "label" : "Koblenz-Güls",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/929-090684",
+      "id" : "https://rpb.lobid.org/sw/929n090684",
       "label" : "Zur Stadt Koblenz",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn09k1124793a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k1124793a",
       "label" : "Geschichte 1890-2008",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -58,17 +59,19 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000000600",
+    "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   }, {
     "id" : "rpb-spatial:n111000000600",
+    "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

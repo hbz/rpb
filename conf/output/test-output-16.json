@@ -28,21 +28,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Katholischer Arbeiterverein Sankt Josef Weißenthurm",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/7667208-6",
       "label" : "Katholischer Arbeiterverein Sankt Josef Weißenthurm",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13708228",
+    "label" : "o13708228",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

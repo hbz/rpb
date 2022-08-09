@@ -25,22 +25,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Landkreis Mayen-Koblenz | Geothermische Energie | Geschichte 2009",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4038117-1",
       "label" : "Landkreis Mayen-Koblenz",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4020286-0",
       "label" : "Geothermische Energie",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn08t1622278a",
+      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
       "label" : "Geschichte 2009",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -50,10 +51,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n137",
+    "label" : "o137",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ]
 }

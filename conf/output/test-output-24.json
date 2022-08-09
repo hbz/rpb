@@ -24,22 +24,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Koblenz-Güls | Brunnen | Geschichte 500-",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4528513-5",
       "label" : "Koblenz-Güls",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4008491-7",
       "label" : "Brunnen",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/z28",
+      "id" : "https://rpb.lobid.org/sw/z28",
       "label" : "Geschichte 500-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -49,10 +50,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n111000000600",
+    "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

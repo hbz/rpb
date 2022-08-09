@@ -115,27 +115,37 @@ end
 
 # ------- Ortsnotation -------
 # In den Testdaten sind die Werte in "#31 " und "#31a" identisch und ergeben eine Dublette. Der Grund ist, dass sie kombiniert mit "#30" und "#31a" eine Schlagwortfolge ergeben. Beim Treffen am 14.6.2022 wurde – wenn AP sich richtig erinnert – beschlossen, diese Ketten aufzuspalten in `spatial`- und `subject` -Einräge (analog zur NWbib).
+# Einige Ortsschlagwörter in "#31~"" stammen aus der GND, werden aber nicht nach "subject" verschoben, sondern bleiben in `spatial`, siehe https://jira.hbz-nrw.de/browse/RPB-14?focusedCommentId=287089#comment-287089
+# To Do: 
+# 1. Sich wiederholende Werte werden momentan doppelt im JSON abgelegt, siehe test-output-27.json
+# 2. Lookup der RPB-Raumsystematik-Labels
 
 set_array("spatial[]")
 
-# Einige Ortsschlagwörter in "#31~"" stammen aus der GND und werden nach "subject" verschoben
-
 do list (path:"#31?", "var": "$i")
-  if any_contain("$i", "_r10_")
-    replace_all("$i","^_r10_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
-    move_field("$i", "subject[].$append.id")
-  else
-    replace_all("$i","^_r99_\\s_o(\\d+)_$","rpb-spatial:n$1")
-    replace_all("$i","^_(r\\d{2})_$","rpb-spatial:$1")
-    move_field("$i", "spatial[].$append.id")
-  end
+  copy_field("$i", "spatial[].$append.id")
 end
 
-do list(path: "spatial[]")
-    set_array("type[]")
-    add_field("type[].$append", "Concept")
-    add_field("source.id", "https://example.org/rpb-spatial")
-    add_field("source.label", "Raumsystematik der Rheinland-Pfälzischen Bibliographie")
+do list (path:"spatial[]", "var": "$i")
+  copy_field("$i.id", "$i.label")
+  replace_all("$i.label","^_r\\d{2}_\\s_(.*?)_$","$1")
+  if any_contain("$i.id", "_r10_")
+    replace_all("$i.id","^_r10_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
+    lookup("$i.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+    set_array("$i.type[]","PlaceOrGeographicName")
+    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
+    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
+  elsif any_contain("$i.id", "_r99_")
+    replace_all("$i.id","^_r99_\\s_o(\\d+)_$","rpb-spatial:n$1")
+    set_array("$i.type[]","Concept")
+    add_field("$i.source.id", "https://example.org/rpb-spatial")
+    add_field("$i.source.label", "RPB-Raumsystematik")
+  else
+    replace_all("$i.id","^_r(\\d{2})_$","rpb-spatial:n$1")
+    set_array("$i.type[]","Concept")
+    add_field("$i.source.id", "https://example.org/rpb-spatial")
+    add_field("$i.source.label", "RPB-Raumsystematik")
+  end
 end
 
 # ------- GND-Schlagwörter -------
@@ -145,6 +155,7 @@ end
 # 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
 # 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
 # "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
+# To Do: Die Transformation behandelt bisher GND-Ids (hier und in `spatial`) so, als würden sie allesamt einen Bindestrich enthalten, was ja nicht der Fall ist.
 
 set_array("@subject[]")
 
@@ -153,41 +164,35 @@ do list (path:"#32?", "var": "$i")
 end
 
 do list (path:"@subject[]", "var": "$i")
-    set_array("subject[].$append.type[]","ComplexSubject")
-    set_array("subject[].$last.label")
-    set_array("subject[].$last.componentList[]")
-    split_field("$i.@swf[]", " ; ")
-    copy_field("$i.@swf[]", "subject[].$last.componentList[].$append.id")
+  set_array("subject[].$append.type[]","ComplexSubject")
+  set_array("subject[].$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
+  set_array("subject[].$last.componentList[]")
+  split_field("$i.@swf[]", " ; ")
+  copy_field("$i.@swf[]", "subject[].$last.componentList[].$append.id")
 end
 
 do list (path:"subject[].*.componentList[]", "var": "$i")
   replace_all("$i.id","_(.*)_","$1")
   copy_field("$i.id", "$i.label")
   lookup("$i.label", "RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-  if all_match("$i,id","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
+  if all_match("$i.id","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
     prepend("$i.id", "https://rpb.lobid.org/sw/")
-    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
-    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
+    add_field("$i.source.id", "http://rpb.lobid.org/sw")
+    add_field("$i.source.label", "RPB-Sachsystematik")
   else
     replace_all("$i.id", "(^\\d*)n(\\d)", "$1-$2")
     prepend("$i.id", "https://d-nb.info/gnd/")
-    add_field("$i.source.id", "http://rpb.lobid.org/sw")
-    add_field("$i.source.label", "RPB-Sachsystematik")
+    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
+    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
   end
 end
 
-# Was nocht fehlt: Das Pipe-separaierte Label für eine gesamte Schlagwortfolge ("subject.label").
-# Der folgende Ansatz funktioniert nicht, denn, anstatt den String zu appenden wird das Feld "subject.label" wiederholt:
-#
-# do list (path:"subject[]", "var": "$i")
-#  copy_field("$i.*.componentList[].label", "$i.label")
-# end
-#
-# This also does not work:
-#
-# do list (path:"subject[]", "var": "$i")
-#  paste("$i.label", "$i.*.componentList[].label", "join_char": "")
-# end
+# Generierung des pipe-separaierten Labels für eine gesamte Schlagwortfolge ("subject.label").
+
+do list (path:"subject[]", "var": "$i")
+  copy_field("$i.*.componentList[].label", "$i.label.$append")
+  join_field("$i.label"," | ")
+end
 
 # ------- Contribution -------
 

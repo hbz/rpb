@@ -25,8 +25,9 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Minick-Kaserne | Konversion / Wirtschaft | Gehölz | Geschichte 1993-2008",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/00Sn09k3388332a",
+      "id" : "https://rpb.lobid.org/sw/00Sn09k3388332a",
       "label" : "Minick-Kaserne",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -36,18 +37,18 @@
       "id" : "https://d-nb.info/gnd/4239597-5",
       "label" : "Konversion / Wirtschaft",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4125149-0",
       "label" : "Gehölz",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/00Sn08t0441758a",
+      "id" : "https://rpb.lobid.org/sw/00Sn08t0441758a",
       "label" : "Geschichte 1993-2008",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -57,10 +58,11 @@
   } ],
   "spatial" : [ {
     "id" : "rpb-spatial:n13300006",
+    "label" : "o13300006",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

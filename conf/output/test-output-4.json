@@ -25,22 +25,23 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
+    "label" : "Hildegard / Bingen, Äbtissin, Heilige / 1098-1179 | Geburtsort | Geschichte 1024-1254",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118550993",
       "label" : "Hildegard / Bingen, Äbtissin, Heilige / 1098-1179",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4409901-0",
       "label" : "Geburtsort",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/z34",
+      "id" : "https://rpb.lobid.org/sw/z34",
       "label" : "Geschichte 1024-1254",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -49,11 +50,12 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:r01",
+    "id" : "rpb-spatial:n01",
+    "label" : "_r01_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://example.org/rpb-spatial",
-      "label" : "Raumsystematik der Rheinland-Pfälzischen Bibliographie"
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {

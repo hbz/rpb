@@ -611,7 +611,7 @@ public class Lobid {
 				|| field.equals(Application.ITEM_FIELD))
 			return "octicon octicon-home";
 		else if ((uris.size() == 1 && isNwBibClass(uris.get(0)))
-				|| field.equals(Application.NWBIB_SUBJECT_FIELD))
+				|| field.equals(Application.RPB_SUBJECT_FIELD))
 			return "octicon octicon-list-unordered";
 		else if ((uris.size() == 1 && isNwBibSpatial(uris.get(0)))
 				|| field.equals(Application.NWBIB_SPATIAL_FIELD)
@@ -672,7 +672,7 @@ public class Lobid {
 	}
 
 	static boolean isNwBibClass(String term) {
-		return term.startsWith("http://purl.org/lobid/nwbib#")
+		return term.startsWith("http://purl.org/lobid/rpb#")
 				|| term.startsWith("https://nwbib.de/subjects#");
 	}
 

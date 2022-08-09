@@ -249,8 +249,8 @@
    @subordinate("containedIn.id", id, "Enthält", ("Beitrag", "Beiträge"))
   }
   @parallelausgabe()
-  @raumsystematik("https://nwbib.de/spatial")
-  @sachsystematik("https://nwbib.de/subjects")
+  @*@raumsystematik("https://nwbib.de/spatial")*@
+  @sachsystematik("http://purl.org/lobid/rpb")
 
   @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()))
 

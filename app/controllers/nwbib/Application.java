@@ -81,8 +81,8 @@ public class Application extends Controller {
 	/** The internal ES field for the item/exemplar facet. */
 	public static final String ITEM_FIELD = "owner";
 
-	/** The internal ES field for the NWBib subject facet. */
-	public static final String NWBIB_SUBJECT_FIELD = "subject.id<subjects#";
+	/** The internal ES field for the RPB subject facet. */
+	public static final String RPB_SUBJECT_FIELD = "subject.id<rpb#";
 	/** The internal ES field for the NWBib spatial facet. */
 	public static final String NWBIB_SPATIAL_FIELD = "spatial.id<spatial#";
 	/** The internal ES field for the coverage facet. */
@@ -390,7 +390,7 @@ public class Application extends Controller {
 			}
 			response().setContentType("application/x-download");
 			String filename =
-					t.equals("Raumsystematik") ? "nwbib-spatial.ttl" : "nwbib.ttl";
+					t.equals("Raumsystematik") ? "nwbib-spatial.ttl" : "rpb.ttl";
 			response().setHeader("Content-disposition",
 					"attachment; filename=" + filename);
 			try {
@@ -650,7 +650,7 @@ public class Application extends Controller {
 			String ownerQuery = !field.equals(ITEM_FIELD) ? owner //
 					: withoutAndOperator(queryParam(owner, term));
 			String nwbibsubjectQuery =
-					!field.equals(NWBIB_SUBJECT_FIELD) ? nwbibsubject //
+					!field.equals(RPB_SUBJECT_FIELD) ? nwbibsubject //
 							: queryParam(nwbibsubject, term);
 			String nwbibspatialQuery =
 					!field.equals(NWBIB_SPATIAL_FIELD) ? nwbibspatial //
@@ -666,7 +666,6 @@ public class Application extends Controller {
 
 			boolean current = current(subject, medium, nwbibspatial, nwbibsubject,
 					owner, t, field, term, raw);
-
 			String routeUrl = routes.Application.search(q, person, name, subjectQuery,
 					id, publisher, issuedQuery, mediumQuery, nwbibspatialQuery,
 					nwbibsubjectQuery, from, size, ownerQuery, typeQuery,
@@ -691,7 +690,7 @@ public class Application extends Controller {
 							Spliterators.spliteratorUnknownSize(json.findValue("aggregation")
 									.get(field.split("<")[0]).elements(), 0),
 							false);
-					if (field.equals(NWBIB_SUBJECT_FIELD)
+					if (field.equals(RPB_SUBJECT_FIELD)
 							|| field.equals(NWBIB_SPATIAL_FIELD)) {
 						String source = field.split("<")[1];
 						stream = stream
@@ -733,7 +732,7 @@ public class Application extends Controller {
 				|| field.equals(ITEM_FIELD) && contains(owner, term)
 				|| field.equals(NWBIB_SPATIAL_FIELD) && contains(nwbibspatial, term)
 				|| field.equals(COVERAGE_FIELD) && rawContains(raw, quotedEscaped(term))
-				|| field.equals(NWBIB_SUBJECT_FIELD) && contains(nwbibsubject, term)
+				|| field.equals(RPB_SUBJECT_FIELD) && contains(nwbibsubject, term)
 				|| field.equals(SUBJECT_FIELD) && contains(subject, term);
 	}
 

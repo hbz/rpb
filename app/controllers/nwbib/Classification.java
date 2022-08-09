@@ -384,7 +384,7 @@ public class Classification {
 	private static String notation(JsonNode item) {
 		JsonNode notationFromSkos = item.findValue(Property.NOTATION.value);
 		if (notationFromSkos != null) {
-			return notationFromSkos.findValue("@value").asText();
+			return notationFromSkos.findValue("@value").asText().replace("rpb", "");
 		}
 		Optional<String> notationKeyWikidata =
 				Stream.of("ks", "ags", "rs").filter(k -> item.has(k)).findFirst();

@@ -136,14 +136,14 @@ do list (path:"spatial[]", "var": "$i")
     add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
     add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
   elsif any_contain("$i.id", "_r99_")
-    replace_all("$i.id","^_r99_\\s_o(\\d+)_$","rpb-spatial:n$1")
+    replace_all("$i.id","^_r99_\\s_o(\\d+)_$","https://rpb.lobid.org/spatial#n$1")
     set_array("$i.type[]","Concept")
-    add_field("$i.source.id", "https://example.org/rpb-spatial")
+    add_field("$i.source.id", "https://rpb.lobid.org/spatial")
     add_field("$i.source.label", "RPB-Raumsystematik")
   else
-    replace_all("$i.id","^_r(\\d{2})_$","rpb-spatial:n$1")
+    replace_all("$i.id","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
     set_array("$i.type[]","Concept")
-    add_field("$i.source.id", "https://example.org/rpb-spatial")
+    add_field("$i.source.id", "https://rpb.lobid.org/spatial")
     add_field("$i.source.label", "RPB-Raumsystematik")
   end
 end

@@ -43,11 +43,11 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n111000002000",
+    "id" : "https://rpb.lobid.org/spatial#n111000002000",
     "label" : "o111000002000",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],

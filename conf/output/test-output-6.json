@@ -113,35 +113,35 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "https://rpb.lobid.org/spatial#n11100000",
     "label" : "o11100000",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   }, {
-    "id" : "rpb-spatial:n11100000",
+    "id" : "https://rpb.lobid.org/spatial#n11100000",
     "label" : "o11100000",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   }, {
-    "id" : "rpb-spatial:n137",
+    "id" : "https://rpb.lobid.org/spatial#n137",
     "label" : "o137",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   }, {
-    "id" : "rpb-spatial:n137",
+    "id" : "https://rpb.lobid.org/spatial#n137",
     "label" : "o137",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],

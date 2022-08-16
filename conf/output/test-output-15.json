@@ -67,13 +67,5 @@
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
-  }, {
-    "id" : "https://rpb.lobid.org/spatial#n13708202",
-    "label" : "o13708202",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ]
 }

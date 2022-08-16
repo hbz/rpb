@@ -104,6 +104,7 @@ set_array("subject[]")
 if exists ("#30*")
   move_field("#30*", "subject[].$append.id")
   replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
+  uniq("subject[]")
   do list(path: "subject[]")
     add_field("label", "Platzhalter Schlagwortlabel")
     set_array("type[]")
@@ -125,6 +126,8 @@ set_array("spatial[]")
 do list (path:"#31?", "var": "$i")
   copy_field("$i", "spatial[].$append.id")
 end
+
+uniq("spatial[]")
 
 do list (path:"spatial[]", "var": "$i")
   copy_field("$i.id", "$i.label")

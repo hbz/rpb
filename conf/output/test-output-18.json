@@ -64,14 +64,6 @@
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
-  }, {
-    "id" : "https://rpb.lobid.org/spatial#n111000001500",
-    "label" : "o111000001500",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {

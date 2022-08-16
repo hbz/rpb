@@ -580,7 +580,7 @@ public class Lobid {
 		if (uris.size() == 1 && isOrg(uris.get(0))) {
 			return Lobid.organisationLabel(uris.get(0));
 		} else if (uris.size() == 1
-				&& (isNwBibClass(uris.get(0)) || isNwBibSpatial(uris.get(0))))
+				&& (isRpbSubject(uris.get(0)) || isRpbSpatial(uris.get(0))))
 			return Lobid.nwBibLabel(uris.get(0));
 		else if (uris.size() == 1 && isGnd(uris.get(0)))
 			return Lobid.gndLabel(uris.get(0));
@@ -610,10 +610,10 @@ public class Lobid {
 		if ((uris.size() == 1 && isOrg(uris.get(0)))
 				|| field.equals(Application.ITEM_FIELD))
 			return "octicon octicon-home";
-		else if ((uris.size() == 1 && isNwBibClass(uris.get(0)))
+		else if ((uris.size() == 1 && isRpbSubject(uris.get(0)))
 				|| field.equals(Application.RPB_SUBJECT_FIELD))
 			return "octicon octicon-list-unordered";
-		else if ((uris.size() == 1 && isNwBibSpatial(uris.get(0)))
+		else if ((uris.size() == 1 && isRpbSpatial(uris.get(0)))
 				|| field.equals(Application.NWBIB_SPATIAL_FIELD)
 				|| field.equals(Application.COVERAGE_FIELD))
 			return "octicon octicon-milestone";
@@ -671,14 +671,12 @@ public class Lobid {
 		return term.contains("lobid.org/organisation");
 	}
 
-	static boolean isNwBibClass(String term) {
-		return term.startsWith("http://purl.org/lobid/rpb#")
-				|| term.startsWith("https://nwbib.de/subjects#");
+	static boolean isRpbSubject(String term) {
+		return term.startsWith("http://purl.org/lobid/rpb#");
 	}
 
-	private static boolean isNwBibSpatial(String term) {
-		return term.startsWith("http://purl.org/lobid/nwbib-spatial#")
-				|| term.startsWith("https://nwbib.de/spatial#");
+	private static boolean isRpbSpatial(String term) {
+		return term.startsWith("https://rpb.lobid.org/spatial#");
 	}
 
 	private static boolean isGnd(String term) {

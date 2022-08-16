@@ -26,6 +26,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import controllers.nwbib.Application;
 import controllers.nwbib.Classification;
 import controllers.nwbib.Lobid;
+import controllers.nwbib.Classification.Type;
 import play.libs.F.Promise;
 import play.libs.Json;
 import play.mvc.Http;
@@ -67,6 +68,15 @@ public class InternalIntegrationTest {
 							"Legislation", "Game");
 			assertThat(facets.findValues("count").stream().map(e -> e.intValue())
 					.collect(Collectors.toList())).excludes(0);
+		});
+	}
+
+	@Test
+	public void spatialClassificationLabel() {
+		running(testServer(3333), () -> {
+			assertThat(
+					Classification.label("https://rpb.lobid.org/spatial#n01", Type.SPATIAL))
+							.as("rpb spatial label").isEqualTo("Rheinland-Pfalz insgesamt. Landesteile");
 		});
 	}
 

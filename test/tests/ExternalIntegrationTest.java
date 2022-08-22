@@ -23,7 +23,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import controllers.nwbib.Application;
 import controllers.nwbib.Classification;
 import controllers.nwbib.Lobid;
-import controllers.nwbib.WikidataLocations;
 import play.libs.F.Promise;
 import play.mvc.Http;
 import play.test.Helpers;
@@ -135,19 +134,6 @@ public class ExternalIntegrationTest {
 			assertThat(register.toString()).contains("Audiovisuelle Medien")
 					.contains("Publizistik. Information und Dokumentation - Allgemeines")
 					.contains("Bibliotheksgeschichte").contains("Schulbibliotheken");
-		});
-	}
-
-	@Test
-	public void classificationWikidata() {
-		running(testServer(3333), () -> {
-			Pair<List<JsonNode>, Map<String, List<JsonNode>>> topAndSub =
-					Classification.buildHierarchyWikidata(WikidataLocations.load());
-			List<JsonNode> items =
-					topAndSub.getRight().values().stream().flatMap(x -> x.stream())
-							.filter(n -> n.toString().contains("Angermund"))
-							.collect(Collectors.toList());
-			assertThat(items.size()).isEqualTo(1).describedAs(items.toString());
 		});
 	}
 }

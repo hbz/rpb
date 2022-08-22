@@ -41,7 +41,7 @@ public class WikidataLocations {
 		load().elements().forEachRemaining(item -> {
 			String id = item.get("item").get("value").textValue();
 			String label = item.get("itemLabel").get("value").textValue();
-			WIKIDATA_LABELS.put(Classification.toNwbibNamespace(id), label);
+			WIKIDATA_LABELS.put(id, label);
 		});
 
 	}

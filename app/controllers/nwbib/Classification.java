@@ -125,10 +125,10 @@ public class Classification {
 				Map<String, List<JsonNode>> subClasses) {
 			Pair<List<JsonNode>, Map<String, List<JsonNode>>> topAndSub =
 					Classification.buildHierarchyCsv();
-			String n06 = RPB_SPATIAL + "n06";
+			String n6 = RPB_SPATIAL + "n6";
 			List<JsonNode> n06Sub = new ArrayList<>();
 			n06Sub.addAll(topAndSub.getLeft());
-			subClasses.put(n06, n06Sub);
+			subClasses.put(n6, n06Sub);
 			Map<String, List<JsonNode>> right = topAndSub.getRight();
 			for (Entry<String, List<JsonNode>> e : right.entrySet()) {
 				String key = e.getKey();
@@ -353,7 +353,7 @@ public class Classification {
 					}
 				} 
 				if(broader == null || broader.trim().isEmpty()) {
-					// directly under 06
+					// directly under n6
 					topClasses.add(Json.toJson(ImmutableMap.of("value", id, "label", label)));
 				} else if (hits > 0) {
 					String broaderId = RPB_SPATIAL + "n" + broader;

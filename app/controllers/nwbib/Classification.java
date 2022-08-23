@@ -448,7 +448,8 @@ public class Classification {
 					(style == Label.PLAIN || notation.isEmpty() ? ""
 							: "<span class='notation'>" + notation + "</span>" + " ")
 							+ label.findValue("@value").asText(), //
-					"hits", Lobid.getTotalHitsNwbibClassification(id), //
+					"hits",
+					Lobid.getTotalHitsNwbibClassification(Lobid.rpbSpatialGndToRealGnd(id)), //
 					"notation", notation, //
 					"focus", focus(json));
 			result.add(Json.toJson(map));

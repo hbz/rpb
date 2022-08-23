@@ -7,9 +7,11 @@
 
 @(nwbibsubject: String, nwbibspatial: String, person:String="", name:String="", subject:String="", id:String="", publisher:String="", issued:String="", medium: String="", owner: String="", t: String="", location: String="", word: String="", corporation: String="", raw: String="", search: Boolean = false)
 
+@toInternalGndId(uri: String) = @{ uri.replaceAll("https://d-nb.info/gnd/","n").replaceAll("-", "n") }
+
 @labels(uri: String) = { @defining(Lobid.facetLabel(Seq(uri),"","")) { label =>
-	@if(Lobid.isWikidata(uri)) {
-		<a title='@uri.split("#").last @WikidataLocations.label(uri)' href='@if(label.startsWith("http")){@label}else{@nwbib.routes.Application.spatial()#@uri.split("#").last}'>
+	@if(Lobid.isGnd(uri)) {
+		<a title='@toInternalGndId(uri.split("#").last) @label' href='@if(label.startsWith("http")){@label}else{@nwbib.routes.Application.spatial()#@toInternalGndId(uri.split("#").last)}'>
 			<span style='color: #777777'>@Classification.notation(uri, Type.SPATIAL)</span> @label
 		</a>
 	} else {

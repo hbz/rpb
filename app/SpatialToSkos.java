@@ -24,7 +24,6 @@ import org.apache.jena.vocabulary.SKOS;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import controllers.nwbib.Classification;
-import controllers.nwbib.Lobid;
 
 /**
  * Generate a SKOS representation from the internal spatial classification data
@@ -111,11 +110,8 @@ public class SpatialToSkos {
 	private static Resource addInSchemeAndPrefLabel(Model model, JsonNode top) {
 		String subject = top.get("value").asText();
 		String label = top.get("label").asText().replaceAll("<span class='notation'>([^<]*)</span>", "").trim();
-		boolean wiki = Lobid.isWikidata(subject);
-		String id = subject.split("#")[1].trim();
-		Resource result = model.createResource(wiki ? RPB_SPATIAL_NAMESPACE + id : subject, SKOS.Concept)//
-				.addProperty(SKOS.inScheme, //
-						model.createResource(RPB_SPATIAL))
+		Resource result = model.createResource(subject, SKOS.Concept)//
+				.addProperty(SKOS.inScheme, model.createResource(RPB_SPATIAL))
 				.addProperty(SKOS.prefLabel, label, "de");
 		return result;
 	}

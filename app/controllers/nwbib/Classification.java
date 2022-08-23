@@ -432,7 +432,7 @@ public class Classification {
 	private static List<JsonNode> valueAndLabelWithNotation(SearchHit hit,
 			JsonNode json) {
 		List<JsonNode> result = new ArrayList<>();
-		collectLabelAndValue(hit, json, Label.PLAIN, result);
+		collectLabelAndValue(hit, json, Label.WITH_NOTATION, result);
 		return result;
 	}
 

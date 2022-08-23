@@ -72,7 +72,7 @@
              hits = (json\"hits").asOpt[scala.Long].getOrElse(0L);
              anchor = value.split("[/#]").last;
              textToCopy = (if(entryLabel.contains("</span> ")){entryLabel.split("</span> ")(1)}else{entryLabel}) + "$$0" + value) {
-              <li id='@anchor'>@if(id=="root" && !placeholder.contains("Register") && !placeholder.contains("Raumsystematik") && t!="Wikidata" && t!="Zeitschriften") { <b>@Html(entryLabel)</b> } else {
+              <li id='@anchor'>@if(id=="root" && !placeholder.contains("Register") && t!="Wikidata" && t!="Zeitschriften") { <b>@Html(entryLabel)</b> } else {
                   @if(t!="Zeitschriften"){
                   }
                   <a class="notation-link" onclick="$('#nwbibQueryHidden').val(''); $('#nwbibQueryHidden').change(); $('#collapseAll').click(); expand($('#@anchor'));" href="@{t match {

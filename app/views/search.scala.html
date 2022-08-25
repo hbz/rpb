@@ -53,11 +53,7 @@
 }
 
 @labels(uri: String) = {
-	@if(Lobid.isWikidata(uri)) {
-		<a href='@uri'>@uri.split("/").last</a> @WikidataLocations.label(uri)
-	} else {
-		@Classification.shortId(uri) @Lobid.facetLabel(Seq(uri),"","")
-	}
+	@Classification.shortId(uri) @Lobid.facetLabel(Seq(uri),"","")
 }
 
 @shortId(json: JsValue) = @{

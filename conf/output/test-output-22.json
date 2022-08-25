@@ -23,22 +23,6 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n544300",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n544300",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
     "type" : [ "ComplexSubject" ],
     "label" : "Güls | Weinbau | Geschichte Anfänge-1811",
     "componentList" : [ {
@@ -115,27 +99,27 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n111000000600",
+    "id" : "https://rpb.lobid.org/spatial#n111000000600",
     "label" : "o111000000600",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   }, {
-    "id" : "rpb-spatial:n111000001100",
+    "id" : "https://rpb.lobid.org/spatial#n111000001100",
     "label" : "o111000001100",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   }, {
-    "id" : "rpb-spatial:n111000001400",
+    "id" : "https://rpb.lobid.org/spatial#n111000001400",
     "label" : "o111000001400",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],

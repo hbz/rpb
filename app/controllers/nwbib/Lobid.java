@@ -163,15 +163,6 @@ public class Lobid {
 		return requestHolder;
 	}
 
-	/**
-	 * @param uri The URI to test
-	 * @return True, if the given URI is a Wikidata URI
-	 */
-	public static boolean isWikidata(final String uri) {
-		return uri.contains("wikidata")
-				|| uri.startsWith("https://nwbib.de/spatial#Q");
-	}
-
 	private static String nestedContribution(final String person, String type) {
 		String p = person.contains(" AND ") ? person : person.replace(" ", " AND ");
 		p = p.matches("[\\d\\-X]+") ? GND_PREFIX + p : p;
@@ -230,7 +221,7 @@ public class Lobid {
 			initAggregation("spatial.id");
 			initAggregation("subject.id");
 		}
-		return (AGGREGATION_COUNT.containsKey(value) || isWikidata(value))
+		return AGGREGATION_COUNT.containsKey(value)
 				? AGGREGATION_COUNT.getOrDefault(value, 0L) : lobidRequest(value);
 	}
 
@@ -580,12 +571,10 @@ public class Lobid {
 		if (uris.size() == 1 && isOrg(uris.get(0))) {
 			return Lobid.organisationLabel(uris.get(0));
 		} else if (uris.size() == 1
-				&& (isNwBibClass(uris.get(0)) || isNwBibSpatial(uris.get(0))))
+				&& (isRpbSubject(uris.get(0)) || isRpbSpatial(uris.get(0))))
 			return Lobid.nwBibLabel(uris.get(0));
 		else if (uris.size() == 1 && isGnd(uris.get(0)))
 			return Lobid.gndLabel(uris.get(0));
-		else if (uris.size() == 1 && isWikidata(uris.get(0)))
-			return WikidataLocations.label(uris.get(0));
 		String configKey = keys.getOrDefault(field, "");
 
 		String type = selectType(uris, configKey);
@@ -610,10 +599,10 @@ public class Lobid {
 		if ((uris.size() == 1 && isOrg(uris.get(0)))
 				|| field.equals(Application.ITEM_FIELD))
 			return "octicon octicon-home";
-		else if ((uris.size() == 1 && isNwBibClass(uris.get(0)))
+		else if ((uris.size() == 1 && isRpbSubject(uris.get(0)))
 				|| field.equals(Application.RPB_SUBJECT_FIELD))
 			return "octicon octicon-list-unordered";
-		else if ((uris.size() == 1 && isNwBibSpatial(uris.get(0)))
+		else if ((uris.size() == 1 && isRpbSpatial(uris.get(0)))
 				|| field.equals(Application.NWBIB_SPATIAL_FIELD)
 				|| field.equals(Application.COVERAGE_FIELD))
 			return "octicon octicon-milestone";
@@ -671,17 +660,15 @@ public class Lobid {
 		return term.contains("lobid.org/organisation");
 	}
 
-	static boolean isNwBibClass(String term) {
-		return term.startsWith("http://purl.org/lobid/rpb#")
-				|| term.startsWith("https://nwbib.de/subjects#");
+	static boolean isRpbSubject(String term) {
+		return term.startsWith("http://purl.org/lobid/rpb#");
 	}
 
-	private static boolean isNwBibSpatial(String term) {
-		return term.startsWith("http://purl.org/lobid/nwbib-spatial#")
-				|| term.startsWith("https://nwbib.de/spatial#");
+	private static boolean isRpbSpatial(String term) {
+		return term.startsWith("https://rpb.lobid.org/spatial#");
 	}
 
-	private static boolean isGnd(String term) {
+	public static boolean isGnd(String term) {
 		return term.startsWith(GND_PREFIX);
 	}
 
@@ -767,5 +754,9 @@ public class Lobid {
 	private static int numerical(String s) {
 		// replace non-digits with 9, e.g. for DE-5 before DE-Walb1
 		return Integer.parseInt(s.replaceAll("\\D", "9"));
+	}
+
+	public static String rpbSpatialGndToRealGnd(String id) {
+		return id.replaceAll("https://rpb.lobid.org/spatial#n(\\d+)n(\\d)", "https://d-nb.info/gnd/$1-$2");
 	}
 }

@@ -24,14 +24,6 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n102060",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
     "type" : [ "ComplexSubject" ],
     "label" : "Plänckner, Julius ¬von¬ / 1791-1858 | Glantal, Nahe | Reisebericht | Geschichte 1831",
     "componentList" : [ {
@@ -97,19 +89,19 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "rpb-spatial:n26",
+    "id" : "https://rpb.lobid.org/spatial#n26",
     "label" : "_r26_",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   }, {
-    "id" : "rpb-spatial:n18",
+    "id" : "https://rpb.lobid.org/spatial#n18",
     "label" : "_r18_",
     "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://example.org/rpb-spatial",
+      "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],

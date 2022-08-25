@@ -390,7 +390,7 @@ public class Application extends Controller {
 			}
 			response().setContentType("application/x-download");
 			String filename =
-					t.equals("Raumsystematik") ? "nwbib-spatial.ttl" : "rpb.ttl";
+					t.equals("Raumsystematik") ? "rpb-spatial.ttl" : "rpb.ttl";
 			response().setHeader("Content-disposition",
 					"attachment; filename=" + filename);
 			try {

@@ -106,13 +106,16 @@ if exists ("#30*")
   replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
   uniq("subject[]")
   do list(path: "subject[]")
-    add_field("label", "Platzhalter Schlagwortlabel")
+    copy_field("id", "label")
+    lookup_rdf("label", "rpb.ttl", target: "http://www.w3.org/2004/02/skos/core#prefLabel")
     set_array("type[]")
     add_field("type[].$append", "Concept")
     add_field("source.id", "http://purl.org/lobid/rpb")
     add_field("source.label", "Systematik der Rheinland-Pfälzischen Bibliographie")
   end
 end
+
+
 
 # ------- Ortsnotation -------
 # In den Testdaten sind die Werte in "#31 " und "#31a" identisch und ergeben eine Dublette. Der Grund ist, dass sie kombiniert mit "#30" und "#31a" eine Schlagwortfolge ergeben. Beim Treffen am 14.6.2022 wurde – wenn AP sich richtig erinnert – beschlossen, diese Ketten aufzuspalten in `spatial`- und `subject` -Einräge (analog zur NWbib).

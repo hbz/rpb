@@ -1,19 +1,17 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t01026567",
-  "id" : "https://lobid.org/resources/RPB929t01026567",
-  "biblioVinoId" : "Nr27468",
+  "rpbId" : "RPB929t01061422",
+  "id" : "https://lobid.org/resources/RPB929t01061422",
+  "biblioVinoId" : "Nr6363",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Weinlese an der Ahr",
-  "extent" : "Illustrationen",
-  "responsibilityStatement" : [ "Heinrich Lersch +, Bodendorf, Ahr" ],
+  "title" : "Vom Weinbau im oberen Nahetal",
   "publication" : [ {
-    "startDate" : "1940",
+    "startDate" : "1956",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
@@ -26,24 +24,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ahrtal | Weinlese | Belletristische Darstellung",
+    "label" : "Nahetal | Weinbau",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4084812-7",
-      "label" : "Ahrtal",
+      "id" : "https://d-nb.info/gnd/4102346-8",
+      "label" : "Nahetal",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4432509-5",
-      "label" : "Weinlese",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4144445-0",
-      "label" : "Belletristische Darstellung",
+      "id" : "https://d-nb.info/gnd/4065136-8",
+      "label" : "Weinbau",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -51,8 +42,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n28",
-    "label" : "_r28_",
+    "id" : "https://rpb.lobid.org/spatial#n26",
+    "label" : "_r26_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -61,8 +52,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/118572024",
-      "label" : "Lersch, Heinrich / 1889-1936"
+      "id" : "https://d-nb.info/gnd/1051173752",
+      "label" : "Reitenbach, Albert / 1907-1978"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

@@ -14,12 +14,15 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
 
     private static final int FIELD_NAME_SIZE = 4; // e.g. '#983'
     private static final Logger LOG = Logger.getLogger(Decode.class);
+    private String recordId;
+    private boolean inMultiVolumeRecord;
 
     @Override
     public void process(final String obj) {
         LOG.debug("Process record: " + obj);
         final String[] vals = obj.split("\\[/\\]");
-        getReceiver().startRecord(getId(obj, vals));
+        recordId = getId(obj, vals);
+        getReceiver().startRecord(recordId);
         processFields(vals);
         getReceiver().endRecord();
     }
@@ -35,7 +38,14 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
         for (int i = 1; i < vals.length; i++) {
             final String k = vals[i].substring(0, FIELD_NAME_SIZE);
             final String v = vals[i].substring(FIELD_NAME_SIZE);
+            if("#36 ".equals(k) && "sm".equals(v)) {
+                inMultiVolumeRecord = true;
+            } else if(inMultiVolumeRecord && "#01 ".equals(k)) {
+                getReceiver().endRecord(); // first time, we end main record, then each volume
+                getReceiver().startRecord(recordId + "-" + v);
+            }
             getReceiver().literal(k, v);
         }
     }
+
 }

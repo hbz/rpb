@@ -1,0 +1,77 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Periodical" ],
+  "rpbId" : "RPB929t124030",
+  "id" : "https://lobid.org/resources/RPB929t124030",
+  "hbzId" : "HT015910174",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Deutsche Binnenwasserstra▀en",
+  "publication" : [ {
+    "location" : [ "Hamburg" ],
+    "startDate" : "2012",
+    "publishedBy" : [ "Ed. Maritim" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n142320",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n557000",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Rhein | Binnenwasserstraße | Sportschifffahrt | Karte",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4049739-2",
+      "label" : "Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4006767-1",
+      "label" : "Binnenwasserstraße",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4182476-3",
+      "label" : "Sportschifffahrt",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4029783-4",
+      "label" : "Karte",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n22",
+    "label" : "_r22_",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ]
+}

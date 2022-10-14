@@ -21,7 +21,7 @@ end
 
 # ------- rpbId -------
 
-copy_field("#00 ", "rpbId")
+copy_field("_id", "rpbId")
 prepend("rpbId","RPB") 
 
 # ------- "id", using https URIs -------

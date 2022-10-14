@@ -1,15 +1,15 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource" ],
-  "rpbId" : "RPB929t124030-6",
-  "id" : "https://lobid.org/resources/RPB929t124030-6",
+  "rpbId" : "RPB929t124030-7",
+  "id" : "https://lobid.org/resources/RPB929t124030-7",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Der Rhein - Rheinfelden bis Koblenz",
-  "extent" : "13 S., 46 Bl.; Ill., graph. Darst., ⁿberw. Kt.; 1 CD-ROM",
+  "title" : "Der Rhein - Koblenz bis Tolkamer",
+  "extent" : "13 S., Bl. 46 - 74 ; Ill., graph. Darst., ⁿberw. Kt. ; 1 CD-ROM ; 12 cm",
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

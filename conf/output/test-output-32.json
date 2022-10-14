@@ -1,6 +1,13 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource" ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "https://lobid.org/resources/RPB929t124030"
+    } ],
+    "numbering" : "6"
+  } ],
   "rpbId" : "RPB929t124030-6",
   "id" : "https://lobid.org/resources/RPB929t124030-6",
   "inCollection" : [ {

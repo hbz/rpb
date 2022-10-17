@@ -223,15 +223,5 @@ do list(path: "contribution[]")
   set_array("type[]", "Contribution")
 end
 
-# ------- bibliographicCitation -------
-# Siehe https://jira.hbz-nrw.de/browse/RPB-26
-# Erster Ansatz: nehme #70y, wenn vorhanden ansonsten #70_
-
-if exists ("#70y")
-  copy_field("#70y", "bibliographicCitation")
-elsif exists ("#70 ")
-  copy_field("#70 ", "bibliographicCitation")
-end
-
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation" )
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId" )
 vacuum()

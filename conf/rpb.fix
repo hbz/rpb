@@ -27,6 +27,8 @@ if any_equal("#36 ", "sbd")
   copy_field("_id", "isPartOf[].$last.hasSuperordinate[].$append.id")
   prepend("isPartOf[].$last.hasSuperordinate[].$last.id","https://lobid.org/resources/RPB")
   replace_all("isPartOf[].$last.hasSuperordinate[].$last.id","-.+","")
+  # Set up superordinate label, output by decoder as #20ü
+  copy_field("#20ü", "isPartOf[].$last.hasSuperordinate[].$last.label")
   # Set up volume numbering: use only the numbering part of the volume ID:
   copy_field("_id", "isPartOf[].$last.numbering")
   replace_all("isPartOf[].$last.numbering",".+-(.+)","$1")

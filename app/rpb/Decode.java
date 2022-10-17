@@ -15,6 +15,7 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
     private static final int FIELD_NAME_SIZE = 4; // e.g. '#983'
     private static final Logger LOG = Logger.getLogger(Decode.class);
     private String recordId;
+    private String recordTitle;
     private boolean inMultiVolumeRecord;
 
     @Override
@@ -38,11 +39,15 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
         for (int i = 1; i < vals.length; i++) {
             final String k = vals[i].substring(0, FIELD_NAME_SIZE);
             final String v = vals[i].substring(FIELD_NAME_SIZE);
+            if("#20 ".equals(k) && !inMultiVolumeRecord) {
+                recordTitle = v;
+            }
             if("#36 ".equals(k) && "sm".equals(v)) {
                 inMultiVolumeRecord = true;
             } else if(inMultiVolumeRecord && "#01 ".equals(k)) {
                 getReceiver().endRecord(); // first time, we end main record, then each volume
                 getReceiver().startRecord(recordId + "-" + v);
+                getReceiver().literal("#20ü", recordTitle);
             }
             getReceiver().literal(k, v);
         }

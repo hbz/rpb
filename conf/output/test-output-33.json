@@ -4,7 +4,8 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t124030"
+      "id" : "https://lobid.org/resources/RPB929t124030",
+      "label" : "Deutsche Binnenwasserstra▀en"
     } ],
     "numbering" : "7"
   } ],

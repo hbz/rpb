@@ -66,8 +66,8 @@ public final class DecodeTest {
     public void processRecordWithMultipleVolumes() {
        // 'sm' in '#01 ' -> treat as multiple volumes with their own titles
         test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 sm[/]"
-                + "#01 6[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
-                + "#01 7[/]#20 Der Rhein - Koblenz bis Tolkamer[/]",
+                + "#01 6/2022[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
+                + "#01 7. Band 2022[/]#20 Der Rhein - Koblenz bis Tolkamer[/]",
                 () -> {
                     final InOrder ordered = inOrder(receiver);
                     ordered.verify(receiver).startRecord("929t124030");
@@ -75,14 +75,14 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("#20 ", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("#36 ", "sm");
                     ordered.verify(receiver).endRecord();
-                    ordered.verify(receiver).startRecord("929t124030-6");
+                    ordered.verify(receiver).startRecord("929t124030-62022");
                     ordered.verify(receiver).literal("#20ü", "Deutsche Binnenwasserstraßen");
-                    ordered.verify(receiver).literal("#01 ", "6");
+                    ordered.verify(receiver).literal("#01 ", "6/2022");
                     ordered.verify(receiver).literal("#20 ", "Der Rhein - Rheinfelden bis Koblenz");
                     ordered.verify(receiver).endRecord();
-                    ordered.verify(receiver).startRecord("929t124030-7");
+                    ordered.verify(receiver).startRecord("929t124030-72022");
                     ordered.verify(receiver).literal("#20ü", "Deutsche Binnenwasserstraßen");
-                    ordered.verify(receiver).literal("#01 ", "7");
+                    ordered.verify(receiver).literal("#01 ", "7. Band 2022");
                     ordered.verify(receiver).literal("#20 ", "Der Rhein - Koblenz bis Tolkamer");
                     ordered.verify(receiver).endRecord();
                     ordered.verifyNoMoreInteractions();

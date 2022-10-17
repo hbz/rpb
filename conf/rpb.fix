@@ -223,5 +223,38 @@ do list(path: "contribution[]")
   set_array("type[]", "Contribution")
 end
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId" )
+# ------- bibliographicCitation -------
+# Siehe https://jira.hbz-nrw.de/browse/RPB-26
+
+if exists ("#70t")
+  do list(path:"#70*", "var": "$i")
+    paste("bibliographicCitation", "~In: ", "#70k", "~: ", "#70t", "~. - ", "#70b", "~ (", "#70j", "~), ", "#70h", " ", "#70z", "~, Seite ", "#70s", "~. -" join_char: "")
+    replace_all("bibliographicCitation", "In: : ", "In: ")
+    replace_all("bibliographicCitation", ", Seite . -$", "")
+    replace_all("bibliographicCitation", "  ", " ")
+    replace_all("bibliographicCitation", ", , ", ", ")
+  end
+elsif exists ("#70 ")
+  paste("bibliographicCitation", "#70 ")
+elsif exists ("#701")
+  paste("bibliographicCitation", "#701")
+elsif exists ("#702")
+  paste("bibliographicCitation", "#702")
+elsif exists ("#703")
+  paste("bibliographicCitation", "#703")
+elsif exists ("#704")
+  paste("bibliographicCitation", "#704")
+elsif exists ("#705")
+  paste("bibliographicCitation", "#705")
+elsif exists ("#706")
+  paste("bibliographicCitation", "#706")
+elsif exists ("#707")
+  paste("bibliographicCitation", "#707")
+elsif exists ("#708")
+  paste("bibliographicCitation", "#708")
+elsif exists ("#709")
+  paste("bibliographicCitation", "#709")
+end
+
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation" )
 vacuum()

@@ -32,6 +32,7 @@ case $ACTION in
         start)
                 if [ -f target/universal/stage/RUNNING_PID ]; then
                         kill $(cat target/universal/stage/RUNNING_PID)
+			rm target/universal/stage/RUNNING_PID
                 fi
                 JAVA_OPTS="$JAVA_OPTS -XX:+HeapDumpOnOutOfMemoryError" $HOME/activator-dist-1.3.5/activator "start $PORT"
                 ;;

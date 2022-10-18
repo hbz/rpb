@@ -1,0 +1,15 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource" ],
+  "rpbId" : "RPB107t120613-491999542003",
+  "id" : "https://lobid.org/resources/RPB107t120613-491999542003",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "note" : [ "Damit Erscheinen eingest." ],
+  "publication" : [ {
+    "type" : [ "PublicationEvent" ]
+  } ]
+}

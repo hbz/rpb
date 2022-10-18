@@ -1,6 +1,6 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Periodical" ],
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
   "rpbId" : "RPB929t124030",
   "id" : "https://lobid.org/resources/RPB929t124030",
   "hbzId" : "HT015910174",

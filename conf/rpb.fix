@@ -16,7 +16,11 @@ if all_equal("#36 ", "s")
   set_field("type[].$append", "Book")
 end
 if any_equal("#36 ", "sm")
-  set_field("type[].$append", "Periodical")
+  if exists("#36t")
+    copy_field("#36t", "type[].$append")
+  else
+    set_field("type[].$append", "Periodical")
+  end
 end
 if any_equal("#36 ", "sbd")
   set_field("type[].$append", "Book")

@@ -57,8 +57,8 @@ move_field("coll", "inCollection[]")
 
 move_field("#20 ","title")
 
-# Folgendes rausgenommen wegen 929t124030, 
-# wo die sich wiederholenden #20er Probleme machen
+# Mit Folgendem warten, bis RPB-28 erledigt ist:
+# replace_all("title","¬","")
 # replace_all("title", "\\s\\+", "")
 
 # ------- "extent" -------
@@ -255,6 +255,7 @@ elsif exists ("#708")
 elsif exists ("#709")
   paste("bibliographicCitation", "#709")
 end
+replace_all("bibliographicCitation","¬","")
 
 retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation" )
 vacuum()

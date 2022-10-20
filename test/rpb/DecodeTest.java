@@ -67,7 +67,9 @@ public final class DecodeTest {
        // 'sm' in '#01 ' -> treat as multiple volumes with their own titles
         test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 sm[/]"
                 + "#01 6/2022[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
-                + "#01 7. Band 2022[/]#20 Der Rhein - Koblenz bis Tolkamer[/]",
+                + "#01 7. Band 2022[/]#20 Der Rhein - Koblenz bis Tolkamer[/]"
+                + "#01 Nachgewiesen 2007 -[/]#20 [/]"
+                + "#01 Nachgewiesen 2008 -[/]",
                 () -> {
                     final InOrder ordered = inOrder(receiver);
                     ordered.verify(receiver).startRecord("929t124030");
@@ -86,6 +88,17 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("#20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("#01 ", "7. Band 2022");
                     ordered.verify(receiver).literal("#20 ", "Der Rhein - Koblenz bis Tolkamer");
+                    ordered.verify(receiver).endRecord();
+                    ordered.verify(receiver).startRecord("929t124030-2007");
+                    ordered.verify(receiver).literal("#00 ", "929t124030-2007");
+                    ordered.verify(receiver).literal("#20ü", "Deutsche Binnenwasserstraßen");
+                    ordered.verify(receiver).literal("#01 ", "Nachgewiesen 2007 -");
+                    ordered.verify(receiver).literal("#20 ", "");
+                    ordered.verify(receiver).endRecord();
+                    ordered.verify(receiver).startRecord("929t124030-2008");
+                    ordered.verify(receiver).literal("#00 ", "929t124030-2008");
+                    ordered.verify(receiver).literal("#20ü", "Deutsche Binnenwasserstraßen");
+                    ordered.verify(receiver).literal("#01 ", "Nachgewiesen 2008 -");
                     ordered.verify(receiver).endRecord();
                     ordered.verifyNoMoreInteractions();
                 });

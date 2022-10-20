@@ -26,6 +26,7 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
         getReceiver().startRecord(recordId);
         processFields(vals);
         getReceiver().endRecord();
+        inMultiVolumeRecord = false;
     }
 
     private String getId(final String obj, final String[] vals) {

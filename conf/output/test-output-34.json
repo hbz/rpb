@@ -1,0 +1,84 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB107t120613",
+  "id" : "https://lobid.org/resources/RPB107t120613",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Firmenhandbuch Süd: Baden-Württemberg, Bayern, Hessen, Rheinland-Pfalz und Saarland, Sachsen, Thüringen",
+  "note" : [ "49 (1999) Zusatz zum Hauptsacht.: Baden-Württemberg, Bayern, Hessen, Rheinland-Pfalz und Saarland, Sachsen", "Vorgänger u.d.T.: Firmenhandbuch Baden-Württemberg", "Vorgänger u.d.T.: Firmenhandbuch Bayern", "Vorgänger u.d.T.: Firmenhandbuch Hessen", "Vorgänger u.d.T.: Firmenhandbuch Rheinland-Pfalz und Saarland", "Vorgänger u.d.T.: Firmenhandbuch Sachsen", "Zählung von d. Vorgängern übernommen, z.B. 49=48=53=64=7.1999", "CD-ROM-Beil. bis 2002 u.d.T.: Firmenhandbücher deutscher Länder auf CD-ROM", "CD-ROM-Beil. 2003 u.d.T.: Firmenhandbücher" ],
+  "publication" : [ {
+    "location" : [ "Hannover-Wülfel" ],
+    "startDate" : "1999",
+    "publishedBy" : [ "Industrie- und Handelsverl." ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n548050",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n543000",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Rheinland-Pfalz | Unternehmen | Firma | Adressbuch | Geschichte 1999-2003",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4049795-1",
+      "label" : "Rheinland-Pfalz",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4061963-1",
+      "label" : "Unternehmen",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4017250-8",
+      "label" : "Firma",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4141451-2",
+      "label" : "Adressbuch",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn05k0219865a",
+      "label" : "Geschichte 1999-2003",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "_r01_",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ]
+}

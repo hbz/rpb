@@ -79,6 +79,14 @@ move_field("#20 ","title")
 
 move_field("#77 ", "extent")
 
+# ------- "note" -------
+
+set_array("note[]")
+do list(path:"#81?", "var": "$i")
+  copy_field("$i", "note[].$append")
+end
+uniq("note[]")
+
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 
@@ -271,6 +279,6 @@ elsif exists ("#709")
 end
 replace_all("bibliographicCitation","¬","")
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation", "isPartOf[]")
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation", "isPartOf[]", "note[]")
 
 vacuum()

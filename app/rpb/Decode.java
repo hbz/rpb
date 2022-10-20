@@ -36,7 +36,7 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
     }
 
     private void processFields(final String[] vals) {
-        boolean firstVolume = true;
+        int volumeCounter = 0;
         for (int i = 1; i < vals.length; i++) {
             final String k = vals[i].substring(0, FIELD_NAME_SIZE);
             final String v = vals[i].substring(FIELD_NAME_SIZE);
@@ -46,13 +46,13 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
             if("#36 ".equals(k) && "sm".equals(v)) {
                 inMultiVolumeRecord = true;
             } else if(inMultiVolumeRecord && "#01 ".equals(k)) {
-                if(firstVolume) {
+                if(volumeCounter == 0) {
                     // we're still in the main (multi volume) record, so we mark that here:
                     getReceiver().literal("#36t", "MultiVolumeBook");
-                    firstVolume = false;
                 }
                 getReceiver().endRecord(); // first time, we end main record, then each volume
-                getReceiver().startRecord(recordId + "-" + v.replaceAll("\\D", ""));
+                volumeCounter++;
+                getReceiver().startRecord(recordId + "b" + volumeCounter);
                 getReceiver().literal("#20ü", recordTitle);
             }
             getReceiver().literal(k, v);

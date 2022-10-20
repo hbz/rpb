@@ -73,7 +73,11 @@ move_field("coll", "inCollection[]")
 
 # ------- "title" field -------
 
-move_field("#20 ","title")
+if any_equal("#36 ", "sbd")
+  paste("title", "#20ü", "#01 ", "#20 ", "join_char": " | ")
+else
+  copy_field("#20 ", "title")
+end
 
 # Mit Folgendem warten, bis RPB-28 erledigt ist:
 # replace_all("title","¬","")

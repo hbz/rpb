@@ -63,7 +63,7 @@ public final class DecodeTest {
     }
 
     @Test
-    public void processRecordWithMultipleVolumes() {
+    public void processMultipleVolumeBook() {
        // 'sm' in '#01 ' -> treat as multiple volumes with their own titles
         test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 sm[/]"
                 + "#01 6/2022[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
@@ -102,7 +102,29 @@ public final class DecodeTest {
     }
 
     @Test
-    public void processRecordWithMultipleTitles() {
+    public void processPeriodical() {
+        // 'sm' in '#01 ', but actually a periodical 
+        // TODO: add volume information in other field; publication.publicationHistory?
+        // TODO: also consider zdbId
+        test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 sm[/]"
+                + "#01 6-[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
+                + "#01 7-[/]#20 Der Rhein - Koblenz bis Tolkamer[/]", () -> {
+                    final InOrder ordered = inOrder(receiver);
+                    ordered.verify(receiver).startRecord("929t124030");
+                    ordered.verify(receiver).literal("#00 ", "929t124030");
+                    ordered.verify(receiver).literal("#20 ", "Deutsche Binnenwasserstraßen");
+                    ordered.verify(receiver).literal("#36 ", "sm");
+                    ordered.verify(receiver).literal("#01 ", "6-");
+                    ordered.verify(receiver).literal("#20 ", "Der Rhein - Rheinfelden bis Koblenz");
+                    ordered.verify(receiver).literal("#01 ", "7-");
+                    ordered.verify(receiver).literal("#20 ", "Der Rhein - Koblenz bis Tolkamer");
+                    ordered.verify(receiver).endRecord();
+                    ordered.verifyNoMoreInteractions();
+                });
+    }
+
+    @Test
+    public void processMultipleTitles() {
         // No 'sm' in '#01 ' -> treat as multiple titles of single volume
         test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 TEST[/]"
                 + "#01 6[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"

@@ -47,14 +47,18 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
             if("#36 ".equals(k) && "sm".equals(v)) {
                 inMultiVolumeRecord = true;
             } else if(inMultiVolumeRecord && "#01 ".equals(k)) {
-                if(volumeCounter == 0) {
-                    // we're still in the main (multi volume) record, so we mark that here:
-                    getReceiver().literal("#36t", "MultiVolumeBook");
+                if(volumeCounter == 0 && (v.endsWith("-") || v.endsWith("eingestellt"))) {
+                    inMultiVolumeRecord = false;
+                } else {
+                    if(volumeCounter == 0) {
+                        // we're still in the main (multi volume) record, so we mark that here:
+                        getReceiver().literal("#36t", "MultiVolumeBook");
+                    }
+                    getReceiver().endRecord(); // first time, we end main record, then each volume
+                    volumeCounter++;
+                    getReceiver().startRecord(recordId + "b" + volumeCounter);
+                    getReceiver().literal("#20ü", recordTitle);
                 }
-                getReceiver().endRecord(); // first time, we end main record, then each volume
-                volumeCounter++;
-                getReceiver().startRecord(recordId + "b" + volumeCounter);
-                getReceiver().literal("#20ü", recordTitle);
             }
             getReceiver().literal(k, v);
         }

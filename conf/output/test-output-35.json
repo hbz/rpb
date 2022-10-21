@@ -1,0 +1,76 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Periodical", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "https://lobid.org/resources/RPB121t181281"
+    } ],
+    "numbering" : "[Fr┐hjahr 2018]-"
+  } ],
+  "rpbId" : "RPB121t181281",
+  "id" : "https://lobid.org/resources/RPB121t181281",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "[Fr┐hjahr 2018]- | Job54 : das Lifestyle-Karriere-Magazin",
+  "note" : [ "Z┐hlung beginnt mit Sommer 2018" ],
+  "publication" : [ {
+    "location" : [ "Trier" ],
+    "startDate" : "2018",
+    "publishedBy" : [ "Verlags-, Werbe- und Medien GmbH" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n785500",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Trier / Region | Berufsausbildung | Betriebliche Ausbildung | Zeitschrift",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4060880-3",
+      "label" : "Trier / Region",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4005871-2",
+      "label" : "Berufsausbildung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4006141-3",
+      "label" : "Betriebliche Ausbildung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://d-nb.info/gnd/4060880-3",
+    "label" : "Trier / Region",
+    "type" : [ "PlaceOrGeographicName" ],
+    "source" : {
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
+    }
+  } ]
+}

@@ -511,12 +511,13 @@ public class Lobid {
 		} else {
 			// else prepend '+' to all terms for AND search:
 			result = Arrays.asList(q.split("[\\s-]")).stream().map(x -> "+" + x)
-					.collect(Collectors.joining(" "));
+					.collect(Collectors.joining(" "))
+					.replace("(", "\\(").replace(")", "\\)");
 		}
 		return result// but escape unsupported query string syntax:
 				.replace("\\", "\\\\").replace("^", "\\^").replace("&&", "\\&&")
-				.replace("||", "\\||").replace("!", "\\!").replace("(", "\\(")
-				.replace(")", "\\)").replace("{", "\\{").replace("}", "\\}")
+				.replace("||", "\\||").replace("!", "\\!")
+				.replace("{", "\\{").replace("}", "\\}")
 				.replace("[", "\\[").replace("]", "\\]")
 				// `embedded` phrases, like foo"something"bar -> foo\"something\"bar
 				// .replaceAll("([^\\s])\"([^\"]+)\"([^\\s])", "$1\\\\\"$2\\\\\"$3")

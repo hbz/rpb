@@ -10,15 +10,14 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "com.typesafe.play" % "play-test_2.11" % "2.4.11",
-  "org.metafacture" % "metafacture-elasticsearch" % "5.3.1",
-  "org.metafacture" % "metafacture-io" % "5.3.1",
-  "org.metafacture" % "metafacture-strings" % "5.3.1",
-  "org.metafacture" % "metafacture-json" % "5.3.1",
-  "org.metafacture" % "metafacture-flux" % "5.3.1",
-  "org.metafacture" % "metafacture-triples" % "5.3.1",
-  "org.metafacture" % "metafacture-formatting" % "5.3.1",
-  "org.eclipse.emf" % "org.eclipse.emf.common" % "2.24.0",
-  "org.metafacture" % "metafix" % "0.4.0-SNAPSHOT" exclude("org.eclipse.emf", "org.eclipse.emf.common"),
+  "org.metafacture" % "metafacture-elasticsearch" % "metafacture-core-5.4.1-rc3",
+  "org.metafacture" % "metafacture-io" % "metafacture-core-5.4.1-rc3",
+  "org.metafacture" % "metafacture-strings" % "metafacture-core-5.4.1-rc3",
+  "org.metafacture" % "metafacture-json" % "metafacture-core-5.4.1-rc3",
+  "org.metafacture" % "metafacture-flux" % "metafacture-core-5.4.1-rc3",
+  "org.metafacture" % "metafacture-triples" % "metafacture-core-5.4.1-rc3",
+  "org.metafacture" % "metafacture-formatting" % "metafacture-core-5.4.1-rc3",
+  "org.metafacture" % "metafix" % "0.4.0-SNAPSHOT",
   "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
   "org.apache.commons" % "commons-rdf-jena" % "0.5.0",
@@ -28,6 +27,11 @@ libraryDependencies ++= Seq(
   "org.easytesting" % "fest-assert" % "1.4" % "test",
   "org.mockito" % "mockito-core" % "2.27.0" % "test",
   "org.mockito" % "mockito-junit-jupiter" % "2.27.0" % "test"
+)
+
+dependencyOverrides ++= Set(
+  "org.antlr" % "antlr-runtime" % "3.2",
+  "org.eclipse.emf" % "org.eclipse.emf.common" % "2.24.0"
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)

@@ -17,8 +17,7 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-flux" % "metafacture-core-5.4.1-rc3",
   "org.metafacture" % "metafacture-triples" % "metafacture-core-5.4.1-rc3",
   "org.metafacture" % "metafacture-formatting" % "metafacture-core-5.4.1-rc3",
-  "org.eclipse.emf" % "org.eclipse.emf.common" % "2.24.0",
-  "org.metafacture" % "metafix" % "0.4.0-SNAPSHOT" exclude("org.eclipse.emf", "org.eclipse.emf.common"),
+  "org.metafacture" % "metafix" % "0.4.0-SNAPSHOT",
   "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
   "org.apache.commons" % "commons-rdf-jena" % "0.5.0",
@@ -31,7 +30,8 @@ libraryDependencies ++= Seq(
 )
 
 dependencyOverrides ++= Set(
-  "org.antlr" % "antlr-runtime" % "3.2"
+  "org.antlr" % "antlr-runtime" % "3.2",
+  "org.eclipse.emf" % "org.eclipse.emf.common" % "2.24.0"
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)

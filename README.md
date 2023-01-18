@@ -98,7 +98,7 @@ Create the subset we want to reconcile:
 sbt "runMain rpb.ETL conf/rpb-36sm.flux"
 ```
 
-Create an OpenRefine project from the output file `conf/output/rpb-36sm.json`, selecting "Line-based text files" under "Parse data as".
+Create an OpenRefine project from the output file `conf/output/rpb-36sm.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results (50 take a few seconds, 250 about a minute, full data set should take about 1.5h).
 
 In the "Undo / Redo" tab, click "Apply...", paste the content below, then click "Perform Operations".
 
@@ -122,14 +122,71 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "columnName": "20",
     "index": 0,
     "description": "Move column 20 to position 0"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#19 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "19",
+    "columnInsertIndex": 2,
+    "description": "Create column 19 at index 2 based on column Column 1 using expression grel:value.parseJson().get('#19 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "19",
+    "index": 1,
+    "description": "Move column 19 to position 1"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#81 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "81",
+    "columnInsertIndex": 3,
+    "description": "Create column 81 at index 3 based on column Column 1 using expression grel:value.parseJson().get('#81 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "81",
+    "index": 2,
+    "description": "Move column 81 to position 2"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#983')",
+    "onError": "set-to-blank",
+    "newColumnName": "983",
+    "columnInsertIndex": 4,
+    "description": "Create column 983 at index 4 based on column Column 1 using expression grel:value.parseJson().get('#983')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "983",
+    "index": 3,
+    "description": "Move column 983 to position 3"
   }
 ]
 ```
 
-You should have a project with 13835 rows, each with two columns: one with the extracted name from `#20 `, the other with the full JSON record.
+You should now have a project with 13835 rows, each with 5 columns: data from fields `#20 `, `#19 `, `#81 `, `#983`, and the full JSON record.
 
-Based on that, the next step will be reconciling the records with lobid-resources.
+Based on that, the next step is reconciling the records with lobid-resources.
 
 ### Reconcile against lobid-resources
 
-TODO: Set up lobid-resources reconciliation service, test basic workflow, then add other fields as additional properties for better results.
+On the `20` column, select "Reconcile" > "Start reconciling", add the service at `https://test.lobid.org/resources/reconcile`, include columns 19, 81, and 983 on the right hand side (for 19 and 81, the "As Property" can be any non-empty string, for 983 set it to `hbzId`), and "Start Reconciling...". You can then check the matched / unmatched entries in the Facet / Filter tab.

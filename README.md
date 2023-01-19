@@ -81,9 +81,9 @@ sbt "eclipse with-source=true"
 
 NOTE: This section is work in progress, see [RPB-50](https://jira.hbz-nrw.de/browse/RPB-50).
 
-### Import subset into OpenRefine
+### Get the full title data
 
-Get the full title data (if you did not run the full transformation locally before):
+If you did not run the full transformation locally before:
 
 ```bash
 mkdir conf/RPB-Export_HBZ_Alles/
@@ -92,13 +92,111 @@ wget http://lobid.org/download/rpb-gesamtexport/2022-03-11/RPB-Export_HBZ_Tit.tx
 cd ../..
 ```
 
-Create the subset we want to reconcile:
+### RPB source data with hbz IDs
+
+Goal: for all RPB entries with an hbz ID in `#983`, create a mapping from the hbz union catalog ID `almaMmsId` to the `rpbId` from `#00 `. With this, during the transformation of the hbz union catalog for lobid-resources, we can make sure that all entries are marked as members of RPB (`containedIn`, `rpbId`).
+
+Create the subset we want to reconcile (all entries with `#983`):
+
+```bash
+sbt "runMain rpb.ETL conf/rpb-983.flux"
+```
+
+Create an OpenRefine project from the output file `conf/output/rpb-983.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
+
+In the "Undo / Redo" tab, click "Apply...", paste the content below, then click "Perform Operations".
+
+```json
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column 1",
+    "newColumnName": "Allegro",
+    "description": "Rename column Column 1 to Allegro"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Allegro",
+    "expression": "grel:value.parseJson().get('#983')",
+    "onError": "set-to-blank",
+    "newColumnName": "983",
+    "columnInsertIndex": 1,
+    "description": "Create column 983 at index 1 based on column Allegro using expression grel:value.parseJson().get('#983')"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "983",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://test.lobid.org/resources/reconcile",
+      "identifierSpace": "https://test.lobid.org/resources",
+      "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
+      "type": {
+        "id": "BibliographicResource",
+        "name": "BibliographicResource"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column 983 to type BibliographicResource"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "983",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "almaMmsId",
+    "columnInsertIndex": 2,
+    "description": "Create column almaMmsId at index 2 based on column 983 using expression cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Allegro",
+    "expression": "grel:value.parseJson().get('#00 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "rpbId",
+    "columnInsertIndex": 1,
+    "description": "Create column rpbId at index 1 based on column Allegro using expression grel:value.parseJson().get('#00 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "rpbId",
+    "index": 3,
+    "description": "Move column rpbId to position 3"
+  }
+]
+```
+
+This reconciles the hbz IDs from `#983` with lobid-resources to add a column `almaMmsId`, as well as a column `rpbId` from `#00 `. We can now filter on the matched entries, remove the original data column and the hbz ID column, and export the remaining `almaMmsId` and `rpbId` columns as tab-separated values to be used for lookups in the lobid-resources transformation.
+
+We currently have two output files for this workflow (in `conf/maps/`): `almaMmsId-to-rpbId.tsv`, the actual goal mapping, and `hbzIds-missing-in-alma.tsv`, a mapping of values in `#983` that were not reconciled (some look like proper hbz IDs that seem to be missing in Alma, some look like cataloging errors) to `rpbId` from `#00 `.
+
+### RPB `#36 =sm` data w/o hbz IDs
+
+Create the subset we want to reconcile (entries with `#36 =sm` and no hbz ID in `#983`):
 
 ```bash
 sbt "runMain rpb.ETL conf/rpb-36sm.flux"
 ```
 
-Create an OpenRefine project from the output file `conf/output/rpb-36sm.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results (50 take a few seconds, 250 about a minute, full data set should take about 1.5h).
+Create an OpenRefine project from the output file `conf/output/rpb-36sm.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
 
 In the "Undo / Redo" tab, click "Apply...", paste the content below, then click "Perform Operations".
 
@@ -162,31 +260,39 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "description": "Move column 81 to position 2"
   },
   {
-    "op": "core/column-addition",
+    "op": "core/recon",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "baseColumnName": "Column 1",
-    "expression": "grel:value.parseJson().get('#983')",
-    "onError": "set-to-blank",
-    "newColumnName": "983",
-    "columnInsertIndex": 4,
-    "description": "Create column 983 at index 4 based on column Column 1 using expression grel:value.parseJson().get('#983')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "983",
-    "index": 3,
-    "description": "Move column 983 to position 3"
+    "columnName": "20",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://test.lobid.org/resources/reconcile",
+      "identifierSpace": "https://test.lobid.org/resources",
+      "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
+      "type": {
+        "id": "BibliographicResource",
+        "name": "BibliographicResource"
+      },
+      "autoMatch": true,
+      "columnDetails": [
+        {
+          "column": "19",
+          "propertyName": "19",
+          "propertyID": "19"
+        },
+        {
+          "column": "81",
+          "propertyName": "81",
+          "propertyID": "81"
+        }
+      ],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column 20 to type BibliographicResource"
   }
 ]
 ```
 
-You should now have a project with 13835 rows, each with 5 columns: data from fields `#20 `, `#19 `, `#81 `, `#983`, and the full JSON record.
-
-Based on that, the next step is reconciling the records with lobid-resources.
-
-### Reconcile against lobid-resources
-
-On the `20` column, select "Reconcile" > "Start reconciling", add the service at `https://test.lobid.org/resources/reconcile`, include columns 19, 81, and 983 on the right hand side (for 19 and 81, the "As Property" can be any non-empty string, for 983 set it to `hbzId`), and "Start Reconciling...". You can then check the matched / unmatched entries in the Facet / Filter tab.
+You should now have a project with 8138 rows, each with 4 columns: data from fields `#20 `, `#19 `, `#81 `, and the full JSON record. Based on that, we reconciled the `20` column, including columns `19` and `81`. We can now check the matched / unmatched entries in the Facet / Filter tab.

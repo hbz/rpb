@@ -260,6 +260,134 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "description": "Move column 81 to position 2"
   },
   {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#60 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "60",
+    "columnInsertIndex": 4,
+    "description": "Create column 60 at index 4 based on column Column 1 using expression grel:value.parseJson().get('#60 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "60",
+    "index": 3,
+    "description": "Move column 60 to position 3"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "60",
+    "expression": "grel:replace(value, '_', '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 60 using expression grel:replace(value, '_', '')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "60",
+          "expression": "isNull(value)",
+          "columnName": "60",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "60",
+    "expression": "grel:replace(value, 'n', '-')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 60 using expression grel:replace(value, 'n', '-')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "20: best candidate's score",
+          "expression": "cell.recon.best.score",
+          "columnName": "20",
+          "from": 30,
+          "to": 380,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "range",
+          "name": "20: best candidate's score",
+          "expression": "cell.recon.best.score",
+          "columnName": "20",
+          "from": 30,
+          "to": 380,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#39 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "39",
+    "columnInsertIndex": 5,
+    "description": "Create column 39 at index 5 based on column Column 1 using expression grel:value.parseJson().get('#39 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "39",
+    "index": 4,
+    "description": "Move column 39 to position 4"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#76b')",
+    "onError": "set-to-blank",
+    "newColumnName": "76b",
+    "columnInsertIndex": 6,
+    "description": "Create column 76b at index 6 based on column Column 1 using expression grel:value.parseJson().get('#76b')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "76b",
+    "index": 5,
+    "description": "Move column 76b to position 5"
+  },
+  {
     "op": "core/recon",
     "engineConfig": {
       "facets": [],
@@ -279,13 +407,28 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
       "columnDetails": [
         {
           "column": "19",
-          "propertyName": "19",
-          "propertyID": "19"
+          "propertyName": "_all",
+          "propertyID": "_all"
         },
         {
           "column": "81",
-          "propertyName": "81",
-          "propertyID": "81"
+          "propertyName": "_all",
+          "propertyID": "_all"
+        },
+        {
+          "column": "60",
+          "propertyName": "_all",
+          "propertyID": "_all"
+        },
+        {
+          "column": "39",
+          "propertyName": "_all",
+          "propertyID": "_all"
+        },
+        {
+          "column": "76b",
+          "propertyName": "_all",
+          "propertyID": "_all"
         }
       ],
       "limit": 0
@@ -295,4 +438,4 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
 ]
 ```
 
-You should now have a project with 8138 rows, each with 4 columns: data from fields `#20 `, `#19 `, `#81 `, and the full JSON record. Based on that, we reconciled the `20` column, including columns `19` and `81`. We can now check the matched / unmatched entries in the Facet / Filter tab.
+You should now have a project with 8138 rows, each with 4 columns: data from fields `#20 `, `#19 `, `#81 `, `#60 `, `#39 `, `#76b` and the full JSON record. Based on that, we reconciled the `20` column, including columns `19`, `81`, `60`, `39`, and `76b`. We can now check the matched / unmatched entries in the Facet / Filter tab.

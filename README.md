@@ -396,8 +396,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "columnName": "20",
     "config": {
       "mode": "standard-service",
-      "service": "https://test.lobid.org/resources/reconcile",
-      "identifierSpace": "https://test.lobid.org/resources",
+      "service": "http://test.lobid.org/resources/reconcile",
+      "identifierSpace": "http://test.lobid.org/resources",
       "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
       "type": {
         "id": "BibliographicResource",

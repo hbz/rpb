@@ -294,27 +294,7 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
   {
     "op": "core/text-transform",
     "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "60",
-          "expression": "isNull(value)",
-          "columnName": "60",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": false,
-                "l": "false"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
+      "facets": [],
       "mode": "row-based"
     },
     "columnName": "60",
@@ -327,32 +307,7 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
   {
     "op": "core/column-addition",
     "engineConfig": {
-      "facets": [
-        {
-          "type": "range",
-          "name": "20: best candidate's score",
-          "expression": "cell.recon.best.score",
-          "columnName": "20",
-          "from": 30,
-          "to": 380,
-          "selectNumeric": true,
-          "selectNonNumeric": true,
-          "selectBlank": true,
-          "selectError": true
-        },
-        {
-          "type": "range",
-          "name": "20: best candidate's score",
-          "expression": "cell.recon.best.score",
-          "columnName": "20",
-          "from": 30,
-          "to": 380,
-          "selectNumeric": true,
-          "selectNonNumeric": true,
-          "selectBlank": true,
-          "selectError": true
-        }
-      ],
+      "facets": [],
       "mode": "row-based"
     },
     "baseColumnName": "Column 1",
@@ -388,6 +343,44 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "description": "Move column 76b to position 5"
   },
   {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#74 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "74",
+    "columnInsertIndex": 7,
+    "description": "Create column 74 at index 7 based on column Column 1 using expression grel:value.parseJson().get('#74 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "74",
+    "index": 6,
+    "description": "Move column 74 to position 6"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#75 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "75",
+    "columnInsertIndex": 8,
+    "description": "Create column 75 at index 8 based on column Column 1 using expression grel:value.parseJson().get('#75 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "75",
+    "index": 7,
+    "description": "Move column 75 to position 7"
+  },
+  {
     "op": "core/recon",
     "engineConfig": {
       "facets": [],
@@ -400,8 +393,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
       "identifierSpace": "http://test.lobid.org/resources",
       "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
       "type": {
-        "id": "BibliographicResource",
-        "name": "BibliographicResource"
+        "id": "(Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical)",
+        "name": "(Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical)"
       },
       "autoMatch": true,
       "columnDetails": [
@@ -429,13 +422,23 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
           "column": "76b",
           "propertyName": "_all",
           "propertyID": "_all"
+        },
+        {
+          "column": "74",
+          "propertyName": "_all",
+          "propertyID": "_all"
+        },
+        {
+          "column": "75",
+          "propertyName": "_all",
+          "propertyID": "_all"
         }
       ],
       "limit": 0
     },
-    "description": "Reconcile cells in column 20 to type BibliographicResource"
+    "description": "Reconcile cells in column 20 to type (Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical)"
   }
 ]
 ```
 
-You should now have a project with 8138 rows, each with 4 columns: data from fields `#20 `, `#19 `, `#81 `, `#60 `, `#39 `, `#76b` and the full JSON record. Based on that, we reconciled the `20` column, including columns `19`, `81`, `60`, `39`, and `76b`. We can now check the matched / unmatched entries in the Facet / Filter tab.
+You should now have a project with 8138 rows, each with 9 columns: data from fields `#20 `, `#19 `, `#81 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, including columns `19`, `81`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `20` column > Reconcile > Facets > By judgement).

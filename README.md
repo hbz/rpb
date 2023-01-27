@@ -381,6 +381,38 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "description": "Move column 75 to position 7"
   },
   {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "rpbUrl",
+    "columnInsertIndex": 9,
+    "description": "Create column rpbUrl at index 9 based on column Column 1 using expression grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "rpbUrl",
+    "index": 0,
+    "description": "Move column rpbUrl to position 0"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "20",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "20-original",
+    "columnInsertIndex": 2,
+    "description": "Create column 20-original at index 2 based on column 20 using expression grel:value"
+  },
+  {
     "op": "core/recon",
     "engineConfig": {
       "facets": [],
@@ -393,50 +425,69 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
       "identifierSpace": "http://test.lobid.org/resources",
       "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
       "type": {
-        "id": "(Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical)",
-        "name": "(Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical)"
+        "id": "(Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical OR Proceeding OR Newspaper OR Bibliography OR OfficialPublication OR Legislation OR Report) AND NOT (Article OR PublicationIssue)",
+        "name": "Überordnungen"
       },
       "autoMatch": true,
       "columnDetails": [
         {
           "column": "19",
-          "propertyName": "_all",
+          "propertyName": "Ansetzungssachtitel",
           "propertyID": "_all"
         },
         {
           "column": "81",
-          "propertyName": "_all",
+          "propertyName": "Fußnote",
           "propertyID": "_all"
         },
         {
           "column": "60",
-          "propertyName": "_all",
-          "propertyID": "_all"
+          "propertyName": "HE Urheber",
+          "propertyID": "contribution.agent.gndIdentifier"
         },
         {
           "column": "39",
-          "propertyName": "_all",
-          "propertyID": "_all"
+          "propertyName": "Verfasserangabe",
+          "propertyID": "contribution.agent.label"
         },
         {
           "column": "76b",
-          "propertyName": "_all",
-          "propertyID": "_all"
+          "propertyName": "Erscheinungsjahr",
+          "propertyID": "publication.startDate"
         },
         {
           "column": "74",
-          "propertyName": "_all",
-          "propertyID": "_all"
+          "propertyName": "Verlagsort",
+          "propertyID": "publication.location"
         },
         {
           "column": "75",
-          "propertyName": "_all",
-          "propertyID": "_all"
+          "propertyName": "Verlag",
+          "propertyID": "publication.publishedBy"
         }
       ],
       "limit": 0
     },
-    "description": "Reconcile cells in column 20 to type (Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical)"
+    "description": "Reconcile cells in column 20 to type Überordnungen"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "20",
+    "newColumnName": "lobidMatch",
+    "description": "Rename column 20 to lobidMatch"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lobidMatch",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "almaMmsId",
+    "columnInsertIndex": 2,
+    "description": "Create column almaMmsId at index 2 based on column lobidMatch using expression cell.recon.match.id"
   }
 ]
 ```

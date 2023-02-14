@@ -413,12 +413,18 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "description": "Create column 20-original at index 2 based on column 20 using expression grel:value"
   },
   {
+    "op": "core/column-rename",
+    "oldColumnName": "20",
+    "newColumnName": "lobidMatch",
+    "description": "Rename column 20 to lobidMatch"
+  },
+  {
     "op": "core/recon",
     "engineConfig": {
       "facets": [],
       "mode": "row-based"
     },
-    "columnName": "20",
+    "columnName": "lobidMatch",
     "config": {
       "mode": "standard-service",
       "service": "http://test.lobid.org/resources/reconcile",
@@ -468,13 +474,7 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
       ],
       "limit": 0
     },
-    "description": "Reconcile cells in column 20 to type Überordnungen"
-  },
-  {
-    "op": "core/column-rename",
-    "oldColumnName": "20",
-    "newColumnName": "lobidMatch",
-    "description": "Rename column 20 to lobidMatch"
+    "description": "Reconcile cells in column lobidMatch to type Überordnungen"
   },
   {
     "op": "core/column-addition",
@@ -492,4 +492,4 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
 ]
 ```
 
-You should now have a project with 8138 rows, each with 9 columns: data from fields `#20 `, `#19 `, `#81 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, including columns `19`, `81`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `20` column > Reconcile > Facets > By judgement).
+You should now have a project with 8138 rows, each with 9 columns: data from fields `#20 `, `#19 `, `#81 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `81`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).

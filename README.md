@@ -254,6 +254,19 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "description": "Create column 81 at index 3 based on column Column 1 using expression grel:value.parseJson().get('#81 ')"
   },
   {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "81",
+    "expression": "value.replace(/.*u\\.d\\.T\\.:.*/,\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 81 using expression value.replace(/.*u\\.d\\.T\\.:.*/,\"\")"
+  },
+  {
     "op": "core/column-move",
     "columnName": "81",
     "index": 2,

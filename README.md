@@ -475,6 +475,11 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
           "propertyID": "publication.startDate"
         },
         {
+          "column": "76b",
+          "propertyName": "Erscheinungsverlauf",
+          "propertyID": "publication.publicationHistory"
+        },
+        {
           "column": "74",
           "propertyName": "Verlagsort",
           "propertyID": "publication.location"

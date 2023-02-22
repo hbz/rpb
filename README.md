@@ -212,14 +212,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:value.parseJson().get('#20 ')",
     "onError": "set-to-blank",
     "newColumnName": "20",
-    "columnInsertIndex": 1,
-    "description": "Create column 20 at index 1 based on column Column 1 using expression grel:value.parseJson().get('#20 ')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "20",
-    "index": 0,
-    "description": "Move column 20 to position 0"
+    "columnInsertIndex": 0,
+    "description": "Create column 20 at index 0 based on column Column 1 using expression grel:value.parseJson().get('#20 ')"
   },
   {
     "op": "core/column-addition",
@@ -231,46 +225,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:value.parseJson().get('#19 ')",
     "onError": "set-to-blank",
     "newColumnName": "19",
-    "columnInsertIndex": 2,
-    "description": "Create column 19 at index 2 based on column Column 1 using expression grel:value.parseJson().get('#19 ')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "19",
-    "index": 1,
-    "description": "Move column 19 to position 1"
-  },
-  {
-    "op": "core/column-addition",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "baseColumnName": "Column 1",
-    "expression": "grel:value.parseJson().get('#81 ')",
-    "onError": "set-to-blank",
-    "newColumnName": "81",
-    "columnInsertIndex": 3,
-    "description": "Create column 81 at index 3 based on column Column 1 using expression grel:value.parseJson().get('#81 ')"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "81",
-    "expression": "value.replace(/.*u\\.d\\.T\\.:.*/,\"\")",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Text transform on cells in column 81 using expression value.replace(/.*u\\.d\\.T\\.:.*/,\"\")"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "81",
-    "index": 2,
-    "description": "Move column 81 to position 2"
+    "columnInsertIndex": 1,
+    "description": "Create column 19 at index 1 based on column Column 1 using expression grel:value.parseJson().get('#19 ')"
   },
   {
     "op": "core/column-addition",
@@ -282,14 +238,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:value.parseJson().get('#60 ')",
     "onError": "set-to-blank",
     "newColumnName": "60",
-    "columnInsertIndex": 4,
-    "description": "Create column 60 at index 4 based on column Column 1 using expression grel:value.parseJson().get('#60 ')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "60",
-    "index": 3,
-    "description": "Move column 60 to position 3"
+    "columnInsertIndex": 2,
+    "description": "Create column 60 at index 2 based on column Column 1 using expression grel:value.parseJson().get('#60 ')"
   },
   {
     "op": "core/text-transform",
@@ -327,14 +277,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:value.parseJson().get('#39 ')",
     "onError": "set-to-blank",
     "newColumnName": "39",
-    "columnInsertIndex": 5,
-    "description": "Create column 39 at index 5 based on column Column 1 using expression grel:value.parseJson().get('#39 ')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "39",
-    "index": 4,
-    "description": "Move column 39 to position 4"
+    "columnInsertIndex": 3,
+    "description": "Create column 39 at index 3 based on column Column 1 using expression grel:value.parseJson().get('#39 ')"
   },
   {
     "op": "core/column-addition",
@@ -346,14 +290,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:value.parseJson().get('#76b')",
     "onError": "set-to-blank",
     "newColumnName": "76b",
-    "columnInsertIndex": 6,
-    "description": "Create column 76b at index 6 based on column Column 1 using expression grel:value.parseJson().get('#76b')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "76b",
-    "index": 5,
-    "description": "Move column 76b to position 5"
+    "columnInsertIndex": 4,
+    "description": "Create column 76b at index 4 based on column Column 1 using expression grel:value.parseJson().get('#76b')"
   },
   {
     "op": "core/column-addition",
@@ -365,14 +303,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:value.parseJson().get('#74 ')",
     "onError": "set-to-blank",
     "newColumnName": "74",
-    "columnInsertIndex": 7,
-    "description": "Create column 74 at index 7 based on column Column 1 using expression grel:value.parseJson().get('#74 ')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "74",
-    "index": 6,
-    "description": "Move column 74 to position 6"
+    "columnInsertIndex": 5,
+    "description": "Create column 74 at index 5 based on column Column 1 using expression grel:value.parseJson().get('#74 ')"
   },
   {
     "op": "core/column-addition",
@@ -384,14 +316,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:value.parseJson().get('#75 ')",
     "onError": "set-to-blank",
     "newColumnName": "75",
-    "columnInsertIndex": 8,
-    "description": "Create column 75 at index 8 based on column Column 1 using expression grel:value.parseJson().get('#75 ')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "75",
-    "index": 7,
-    "description": "Move column 75 to position 7"
+    "columnInsertIndex": 6,
+    "description": "Create column 75 at index 6 based on column Column 1 using expression grel:value.parseJson().get('#75 ')"
   },
   {
     "op": "core/column-addition",
@@ -403,14 +329,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "expression": "grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')",
     "onError": "set-to-blank",
     "newColumnName": "rpbUrl",
-    "columnInsertIndex": 9,
-    "description": "Create column rpbUrl at index 9 based on column Column 1 using expression grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')"
-  },
-  {
-    "op": "core/column-move",
-    "columnName": "rpbUrl",
-    "index": 0,
-    "description": "Move column rpbUrl to position 0"
+    "columnInsertIndex": 0,
+    "description": "Create column rpbUrl at index 0 based on column Column 1 using expression grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')"
   },
   {
     "op": "core/column-addition",
@@ -444,7 +364,7 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
       "identifierSpace": "http://test.lobid.org/resources",
       "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
       "type": {
-        "id": "(Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical OR Proceeding OR Newspaper OR Bibliography OR OfficialPublication OR Legislation OR Report) AND NOT (Article OR PublicationIssue)",
+        "id": "(Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical OR Bibliography) AND NOT (Article OR PublicationIssue)",
         "name": "Überordnungen"
       },
       "autoMatch": true,
@@ -452,12 +372,7 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
         {
           "column": "19",
           "propertyName": "Ansetzungssachtitel",
-          "propertyID": "_all"
-        },
-        {
-          "column": "81",
-          "propertyName": "Fußnote",
-          "propertyID": "_all"
+          "propertyID": "alternativeTitle"
         },
         {
           "column": "60",
@@ -510,4 +425,6 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
 ]
 ```
 
-You should now have a project with 8138 rows, each with 9 columns: data from fields `#20 `, `#19 `, `#81 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `81`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).
+The resulting matches can be exported (for comparing reconciliation with different settings etc.): Export -> Templating..., Row template: `{{cells["almaMmsId"].value}}`.
+
+You should now have a project with 8138 rows, each with 8 columns: data from fields `#20 `, `#19 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).

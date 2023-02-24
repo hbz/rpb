@@ -1,4 +1,4 @@
-FLUX_DIR + "RPB-Export_HBZ_Alles/RPB-Export_HBZ_Tit.txt"
+FLUX_DIR + "RPB-Export_HBZ_Tit.txt"
 | open-file(encoding="IBM437")
 | as-lines
 | rpb.Decode

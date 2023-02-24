@@ -89,17 +89,6 @@ sbt "eclipse with-source=true"
 
 NOTE: This section is work in progress, see [RPB-50](https://jira.hbz-nrw.de/browse/RPB-50).
 
-### Get the full title data
-
-If you did not run the full transformation locally before:
-
-```bash
-mkdir conf/RPB-Export_HBZ_Alles/
-cd conf/RPB-Export_HBZ_Alles/
-wget http://lobid.org/download/rpb-gesamtexport/2022-03-11/RPB-Export_HBZ_Tit.txt
-cd ../..
-```
-
 ### RPB source data with hbz IDs
 
 Goal: for all RPB entries with an hbz ID in `#983`, create a mapping from the hbz union catalog ID `almaMmsId` to the `rpbId` from `#00 `. With this, during the transformation of the hbz union catalog for lobid-resources, we can make sure that all entries are marked as members of RPB (`containedIn`, `rpbId`).

@@ -2,6 +2,7 @@
 set -eu
 IFS=$'\n\t'
 
+sbt "runMain rpb.ETL conf/rpb-sw.flux"
 sbt "runMain rpb.ETL conf/rpb-titel.flux"
 for filename in conf/output/bulk/bulk-*.ndjson
 do

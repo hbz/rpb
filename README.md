@@ -26,27 +26,35 @@ cd rpb
 
 ## Transformation development
 
+### Create lookup table
+
+```bash
+sbt "runMain rpb.ETL conf/rpb-test-sw.flux"
+```
+
+This writes a `.tsv` file to `output/`, to be used for lookups in the transformation.
+
 ### Run transformation
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test.flux"
+sbt "runMain rpb.ETL conf/rpb-test-titel.flux"
 ```
 
+This writes individual `.json` files for each record in the input data to `output/`.
+
 ### Validate output
+
+Prerequisites: `npm install -g ajv-cli ajv-formats`
 
 ```bash
 sh validateJsonOutput.sh
 ```
 
-### Create lookup table
-
-```bash
-sbt "runMain rpb.ETL conf/rpb-sw.flux"
-```
+This validates the resulting files against the JSON schemas in `test/rpb/schemas/`.
 
 ### Run full transformation and indexing
 
-Get full data at: http://lobid.org/download/rpb-gesamtexport/2022-03-11/
+Get full data at: http://lobid.org/download/rpb-gesamtexport/, place files in `conf/`.
 
 ```bash
 

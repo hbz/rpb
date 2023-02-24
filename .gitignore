@@ -10,4 +10,5 @@ bin
 !/data/.empty
 bulk.ndjson
 application-log-*.gz
-conf/RPB-Export_HBZ_Alles/
+RPB-Export_HBZ_SW.txt
+RPB-Export_HBZ_Tit.txt

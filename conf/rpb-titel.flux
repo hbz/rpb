@@ -6,6 +6,6 @@ FLUX_DIR + "RPB-Export_HBZ_Tit.txt"
 | fix(FLUX_DIR + "rpb.fix")
 | batch-reset(batchsize="1000")
 | encode-json(prettyPrinting="false")
-| json-to-elasticsearch-bulk(idkey="id", type="resource", index="resources-alma-fix")
+| json-to-elasticsearch-bulk(idkey="id", type="resource", index="resources-alma-fix-staging")
 | write(outfile)
 ;

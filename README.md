@@ -87,7 +87,7 @@ sbt "eclipse with-source=true"
 
 ## Reconciliation
 
-NOTE: This section is work in progress, see [RPB-50](https://jira.hbz-nrw.de/browse/RPB-50).
+NOTE: This section is work in progress, see [RPB-50](https://jira.hbz-nrw.de/browse/RPB-50) & [RPB-51](https://jira.hbz-nrw.de/browse/RPB-51).
 
 ### RPB source data with hbz IDs
 
@@ -425,3 +425,244 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
 The resulting matches can be exported (for comparing reconciliation with different settings etc.): Export -> Templating..., Row template: `{{cells["almaMmsId"].value}}`.
 
 You should now have a project with 8138 rows, each with 8 columns: data from fields `#20 `, `#19 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).
+
+### RPB `#36 =s` data w/o hbz IDs
+
+Create the subset we want to reconcile (entries with `#36 =s` and no hbz ID in `#983`):
+
+```bash
+sbt "runMain rpb.ETL conf/rpb-36s.flux"
+```
+
+Create an OpenRefine project from the output file `conf/output/rpb-36s.json`, selecting "Line-based text files" under "Parse data as". Since the full data is relatively large, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
+
+In the "Undo / Redo" tab, click "Apply...", paste the content below, then click "Perform Operations".
+
+```json
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#20 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "20",
+    "columnInsertIndex": 0,
+    "description": "Create column 20 at index 0 based on column Column 1 using expression grel:value.parseJson().get('#20 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#19 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "19",
+    "columnInsertIndex": 1,
+    "description": "Create column 19 at index 1 based on column Column 1 using expression grel:value.parseJson().get('#19 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#60 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "60",
+    "columnInsertIndex": 2,
+    "description": "Create column 60 at index 2 based on column Column 1 using expression grel:value.parseJson().get('#60 ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "60",
+    "expression": "grel:replace(value, '_', '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 60 using expression grel:replace(value, '_', '')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "60",
+    "expression": "grel:replace(value, 'n', '-')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 60 using expression grel:replace(value, 'n', '-')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#39 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "39",
+    "columnInsertIndex": 3,
+    "description": "Create column 39 at index 3 based on column Column 1 using expression grel:value.parseJson().get('#39 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#76b')",
+    "onError": "set-to-blank",
+    "newColumnName": "76b",
+    "columnInsertIndex": 4,
+    "description": "Create column 76b at index 4 based on column Column 1 using expression grel:value.parseJson().get('#76b')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#74 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "74",
+    "columnInsertIndex": 5,
+    "description": "Create column 74 at index 5 based on column Column 1 using expression grel:value.parseJson().get('#74 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#75 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "75",
+    "columnInsertIndex": 6,
+    "description": "Create column 75 at index 6 based on column Column 1 using expression grel:value.parseJson().get('#75 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "rpbUrl",
+    "columnInsertIndex": 0,
+    "description": "Create column rpbUrl at index 0 based on column Column 1 using expression grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "20",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "20-original",
+    "columnInsertIndex": 2,
+    "description": "Create column 20-original at index 2 based on column 20 using expression grel:value"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "20",
+    "newColumnName": "lobidMatch",
+    "description": "Rename column 20 to lobidMatch"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "lobidMatch",
+    "config": {
+      "mode": "standard-service",
+      "service": "http://test.lobid.org/resources/reconcile",
+      "identifierSpace": "http://test.lobid.org/resources",
+      "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
+      "type": {
+        "id": "Book",
+        "name": "Book"
+      },
+      "autoMatch": true,
+      "columnDetails": [
+        {
+          "column": "19",
+          "propertyName": "Ansetzungssachtitel",
+          "propertyID": "alternativeTitle"
+        },
+        {
+          "column": "60",
+          "propertyName": "HE Urheber",
+          "propertyID": "contribution.agent.gndIdentifier"
+        },
+        {
+          "column": "39",
+          "propertyName": "Verfasserangabe",
+          "propertyID": "contribution.agent.label"
+        },
+        {
+          "column": "76b",
+          "propertyName": "Erscheinungsjahr",
+          "propertyID": "publication.startDate"
+        },
+        {
+          "column": "76b",
+          "propertyName": "Erscheinungsverlauf",
+          "propertyID": "publication.publicationHistory"
+        },
+        {
+          "column": "74",
+          "propertyName": "Verlagsort",
+          "propertyID": "publication.location"
+        },
+        {
+          "column": "75",
+          "propertyName": "Verlag",
+          "propertyID": "publication.publishedBy"
+        }
+      ],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column lobidMatch to type Book"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lobidMatch",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "almaMmsId",
+    "columnInsertIndex": 2,
+    "description": "Create column almaMmsId at index 2 based on column lobidMatch using expression cell.recon.match.id"
+  }
+]
+```
+
+The resulting matches can be exported (for comparing reconciliation with different settings etc.): Export -> Templating..., Row template: `{{cells["almaMmsId"].value}}`.
+
+You should now have a project with with 8 columns for each row: data from fields `#20 `, `#19 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).

@@ -564,6 +564,32 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
       "mode": "row-based"
     },
     "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#27 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "27",
+    "columnInsertIndex": 7,
+    "description": "Create column 27 at index 7 based on column Column 1 using expression grel:value.parseJson().get('#27 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.parseJson().get('#85 ')",
+    "onError": "set-to-blank",
+    "newColumnName": "85",
+    "columnInsertIndex": 8,
+    "description": "Create column 85 at index 8 based on column Column 1 using expression grel:value.parseJson().get('#85 ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
     "expression": "grel:\"http://www.rpb-rlp.de/\" + value.parseJson().get('#00 ')",
     "onError": "set-to-blank",
     "newColumnName": "rpbUrl",
@@ -590,6 +616,19 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
     "description": "Rename column 20 to lobidMatch"
   },
   {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "lobidMatch",
+    "expression": "grel:if(cells[\"27\"].value == null, value, cells[\"27\"].value + \" \" + value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column lobidMatch using expression grel:if(cells[\"27\"].value == null, value, cells[\"27\"].value + \" \" + value)"
+  },
+  {
     "op": "core/recon",
     "engineConfig": {
       "facets": [],
@@ -602,8 +641,8 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
       "identifierSpace": "http://test.lobid.org/resources",
       "schemaSpace": "http://purl.org/dc/terms/BibliographicResource",
       "type": {
-        "id": "Book",
-        "name": "Book"
+        "id": "Book AND NOT (Series OR Journal OR EditedVolume OR MultiVolumeBook OR Periodical OR Bibliography OR Article OR PublicationIssue)",
+        "name": "Monographie"
       },
       "autoMatch": true,
       "columnDetails": [
@@ -641,11 +680,16 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
           "column": "75",
           "propertyName": "Verlag",
           "propertyID": "publication.publishedBy"
+        },
+        {
+          "column": "85",
+          "propertyName": "Serie",
+          "propertyID": "_all"
         }
       ],
       "limit": 0
     },
-    "description": "Reconcile cells in column lobidMatch to type Book"
+    "description": "Reconcile cells in column lobidMatch to type Monographie"
   },
   {
     "op": "core/column-addition",

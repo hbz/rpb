@@ -6,6 +6,10 @@ vacuum()
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
 
+# ------- Set internal _id -------
+
+copy_field("#00 ", "_id")
+
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")

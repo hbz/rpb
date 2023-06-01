@@ -91,11 +91,13 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("#20 ", "Der Rhein - Koblenz bis Tolkamer");
                     ordered.verify(receiver).endRecord();
                     ordered.verify(receiver).startRecord("929t124030b3");
+                    ordered.verify(receiver).literal("#00 ", "929t124030b3");
                     ordered.verify(receiver).literal("#20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("#01 ", "Nachgewiesen 2007 -");
                     ordered.verify(receiver).literal("#20 ", "");
                     ordered.verify(receiver).endRecord();
                     ordered.verify(receiver).startRecord("929t124030b4");
+                    ordered.verify(receiver).literal("#00 ", "929t124030b4");
                     ordered.verify(receiver).literal("#20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("#01 ", "Nachgewiesen 2008 -");
                     ordered.verify(receiver).endRecord();

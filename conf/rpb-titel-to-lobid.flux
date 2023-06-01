@@ -1,8 +1,8 @@
 default outfile = "conf/output/bulk/bulk-${i}.ndjson";
-FLUX_DIR + "RPB-Export_HBZ_Tit.txt"
-| open-file(encoding="IBM437")
+"conf/output/output-strapi.ndjson"
+| open-file
 | as-lines
-| rpb.Decode
+| decode-json
 | fix(FLUX_DIR + "rpb.fix")
 | batch-reset(batchsize="1000")
 | encode-json(prettyPrinting="false")

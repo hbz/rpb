@@ -1,7 +1,7 @@
-FLUX_DIR + "RPB-Export_HBZ_Titel_Test.txt"
-| open-file(encoding="IBM437")
+FLUX_DIR + "output/test-output-strapi.json"
+| open-file
 | as-lines
-| rpb.Decode
+| decode-json
 | fix(FLUX_DIR + "rpb.fix")
 | batch-reset(batchsize="1")
 | encode-json(prettyPrinting="true")

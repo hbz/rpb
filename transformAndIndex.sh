@@ -3,7 +3,8 @@ set -eu
 IFS=$'\n\t'
 
 sbt "runMain rpb.ETL conf/rpb-sw.flux"
-sbt "runMain rpb.ETL conf/rpb-titel.flux"
+sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
+sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux"
 
 unset http_proxy # for posting to weywot3
 for filename in conf/output/bulk/bulk-*.ndjson

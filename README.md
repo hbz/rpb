@@ -34,13 +34,22 @@ sbt "runMain rpb.ETL conf/rpb-test-sw.flux"
 
 This writes a `.tsv` file to `output/`, to be used for lookups in the transformation.
 
-### Run transformation
+### Run transformation to strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test-titel.flux"
+sbt "runMain rpb.ETL conf/rpb-test-titel-to-strapi.flux"
+```
+
+This writes a single `.json` files to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
+
+### Run transformation to lobid data
+
+```bash
+sbt "runMain rpb.ETL conf/rpb-test-titel-to-lobid.flux"
 ```
 
 This writes individual `.json` files for each record in the input data to `output/`.
+
 
 ### Validate output
 

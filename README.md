@@ -426,6 +426,66 @@ The resulting matches can be exported (for comparing reconciliation with differe
 
 You should now have a project with 8138 rows, each with 8 columns: data from fields `#20 `, `#19 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).
 
+After we're done with any manual matching, we can prepare the data for the resulting mapping of `almaMmsId` to `rpbId`:
+
+```json
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "almaMmsId",
+    "description": "Remove column almaMmsId"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "lobidMatch",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "almaMmsId",
+    "columnInsertIndex": 2,
+    "description": "Create column almaMmsId at index 2 based on column lobidMatch using expression cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "almaMmsId",
+          "expression": "isBlank(value)",
+          "columnName": "almaMmsId",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column 1",
+    "expression": "grel:\"RPB\" + value.parseJson().get(\"#00 \")",
+    "onError": "set-to-blank",
+    "newColumnName": "rpbId",
+    "columnInsertIndex": 3,
+    "description": "Create column rpbId at index 3 based on column Column 1 using expression grel:\"RPB\" + value.parseJson().get(\"#00 \")"
+  }
+]
+```
+
+The final result can then be exported (Export -> Custom tabular exporter) to a *.tsv file with two columns mapping `almaMmsId` to `rpbId`, to be used in the union catalog transformation to add the `rpbId` value for each `almaMmsId`.
+
 ### RPB `#36 =s` data w/o hbz IDs
 
 NOTE: This section is work in progress, see [RPB-51](https://jira.hbz-nrw.de/browse/RPB-51).
@@ -710,5 +770,3 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
 ```
 
 The resulting matches can be exported (for comparing reconciliation with different settings etc.): Export -> Templating..., Row template: `{{cells["almaMmsId"].value}}`.
-
-You should now have a project with with 8 columns for each row: data from fields `#20 `, `#19 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).

@@ -1,4 +1,4 @@
-FLUX_DIR + "RPB-Export_HBZ_SW_Test.txt"
+FLUX_DIR + "RPB-Export_HBZ_SW.txt"
 | open-file(encoding="IBM437")
 | as-lines
 | rpb.Decode
@@ -8,5 +8,5 @@ retain(row)
 ")
 | stream-to-triples
 | template("${o}")
-| write(FLUX_DIR + "output/sw-test-output.tsv")
+| write(FLUX_DIR + "RPB-Export_HBZ_SW.tsv")
 ;

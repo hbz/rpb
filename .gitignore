@@ -6,8 +6,10 @@ bin
 .settings
 /conf/output/*
 !/conf/output/test-output-*.json
+!/conf/output/rpb-50*
 /data/*
 !/data/.empty
 bulk.ndjson
 application-log-*.gz
-conf/RPB-Export_HBZ_Alles/
+RPB-Export_HBZ_SW.txt
+RPB-Export_HBZ_Tit.txt

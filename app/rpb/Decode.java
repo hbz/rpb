@@ -56,7 +56,9 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
                     }
                     getReceiver().endRecord(); // first time, we end main record, then each volume
                     volumeCounter++;
-                    getReceiver().startRecord(recordId + "b" + volumeCounter);
+                    final String fullRecordId = recordId + "b" + volumeCounter;
+                    getReceiver().startRecord(fullRecordId);
+                    getReceiver().literal("#00 ", fullRecordId);
                     getReceiver().literal("#20ü", recordTitle);
                 }
             }

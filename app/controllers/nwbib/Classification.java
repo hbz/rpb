@@ -334,12 +334,14 @@ public class Classification {
 				long hits = Lobid.getTotalHitsNwbibClassification(id);
 				if (broader == null && !isNullOrEmpty(lk)) {
 					String broaderNotation = notation.substring(0, 3);
-					if (isNullOrEmpty(vg)) {
-						// no wpNr, no vg -> lk is broader
-						topClasses.add(Json.toJson(ImmutableMap.of("value", RPB_SPATIAL + "n" + broaderNotation, "label", lk + ", Landkreis")));
+					if (!isNullOrEmpty(lk)) {
+						// no wpNr, lk is present -> lk is broader
+						topClasses.add(Json.toJson(ImmutableMap.of(
+								"value", RPB_SPATIAL + "n" + broaderNotation, "label", lk.toLowerCase().contains("kreis") ? lk : lk + ", Landkreis")));
 						broader = broaderNotation;
-					} else {
-						// no wpNr, both vg & lk present -> vg is broader
+					}
+					if(!isNullOrEmpty(vg)) {
+						// no wpNr, vg is present -> vg is broader
 						String thisNotation = notation.substring(0, 5);
 						String broaderId = RPB_SPATIAL + "n" + broaderNotation;
 						String thisId = RPB_SPATIAL + "n" + thisNotation;

@@ -87,7 +87,7 @@ sbt "eclipse with-source=true"
 
 ## Reconciliation
 
-NOTE: This section is work in progress, see [RPB-50](https://jira.hbz-nrw.de/browse/RPB-50) & [RPB-51](https://jira.hbz-nrw.de/browse/RPB-51).
+NOTE: This section is based on the work-in-progress reconciliation service in [lobid-resources](https://github.com/hbz/lobid-resources/pull/1777).
 
 ### RPB source data with hbz IDs
 
@@ -427,6 +427,8 @@ The resulting matches can be exported (for comparing reconciliation with differe
 You should now have a project with 8138 rows, each with 8 columns: data from fields `#20 `, `#19 `, `#60 `, `#39 `, `#76b`, `#74 `, `#75 ` and the full JSON record. Based on that, we reconciled the `20` column, now renamed to `lobidMatch`, including data from columns `19`, `60`, `39`, `76b`, `74`, and `75`. We can now check the matched / unmatched entries in the Facet / Filter tab (to restore the facet, select the `lobidMatch` column > Reconcile > Facets > By judgement).
 
 ### RPB `#36 =s` data w/o hbz IDs
+
+NOTE: This section is work in progress, see [RPB-51](https://jira.hbz-nrw.de/browse/RPB-51).
 
 Create the subset we want to reconcile (entries with `#36 =s` and no hbz ID in `#983`):
 

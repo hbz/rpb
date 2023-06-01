@@ -87,7 +87,7 @@ sbt "eclipse with-source=true"
 
 ## Reconciliation
 
-NOTE: This section is work in progress, see [RPB-50](https://jira.hbz-nrw.de/browse/RPB-50).
+NOTE: This section is based on the work-in-progress reconciliation service in [lobid-resources](https://github.com/hbz/lobid-resources/pull/1777).
 
 ### RPB source data with hbz IDs
 

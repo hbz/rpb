@@ -283,8 +283,8 @@ public class Application extends Controller {
 		} else {
 			Logger.warn("No pagination session data for {}", id);
 		}
-		return search("hbzId:" + id + " OR id:\"https://lobid.org/resources/"+id+"\"", "", "", "", "", "", "", "", "", "", 0, 1, "",
-				"", "", "".equals(format) || "html".equals(format), "", "", "", "", format);
+		return search("rpbId:" + id + " OR hbzId:" + id + " OR id:\"https://lobid.org/resources/"+id+"\"",
+				"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format), "", "", "", "", format);
 	}
 
 	/**

@@ -113,9 +113,10 @@
               agent <- (c \ "agent").toOption;
               agents = agent.asOpt[Seq[JsValue]].getOrElse(Seq(agent));
               label = (agents(0) \ "label").asOpt[String].getOrElse("--");
-              id = (agents(0) \ "id").asOpt[String]) {
+              id = (agents(0) \ "id").asOpt[String];
+              types = (agents(0) \ "type").asOpt[Seq[String]].getOrElse(Seq())) {
         <a title="Nach weiteren Titeln von '@label' suchen" 
-          href='@if(((agents(0) \ "type").asOpt[Seq[String]]).contains("CorporateBody")){ @nwbib.routes.Application.search(corporation=id.getOrElse(label)) }else{ @nwbib.routes.Application.search(person=id.getOrElse(label)) }'/>@label</a>
+          href='@if(types.contains("CorporateBody")){ @nwbib.routes.Application.search(corporation=id.getOrElse(label)) }else{ @nwbib.routes.Application.search(person=id.getOrElse(label)) }'/>@label</a>
         @if(id.isDefined && !id.get.contains("/sw/")){<a title="Linked-Data-Quelle zu '@label' abrufen" href='@id'><span class='glyphicon glyphicon-link'></span></a>}
         @if(c!=cs.last){ | }
       }</td>

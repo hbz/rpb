@@ -109,6 +109,9 @@ public class Application extends Controller {
 	/** The number of seconds in one day. */
 	public static final int ONE_DAY = 24 * ONE_HOUR;
 
+	/** The prefix for zdbId-based lobid URLs. */
+	public static final String ZDB_PREFIX = "ZDB-";
+
 	/**
 	 * @param map The scope for the NRW map ("kreise" or "gemeinden")
 	 * @return The NWBib index page.
@@ -283,8 +286,11 @@ public class Application extends Controller {
 		} else {
 			Logger.warn("No pagination session data for {}", id);
 		}
-		return search("rpbId:" + id + " OR hbzId:" + id + " OR id:\"https://lobid.org/resources/"+id+"\"",
-				"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format), "", "", "", "", format);
+		String cleanId = id.replace("#!", "").replace(ZDB_PREFIX, "");
+		String q = String.format("rpbId:%s OR hbzId:%s OR almaMmsId:%s OR zdbId:%s OR id:\"https://lobid.org/resources/%s\"",
+				cleanId, cleanId, cleanId, cleanId, cleanId);
+		return search(q,"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format),
+				"", "", "", "", format);
 	}
 
 	/**

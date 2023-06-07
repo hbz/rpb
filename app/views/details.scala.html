@@ -67,7 +67,7 @@
       <div class="row" id="search-results">
       @defining(Lobid.items(doc.toString)) { items =>
         @defining(!(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>
-          <div class="col-md-@if(items.isEmpty && !doc.toString.contains("fulltextOnline") && !superordination){12} else {8}">
+          <div class="col-md-@if(!doc.toString.contains("fulltextOnline")){12} else {8}">
             <dl>
             @defining((doc\"rpbId").asOpt[String].getOrElse(q)){ id =>
               <dt>@tags.star_button(id) Titeldetails:
@@ -79,10 +79,9 @@
             }
             </dl>
           </div>
-          @if(!items.isEmpty || doc.toString.contains("fulltextOnline") || superordination){
+          @if(doc.toString.contains("fulltextOnline")){
           <div class="col-md-4" id="holdings">
             <dl>
-            @if(doc.toString.contains("fulltextOnline")){
             <dt>Online-Ressource:</dt>
             <dd>
             <table class="table table-striped table-condensed">
@@ -93,32 +92,11 @@
               @result_field("Link", "fulltextOnline", doc, TableRow.LINKS)
             </table>
             </dd>
-            }
-            @if(superordination){
-            <dt>Bestandsangaben:</dt>
-            <dd>
-            <table class="table table-striped table-condensed">
-              <tr>
-                <th style="width: 30%"></th>
-                <th style="width: 70%"></th>
-              </tr>
-              @result_field("Zum Bestand siehe:", "containedIn", doc, TableRow.LINKS)
-            </table>
-            </dd>
-            }
-            @if(!superordination && !items.isEmpty && !doc.toString.contains("fulltextOnline")){
-             @defining(items.size){num =>
-             <dt>Bestand in @num Bibliothek@if(num>1){en}:</dt>
-             }
-             <dd>@tags.items_map(items)</dd>
-            }
-            </dl>
           </div>
           }
         }
       }
       </div>
-      @if(!q.trim.isEmpty) {@map_credits()}
     }
   }
 }

@@ -1,3 +1,12 @@
+a {
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+}
+
+a[href^="#"], a[href^="javascript"], a:hover {
+	text-decoration: none;
+}
+
 dd {
 	padding-bottom: 0.5em;
 }

@@ -49,17 +49,21 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
             } else if(inMultiVolumeRecord && "#01 ".equals(k)) {
                 if(volumeCounter == 0) {
                     // we're still in the main (multi volume) record, so we mark that here:
-                    getReceiver().literal("#36t", "MultiVolumeBook");
+                    getReceiver().literal(fieldName("#36t"), "MultiVolumeBook");
                 }
                 getReceiver().endRecord(); // first time, we end main record, then each volume
                 volumeCounter++;
                 final String fullRecordId = recordId + "b" + volumeCounter;
                 getReceiver().startRecord(fullRecordId);
-                getReceiver().literal("#00 ", fullRecordId);
-                getReceiver().literal("#20ü", recordTitle);
+                getReceiver().literal(fieldName("#00 "), fullRecordId);
+                getReceiver().literal(fieldName("#20ü"), recordTitle);
             }
-            getReceiver().literal(k, v);
+            getReceiver().literal(fieldName(k), v);
         }
     }
+
+    private String fieldName(final String f) { // `#00 ` --> `f00_`
+        return f.replaceAll("#([^ ]{2}) ", "f$1_").replaceAll("#([^ ]{3})", "f$1");
+    }   
 
 }

@@ -1,0 +1,60 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t113434",
+  "id" : "https://lobid.org/resources/RPB929t113434",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Adenauer Land : Natur erleben! ; Rollen & Radeln",
+  "extent" : "1 Faltbl. : Ill.",
+  "publication" : [ {
+    "location" : [ "[Adenau]" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102070",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Adenau / Region | Mountainbiking | Führer",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4379862-7",
+      "label" : "Adenau / Region",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4198578-3",
+      "label" : "Mountainbiking",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4155569-7",
+      "label" : "Führer",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n13101",
+    "label" : "o13101",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ]
+}

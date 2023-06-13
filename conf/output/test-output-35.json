@@ -1,0 +1,90 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t113420",
+  "id" : "https://lobid.org/resources/RPB929t113420",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Wie steht es um Montabaurs Innenstadt?",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Lennart Weyandt ; Juliana Hammermeister" ],
+  "publication" : [ {
+    "startDate" : "2011",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n566041",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Montabaur | Innenstadt | Projekt | Bericht",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4040123-6",
+      "label" : "Montabaur",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4072821-3",
+      "label" : "Innenstadt",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4115645-6",
+      "label" : "Projekt",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4128022-2",
+      "label" : "Bericht",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n14304048",
+    "label" : "o14304048",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn11k3420339a",
+      "label" : "Weyandt, Lennart"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn11k3420746b",
+      "label" : "Hammermeister, Juliana"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "In: Mons-Tabor-Gymnasium: Jahrbuch. - 30 (2010), Seite 36-41. -"
+}

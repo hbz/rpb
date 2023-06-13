@@ -3,7 +3,7 @@ FLUX_DIR + "RPB-Export_HBZ_SW.txt"
 | as-lines
 | rpb.Decode
 | fix("
-paste('row', '#00 ', '#3na', join_char : '\t')
+paste('row', 'f00_', 'f3na', join_char : '\t')
 retain(row)
 ")
 | stream-to-triples

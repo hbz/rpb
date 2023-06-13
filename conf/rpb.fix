@@ -8,25 +8,25 @@ set_field("@context","http://lobid.org/resources/context.jsonld")
 
 # ------- Set internal _id -------
 
-copy_field("#00 ", "_id")
+copy_field("f00_", "_id")
 
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
-if all_equal("#36 ", "u")
+if all_equal("f36_", "u")
   set_field("type[].$append", "Article")
 end
-if all_equal("#36 ", "s")
+if all_equal("f36_", "s")
   set_field("type[].$append", "Book")
 end
-if any_equal("#36 ", "sm")
-  if exists("#36t")
-    copy_field("#36t", "type[].$append")
+if any_equal("f36_", "sm")
+  if exists("f36t")
+    copy_field("f36t", "type[].$append")
   else
     set_field("type[].$append", "Periodical")
   end
 end
-if any_equal("#36 ", "sbd")
+if any_equal("f36_", "sbd")
   set_field("type[].$append", "Book")
   set_array("isPartOf[]")
   set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
@@ -35,10 +35,10 @@ if any_equal("#36 ", "sbd")
   copy_field("_id", "isPartOf[].$last.hasSuperordinate[].$append.id")
   prepend("isPartOf[].$last.hasSuperordinate[].$last.id","https://lobid.org/resources/RPB")
   replace_all("isPartOf[].$last.hasSuperordinate[].$last.id","b\\d+","")
-  # Set up superordinate label, output by decoder as #20ü
-  copy_field("#20ü", "isPartOf[].$last.hasSuperordinate[].$last.label")
-  # Take volume numbering from `#01 `
-  copy_field("#01 ", "isPartOf[].$last.numbering")
+  # Set up superordinate label, output by decoder as f20ü
+  copy_field("f20ü", "isPartOf[].$last.hasSuperordinate[].$last.label")
+  # Take volume numbering from `f01_`
+  copy_field("f01_", "isPartOf[].$last.numbering")
 end
 
 # ------- rpbId -------
@@ -54,15 +54,15 @@ prepend("id","https://lobid.org/resources/")
 # ------- hbzId -------
 # Remove titles that are already in lobid-resources
 #
-# if exists ("#983")
+# if exists ("f983")
 #    reject()
 # end
 
-copy_field("#983", "hbzId")
+copy_field("f983", "hbzId")
 
 # ------- biblioVinoId -------
 
-copy_field("#84 ", "biblioVinoId")
+copy_field("f84_", "biblioVinoId")
 replace_all("biblioVinoId", "\\.", "")
 
 # ------- "inCollection" -------
@@ -77,10 +77,10 @@ move_field("coll", "inCollection[]")
 
 # ------- "title" field -------
 
-if any_equal("#36 ", "sbd")
-  paste("title", "#20ü", "#01 ", "#20 ", "join_char": " | ")
+if any_equal("f36_", "sbd")
+  paste("title", "f20ü", "f01_", "f20_", "join_char": " | ")
 else
-  copy_field("#20 ", "title")
+  copy_field("f20_", "title")
 end
 
 # Mit Folgendem warten, bis RPB-28 erledigt ist:
@@ -89,12 +89,12 @@ end
 
 # ------- "extent" -------
 
-move_field("#77 ", "extent")
+move_field("f77_", "extent")
 
 # ------- "note" -------
 
 set_array("note[]")
-do list(path:"#81?", "var": "$i")
+do list(path:"f81?", "var": "$i")
   copy_field("$i", "note[].$append")
 end
 uniq("note[]")
@@ -104,10 +104,10 @@ uniq("note[]")
 
 
 # -------- "responsibilityStatement" --------
-# #39  ist nach Quelldatendoku die "Verfasserangabe (Vorlageform)"
+# f39_ ist nach Quelldatendoku die "Verfasserangabe (Vorlageform)"
 
 set_array("responsibilityStatement")
-move_field("#39 ", "responsibilityStatement[]")
+move_field("f39_", "responsibilityStatement[]")
 
 # ------- "language" -------
 # Dafür scheint es keine explizite Angabe zu geben.
@@ -116,15 +116,15 @@ move_field("#39 ", "responsibilityStatement[]")
 
 set_hash("pub")
 set_array("pub.location[]")
-copy_field("#74 ", "pub.location[].$append")
-if all_match("#76a", "\\d{4}")
-  copy_field("#76a", "pub.startDate")
+copy_field("f74_", "pub.location[].$append")
+if all_match("f76a", "\\d{4}")
+  copy_field("f76a", "pub.startDate")
 end
 
-# Folgendes rausgenommen wegen 929t130101, in dem sich #76a wiederholt
+# Folgendes rausgenommen wegen 929t130101, in dem sich f76a wiederholt
 # replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")
 set_array("pub.publishedBy[]")
-copy_field("#75 ", "pub.publishedBy[].$append")
+copy_field("f75_", "pub.publishedBy[].$append")
 set_array("pub.type[]")
 add_field("pub.type[].$append", "PublicationEvent")
 set_array("publication[]")
@@ -132,16 +132,16 @@ move_field("pub", "publication[]")
 
 # ------- "zdbId" -------
 
-if any_equal("#36 ", "sm")
-  move_field("#88 ", "zdbId")
+if any_equal("f36_", "sm")
+  move_field("f88_", "zdbId")
 end
 
 # -------RPB-Sachnotationen --------
 
 set_array("subject[]")
 
-if exists ("#30*")
-  move_field("#30*", "subject[].$append.id")
+if exists ("f30*")
+  move_field("f30*", "subject[].$append.id")
   replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
   uniq("subject[]")
   do list(path: "subject[]")
@@ -155,15 +155,15 @@ end
 
 # ------- Ortsnotation -------
 
-# In den Testdaten sind die Werte in "#31 " und "#31a" identisch und ergeben eine Dublette. Der Grund ist, dass sie kombiniert mit "#30" und "#31a" eine Schlagwortfolge ergeben. Beim Treffen am 14.6.2022 wurde – wenn AP sich richtig erinnert – beschlossen, diese Ketten aufzuspalten in `spatial`- und `subject` -Einräge (analog zur NWbib).
-# Einige Ortsschlagwörter in "#31~"" stammen aus der GND, werden aber nicht nach "subject" verschoben, sondern bleiben in `spatial`, siehe https://jira.hbz-nrw.de/browse/RPB-14?focusedCommentId=287089#comment-287089
+# In den Testdaten sind die Werte in "f31_" und "f31a" identisch und ergeben eine Dublette. Der Grund ist, dass sie kombiniert mit "f30" und "f31a" eine Schlagwortfolge ergeben. Beim Treffen am 14.6.2022 wurde – wenn AP sich richtig erinnert – beschlossen, diese Ketten aufzuspalten in `spatial`- und `subject` -Einräge (analog zur NWbib).
+# Einige Ortsschlagwörter in "f31_" stammen aus der GND, werden aber nicht nach "subject" verschoben, sondern bleiben in `spatial`, siehe https://jira.hbz-nrw.de/browse/RPB-14?focusedCommentId=287089#comment-287089
 # To Do: 
 # 1. Sich wiederholende Werte werden momentan doppelt im JSON abgelegt, siehe test-output-27.json
 # 2. Lookup der RPB-Raumsystematik-Labels
 
 set_array("spatial[]")
 
-do list (path:"#31?", "var": "$i")
+do list (path:"f31?", "var": "$i")
   copy_field("$i", "spatial[].$append.id")
 end
 
@@ -194,7 +194,7 @@ end
 # ------- GND-Schlagwörter -------
 # To Do:
 # 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
-# #32 _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
+# f32_ _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
 # 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
 # 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
 # "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
@@ -202,7 +202,7 @@ end
 
 set_array("@subject[]")
 
-do list (path:"#32?", "var": "$i")
+do list (path:"f32?", "var": "$i")
   copy_field("$i", "@subject[].$append.@swf[]")
 end
 
@@ -240,7 +240,7 @@ end
 # ------- Contribution -------
 
 set_array("contribution[]")
-copy_field("#40?", "contribution[].$append.agent.id")
+copy_field("f40?", "contribution[].$append.agent.id")
 
 do list(path: "contribution[]")
   replace_all("agent.id","_(.*)_","$1")
@@ -260,34 +260,34 @@ end
 # ------- bibliographicCitation -------
 # Siehe https://jira.hbz-nrw.de/browse/RPB-26
 
-if exists ("#70t")
-  do list(path:"#70*", "var": "$i")
-    paste("bibliographicCitation", "~In: ", "#70k", "~: ", "#70t", "~. - ", "#70b", "~ (", "#70j", "~), ", "#70h", " ", "#70z", "~, Seite ", "#70s", "~. -" join_char: "")
+if exists ("f70t")
+  do list(path:"f70*", "var": "$i")
+    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "f70b", "~ (", "f70j", "~), ", "f70h", " ", "f70z", "~, Seite ", "f70s", "~. -" join_char: "")
     replace_all("bibliographicCitation", "In: : ", "In: ")
     replace_all("bibliographicCitation", ", Seite . -$", "")
     replace_all("bibliographicCitation", "  ", " ")
     replace_all("bibliographicCitation", ", , ", ", ")
   end
-elsif exists ("#70 ")
-  paste("bibliographicCitation", "#70 ")
-elsif exists ("#701")
-  paste("bibliographicCitation", "#701")
-elsif exists ("#702")
-  paste("bibliographicCitation", "#702")
-elsif exists ("#703")
-  paste("bibliographicCitation", "#703")
-elsif exists ("#704")
-  paste("bibliographicCitation", "#704")
-elsif exists ("#705")
-  paste("bibliographicCitation", "#705")
-elsif exists ("#706")
-  paste("bibliographicCitation", "#706")
-elsif exists ("#707")
-  paste("bibliographicCitation", "#707")
-elsif exists ("#708")
-  paste("bibliographicCitation", "#708")
-elsif exists ("#709")
-  paste("bibliographicCitation", "#709")
+elsif exists ("f70_")
+  paste("bibliographicCitation", "f70_")
+elsif exists ("f701")
+  paste("bibliographicCitation", "f701")
+elsif exists ("f702")
+  paste("bibliographicCitation", "f702")
+elsif exists ("f703")
+  paste("bibliographicCitation", "f703")
+elsif exists ("f704")
+  paste("bibliographicCitation", "f704")
+elsif exists ("f705")
+  paste("bibliographicCitation", "f705")
+elsif exists ("f706")
+  paste("bibliographicCitation", "f706")
+elsif exists ("f707")
+  paste("bibliographicCitation", "f707")
+elsif exists ("f708")
+  paste("bibliographicCitation", "f708")
+elsif exists ("f709")
+  paste("bibliographicCitation", "f709")
 end
 replace_all("bibliographicCitation","¬","")
 

@@ -1,15 +1,36 @@
-# Person
-if exists("f40?")
-  set_array("f40[]")
-  copy_field("f40?", "f40[].$append.f40_")
-  add_field("f40[].*.n40a", "Verfasser")
-  # TODO 411 etc, extract to macros
+do put_macro("add")
+  if exists("$[from]")
+    set_array("_temp")
+    copy_field("$[from]", "_temp.$append.f$[to]_")
+    add_field("_temp.*.n$[to]a", "$[role]")
+    move_field("_temp.*", "f$[to][].$append")
+  end
 end
 
+# Person
+set_array("f40[]")
+
+call_macro("add", to: "40", from: "f40?", role: "Verfasser")
+call_macro("add", to: "40", from: "f41?", role: "Herausgeber")
+call_macro("add", to: "40", from: "f42?", role: "Mitwirkender")
+call_macro("add", to: "40", from: "f43?", role: "Bearb.")
+call_macro("add", to: "40", from: "f44?", role: "Begr.")
+call_macro("add", to: "40", from: "f45?", role: "Sammler")
+call_macro("add", to: "40", from: "f46?", role: "Librettist")
+call_macro("add", to: "40", from: "f47?", role: "Übersetzer")
+call_macro("add", to: "40", from: "f50?", role: "Illustrator")
+call_macro("add", to: "40", from: "f51?", role: "Verfasser von ergänzendem Text")
+call_macro("add", to: "40", from: "f52?", role: "Komponist")
+call_macro("add", to: "40", from: "f56?", role: "Red.")
+call_macro("add", to: "40", from: "f57?", role: "Sonstige")
+call_macro("add", to: "40", from: "f58?", role: "Ausführender")
+call_macro("add", to: "40", from: "f59?", role: "Gefeierter")
+
 # Körperschaft
-if exists("f60?")
-  set_array("f60[]")
-  copy_field("f60?", "f60[].$append.f60_")
-  add_field("f60[].*.n60a", "Urheber")
-  # TODO 611 etc, extract to macros
-end
+set_array("f60[]")
+
+call_macro("add", to: "60", from: "f60?", role: "HE Urheber")
+call_macro("add", to: "60", from: "f61?", role: "NE hrsg. Körperschaft")
+call_macro("add", to: "60", from: "f69?", role: "Gefeierte Körperschaft")
+
+vacuum()

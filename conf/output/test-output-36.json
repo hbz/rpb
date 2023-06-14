@@ -63,8 +63,8 @@
       "label" : "Tourismusverein Hocheifel-Nürburgring"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -73,8 +73,8 @@
       "label" : "Ahr, Rhein, Eifel, Tourismus & Service GmbH / Marienthal"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
   } ]

@@ -67,5 +67,16 @@
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/5118282-8",
+      "label" : "Heimatverein / Bassenheim"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

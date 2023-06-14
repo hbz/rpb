@@ -56,5 +56,26 @@
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/10058716-1",
+      "label" : "Tourismusverein Hocheifel-Nürburgring"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/16060933-1",
+      "label" : "Ahr, Rhein, Eifel, Tourismus & Service GmbH / Marienthal"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

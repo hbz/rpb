@@ -240,7 +240,8 @@ end
 # ------- Contribution -------
 
 set_array("contribution[]")
-copy_field("f40?", "contribution[].$append.agent.id")
+copy_field("f40[].*.f40_", "contribution[].$append.agent.id")
+copy_field("f60[].*.f60_", "contribution[].$append.agent.id")
 
 do list(path: "contribution[]")
   replace_all("agent.id","_(.*)_","$1")

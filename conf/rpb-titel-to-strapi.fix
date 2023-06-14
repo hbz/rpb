@@ -1,0 +1,15 @@
+# Person
+if exists("f40?")
+  set_array("f40[]")
+  copy_field("f40?", "f40[].$append.f40_")
+  add_field("f40[].*.n40a", "Verfasser")
+  # TODO 411 etc, extract to macros
+end
+
+# Körperschaft
+if exists("f60?")
+  set_array("f60[]")
+  copy_field("f60?", "f60[].$append.f60_")
+  add_field("f60[].*.n60a", "Urheber")
+  # TODO 611 etc, extract to macros
+end

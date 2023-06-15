@@ -63,5 +63,15 @@
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn02k4080a",
+      "label" : "Baumann, Arno"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Bearb."
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

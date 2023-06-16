@@ -8,14 +8,9 @@ This repo contains the RPB data transformation and the RPB web application.
 
 ## Setup
 
-### Install metafix dependency
+### Install metafacture dependencies
 
-```bash
-git clone https://github.com/metafacture/metafacture-fix.git
-cd metafacture-fix
-./gradlew publishToMavenLocal
-cd ..
-```
+See `.github/workflows/build.yml`.
 
 ### Clone RPB project repo
 
@@ -41,6 +36,18 @@ sbt "runMain rpb.ETL conf/rpb-test-titel-to-strapi.flux"
 ```
 
 This writes a single `.json` files to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
+
+### Import strapi data
+
+```bash
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','u') PATH=articles"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','s') PATH=books"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sbd') PATH=books"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=exists('f36t') PATH=multi-volume-books"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sm') PATH=periodicals"
+```
+
+This attempts to import all data selected with the `PICK` variable to the API endpoint in `PATH`, and prints the server response.
 
 ### Run transformation to lobid data
 

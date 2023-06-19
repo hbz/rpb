@@ -1,60 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093398",
-  "id" : "https://lobid.org/resources/RPB929t093398",
+  "rpbId" : "RPB036t0121514",
+  "id" : "https://lobid.org/resources/RPB036t0121514",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Geschäftsbericht 1984 (vom damaligen Geschäftsführer Edgar Diel)",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "Edgar Diel" ],
+  "title" : "Sonnenuhr an der Kirche",
   "publication" : [ {
-    "startDate" : "2008",
+    "startDate" : "1958",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n736050",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Fussballverein Rheingold / Rübenach | Geschichte 1984",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/2111110-8",
-      "label" : "Fussballverein Rheingold / Rübenach",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn07k4776411a",
-      "label" : "Geschichte 1984",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000002000",
-    "label" : "o111000002000",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn09k3398961a",
-      "label" : "Diel, Edgar"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -62,5 +24,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Fußballverein Rheingold <Rübenach>: Rheingold-Echo. - (2008), 2, Seite 46-50. -"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 3 (1958), Nr. 11"
 }

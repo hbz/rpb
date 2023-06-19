@@ -1,24 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB107t982374",
-  "id" : "https://lobid.org/resources/RPB107t982374",
+  "rpbId" : "RPB929t112194",
+  "id" : "https://lobid.org/resources/RPB929t112194",
+  "hbzId" : "HT016782338",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "On : SWF 3, das Magazin",
-  "note" : [ "Ersch. früher in: Offenburg : Opal-Verl. [1995,2]" ],
-  "responsibilityStatement" : [ "hrsg. von: SWF 3, Der Club" ],
+  "title" : "Clubzeitung",
   "publication" : [ {
-    "location" : [ "Rastatt" ],
-    "startDate" : "1992",
-    "publishedBy" : [ "Pabel-Moewig" ],
+    "location" : [ "Neuwied" ],
+    "startDate" : "2006",
     "type" : [ "PublicationEvent" ]
   } ],
+  "zdbId" : "2603143-7",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n882040",
+    "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,17 +26,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "SWF 3 | Geschichte 1945- | Zeitschrift",
+    "label" : "Volleyballclub Neuwied 77 / Neuwied | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4264102-0",
-      "label" : "SWF 3",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
+      "id" : "https://rpb.lobid.org/sw/929n110300",
+      "label" : "Volleyballclub Neuwied 77 / Neuwied",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
@@ -52,8 +44,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n01",
-    "label" : "_r01_",
+    "id" : "https://rpb.lobid.org/spatial#n13800045",
+    "label" : "o13800045",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -62,12 +54,22 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/5166552-9",
-      "label" : "SWF 3, Der Club"
+      "id" : "https://d-nb.info/gnd/16107604nX",
+      "label" : "Volleyballclub Neuwied 77"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/VCN 77",
+      "label" : "VCN 77"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
   } ]

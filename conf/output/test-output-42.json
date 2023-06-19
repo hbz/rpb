@@ -1,24 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB107t982374",
-  "id" : "https://lobid.org/resources/RPB107t982374",
+  "rpbId" : "RPB107t982378",
+  "id" : "https://lobid.org/resources/RPB107t982378",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "On : SWF 3, das Magazin",
-  "note" : [ "Ersch. früher in: Offenburg : Opal-Verl. [1995,2]" ],
-  "responsibilityStatement" : [ "hrsg. von: SWF 3, Der Club" ],
+  "title" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen",
   "publication" : [ {
-    "location" : [ "Rastatt" ],
-    "startDate" : "1992",
-    "publishedBy" : [ "Pabel-Moewig" ],
+    "location" : [ "Ebertsheim-Rodenbach" ],
+    "startDate" : "1998",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n882040",
+    "id" : "http://purl.org/lobid/rpb#n882026",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,15 +24,8 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "SWF 3 | Geschichte 1945- | Zeitschrift",
+    "label" : "Geschichte 1945- | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4264102-0",
-      "label" : "SWF 3",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
       "id" : "https://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
       "source" : {
@@ -52,8 +42,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n01",
-    "label" : "_r01_",
+    "id" : "https://rpb.lobid.org/spatial#n332070120200",
+    "label" : "o332070120200",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -62,8 +52,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/5166552-9",
-      "label" : "SWF 3, Der Club"
+      "id" : "https://d-nb.info/gnd/7832695-3",
+      "label" : "Ebertsheim-Rodenbach"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

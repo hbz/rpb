@@ -1,22 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093384",
-  "id" : "https://lobid.org/resources/RPB929t093384",
+  "rpbId" : "RPB929t112202",
+  "id" : "https://lobid.org/resources/RPB929t112202",
+  "hbzId" : "CT003010542",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Nahelandschaft im Wandel der Zeiten",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "von Rainer Seil" ],
+  "title" : "Provincia Trevirensis [Elektronische Ressource] : [Ca. 1:1 500 000]",
+  "extent" : "1 Kt. : Kupferstich ; 13 x 9 cm",
+  "note" : [ "Maßstab in graph. Form (Miliaria Germanica), Titelkartusche und Maßstabsleiste unten rechts - rückseitig lateinischer Text" ],
+  "responsibilityStatement" : [ "[Hondius, Jodocus]" ],
   "publication" : [ {
-    "startDate" : "2008",
+    "location" : [ "Amstelodami" ],
+    "startDate" : "1618",
+    "publishedBy" : [ "Judocus Hondius" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n572050",
+    "id" : "http://purl.org/lobid/rpb#n126000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -25,40 +29,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Nahetal | Landschaft | Änderung | Geschichte 1800-",
+    "label" : "Erzstift Trier | Altkarte | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4102346-8",
-      "label" : "Nahetal",
+      "id" : "https://d-nb.info/gnd/4060882-7",
+      "label" : "Erzstift Trier",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4034343-1",
-      "label" : "Landschaft",
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4128256-5",
-      "label" : "Änderung",
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z48",
-      "label" : "Geschichte 1800-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n26",
-    "label" : "_r26_",
+    "id" : "https://rpb.lobid.org/spatial#n41",
+    "label" : "_r41_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -67,14 +64,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1036630234",
-      "label" : "Seil, Rainer / 1957-"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2200547a",
+      "label" : "Hondius, Jodocus (Kartograph, 1563-1612)"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Naheland-Kalender. - (2009), Seite 98-100. -"
+  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 378"
 }

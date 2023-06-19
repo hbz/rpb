@@ -4,19 +4,19 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982373",
-      "label" : "SWR-3-Clubmagazin"
+      "id" : "https://lobid.org/resources/RPB929t112194",
+      "label" : "Clubzeitung"
     } ],
-    "numbering" : "1998,1(Sept.) -"
+    "numbering" : "Nachgewiesen 2006,2 -"
   } ],
-  "rpbId" : "RPB107t982373b1",
-  "id" : "https://lobid.org/resources/RPB107t982373b1",
+  "rpbId" : "RPB929t112194b1",
+  "id" : "https://lobid.org/resources/RPB929t112194b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "SWR-3-Clubmagazin | 1998,1(Sept.) -",
+  "title" : "Clubzeitung | Nachgewiesen 2006,2 -",
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

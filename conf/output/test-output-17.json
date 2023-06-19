@@ -1,77 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t093370",
-  "id" : "https://lobid.org/resources/RPB929t093370",
-  "hbzId" : "HT015709903",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB036t0121520",
+  "id" : "https://lobid.org/resources/RPB036t0121520",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Diezer Chronik : 1866 - 1922",
-  "extent" : "93 S. : Ill.",
-  "responsibilityStatement" : [ "von Robert Heck. Bearb. von Arno Baumann" ],
+  "title" : "Sprendlinger Stifter und ihre Familien",
   "publication" : [ {
-    "location" : [ "[Diez, Lahn]" ],
-    "publishedBy" : [ "¬A.¬ Baumann" ],
+    "startDate" : "1983",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Diez | Geschichte 1866-1922",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4012241-4",
-      "label" : "Diez",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09k3370774a",
-      "label" : "Geschichte 1866-1922",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n14103029",
-    "label" : "o14103029",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/12497080X",
-      "label" : "Heck, Robert / 1873-1958"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02k4080a",
-      "label" : "Baumann, Arno"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/edt",
-      "label" : "Bearb."
-    },
-    "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 1983, H. 2"
 }

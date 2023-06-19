@@ -1,82 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t093368",
-  "id" : "https://lobid.org/resources/RPB929t093368",
-  "hbzId" : "HT015946355",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB036t0121518",
+  "id" : "https://lobid.org/resources/RPB036t0121518",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Bassenheim von 1894 - 1946 : Aufzeichnung aus der Schulchronik",
-  "extent" : "99 S. : Ill.",
-  "responsibilityStatement" : [ "hrsg. vom Heimatverein Bassenheim e.V." ],
+  "title" : "Sprendlinger Chronik",
   "publication" : [ {
-    "location" : [ "Bassenheim" ],
-    "startDate" : "2004",
+    "startDate" : "1965",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n783000",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Bassenheim | Schule | Geschichte 1894-1946",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4252261-4",
-      "label" : "Bassenheim",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4053474-1",
-      "label" : "Schule",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09k3368351a",
-      "label" : "Geschichte 1894-1946",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13708202",
-    "label" : "o13708202",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/5118282-8",
-      "label" : "Heimatverein / Bassenheim"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 10 (1965), Nr. 2 und Heimat am Mittelrhein 1965, S. 10"
 }

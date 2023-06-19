@@ -1,74 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093371",
-  "id" : "https://lobid.org/resources/RPB929t093371",
+  "rpbId" : "RPB036t0121521",
+  "id" : "https://lobid.org/resources/RPB036t0121521",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Erinnerungen an das gesellschaftliche Leben im Neuendorf der Nachkriegsjahre",
-  "extent" : "Ill.",
+  "title" : "Steuern in alter Zeit",
   "publication" : [ {
-    "startDate" : "2009",
+    "startDate" : "1957",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n732000",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n722000",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Koblenz-Neuendorf | Vereinsleben | Geschichte 1945-1950",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4515648-7",
-      "label" : "Koblenz-Neuendorf",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4518119-6",
-      "label" : "Vereinsleben",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn05k2020982a",
-      "label" : "Geschichte 1945-1950",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000001500",
-    "label" : "o111000001500",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01t42566702a",
-      "label" : "Kiefer, Irmgard"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -76,5 +24,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Festschrift ... Neuendorfer Kirmes. - 721 (2009), Seite 48-55. -"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 12"
 }

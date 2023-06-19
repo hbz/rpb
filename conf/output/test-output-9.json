@@ -1,59 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093394",
-  "id" : "https://lobid.org/resources/RPB929t093394",
+  "rpbId" : "RPB036t0121512",
+  "id" : "https://lobid.org/resources/RPB036t0121512",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Maximiliane Brentano, geb. La Roche",
-  "extent" : "Ill.",
+  "title" : "Serenissimus befehlen zu prügeln",
   "publication" : [ {
-    "startDate" : "2008",
+    "startDate" : "1963",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768030",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Brentano, Maximiliane / 1756-1793 | Biografie",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/116799889",
-      "label" : "Brentano, Maximiliane / 1756-1793",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4006804-3",
-      "label" : "Biografie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000000500",
-    "label" : "o111000000500",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/132220458",
-      "label" : "Engelke, Erich / 1955-"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -61,5 +24,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Dähler Blättchen. - 74 = 2008, S. 4-5; 75 = 2008, S. 4-5; 76 = 2008, S. 4; 78 = 2009, S. 4-5; 79 = 2009, S. 4-5"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 6"
 }

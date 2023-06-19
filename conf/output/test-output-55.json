@@ -1,20 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147874",
-  "id" : "https://lobid.org/resources/RPB107t01147874",
+  "rpbId" : "RPB929t112197",
+  "id" : "https://lobid.org/resources/RPB929t112197",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Das¬ Hambacher Schloß als Hochzeitsgeschenk der Pfälzer an Kronprinz Maximilian von Bayern (1842)",
+  "title" : "Seit 1911 weht im Vinzenzhaus der Geist der Nächstenliebe : 100-Jahr-Feier in Gebhardshain ; vom Konvent zum Seniorenheim",
+  "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1982",
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844040",
+    "id" : "http://purl.org/lobid/rpb#n611070",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -23,26 +24,26 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Maximilian / II. / Bayern, König / 1811-1864",
+    "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain | Geschichte 1911-2011",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "id" : "https://d-nb.info/gnd/16326855-1",
+      "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/118579347",
-      "label" : "Maximilian / II. / Bayern, König / 1811-1864",
+      "id" : "https://rpb.lobid.org/sw/00Sn10s3817103a",
+      "label" : "Geschichte 1911-2011",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
+    "id" : "https://rpb.lobid.org/spatial#n13209039",
+    "label" : "o13209039",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -51,8 +52,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/107939061",
-      "label" : "Kermann, Joachim / 1942-"
+      "id" : "https://rpb.lobid.org/agent/929n991002",
+      "label" : "Weger, Joachim"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -60,5 +61,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 80 (1982), S. 199-240"
+  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. H. - 66 (2011), 126 vom 31.05., Seite 24. -"
 }

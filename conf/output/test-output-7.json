@@ -1,22 +1,25 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093392",
-  "id" : "https://lobid.org/resources/RPB929t093392",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t112208",
+  "id" : "https://lobid.org/resources/RPB929t112208",
+  "hbzId" : "CT003001317",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Mädchen auf der Balljagd : \"Rheingold\"-Fußballerinnen sind mit Herz dabei",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "Peter Karges" ],
+  "title" : "Vom deutschen Rhein [Elektronische Ressource] : mit landschaftlichen u. architektonischen Ansichten nebst Illustrationen zu rheinischen Dichtungen, in 50 Blättern",
+  "extent" : "[1], 50 Bl. : nur Ill. : gr. quer 2-o",
+  "note" : [ "In Fraktur" ],
+  "responsibilityStatement" : [ "von Caspar Scheuren" ],
   "publication" : [ {
-    "startDate" : "2008",
+    "location" : [ "Düsseldorf" ],
+    "publishedBy" : [ "Breidenbach & Baumann" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n736050",
+    "id" : "http://purl.org/lobid/rpb#n102045",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -25,26 +28,68 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Fussballverein Rheingold / Rübenach | Geschichte 2008",
+    "label" : "Scheuren, Caspar / 1810-1887 | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/2111110-8",
-      "label" : "Fussballverein Rheingold / Rübenach",
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08s0201943a",
-      "label" : "Geschichte 2008",
+      "id" : "https://d-nb.info/gnd/4123412-1",
+      "label" : "Illustration",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4279198-4",
+      "label" : "Farblithografie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4049739-2",
+      "label" : "Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4036774-5",
+      "label" : "Lyrik",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4002214-6",
+      "label" : "Anthologie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4159043-0",
+      "label" : "Pressendruck",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000002000",
-    "label" : "o111000002000",
+    "id" : "https://rpb.lobid.org/spatial#n03",
+    "label" : "_r03_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -53,14 +98,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/929n003318",
-      "label" : "Karges, Peter"
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. BK. - 63 (2008), 44 vom 21.02."
+  } ]
 }

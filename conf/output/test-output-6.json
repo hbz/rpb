@@ -1,30 +1,25 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093389",
-  "id" : "https://lobid.org/resources/RPB929t093389",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t112207",
+  "id" : "https://lobid.org/resources/RPB929t112207",
+  "hbzId" : "CT003001222",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Klimawandel erfordert Waldumbau : Bericht der Bundesregierung stellt nach wie vor hohe Schadstoffeinträge fest - Forstamt Koblenz: Wichtiger Trendmesser",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "Ulrike Hochgesand" ],
+  "title" : "Vom deutschen Rhein [Elektronische Ressource] : Mit landschaftlichen u. architektonischen Ansichten nebst Illustrationen zu rheinischen Dichtungen, in 25 Blättern",
+  "extent" : "[1], [24] Bl. : überw. Ill. ; quer 4-o",
+  "note" : [ "Um die Hälfte reduzierte Fassung der Ansichtenfolge \"Vom deutschen Rhein\" (vgl. Schmitt 210). Das Werk erschien gleichzeitig auch bei Neubner in Köln (vgl. Schmitt 212) und 1880 abermals bei Baumann & Co. ; In Fraktur" ],
+  "responsibilityStatement" : [ "von Caspar Scheuren" ],
   "publication" : [ {
-    "startDate" : "2009",
+    "location" : [ "Düsseldorf" ],
+    "publishedBy" : [ "Baumann" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n142560",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n544400",
+    "id" : "http://purl.org/lobid/rpb#n102045",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -33,80 +28,68 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Koblenz | Stadtwald | Klimaänderung | Geschichte 2009",
+    "label" : "Scheuren, Caspar / 1810-1887 | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4031410-8",
-      "label" : "Koblenz",
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4194638-8",
-      "label" : "Stadtwald",
+      "id" : "https://d-nb.info/gnd/4123412-1",
+      "label" : "Illustration",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4164199-1",
-      "label" : "Klimaänderung",
+      "id" : "https://d-nb.info/gnd/4279198-4",
+      "label" : "Farblithografie",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
-      "label" : "Geschichte 2009",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Landkreis Mayen-Koblenz | Wald | Klimaänderung | Geschichte 2009",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4038117-1",
-      "label" : "Landkreis Mayen-Koblenz",
+      "id" : "https://d-nb.info/gnd/4049739-2",
+      "label" : "Rhein",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4064354-2",
-      "label" : "Wald",
+      "id" : "https://d-nb.info/gnd/4036774-5",
+      "label" : "Lyrik",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4164199-1",
-      "label" : "Klimaänderung",
+      "id" : "https://d-nb.info/gnd/4002214-6",
+      "label" : "Anthologie",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
-      "label" : "Geschichte 2009",
+      "id" : "https://d-nb.info/gnd/4159043-0",
+      "label" : "Pressendruck",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n11100000",
-    "label" : "o11100000",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  }, {
-    "id" : "https://rpb.lobid.org/spatial#n137",
-    "label" : "o137",
+    "id" : "https://rpb.lobid.org/spatial#n03",
+    "label" : "_r03_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -115,14 +98,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn05k2120256b",
-      "label" : "Hochgesand, Ulrike"
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. B0. - 64 (2009), 167 vom 22.07."
+  } ]
 }

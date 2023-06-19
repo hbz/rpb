@@ -1,21 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147875",
-  "id" : "https://lobid.org/resources/RPB107t01147875",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t112191",
+  "id" : "https://lobid.org/resources/RPB929t112191",
+  "hbzId" : "HT016831992",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Ein¬ Fest aller Deutschen : das Hambacher Schloß wird nationale Gedenkstätte",
-  "extent" : "Ill.",
+  "title" : "Geheimnisvolle Tierwelten : am Flüsschen Wied gesehen und photographiert ; [Kalender] 2011",
+  "extent" : "[14] Bl. : überw. Ill. ; 210 x 297 mm",
+  "responsibilityStatement" : [ "von Erich Oetz" ],
   "publication" : [ {
-    "startDate" : "1981",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n246500",
+    "id" : "http://purl.org/lobid/rpb#n848000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -23,7 +24,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n844040",
+    "id" : "http://purl.org/lobid/rpb#n163000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,17 +33,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Fest | Hambacher Schloss / Neustadt an der Weinstraße",
+    "label" : "Wied / Fluss | Tiere / Motiv | Kalender",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4127289-4",
-      "label" : "Hambacher Fest",
+      "id" : "https://d-nb.info/gnd/4108127-4",
+      "label" : "Wied / Fluss",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "id" : "https://d-nb.info/gnd/4185464-0",
+      "label" : "Tiere / Motiv",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4029290-3",
+      "label" : "Kalender",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -50,32 +58,23 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n58",
-    "label" : "_r58_",
-    "type" : [ "Concept" ],
+    "id" : "https://d-nb.info/gnd/4119314-3",
+    "label" : "Unterwesterwald",
+    "type" : [ "PlaceOrGeographicName" ],
     "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  }, {
-    "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
     }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02s0203b",
-      "label" : "Letzelter, Manfred"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2191236a",
+      "label" : "Oetz, Erich"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Stimme der Pfalz. - 32 (1981), 1, S. 9-11"
+  } ]
 }

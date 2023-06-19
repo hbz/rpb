@@ -1,30 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093383",
-  "id" : "https://lobid.org/resources/RPB929t093383",
+  "rpbId" : "RPB929t112201",
+  "id" : "https://lobid.org/resources/RPB929t112201",
+  "hbzId" : "CT003010543",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Der¬ Moselübergang der 87. US-Infanteriedivision bei Güls im März 1945",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "von Hans-Dieter Freund" ],
+  "title" : "Coloniensis Dioecesis [Elektronische Ressource] : [Ca. 1:1 300 000]",
+  "extent" : "1 Kt. : Kupferstich ; 13 x 9 cm",
+  "note" : [ "O oben. - Maßstab in graph. Form (Miliaria Germ.), Titelkartusche und Maßstabsleiste unten links - rückseitig lateinischer Text" ],
+  "responsibilityStatement" : [ "[Hondius, Jodocus]" ],
   "publication" : [ {
-    "startDate" : "2009",
+    "location" : [ "Amstelodami" ],
+    "startDate" : "1618",
+    "publishedBy" : [ "Judocus Hondius" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n263050",
+    "id" : "http://purl.org/lobid/rpb#n126000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -33,33 +29,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Güls | USA / Army / 3 | Geschichte 1945",
+    "label" : "Katholische Kirche / Erzdiözese Köln | Altkarte | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/5034613-1",
-      "label" : "Güls",
+      "id" : "https://d-nb.info/gnd/2029646-0",
+      "label" : "Katholische Kirche / Erzdiözese Köln",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/1089008-7",
-      "label" : "USA / Army / 3",
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn05s0084938a",
-      "label" : "Geschichte 1945",
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000000600",
-    "label" : "o111000000600",
+    "id" : "https://rpb.lobid.org/spatial#n34",
+    "label" : "_r34_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -68,14 +64,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn09k3381116b",
-      "label" : "Freund, Hans-Dieter"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2200547a",
+      "label" : "Hondius, Jodocus (Kartograph, 1563-1612)"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Blütenfest in Koblenz-Güls. - (2009), Seite 145-153. -"
+  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 380"
 }

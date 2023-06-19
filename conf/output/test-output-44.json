@@ -1,24 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB107t982374",
-  "id" : "https://lobid.org/resources/RPB107t982374",
+  "rpbId" : "RPB107t982379",
+  "id" : "https://lobid.org/resources/RPB107t982379",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "On : SWF 3, das Magazin",
-  "note" : [ "Ersch. früher in: Offenburg : Opal-Verl. [1995,2]" ],
-  "responsibilityStatement" : [ "hrsg. von: SWF 3, Der Club" ],
+  "title" : "Wer ist wo",
+  "note" : [ "Adressen- u. Personenverz." ],
+  "responsibilityStatement" : [ "Universität Kaiserslautern" ],
   "publication" : [ {
-    "location" : [ "Rastatt" ],
-    "startDate" : "1992",
-    "publishedBy" : [ "Pabel-Moewig" ],
+    "location" : [ "Kaiserslautern" ],
+    "startDate" : "1995",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n882040",
+    "id" : "http://purl.org/lobid/rpb#n794010",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,10 +26,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "SWF 3 | Geschichte 1945- | Zeitschrift",
+    "label" : "Technische Universität Kaiserslautern | Geschichte 1945- | Führer",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4264102-0",
-      "label" : "SWF 3",
+      "id" : "https://d-nb.info/gnd/10066624-3",
+      "label" : "Technische Universität Kaiserslautern",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -43,8 +42,8 @@
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "id" : "https://d-nb.info/gnd/4155569-7",
+      "label" : "Führer",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -52,8 +51,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n01",
-    "label" : "_r01_",
+    "id" : "https://rpb.lobid.org/spatial#n31200000",
+    "label" : "o31200000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -62,8 +61,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/5166552-9",
-      "label" : "SWF 3, Der Club"
+      "id" : "https://d-nb.info/gnd/26332-1",
+      "label" : "Universität Kaiserslautern"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

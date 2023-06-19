@@ -1,22 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093372",
-  "id" : "https://lobid.org/resources/RPB929t093372",
+  "rpbId" : "RPB107t01147869",
+  "id" : "https://lobid.org/resources/RPB107t01147869",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Energie aus der Tiefe immer beliebter : Im Kreis Mayen-Koblenz zapfen so viele Hausbesitzer wie noch nie Erdwärme an - Bohrlöcher reichen rund 100 Meter tief",
+  "title" : "Grabmal und Taufstein - zwei spätgotische Denkmäler der Pfarrkirche in Hainfeld",
   "extent" : "Ill.",
-  "responsibilityStatement" : [ "sil" ],
   "publication" : [ {
-    "startDate" : "2009",
+    "startDate" : "1984",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n546028",
+    "id" : "http://purl.org/lobid/rpb#n844030",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -25,38 +24,49 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Landkreis Mayen-Koblenz | Geothermische Energie | Geschichte 2009",
+    "label" : "Sankt Barbara / Hainfeld, Südliche Weinstraße | Grabplatte | Taufbecken",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4038117-1",
-      "label" : "Landkreis Mayen-Koblenz",
+      "id" : "https://d-nb.info/gnd/7746576-3",
+      "label" : "Sankt Barbara / Hainfeld, Südliche Weinstraße",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4020286-0",
-      "label" : "Geothermische Energie",
+      "id" : "https://d-nb.info/gnd/4113778-4",
+      "label" : "Grabplatte",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08t1622278a",
-      "label" : "Geschichte 2009",
+      "id" : "https://d-nb.info/gnd/4135651-2",
+      "label" : "Taufbecken",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n137",
-    "label" : "o137",
+    "id" : "https://rpb.lobid.org/spatial#n33703036",
+    "label" : "o33703036",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. B0. - 64 (2009), 171 vom 27.07."
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/11944027X",
+      "label" : "Müller, Carl Werner / 1931-2018"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "Archiv für mittelrheinische Kirchengeschichte. - 36 (1984), S. 47-63"
 }

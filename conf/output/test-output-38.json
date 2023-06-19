@@ -1,20 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147870",
-  "id" : "https://lobid.org/resources/RPB107t01147870",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB107t982376",
+  "id" : "https://lobid.org/resources/RPB107t982376",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Herren von Hainfeld - zur Geschichte e. vorderpfälzischen Adelssitzes im Mittelalter",
+  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte",
+  "responsibilityStatement" : [ "Institut für Angewandte Vogelkunde, Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland" ],
   "publication" : [ {
-    "startDate" : "1983",
+    "location" : [ "Frankfurt/Main" ],
+    "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
+    "id" : "http://purl.org/lobid/rpb#n163080",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -22,7 +24,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n207020",
+    "id" : "http://purl.org/lobid/rpb#n584060",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -31,26 +33,26 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hainfeld / Familie | Geschichte 1100-1300",
+    "label" : "Geschichte 1945- | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/00Sn01s147870528a",
-      "label" : "Hainfeld / Familie",
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn06k1444137a",
-      "label" : "Geschichte 1100-1300",
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "o33703036",
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "_r01_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,14 +61,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "id" : "https://d-nb.info/gnd/1033772-6",
+      "label" : "Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland / Frankfurt, Main"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 81 (1983), S. 229-271"
+  } ]
 }

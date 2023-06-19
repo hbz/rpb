@@ -1,22 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093386",
-  "id" : "https://lobid.org/resources/RPB929t093386",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t112204",
+  "id" : "https://lobid.org/resources/RPB929t112204",
+  "hbzId" : "CT003001337",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "\"Alles vertrocknet ...\" : ein enthusiastischer Reisebericht aus dem Jahre 1861",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "von Julius Reisek" ],
+  "title" : "¬The¬ Rhenish minstrel [Elektronische Ressource] : A Series of Ballads, traditional and legendary, of the Rhine",
+  "extent" : "[3] Bl., 19 S., [1] Bl., 65 S., [21] Bl. : zahlr. Ill. ; quer 4-o",
+  "note" : [ "In Fraktur. Titelbl., Inhaltsverz., und 19 S. Erläuterungen in Engl., Text dt. ; HT010123631 Dt. Ausg. u.d.T.: Stolterfoth, Adelheid ¬von¬: Rheinischer Sagenkreis" ],
+  "responsibilityStatement" : [ "by Adelheid von Stolterfoth. Embellished with twenty-one lithographic sketches, by Dielmann, from the designs of A. Rethel" ],
   "publication" : [ {
-    "startDate" : "2008",
+    "location" : [ "Frankfort o/M." ],
+    "startDate" : "1835",
+    "publishedBy" : [ "Jugel" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n102060",
+    "id" : "http://purl.org/lobid/rpb#n768010",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -25,40 +29,40 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Schultz, Friedrich Wilhelm / 1804-1876 | Nahetal | Reisebericht | Geschichte 1861",
+    "label" : "Rethel, Alfred / 1816-1859 | Illustration | Lithografie | Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/117192244",
-      "label" : "Schultz, Friedrich Wilhelm / 1804-1876",
+      "id" : "https://d-nb.info/gnd/118744615",
+      "label" : "Rethel, Alfred / 1816-1859",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4102346-8",
-      "label" : "Nahetal",
+      "id" : "https://d-nb.info/gnd/4123412-1",
+      "label" : "Illustration",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4076645-7",
-      "label" : "Reisebericht",
+      "id" : "https://d-nb.info/gnd/4036042-8",
+      "label" : "Lithografie",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn05k2122256a",
-      "label" : "Geschichte 1861",
+      "id" : "https://d-nb.info/gnd/7743324-5",
+      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n26",
-    "label" : "_r26_",
+    "id" : "https://rpb.lobid.org/spatial#n22",
+    "label" : "_r22_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -67,14 +71,33 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1051165563",
-      "label" : "Reisek, Jörg Julius"
+      "id" : "https://d-nb.info/gnd/116002468",
+      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "In: Naheland-Kalender. - (2009), Seite 104-107. -"
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
+      "label" : "Rethel, Alfred"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ill",
+      "label" : "Illustrator"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/118702424",
+      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

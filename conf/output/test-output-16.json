@@ -1,61 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t093369",
-  "id" : "https://lobid.org/resources/RPB929t093369",
-  "hbzId" : "HT015597977",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB036t0121519",
+  "id" : "https://lobid.org/resources/RPB036t0121519",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Der¬ Arbeiterverein St. Josef : Gestapo beim Kassierer",
-  "extent" : "16 S. : Ill., Notenbeisp.",
-  "responsibilityStatement" : [ "Helmut Schneider" ],
+  "title" : "Sprendlinger kämpften unter Napoleon",
   "publication" : [ {
-    "location" : [ "Weißenthurm" ],
-    "startDate" : "2007",
-    "publishedBy" : [ "¬H.¬ Schneider" ],
+    "startDate" : "1963",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n611044",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Katholischer Arbeiterverein Sankt Josef Weißenthurm",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/7667208-6",
-      "label" : "Katholischer Arbeiterverein Sankt Josef Weißenthurm",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13708228",
-    "label" : "o13708228",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02k2569a",
-      "label" : "Schneider, Helmut"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 12"
 }

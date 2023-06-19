@@ -1,20 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147874",
-  "id" : "https://lobid.org/resources/RPB107t01147874",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t112198",
+  "id" : "https://lobid.org/resources/RPB929t112198",
+  "hbzId" : "HT015954631",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Das¬ Hambacher Schloß als Hochzeitsgeschenk der Pfälzer an Kronprinz Maximilian von Bayern (1842)",
+  "title" : "¬Das¬ Leben der Bilder oder die Kunst des Sehens",
+  "extent" : "141 S. : Ill.",
+  "note" : [ "Aus dem Engl. übers." ],
+  "responsibilityStatement" : [ "John Berger" ],
   "publication" : [ {
-    "startDate" : "1982",
+    "location" : [ "Berlin" ],
+    "startDate" : "2009",
+    "publishedBy" : [ "Wagenbach" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844040",
+    "id" : "http://purl.org/lobid/rpb#n848000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -23,17 +29,28 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Maximilian / II. / Bayern, König / 1811-1864",
+    "label" : "Kunst | Aufsatzsammlung",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "id" : "https://d-nb.info/gnd/4114333-4",
+      "label" : "Kunst",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/118579347",
-      "label" : "Maximilian / II. / Bayern, König / 1811-1864",
+      "id" : "https://d-nb.info/gnd/4143413-4",
+      "label" : "Aufsatzsammlung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Sander, August / 1876-1964",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/118605364",
+      "label" : "Sander, August / 1876-1964",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -41,8 +58,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
+    "id" : "https://rpb.lobid.org/spatial#n13203050",
+    "label" : "o13203050",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -51,14 +68,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/107939061",
-      "label" : "Kermann, Joachim / 1942-"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2198999a",
+      "label" : "Berger, John"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 80 (1982), S. 199-240"
+  } ]
 }

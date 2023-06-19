@@ -1,75 +1,31 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093374",
-  "id" : "https://lobid.org/resources/RPB929t093374",
+  "rpbId" : "RPB107t01147871",
+  "id" : "https://lobid.org/resources/RPB107t01147871",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "\"Hännes\" brachte Dähler Wasser ins Haus : Anekdoten rund um den \"Dähler Born\": Am Mineralbrunnen herrschte früher ein reger Betrieb - Händler mit Leiterwagen und Hund unterwegs",
+  "title" : "Juden in Hainfeld : ein Beitrag zur Geschichte der Dorfjuden im Hochstift Speyer",
   "extent" : "Ill.",
-  "responsibilityStatement" : [ "Manfred Merz" ],
   "publication" : [ {
-    "startDate" : "2009",
+    "startDate" : "1983",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n141460",
+    "id" : "http://purl.org/lobid/rpb#n632000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Koblenz-Ehrenbreitstein | Mineralquelle | Geschichte",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4098580-5",
-      "label" : "Koblenz-Ehrenbreitstein",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4170037-5",
-      "label" : "Mineralquelle",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4020517-4",
-      "label" : "Geschichte",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Dähler Born / Koblenz-Ehrenbreitstein | Geschichte",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n090682",
-      "label" : "Dähler Born / Koblenz-Ehrenbreitstein",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4020517-4",
-      "label" : "Geschichte",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000000500",
-    "label" : "o111000000500",
+    "id" : "https://rpb.lobid.org/spatial#n33703036",
+    "label" : "o33703036",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -78,8 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn03k2860a",
-      "label" : "Merz, Manfred"
+      "id" : "https://d-nb.info/gnd/11944027X",
+      "label" : "Müller, Carl Werner / 1931-2018"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -87,5 +43,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. B0. - 64 (2009), 169 vom 24.07."
+  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167"
 }

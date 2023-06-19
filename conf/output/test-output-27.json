@@ -1,61 +1,40 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t093380",
-  "id" : "https://lobid.org/resources/RPB929t093380",
+  "rpbId" : "RPB107t01147877",
+  "id" : "https://lobid.org/resources/RPB107t01147877",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Natur rettet sich auf den Truppenübungsplatz : Nr. 19: FFH- und Vogelschutzgebiet auf dem Lager Stegskopf ; viele Rote-Liste-Arten im Derscher Geschwemm",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "goeb" ],
+  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
   "publication" : [ {
-    "startDate" : "2009",
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n584060",
+    "id" : "http://purl.org/lobid/rpb#n240400",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n584070",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Derscher Geschwämm",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n090683",
-      "label" : "Derscher Geschwämm",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://d-nb.info/gnd/4095533-3",
-    "label" : "Hoher Westerwald",
-    "type" : [ "PlaceOrGeographicName" ],
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "o316000000700",
+    "type" : [ "Concept" ],
     "source" : {
-      "id" : "https://d-nb.info/gnd/7749153-1",
-      "label" : "Gemeinsame Normdatei (GND)"
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
     }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/929n002003",
-      "label" : "Goebel, Andreas"
+      "id" : "https://d-nb.info/gnd/1123984425",
+      "label" : "Trautmann, Herbert / 1948-2006"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -63,5 +42,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Siegener Zeitung / Altenkirchen. - 187 (2009), 27.7.09, Seite 8. -"
+  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
 }

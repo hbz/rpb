@@ -2,14 +2,14 @@ do put_macro("add")
   if exists("$[from]")
     set_array("_temp")
     copy_field("$[from]", "_temp.$append.f$[to]_")
-    add_field("_temp.*.n$[to]a", "$[role]")
+    add_field("_temp.*.n$[to]a", "$[type]")
     move_field("_temp.*", "f$[to][].$append")
   end
 end
 
 do put_macro("add_all")
   set_array("f$[to][]")
-  call_macro("add", to: "$[to]", from: "f$[to]?", role: "")
+  call_macro("add", to: "$[to]", from: "f$[to]?", type: "")
 end
 
 call_macro("add_all", to: "24") # Paralleltitel
@@ -25,33 +25,33 @@ call_macro("add_all", to: "85") # Gesamttitel
 # URL
 set_array("f90[]")
 
-call_macro("add", to: "90", from: "f90e", role: "Volltext")
-call_macro("add", to: "90", from: "f90f", role: "Auszug")
+call_macro("add", to: "90", from: "f90e", type: "Volltext")
+call_macro("add", to: "90", from: "f90f", type: "Auszug")
 
 # Person
 set_array("f40[]")
 
-call_macro("add", to: "40", from: "f40?", role: "Verfasser")
-call_macro("add", to: "40", from: "f41?", role: "Herausgeber")
-call_macro("add", to: "40", from: "f42?", role: "Mitwirkender")
-call_macro("add", to: "40", from: "f43?", role: "Bearb.")
-call_macro("add", to: "40", from: "f44?", role: "Begr.")
-call_macro("add", to: "40", from: "f45?", role: "Sammler")
-call_macro("add", to: "40", from: "f46?", role: "Librettist")
-call_macro("add", to: "40", from: "f47?", role: "Übersetzer")
-call_macro("add", to: "40", from: "f50?", role: "Illustrator")
-call_macro("add", to: "40", from: "f51?", role: "Verfasser von ergänzendem Text")
-call_macro("add", to: "40", from: "f52?", role: "Komponist")
-call_macro("add", to: "40", from: "f56?", role: "Red.")
-call_macro("add", to: "40", from: "f57?", role: "Sonstige")
-call_macro("add", to: "40", from: "f58?", role: "Ausführender")
-call_macro("add", to: "40", from: "f59?", role: "Gefeierter")
+call_macro("add", to: "40", from: "f40?", type: "Verfasser")
+call_macro("add", to: "40", from: "f41?", type: "Herausgeber")
+call_macro("add", to: "40", from: "f42?", type: "Mitwirkender")
+call_macro("add", to: "40", from: "f43?", type: "Bearb.")
+call_macro("add", to: "40", from: "f44?", type: "Begr.")
+call_macro("add", to: "40", from: "f45?", type: "Sammler")
+call_macro("add", to: "40", from: "f46?", type: "Librettist")
+call_macro("add", to: "40", from: "f47?", type: "Übersetzer")
+call_macro("add", to: "40", from: "f50?", type: "Illustrator")
+call_macro("add", to: "40", from: "f51?", type: "Verfasser von ergänzendem Text")
+call_macro("add", to: "40", from: "f52?", type: "Komponist")
+call_macro("add", to: "40", from: "f56?", type: "Red.")
+call_macro("add", to: "40", from: "f57?", type: "Sonstige")
+call_macro("add", to: "40", from: "f58?", type: "Ausführender")
+call_macro("add", to: "40", from: "f59?", type: "Gefeierter")
 
 # Körperschaft
 set_array("f60[]")
 
-call_macro("add", to: "60", from: "f60?", role: "HE Urheber")
-call_macro("add", to: "60", from: "f61?", role: "NE hrsg. Körperschaft")
-call_macro("add", to: "60", from: "f69?", role: "Gefeierte Körperschaft")
+call_macro("add", to: "60", from: "f60?", type: "HE Urheber")
+call_macro("add", to: "60", from: "f61?", type: "NE hrsg. Körperschaft")
+call_macro("add", to: "60", from: "f69?", type: "Gefeierte Körperschaft")
 
 vacuum()

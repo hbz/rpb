@@ -7,6 +7,27 @@ do put_macro("add")
   end
 end
 
+do put_macro("add_all")
+  set_array("f$[to][]")
+  call_macro("add", to: "$[to]", from: "f$[to]?", role: "")
+end
+
+call_macro("add_all", to: "24") # Paralleltitel
+call_macro("add_all", to: "27") # Abweichende Titel
+
+call_macro("add_all", to: "30") # Sachnotation
+call_macro("add_all", to: "31") # Ortsnotation
+call_macro("add_all", to: "32") # Schlagwortkette
+
+call_macro("add_all", to: "81") # Anmerkungen
+call_macro("add_all", to: "85") # Gesamttitel
+
+# URL
+set_array("f90[]")
+
+call_macro("add", to: "90", from: "f90e", role: "Volltext")
+call_macro("add", to: "90", from: "f90f", role: "Auszug")
+
 # Person
 set_array("f40[]")
 

@@ -1,21 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB107t982378",
-  "id" : "https://lobid.org/resources/RPB107t982378",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t112197",
+  "id" : "https://lobid.org/resources/RPB929t112197",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen",
+  "title" : "Seit 1911 weht im Vinzenzhaus der Geist der Nächstenliebe : 100-Jahr-Feier in Gebhardshain ; vom Konvent zum Seniorenheim",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Ebertsheim-Rodenbach" ],
-    "startDate" : "1998",
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n882026",
+    "id" : "http://purl.org/lobid/rpb#n611070",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,26 +24,26 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Geschichte 1945- | Zeitschrift",
+    "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain | Geschichte 1911-2011",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "id" : "https://d-nb.info/gnd/16326855-1",
+      "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn10s3817103a",
+      "label" : "Geschichte 1911-2011",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n332070120200",
-    "label" : "o332070120200",
+    "id" : "https://rpb.lobid.org/spatial#n13209039",
+    "label" : "o13209039",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -52,13 +52,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/7832695-3",
-      "label" : "Ebertsheim-Rodenbach"
+      "id" : "https://rpb.lobid.org/agent/929n991002",
+      "label" : "Weger, Joachim"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. H. - 66 (2011), 126 vom 31.05., Seite 24. -"
 }

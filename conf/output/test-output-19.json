@@ -1,21 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147869",
-  "id" : "https://lobid.org/resources/RPB107t01147869",
+  "rpbId" : "RPB107t01147878",
+  "id" : "https://lobid.org/resources/RPB107t01147878",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Grabmal und Taufstein - zwei spätgotische Denkmäler der Pfarrkirche in Hainfeld",
+  "title" : "Um- und Ausbau des Hambacher Schlosses von 1979 bis 1982",
   "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1984",
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844030",
+    "id" : "http://purl.org/lobid/rpb#n844040",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,33 +24,26 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sankt Barbara / Hainfeld, Südliche Weinstraße | Grabplatte | Taufbecken",
+    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Geschichte 1979-1982",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/7746576-3",
-      "label" : "Sankt Barbara / Hainfeld, Südliche Weinstraße",
+      "id" : "https://d-nb.info/gnd/4094596-0",
+      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4113778-4",
-      "label" : "Grabplatte",
+      "id" : "https://rpb.lobid.org/sw/00Sn01s147878357a",
+      "label" : "Geschichte 1979-1982",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4135651-2",
-      "label" : "Taufbecken",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "o33703036",
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "o316000000700",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,8 +52,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "id" : "https://d-nb.info/gnd/1123984425",
+      "label" : "Trautmann, Herbert / 1948-2006"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -68,5 +61,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Archiv für mittelrheinische Kirchengeschichte. - 36 (1984), S. 47-63"
+  "bibliographicCitation" : "Die Pfalz am Rhein <Neustadt, Weinstraße>. - 55 (1982), S. 175-180"
 }

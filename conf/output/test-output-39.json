@@ -4,19 +4,19 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982376",
-      "label" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte"
+      "id" : "https://lobid.org/resources/RPB929t112194",
+      "label" : "Clubzeitung"
     } ],
-    "numbering" : "Ausg. 1.1997(Dez.) -"
+    "numbering" : "Nachgewiesen 2006,2 -"
   } ],
-  "rpbId" : "RPB107t982376b1",
-  "id" : "https://lobid.org/resources/RPB107t982376b1",
+  "rpbId" : "RPB929t112194b1",
+  "id" : "https://lobid.org/resources/RPB929t112194b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte | Ausg. 1.1997(Dez.) -",
+  "title" : "Clubzeitung | Nachgewiesen 2006,2 -",
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

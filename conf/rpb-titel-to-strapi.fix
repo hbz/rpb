@@ -1,3 +1,9 @@
+# Remove titles that are already in lobid-resources
+
+if exists ("f983")
+  reject()
+end
+
 do put_macro("add")
   if exists("$[from]")
     set_array("_temp")

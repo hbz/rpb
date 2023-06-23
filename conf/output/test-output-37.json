@@ -1,24 +1,54 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982375",
-      "label" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz"
-    } ],
-    "numbering" : "1998,1(Sept.) - 2001,9(Sept.)"
-  } ],
-  "rpbId" : "RPB107t982375b1",
-  "id" : "https://lobid.org/resources/RPB107t982375b1",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t112192",
+  "id" : "https://lobid.org/resources/RPB929t112192",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz | 1998,1(Sept.) - 2001,9(Sept.)",
-  "note" : [ "Forts. u.d.T.: Doppelpfeil" ],
+  "title" : "Aus der Vereinsgeschichte der KKG \"Kowelenzer Schängelcher\" 1922 e.V.",
+  "extent" : "Ill.",
   "publication" : [ {
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
-  } ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n704043",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher | Geschichte 1922-2011",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/5114232-6",
+      "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn11k2192145a",
+      "label" : "Geschichte 1922-2011",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n11100000",
+    "label" : "o11100000",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "bibliographicCitation" : "In: KKG Rot-Weiss-Gruen Kowelenzer Schaengelcher: Sessionsheft. - (2011), Seite 23-33. -"
 }

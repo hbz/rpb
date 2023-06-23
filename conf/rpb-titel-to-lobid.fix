@@ -52,11 +52,6 @@ copy_field("rpbId", "id")
 prepend("id","https://lobid.org/resources/") 
 
 # ------- hbzId -------
-# Remove titles that are already in lobid-resources
-#
-# if exists ("f983")
-#    reject()
-# end
 
 copy_field("f983", "hbzId")
 

@@ -1,20 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147873",
-  "id" : "https://lobid.org/resources/RPB107t01147873",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB107t982373",
+  "id" : "https://lobid.org/resources/RPB107t982373",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Das¬ Hambacher Schloß.",
+  "title" : "SWR-3-Clubmagazin",
+  "note" : [ "Vorgänger u.d.T.: On" ],
   "publication" : [ {
-    "startDate" : "1982",
+    "location" : [ "Baden-Baden" ],
+    "startDate" : "1998",
+    "publishedBy" : [ "Südwestrundfunk-Media-GmbH" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844040",
+    "id" : "http://purl.org/lobid/rpb#n882040",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -23,10 +26,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+    "label" : "Südwestrundfunk | Geschichte 1945- | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "id" : "https://d-nb.info/gnd/5295938-7",
+      "label" : "Südwestrundfunk",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -34,8 +51,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "_r01_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -44,14 +61,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/119277425",
-      "label" : "Böcher, Otto / 1935-2020"
+      "id" : "https://d-nb.info/gnd/5331496-7",
+      "label" : "SWR-3-Club"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Ärzteblatt Rheinland-Pfalz. 35. 1982, 560, 563-65"
+  } ]
 }

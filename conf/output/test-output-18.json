@@ -1,22 +1,40 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121521",
-  "id" : "https://lobid.org/resources/RPB036t0121521",
+  "rpbId" : "RPB107t01147877",
+  "id" : "https://lobid.org/resources/RPB107t01147877",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Steuern in alter Zeit",
+  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
   "publication" : [ {
-    "startDate" : "1957",
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "o316000000700",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "https://d-nb.info/gnd/1123984425",
+      "label" : "Trautmann, Herbert / 1948-2006"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -24,5 +42,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 12"
+  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
 }

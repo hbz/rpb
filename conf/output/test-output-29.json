@@ -1,20 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t982370",
-  "id" : "https://lobid.org/resources/RPB107t982370",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB107t982376",
+  "id" : "https://lobid.org/resources/RPB107t982376",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "\"¬Der¬ Holocaust ist immer da\": Kooperationsprojekt Offener Kanal Ludwigshafen, Vorderpfalz und Community Television, Israel",
+  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte",
+  "responsibilityStatement" : [ "Institut für Angewandte Vogelkunde, Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland" ],
   "publication" : [ {
+    "location" : [ "Frankfurt/Main" ],
     "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n632050",
+    "id" : "http://purl.org/lobid/rpb#n163080",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -22,7 +24,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n882060",
+    "id" : "http://purl.org/lobid/rpb#n584060",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -31,24 +33,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Offener Kanal | Judenvernichtung",
+    "label" : "Geschichte 1945- | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4172489-6",
-      "label" : "Offener Kanal",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4073091-8",
-      "label" : "Judenvernichtung",
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -56,8 +51,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n31400000",
-    "label" : "o31400000",
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "_r01_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -66,14 +61,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/106837800X",
-      "label" : "Minor, Ulrike"
+      "id" : "https://d-nb.info/gnd/1033772-6",
+      "label" : "Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland / Frankfurt, Main"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 102-106"
+  } ]
 }

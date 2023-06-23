@@ -1,30 +1,51 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147877",
-  "id" : "https://lobid.org/resources/RPB107t01147877",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB107t982375",
+  "id" : "https://lobid.org/resources/RPB107t982375",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
+  "title" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz",
+  "note" : [ "Vorgänger u.d.T.: Südwestfunk <Baden-Baden>: Südwestfunk-Journal" ],
   "publication" : [ {
-    "startDate" : "1982",
+    "location" : [ "Stuttgart" ],
+    "startDate" : "1998",
+    "publishedBy" : [ "SWR" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
+    "id" : "http://purl.org/lobid/rpb#n882030",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Südwestrundfunk | Zeitschrift",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/5295938-7",
+      "label" : "Südwestrundfunk",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "_r01_",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -33,14 +54,23 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1123984425",
-      "label" : "Trautmann, Herbert / 1948-2006"
+      "id" : "https://d-nb.info/gnd/5295938-7",
+      "label" : "Südwestrundfunk"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/Südwestrundfunk",
+      "label" : "Südwestrundfunk"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

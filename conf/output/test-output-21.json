@@ -1,31 +1,114 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147871",
-  "id" : "https://lobid.org/resources/RPB107t01147871",
+  "rpbId" : "RPB107t982371",
+  "id" : "https://lobid.org/resources/RPB107t982371",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Juden in Hainfeld : ein Beitrag zur Geschichte der Dorfjuden im Hochstift Speyer",
-  "extent" : "Ill.",
+  "title" : "Ältere Menschen machen Fernsehen : aktivierende Medienarbeit in Offenen Kanälen",
+  "note" : [ "Videoprojekt zwischen Volkshochschule u. Offener Kanal" ],
   "publication" : [ {
-    "startDate" : "1983",
+    "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n632000",
+    "id" : "http://purl.org/lobid/rpb#n786000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n882060",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Ludwigshafen am Rhein | Volkshochschule | Geschichte 1945-",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4036472-0",
+      "label" : "Ludwigshafen am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4136151-9",
+      "label" : "Volkshochschule",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Ludwigshafen am Rhein | Offener Kanal | Geschichte 1945-",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4036472-0",
+      "label" : "Ludwigshafen am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4172489-6",
+      "label" : "Offener Kanal",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Ludwigshafen am Rhein | Alter | Geschichte 1945-",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4036472-0",
+      "label" : "Ludwigshafen am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4001446-0",
+      "label" : "Alter",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "o33703036",
+    "id" : "https://rpb.lobid.org/spatial#n31400000",
+    "label" : "o31400000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -34,8 +117,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "id" : "https://rpb.lobid.org/agent/00Pn02s0022a",
+      "label" : "Baum, Herbert"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -43,5 +126,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167"
+  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 119-123"
 }

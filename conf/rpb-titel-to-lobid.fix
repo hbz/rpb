@@ -94,7 +94,7 @@ move_field("f77_", "extent")
 # ------- "note" -------
 
 set_array("note[]")
-do list(path:"f81?", "var": "$i")
+do list(path:"f81[].*.f81_", "var": "$i")
   copy_field("$i", "note[].$append")
 end
 uniq("note[]")
@@ -140,8 +140,8 @@ end
 
 set_array("subject[]")
 
-if exists ("f30*")
-  move_field("f30*", "subject[].$append.id")
+if exists ("f30[]")
+  move_field("f30[].*.f30_", "subject[].$append.id")
   replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
   uniq("subject[]")
   do list(path: "subject[]")
@@ -163,7 +163,7 @@ end
 
 set_array("spatial[]")
 
-do list (path:"f31?", "var": "$i")
+do list (path:"f31[].*.f31_", "var": "$i")
   copy_field("$i", "spatial[].$append.id")
 end
 
@@ -202,7 +202,7 @@ end
 
 set_array("@subject[]")
 
-do list (path:"f32?", "var": "$i")
+do list (path:"f32[].*.f32_", "var": "$i")
   copy_field("$i", "@subject[].$append.@swf[]")
 end
 

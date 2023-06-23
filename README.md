@@ -68,6 +68,17 @@ sh validateJsonOutput.sh
 
 This validates the resulting files against the JSON schemas in `test/rpb/schemas/`.
 
+### Index creation
+
+If you're not indexing into an existing lobid-resources index, make sure to create one with the proper index settings, e.g. to create `resources-rpb-20230623` from `quaoar3`:
+
+```bash
+unset http_proxy # for putting on weywot
+sol@quaoar3:~/git/rpb$ curl -XPUT -H "Content-Type: application/json" weywot5:9200/resources-rpb-20230623?pretty -d @../lobid-resources/src/main/resources/alma/index-config.json
+```
+
+For testing, the real index name (e.g. `resources-rpb-20230623`) is aliased by `resources-rpb-test`, which is used by https://test.lobid.org/resources / http://test.rpb.lobid.org and in the transformation.
+
 ### Run full transformation and indexing
 
 Get full data at: http://lobid.org/download/rpb-gesamtexport/, place files in `conf/`.

@@ -25,6 +25,19 @@ call_macro("add_all", to: "30") # Sachnotation
 call_macro("add_all", to: "31") # Ortsnotation
 call_macro("add_all", to: "32") # Schlagwortkette
 
+call_macro("add_all", to: "70") # Quelle
+
+# Seitenzahl in f70s ist Pflicht, in Quelle suchen:
+unless exists("f70s")
+ put_var("pages", ".*[^\\d](\\d+)\\s*-\\s*(\\d+).*")
+ if all_match("f70_", "$[pages]")
+  copy_field("f70_", "f70s")
+  replace_all("f70s", "$[pages]", "Aus f70_: $1-$2")
+ elsif exists("f70_")
+  add_field("f70s", "N/A")
+ end
+end
+
 call_macro("add_all", to: "81") # Anmerkungen
 call_macro("add_all", to: "85") # Gesamttitel
 

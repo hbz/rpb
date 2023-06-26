@@ -49,6 +49,14 @@ sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sm')
 
 This attempts to import all data selected with the `PICK` variable to the API endpoint in `PATH`, and prints the server response.
 
+To reimport existing entries, these may need to be deleted first, e.g. for `articles/1` to `articles/5`:
+
+```
+curl --request DELETE http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles/[1-5]
+```
+
+After import they are available at e.g. http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles?populate=*
+
 ### Run transformation to lobid data
 
 ```bash

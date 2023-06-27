@@ -1,26 +1,44 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147877",
-  "id" : "https://lobid.org/resources/RPB107t01147877",
+  "rpbId" : "RPB107t01147874",
+  "id" : "https://lobid.org/resources/RPB107t01147874",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
+  "title" : "¬Das¬ Hambacher Schloß als Hochzeitsgeschenk der Pfälzer an Kronprinz Maximilian von Bayern (1842)",
   "publication" : [ {
     "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
+    "id" : "http://purl.org/lobid/rpb#n844040",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Maximilian / II. / Bayern, König / 1811-1864",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4094596-0",
+      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/118579347",
+      "label" : "Maximilian / II. / Bayern, König / 1811-1864",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n316000000700",
@@ -33,8 +51,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1123984425",
-      "label" : "Trautmann, Herbert / 1948-2006"
+      "id" : "https://d-nb.info/gnd/107939061",
+      "label" : "Kermann, Joachim / 1942-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -42,5 +60,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
+  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 80 (1982), S. 199-240"
 }

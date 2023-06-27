@@ -1,28 +1,77 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121513",
-  "id" : "https://lobid.org/resources/RPB036t0121513",
+  "rpbId" : "RPB929t112202",
+  "id" : "https://lobid.org/resources/RPB929t112202",
+  "hbzId" : "CT003010542",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Soldaten für Holland",
+  "title" : "Provincia Trevirensis [Elektronische Ressource] : [Ca. 1:1 500 000]",
+  "extent" : "1 Kt. : Kupferstich ; 13 x 9 cm",
+  "note" : [ "Maßstab in graph. Form (Miliaria Germanica), Titelkartusche und Maßstabsleiste unten rechts - rückseitig lateinischer Text" ],
+  "responsibilityStatement" : [ "[Hondius, Jodocus]" ],
   "publication" : [ {
-    "startDate" : "1957",
+    "location" : [ "Amstelodami" ],
+    "startDate" : "1618",
+    "publishedBy" : [ "Judocus Hondius" ],
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n126000",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Erzstift Trier | Altkarte | Online-Ressource",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4060882-7",
+      "label" : "Erzstift Trier",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n41",
+    "label" : "_r41_",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2200547a",
+      "label" : "Hondius, Jodocus (Kartograph, 1563-1612)"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 6"
+  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 378"
 }

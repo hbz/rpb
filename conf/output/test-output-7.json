@@ -1,17 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121519",
-  "id" : "https://lobid.org/resources/RPB036t0121519",
+  "rpbId" : "RPB036t0121516",
+  "id" : "https://lobid.org/resources/RPB036t0121516",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlinger kämpften unter Napoleon",
+  "title" : "Sprendlingen und das Kloster Lorsch",
   "publication" : [ {
-    "startDate" : "1963",
+    "startDate" : "1967",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n339",
+    "label" : "o339",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ],
   "contribution" : [ {
     "agent" : {
@@ -24,5 +33,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 12"
+  "bibliographicCitation" : "Landkreis Bingen: Heimat-Jahrbuch. - 1967, S. 23-26"
 }

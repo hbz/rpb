@@ -1,7 +1,9 @@
 # Remove titles that are already in lobid-resources
-
+# (see https://jira.hbz-nrw.de/browse/RPB-28)
 if exists ("f983")
-  reject()
+  if all_match("f36_","s|sm")
+    reject()
+  end
 end
 
 do put_macro("add")

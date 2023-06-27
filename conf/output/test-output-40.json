@@ -1,21 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112195",
-  "id" : "https://lobid.org/resources/RPB929t112195",
+  "rpbId" : "RPB929t112192",
+  "id" : "https://lobid.org/resources/RPB929t112192",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Der¬ BAP kam aus Unkel",
+  "title" : "Aus der Vereinsgeschichte der KKG \"Kowelenzer Schängelcher\" 1922 e.V.",
   "extent" : "Ill.",
   "publication" : [ {
     "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n824000",
+    "id" : "http://purl.org/lobid/rpb#n704043",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,49 +24,31 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Unkel | Niedecken, Wolfgang / 1951- | Biografie",
+    "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher | Geschichte 1922-2011",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4061836-5",
-      "label" : "Unkel",
+      "id" : "https://d-nb.info/gnd/5114232-6",
+      "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/118942247",
-      "label" : "Niedecken, Wolfgang / 1951-",
+      "id" : "https://rpb.lobid.org/sw/00Sn11k2192145a",
+      "label" : "Geschichte 1922-2011",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4006804-3",
-      "label" : "Biografie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13807073",
-    "label" : "o13807073",
+    "id" : "https://rpb.lobid.org/spatial#n11100000",
+    "label" : "o11100000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
-      "label" : "Ruland, Wolfgang"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 16-18"
+  "bibliographicCitation" : "In: KKG Rot-Weiss-Gruen Kowelenzer Schaengelcher: Sessionsheft. - (2011), Seite 23-33. -"
 }

@@ -1,23 +1,29 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB107t982379",
-  "id" : "https://lobid.org/resources/RPB107t982379",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t112196",
+  "id" : "https://lobid.org/resources/RPB929t112196",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Wer ist wo",
-  "note" : [ "Adressen- u. Personenverz." ],
-  "responsibilityStatement" : [ "Universität Kaiserslautern" ],
+  "title" : "Coming home mit Commende",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Kaiserslautern" ],
-    "startDate" : "1995",
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n794010",
+    "id" : "http://purl.org/lobid/rpb#n844200",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n844000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -26,33 +32,47 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Technische Universität Kaiserslautern | Geschichte 1945- | Führer",
+    "label" : "Deutscher Orden / Kommende Waldbreitbach | Denkmalschutz | Schicker, Viktor | Private Investition | Geschichte 2009-2011",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/10066624-3",
-      "label" : "Technische Universität Kaiserslautern",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
+      "id" : "https://rpb.lobid.org/sw/929n090287",
+      "label" : "Deutscher Orden / Kommende Waldbreitbach",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4155569-7",
-      "label" : "Führer",
+      "id" : "https://d-nb.info/gnd/4011457-0",
+      "label" : "Denkmalschutz",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn09k1362487a",
+      "label" : "Schicker, Viktor",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4454409-1",
+      "label" : "Private Investition",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn09m0508511a",
+      "label" : "Geschichte 2009-2011",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n31200000",
-    "label" : "o31200000",
+    "id" : "https://rpb.lobid.org/spatial#n13809076",
+    "label" : "o13809076",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -61,13 +81,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/26332-1",
-      "label" : "Universität Kaiserslautern"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
+      "label" : "Ruland, Wolfgang"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 26-27"
 }

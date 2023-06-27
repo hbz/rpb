@@ -1,20 +1,16 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB107t01147876",
-  "id" : "https://lobid.org/resources/RPB107t01147876",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB107t01147873",
+  "id" : "https://lobid.org/resources/RPB107t01147873",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Maxburg bei Hambach. (Mit e. Titelkupfer, Uebersichtsplane u. Grundrisse der Burg.)",
-  "extent" : "VIII, 211 S. 8°",
-  "note" : [ "[Hambacher Schloß]" ],
+  "title" : "¬Das¬ Hambacher Schloß.",
   "publication" : [ {
-    "location" : [ "Mannheim" ],
-    "startDate" : "1844",
-    "publishedBy" : [ "Meininger" ],
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
@@ -48,13 +44,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/116436425",
-      "label" : "Remling, Franz Xaver / 1803-1873"
+      "id" : "https://d-nb.info/gnd/119277425",
+      "label" : "Böcher, Otto / 1935-2020"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Ärzteblatt Rheinland-Pfalz. 35. 1982, 560, 563-65"
 }

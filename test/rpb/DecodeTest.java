@@ -64,9 +64,9 @@ public final class DecodeTest {
 
     @Test
     public void processRecordWithMultipleVolumes() {
-       // 'sm' in '#01 ' -> treat as multiple volumes with their own titles
+       // 'sm' & 'sbd' in '#36 ' -> treat as multiple volumes with their own titles
         test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 sm[/]"
-                + "#01 6/2022[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
+                + "#01 6/2022[/]#36 sbd[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
                 + "#01 7. Band 2022[/]#20 Der Rhein - Koblenz bis Tolkamer[/]"
                 + "#01 Nachgewiesen 2007 -[/]#20 [/]"
                 + "#01 Nachgewiesen 2008 -[/]",
@@ -82,6 +82,7 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("f00_", "929t124030b1");
                     ordered.verify(receiver).literal("f20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("f01_", "6/2022");
+                    ordered.verify(receiver).literal("f36_", "sbd");
                     ordered.verify(receiver).literal("f20_", "Der Rhein - Rheinfelden bis Koblenz");
                     ordered.verify(receiver).endRecord();
                     ordered.verify(receiver).startRecord("929t124030b2");
@@ -107,7 +108,7 @@ public final class DecodeTest {
 
     @Test
     public void processRecordWithMultipleTitles() {
-        // No 'sm' in '#01 ' -> treat as multiple titles of single volume
+        // No 'sm' in '#36 ' -> treat as multiple titles of single volume
         test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 TEST[/]"
                 + "#01 6[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
                 + "#01 7[/]#20 Der Rhein - Koblenz bis Tolkamer[/]", () -> {

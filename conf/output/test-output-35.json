@@ -4,20 +4,19 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982377",
-      "label" : "¬Der¬ Rasenspieler : das Journal zur Saison ..."
+      "id" : "https://lobid.org/resources/RPB929t112194",
+      "label" : "Clubzeitung"
     } ],
-    "numbering" : "Nachgewiesen 1998/99(1998) - 2000/01; 2001/02 - 2002/03"
+    "numbering" : "Nachgewiesen 2006,2 -"
   } ],
-  "rpbId" : "RPB107t982377b1",
-  "id" : "https://lobid.org/resources/RPB107t982377b1",
+  "rpbId" : "RPB929t112194b1",
+  "id" : "https://lobid.org/resources/RPB929t112194b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Der¬ Rasenspieler : das Journal zur Saison ... | Nachgewiesen 1998/99(1998) - 2000/01; 2001/02 - 2002/03",
-  "note" : [ "Damit Erscheinen eingest." ],
+  "title" : "Clubzeitung | Nachgewiesen 2006,2 -",
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

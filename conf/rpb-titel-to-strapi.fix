@@ -5,6 +5,15 @@ if exists ("f983")
     reject()
   end
 end
+do once()
+  put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
+    "rpbId2almaMmsId", "key_column": "1", "value_column": "0", "sep_char": "\t")
+end
+paste("inLobid", "~RPB", "f00_", "join_char": "")
+lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
+if exists("inLobid")
+  reject()
+end
 
 do put_macro("add")
   if exists("$[from]")

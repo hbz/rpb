@@ -4,20 +4,20 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982375",
-      "label" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz"
+      "id" : "https://lobid.org/resources/RPB107t982378",
+      "label" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen"
     } ],
-    "numbering" : "1998,1(Sept.) - 2001,9(Sept.)"
+    "numbering" : "1998,Apr."
   } ],
-  "rpbId" : "RPB107t982375b1",
-  "id" : "https://lobid.org/resources/RPB107t982375b1",
+  "rpbId" : "RPB107t982378b1",
+  "id" : "https://lobid.org/resources/RPB107t982378b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz | 1998,1(Sept.) - 2001,9(Sept.)",
-  "note" : [ "Forts. u.d.T.: Doppelpfeil" ],
+  "title" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen | 1998,Apr.",
+  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ],
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

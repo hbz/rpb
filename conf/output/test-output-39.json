@@ -1,0 +1,23 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "https://lobid.org/resources/RPB929t111801",
+      "label" : "Rhein-Zeitung : unabhängige Tageszeitung"
+    } ],
+    "numbering" : "66.2011,77(1.Apr.) -"
+  } ],
+  "rpbId" : "RPB929t111801b1",
+  "id" : "https://lobid.org/resources/RPB929t111801b1",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Rhein-Zeitung : unabhängige Tageszeitung | 66.2011,77(1.Apr.) -",
+  "publication" : [ {
+    "type" : [ "PublicationEvent" ]
+  } ]
+}

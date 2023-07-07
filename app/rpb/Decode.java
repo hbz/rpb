@@ -51,7 +51,8 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
             } else if(inMultiVolumeRecord && "#01 ".equals(k)) {
                 if(volumeCounter == 0 && currentRecord.contains("#36 sbd")) { // s. RPB-28
                     // we're still in the main (multi volume) record, so we mark that here:
-                    getReceiver().literal(fieldName("#36t"), "MultiVolumeBook");
+                    getReceiver().literal(fieldName("#36t"),
+                            currentRecord.contains("#88 ") ? "Periodical" : "MultiVolumeBook");
                 }
                 getReceiver().endRecord(); // first time, we end main record, then each volume
                 volumeCounter++;

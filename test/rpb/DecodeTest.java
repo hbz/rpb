@@ -64,7 +64,7 @@ public final class DecodeTest {
 
     @Test
     public void processRecordWithMultipleVolumes() {
-       // 'sm' & 'sbd' in '#36 ' -> treat as multiple volumes with their own titles
+       // 'sm' & 'sbd' in '#36 ' -> treat as MultiVolumeBook with their own titles
         test("[/]#00 929t124030[/]#20 Deutsche Binnenwasserstraßen[/]#36 sm[/]"
                 + "#01 6/2022[/]#36 sbd[/]#20 Der Rhein - Rheinfelden bis Koblenz[/]"
                 + "#01 7. Band 2022[/]#20 Der Rhein - Koblenz bis Tolkamer[/]"
@@ -101,6 +101,30 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("f00_", "929t124030b4");
                     ordered.verify(receiver).literal("f20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("f01_", "Nachgewiesen 2008 -");
+                    ordered.verify(receiver).endRecord();
+                    ordered.verifyNoMoreInteractions();
+                });
+    }
+
+    @Test
+    public void processPeriodicalWithMultipleVolumes() {
+       // 'sm' & 'sbd' in '#36 ' & '#88 ' -> treat as Periodical with their own titles
+        test("[/]#00 929t111930[/]#20 Sommerspiele Koblenz : Operette auf dem Rhein[/]#36 sm[/]#88 1201241-5[/]"
+                + "#01 1958 - 1968 nachgewiesen[/]#36 sbd[/]",
+                () -> {
+                    final InOrder ordered = inOrder(receiver);
+                    ordered.verify(receiver).startRecord("929t111930");
+                    ordered.verify(receiver).literal("f00_", "929t111930");
+                    ordered.verify(receiver).literal("f20_", "Sommerspiele Koblenz : Operette auf dem Rhein");
+                    ordered.verify(receiver).literal("f36_", "sm");
+                    ordered.verify(receiver).literal("f88_", "1201241-5");
+                    ordered.verify(receiver).literal("f36t", "Periodical");
+                    ordered.verify(receiver).endRecord();
+                    ordered.verify(receiver).startRecord("929t111930b1");
+                    ordered.verify(receiver).literal("f00_", "929t111930b1");
+                    ordered.verify(receiver).literal("f20ü", "Sommerspiele Koblenz : Operette auf dem Rhein");
+                    ordered.verify(receiver).literal("f01_", "1958 - 1968 nachgewiesen");
+                    ordered.verify(receiver).literal("f36_", "sbd");
                     ordered.verify(receiver).endRecord();
                     ordered.verifyNoMoreInteractions();
                 });

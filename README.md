@@ -41,9 +41,9 @@ This writes a single `.json` files to `output/` (it's actually JSON lines, but t
 
 ```bash
 sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','u') PATH=articles"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','s') PATH=books"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sbd') PATH=books"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=exists('f36t') PATH=multi-volume-books"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','s') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sbd') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=exists('f36t') PATH=independent-works"
 sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sm') PATH=periodicals"
 ```
 

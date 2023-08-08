@@ -4,19 +4,20 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t111801",
-      "label" : "Rhein-Zeitung : unabhängige Tageszeitung"
+      "id" : "https://lobid.org/resources/RPB107t982378",
+      "label" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen"
     } ],
-    "numbering" : "66.2011,77(1.Apr.) -"
+    "numbering" : "1998,Apr."
   } ],
-  "rpbId" : "RPB929t111801b1",
-  "id" : "https://lobid.org/resources/RPB929t111801b1",
+  "rpbId" : "RPB107t982378b1",
+  "id" : "https://lobid.org/resources/RPB107t982378b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Rhein-Zeitung : unabhängige Tageszeitung | 66.2011,77(1.Apr.) -",
+  "title" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen | 1998,Apr.",
+  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ],
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

@@ -51,6 +51,7 @@
         @((pub\"frequency").asOpt[Seq[JsValue]].map { freq =>
           optional("Erscheinungsweise", "label", freq.head)
         })
+        @optional("Erscheinungsverlauf", "publicationHistory", pub)
       </td>
     </tr>
     }

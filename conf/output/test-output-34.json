@@ -1,80 +1,24 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB107t982377",
-  "id" : "https://lobid.org/resources/RPB107t982377",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "https://lobid.org/resources/RPB929t112193",
+      "label" : "Aktuell : das Krankenhaus in Ihrer Region"
+    } ],
+    "numbering" : "Nachgewiesen 2010 - 2012,1"
+  } ],
+  "rpbId" : "RPB929t112193b1",
+  "id" : "https://lobid.org/resources/RPB929t112193b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Der¬ Rasenspieler : das Journal zur Saison ...",
-  "responsibilityStatement" : [ "VFR Speyer 1950 e.V." ],
+  "title" : "Aktuell : das Krankenhaus in Ihrer Region | Nachgewiesen 2010 - 2012,1",
+  "note" : [ "Nachfolger: Kaleidoskop. 2012 -" ],
   "publication" : [ {
-    "location" : [ "Speyer" ],
-    "startDate" : "1998",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n736050",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n882026",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Verein für Rasenspiele Speyer 1950 | Geschichte 1945- | Zeitschrift",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/5325261-5",
-      "label" : "Verein für Rasenspiele Speyer 1950",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n31800000",
-    "label" : "o31800000",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/5325261-5",
-      "label" : "Verein für Rasenspiele Speyer 1950"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
-    },
-    "type" : [ "Contribution" ]
   } ]
 }

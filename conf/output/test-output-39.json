@@ -4,19 +4,19 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982376",
-      "label" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte"
+      "id" : "https://lobid.org/resources/RPB929t111801",
+      "label" : "Rhein-Zeitung : unabhängige Tageszeitung"
     } ],
-    "numbering" : "Ausg. 1.1997(Dez.) -"
+    "numbering" : "66.2011,77(1.Apr.) -"
   } ],
-  "rpbId" : "RPB107t982376b1",
-  "id" : "https://lobid.org/resources/RPB107t982376b1",
+  "rpbId" : "RPB929t111801b1",
+  "id" : "https://lobid.org/resources/RPB929t111801b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte | Ausg. 1.1997(Dez.) -",
+  "title" : "Rhein-Zeitung : unabhängige Tageszeitung | 66.2011,77(1.Apr.) -",
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

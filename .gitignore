@@ -13,3 +13,4 @@ bulk.ndjson
 application-log-*.gz
 RPB-Export_HBZ_SW.txt
 RPB-Export_HBZ_Tit.txt
+RPB-Export_HBZ_Tit_hbzIds.txt

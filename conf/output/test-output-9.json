@@ -1,16 +1,16 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121512",
-  "id" : "https://lobid.org/resources/RPB036t0121512",
+  "rpbId" : "RPB036t0121518",
+  "id" : "https://lobid.org/resources/RPB036t0121518",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Serenissimus befehlen zu prügeln",
+  "title" : "Sprendlinger Chronik",
   "publication" : [ {
-    "startDate" : "1963",
+    "startDate" : "1965",
     "type" : [ "PublicationEvent" ]
   } ],
   "contribution" : [ {
@@ -24,5 +24,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 6"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 10 (1965), Nr. 2 und Heimat am Mittelrhein 1965, S. 10"
 }

@@ -1,26 +1,29 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112203",
-  "id" : "https://lobid.org/resources/RPB929t112203",
-  "hbzId" : "CT003005235",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t112206",
+  "id" : "https://lobid.org/resources/RPB929t112206",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬The¬ Rhenish minstrel [Elektronische Ressource] : A Series of Ballads, traditional and legendary, of the Rhine",
-  "extent" : "[1], [21] Kunstbl. ; s/w ; 24 x 28 cm",
-  "note" : [ "In Fraktur ; HT010123631 Dt. Ausg. u.d.T.: Stolterfoth, Adelheid ¬von¬: Rheinischer Sagenkreis" ],
-  "responsibilityStatement" : [ "by Adelheid von Stolterfoth. Embellished with twenty-one lithographic sketches, by Dielmann, from the designs of A. Rethel" ],
+  "title" : "Funkeln aus dem Sonnenberg : Winzer Oliver Krupp aus Bruchhausen bearbeitet die Lage \"Unkeler Sonnenberg\"",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Frankfort o/M." ],
-    "startDate" : "1835",
-    "publishedBy" : [ "Jugel" ],
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768010",
+    "id" : "http://purl.org/lobid/rpb#n544322",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544325",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -29,47 +32,34 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rethel, Alfred / 1816-1859 | Illustration | Lithografie | Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis | Pressendruck",
+    "label" : "Unkeler Sonnenberg | Weingut Krupp",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/118744615",
-      "label" : "Rethel, Alfred / 1816-1859",
+      "id" : "https://rpb.lobid.org/sw/929n110302",
+      "label" : "Unkeler Sonnenberg",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4123412-1",
-      "label" : "Illustration",
+      "id" : "https://rpb.lobid.org/sw/929n110303",
+      "label" : "Weingut Krupp",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4036042-8",
-      "label" : "Lithografie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/7743324-5",
-      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4159043-0",
-      "label" : "Pressendruck",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n22",
-    "label" : "_r22_",
+    "id" : "https://rpb.lobid.org/spatial#n13807073",
+    "label" : "o13807073",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  }, {
+    "id" : "https://rpb.lobid.org/spatial#n13807008",
+    "label" : "o13807008",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -78,33 +68,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/116002468",
-      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
+      "label" : "Ruland, Wolfgang"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
-      "label" : "Rethel, Alfred"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/118702424",
-      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
-    },
-    "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 32-33"
 }

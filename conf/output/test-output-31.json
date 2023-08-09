@@ -1,96 +1,24 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t982372",
-  "id" : "https://lobid.org/resources/RPB107t982372",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "https://lobid.org/resources/RPB107t982378",
+      "label" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen"
+    } ],
+    "numbering" : "1998,Apr."
+  } ],
+  "rpbId" : "RPB107t982378b1",
+  "id" : "https://lobid.org/resources/RPB107t982378b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Zur politischen Tragweite schulischer Medienarbeit : was \"lernen\" Gymnasiasten, wenn sie \"im Auftrag\" eines Berufsinformationszentrums Live-Sendungen für Schüler anderer Schularten produzieren?",
-  "extent" : "Graph. Darst.",
-  "note" : [ "Medien-AG d. Wilhelm-von-Humboldt-Gymnasiums" ],
-  "responsibilityStatement" : [ "Karl-Ludwig Kemen ; Gerhard Laubscher" ],
+  "title" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen | 1998,Apr.",
+  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ],
   "publication" : [ {
-    "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n784080",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n882060",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Offener Kanal",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4172489-6",
-      "label" : "Offener Kanal",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/107n220353",
-      "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n31400000",
-    "label" : "o31400000",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372a",
-      "label" : "Kemen, Karl-Ludwig"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372b",
-      "label" : "Laubscher, Gerhard"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 124-144"
+  } ]
 }

@@ -1,102 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112205",
-  "id" : "https://lobid.org/resources/RPB929t112205",
-  "hbzId" : "CT003001334",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB036t0121513",
+  "id" : "https://lobid.org/resources/RPB036t0121513",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sagas légendes des bords du Rhin [Elektronische Ressource] : orné de 8 gravures sur acier",
-  "extent" : "[1] Bl., VIII, 299 S., [7] Bl. : Ill.",
-  "note" : [ "HT003558438 Dt. Ausg. u.d.T.: Rheinlands Sagen, Geschichten und Legenden" ],
-  "responsibilityStatement" : [ "[Alfred von Reumont]. D'après les dessins des peintres de l' Ecole de Dusseldorf [Kretschmer del. ; Plüddemann del. ; Alfred Rethel del. ; Sonderland del.]" ],
+  "title" : "Soldaten für Holland",
   "publication" : [ {
-    "location" : [ "Aix-la-Chapelle [u.a.]; Paris; Janet" ],
-    "publishedBy" : [ "Kohnen [u.a.]" ],
+    "startDate" : "1957",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n760100",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Rheinland | Literatur | Anthologie | Online-Ressource",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4049788-4",
-      "label" : "Rheinland",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4035964-5",
-      "label" : "Literatur",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4002214-6",
-      "label" : "Anthologie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n03",
-    "label" : "_r03_",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18192455a",
-      "label" : "Reumont, Alfred ¬von¬"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2205906a",
-      "label" : "Kretzschmer, Hermann"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
-      "label" : "Rethel, Alfred"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
-    },
-    "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 6"
 }

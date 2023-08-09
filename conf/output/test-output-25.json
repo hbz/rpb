@@ -1,21 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147875",
-  "id" : "https://lobid.org/resources/RPB107t01147875",
+  "rpbId" : "RPB107t982372",
+  "id" : "https://lobid.org/resources/RPB107t982372",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Ein¬ Fest aller Deutschen : das Hambacher Schloß wird nationale Gedenkstätte",
-  "extent" : "Ill.",
+  "title" : "Zur politischen Tragweite schulischer Medienarbeit : was \"lernen\" Gymnasiasten, wenn sie \"im Auftrag\" eines Berufsinformationszentrums Live-Sendungen für Schüler anderer Schularten produzieren?",
+  "extent" : "Graph. Darst.",
+  "note" : [ "Medien-AG d. Wilhelm-von-Humboldt-Gymnasiums" ],
+  "responsibilityStatement" : [ "Karl-Ludwig Kemen ; Gerhard Laubscher" ],
   "publication" : [ {
-    "startDate" : "1981",
+    "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n246500",
+    "id" : "http://purl.org/lobid/rpb#n784080",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -23,7 +25,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n844040",
+    "id" : "http://purl.org/lobid/rpb#n882060",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,34 +34,37 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Fest | Hambacher Schloss / Neustadt an der Weinstraße",
+    "label" : "Ludwigshafen am Rhein | Offener Kanal",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4127289-4",
-      "label" : "Hambacher Fest",
+      "id" : "https://d-nb.info/gnd/4036472-0",
+      "label" : "Ludwigshafen am Rhein",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "id" : "https://d-nb.info/gnd/4172489-6",
+      "label" : "Offener Kanal",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
+    "componentList" : [ {
+      "id" : "https://rpb.lobid.org/sw/107n220353",
+      "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n58",
-    "label" : "_r58_",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  }, {
-    "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
+    "id" : "https://rpb.lobid.org/spatial#n31400000",
+    "label" : "o31400000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -68,8 +73,18 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02s0203b",
-      "label" : "Letzelter, Manfred"
+      "id" : "https://rpb.lobid.org/agent/00Pn98s2372a",
+      "label" : "Kemen, Karl-Ludwig"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn98s2372b",
+      "label" : "Laubscher, Gerhard"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -77,5 +92,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Stimme der Pfalz. - 32 (1981), 1, S. 9-11"
+  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 124-144"
 }

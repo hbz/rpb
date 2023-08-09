@@ -1,103 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112204",
-  "id" : "https://lobid.org/resources/RPB929t112204",
-  "hbzId" : "CT003001337",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB036t0121512",
+  "id" : "https://lobid.org/resources/RPB036t0121512",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬The¬ Rhenish minstrel [Elektronische Ressource] : A Series of Ballads, traditional and legendary, of the Rhine",
-  "extent" : "[3] Bl., 19 S., [1] Bl., 65 S., [21] Bl. : zahlr. Ill. ; quer 4-o",
-  "note" : [ "In Fraktur. Titelbl., Inhaltsverz., und 19 S. Erläuterungen in Engl., Text dt. ; HT010123631 Dt. Ausg. u.d.T.: Stolterfoth, Adelheid ¬von¬: Rheinischer Sagenkreis" ],
-  "responsibilityStatement" : [ "by Adelheid von Stolterfoth. Embellished with twenty-one lithographic sketches, by Dielmann, from the designs of A. Rethel" ],
+  "title" : "Serenissimus befehlen zu prügeln",
   "publication" : [ {
-    "location" : [ "Frankfort o/M." ],
-    "startDate" : "1835",
-    "publishedBy" : [ "Jugel" ],
+    "startDate" : "1963",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768010",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Rethel, Alfred / 1816-1859 | Illustration | Lithografie | Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/118744615",
-      "label" : "Rethel, Alfred / 1816-1859",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4123412-1",
-      "label" : "Illustration",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4036042-8",
-      "label" : "Lithografie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/7743324-5",
-      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n22",
-    "label" : "_r22_",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/116002468",
-      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875"
+      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
-      "label" : "Rethel, Alfred"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/118702424",
-      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
-    },
-    "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 6"
 }

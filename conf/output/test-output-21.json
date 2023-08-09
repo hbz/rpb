@@ -1,21 +1,20 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147871",
-  "id" : "https://lobid.org/resources/RPB107t01147871",
+  "rpbId" : "RPB107t01147877",
+  "id" : "https://lobid.org/resources/RPB107t01147877",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Juden in Hainfeld : ein Beitrag zur Geschichte der Dorfjuden im Hochstift Speyer",
-  "extent" : "Ill.",
+  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
   "publication" : [ {
-    "startDate" : "1983",
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n632000",
+    "id" : "http://purl.org/lobid/rpb#n240400",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,8 +23,8 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "o33703036",
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "o316000000700",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -34,8 +33,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "id" : "https://d-nb.info/gnd/1123984425",
+      "label" : "Trautmann, Herbert / 1948-2006"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -43,5 +42,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167"
+  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
 }

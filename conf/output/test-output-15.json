@@ -1,22 +1,41 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121518",
-  "id" : "https://lobid.org/resources/RPB036t0121518",
+  "rpbId" : "RPB107t01147871",
+  "id" : "https://lobid.org/resources/RPB107t01147871",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlinger Chronik",
+  "title" : "Juden in Hainfeld : ein Beitrag zur Geschichte der Dorfjuden im Hochstift Speyer",
+  "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1965",
+    "startDate" : "1983",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n632000",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33703036",
+    "label" : "o33703036",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "https://d-nb.info/gnd/11944027X",
+      "label" : "Müller, Carl Werner / 1931-2018"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -24,5 +43,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 10 (1965), Nr. 2 und Heimat am Mittelrhein 1965, S. 10"
+  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167"
 }

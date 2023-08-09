@@ -17,9 +17,11 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
     private String recordId;
     private String recordTitle;
     private boolean inMultiVolumeRecord;
+    private String currentRecord;
 
     @Override
     public void process(final String obj) {
+        currentRecord = obj;
         LOG.debug("Process record: " + obj);
         final String[] vals = obj.split("\\[/\\]");
         recordId = getId(obj, vals);
@@ -47,9 +49,10 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
             if("#36 ".equals(k) && "sm".equals(v)) {
                 inMultiVolumeRecord = true;
             } else if(inMultiVolumeRecord && "#01 ".equals(k)) {
-                if(volumeCounter == 0) {
+                if(volumeCounter == 0 && currentRecord.contains("#36 sbd")) { // s. RPB-28
                     // we're still in the main (multi volume) record, so we mark that here:
-                    getReceiver().literal(fieldName("#36t"), "MultiVolumeBook");
+                    getReceiver().literal(fieldName("#36t"),
+                            currentRecord.contains("#88 ") ? "Periodical" : "MultiVolumeBook");
                 }
                 getReceiver().endRecord(); // first time, we end main record, then each volume
                 volumeCounter++;

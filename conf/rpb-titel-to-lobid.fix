@@ -72,15 +72,9 @@ move_field("coll", "inCollection[]")
 
 # ------- "title" field -------
 
-if any_equal("f36_", "sbd")
-  paste("title", "f20ü", "f01_", "f20_", "join_char": " | ")
-else
-  copy_field("f20_", "title")
-end
-
-# Mit Folgendem warten, bis RPB-28 erledigt ist:
-# replace_all("title","¬","")
-# replace_all("title", "\\s\\+", "")
+copy_field("f20_", "title")
+replace_all("title","¬","")
+replace_all("title", "\\s\\+", "")
 
 # ------- "extent" -------
 

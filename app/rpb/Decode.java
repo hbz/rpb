@@ -60,6 +60,12 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
                 getReceiver().startRecord(fullRecordId);
                 getReceiver().literal(fieldName("#00 "), fullRecordId);
                 getReceiver().literal(fieldName("#20ü"), recordTitle);
+                String volumeTitle = recordTitle + " : " + v;
+                getReceiver().literal(fieldName("#20 "), volumeTitle);
+                String issuedDate = v;
+                getReceiver().literal(fieldName("#76a"), issuedDate);
+                String issuedYear = v.replaceAll(".*?(\\d{4}).*", "$1");
+                getReceiver().literal(fieldName("#76b"), issuedYear);
             }
             getReceiver().literal(fieldName(k), v);
         }

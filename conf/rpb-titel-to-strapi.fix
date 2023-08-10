@@ -55,8 +55,23 @@ call_macro("add_all", to: "85") # Gesamttitel
 # URL
 set_array("f90[]")
 
-call_macro("add", to: "90", from: "f90e", type: "Volltext")
-call_macro("add", to: "90", from: "f90f", type: "Auszug")
+if exists("f90e")
+  move_field("f90e", "f90[].$append.f90_")
+  add_field("f90[].*.n90", "Volltext")
+end
+
+if exists("f90f")
+  move_field("f90f", "f90[].$append.f90_")
+  add_field("f90[].*.n90", "Andere URL")
+end
+
+# Signatur
+set_array("f90a[]")
+
+if exists("f90a")
+  move_field("f90a", "f90a[].$append.f90a")
+  # add_field("f90a[].*.n90a", "KO") etc.
+end
 
 # Person
 set_array("f40[]")

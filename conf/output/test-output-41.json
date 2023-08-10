@@ -1,24 +1,72 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t112193",
-      "label" : "Aktuell : das Krankenhaus in Ihrer Region"
-    } ],
-    "numbering" : "Nachgewiesen 2010 - 2012,1"
-  } ],
-  "rpbId" : "RPB929t112193b1",
-  "id" : "https://lobid.org/resources/RPB929t112193b1",
+  "rpbId" : "RPB929t084657",
+  "id" : "https://lobid.org/resources/RPB929t084657",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Aktuell : das Krankenhaus in Ihrer Region | Nachgewiesen 2010 - 2012,1",
-  "note" : [ "Nachfolger: Kaleidoskop. 2012 -" ],
+  "title" : "Fit zur WM 2006 [Elektronische Ressource]",
+  "responsibilityStatement" : [ "Grundschule St. Johannes" ],
   "publication" : [ {
+    "location" : [ "Erpel" ],
+    "startDate" : "2006",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n784041",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Sankt-Johannes-Grundschule Erpel | Bewegte Schule | DVD-ROM",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4839067-7",
+      "label" : "Sankt-Johannes-Grundschule Erpel",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4510321-5",
+      "label" : "Bewegte Schule",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4585131-1",
+      "label" : "DVD-ROM",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n13807019",
+    "label" : "o13807019",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/10120647-1",
+      "label" : "St.-Johannes-Grundschule / Erpel"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

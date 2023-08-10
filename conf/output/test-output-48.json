@@ -1,21 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112192",
-  "id" : "https://lobid.org/resources/RPB929t112192",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t084695",
+  "id" : "https://lobid.org/resources/RPB929t084695",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Aus der Vereinsgeschichte der KKG \"Kowelenzer Schängelcher\" 1922 e.V.",
-  "extent" : "Ill.",
+  "title" : "Festschrift des DRK-Ortsverein Adenau e.V. [Elektronische Ressource]",
   "publication" : [ {
-    "startDate" : "2011",
+    "location" : [ "Adenau" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n704043",
+    "id" : "http://purl.org/lobid/rpb#n532030",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n428076",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,17 +31,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher | Geschichte 1922-2011",
+    "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau | Geschichte 1883-2008",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/5114232-6",
-      "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher",
+      "id" : "https://d-nb.info/gnd/10361782-6",
+      "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn11k2192145a",
-      "label" : "Geschichte 1922-2011",
+      "id" : "https://rpb.lobid.org/sw/00Sn08m0186730g",
+      "label" : "Geschichte 1883-2008",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
@@ -42,13 +49,23 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n11100000",
-    "label" : "o11100000",
+    "id" : "https://rpb.lobid.org/spatial#n13101001",
+    "label" : "o13101001",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "bibliographicCitation" : "In: KKG Rot-Weiss-Gruen Kowelenzer Schaengelcher: Sessionsheft. - (2011), Seite 23-33. -"
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/10361782-6",
+      "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

@@ -71,8 +71,11 @@ set_array("inCollection[]")
 move_field("coll", "inCollection[]")
 
 # ------- "title" field -------
-
-copy_field("f20_", "title")
+if is_string("f20_")
+  copy_field("f20_", "title")
+elsif is_array("f20_")
+  copy_field("f20_.$last", "title")
+end
 replace_all("title","¬","")
 replace_all("title", "\\s\\+", "")
 

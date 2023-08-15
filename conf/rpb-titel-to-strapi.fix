@@ -47,16 +47,22 @@ call_macro("add_all", to: "32") # Schlagwortkette
 
 call_macro("add_all", to: "70") # Quelle
 
-# Seitenzahl in f70s ist Pflicht, in Quelle suchen:
+# Seitenzahl in f70s ist Pflichtfeld für Artikel (f36_=u)
 unless exists("f70s")
- put_var("pages", ".*[^\\d](\\d+)\\s*-\\s*(\\d+).*")
- if all_match("f70_", "$[pages]")
-  if is_string("f70_")
+ if all_equal("f36_", "u")
+  if exists("f70_")
     copy_field("f70_", "f70s")
-    replace_all("f70s", "$[pages]", "Aus f70_: $1-$2")
+    prepend("f70s", "Kopiert aus f70_: ")
+    put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
+    if all_match("f70_", "$[pages]")
+      if is_string("f70_")
+        replace_all("f70s", "$[pages]", "Aus f70_: $1")
+      end
+    end
+  else
+    add_field("f70s", "N/A")
+    print_record("Keine Seitenzahl (f70s) oder Quelle (f70_) für Artikel (f36_=u) gefunden: ")
   end
- elsif exists("f70_")
-  add_field("f70s", "N/A")
  end
 end
 

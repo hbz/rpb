@@ -109,7 +109,7 @@ call_macro("add", to: "60", from: "f60?", type: "HE Urheber")
 call_macro("add", to: "60", from: "f61?", type: "NE hrsg. Körperschaft")
 call_macro("add", to: "60", from: "f69?", type: "Gefeierte Körperschaft")
 
-if all_match("f18_","x")
+if all_match("f18_","[xX]")
   move_field("f18_","f18_~")
   set_field("f18_~", "true")
 end

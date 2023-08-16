@@ -14,8 +14,9 @@ FLUX_DIR + "output/output-strapi.ndjson"
 | regex-decode("(?<data>.+)")
 | stream-to-triples
 | template("{\"${p}\":${o}}") // wrap into 'data' object for strapi
+| log-object("Will POST: ")
 | open-http(url=API_URL, method="POST", contentType="application/json")
 | as-lines
 | rpb.Wait
-| print
+| log-object("POST Response: ")
 ;

@@ -17,6 +17,7 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-flux" % "5.7.0-rc1",
   "org.metafacture" % "metafacture-triples" % "5.7.0-rc1",
   "org.metafacture" % "metafacture-formatting" % "5.7.0-rc1",
+  "org.metafacture" % "metafacture-monitoring" % "5.7.0-rc1",
   "org.metafacture" % "metafix" % "0.6.0-rc3",
   "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
@@ -27,6 +28,10 @@ libraryDependencies ++= Seq(
   "org.easytesting" % "fest-assert" % "1.4" % "test",
   "org.mockito" % "mockito-core" % "2.27.0" % "test",
   "org.mockito" % "mockito-junit-jupiter" % "2.27.0" % "test"
+)
+
+excludeDependencies ++= Seq(
+  SbtExclusionRule("org.slf4j", "slf4j-simple")
 )
 
 dependencyOverrides ++= Set(

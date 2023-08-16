@@ -17,6 +17,5 @@ FLUX_DIR + "output/output-strapi.ndjson"
 | log-object("Will POST: ")
 | open-http(url=API_URL, method="POST", contentType="application/json")
 | as-lines
-| rpb.Wait
 | log-object("POST Response: ")
 ;

@@ -47,6 +47,11 @@ call_macro("add_all", to: "32", from: "32?") # Schlagwortkette
 
 call_macro("add_all", to: "70", from: "70[_123456789]") # Quelle
 
+# 70 ist Pflicht, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
+unless exists("f70[].1")
+  add_field("f70[].$append.f70_", "s. spez. Felder f70b ff.")
+end
+
 # Seitenzahl in f70s ist Pflichtfeld für Artikel (f36_=u)
 unless exists("f70s")
  if all_equal("f36_", "u")

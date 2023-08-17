@@ -61,7 +61,6 @@ unless exists("f70s")
     end
   else
     add_field("f70s", "N/A")
-    print_record("Keine Seitenzahl (f70s) oder Quelle (f70_) für Artikel (f36_=u) gefunden: ")
   end
  end
 end

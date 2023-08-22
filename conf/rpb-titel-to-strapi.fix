@@ -38,6 +38,12 @@ do put_macro("add_url")
   end
 end
 
+do put_macro("ref_f01_unless_exists")
+  unless exists("$[field]")
+    add_field("$[field]", "s. Zählung in f01_")
+  end
+end
+
 call_macro("add_all", to: "24", from: "24?") # Paralleltitel
 call_macro("add_all", to: "27", from: "27?") # Abweichende Titel
 
@@ -46,6 +52,12 @@ call_macro("add_all", to: "31", from: "31?") # Ortsnotation
 call_macro("add_all", to: "32", from: "32?") # Schlagwortkette
 
 call_macro("add_all", to: "70", from: "70[_123456789]") # Quelle
+
+# 76a und 76b sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
+if all_equal("f36_", "sbd")
+  call_macro("ref_f01_unless_exists", field: "f76a")
+  call_macro("ref_f01_unless_exists", field: "f76b")
+end
 
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
 if all_equal("f36_", "u")

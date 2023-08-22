@@ -82,8 +82,6 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("f00_", "929t124030b1");
                     ordered.verify(receiver).literal("f20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("f20_", "Deutsche Binnenwasserstraßen : 6/2022");
-                    ordered.verify(receiver).literal("f76a", "6/2022");
-                    ordered.verify(receiver).literal("f76b", "2022");
                     ordered.verify(receiver).literal("f01_", "6/2022");
                     ordered.verify(receiver).literal("f36_", "sbd");
                     ordered.verify(receiver).literal("f20_", "Der Rhein - Rheinfelden bis Koblenz");
@@ -92,8 +90,6 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("f00_", "929t124030b2");
                     ordered.verify(receiver).literal("f20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("f20_", "Deutsche Binnenwasserstraßen : 7. Band 2022");
-                    ordered.verify(receiver).literal("f76a", "7. Band 2022");
-                    ordered.verify(receiver).literal("f76b", "2022");
                     ordered.verify(receiver).literal("f01_", "7. Band 2022");
                     ordered.verify(receiver).literal("f20_", "Der Rhein - Koblenz bis Tolkamer");
                     ordered.verify(receiver).endRecord();
@@ -101,8 +97,6 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("f00_", "929t124030b3");
                     ordered.verify(receiver).literal("f20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("f20_", "Deutsche Binnenwasserstraßen : Nachgewiesen 2007 -");
-                    ordered.verify(receiver).literal("f76a", "Nachgewiesen 2007 -");
-                    ordered.verify(receiver).literal("f76b", "2007");
                     ordered.verify(receiver).literal("f01_", "Nachgewiesen 2007 -");
                     ordered.verify(receiver).literal("f20_", "");
                     ordered.verify(receiver).endRecord();
@@ -110,8 +104,6 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("f00_", "929t124030b4");
                     ordered.verify(receiver).literal("f20ü", "Deutsche Binnenwasserstraßen");
                     ordered.verify(receiver).literal("f20_", "Deutsche Binnenwasserstraßen : Nachgewiesen 2008 -");
-                    ordered.verify(receiver).literal("f76a", "Nachgewiesen 2008 -");
-                    ordered.verify(receiver).literal("f76b", "2008");
                     ordered.verify(receiver).literal("f01_", "Nachgewiesen 2008 -");
                     ordered.verify(receiver).endRecord();
                     ordered.verifyNoMoreInteractions();
@@ -136,8 +128,6 @@ public final class DecodeTest {
                     ordered.verify(receiver).literal("f00_", "929t111930b1");
                     ordered.verify(receiver).literal("f20ü", "Sommerspiele Koblenz : Operette auf dem Rhein");
                     ordered.verify(receiver).literal("f20_", "Sommerspiele Koblenz : Operette auf dem Rhein : 1958 - 1968 nachgewiesen");
-                    ordered.verify(receiver).literal("f76a", "1958 - 1968 nachgewiesen");
-                    ordered.verify(receiver).literal("f76b", "1958");
                     ordered.verify(receiver).literal("f01_", "1958 - 1968 nachgewiesen");
                     ordered.verify(receiver).literal("f36_", "sbd");
                     ordered.verify(receiver).endRecord();

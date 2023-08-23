@@ -17,7 +17,7 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-flux" % "5.7.0-rc1",
   "org.metafacture" % "metafacture-triples" % "5.7.0-rc1",
   "org.metafacture" % "metafacture-formatting" % "5.7.0-rc1",
-  "org.metafacture" % "metafix" % "0.6.0-rc3",
+  "org.metafacture" % "metafix" % "0.6.0-SNAPSHOT",
   "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
   "org.apache.commons" % "commons-rdf-jena" % "0.5.0",

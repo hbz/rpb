@@ -8,6 +8,8 @@ vacuum()
 
 copy_field("f00_","id")
 copy_field("f7na","title")
+replace_all("title", "[,.:;/=]", "")
+
 copy_field("f7ns","organisationId")
 replace_all("organisationId","(.*) / .*","$1")
 lookup("organisationId","sigel2idMap")

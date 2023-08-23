@@ -140,6 +140,13 @@ sbt "runMain rpb.ETL conf/rpb-test-titel-to-lobid.flux"
 
 This writes individual `.json` files for each record in the input data to `output/`.
 
+### Export strapi data
+
+```bash
+sbt "runMain rpb.ETL conf/test-export-strapi-to-lobid.flux"
+```
+
+This writes individual `.json` files for Strapi records to `output/`.
 
 ### Validate output
 

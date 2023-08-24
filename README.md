@@ -148,6 +148,22 @@ sbt "runMain rpb.ETL conf/test-export-strapi-to-lobid.flux"
 
 This writes individual `.json` files for Strapi records to `output/`.
 
+### Compare export data
+
+```bash
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36_','u') PATH=articles"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36_','s') PATH=independent-works"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36_','sbd') PATH=independent-works"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
+```
+
+This selects parts of the test data and write two files:
+
+1) for each test record, get the data from the Strapi HTTP API, convert the result to the lobid format, write to `test-lobid-output-from-strapi.json`
+2) convert each record directly to lobid, write to `test-lobid-output-from-strapi.json`
+
+We can then compare the two files (e.g. in VSC: Select for Compare, Format Document) to see differences. Since fields that are not defined in the Strapi content types are omitted upon import, missing data here points to missing fields in the Strapi content types.
+
 ### Validate output
 
 Prerequisites: `npm install -g ajv-cli ajv-formats`

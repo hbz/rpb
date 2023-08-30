@@ -48,7 +48,19 @@ call_macro("add_all", to: "24", from: "24?") # Paralleltitel
 call_macro("add_all", to: "27", from: "27?") # Abweichende Titel
 
 call_macro("add_all", to: "30", from: "30?") # Sachnotation
+replace_all("f30[].*.f30_","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
+
 call_macro("add_all", to: "31", from: "31?") # Ortsnotation
+do list (path:"f31[]", "var": "$i")
+  if any_match("$i.f31_", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
+    replace_all("$i.f31_","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
+  elsif any_contain("$i.f31_", "_r99_")
+    replace_all("$i.f31_","^_r99_\\s_o(\\d+)_$","https://rpb.lobid.org/spatial#n$1")
+  else
+    replace_all("$i.f31_","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
+  end
+end
+
 call_macro("add_all", to: "32", from: "32?") # Schlagwortkette
 
 call_macro("add_all", to: "70", from: "70[_123456789]") # Quelle

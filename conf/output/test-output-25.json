@@ -64,7 +64,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n31400000",
-    "label" : "o31400000",
+    "label" : "n31400000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

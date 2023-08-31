@@ -67,7 +67,7 @@
       "label" : "Alten- und Pflegeheim St. Barbara / Koblenz"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
       "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]

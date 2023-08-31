@@ -63,7 +63,7 @@
       "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
       "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]

@@ -44,6 +44,18 @@ do put_macro("ref_f01_unless_exists")
   end
 end
 
+do put_macro("contribution_to_uri")
+  do list (path:"f$[field][]", "var": "$i")
+    replace_all("$i.f$[field]_","_(.*)_","$1")
+    if all_match("$i.f$[field]_","^00.*|^107n.*|^929n.*")
+      prepend("$i.f$[field]_", "https://rpb.lobid.org/agent/")
+    else
+      replace_all("$i.f$[field]_", "(^\\d*)n(\\d)", "$1-$2")
+      prepend("$i.f$[field]_", "https://d-nb.info/gnd/")
+    end
+  end
+end
+
 call_macro("add_all", to: "24", from: "24?") # Paralleltitel
 call_macro("add_all", to: "27", from: "27?") # Abweichende Titel
 
@@ -130,28 +142,32 @@ end
 # Person
 set_array("f40[]")
 
-call_macro("add", to: "40", from: "f40?", type: "Verfasser")
-call_macro("add", to: "40", from: "f41?", type: "Herausgeber")
-call_macro("add", to: "40", from: "f42?", type: "Mitwirkender")
-call_macro("add", to: "40", from: "f43?", type: "Bearb.")
-call_macro("add", to: "40", from: "f44?", type: "Begr.")
-call_macro("add", to: "40", from: "f45?", type: "Sammler")
-call_macro("add", to: "40", from: "f46?", type: "Librettist")
-call_macro("add", to: "40", from: "f47?", type: "Übersetzer")
-call_macro("add", to: "40", from: "f50?", type: "Illustrator")
-call_macro("add", to: "40", from: "f51?", type: "Verfasser von ergänzendem Text")
-call_macro("add", to: "40", from: "f52?", type: "Komponist")
-call_macro("add", to: "40", from: "f56?", type: "Red.")
-call_macro("add", to: "40", from: "f57?", type: "Sonstige")
-call_macro("add", to: "40", from: "f58?", type: "Ausführender")
-call_macro("add", to: "40", from: "f59?", type: "Gefeierter")
+call_macro("add", to: "40", from: "f40?", type: "http://id.loc.gov/vocabulary/relators/aut")
+call_macro("add", to: "40", from: "f41?", type: "http://id.loc.gov/vocabulary/relators/pbl")
+call_macro("add", to: "40", from: "f42?", type: "http://id.loc.gov/vocabulary/relators/ctb")
+call_macro("add", to: "40", from: "f43?", type: "http://id.loc.gov/vocabulary/relators/edt")
+call_macro("add", to: "40", from: "f44?", type: "http://id.loc.gov/vocabulary/relators/ccp")
+call_macro("add", to: "40", from: "f45?", type: "http://id.loc.gov/vocabulary/relators/col")
+call_macro("add", to: "40", from: "f46?", type: "http://id.loc.gov/vocabulary/relators/lbt")
+call_macro("add", to: "40", from: "f47?", type: "http://id.loc.gov/vocabulary/relators/trl")
+call_macro("add", to: "40", from: "f50?", type: "http://id.loc.gov/vocabulary/relators/ill")
+call_macro("add", to: "40", from: "f51?", type: "http://id.loc.gov/vocabulary/relators/wst")
+call_macro("add", to: "40", from: "f52?", type: "http://id.loc.gov/vocabulary/relators/cmp")
+call_macro("add", to: "40", from: "f56?", type: "http://id.loc.gov/vocabulary/relators/red")
+call_macro("add", to: "40", from: "f57?", type: "http://id.loc.gov/vocabulary/relators/oth")
+call_macro("add", to: "40", from: "f58?", type: "http://id.loc.gov/vocabulary/relators/act")
+call_macro("add", to: "40", from: "f59?", type: "http://id.loc.gov/vocabulary/relators/hnr")
+
+call_macro("contribution_to_uri", field: "40")
 
 # Körperschaft
 set_array("f60[]")
 
-call_macro("add", to: "60", from: "f60?", type: "HE Urheber")
-call_macro("add", to: "60", from: "f61?", type: "NE hrsg. Körperschaft")
-call_macro("add", to: "60", from: "f69?", type: "Gefeierte Körperschaft")
+call_macro("add", to: "60", from: "f60?", type: "http://id.loc.gov/vocabulary/relators/org")
+call_macro("add", to: "60", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb")
+call_macro("add", to: "60", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr")
+
+call_macro("contribution_to_uri", field: "60")
 
 if exists("f18_")
   move_field("f18_","f18_~")

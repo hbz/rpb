@@ -62,7 +62,7 @@
       "label" : "Sport-Club 1957 / Wassenach"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
       "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
@@ -72,7 +72,7 @@
       "label" : "SC Wassenach 1957"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
       "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]

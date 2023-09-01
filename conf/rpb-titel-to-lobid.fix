@@ -32,13 +32,11 @@ if any_equal("f36_", "sbd")
   set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
   set_array("isPartOf[].$last.hasSuperordinate[]")
   # Set up superordinate ID: use the volume ID, remove the numbering part:
-  copy_field("_id", "isPartOf[].$last.hasSuperordinate[].$append.id")
-  prepend("isPartOf[].$last.hasSuperordinate[].$last.id","https://lobid.org/resources/RPB")
-  replace_all("isPartOf[].$last.hasSuperordinate[].$last.id","b\\d+","")
+  copy_field("f01.f01ü", "isPartOf[].$last.hasSuperordinate[].$append.id")
   # Set up superordinate label, output by decoder as f20ü
   copy_field("f20ü", "isPartOf[].$last.hasSuperordinate[].$last.label")
   # Take volume numbering from `f01_`
-  copy_field("f01_", "isPartOf[].$last.numbering")
+  copy_field("f01.f01_", "isPartOf[].$last.numbering")
 end
 
 # ------- rpbId -------

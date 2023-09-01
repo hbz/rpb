@@ -179,9 +179,9 @@ if exists("f01_")
   copy_field("f01_", "f01.f01_") # Zählung (Vorlage)
   copy_field("f01_", "f01.f01s") # Zählung (Sortierform)
   replace_all("f01.f01s", "^.*((19|20)\\d\\d).*$", "$1")
-  copy_field("_id", "f01.f01ü") # Verknüpfung zur MtM (ÜO)
-  replace_all("f01.f01ü","b\\d+","")
-  prepend("f01.f01ü","https://lobid.org/resources/RPB")
+  copy_field("_id", "f01.f01u") # Verknüpfung zur MtM (ÜO)
+  replace_all("f01.f01u","b\\d+","")
+  prepend("f01.f01u","https://lobid.org/resources/RPB")
 end
 
 vacuum()

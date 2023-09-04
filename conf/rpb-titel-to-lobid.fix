@@ -189,7 +189,9 @@ do list (path:"@subject[]", "var": "$i")
   copy_field("$i.f32_[]", "subject[].$last.componentList[]")
 end
 
-do list (path:"subject[].*.componentList[]", "var": "$i")
+do
+ list (path:"subject[].*.componentList[]", "var": "$i")
+  move_field("$i.f32_", "$i.id")
   copy_field("$i.id", "$i.label")
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")

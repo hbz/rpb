@@ -77,15 +77,15 @@ call_macro("add_all", to: "32", from: "32?") # Schlagwortkette
 do list (path:"f32[]", "var": "$i")
   split_field("$i.f32_", " ; ")
   set_array("$i.f32_[]")
-  move_field("$i.f32_", "$i.f32_[].$append.id")
+  move_field("$i.f32_", "$i.f32_[].$append.f32_")
 end
 do list (path:"f32[].*.f32_[]", "var": "$i")
-  replace_all("$i.id","_(.*)_","$1")
-  if all_match("$i.id","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
-    prepend("$i.id", "https://rpb.lobid.org/sw/")
+  replace_all("$i.f32_","_(.*)_","$1")
+  if all_match("$i.f32_","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
+    prepend("$i.f32_", "https://rpb.lobid.org/sw/")
   else
-    replace_all("$i.id", "(^\\d*)n(\\d)", "$1-$2")
-    prepend("$i.id", "https://d-nb.info/gnd/")
+    replace_all("$i.f32_", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.f32_", "https://d-nb.info/gnd/")
   end
 end
 

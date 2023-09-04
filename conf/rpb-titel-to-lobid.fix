@@ -20,11 +20,7 @@ if all_equal("f36_", "s")
   set_field("type[].$append", "Book")
 end
 if any_equal("f36_", "sm")
-  if exists("f36t")
-    copy_field("f36t", "type[].$append")
-  else
-    set_field("type[].$append", "Periodical")
-  end
+  set_field("type[].$append", "MultiVolumeBook")
 end
 if any_equal("f36_", "sbd")
   set_field("type[].$append", "Book")

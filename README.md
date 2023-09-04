@@ -35,7 +35,7 @@ This writes a `.tsv` file to `output/`, to be used for lookups in the transforma
 sbt "runMain rpb.ETL conf/rpb-test-titel-to-strapi.flux"
 ```
 
-This writes a single `.json` files to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
+This writes a single `.json` file to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
 
 ### Import strapi data
 

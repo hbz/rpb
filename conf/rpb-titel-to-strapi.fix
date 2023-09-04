@@ -176,6 +176,11 @@ end
 
 if exists("f01_")
   set_hash("f01")
+  if is_array("f01_") # Nicht wiederholbar, 1. Wert nehmen
+    move_field("f01_.1", "f01_t")
+    remove_field("f01_")
+    move_field("f01_t", "f01_")
+  end
   copy_field("f01_", "f01.f01_") # Zählung (Vorlage)
   copy_field("f01_", "f01.f01s") # Zählung (Sortierform)
   replace_all("f01.f01s", "^.*((19|20)\\d\\d).*$", "$1")

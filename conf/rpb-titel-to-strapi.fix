@@ -91,10 +91,25 @@ end
 
 call_macro("add_all", to: "70", from: "70[_123456789]") # Quelle
 
-# 76a und 76b sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
+# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
 if all_equal("f36_", "sbd")
   call_macro("ref_f01_unless_exists", field: "f76a")
   call_macro("ref_f01_unless_exists", field: "f76b")
+end
+
+# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht bei allen selbständigen Werken (Einheitsmaske):
+if all_match("f36_", "s|sbd|sm")
+  unless exists("f76a")
+    add_field("f76a", "N/A")
+  end
+  unless exists("f76b")
+    add_field("f76b", "N/A")
+  end
+end
+
+unless exists("f39_")
+  move_field("f39x", "f39_") # 39x ist nicht Teil der Planung Eingabeformulare, verschwindet sonst
+  prepend("f39_", "Aus f39x: ")
 end
 
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:

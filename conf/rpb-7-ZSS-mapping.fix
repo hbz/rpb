@@ -11,12 +11,17 @@ copy_field("f7na","title")
 replace_all("title", "[,.:;/=]", "")
 
 copy_field("f7ns","organisationId")
-replace_all("organisationId","(.*) / .*","$1")
+replace_all("organisationId","(.*?) / .*","$1")
+replace_all("organisationId","036*","36")
 lookup("organisationId","sigel2idMap")
 
 copy_field("f7ns","callNumber")
-replace_all("callNumber",".* / (.*)","$1")
+replace_all("callNumber",".*? / (.*)","$1")
 
 retain( "id", "title", "organisationId","callNumber")
 
 vacuum()
+
+if any_contain("organisationId","http://lobid.org/organisations/DE-36#!")
+  reject()
+end

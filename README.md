@@ -60,6 +60,17 @@ Entries using the same path can be filtered, e.g. to get only volumes (`f36_=sbd
 
 http://test-metadaten-nrw.hbz-nrw.de:1339/api/independent-works?filters[f36_][$eq]=sbd&populate=*
 
+### Import SKOS data into strapi
+
+Actual transformation of SKOS TTL files to JSON happens in https://github.com/acka47/scripts/tree/master/skos2json.
+
+To import the resulting JSON data into strapi, run:
+
+```bash
+sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb.ndjson PATH=rpb-notations"
+sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PATH=rpb-spatials"
+```
+
 ### Run transformation to lobid data
 
 ```bash

@@ -22,6 +22,3 @@ retain( "id", "title", "organisationId","callNumber")
 
 vacuum()
 
-if any_contain("organisationId","http://lobid.org/organisations/DE-36#!")
-  reject()
-end

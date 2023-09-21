@@ -137,6 +137,9 @@ unless exists("f70s")
  end
 end
 
+# Menschenlesbare Werte nutzen (für die Erfassung in Strapi)
+lookup("f36_", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
+
 call_macro("add_all", to: "81", from: "81?") # Anmerkungen
 call_macro("add_all", to: "85", from: "85?") # Gesamttitel
 

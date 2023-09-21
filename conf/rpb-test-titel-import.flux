@@ -1,4 +1,5 @@
-API_URL = "http://test-metadaten-nrw.hbz-nrw.de:1339/api/" + PATH;
+API_URL = "http://localhost:1339/api/" + PATH;
+// API_URL = "http://test-metadaten-nrw.hbz-nrw.de:1339/api/" + PATH;
 FIX = "
 unless " + PICK + "
   reject()

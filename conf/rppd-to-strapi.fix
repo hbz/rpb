@@ -1,0 +1,57 @@
+do put_macro("to_bool")
+  if exists("$[field]")
+    move_field("$[field]","$[field]~")
+    set_field("$[field]~", "true")
+  end
+end
+
+do put_macro("add")
+  if exists("$[from]")
+    set_array("_temp")
+    copy_field("$[from]", "_temp.$append.$[to]")
+    move_field("_temp.*", "$[to][].$append")
+    remove_field("$[from]")
+  end
+end
+
+do put_macro("to_array")
+  split_field("$[field]", "@")
+  set_array("$[field][]")
+  call_macro("add", to: "$[field]", from: "$[field]")
+end
+
+do put_macro("add_all")
+  split_field("$[from]", ";")
+  set_array("$[to][]")
+  call_macro("add", to: "$[to]", from: "$[from]")
+end
+
+call_macro("to_bool", field: "f11_")
+call_macro("to_bool", field: "f13_")
+call_macro("to_bool", field: "f14_")
+call_macro("to_bool", field: "f15_")
+
+call_macro("to_array", field: "f1nc")
+call_macro("to_array", field: "f1nd")
+call_macro("to_array", field: "f1nn")
+call_macro("to_array", field: "f1no")
+call_macro("to_array", field: "f1nt")
+call_macro("to_array", field: "f1nu")
+call_macro("to_array", field: "f1nw")
+call_macro("to_array", field: "f1nx")
+
+call_macro("add_all", from: "f1z1", to: "f1z1")
+# TODO: 1ü1...1ü9, 1ä1, 1ö1, 1ß1 separat?
+
+# f82b ist 'required' und 'unique'
+if all_equal("f82b", "Keine GND-Ansetzung")
+  paste("f82b", "~Keine GND-Ansetzung für", "f00_")
+end
+unless exists("f82b")
+  paste("f82b", "~Keine GND-Ansetzung für", "f00_")
+end
+
+replace_all("f1nv", "w+", "www") # z.B. ww -> www
+replace_all("f1nv", "m+", "mmm") # z.B. mmmm -> mmm
+
+vacuum()

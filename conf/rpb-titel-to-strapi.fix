@@ -26,49 +26,185 @@ end
 
 do put_macro("add_all")
   set_array("f$[to][]")
-  call_macro("add", to: "$[to]", from: "f$[to]?", type: "")
+  call_macro("add", to: "$[to]", from: "f$[from]", type: "")
 end
 
-call_macro("add_all", to: "24") # Paralleltitel
-call_macro("add_all", to: "27") # Abweichende Titel
+do put_macro("add_url")
+  if exists("$[from]")
+    if all_match("$[from]", "(https?|ftp):\\/\\/(\\S+\\.)+\\S+(\\/\\S*)?|")
+      move_field("$[from]", "f90[].$append.f90_")
+      add_field("f90[].*.n90", "$[type]")
+    end
+  end
+end
 
-call_macro("add_all", to: "30") # Sachnotation
-call_macro("add_all", to: "31") # Ortsnotation
-call_macro("add_all", to: "32") # Schlagwortkette
+do put_macro("ref_f01_unless_exists")
+  unless exists("$[field]")
+    add_field("$[field]", "s. Zählung in f01_")
+  end
+end
 
-call_macro("add_all", to: "81") # Anmerkungen
-call_macro("add_all", to: "85") # Gesamttitel
+do put_macro("contribution_to_uri")
+  do list (path:"f$[field][]", "var": "$i")
+    replace_all("$i.f$[field]_","_(.*)_","$1")
+    if all_match("$i.f$[field]_","^00.*|^107n.*|^929n.*")
+      prepend("$i.f$[field]_", "https://rpb.lobid.org/agent/")
+    else
+      replace_all("$i.f$[field]_", "(^\\d*)n(\\d)", "$1-$2")
+      prepend("$i.f$[field]_", "https://d-nb.info/gnd/")
+    end
+  end
+end
+
+call_macro("add_all", to: "24", from: "24?") # Paralleltitel
+call_macro("add_all", to: "27", from: "27?") # Abweichende Titel
+
+call_macro("add_all", to: "30", from: "30?") # Sachnotation
+replace_all("f30[].*.f30_","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
+
+call_macro("add_all", to: "31", from: "31?") # Ortsnotation
+do list (path:"f31[]", "var": "$i")
+  if any_match("$i.f31_", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
+    replace_all("$i.f31_","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
+  elsif any_contain("$i.f31_", "_r99_")
+    replace_all("$i.f31_","^_r99_\\s_o(\\d+)_$","https://rpb.lobid.org/spatial#n$1")
+  else
+    replace_all("$i.f31_","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
+  end
+end
+
+call_macro("add_all", to: "32", from: "32?") # Schlagwortkette
+do list (path:"f32[]", "var": "$i")
+  split_field("$i.f32_", " ; ")
+  set_array("$i.f32_[]")
+  move_field("$i.f32_", "$i.f32_[].$append.f32_")
+end
+do list (path:"f32[].*.f32_[]", "var": "$i")
+  replace_all("$i.f32_","_(.*)_","$1")
+  if all_match("$i.f32_","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
+    prepend("$i.f32_", "https://rpb.lobid.org/sw/")
+  else
+    replace_all("$i.f32_", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.f32_", "https://d-nb.info/gnd/")
+  end
+end
+
+call_macro("add_all", to: "70", from: "70[_123456789]") # Quelle
+
+# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
+if all_equal("f36_", "sbd")
+  call_macro("ref_f01_unless_exists", field: "f76a")
+  call_macro("ref_f01_unless_exists", field: "f76b")
+end
+
+# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht bei allen selbständigen Werken (Einheitsmaske):
+if all_match("f36_", "s|sbd|sm")
+  unless exists("f76a")
+    add_field("f76a", "N/A")
+  end
+  unless exists("f76b")
+    add_field("f76b", "N/A")
+  end
+end
+
+unless exists("f39_")
+  move_field("f39x", "f39_") # 39x ist nicht Teil der Planung Eingabeformulare, verschwindet sonst
+  prepend("f39_", "Aus f39x: ")
+end
+
+# 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
+if all_equal("f36_", "u")
+  unless exists("f70[].1")
+    add_field("f70[].$append.f70_", "s. spez. Felder f70b ff.")
+  end
+end
+
+# Seitenzahl in f70s ist Pflichtfeld für Artikel (f36_=u)
+unless exists("f70s")
+ if all_equal("f36_", "u")
+  if exists("f70_")
+    copy_field("f70_", "f70s")
+    prepend("f70s", "Kopiert aus f70_: ")
+    put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
+    if all_match("f70_", "$[pages]")
+      if is_string("f70_")
+        replace_all("f70s", "$[pages]", "Aus f70_: $1")
+      end
+    end
+  else
+    add_field("f70s", "N/A")
+  end
+ end
+end
+
+call_macro("add_all", to: "81", from: "81?") # Anmerkungen
+call_macro("add_all", to: "85", from: "85?") # Gesamttitel
 
 # URL
 set_array("f90[]")
 
-call_macro("add", to: "90", from: "f90e", type: "Volltext")
-call_macro("add", to: "90", from: "f90f", type: "Auszug")
+call_macro("add_url", from: "f90e", type: "Volltext")
+call_macro("add_url", from: "f90f", type: "Andere URL")
+
+# Signatur
+set_array("f90a[]")
+
+if exists("f90a")
+  move_field("f90a", "f90a[].$append.f90a")
+  # add_field("f90a[].*.n90a", "KO") etc.
+end
 
 # Person
 set_array("f40[]")
 
-call_macro("add", to: "40", from: "f40?", type: "Verfasser")
-call_macro("add", to: "40", from: "f41?", type: "Herausgeber")
-call_macro("add", to: "40", from: "f42?", type: "Mitwirkender")
-call_macro("add", to: "40", from: "f43?", type: "Bearb.")
-call_macro("add", to: "40", from: "f44?", type: "Begr.")
-call_macro("add", to: "40", from: "f45?", type: "Sammler")
-call_macro("add", to: "40", from: "f46?", type: "Librettist")
-call_macro("add", to: "40", from: "f47?", type: "Übersetzer")
-call_macro("add", to: "40", from: "f50?", type: "Illustrator")
-call_macro("add", to: "40", from: "f51?", type: "Verfasser von ergänzendem Text")
-call_macro("add", to: "40", from: "f52?", type: "Komponist")
-call_macro("add", to: "40", from: "f56?", type: "Red.")
-call_macro("add", to: "40", from: "f57?", type: "Sonstige")
-call_macro("add", to: "40", from: "f58?", type: "Ausführender")
-call_macro("add", to: "40", from: "f59?", type: "Gefeierter")
+call_macro("add", to: "40", from: "f40?", type: "http://id.loc.gov/vocabulary/relators/aut")
+call_macro("add", to: "40", from: "f41?", type: "http://id.loc.gov/vocabulary/relators/pbl")
+call_macro("add", to: "40", from: "f42?", type: "http://id.loc.gov/vocabulary/relators/ctb")
+call_macro("add", to: "40", from: "f43?", type: "http://id.loc.gov/vocabulary/relators/edt")
+call_macro("add", to: "40", from: "f44?", type: "http://id.loc.gov/vocabulary/relators/ccp")
+call_macro("add", to: "40", from: "f45?", type: "http://id.loc.gov/vocabulary/relators/col")
+call_macro("add", to: "40", from: "f46?", type: "http://id.loc.gov/vocabulary/relators/lbt")
+call_macro("add", to: "40", from: "f47?", type: "http://id.loc.gov/vocabulary/relators/trl")
+call_macro("add", to: "40", from: "f50?", type: "http://id.loc.gov/vocabulary/relators/ill")
+call_macro("add", to: "40", from: "f51?", type: "http://id.loc.gov/vocabulary/relators/wst")
+call_macro("add", to: "40", from: "f52?", type: "http://id.loc.gov/vocabulary/relators/cmp")
+call_macro("add", to: "40", from: "f56?", type: "http://id.loc.gov/vocabulary/relators/red")
+call_macro("add", to: "40", from: "f57?", type: "http://id.loc.gov/vocabulary/relators/oth")
+call_macro("add", to: "40", from: "f58?", type: "http://id.loc.gov/vocabulary/relators/act")
+call_macro("add", to: "40", from: "f59?", type: "http://id.loc.gov/vocabulary/relators/hnr")
+
+call_macro("contribution_to_uri", field: "40")
 
 # Körperschaft
 set_array("f60[]")
 
-call_macro("add", to: "60", from: "f60?", type: "HE Urheber")
-call_macro("add", to: "60", from: "f61?", type: "NE hrsg. Körperschaft")
-call_macro("add", to: "60", from: "f69?", type: "Gefeierte Körperschaft")
+call_macro("add", to: "60", from: "f60?", type: "http://id.loc.gov/vocabulary/relators/org")
+call_macro("add", to: "60", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb")
+call_macro("add", to: "60", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr")
+
+call_macro("contribution_to_uri", field: "60")
+
+if exists("f18_")
+  move_field("f18_","f18_~")
+  set_field("f18_~", "true")
+end
+
+if exists("f01_")
+  set_hash("f01")
+  if is_array("f01_") # Nicht wiederholbar, 1. Wert nehmen
+    move_field("f01_.1", "f01_t")
+    remove_field("f01_")
+    move_field("f01_t", "f01_")
+  end
+  copy_field("f01_", "f01.f01_") # Zählung (Vorlage)
+  copy_field("f01_", "f01.f01s") # Zählung (Sortierform)
+  replace_all("f01.f01s", "^.*((19|20)\\d\\d).*$", "$1")
+  unless all_match("f01.f01s", "\\d{4}")
+    remove_field("f01.f01s")
+  end
+  copy_field("_id", "f01.f01u") # Verknüpfung zur MtM (ÜO)
+  replace_all("f01.f01u","b\\d+","")
+  prepend("f01.f01u","https://lobid.org/resources/RPB")
+end
 
 vacuum()

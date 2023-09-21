@@ -3,6 +3,6 @@ FLUX_DIR + "RPB-Export_HBZ_Titel_Test.txt"
 | as-lines
 | rpb.Decode
 | fix(FLUX_DIR + "rpb-titel-to-strapi.fix")
-| encode-json(prettyPrinting="false")
+| encode-json(prettyPrinting="false", booleanMarker="~")
 | write(FLUX_DIR + "output/test-output-strapi.json")
 ;

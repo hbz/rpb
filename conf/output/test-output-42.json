@@ -1,23 +1,152 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t112194",
-      "label" : "Clubzeitung"
-    } ],
-    "numbering" : "Nachgewiesen 2006,2 -"
-  } ],
-  "rpbId" : "RPB929t112194b1",
-  "id" : "https://lobid.org/resources/RPB929t112194b1",
+  "rpbId" : "RPB929t084658",
+  "id" : "https://lobid.org/resources/RPB929t084658",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Clubzeitung | Nachgewiesen 2006,2 -",
+  "title" : "Ausstellung \"Auf den Spuren Mozarts\" [Elektronische Ressource]",
   "publication" : [ {
+    "location" : [ "Waldbreitbach" ],
+    "startDate" : "2007",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n841060",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Kussmaul, Heiner / 1943- | Mozart, Wolfgang Amadeus / 1756-1791 | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/136595545",
+      "label" : "Kussmaul, Heiner / 1943-",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/118584596",
+      "label" : "Mozart, Wolfgang Amadeus / 1756-1791",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4049275-8",
+      "label" : "Reise",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4037220-0",
+      "label" : "Malerei",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4129601-1",
+      "label" : "Ausstellung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn08k4658445b",
+      "label" : "Reichenhall / 2007",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4139307-7",
+      "label" : "CD-ROM",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Kussmaul, Yvonne / 1972- | Mozart, Wolfgang Amadeus / 1756-1791 | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/136596061",
+      "label" : "Kussmaul, Yvonne / 1972-",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/118584596",
+      "label" : "Mozart, Wolfgang Amadeus / 1756-1791",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4049275-8",
+      "label" : "Reise",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4037220-0",
+      "label" : "Malerei",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4129601-1",
+      "label" : "Ausstellung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn08k4658445b",
+      "label" : "Reichenhall / 2007",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4139307-7",
+      "label" : "CD-ROM",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n13809076",
+    "label" : "n13809076",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/136595545",
+      "label" : "Kussmaul, Heiner / 1943-"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

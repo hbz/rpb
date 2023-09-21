@@ -1,29 +1,20 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112196",
-  "id" : "https://lobid.org/resources/RPB929t112196",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t084660",
+  "id" : "https://lobid.org/resources/RPB929t084660",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Coming home mit Commende",
-  "extent" : "Ill.",
+  "title" : "Chronik [Elektronische Ressource]",
   "publication" : [ {
-    "startDate" : "2011",
+    "location" : [ "Wassenach" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844200",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n844000",
+    "id" : "http://purl.org/lobid/rpb#n736050",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,47 +23,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Deutscher Orden / Kommende Waldbreitbach | Denkmalschutz | Schicker, Viktor | Private Investition | Geschichte 2009-2011",
+    "label" : "Sport-Club 1957 / Wassenach | Geschichte 1957-2007 | Chronik",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n090287",
-      "label" : "Deutscher Orden / Kommende Waldbreitbach",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4011457-0",
-      "label" : "Denkmalschutz",
+      "id" : "https://d-nb.info/gnd/10179791-6",
+      "label" : "Sport-Club 1957 / Wassenach",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09k1362487a",
-      "label" : "Schicker, Viktor",
+      "id" : "https://rpb.lobid.org/sw/00Sn07k1956385a",
+      "label" : "Geschichte 1957-2007",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4454409-1",
-      "label" : "Private Investition",
+      "id" : "https://d-nb.info/gnd/4127914-1",
+      "label" : "Chronik",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09m0508511a",
-      "label" : "Geschichte 2009-2011",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13809076",
-    "label" : "o13809076",
+    "id" : "https://rpb.lobid.org/spatial#n13104209",
+    "label" : "n13104209",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -81,14 +58,23 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
-      "label" : "Ruland, Wolfgang"
+      "id" : "https://d-nb.info/gnd/10179791-6",
+      "label" : "Sport-Club 1957 / Wassenach"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 26-27"
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/SC Wassenach 1957",
+      "label" : "SC Wassenach 1957"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

@@ -8,7 +8,7 @@
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Der¬ BAP kam aus Unkel",
+  "title" : "Der BAP kam aus Unkel",
   "extent" : "Ill.",
   "publication" : [ {
     "startDate" : "2011",
@@ -50,7 +50,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n13807073",
-    "label" : "o13807073",
+    "label" : "n13807073",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

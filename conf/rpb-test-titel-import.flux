@@ -14,7 +14,8 @@ FLUX_DIR + "output/test-output-strapi.json"
 | regex-decode("(?<data>.+)")
 | stream-to-triples
 | template("{\"${p}\":${o}}") // wrap into 'data' object for strapi
+| log-object("Will POST: ")
 | open-http(url=API_URL, method="POST", contentType="application/json")
 | as-lines
-| print
+| log-object("POST Response: ")
 ;

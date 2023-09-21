@@ -1,23 +1,30 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB929t112194",
-  "id" : "https://lobid.org/resources/RPB929t112194",
-  "hbzId" : "HT016782338",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t190565",
+  "id" : "https://lobid.org/resources/RPB929t190565",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Clubzeitung",
+  "title" : "Weingeschäft im Umbruch : Pieroth setzt auf alten Namen und eine neue Vermarktungsstrategie, um auch neue Kundengruppen zu erreichen",
+  "extent" : "Illustrationen",
+  "responsibilityStatement" : [ "T.S." ],
   "publication" : [ {
-    "location" : [ "Neuwied" ],
-    "startDate" : "2006",
+    "startDate" : "2018",
     "type" : [ "PublicationEvent" ]
   } ],
-  "zdbId" : "2603143-7",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n736050",
+    "id" : "http://purl.org/lobid/rpb#n544360",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544325",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -26,17 +33,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Volleyballclub Neuwied 77 / Neuwied | Zeitschrift",
+    "label" : "Ferdinand Pieroth, Weingut - Weinkellerei | Vermarktung",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n110300",
-      "label" : "Volleyballclub Neuwied 77 / Neuwied",
+      "id" : "https://d-nb.info/gnd/2075606-9",
+      "label" : "Ferdinand Pieroth, Weingut - Weinkellerei",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "id" : "https://d-nb.info/gnd/4121857-7",
+      "label" : "Vermarktung",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -44,8 +51,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13800045",
-    "label" : "o13800045",
+    "id" : "https://rpb.lobid.org/spatial#n133110870101",
+    "label" : "n133110870101",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -54,23 +61,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/16107604nX",
-      "label" : "Volleyballclub Neuwied 77"
+      "id" : "https://rpb.lobid.org/agent/929n981242",
+      "label" : "Strauß, Torsten"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/VCN 77",
-      "label" : "VCN 77"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "HE Urheber"
-    },
-    "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "In: Initiativ. - (2018), 3, Seite 20-21. -"
 }

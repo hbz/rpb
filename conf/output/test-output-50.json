@@ -1,24 +1,84 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t112193",
-      "label" : "Aktuell : das Krankenhaus in Ihrer Region"
-    } ],
-    "numbering" : "Nachgewiesen 2010 - 2012,1"
-  } ],
-  "rpbId" : "RPB929t112193b1",
-  "id" : "https://lobid.org/resources/RPB929t112193b1",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t112440",
+  "id" : "https://lobid.org/resources/RPB929t112440",
+  "biblioVinoId" : "Nr27922",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Aktuell : das Krankenhaus in Ihrer Region | Nachgewiesen 2010 - 2012,1",
-  "note" : [ "Nachfolger: Kaleidoskop. 2012 -" ],
+  "title" : "Weinkulturlandschaft Mosel : Dornen statt Reben",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Rolfjosef Hamacher und Ulrich Stein" ],
   "publication" : [ {
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
-  } ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n544360",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Moseltal | Weinbau | Preisentwicklung",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4102224-5",
+      "label" : "Moseltal",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4065136-8",
+      "label" : "Weinbau",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4125931-2",
+      "label" : "Preisentwicklung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n24",
+    "label" : "n24",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2440560a",
+      "label" : "Hamacher, Rolfjosef"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/105115975X",
+      "label" : "Stein, Ulrich / 1951-"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "In: Rheinische Heimatpflege. - N.F. 48 (2011), 2, Seite 150-152. -"
 }

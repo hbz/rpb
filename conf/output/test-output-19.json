@@ -8,7 +8,7 @@
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Ein¬ Fest aller Deutschen : das Hambacher Schloß wird nationale Gedenkstätte",
+  "title" : "Ein Fest aller Deutschen : das Hambacher Schloß wird nationale Gedenkstätte",
   "extent" : "Ill.",
   "publication" : [ {
     "startDate" : "1981",
@@ -51,7 +51,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n58",
-    "label" : "_r58_",
+    "label" : "n58",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,7 +59,7 @@
     }
   }, {
     "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
+    "label" : "n316000000700",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

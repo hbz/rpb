@@ -8,7 +8,7 @@
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Maxburg bei Hambach. (Mit e. Titelkupfer, Uebersichtsplane u. Grundrisse der Burg.)",
+  "title" : "Die Maxburg bei Hambach. (Mit e. Titelkupfer, Uebersichtsplane u. Grundrisse der Burg.)",
   "extent" : "VIII, 211 S. 8°",
   "note" : [ "[Hambacher Schloß]" ],
   "publication" : [ {
@@ -39,7 +39,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "o316000000700",
+    "label" : "n316000000700",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

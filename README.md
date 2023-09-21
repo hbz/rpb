@@ -35,19 +35,30 @@ This writes a `.tsv` file to `output/`, to be used for lookups in the transforma
 sbt "runMain rpb.ETL conf/rpb-test-titel-to-strapi.flux"
 ```
 
-This writes a single `.json` files to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
+This writes a single `.json` file to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
 
 ### Import strapi data
 
 ```bash
 sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','u') PATH=articles"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','s') PATH=books"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sbd') PATH=books"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=exists('f36t') PATH=multi-volume-books"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sm') PATH=periodicals"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','s') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','sbd') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
 ```
 
 This attempts to import all data selected with the `PICK` variable to the API endpoint in `PATH`, and prints the server response.
+
+To reimport existing entries, these may need to be deleted first, e.g. for `articles/1` to `articles/5`:
+
+```
+curl --request DELETE http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles/[1-5]
+```
+
+After import they are available at e.g. http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles?populate=*
+
+Entries using the same path can be filtered, e.g. to get only volumes (`f36_=sbd`):
+
+http://test-metadaten-nrw.hbz-nrw.de:1339/api/independent-works?filters[f36_][$eq]=sbd&populate=*
 
 ### Run transformation to lobid data
 

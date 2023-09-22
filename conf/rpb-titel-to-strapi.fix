@@ -138,6 +138,10 @@ unless exists("f70s")
 end
 
 # Menschenlesbare Werte nutzen (für die Erfassung in Strapi)
+if is_array("f36_")
+  # print_record("Mehrere Satztypen gefunden: ")
+  set_field("f36_", "f36_.$last")
+end
 lookup("f36_", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
 
 call_macro("add_all", to: "81", from: "81?") # Anmerkungen

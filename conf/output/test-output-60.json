@@ -1,0 +1,106 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t930040",
+  "id" : "https://lobid.org/resources/RPB929t930040",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Sein Werk - nicht das meine : Mutter Magdalena Damen und ihre Kongregation der Franziskanerinnen von Heythuysen im neunzehnten Jahrhundert",
+  "extent" : "305 S. : Ill.",
+  "note" : [ "1. dt. Ausg. u.d.T.: Cools, Angelita: Mutter Magdalena Damen und die Entwicklung ihrer Kongregation im neunzehnten Jahrhundert. - Betr. auch Kloster St. Clemens, Nonnenwerth im Rhein" ],
+  "responsibilityStatement" : [ "Angelita Cools ; Hildegard von de Wijnpersse. [Nach Bearb. durch Gian Ackermans ... ]" ],
+  "publication" : [ {
+    "location" : [ "Aachen" ],
+    "startDate" : "1992",
+    "publishedBy" : [ "Einhard [u.a.]" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n611070",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Magdalena / Mutter / 1787-1858 | Geschichte 1800-",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/119067552",
+      "label" : "Magdalena / Mutter / 1787-1858",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z48",
+      "label" : "Geschichte 1800-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Kongregation der Franziskanerinnen von Heythuysen | Geschichte 1800-",
+    "componentList" : [ {
+      "id" : "https://rpb.lobid.org/sw/00Sn93k0040a",
+      "label" : "Kongregation der Franziskanerinnen von Heythuysen",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z48",
+      "label" : "Geschichte 1800-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n131000700701",
+    "label" : "n131000700701",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn93k0040b",
+      "label" : "Cools, Angelita"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn93k0040c",
+      "label" : "Wijnpersse, Hildegard ¬van de¬"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn93k0040d",
+      "label" : "Ackermans, Gian"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Bearb."
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

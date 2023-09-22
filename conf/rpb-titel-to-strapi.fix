@@ -210,4 +210,13 @@ if exists("f01_")
   prepend("f01.f01u","https://lobid.org/resources/RPB")
 end
 
+# ISBNs (f87_, f871 ff.)
+set_array("f87[]")
+if exists("f87?")
+  set_array("_temp")
+  copy_field("f87?", "_temp.$append.f87_")
+  add_field("_temp.*.n87~", "true")
+  move_field("_temp.*", "f87[].$append")
+end
+
 vacuum()

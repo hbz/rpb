@@ -20,12 +20,6 @@ do put_macro("to_array")
   call_macro("add", to: "$[field]", from: "$[field]")
 end
 
-do put_macro("add_all")
-  split_field("$[from]", ";")
-  set_array("$[to][]")
-  call_macro("add", to: "$[to]", from: "$[from]")
-end
-
 call_macro("to_bool", field: "f11_")
 call_macro("to_bool", field: "f13_")
 call_macro("to_bool", field: "f14_")
@@ -40,8 +34,11 @@ call_macro("to_array", field: "f1nu")
 call_macro("to_array", field: "f1nw")
 call_macro("to_array", field: "f1nx")
 
-call_macro("add_all", from: "f1z1", to: "f1z1")
-# TODO: 1ü1...1ü9, 1ä1, 1ö1, 1ß1 separat?
+set_array("f1z1[]") # Biogramme...
+set_array("_temp") # bei sehr langen...
+move_field("f1z?", "_temp.$append") # aufgeteilt: f1z1..9
+join_field("_temp", "\n\n") # als Absätze...
+move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
 
 # f82b ist 'required' und 'unique'
 if all_equal("f82b", "Keine GND-Ansetzung")

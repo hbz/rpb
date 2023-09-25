@@ -1,0 +1,33 @@
+do put_macro("add")
+  if exists("$[from]")
+    set_array("_temp")
+    move_field("$[from]", "_temp.$append.f$[to]")
+    move_field("_temp.*", "f$[to][].$append")
+  end
+end
+
+do put_macro("add_all")
+  set_array("f$[to][]")
+  call_macro("add", to: "$[to]", from: "f$[from]", type: "")
+end
+
+call_macro("add_all", to: "3n", from: "3n[bcdefghijklmnopqrstuvwxy]")
+call_macro("add_all", to: "3r", from: "3r?")
+
+if exists("f99z")
+  lookup("f99z", 
+    GEE: "Geografikum",
+    KEE: "Körperschaft",
+    PEE: "Person", # ?
+    PPE: "Person", # ?
+    SEE: "Sachschlagwort",
+    VEE: "Veranstaltung",
+    WEE: "Werk",
+    XEE: "N/A", # ?
+    XSO: "N/A", # ?
+    __default: "N/A")
+else
+  add_field("f99z", "N/A")
+end
+
+vacuum()

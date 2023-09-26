@@ -1,4 +1,5 @@
-API_URL = "http://test-metadaten-nrw.hbz-nrw.de:1339/api/" + PATH;
+// API_URL = "http://test-metadaten-nrw.hbz-nrw.de:1339/api/" + PATH;
+API_URL = "http://localhost:1339/api/" + PATH;
 
 "https://raw.githubusercontent.com/acka47/scripts/master/skos2json/" + INPUT
 | open-http

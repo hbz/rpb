@@ -47,6 +47,7 @@ end
 unless exists("f82b")
   paste("f82b", "~Keine GND-Ansetzung für", "f00_")
 end
+replace_all("f82b", "(\\d+)n(\\d)", "$1-$2")
 
 replace_all("f1nv", "w+", "www") # z.B. ww -> www
 replace_all("f1nv", "m+", "mmm") # z.B. mmmm -> mmm

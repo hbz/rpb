@@ -137,6 +137,13 @@ unless exists("f70s")
  end
 end
 
+# Menschenlesbare Werte nutzen (für die Erfassung in Strapi)
+if is_array("f36_")
+  # print_record("Mehrere Satztypen gefunden: ")
+  set_field("f36_", "f36_.$last")
+end
+lookup("f36_", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
+
 call_macro("add_all", to: "81", from: "81?") # Anmerkungen
 call_macro("add_all", to: "85", from: "85?") # Gesamttitel
 
@@ -205,6 +212,15 @@ if exists("f01_")
   copy_field("_id", "f01.f01u") # Verknüpfung zur MtM (ÜO)
   replace_all("f01.f01u","b\\d+","")
   prepend("f01.f01u","https://lobid.org/resources/RPB")
+end
+
+# ISBNs (f87_, f871 ff.)
+set_array("f87[]")
+if exists("f87?")
+  set_array("_temp")
+  copy_field("f87?", "_temp.$append.f87_")
+  add_field("_temp.*.n87~", "true")
+  move_field("_temp.*", "f87[].$append")
 end
 
 vacuum()

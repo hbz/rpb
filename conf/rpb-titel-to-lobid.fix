@@ -16,13 +16,13 @@ set_array("type[]", "BibliographicResource")
 if all_equal("f36_", "u")
   set_field("type[].$append", "Article")
 end
-if all_equal("f36_", "s")
+if all_equal("f36_", "Monografie")
   set_field("type[].$append", "Book")
 end
-if any_equal("f36_", "sm")
+if any_equal("f36_", "Mehrt. Mono (ÜO)")
   set_field("type[].$append", "MultiVolumeBook")
 end
-if any_equal("f36_", "sbd")
+if any_equal("f36_", "Band")
   set_field("type[].$append", "Book")
   set_array("isPartOf[]")
   set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
@@ -118,7 +118,7 @@ move_field("pub", "publication[]")
 
 # ------- "zdbId" -------
 
-if any_equal("f36_", "sm")
+if any_equal("f36_", "Mehrt. Mono (ÜO)")
   move_field("f88_", "zdbId")
 end
 

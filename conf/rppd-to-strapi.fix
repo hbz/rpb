@@ -20,6 +20,13 @@ do put_macro("to_array")
   call_macro("add", to: "$[field]", from: "$[field]")
 end
 
+do put_macro("add_bio")
+  set_array("_temp")
+  move_field("$[field]", "_temp.$append") # aufgeteilt: f1?1..9
+  join_field("_temp", "\n\n") # als Absätze...
+  move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
+end
+
 call_macro("to_bool", field: "f11_")
 call_macro("to_bool", field: "f13_")
 call_macro("to_bool", field: "f14_")
@@ -34,11 +41,12 @@ call_macro("to_array", field: "f1nu")
 call_macro("to_array", field: "f1nw")
 call_macro("to_array", field: "f1nx")
 
-set_array("f1z1[]") # Biogramme...
-set_array("_temp") # bei sehr langen...
-move_field("f1z?", "_temp.$append") # aufgeteilt: f1z1..9
-join_field("_temp", "\n\n") # als Absätze...
-move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
+set_array("f1z1[]") # Biogramme
+call_macro("add_bio", field: "f1z?")
+call_macro("add_bio", field: "f1ü?")
+call_macro("add_bio", field: "f1ä?")
+call_macro("add_bio", field: "f1ö?")
+call_macro("add_bio", field: "f1ß?")
 
 # f82b ist 'required' und 'unique'
 if all_match("f82b", "Familienmitglied|Keine GND-Ansetzung")

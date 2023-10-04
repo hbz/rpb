@@ -71,6 +71,22 @@ sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb.ndjson PATH=rpb-n
 sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PATH=rpb-spatials"
 ```
 
+### Run RPPD transformation to strapi data
+
+```bash
+sbt "runMain rpb.ETL conf/rppd-to-strapi.flux"
+```
+
+Writes output to `output/output-rppd-strapi.ndjson`.
+
+### Import RPPD strapi data
+
+```bash
+sbt "runMain rpb.ETL conf/rppd-import.flux"
+```
+
+This attempts to import RPPD data to strapi, and prints the server responses.
+
 ### Run transformation to lobid data
 
 ```bash

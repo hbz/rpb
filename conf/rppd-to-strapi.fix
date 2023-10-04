@@ -41,7 +41,7 @@ join_field("_temp", "\n\n") # als Absätze...
 move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
 
 # f82b ist 'required' und 'unique'
-if all_equal("f82b", "Keine GND-Ansetzung")
+if all_match("f82b", "Familienmitglied|Keine GND-Ansetzung")
   paste("f82b", "~Keine GND-Ansetzung für", "f00_")
 end
 unless exists("f82b")

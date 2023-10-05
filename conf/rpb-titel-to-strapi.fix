@@ -192,8 +192,13 @@ call_macro("add", to: "60", from: "f69?", type: "http://id.loc.gov/vocabulary/re
 call_macro("contribution_to_uri", field: "60")
 
 if exists("f18_")
-  move_field("f18_","f18_~")
-  set_field("f18_~", "true")
+  set_field("f18_", "RPB und BiblioVino")
+else
+  if all_contain("f00_", "w")
+    set_field("f18_", "nur BiblioVino")
+  else
+    set_field("f18_", "nur RPB")
+  end
 end
 
 if exists("f01_")

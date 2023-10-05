@@ -1,3 +1,10 @@
+# Remove titles that are only in BiblioVino
+# (see https://jira.hbz-nrw.de/browse/RPB-78)
+
+if all_equal("f18_", "nur BiblioVino")
+  reject()
+end
+
 # Remove empty fields
 
 vacuum()

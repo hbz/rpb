@@ -2,7 +2,7 @@
 set -eu
 IFS=$'\n\t'
 
-# Call e.g.: bash transformAndImport.sh test-metadaten-nrw.hbz-nrw.de
+# Call e.g.: bash transformAndImportTest.sh test-metadaten-nrw.hbz-nrw.de
 
 if [ -z "$@" ]; then echo "Pass host, e.g. 'localhost'"; else echo "Will import to '$@'"; fi
 HOST=$1

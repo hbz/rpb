@@ -1,8 +1,8 @@
-//API_URL = "http://test-metadaten-nrw.hbz-nrw.de:1339/api/rppds";
-API_URL = "http://localhost:1339/api/rppds";
+default HOST = "localhost"; // pass e.g. HOST=test-metadaten-nrw.hbz-nrw.de
+default IN_FILE = "test-output-rppd.json"; // pass e.g. IN_FILE=output-rppd-strapi.ndjson
+API_URL = "http://" + HOST + ":1339/api/rppds";
 
-// FLUX_DIR + "output/output-rppd-strapi.ndjson"
-FLUX_DIR + "output/test-output-rppd.json"
+FLUX_DIR + "output/" + IN_FILE
 | open-file
 | as-lines
 | regex-decode("(?<data>.+)")

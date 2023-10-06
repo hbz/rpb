@@ -1,5 +1,5 @@
-// API_URL = "http://test-metadaten-nrw.hbz-nrw.de:1339/api/" + PATH;
-API_URL = "http://localhost:1339/api/" + PATH;
+default HOST = "localhost"; // pass e.g. test-metadaten-nrw.hbz-nrw.de
+API_URL = "http://" + HOST + ":1339/api/" + PATH;
 
 FIX = "
 unless " + PICK + "

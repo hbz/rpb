@@ -87,7 +87,9 @@ sbt "runMain rpb.ETL conf/rppd-import.flux"
 
 This attempts to import RPPD data to strapi, and prints the server responses.
 
-Same for RPB-Normdaten (`rpb-sw-to-strapi.flux` / `rpb-sw-import.flux`), see also `transformAndImport.sh`.
+Same for RPB-Normdaten (`rpb-sw-to-strapi.flux` / `rpb-sw-import.flux`).
+
+See also `transformAndImportTest.sh` (test data) and `transformAndImportFull.sh` (full data).
 
 ### Run transformation to lobid data
 

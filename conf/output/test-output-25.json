@@ -78,7 +78,7 @@
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -88,7 +88,7 @@
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser"
     },
     "type" : [ "Contribution" ]
   } ],

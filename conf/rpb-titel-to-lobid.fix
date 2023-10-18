@@ -221,25 +221,20 @@ end
 
 # ------- Contribution -------
 
-put_map("uri-to-role",
-  "http://id.loc.gov/vocabulary/relators/aut": "Verfasser",
-  "http://id.loc.gov/vocabulary/relators/pbl": "Herausgeber",
-  "http://id.loc.gov/vocabulary/relators/ctb": "Mitwirkender",
-  "http://id.loc.gov/vocabulary/relators/edt": "Bearb.",
-  "http://id.loc.gov/vocabulary/relators/ccp": "Begr.",
-  "http://id.loc.gov/vocabulary/relators/col": "Sammler",
-  "http://id.loc.gov/vocabulary/relators/lbt": "Librettist",
-  "http://id.loc.gov/vocabulary/relators/trl": "Übersetzer",
-  "http://id.loc.gov/vocabulary/relators/ill": "Illustrator",
-  "http://id.loc.gov/vocabulary/relators/wst": "Verfasser von ergänzendem Text",
-  "http://id.loc.gov/vocabulary/relators/cmp": "Komponist",
-  "http://id.loc.gov/vocabulary/relators/red": "Red.",
-  "http://id.loc.gov/vocabulary/relators/oth": "Sonstige",
-  "http://id.loc.gov/vocabulary/relators/act": "Ausführender",
-  "http://id.loc.gov/vocabulary/relators/hnr": "Gefeierter",
-  "http://id.loc.gov/vocabulary/relators/org": "HE Urheber",
-  "http://id.loc.gov/vocabulary/relators/isb": "NE hrsg. Körperschaft",
-  "http://id.loc.gov/vocabulary/relators/hnr": "Gefeierte Körperschaft")
+put_map("role-to-uri",
+  "Verfasser" : "http://id.loc.gov/vocabulary/relators/aut",
+  "Herausgeber" : "http://id.loc.gov/vocabulary/relators/edt",
+  "Mitwirkender" : "http://id.loc.gov/vocabulary/relators/ctb",
+  "Übersetzer" : "http://id.loc.gov/vocabulary/relators/trl",
+  "Illustrator" : "http://id.loc.gov/vocabulary/relators/ill",
+  "Fotograf" : "http://id.loc.gov/vocabulary/relators/pht",
+  "Komponist" : "http://id.loc.gov/vocabulary/relators/cmp",
+  "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth",
+  "Gefeierter" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Herausgebendes Organ" : "http://id.loc.gov/vocabulary/relators/isb",
+  "Veranstalter" : "http://id.loc.gov/vocabulary/relators/orm",
+  "Geistiger Schöpfer" : "http://id.loc.gov/vocabulary/relators/cre",
+  "Auftraggeber" : "http://id.loc.gov/vocabulary/relators/pat")
 
 do put_macro("contributions")
   set_array("_temp")
@@ -251,8 +246,7 @@ do put_macro("contributions")
     lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
     copy_field("f.n$[from]a", "c.role.id")
     copy_field("f.n$[from]a", "c.role.label")
-    lookup("c.role.label", "uri-to-role")
-    lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
+    lookup("c.role.id", "role-to-uri")
     set_array("c.type[]", "Contribution")
   end
   move_field("_temp.*", "contribution[].$append")

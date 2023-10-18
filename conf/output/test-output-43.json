@@ -151,7 +151,7 @@
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "label" : "Herausgebendes Organ"
     },
     "type" : [ "Contribution" ]
   } ]

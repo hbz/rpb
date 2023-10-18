@@ -63,8 +63,8 @@
       "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
   } ]

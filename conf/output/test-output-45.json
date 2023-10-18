@@ -67,8 +67,8 @@
       "label" : "Alten- und Pflegeheim St. Barbara / Koblenz"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
   } ]

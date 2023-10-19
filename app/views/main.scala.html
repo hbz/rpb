@@ -42,9 +42,11 @@
                       <li @if(title=="RPB - Ergebnisliste"){class="active"}>
                         <a href="@nwbib.routes.Application.search()">Suche</a>
                       </li>
+                      @*
                       <li @if(title=="NWBib - Themensuche"){class="active"}>
                         <a href="@nwbib.routes.Application.topics()">Themensuche</a>
                       </li>
+                      *@
                       <li @if(title.contains("Raumsystematik")){class="active"}>
                         <a href="@nwbib.routes.Application.spatial()">Regionen</a>
                       </li>

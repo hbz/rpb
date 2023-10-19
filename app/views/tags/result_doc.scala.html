@@ -268,6 +268,7 @@
 
   @labelled("Inhaltsangabe", "description")
   @labelled("Inhaltsverzeichnis", "tableOfContents")
+  @for(item <- (doc \ "hasItem").asOpt[Seq[JsValue]].getOrElse(Seq())){ @result_field("Siehe auch", "seeAlso", item, TableRow.LINKS) }
 }
 
 @schema_org(doc)

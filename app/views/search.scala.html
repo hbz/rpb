@@ -60,7 +60,7 @@
 	(json\"rpbId").asOpt[String].getOrElse((json\"id").asOpt[String].map(_.replaceAll("https?://lobid.org/resources/","").replaceAll("#!","")).getOrElse(""))
 }
 
-@main("RPB - Ergebnisliste") {
+@main("BiblioVino - Ergebnisliste") {
     @if(Seq(person, name, subject, id, publisher, issued, word, corporation).exists(!_.isEmpty)){
       @tags.search_advanced("Suche aktualisieren", q, person, name, subject, nwbibspatial, nwbibsubject, id, publisher, issued, sortParam, word=word, corporation=corporation)
     } else {

@@ -15,7 +15,7 @@
         <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/jquery-ui.min.css")">
         <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/font-awesome.min.css")">
         <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/nwbib.css")">
-        <link rel="shortcut icon" type="image/png" href="@controllers.routes.Assets.at("images/favicon.png")">
+        <link rel="shortcut icon" type="image/png" href="@controllers.routes.Assets.at("images/bibliovino.png")">
         <script src="@controllers.routes.Assets.at("javascripts/jquery-1.10.2.min.js")"></script>
         <script src="@controllers.routes.Assets.at("javascripts/jquery-ui.min.js")"></script>
         <script src="@controllers.routes.Assets.at("javascripts/bootstrap.min.js")"></script>
@@ -35,28 +35,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="@nwbib.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> RPB</a>
+                    <a class="navbar-brand" href="@nwbib.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> BiblioVino</a>
                   </div>
                   <div class="navbar-collapse collapse" id="nwbib-nav">
                     <ul class="nav navbar-nav">
-                      <li @if(title=="RPB - Ergebnisliste"){class="active"}>
+                      <li @if(title=="BiblioVino - Ergebnisliste"){class="active"}>
                         <a href="@nwbib.routes.Application.search()">Suche</a>
                       </li>
-                      <li @if(title=="RPB - Erweiterte Suche"){class="active"}>
+                      <li @if(title=="BiblioVino - Erweiterte Suche"){class="active"}>
                         <a href="@nwbib.routes.Application.advanced()">Erweiterte Suche</a>
                       </li>
                       @*
-                      <li @if(title=="RPB - Themensuche"){class="active"}>
+                      <li @if(title=="BiblioVino - Themensuche"){class="active"}>
                         <a href="@nwbib.routes.Application.topics()">Themensuche</a>
                       </li>
-                      *@
                       <li @if(title.contains("Raumsystematik")){class="active"}>
                         <a href="@nwbib.routes.Application.spatial()">Regionen</a>
                       </li>
                       <li @if(title.contains("Sachsystematik")){class="active"}>
                         <a href="@nwbib.routes.Application.subjects()">Sachgebiete</a>
                       </li>
-                      @*
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ergänzende Suche<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -73,7 +71,7 @@
                       *@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                      <li @if(title=="RPB - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
+                      <li @if(title=="BiblioVino - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
                       <li class="divider"></li>
                       <li @if(title=="NWBib: Kontakt"){class="active"} class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
@@ -82,7 +80,7 @@
                           <li><a href="http://www.landesbibliothek-nrw.de/aufgaben/nrw_bibliographie/">Über die NWBib</a></li>
                           <li><a href="@nwbib.routes.Application.journals()">Ausgewertete Zeitschriften</a></li>
                           *@
-                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20RPB,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback</a></li>
+                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zu%20BiblioVino,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback</a></li>
                           @*
                           <li class="divider"></li>
                           <li class="dropdown-header">Fachliche Kontakte</li>
@@ -105,8 +103,8 @@
                 </div><!--/.container-fluid -->
             </div>
             <div class="page-header">
-                <img class="media-object nrw-logo pull-right" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW">
-                <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Ein Entwicklungsprojekt von lbz &amp; hbz <span class="badge">beta</span></small></h1>
+                <img class="media-object nrw-logo pull-right" src="@controllers.routes.Assets.at("images/bibliovino.png")" alt="BiblioVino">
+                <h1>BiblioVino<br/><small>Bibliographie zur Geschichte und Kultur des Weines <span class="badge">beta</span></small></h1>
             </div>
             @content
             <div class="panel panel-default nwbib-footer">
@@ -114,7 +112,7 @@
                 @defining(controllers.nwbib.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
                 <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW-Wappen"> 
                 <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo">
-                Die RPB enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
+                BiblioVino enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
                 }
               </div>
             </div>

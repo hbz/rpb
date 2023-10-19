@@ -1,10 +1,3 @@
-# Remove titles that are only in BiblioVino
-# (see https://jira.hbz-nrw.de/browse/RPB-78)
-
-if all_equal("f18_", "nur BiblioVino")
-  reject()
-end
-
 # Remove empty fields
 
 vacuum()
@@ -63,13 +56,19 @@ replace_all("biblioVinoId", "\\.", "")
 
 # ------- "inCollection" -------
 
-set_hash("coll")
-set_field("coll.id", "http://lobid.org/resources/HT013494180#!")
-set_array("coll.type[]")
-add_field("coll.type[].$append", "Collection")
-add_field("coll.label", "Rheinland-Pfälzische Bibliographie")
 set_array("inCollection[]")
-move_field("coll", "inCollection[]")
+unless all_equal("f18_", "nur BiblioVino")
+  set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013494180#!")
+  set_array("inCollection[].$last.type[]")
+  add_field("inCollection[].$last.type[].$append", "Collection")
+  add_field("inCollection[].$last.label", "Rheinland-Pfälzische Bibliographie")
+end
+unless all_equal("f18_", "nur RPB")
+  set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013678171#!")
+  set_array("inCollection[].$last.type[]")
+  add_field("inCollection[].$last.type[].$append", "Collection")
+  add_field("inCollection[].$last.label", "BiblioVino")
+end
 
 # ------- "title" field -------
 if is_string("f20_")

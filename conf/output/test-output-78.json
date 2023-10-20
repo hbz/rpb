@@ -1,0 +1,71 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929w18032522",
+  "id" : "https://lobid.org/resources/RPB929w18032522",
+  "biblioVinoId" : "Nr32522",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013678171#!",
+    "type" : [ "Collection" ],
+    "label" : "BiblioVino"
+  } ],
+  "title" : "Einfluss von Lesetermin und Mostbehandlung auf die Alterung von Weißwein, am Beispiel von Vitis vinifera L. cv. Riesling.",
+  "responsibilityStatement" : [ "Aus f39x: Geisenheim: Ges. zur Förderung der Forschungsanst. Geisenheim 2013." ],
+  "publication" : [ {
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Most | Lebensmittelverarbeitung | Riesling | Chemie | Wein | Weinlese | Lebensmittelqualität",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4040354-3",
+      "label" : "Most",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4167045-0",
+      "label" : "Lebensmittelverarbeitung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4138434-9",
+      "label" : "Riesling",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4009816-3",
+      "label" : "Chemie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4065133-2",
+      "label" : "Wein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4432509-5",
+      "label" : "Weinlese",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4343361-3",
+      "label" : "Lebensmittelqualität",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ]
+}

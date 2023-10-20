@@ -1,23 +1,30 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t084656",
-  "id" : "https://lobid.org/resources/RPB929t084656",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB107t982377",
+  "id" : "https://lobid.org/resources/RPB107t982377",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Weinteufel [Elektronische Ressource]",
-  "responsibilityStatement" : [ "nach der Operette von Michael Thelen, Text. Musik Hans Wolf. Regie u. Bearb.: Gisbert Stenz" ],
+  "title" : "Der Rasenspieler : das Journal zur Saison ...",
+  "responsibilityStatement" : [ "VFR Speyer 1950 e.V." ],
   "publication" : [ {
-    "location" : [ "[Ahrweiler]" ],
-    "startDate" : "2006",
-    "publishedBy" : [ "Ahrtal-Video Faupel" ],
+    "location" : [ "Speyer" ],
+    "startDate" : "1998",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n802040",
+    "id" : "http://purl.org/lobid/rpb#n736050",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n882026",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -26,24 +33,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ahrtal | Komödie | DVD-ROM",
+    "label" : "Verein für Rasenspiele Speyer 1950 | Geschichte 1945- | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4084812-7",
-      "label" : "Ahrtal",
+      "id" : "https://d-nb.info/gnd/5325261-5",
+      "label" : "Verein für Rasenspiele Speyer 1950",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4031952-0",
-      "label" : "Komödie",
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4585131-1",
-      "label" : "DVD-ROM",
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -51,8 +58,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n28",
-    "label" : "n28",
+    "id" : "https://rpb.lobid.org/spatial#n31800000",
+    "label" : "n31800000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -61,22 +68,12 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k4656727a",
-      "label" : "Thelen, Michael"
+      "id" : "https://d-nb.info/gnd/5325261-5",
+      "label" : "Verein für Rasenspiele Speyer 1950"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn95s0673b",
-      "label" : "Wolf, Hans"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
     },
     "type" : [ "Contribution" ]
   } ]

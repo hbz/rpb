@@ -1,25 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t084686",
-  "id" : "https://lobid.org/resources/RPB929t084686",
+  "rpbId" : "RPB929t112191",
+  "id" : "https://lobid.org/resources/RPB929t112191",
+  "hbzId" : "HT016831992",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Frontiers of the Roman Empire",
-  "extent" : "51, 21 S. : zahlr. Ill.",
-  "note" : [ "Text engl., dt., franz. und arab." ],
-  "responsibilityStatement" : [ "David J. Breeze, Sonja Jilek and Andreas Thiel" ],
+  "title" : "Geheimnisvolle Tierwelten : am Flüsschen Wied gesehen und photographiert ; [Kalender] 2011",
+  "extent" : "[14] Bl. : überw. Ill. ; 210 x 297 mm",
+  "responsibilityStatement" : [ "von Erich Oetz" ],
   "publication" : [ {
-    "location" : [ "Edinburgh" ],
-    "startDate" : "2005",
-    "publishedBy" : [ "Historic Scotland, UK [u.a.]" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n226030",
+    "id" : "http://purl.org/lobid/rpb#n848000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -27,7 +24,7 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n262010",
+    "id" : "http://purl.org/lobid/rpb#n163000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -36,28 +33,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Römisches Reich | Staatsgrenze",
+    "label" : "Wied / Fluss | Tiere / Motiv | Kalender",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4076778-4",
-      "label" : "Römisches Reich",
+      "id" : "https://d-nb.info/gnd/4108127-4",
+      "label" : "Wied / Fluss",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4077781-9",
-      "label" : "Staatsgrenze",
+      "id" : "https://d-nb.info/gnd/4185464-0",
+      "label" : "Tiere / Motiv",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Limes",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4035758-2",
-      "label" : "Limes",
+    }, {
+      "id" : "https://d-nb.info/gnd/4029290-3",
+      "label" : "Kalender",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -65,42 +58,22 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n01",
-    "label" : "n01",
-    "type" : [ "Concept" ],
+    "id" : "https://d-nb.info/gnd/4119314-3",
+    "label" : "4119314-3",
+    "type" : [ "PlaceOrGeographicName" ],
     "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
     }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k4686808a",
-      "label" : "Breeze, David John"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2191236a",
+      "label" : "Oetz, Erich"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k4686449b",
-      "label" : "Jilek, Sonja"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/122161289",
-      "label" : "Thiel, Andreas / 1964-"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
   } ]

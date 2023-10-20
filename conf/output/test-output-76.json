@@ -1,0 +1,56 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB121t0144215",
+  "id" : "https://lobid.org/resources/RPB121t0144215",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Bibliographie zu den Jahrbüchern des Kreises Daun",
+  "responsibilityStatement" : [ "Kreis Daun, Vulkaneifel. Hrsg.: Kreisverwaltung Daun" ],
+  "publication" : [ {
+    "location" : [ "Monschau" ],
+    "publishedBy" : [ "Weiss-Dr." ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "zdbId" : "0939-9607",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n882026",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n23301501",
+    "label" : "n23301501",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/2038546-8",
+      "label" : "Landkreis Daun"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

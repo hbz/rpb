@@ -1,25 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t930040",
-  "id" : "https://lobid.org/resources/RPB929t930040",
+  "rpbId" : "RPB929t084656",
+  "id" : "https://lobid.org/resources/RPB929t084656",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sein Werk - nicht das meine : Mutter Magdalena Damen und ihre Kongregation der Franziskanerinnen von Heythuysen im neunzehnten Jahrhundert",
-  "extent" : "305 S. : Ill.",
-  "note" : [ "1. dt. Ausg. u.d.T.: Cools, Angelita: Mutter Magdalena Damen und die Entwicklung ihrer Kongregation im neunzehnten Jahrhundert. - Betr. auch Kloster St. Clemens, Nonnenwerth im Rhein" ],
-  "responsibilityStatement" : [ "Angelita Cools ; Hildegard von de Wijnpersse. [Nach Bearb. durch Gian Ackermans ... ]" ],
+  "title" : "Weinteufel [Elektronische Ressource]",
+  "responsibilityStatement" : [ "nach der Operette von Michael Thelen, Text. Musik Hans Wolf. Regie u. Bearb.: Gisbert Stenz" ],
   "publication" : [ {
-    "location" : [ "Aachen" ],
-    "startDate" : "1992",
-    "publishedBy" : [ "Einhard [u.a.]" ],
+    "location" : [ "[Ahrweiler]" ],
+    "startDate" : "2006",
+    "publishedBy" : [ "Ahrtal-Video Faupel" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n611070",
+    "id" : "http://purl.org/lobid/rpb#n802040",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -28,44 +26,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Magdalena / Mutter / 1787-1858 | Geschichte 1800-",
+    "label" : "Ahrtal | Komödie | DVD-ROM",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/119067552",
-      "label" : "Magdalena / Mutter / 1787-1858",
+      "id" : "https://d-nb.info/gnd/4084812-7",
+      "label" : "Ahrtal",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z48",
-      "label" : "Geschichte 1800-",
+      "id" : "https://d-nb.info/gnd/4031952-0",
+      "label" : "Komödie",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Kongregation der Franziskanerinnen von Heythuysen | Geschichte 1800-",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/00Sn93k0040a",
-      "label" : "Kongregation der Franziskanerinnen von Heythuysen",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z48",
-      "label" : "Geschichte 1800-",
+      "id" : "https://d-nb.info/gnd/4585131-1",
+      "label" : "DVD-ROM",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n131000700701",
-    "label" : "n131000700701",
+    "id" : "https://rpb.lobid.org/spatial#n28",
+    "label" : "n28",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -74,32 +61,22 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040b",
-      "label" : "Cools, Angelita"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k4656727a",
+      "label" : "Thelen, Michael"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040c",
-      "label" : "Wijnpersse, Hildegard ¬van de¬"
+      "id" : "https://rpb.lobid.org/agent/00Pn95s0673b",
+      "label" : "Wolf, Hans"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040d",
-      "label" : "Ackermans, Gian"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/edt",
-      "label" : "Bearb."
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ]

@@ -1,2 +1,92 @@
 nothing()
 
+# ------
+#00 RPPD-ID 
+# Komentar Doku:  (Achtung: 00 BLANK)
+
+
+# #1na (Name, bevorzugte Form) -> preferredName
+# Name ist aber Kombination aus Geburtsdaten und Name e.g. "f1na": "Marquard, Udo / 1959-"
+# Daher müss alles hinter dem Namen ab dem Leerzeichen gelöscht werden
+
+# ------
+# #1nc (Name Vw-Formen (m)) und #1nd (Andere Namensformen (m)) -> variantName
+# In 1nc kann es sein, dass der Name aus #1na erneut wieder vorkommt, das könnte man mit einem Conditional prüfen.
+# Kommentar #1nc Doku: sowohl GND, als auch lokale; getrennt mit @; auch bei Doppelnamen vom 2. Teil des Namens; auch Vw-Formen von Pseud/Wirkl. Name;  (wird im web-Katalog nicht angezeigt)
+# Kommentar #1nd Doku: sowohl GND, als auch lokale; getrennt mit @, gekennzeichnet mit ¬[Pseud.]¬/¬[Wirkl. Name]¬/¬[Früherer Name]¬/¬[Späterer Name]¬, oder ohne Kennzeichnung bei prägnanter, weiterer Namensform (wird im web-Katalog angezeigt)
+
+
+# -------
+# #1ne (Bilddatei) -> image (neue Property?)
+# Komentar Doku: vollständiger Dateiname ohne Pfadangaben, aber inkl. Endung; hinter dem Zeichen "@" kann man eine Quellenangabe einfügen; die zugehörige Datei wird an Herrn Dirx geschickt.; Beispiel: #1ne120251973_1.jpg@Mittelrhein-Museum Koblenz
+
+
+# -------
+# #1nn (Berufe/Stellungen (m, R)) -> professionOrOccupation
+# Kommentar Doku: nach Möglichkeit aus Register 3, sonst Klartext gemäß GND, getrennt mit @
+# Hier brauchen wir die Werte aus Register 3, eine Konkoranz auf die GND. Falls nur GND dann nur auf label mappen?
+
+
+# -------
+# #1wz (Wirkungszeitraum) -> periodOfActivity
+# Kommentar Doku: Wenn kein Geburtsdatum und kein Todesdatum ermittelbar ist, kann hier ein Zeitraum eingetragen werden
+
+
+# -------
+# #1no (Wirkungsort (m, R))-> placeOfActivity
+# Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND; getrennt mit @, auch Wohnorte; Orte, von denen aus gewirkt wurde, nicht das Verwaltungsgebiet
+# Müssen anscheinend die RPB Spatial Ids konstruieren.
+
+
+# -------
+# #1np (Geburtsdatum) -> dateOfBirth
+# Kommentar Doku: mit Punkten und führenden Nullen: 04.05.1950; für Jahrestagsanzeige: die erste 4stellige Zahl im Feld wird als Jahr aufgefasst, dh auch "März 1908" ist möglich; Jahre mit „um“, „vor“, „nach“ und „zwischen“ werden nicht als Jubiläumsjahr aufgefasst.
+
+
+# -------
+# #1nq (Geburtsort (R)) -> placeOfBirth
+# Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND 
+
+# -------
+# #1nr (Sterbedatum) -> dateOfDeath
+## Kommentar Doku: s. #1np
+
+# -------
+# #1ns (Sterbeort (R)) -> placeOfDeath
+# Kommentar Doku: s. #1nq
+
+# -------
+# #1nt (persönl. Beziehungen (m, R)) -> relatedPerson (unspezifisch)
+# Kommentar Doku: RPPD-ID-Nr. mit Unterstrichen, falls Person bereits in RPPD aufgenommen (Bsp.: _pk0000_), sonst Klartext: Nachname, Vorname / Lebensdaten; getrennt mit @; nähere Ausführungen in 1nz notwendig; verknüpfte Person ist anklickbar 
+
+# -------
+# #1nt	(persönl. Beziehungen (m, R) ->	relatedPerson (unspezifisch)	
+# Kommentar Doku: RPPD-ID-Nr. mit Unterstrichen, falls Person bereits in RPPD aufgenommen (Bsp.: _pk0000_), sonst Klartext: Nachname, Vorname / Lebensdaten; getrennt mit @; nähere Ausführungen in 1nz notwendig; verknüpfte Person ist anklickbar 
+
+# -------
+# #1nu	(Werke (m)) -> 	publication	
+# Kommentar Doku: nur Auswahl! Möglichst Originalausgabe angeben. Form:  Titel,  Jahr.  Achtung: Nichtsortierzeichen für führenden Artikel (Alt-170); getrennt mit @; auch Werke von Architekten, Künstlern und Regisseuren
+
+# -------
+# #1nv	(Geschlecht) -> 	gender	
+# Kommentar Doku: "mmm" (männlich) oder "www" (weiblich) eintragen, 
+
+# -------
+# #1nw	(Fachgebiete (m)) -> 	gndSubjectCategory	
+# Kommentar Doku:  Normdaten aus SWN-Sätzen (Reg. 9 und Reg. 11), getrennt mit @: Bsp.: #1nw_swn12x2p_@_swn3x6p_; entspricht der GND-Systematik; paarig zu Berufen vergeben
+
+# -------
+# #1nx	(Quelle (m)) ->	biographicalOrHistoricalInformation	
+# Kommentar Doku:  getrennt mit @; Beispiel: Westerwälder Zeitung. - (2002), 224 vom 26.9., S. 20 (evtl. Todesanzeige)@Eigene Angaben (Datum); Genaue Adresse bei Websites: http://www...  (Stand: Datum). Alle Quellen zu einer Person, werden hier zusammengeführt, auch wenn sie aus verschiedenen, eingespielten Werken stammen 
+
+# -------
+#1ny	(Datum der letzten inhaltlichen Änderung) ->	describedBy.dateModified	
+# Kommentar Doku:  JJJJMMTT, z.B. 20120928 für 28.09.2012
+
+# -------
+#82b	(GND-ID (R)) ->	gndIdentifier	
+# Kommentar Doku:  ohne das vorangestellte Präfix (DE-588)
+
+# -------
+#1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation
+# Kommentar Doku:  getrennt durch "; ". Keine Abkürzungen benutzen, da die Stichworte in Register 9 indexiert werden. Zitate aus Quellen in Anführungszeichen; bei sehr langen, biogr. Anmerkungen wird der Text auf mehrere Kategorien aufgeteilt: #1z2, #1z3, #1z4 ... #1z9. Bei eingespielten Biographien werden die Angaben zum Originalwerk am Ende angegeben:  --- [Daten übernommen aus: ....]

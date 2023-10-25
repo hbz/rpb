@@ -64,6 +64,7 @@
         }
       }
       *@
+      @tags.search_form(q)
       <div class="row" id="search-results">
       @defining(Lobid.items(doc.toString)) { items =>
         @defining(!(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>

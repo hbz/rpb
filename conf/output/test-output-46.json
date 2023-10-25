@@ -1,21 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t084667",
-  "id" : "https://lobid.org/resources/RPB929t084667",
+  "rpbId" : "RPB929t112190",
+  "id" : "https://lobid.org/resources/RPB929t112190",
+  "hbzId" : "HT016832268",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "100 Jahre Kirner Volksbank : Chronik 1908 - 2008",
-  "extent" : "[12] S. : zahlr. Ill.",
+  "title" : "[Kalender] 2011",
+  "extent" : "[13] Bl. : überw. Ill. ; 292 x 420 mm",
   "publication" : [ {
-    "location" : [ "Kirn" ],
+    "location" : [ "[Boppard]" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n548400",
+    "id" : "http://purl.org/lobid/rpb#n102045",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,24 +25,35 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Volksbank Kirn-Sobernheim | Geschichte 1908-2008 | Chronik",
+    "label" : "Mittelrheintal / Süd | Kalender",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/10360357-8",
-      "label" : "Volksbank Kirn-Sobernheim",
+      "id" : "https://d-nb.info/gnd/4221819-6",
+      "label" : "Mittelrheintal / Süd",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08s0514595a",
-      "label" : "Geschichte 1908-2008",
+      "id" : "https://d-nb.info/gnd/4029290-3",
+      "label" : "Kalender",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Briefmarkenserie | Kalender",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4335389-7",
+      "label" : "Briefmarkenserie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4127914-1",
-      "label" : "Chronik",
+      "id" : "https://d-nb.info/gnd/4029290-3",
+      "label" : "Kalender",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -49,18 +61,28 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13309052",
-    "label" : "n13309052",
-    "type" : [ "Concept" ],
+    "id" : "https://d-nb.info/gnd/4221819-6",
+    "label" : "4221819-6",
+    "type" : [ "PlaceOrGeographicName" ],
     "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
     }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/10360357-8",
-      "label" : "Volksbank Kirn-Sobernheim"
+      "id" : "https://d-nb.info/gnd/10366667-9",
+      "label" : "Sebapharma GmbH & Co. KG / Boppard"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/[Sebapharma GmbH & Co. KG, Boppard]",
+      "label" : "[Sebapharma GmbH & Co. KG, Boppard]"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

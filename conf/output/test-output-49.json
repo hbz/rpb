@@ -1,29 +1,25 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t084698",
-  "id" : "https://lobid.org/resources/RPB929t084698",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB929t112193",
+  "id" : "https://lobid.org/resources/RPB929t112193",
+  "hbzId" : "HT016746268",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Pfarr- und Wallfahrtskirche Pfarrer-Kraus-Anlagen Arenberg [Elektronische Ressource]",
-  "responsibilityStatement" : [ "[Gerd Moos]" ],
+  "title" : "Aktuell : das Krankenhaus in Ihrer Region",
+  "responsibilityStatement" : [ "Krankenhaus der Barmherzigen Brüder Montabaur" ],
   "publication" : [ {
-    "location" : [ "Koblenz" ],
+    "location" : [ "Montabaur" ],
+    "startDate" : "2010",
+    "publishedBy" : [ "Krankenhaus der Barmherzigen Brüder" ],
     "type" : [ "PublicationEvent" ]
   } ],
+  "zdbId" : "2599128-0",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844030",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n704634",
+    "id" : "http://purl.org/lobid/rpb#n534030",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -32,17 +28,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sankt Nikolaus / Koblenz | DVD-ROM",
+    "label" : "Krankenhaus der Barmherzigen Brüder Montabaur | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4515647-5",
-      "label" : "Sankt Nikolaus / Koblenz",
+      "id" : "https://d-nb.info/gnd/7741811-6",
+      "label" : "Krankenhaus der Barmherzigen Brüder Montabaur",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4585131-1",
-      "label" : "DVD-ROM",
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -50,8 +46,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000000100",
-    "label" : "n111000000100",
+    "id" : "https://rpb.lobid.org/spatial#n14304048",
+    "label" : "n14304048",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -60,12 +56,12 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0717486a",
-      "label" : "Moos, Gerd"
+      "id" : "https://d-nb.info/gnd/5280327-2",
+      "label" : "Krankenhaus der Barmherzigen Brüder / Montabaur"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
     },
     "type" : [ "Contribution" ]
   } ]

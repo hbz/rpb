@@ -1,21 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112195",
-  "id" : "https://lobid.org/resources/RPB929t112195",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB107t982375",
+  "id" : "https://lobid.org/resources/RPB107t982375",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Der BAP kam aus Unkel",
-  "extent" : "Ill.",
+  "title" : "Die Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz",
+  "note" : [ "Vorgänger u.d.T.: Südwestfunk <Baden-Baden>: Südwestfunk-Journal" ],
   "publication" : [ {
-    "startDate" : "2011",
+    "location" : [ "Stuttgart" ],
+    "startDate" : "1998",
+    "publishedBy" : [ "SWR" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n824000",
+    "id" : "http://purl.org/lobid/rpb#n882030",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,24 +26,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Unkel | Niedecken, Wolfgang / 1951- | Biografie",
+    "label" : "Südwestrundfunk | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4061836-5",
-      "label" : "Unkel",
+      "id" : "https://d-nb.info/gnd/5295938-7",
+      "label" : "Südwestrundfunk",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/118942247",
-      "label" : "Niedecken, Wolfgang / 1951-",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4006804-3",
-      "label" : "Biografie",
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -49,8 +44,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13807073",
-    "label" : "n13807073",
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "n01",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,14 +54,23 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
-      "label" : "Ruland, Wolfgang"
+      "id" : "https://d-nb.info/gnd/5295938-7",
+      "label" : "Südwestrundfunk"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 16-18"
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/Südwestrundfunk",
+      "label" : "Südwestrundfunk"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

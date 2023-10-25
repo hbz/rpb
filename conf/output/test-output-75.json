@@ -1,0 +1,24 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "https://lobid.org/resources/RPB036t160240",
+      "label" : "Piffche-Bahnfahrt durch Rheinhessen"
+    } ],
+    "numbering" : "2"
+  } ],
+  "rpbId" : "RPB036t160240b2",
+  "id" : "https://lobid.org/resources/RPB036t160240b2",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Piffche-Bahnfahrt durch Rheinhessen : 2",
+  "extent" : "256 Seiten : Illustrationen",
+  "publication" : [ {
+    "type" : [ "PublicationEvent" ]
+  } ]
+}

@@ -1,24 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB036t160240",
-  "id" : "https://lobid.org/resources/RPB036t160240",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t112195",
+  "id" : "https://lobid.org/resources/RPB929t112195",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Piffche-Bahnfahrt durch Rheinhessen",
-  "note" : [ "Text teilweise Hochdeutsch, teilweise in rheinhessischem Dialekt" ],
-  "responsibilityStatement" : [ "Hartmut Keil" ],
+  "title" : "Der BAP kam aus Unkel",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Worms" ],
-    "startDate" : "2016",
-    "publishedBy" : [ "Hartmut Keil" ],
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n706090",
+    "id" : "http://purl.org/lobid/rpb#n824000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -26,25 +23,34 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n102045",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n240300",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
+    "type" : [ "ComplexSubject" ],
+    "label" : "Unkel | Niedecken, Wolfgang / 1951- | Biografie",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4061836-5",
+      "label" : "Unkel",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/118942247",
+      "label" : "Niedecken, Wolfgang / 1951-",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4006804-3",
+      "label" : "Biografie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n05",
-    "label" : "n05",
+    "id" : "https://rpb.lobid.org/spatial#n13807073",
+    "label" : "n13807073",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -53,13 +59,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/122882679",
-      "label" : "Keil, Hartmut / 1951-"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
+      "label" : "Ruland, Wolfgang"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 16-18"
 }

@@ -68,7 +68,7 @@
       <div class="row" id="search-results">
       @defining(Lobid.items(doc.toString)) { items =>
         @defining(!(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>
-          <div class="col-md-@if(!doc.toString.contains("fulltextOnline")){12} else {8}">
+          <div class="col-md-12">
             <dl>
             @defining((doc\"rpbId").asOpt[String].getOrElse(q)){ id =>
               <dt>@tags.star_button(id) Titeldetails:
@@ -80,21 +80,6 @@
             }
             </dl>
           </div>
-          @if(doc.toString.contains("fulltextOnline")){
-          <div class="col-md-4" id="holdings">
-            <dl>
-            <dt>Online-Ressource:</dt>
-            <dd>
-            <table class="table table-striped table-condensed">
-              <tr>
-                <th style="width: 15%"></th>
-                <th style="width: 85%"></th>
-              </tr>
-              @result_field("Link", "fulltextOnline", doc, TableRow.LINKS)
-            </table>
-            </dd>
-          </div>
-          }
         }
       }
       </div>

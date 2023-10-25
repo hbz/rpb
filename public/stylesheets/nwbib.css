@@ -12,7 +12,7 @@ dd {
 }
 
 #nwbib-form {
-	padding-bottom: 1.5em;
+	padding-bottom: 0em;
 }
 
 input#owner {
@@ -140,7 +140,7 @@ table {
 }
 
 .intro {
-	padding-top: 30px;
+	padding-top: 5px;
 }
 
 .nwbib-footer {

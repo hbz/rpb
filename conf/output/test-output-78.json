@@ -3,7 +3,7 @@
   "type" : [ "BibliographicResource", "Book" ],
   "rpbId" : "RPB929w18032522",
   "id" : "https://lobid.org/resources/RPB929w18032522",
-  "biblioVinoId" : "Nr32522",
+  "schoeneNummer" : "Nr32522",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013678171#!",
     "type" : [ "Collection" ],

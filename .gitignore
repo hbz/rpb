@@ -15,4 +15,10 @@ RPB-Export_HBZ_SW.txt
 RPB-Export_HBZ_Tit.txt
 RPB-Export_HBZ_Tit_hbzIds.txt
 RPB-Export_HBZ_Bio.txt
+RPB-Export_HBZ_Ort.txt
+RPB-Export_HBZ_Raum.txt
+RPB-Export_HBZ_SWN.txt
+RPB-Export_HBZ_Syst.txt
+RPB-Export_HBZ_ZSS.txt
+conf/RPBEXP/*.ZIP
 nohup.out*

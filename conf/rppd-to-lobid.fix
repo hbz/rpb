@@ -22,6 +22,11 @@ copy_field("f1na", "preferredName")
 # Kommentar #1nc Doku: sowohl GND, als auch lokale; getrennt mit @; auch bei Doppelnamen vom 2. Teil des Namens; auch Vw-Formen von Pseud/Wirkl. Name;  (wird im web-Katalog nicht angezeigt)
 # Kommentar #1nd Doku: sowohl GND, als auch lokale; getrennt mit @, gekennzeichnet mit ¬[Pseud.]¬/¬[Wirkl. Name]¬/¬[Früherer Name]¬/¬[Späterer Name]¬, oder ohne Kennzeichnung bei prägnanter, weiterer Namensform (wird im web-Katalog angezeigt)
 
+set_array("variantName[]")
+copy_field("f1nc[].*.f1nc", "variantName[].$append")
+
+# f1nd[].*.f1nd
+
 
 # -------
 # #1ne (Bilddatei) -> image (neue Property?)
@@ -102,5 +107,6 @@ copy_field("f1na", "preferredName")
 retain(
   "rppdId", 
   "id", 
-  "preferredName"
+  "preferredName",
+  "variantName[]"
   )

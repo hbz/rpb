@@ -868,7 +868,7 @@ public class Application extends Controller {
 		Stream<Promise<JsonNode>> promises = starredIds.stream()
 				.map(id -> WS
 						.url(String
-								.format(String.format("http://" + request().host() + "/" + CONFIG.getString("indexUrlFormat"), id)))
+								.format(String.format(CONFIG.getString("indexUrlFormat"), id)))
 						.setContentType("application/json").get()
 						.map(response -> response.asJson().get("member").get(0)));
 		return Promise.sequence(promises.collect(Collectors.toList()))

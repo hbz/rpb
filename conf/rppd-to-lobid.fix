@@ -24,12 +24,12 @@ copy_field("f1na", "preferredName")
 
 set_array("variantName[]")
 copy_field("f1nc[].*.f1nc", "variantName[].$append")
+copy_field("f1nd[].*.f1nd", "variantName[].$append")
 
-# f1nd[].*.f1nd
 
 
 # -------
-# #1ne (Bilddatei) -> image (neue Property?)
+# #1ne (Bilddatei) -> depiction.id, oder url, der thumbnail (neue Property?)
 # Komentar Doku: vollständiger Dateiname ohne Pfadangaben, aber inkl. Endung; hinter dem Zeichen "@" kann man eine Quellenangabe einfügen; die zugehörige Datei wird an Herrn Dirx geschickt.; Beispiel: #1ne120251973_1.jpg@Mittelrhein-Museum Koblenz
 
 

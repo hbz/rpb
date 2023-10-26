@@ -42,6 +42,7 @@ uniq("variantName[]")
 # -------
 # #1wz (Wirkungszeitraum) -> periodOfActivity
 # Kommentar Doku: Wenn kein Geburtsdatum und kein Todesdatum ermittelbar ist, kann hier ein Zeitraum eingetragen werden
+# TODO: Wir brauchen ein Beispiel, anscheinend können wir selber nicht die Beispiele aktualisieren, da dabei Sonderzeichenfehler entstehen.
 
 
 # -------
@@ -71,6 +72,7 @@ copy_field("f1np", "dateOfBirth[].$append")
 # -------
 # #1nt (persönl. Beziehungen (m, R)) -> relatedPerson (unspezifisch)
 # Kommentar Doku: RPPD-ID-Nr. mit Unterstrichen, falls Person bereits in RPPD aufgenommen (Bsp.: _pk0000_), sonst Klartext: Nachname, Vorname / Lebensdaten; getrennt mit @; nähere Ausführungen in 1nz notwendig; verknüpfte Person ist anklickbar 
+# TODO: Wenn rppd ID angegeben wird, unterstriche löschen und zu URL transformieren (wie id) und auf Feld relatedPerson[].*.id mappen.
 
 # -------
 # #1nt	(persönl. Beziehungen (m, R) ->	relatedPerson (unspezifisch)	

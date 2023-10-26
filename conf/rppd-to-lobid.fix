@@ -103,10 +103,11 @@ copy_field("f1nc[].*.f1nc", "variantName[].$append")
 #1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation
 # Kommentar Doku:  getrennt durch "; ". Keine Abkürzungen benutzen, da die Stichworte in Register 9 indexiert werden. Zitate aus Quellen in Anführungszeichen; bei sehr langen, biogr. Anmerkungen wird der Text auf mehrere Kategorien aufgeteilt: #1z2, #1z3, #1z4 ... #1z9. Bei eingespielten Biographien werden die Angaben zum Originalwerk am Ende angegeben:  --- [Daten übernommen aus: ....]
 
-
+vacuum()
 retain(
   "rppdId", 
   "id", 
   "preferredName",
   "variantName[]"
   )
+	

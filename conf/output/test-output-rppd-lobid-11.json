@@ -2,5 +2,6 @@
   "rppdId" : "pk00020",
   "id" : "https://lbz.rlp.de/rppd/pk00020",
   "preferredName" : "Bücker, Carl Clemens / 1895-1976",
-  "variantName" : [ "Bücker, Carl Clemens" ]
+  "variantName" : [ "Bücker, Carl Clemens" ],
+  "dateOfBirth" : [ "11.02.1895" ]
 }

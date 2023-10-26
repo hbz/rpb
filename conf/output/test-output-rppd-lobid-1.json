@@ -2,5 +2,6 @@
   "rppdId" : "pk00007",
   "id" : "https://lbz.rlp.de/rppd/pk00007",
   "preferredName" : "Cornelius, Otto / 1896-1984",
-  "variantName" : [ "Cornelius, Otto" ]
+  "variantName" : [ "Cornelius, Otto" ],
+  "dateOfBirth" : [ "14.11.1896" ]
 }

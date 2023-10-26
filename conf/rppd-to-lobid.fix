@@ -13,6 +13,9 @@ prepend("id","https://lbz.rlp.de/rppd/")
 # Name ist aber Kombination aus Geburtsdaten und Name e.g. "f1na": "Marquard, Udo / 1959-"
 # Daher müss alles hinter dem Namen ab dem Leerzeichen gelöscht werden
 
+copy_field("f1na", "preferredName")
+
+
 # ------
 # #1nc (Name Vw-Formen (m)) und #1nd (Andere Namensformen (m)) -> variantName
 # In 1nc kann es sein, dass der Name aus #1na erneut wieder vorkommt, das könnte man mit einem Conditional prüfen.
@@ -98,4 +101,6 @@ prepend("id","https://lbz.rlp.de/rppd/")
 
 retain(
   "rppdId", 
-  "id")
+  "id", 
+  "preferredName"
+  )

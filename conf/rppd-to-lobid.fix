@@ -25,7 +25,7 @@ copy_field("f1na", "preferredName")
 set_array("variantName[]")
 copy_field("f1nc[].*.f1nc", "variantName[].$append")
 copy_field("f1nd[].*.f1nd", "variantName[].$append")
-
+uniq("variantName[]")
 
 
 # -------

@@ -1,36 +1,3 @@
 {
-  "f00_" : "pk06675",
-  "f1na" : "Alexander, Philipp / 1787-1864",
-  "f1np" : "1787",
-  "f1nr" : "1864",
-  "f1nv" : "mmm",
-  "f1ny" : "20190702",
-  "f82b" : "Keine GND-Ansetzung für pk06675",
-  "f95_" : "20190702/12:40:06\u001FRPPD",
-  "f96_" : "20190806/11:53:18\u001FRPPD",
-  "f1nn" : [ {
-    "f1nn" : "_4061949n7_"
-  }, {
-    "f1nn" : "_4170830n1_"
-  }, {
-    "f1nn" : "_4301425n2_"
-  } ],
-  "f1no" : [ {
-    "f1no" : "_o31500000_"
-  } ],
-  "f1nw" : [ {
-    "f1nw" : "_swn10x12p_"
-  }, {
-    "f1nw" : "_swn10x13p_"
-  }, {
-    "f1nw" : "_swn14x4p_"
-  } ],
-  "f1nx" : [ {
-    "f1nx" : "Duttenhöfer, Eva-Maria: Gebrüder Alexander : 200 Jahre Musikinstrumentenbau in Mainz, Mainz 1982"
-  } ],
-  "f1z1" : [ {
-    "f1z1" : "[FAMILIE]pk06671[/HR]Zur Familiengeschichte Alexander[/FAMILIE]"
-  }, {
-    "f1z1" : "Blieb ledig; führte zunächst die Berufsbezeichnung \"Drechsler\", später kam \"Instrumentenmacher\" hinzu"
-  } ]
+  "rppdId" : "pk06675"
 }

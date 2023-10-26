@@ -4,6 +4,10 @@ nothing()
 #00 RPPD-ID 
 # Komentar Doku:  (Achtung: 00 BLANK)
 
+copy_field("f00_","rppdId")
+copy_field("f00_","id")
+prepend("id","https://lbz.rlp.de/rppd/")
+
 
 # #1na (Name, bevorzugte Form) -> preferredName
 # Name ist aber Kombination aus Geburtsdaten und Name e.g. "f1na": "Marquard, Udo / 1959-"
@@ -90,3 +94,6 @@ nothing()
 # -------
 #1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation
 # Kommentar Doku:  getrennt durch "; ". Keine Abkürzungen benutzen, da die Stichworte in Register 9 indexiert werden. Zitate aus Quellen in Anführungszeichen; bei sehr langen, biogr. Anmerkungen wird der Text auf mehrere Kategorien aufgeteilt: #1z2, #1z3, #1z4 ... #1z9. Bei eingespielten Biographien werden die Angaben zum Originalwerk am Ende angegeben:  --- [Daten übernommen aus: ....]
+
+
+retain("rppdId")

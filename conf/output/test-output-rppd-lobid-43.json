@@ -1,18 +1,3 @@
 {
-  "f00_" : "ps01055",
-  "f1na" : "Imo",
-  "f1nv" : "mmm",
-  "f1ny" : "20070412",
-  "f82b" : "235711-2",
-  "f95_" : "20070412/12:00:00\u001FSP",
-  "f96_" : "20230207/14:57:35\u001FZR",
-  "f14_" : "true",
-  "f1no" : [ {
-    "f1no" : "_o33800025_"
-  } ],
-  "f1z1" : [ {
-    "f1z1" : "*Wirkungsorte: Schifferstadt (französischstämmige Familie in Schifferstadt)."
-  }, {
-    "f1z1" : "es handelt sich wahrscheinlich um Aumont, Klärung war nicht möglich"
-  } ]
+  "rppdId" : "ps01055"
 }

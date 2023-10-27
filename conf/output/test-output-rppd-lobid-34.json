@@ -3,5 +3,6 @@
   "id" : "https://lbz.rlp.de/rppd/pta1499",
   "preferredName" : "Zunker, Wilhelm / 1895-1951",
   "dateOfBirth" : [ "15.03.1895" ],
-  "dateOfDeath" : [ "10.12.1951" ]
+  "dateOfDeath" : [ "10.12.1951" ],
+  "gndIdentifier" : "1051215595"
 }

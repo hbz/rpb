@@ -78,7 +78,7 @@ copy_field("f1nr", "dateOfDeath[].$append")
 # TODO: Wenn rppd ID angegeben wird, unterstriche löschen und zu URL transformieren (wie id) und auf Feld relatedPerson[].*.id mappen.
 
 # -------
-# #1nt	(persönl. Beziehungen (m, R) ->	relatedPerson (unspezifisch)	
+# #1nt	(persönl. Beziehungen (m, R)) ->	relatedPerson (unspezifisch)	
 # Kommentar Doku: RPPD-ID-Nr. mit Unterstrichen, falls Person bereits in RPPD aufgenommen (Bsp.: _pk0000_), sonst Klartext: Nachname, Vorname / Lebensdaten; getrennt mit @; nähere Ausführungen in 1nz notwendig; verknüpfte Person ist anklickbar 
 
 # -------
@@ -105,6 +105,8 @@ copy_field("f1nr", "dateOfDeath[].$append")
 #82b	(GND-ID (R)) ->	gndIdentifier	
 # Kommentar Doku:  ohne das vorangestellte Präfix (DE-588)
 
+copy_field("f82b", "gndIdentifier")
+
 # -------
 #1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation
 # Kommentar Doku:  getrennt durch "; ". Keine Abkürzungen benutzen, da die Stichworte in Register 9 indexiert werden. Zitate aus Quellen in Anführungszeichen; bei sehr langen, biogr. Anmerkungen wird der Text auf mehrere Kategorien aufgeteilt: #1z2, #1z3, #1z4 ... #1z9. Bei eingespielten Biographien werden die Angaben zum Originalwerk am Ende angegeben:  --- [Daten übernommen aus: ....]
@@ -116,6 +118,7 @@ retain(
   "preferredName",
   "variantName[]",
   "dateOfBirth[]",
-  "dateOfDeath[]"
+  "dateOfDeath[]",
+  "gndIdentifier"
   )
 	

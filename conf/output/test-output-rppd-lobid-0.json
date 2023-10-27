@@ -3,5 +3,6 @@
   "id" : "https://lbz.rlp.de/rppd/pk00006",
   "preferredName" : "Humperdinck, Engelbert / 1854-1921",
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
-  "dateOfBirth" : [ "01.09.1854" ]
+  "dateOfBirth" : [ "01.09.1854" ],
+  "dateOfDeath" : [ "27.09.1921" ]
 }

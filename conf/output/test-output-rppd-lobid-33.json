@@ -2,5 +2,6 @@
   "rppdId" : "pta1498",
   "id" : "https://lbz.rlp.de/rppd/pta1498",
   "preferredName" : "Züscher, Peter / 1859-1915",
-  "dateOfBirth" : [ "03.12.1859" ]
+  "dateOfBirth" : [ "03.12.1859" ],
+  "dateOfDeath" : [ "03.06.1915" ]
 }

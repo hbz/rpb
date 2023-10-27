@@ -65,6 +65,9 @@ copy_field("f1np", "dateOfBirth[].$append")
 # #1nr (Sterbedatum) -> dateOfDeath
 ## Kommentar Doku: s. #1np
 
+set_array("dateOfDeath[]")
+copy_field("f1nr", "dateOfDeath[].$append")
+
 # -------
 # #1ns (Sterbeort (R)) -> placeOfDeath
 # Kommentar Doku: s. #1nq
@@ -112,6 +115,7 @@ retain(
   "id", 
   "preferredName",
   "variantName[]",
-  "dateOfBirth[]"
+  "dateOfBirth[]",
+  "dateOfDeath[]"
   )
 	

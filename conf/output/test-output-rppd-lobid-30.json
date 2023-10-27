@@ -2,5 +2,6 @@
   "rppdId" : "pta1495",
   "id" : "https://lbz.rlp.de/rppd/pta1495",
   "preferredName" : "Zimmermann, Konstantin / 1742-1825",
-  "dateOfBirth" : [ "27.12.1742" ]
+  "dateOfBirth" : [ "27.12.1742" ],
+  "dateOfDeath" : [ "06.05.1825" ]
 }

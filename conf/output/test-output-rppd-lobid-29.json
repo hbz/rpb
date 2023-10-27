@@ -2,5 +2,6 @@
   "rppdId" : "pta1493",
   "id" : "https://lbz.rlp.de/rppd/pta1493",
   "preferredName" : "Zimmer, Michael Kunibert / 1902-1974",
-  "dateOfBirth" : [ "05.01.1902" ]
+  "dateOfBirth" : [ "05.01.1902" ],
+  "dateOfDeath" : [ "21.12.1974" ]
 }

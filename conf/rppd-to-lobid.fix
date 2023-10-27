@@ -14,7 +14,8 @@ prepend("id","https://lbz.rlp.de/rppd/")
 # Daher müss alles hinter dem Namen ab dem Leerzeichen gelöscht werden
 
 copy_field("f1na", "preferredName")
-
+replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
+trim("preferredName")
 
 # ------
 # #1nc (Name Vw-Formen (m)) und #1nd (Andere Namensformen (m)) -> variantName

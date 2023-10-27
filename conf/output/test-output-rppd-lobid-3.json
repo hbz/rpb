@@ -5,6 +5,11 @@
   "variantName" : [ "Billaudelle, Karl" ],
   "dateOfBirth" : [ "05.11.1914" ],
   "dateOfDeath" : [ "01.07.2003" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2004-08-02"
   },

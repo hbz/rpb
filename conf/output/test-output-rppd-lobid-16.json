@@ -5,6 +5,11 @@
   "variantName" : [ "Meister, Simon" ],
   "dateOfBirth" : [ "20.12.1796" ],
   "dateOfDeath" : [ "29.02.1844" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2015-01-28"
   },

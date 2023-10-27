@@ -5,6 +5,11 @@
   "variantName" : [ "Zimmer, Jupp" ],
   "dateOfBirth" : [ "03.09.1919" ],
   "dateOfDeath" : [ "20.11.1995" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   },

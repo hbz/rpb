@@ -4,6 +4,11 @@
   "preferredName" : "Zettelmeyer, Hubert",
   "dateOfBirth" : [ "08.11.1866" ],
   "dateOfDeath" : [ "19.06.1930" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   },

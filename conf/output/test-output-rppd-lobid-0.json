@@ -5,6 +5,11 @@
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
   "dateOfBirth" : [ "01.09.1854" ],
   "dateOfDeath" : [ "27.09.1921" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2005-11-16"
   },

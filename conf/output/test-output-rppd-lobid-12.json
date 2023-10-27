@@ -5,6 +5,11 @@
   "variantName" : [ "Anschutz, Carl / 1818-1870", "Anschütz, Karl Friedrich Nikolaus / 1818-1870" ],
   "dateOfBirth" : [ "10.01.1818" ],
   "dateOfDeath" : [ "30.12.1870" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2020-12-02"
   },

@@ -90,6 +90,16 @@ copy_field("f1nr", "dateOfDeath[].$append")
 # #1nv	(Geschlecht) -> 	gender	
 # Kommentar Doku: "mmm" (männlich) oder "www" (weiblich) eintragen, 
 
+set_array("gender[]")
+if any_equal("f1nv", "mmm")
+  set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#male")
+  set_field("gender[].$append.label", "Männlich")
+end
+if any_equal("f1nv", "www")
+  set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#female")
+  set_field("gender[].$append.label", "Weiblich")
+end
+
 # -------
 # #1nw	(Fachgebiete (m)) -> 	gndSubjectCategory	
 # Kommentar Doku:  Normdaten aus SWN-Sätzen (Reg. 9 und Reg. 11), getrennt mit @: Bsp.: #1nw_swn12x2p_@_swn3x6p_; entspricht der GND-Systematik; paarig zu Berufen vergeben
@@ -124,6 +134,7 @@ retain(
   "dateOfBirth[]",
   "dateOfDeath[]",
   "gndIdentifier",
-  "describedBy"
+  "describedBy",
+  "gender[]"
   )
 	

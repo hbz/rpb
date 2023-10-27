@@ -4,6 +4,11 @@
   "preferredName" : "Ziegler, Jakob Anton",
   "dateOfBirth" : [ "15.06.1893" ],
   "dateOfDeath" : [ "12.05.1944" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2010-11-22"
   },

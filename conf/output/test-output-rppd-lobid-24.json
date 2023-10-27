@@ -4,6 +4,11 @@
   "preferredName" : "Zillgen, Friedrich Josef",
   "dateOfBirth" : [ "29.08.1806" ],
   "dateOfDeath" : [ "10.06.1870" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   },

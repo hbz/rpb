@@ -4,6 +4,11 @@
   "preferredName" : "Henninger, Wilhelm Albert",
   "dateOfBirth" : [ "1912" ],
   "dateOfDeath" : [ "1995" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2005-12-08"
   },

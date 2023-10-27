@@ -5,6 +5,11 @@
   "variantName" : [ "Cornelius, Otto" ],
   "dateOfBirth" : [ "14.11.1896" ],
   "dateOfDeath" : [ "1984" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2011-02-18"
   },

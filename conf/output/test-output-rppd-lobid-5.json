@@ -3,6 +3,11 @@
   "id" : "https://lbz.rlp.de/rppd/pk00012",
   "preferredName" : "Marquard, Udo",
   "dateOfBirth" : [ "1959" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2004-08-04"
   },

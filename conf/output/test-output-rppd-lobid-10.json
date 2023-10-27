@@ -4,6 +4,11 @@
   "preferredName" : "Oppermann, Julius",
   "dateOfBirth" : [ "09.06.1825" ],
   "dateOfDeath" : [ "01.01.1880" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2010-08-02"
   },

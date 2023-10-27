@@ -5,6 +5,11 @@
   "variantName" : [ "Reinirkens, Leonhard" ],
   "dateOfBirth" : [ "07.08.1924" ],
   "dateOfDeath" : [ "23.03.2008" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2008-03-31"
   },

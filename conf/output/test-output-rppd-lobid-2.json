@@ -4,6 +4,11 @@
   "preferredName" : "Daub, Richard",
   "dateOfBirth" : [ "04.04.1895" ],
   "dateOfDeath" : [ "23.04.1972" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2004-12-20"
   },

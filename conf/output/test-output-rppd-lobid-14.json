@@ -2,6 +2,11 @@
   "rppdId" : "pk00023",
   "id" : "https://lbz.rlp.de/rppd/pk00023",
   "preferredName" : "Giefer, Willy",
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2005-11-30"
   },

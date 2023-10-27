@@ -5,6 +5,11 @@
   "variantName" : [ "Altgelt, Johann Philipp" ],
   "dateOfBirth" : [ "1603" ],
   "dateOfDeath" : [ "12.12.1658" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-03-20"
   },

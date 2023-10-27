@@ -5,6 +5,11 @@
   "variantName" : [ "Gabele, Anton" ],
   "dateOfBirth" : [ "28.07.1890" ],
   "dateOfDeath" : [ "13.08.1966" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2007-03-06"
   },

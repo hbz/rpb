@@ -5,6 +5,11 @@
   "variantName" : [ "Zenz, Emil" ],
   "dateOfBirth" : [ "24.07.1912" ],
   "dateOfDeath" : [ "03.02.1994" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
+  }, {
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   },

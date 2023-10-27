@@ -3,5 +3,8 @@
   "id" : "https://lbz.rlp.de/rppd/pk00012",
   "preferredName" : "Marquard, Udo / 1959-",
   "dateOfBirth" : [ "1959" ],
+  "describedBy" : {
+    "dateModified" : "2004-08-04"
+  },
   "gndIdentifier" : "1051147360"
 }

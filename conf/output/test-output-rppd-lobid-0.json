@@ -5,5 +5,8 @@
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
   "dateOfBirth" : [ "01.09.1854" ],
   "dateOfDeath" : [ "27.09.1921" ],
+  "describedBy" : {
+    "dateModified" : "2005-11-16"
+  },
   "gndIdentifier" : "11855476X"
 }

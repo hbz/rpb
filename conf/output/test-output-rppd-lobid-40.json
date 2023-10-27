@@ -4,5 +4,8 @@
   "preferredName" : "Herr-Beck, Maria / 1928-2015",
   "dateOfBirth" : [ "08.06.1928" ],
   "dateOfDeath" : [ "07.10.2015" ],
+  "describedBy" : {
+    "dateModified" : "2015-12-01"
+  },
   "gndIdentifier" : "1120816653"
 }

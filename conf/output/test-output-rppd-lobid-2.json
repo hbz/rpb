@@ -4,5 +4,8 @@
   "preferredName" : "Daub, Richard / 1895-1972",
   "dateOfBirth" : [ "04.04.1895" ],
   "dateOfDeath" : [ "23.04.1972" ],
+  "describedBy" : {
+    "dateModified" : "2004-12-20"
+  },
   "gndIdentifier" : "1051147352"
 }

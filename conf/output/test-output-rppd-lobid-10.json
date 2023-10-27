@@ -4,5 +4,8 @@
   "preferredName" : "Oppermann, Julius / 1825-1880",
   "dateOfBirth" : [ "09.06.1825" ],
   "dateOfDeath" : [ "01.01.1880" ],
+  "describedBy" : {
+    "dateModified" : "2010-08-02"
+  },
   "gndIdentifier" : "1051147387"
 }

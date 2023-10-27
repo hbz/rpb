@@ -5,5 +5,8 @@
   "variantName" : [ "Grün, Willi-Heinz / 1932-2016", "Grün, Willi Heinz / 1932-2016", "Grün, Willi H. / 1932-2016" ],
   "dateOfBirth" : [ "10.10.1932" ],
   "dateOfDeath" : [ "28.09.2016" ],
+  "describedBy" : {
+    "dateModified" : "2016-10-05"
+  },
   "gndIdentifier" : "120526433"
 }

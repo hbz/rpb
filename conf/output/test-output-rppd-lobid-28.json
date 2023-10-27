@@ -5,5 +5,8 @@
   "variantName" : [ "Zimmer, Jupp" ],
   "dateOfBirth" : [ "03.09.1919" ],
   "dateOfDeath" : [ "20.11.1995" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "1051217350"
 }

@@ -4,5 +4,8 @@
   "preferredName" : "Alexander, Philipp / 1787-1864",
   "dateOfBirth" : [ "1787" ],
   "dateOfDeath" : [ "1864" ],
+  "describedBy" : {
+    "dateModified" : "2019-07-02"
+  },
   "gndIdentifier" : "Keine GND-Ansetzung für pk06675"
 }

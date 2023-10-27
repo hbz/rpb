@@ -3,5 +3,8 @@
   "id" : "https://lbz.rlp.de/rppd/pk00015",
   "preferredName" : "Anhäuser, Uwe / 1943-",
   "dateOfBirth" : [ "01.11.1943" ],
+  "describedBy" : {
+    "dateModified" : "2004-08-02"
+  },
   "gndIdentifier" : "115839909"
 }

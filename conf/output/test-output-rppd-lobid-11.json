@@ -5,5 +5,8 @@
   "variantName" : [ "Bücker, Carl Clemens" ],
   "dateOfBirth" : [ "11.02.1895" ],
   "dateOfDeath" : [ "03.03.1976" ],
+  "describedBy" : {
+    "dateModified" : "2010-10-28"
+  },
   "gndIdentifier" : "123205670"
 }

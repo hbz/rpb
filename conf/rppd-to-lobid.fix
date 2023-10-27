@@ -101,6 +101,9 @@ copy_field("f1nr", "dateOfDeath[].$append")
 #1ny	(Datum der letzten inhaltlichen Änderung) ->	describedBy.dateModified	
 # Kommentar Doku:  JJJJMMTT, z.B. 20120928 für 28.09.2012
 
+replace_all("f1ny", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
+copy_field("f1ny", "describedBy.dateModified")
+
 # -------
 #82b	(GND-ID (R)) ->	gndIdentifier	
 # Kommentar Doku:  ohne das vorangestellte Präfix (DE-588)
@@ -119,6 +122,7 @@ retain(
   "variantName[]",
   "dateOfBirth[]",
   "dateOfDeath[]",
-  "gndIdentifier"
+  "gndIdentifier",
+  "describedBy"
   )
 	

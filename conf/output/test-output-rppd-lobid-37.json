@@ -5,5 +5,8 @@
   "variantName" : [ "Dönges, Klaus", "Dönges, Klaus / 1935-" ],
   "dateOfBirth" : [ "25.05.1935" ],
   "dateOfDeath" : [ "14.04.2023" ],
+  "describedBy" : {
+    "dateModified" : "2023-06-01"
+  },
   "gndIdentifier" : "1027971725"
 }

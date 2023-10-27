@@ -4,5 +4,8 @@
   "preferredName" : "Ziegler, Jakob Anton / 1893-1944",
   "dateOfBirth" : [ "15.06.1893" ],
   "dateOfDeath" : [ "12.05.1944" ],
+  "describedBy" : {
+    "dateModified" : "2010-11-22"
+  },
   "gndIdentifier" : "105121551X"
 }

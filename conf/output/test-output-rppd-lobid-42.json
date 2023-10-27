@@ -3,5 +3,8 @@
   "id" : "https://lbz.rlp.de/rppd/pk03654",
   "preferredName" : "Ratka, Alexander Simon / 1977-",
   "dateOfBirth" : [ "1977" ],
+  "describedBy" : {
+    "dateModified" : "2009-09-23"
+  },
   "gndIdentifier" : "Keine GND-Ansetzung für pk03654"
 }

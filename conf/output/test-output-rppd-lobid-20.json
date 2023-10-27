@@ -5,5 +5,8 @@
   "variantName" : [ "Zenzen, Eucharius ¬[Ordensname]¬" ],
   "dateOfBirth" : [ "17.10.1903" ],
   "dateOfDeath" : [ "16.04.1963" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "105121548X"
 }

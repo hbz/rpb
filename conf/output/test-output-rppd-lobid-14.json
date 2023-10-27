@@ -2,5 +2,8 @@
   "rppdId" : "pk00023",
   "id" : "https://lbz.rlp.de/rppd/pk00023",
   "preferredName" : "Giefer, Willy",
+  "describedBy" : {
+    "dateModified" : "2005-11-30"
+  },
   "gndIdentifier" : "1051147409"
 }

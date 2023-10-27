@@ -5,5 +5,8 @@
   "variantName" : [ "Reinirkens, Leonhard" ],
   "dateOfBirth" : [ "07.08.1924" ],
   "dateOfDeath" : [ "23.03.2008" ],
+  "describedBy" : {
+    "dateModified" : "2008-03-31"
+  },
   "gndIdentifier" : "122507487"
 }

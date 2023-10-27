@@ -5,5 +5,8 @@
   "variantName" : [ "Zenz, Emil" ],
   "dateOfBirth" : [ "24.07.1912" ],
   "dateOfDeath" : [ "03.02.1994" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "11698211X"
 }

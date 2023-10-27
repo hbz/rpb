@@ -4,5 +4,8 @@
   "preferredName" : "Zweiffel, Karl Hermann / 1800-",
   "dateOfBirth" : [ "17.08.1800" ],
   "dateOfDeath" : [ "unbekannt" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "1051215609"
 }

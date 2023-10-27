@@ -4,5 +4,8 @@
   "preferredName" : "Henninger, Wilhelm Albert / 1912-1995",
   "dateOfBirth" : [ "1912" ],
   "dateOfDeath" : [ "1995" ],
+  "describedBy" : {
+    "dateModified" : "2005-12-08"
+  },
   "gndIdentifier" : "1051147379"
 }

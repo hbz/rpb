@@ -4,5 +4,8 @@
   "preferredName" : "Zettelmeyer, Hubert / 1866-1930",
   "dateOfBirth" : [ "08.11.1866" ],
   "dateOfDeath" : [ "19.06.1930" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "1051215498"
 }

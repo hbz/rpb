@@ -4,5 +4,8 @@
   "preferredName" : "Zirbes, Peter / 1825-1901",
   "dateOfBirth" : [ "10.01.1825" ],
   "dateOfDeath" : [ "14.11.1901" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "117006084"
 }

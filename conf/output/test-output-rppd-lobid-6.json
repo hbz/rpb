@@ -5,5 +5,8 @@
   "variantName" : [ "Gabele, Anton" ],
   "dateOfBirth" : [ "28.07.1890" ],
   "dateOfDeath" : [ "13.08.1966" ],
+  "describedBy" : {
+    "dateModified" : "2007-03-06"
+  },
   "gndIdentifier" : "116324899"
 }

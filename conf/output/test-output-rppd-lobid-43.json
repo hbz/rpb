@@ -2,5 +2,8 @@
   "rppdId" : "ps01055",
   "id" : "https://lbz.rlp.de/rppd/ps01055",
   "preferredName" : "Imo",
+  "describedBy" : {
+    "dateModified" : "2007-04-12"
+  },
   "gndIdentifier" : "235711-2"
 }

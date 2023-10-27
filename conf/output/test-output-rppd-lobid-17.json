@@ -5,5 +5,8 @@
   "variantName" : [ "Bodewig, Robert / 1857-1923" ],
   "dateOfBirth" : [ "01.12.1857" ],
   "dateOfDeath" : [ "02.12.1923" ],
+  "describedBy" : {
+    "dateModified" : "2006-05-15"
+  },
   "gndIdentifier" : "120260948"
 }

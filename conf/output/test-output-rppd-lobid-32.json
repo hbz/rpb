@@ -5,5 +5,8 @@
   "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],
   "dateOfBirth" : [ "24.04.1836" ],
   "dateOfDeath" : [ "1917" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "117021652"
 }

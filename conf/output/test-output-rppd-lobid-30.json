@@ -4,5 +4,8 @@
   "preferredName" : "Zimmermann, Konstantin / 1742-1825",
   "dateOfBirth" : [ "27.12.1742" ],
   "dateOfDeath" : [ "06.05.1825" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "1051215579"
 }

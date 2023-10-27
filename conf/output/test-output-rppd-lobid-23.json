@@ -4,5 +4,8 @@
   "preferredName" : "Zill, Egon / 1906-1974",
   "dateOfBirth" : [ "26.03.1906" ],
   "dateOfDeath" : [ "23.10.1974" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "126790086"
 }

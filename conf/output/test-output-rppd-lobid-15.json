@@ -4,5 +4,8 @@
   "preferredName" : "Lehnen, Ewald / 1894-1989",
   "dateOfBirth" : [ "02.01.1894" ],
   "dateOfDeath" : [ "Oktober 1989" ],
+  "describedBy" : {
+    "dateModified" : "2005-11-16"
+  },
   "gndIdentifier" : "1051147425"
 }

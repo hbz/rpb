@@ -4,5 +4,8 @@
   "preferredName" : "Zillgen, Friedrich Josef / 1806-1870",
   "dateOfBirth" : [ "29.08.1806" ],
   "dateOfDeath" : [ "10.06.1870" ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
   "gndIdentifier" : "1051215528"
 }

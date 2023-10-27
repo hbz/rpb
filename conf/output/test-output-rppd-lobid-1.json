@@ -5,5 +5,8 @@
   "variantName" : [ "Cornelius, Otto" ],
   "dateOfBirth" : [ "14.11.1896" ],
   "dateOfDeath" : [ "1984" ],
+  "describedBy" : {
+    "dateModified" : "2011-02-18"
+  },
   "gndIdentifier" : "1011283956"
 }

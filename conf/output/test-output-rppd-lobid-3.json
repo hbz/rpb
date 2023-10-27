@@ -5,5 +5,8 @@
   "variantName" : [ "Billaudelle, Karl" ],
   "dateOfBirth" : [ "05.11.1914" ],
   "dateOfDeath" : [ "01.07.2003" ],
+  "describedBy" : {
+    "dateModified" : "2004-08-02"
+  },
   "gndIdentifier" : "13334066X"
 }

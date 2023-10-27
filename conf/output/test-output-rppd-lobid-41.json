@@ -2,5 +2,8 @@
   "rppdId" : "pk02366",
   "id" : "https://lbz.rlp.de/rppd/pk02366",
   "preferredName" : "Fuchs, Gerhard",
+  "describedBy" : {
+    "dateModified" : "2008-02-22"
+  },
   "gndIdentifier" : "Keine GND-Ansetzung für pk02366"
 }

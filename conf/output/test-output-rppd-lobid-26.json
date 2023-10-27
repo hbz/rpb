@@ -5,5 +5,8 @@
   "variantName" : [ "Zilliken, Kaspar Joseph", "Zilliken, Joseph" ],
   "dateOfBirth" : [ "17.09.1872" ],
   "dateOfDeath" : [ "03.10.1942" ],
+  "describedBy" : {
+    "dateModified" : "2014-06-16"
+  },
   "gndIdentifier" : "1051215536"
 }

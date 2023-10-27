@@ -5,5 +5,8 @@
   "variantName" : [ "Altgelt, Johann Philipp" ],
   "dateOfBirth" : [ "1603" ],
   "dateOfDeath" : [ "12.12.1658" ],
+  "describedBy" : {
+    "dateModified" : "2006-03-20"
+  },
   "gndIdentifier" : "1051147433"
 }

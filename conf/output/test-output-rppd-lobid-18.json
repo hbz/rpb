@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/1051147433",
   "rppdId" : "pk00032",
-  "id" : "https://lbz.rlp.de/rppd/pk00032",
+  "gndIdentifier" : "1051147433",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Altgeld, Johann Philipp",
   "variantName" : [ "Altgelt, Johann Philipp" ],
+  "professionOrOccupation" : [ {
+    "label" : "Pfarrer / Katholische Kirche",
+    "id" : "https://rpb.lobid.org/sw/929n170632"
+  }, {
+    "label" : "Lehrer",
+    "id" : "https://rpb.lobid.org/sw/4035088n5"
+  } ],
   "dateOfBirth" : [ "1603" ],
   "dateOfDeath" : [ "1658-12-12" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-03-20"
-  },
-  "gndIdentifier" : "1051147433"
+  }
 }

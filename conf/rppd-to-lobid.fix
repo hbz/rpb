@@ -62,8 +62,12 @@ do list(path:"f1nn[]", "var": "$i")
   copy_field("$i.f1nn", "professionOrOccupation[].$append.label")
   copy_field("$i.f1nn", "professionOrOccupation[].$last.id")
 end
+
 do list(path:"professionOrOccupation[]", "var": "$i")
-  lookup("$i.label", "SW_map")
+  lookup("$i.label", "SW_map", delete: "true")
+  if exists("$i.label")
+    prepend("$i.id", "https://rpb.lobid.org/sw/")
+  end
 end
   
 

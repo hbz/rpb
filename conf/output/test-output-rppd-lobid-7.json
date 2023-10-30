@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/1051147379",
   "rppdId" : "pk00014",
-  "id" : "https://lbz.rlp.de/rppd/pk00014",
+  "gndIdentifier" : "1051147379",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Henninger, Wilhelm Albert",
+  "professionOrOccupation" : [ {
+    "label" : "Heimatschriftsteller",
+    "id" : "https://rpb.lobid.org/sw/4772761n5"
+  } ],
   "dateOfBirth" : [ "1912" ],
   "dateOfDeath" : [ "1995" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2005-12-08"
-  },
-  "gndIdentifier" : "1051147379"
+  }
 }

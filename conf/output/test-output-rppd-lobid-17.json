@@ -1,8 +1,23 @@
 {
+  "id" : "https://d-nb.info/gnd/120260948",
   "rppdId" : "pk00031",
-  "id" : "https://lbz.rlp.de/rppd/pk00031",
+  "gndIdentifier" : "120260948",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Bodewig, Robert",
   "variantName" : [ "Bodewig, Robert / 1857-1923" ],
+  "professionOrOccupation" : [ {
+    "label" : "Klassischer Philologe",
+    "id" : "https://rpb.lobid.org/sw/4199241n6"
+  }, {
+    "label" : "Historiker",
+    "id" : "https://rpb.lobid.org/sw/4025098n2"
+  }, {
+    "label" : "Archäologe",
+    "id" : "https://rpb.lobid.org/sw/4191824n1"
+  }, {
+    "label" : "Gymnasiallehrer",
+    "id" : "https://rpb.lobid.org/sw/4158589n6"
+  } ],
   "dateOfBirth" : [ "1857-12-01" ],
   "dateOfDeath" : [ "1923-12-02" ],
   "gender" : [ {
@@ -11,6 +26,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-05-15"
-  },
-  "gndIdentifier" : "120260948"
+  }
 }

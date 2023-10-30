@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/1051215609",
   "rppdId" : "pta1500",
-  "id" : "https://lbz.rlp.de/rppd/pta1500",
+  "gndIdentifier" : "1051215609",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zweiffel, Karl Hermann",
+  "professionOrOccupation" : [ {
+    "label" : "Richter",
+    "id" : "https://rpb.lobid.org/sw/4049923n6"
+  } ],
   "dateOfBirth" : [ "1800-08-17" ],
   "dateOfDeath" : [ "unbekannt" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "1051215609"
+  }
 }

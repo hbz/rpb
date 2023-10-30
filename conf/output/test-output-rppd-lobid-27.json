@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/1051215544",
   "rppdId" : "pta1491",
-  "id" : "https://lbz.rlp.de/rppd/pta1491",
+  "gndIdentifier" : "1051215544",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zimmer, Franz Nikolaus",
+  "professionOrOccupation" : [ {
+    "label" : "Lehrer",
+    "id" : "https://rpb.lobid.org/sw/4035088n5"
+  } ],
   "dateOfBirth" : [ "1883-07-28" ],
   "dateOfDeath" : [ "1955-05-16" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "1051215544"
+  }
 }

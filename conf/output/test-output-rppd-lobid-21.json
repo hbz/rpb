@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/1051215498",
   "rppdId" : "pta1483",
-  "id" : "https://lbz.rlp.de/rppd/pta1483",
+  "gndIdentifier" : "1051215498",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zettelmeyer, Hubert",
+  "professionOrOccupation" : [ {
+    "label" : "Unternehmer",
+    "id" : "https://rpb.lobid.org/sw/4061949n7"
+  } ],
   "dateOfBirth" : [ "1866-11-08" ],
   "dateOfDeath" : [ "1930-06-19" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "1051215498"
+  }
 }

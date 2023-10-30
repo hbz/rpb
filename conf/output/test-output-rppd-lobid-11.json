@@ -1,8 +1,14 @@
 {
+  "id" : "https://d-nb.info/gnd/123205670",
   "rppdId" : "pk00020",
-  "id" : "https://lbz.rlp.de/rppd/pk00020",
+  "gndIdentifier" : "123205670",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Bücker, Carl Clemens",
   "variantName" : [ "Bücker, Carl Clemens" ],
+  "professionOrOccupation" : [ {
+    "label" : "Flugzeugkonstrukteur",
+    "id" : "https://rpb.lobid.org/sw/00Sn02x0286a"
+  } ],
   "dateOfBirth" : [ "1895-02-11" ],
   "dateOfDeath" : [ "1976-03-03" ],
   "gender" : [ {
@@ -11,6 +17,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2010-10-28"
-  },
-  "gndIdentifier" : "123205670"
+  }
 }

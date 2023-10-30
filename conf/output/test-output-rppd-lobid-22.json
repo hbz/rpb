@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/105121551X",
   "rppdId" : "pta1485",
-  "id" : "https://lbz.rlp.de/rppd/pta1485",
+  "gndIdentifier" : "105121551X",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Ziegler, Jakob Anton",
+  "professionOrOccupation" : [ {
+    "label" : "Pfarrer / Katholische Kirche",
+    "id" : "https://rpb.lobid.org/sw/929n170632"
+  } ],
   "dateOfBirth" : [ "1893-06-15" ],
   "dateOfDeath" : [ "1944-05-12" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2010-11-22"
-  },
-  "gndIdentifier" : "105121551X"
+  }
 }

@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/1051217350",
   "rppdId" : "pta1492",
-  "id" : "https://lbz.rlp.de/rppd/pta1492",
+  "gndIdentifier" : "1051217350",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zimmer, Josef",
   "variantName" : [ "Zimmer, Jupp" ],
+  "professionOrOccupation" : [ {
+    "label" : "Maler",
+    "id" : "https://rpb.lobid.org/sw/4037215n7"
+  }, {
+    "label" : "Bildhauer",
+    "id" : "https://rpb.lobid.org/sw/4139550n5"
+  } ],
   "dateOfBirth" : [ "1919-09-03" ],
   "dateOfDeath" : [ "1995-11-20" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "1051217350"
+  }
 }

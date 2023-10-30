@@ -1,8 +1,14 @@
 {
+  "id" : "https://d-nb.info/gnd/1051215536",
   "rppdId" : "pta1489",
-  "id" : "https://lbz.rlp.de/rppd/pta1489",
+  "gndIdentifier" : "1051215536",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zilliken, Kaspar Josef",
   "variantName" : [ "Zilliken, Kaspar Joseph", "Zilliken, Joseph" ],
+  "professionOrOccupation" : [ {
+    "label" : "Dekan / Kirche",
+    "id" : "https://rpb.lobid.org/sw/4441540n0"
+  } ],
   "dateOfBirth" : [ "1872-09-17" ],
   "dateOfDeath" : [ "1942-10-03" ],
   "gender" : [ {
@@ -11,6 +17,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2014-06-16"
-  },
-  "gndIdentifier" : "1051215536"
+  }
 }

@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/1051215528",
   "rppdId" : "pta1487",
-  "id" : "https://lbz.rlp.de/rppd/pta1487",
+  "gndIdentifier" : "1051215528",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zillgen, Friedrich Josef",
+  "professionOrOccupation" : [ {
+    "label" : "Polizeibeamter",
+    "id" : "https://rpb.lobid.org/sw/4135253n1"
+  } ],
   "dateOfBirth" : [ "1806-08-29" ],
   "dateOfDeath" : [ "1870-06-10" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "1051215528"
+  }
 }

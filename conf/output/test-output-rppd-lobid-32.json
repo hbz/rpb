@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/117021652",
   "rppdId" : "pta1497",
-  "id" : "https://lbz.rlp.de/rppd/pta1497",
+  "gndIdentifier" : "117021652",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zuckermandel, Moses S.",
   "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],
+  "professionOrOccupation" : [ {
+    "label" : "Rabbiner",
+    "id" : "https://rpb.lobid.org/sw/4176751n2"
+  }, {
+    "label" : "Talmudist",
+    "id" : "https://rpb.lobid.org/sw/4293593n3"
+  } ],
   "dateOfBirth" : [ "1836-04-24" ],
   "dateOfDeath" : [ "1917" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "117021652"
+  }
 }

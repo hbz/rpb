@@ -1,7 +1,13 @@
 {
+  "id" : "https://rppd.lobid.org/pk03654",
   "rppdId" : "pk03654",
-  "id" : "https://lbz.rlp.de/rppd/pk03654",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk03654",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Ratka, Alexander Simon",
+  "professionOrOccupation" : [ {
+    "label" : "Bildhauer",
+    "id" : "https://rpb.lobid.org/sw/4139550n5"
+  } ],
   "dateOfBirth" : [ "1977" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
@@ -9,6 +15,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2009-09-23"
-  },
-  "gndIdentifier" : "Keine GND-Ansetzung für pk03654"
+  }
 }

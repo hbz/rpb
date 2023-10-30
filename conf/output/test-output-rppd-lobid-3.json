@@ -1,8 +1,20 @@
 {
+  "id" : "https://d-nb.info/gnd/13334066X",
   "rppdId" : "pk00010",
-  "id" : "https://lbz.rlp.de/rppd/pk00010",
+  "gndIdentifier" : "13334066X",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Billaudelle, Karl",
   "variantName" : [ "Billaudelle, Karl" ],
+  "professionOrOccupation" : [ {
+    "label" : "Gymnasiallehrer",
+    "id" : "https://rpb.lobid.org/sw/4158589n6"
+  }, {
+    "label" : "Schriftsteller",
+    "id" : "https://rpb.lobid.org/sw/4053309n8"
+  }, {
+    "label" : "Verleger",
+    "id" : "https://rpb.lobid.org/sw/4138343n6"
+  } ],
   "dateOfBirth" : [ "1914-11-05" ],
   "dateOfDeath" : [ "2003-07-01" ],
   "gender" : [ {
@@ -11,6 +23,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2004-08-02"
-  },
-  "gndIdentifier" : "13334066X"
+  }
 }

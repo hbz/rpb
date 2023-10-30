@@ -1,13 +1,21 @@
 {
+  "id" : "https://rppd.lobid.org/pk02366",
   "rppdId" : "pk02366",
-  "id" : "https://lbz.rlp.de/rppd/pk02366",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk02366",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Fuchs, Gerhard",
+  "professionOrOccupation" : [ {
+    "label" : "Beigeordneter",
+    "id" : "https://rpb.lobid.org/sw/4144367n6"
+  }, {
+    "label" : "Kommunalpolitiker",
+    "id" : "https://rpb.lobid.org/sw/4396366n3"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {
     "dateModified" : "2008-02-22"
-  },
-  "gndIdentifier" : "Keine GND-Ansetzung für pk02366"
+  }
 }

@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/11698211X",
   "rppdId" : "pta1481",
-  "id" : "https://lbz.rlp.de/rppd/pta1481",
+  "gndIdentifier" : "11698211X",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zenz, Emil",
   "variantName" : [ "Zenz, Emil" ],
+  "professionOrOccupation" : [ {
+    "label" : "Lehrer",
+    "id" : "https://rpb.lobid.org/sw/4035088n5"
+  }, {
+    "label" : "Bürgermeister",
+    "id" : "https://rpb.lobid.org/sw/4136676n1"
+  } ],
   "dateOfBirth" : [ "1912-07-24" ],
   "dateOfDeath" : [ "1994-02-03" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "11698211X"
+  }
 }

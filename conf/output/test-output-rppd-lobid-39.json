@@ -1,8 +1,20 @@
 {
+  "id" : "https://d-nb.info/gnd/143451308",
   "rppdId" : "pk04515",
-  "id" : "https://lbz.rlp.de/rppd/pk04515",
+  "gndIdentifier" : "143451308",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Schneider, Anton",
   "variantName" : [ "Schneider, Anton / Bürgermeister" ],
+  "professionOrOccupation" : [ {
+    "label" : "Bürgermeister",
+    "id" : "https://rpb.lobid.org/sw/4136676n1"
+  }, {
+    "label" : "Landwirt",
+    "id" : "https://rpb.lobid.org/sw/4034399n6"
+  }, {
+    "label" : "Gastwirt",
+    "id" : "https://rpb.lobid.org/sw/4156075n9"
+  } ],
   "dateOfBirth" : [ "1899-11-12" ],
   "dateOfDeath" : [ "1973-06-24" ],
   "gender" : [ {
@@ -11,6 +23,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2011-02-03"
-  },
-  "gndIdentifier" : "143451308"
+  }
 }

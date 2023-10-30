@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/1051147425",
   "rppdId" : "pk00028",
-  "id" : "https://lbz.rlp.de/rppd/pk00028",
+  "gndIdentifier" : "1051147425",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Lehnen, Ewald",
+  "professionOrOccupation" : [ {
+    "label" : "Tiefbauingenieur",
+    "id" : "https://rpb.lobid.org/sw/00Sn02x8761a"
+  } ],
   "dateOfBirth" : [ "1894-01-02" ],
   "dateOfDeath" : [ "Oktober 1989" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2005-11-16"
-  },
-  "gndIdentifier" : "1051147425"
+  }
 }

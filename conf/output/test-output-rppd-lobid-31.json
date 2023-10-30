@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/117006084",
   "rppdId" : "pta1496",
-  "id" : "https://lbz.rlp.de/rppd/pta1496",
+  "gndIdentifier" : "117006084",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zirbes, Peter",
+  "professionOrOccupation" : [ {
+    "label" : "Lyriker",
+    "id" : "https://rpb.lobid.org/sw/4168391n2"
+  } ],
   "dateOfBirth" : [ "1825-01-10" ],
   "dateOfDeath" : [ "1901-11-14" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "117006084"
+  }
 }

@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/1051147352",
   "rppdId" : "pk00008",
-  "id" : "https://lbz.rlp.de/rppd/pk00008",
+  "gndIdentifier" : "1051147352",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Daub, Richard",
+  "professionOrOccupation" : [ {
+    "label" : "Lehrer",
+    "id" : "https://rpb.lobid.org/sw/4035088n5"
+  } ],
   "dateOfBirth" : [ "1895-04-04" ],
   "dateOfDeath" : [ "1972-04-23" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2004-12-20"
-  },
-  "gndIdentifier" : "1051147352"
+  }
 }

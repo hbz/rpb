@@ -1,7 +1,19 @@
 {
+  "id" : "https://d-nb.info/gnd/1028922108",
   "rppdId" : "pk02185",
-  "id" : "https://lbz.rlp.de/rppd/pk02185",
+  "gndIdentifier" : "1028922108",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Heinen, Norbert M.",
+  "professionOrOccupation" : [ {
+    "label" : "Jurist",
+    "id" : "https://rpb.lobid.org/sw/4029050n5"
+  }, {
+    "label" : "Landrat",
+    "id" : "https://rpb.lobid.org/sw/4166616n1"
+  }, {
+    "label" : "Ehrenamtliche Tätigkeit",
+    "id" : "https://rpb.lobid.org/sw/4013673n5"
+  } ],
   "dateOfBirth" : [ "1936-11-28" ],
   "dateOfDeath" : [ "2023-05-30" ],
   "gender" : [ {
@@ -10,6 +22,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2023-06-01"
-  },
-  "gndIdentifier" : "1028922108"
+  }
 }

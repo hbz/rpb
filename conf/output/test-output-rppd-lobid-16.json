@@ -1,8 +1,14 @@
 {
+  "id" : "https://d-nb.info/gnd/119280957",
   "rppdId" : "pk00030",
-  "id" : "https://lbz.rlp.de/rppd/pk00030",
+  "gndIdentifier" : "119280957",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Meister, Simon",
   "variantName" : [ "Meister, Simon" ],
+  "professionOrOccupation" : [ {
+    "label" : "Maler",
+    "id" : "https://rpb.lobid.org/sw/4037215n7"
+  } ],
   "dateOfBirth" : [ "1796-12-20" ],
   "dateOfDeath" : [ "1844-02-29" ],
   "gender" : [ {
@@ -11,6 +17,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2015-01-28"
-  },
-  "gndIdentifier" : "119280957"
+  }
 }

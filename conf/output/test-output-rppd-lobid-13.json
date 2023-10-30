@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/118649558",
   "rppdId" : "pk00022",
-  "id" : "https://lbz.rlp.de/rppd/pk00022",
+  "gndIdentifier" : "118649558",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anschuez, Joseph Andreas",
   "variantName" : [ "Anschütz, Josef Andreas", "Anschuez, Johann Andreas", "Anschuez, Josef Andreas", "Anschütz, Joseph Andreas", "Anschuetz, Johann Andreas", "Anschuez, J. A.", "Anschütz, J. A.", "Anschütz, Johann Andreas", "Anschuez, Joseph Andreas" ],
+  "professionOrOccupation" : [ {
+    "label" : "Jurist",
+    "id" : "https://rpb.lobid.org/sw/4029050n5"
+  }, {
+    "label" : "Musikdirektor",
+    "id" : "https://rpb.lobid.org/sw/7628980n1"
+  } ],
   "dateOfBirth" : [ "1772-03-19" ],
   "dateOfDeath" : [ "1855-12-26" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2020-12-01"
-  },
-  "gndIdentifier" : "118649558"
+  }
 }

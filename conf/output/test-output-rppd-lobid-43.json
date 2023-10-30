@@ -1,6 +1,8 @@
 {
+  "id" : "https://d-nb.info/gnd/235711-2",
   "rppdId" : "ps01055",
-  "id" : "https://lbz.rlp.de/rppd/ps01055",
+  "gndIdentifier" : "235711-2",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Imo",
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
@@ -8,6 +10,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2007-04-12"
-  },
-  "gndIdentifier" : "235711-2"
+  }
 }

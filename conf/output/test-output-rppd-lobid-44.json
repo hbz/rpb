@@ -1,7 +1,19 @@
 {
+  "id" : "https://rppd.lobid.org/pk06675",
   "rppdId" : "pk06675",
-  "id" : "https://lbz.rlp.de/rppd/pk06675",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk06675",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Alexander, Philipp",
+  "professionOrOccupation" : [ {
+    "label" : "Unternehmer",
+    "id" : "https://rpb.lobid.org/sw/4061949n7"
+  }, {
+    "label" : "Musikinstrumentenbauer",
+    "id" : "https://rpb.lobid.org/sw/4170830n1"
+  }, {
+    "label" : "Drechsler",
+    "id" : "https://rpb.lobid.org/sw/4301425n2"
+  } ],
   "dateOfBirth" : [ "1787" ],
   "dateOfDeath" : [ "1864" ],
   "gender" : [ {
@@ -10,6 +22,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2019-07-02"
-  },
-  "gndIdentifier" : "Keine GND-Ansetzung für pk06675"
+  }
 }

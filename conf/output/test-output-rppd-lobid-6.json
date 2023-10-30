@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/116324899",
   "rppdId" : "pk00013",
-  "id" : "https://lbz.rlp.de/rppd/pk00013",
+  "gndIdentifier" : "116324899",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Gabele, Anton",
   "variantName" : [ "Gabele, Anton" ],
+  "professionOrOccupation" : [ {
+    "label" : "Lehrer",
+    "id" : "https://rpb.lobid.org/sw/4035088n5"
+  }, {
+    "label" : "Schriftsteller",
+    "id" : "https://rpb.lobid.org/sw/4053309n8"
+  } ],
   "dateOfBirth" : [ "1890-07-28" ],
   "dateOfDeath" : [ "1966-08-13" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2007-03-06"
-  },
-  "gndIdentifier" : "116324899"
+  }
 }

@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/117269476",
   "rppdId" : "pk05621",
-  "id" : "https://lbz.rlp.de/rppd/pk05621",
+  "gndIdentifier" : "117269476",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Weinkauff, Franz",
   "variantName" : [ "Weinkauff, Franciscus / 1823-1892", "Weinkauff, Franz / 1823-1892", "Weinkauff, Franz / 1824-1892" ],
+  "professionOrOccupation" : [ {
+    "label" : "Gymnasiallehrer",
+    "id" : "https://rpb.lobid.org/sw/4158589n6"
+  }, {
+    "label" : "Mäzen",
+    "id" : "https://rpb.lobid.org/sw/7607862n0"
+  } ],
   "dateOfBirth" : [ "1823-05-24" ],
   "dateOfDeath" : [ "1892-03-11" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2023-06-01"
-  },
-  "gndIdentifier" : "117269476"
+  }
 }

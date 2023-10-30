@@ -1,8 +1,14 @@
 {
+  "id" : "https://d-nb.info/gnd/11855476X",
   "rppdId" : "pk00006",
-  "id" : "https://lbz.rlp.de/rppd/pk00006",
+  "gndIdentifier" : "11855476X",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Humperdinck, Engelbert",
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
+  "professionOrOccupation" : [ {
+    "label" : "Komponist",
+    "id" : "https://rpb.lobid.org/sw/4032009n1"
+  } ],
   "dateOfBirth" : [ "1854-09-01" ],
   "dateOfDeath" : [ "1921-09-27" ],
   "gender" : [ {
@@ -11,6 +17,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2005-11-16"
-  },
-  "gndIdentifier" : "11855476X"
+  }
 }

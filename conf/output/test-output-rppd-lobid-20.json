@@ -1,6 +1,8 @@
 {
+  "id" : "https://d-nb.info/gnd/105121548X",
   "rppdId" : "pta1482",
-  "id" : "https://lbz.rlp.de/rppd/pta1482",
+  "gndIdentifier" : "105121548X",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zenzen, Wilhelm",
   "variantName" : [ "Zenzen, Eucharius ¬[Ordensname]¬" ],
   "dateOfBirth" : [ "1903-10-17" ],
@@ -11,6 +13,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "105121548X"
+  }
 }

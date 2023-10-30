@@ -1,8 +1,17 @@
 {
+  "id" : "https://d-nb.info/gnd/1051147395",
   "rppdId" : "pk00021",
-  "id" : "https://lbz.rlp.de/rppd/pk00021",
+  "gndIdentifier" : "1051147395",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anschuez, Carl",
   "variantName" : [ "Anschutz, Carl / 1818-1870", "Anschütz, Karl Friedrich Nikolaus / 1818-1870" ],
+  "professionOrOccupation" : [ {
+    "label" : "Komponist",
+    "id" : "https://rpb.lobid.org/sw/4032009n1"
+  }, {
+    "label" : "Dirigent",
+    "id" : "https://rpb.lobid.org/sw/4012434n4"
+  } ],
   "dateOfBirth" : [ "1818-01-10" ],
   "dateOfDeath" : [ "1870-12-30" ],
   "gender" : [ {
@@ -11,6 +20,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2020-12-02"
-  },
-  "gndIdentifier" : "1051147395"
+  }
 }

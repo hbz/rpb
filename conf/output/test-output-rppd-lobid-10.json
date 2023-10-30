@@ -1,7 +1,16 @@
 {
+  "id" : "https://d-nb.info/gnd/1051147387",
   "rppdId" : "pk00019",
-  "id" : "https://lbz.rlp.de/rppd/pk00019",
+  "gndIdentifier" : "1051147387",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Oppermann, Julius",
+  "professionOrOccupation" : [ {
+    "label" : "Journalist",
+    "id" : "https://rpb.lobid.org/sw/4028781n6"
+  }, {
+    "label" : "Politiker",
+    "id" : "https://rpb.lobid.org/sw/4046517n2"
+  } ],
   "dateOfBirth" : [ "1825-06-09" ],
   "dateOfDeath" : [ "1880-01-01" ],
   "gender" : [ {
@@ -10,6 +19,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2010-08-02"
-  },
-  "gndIdentifier" : "1051147387"
+  }
 }

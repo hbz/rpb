@@ -1,8 +1,23 @@
 {
+  "id" : "https://d-nb.info/gnd/1027971725",
   "rppdId" : "pk05270",
-  "id" : "https://lbz.rlp.de/rppd/pk05270",
+  "gndIdentifier" : "1027971725",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Dönges, Klaus",
   "variantName" : [ "Dönges, Klaus", "Dönges, Klaus / 1935-" ],
+  "professionOrOccupation" : [ {
+    "label" : "Journalist",
+    "id" : "https://rpb.lobid.org/sw/4028781n6"
+  }, {
+    "label" : "Redakteur",
+    "id" : "https://rpb.lobid.org/sw/4177294n5"
+  }, {
+    "label" : "Ehrenamtliche Tätigkeit",
+    "id" : "https://rpb.lobid.org/sw/4013673n5"
+  }, {
+    "label" : "Ortsvorsteher",
+    "id" : "https://rpb.lobid.org/sw/4466532n5"
+  } ],
   "dateOfBirth" : [ "1935-05-25" ],
   "dateOfDeath" : [ "2023-04-14" ],
   "gender" : [ {
@@ -11,6 +26,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2023-06-01"
-  },
-  "gndIdentifier" : "1027971725"
+  }
 }

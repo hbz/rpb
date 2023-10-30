@@ -1,8 +1,20 @@
 {
+  "id" : "https://d-nb.info/gnd/1011283956",
   "rppdId" : "pk00007",
-  "id" : "https://lbz.rlp.de/rppd/pk00007",
+  "gndIdentifier" : "1011283956",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Cornelius, Otto",
   "variantName" : [ "Cornelius, Otto" ],
+  "professionOrOccupation" : [ {
+    "label" : "Maler",
+    "id" : "https://rpb.lobid.org/sw/4037215n7"
+  }, {
+    "label" : "Grafiker",
+    "id" : "https://rpb.lobid.org/sw/4125173n8"
+  }, {
+    "label" : "Kunsterzieher",
+    "id" : "https://rpb.lobid.org/sw/4302182n7"
+  } ],
   "dateOfBirth" : [ "1896-11-14" ],
   "dateOfDeath" : [ "1984" ],
   "gender" : [ {
@@ -11,6 +23,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2011-02-18"
-  },
-  "gndIdentifier" : "1011283956"
+  }
 }

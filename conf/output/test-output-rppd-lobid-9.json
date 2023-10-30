@@ -1,8 +1,14 @@
 {
+  "id" : "https://d-nb.info/gnd/122507487",
   "rppdId" : "pk00018",
-  "id" : "https://lbz.rlp.de/rppd/pk00018",
+  "gndIdentifier" : "122507487",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Reinirkens, Leonhard",
   "variantName" : [ "Reinirkens, Leonhard" ],
+  "professionOrOccupation" : [ {
+    "label" : "Schriftsteller",
+    "id" : "https://rpb.lobid.org/sw/4053309n8"
+  } ],
   "dateOfBirth" : [ "1924-08-07" ],
   "dateOfDeath" : [ "2008-03-23" ],
   "gender" : [ {
@@ -11,6 +17,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2008-03-31"
-  },
-  "gndIdentifier" : "122507487"
+  }
 }

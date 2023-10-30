@@ -1,7 +1,16 @@
 {
+  "id" : "https://d-nb.info/gnd/115839909",
   "rppdId" : "pk00015",
-  "id" : "https://lbz.rlp.de/rppd/pk00015",
+  "gndIdentifier" : "115839909",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anhäuser, Uwe",
+  "professionOrOccupation" : [ {
+    "label" : "Schriftsteller",
+    "id" : "https://rpb.lobid.org/sw/4053309n8"
+  }, {
+    "label" : "Journalist",
+    "id" : "https://rpb.lobid.org/sw/4028781n6"
+  } ],
   "dateOfBirth" : [ "1943-11-01" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
@@ -9,6 +18,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2004-08-02"
-  },
-  "gndIdentifier" : "115839909"
+  }
 }

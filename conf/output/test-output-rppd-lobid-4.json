@@ -1,8 +1,20 @@
 {
+  "id" : "https://d-nb.info/gnd/120526433",
   "rppdId" : "pk00011",
-  "id" : "https://lbz.rlp.de/rppd/pk00011",
+  "gndIdentifier" : "120526433",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Grün, Willi H.",
   "variantName" : [ "Grün, Willi-Heinz / 1932-2016", "Grün, Willi Heinz / 1932-2016", "Grün, Willi H. / 1932-2016" ],
+  "professionOrOccupation" : [ {
+    "label" : "Finanzwirt",
+    "id" : "https://rpb.lobid.org/sw/1148297561"
+  }, {
+    "label" : "Schriftsteller",
+    "id" : "https://rpb.lobid.org/sw/4053309n8"
+  }, {
+    "label" : "Kolumnist",
+    "id" : "https://rpb.lobid.org/sw/4335688n6"
+  } ],
   "dateOfBirth" : [ "1932-10-10" ],
   "dateOfDeath" : [ "2016-09-28" ],
   "gender" : [ {
@@ -11,6 +23,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2016-10-05"
-  },
-  "gndIdentifier" : "120526433"
+  }
 }

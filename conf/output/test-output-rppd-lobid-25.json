@@ -1,7 +1,13 @@
 {
+  "id" : "https://d-nb.info/gnd/137243324",
   "rppdId" : "pta1488",
-  "id" : "https://lbz.rlp.de/rppd/pta1488",
+  "gndIdentifier" : "137243324",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zillig, Hermann",
+  "professionOrOccupation" : [ {
+    "label" : "Oberregierungsrat",
+    "id" : "https://rpb.lobid.org/sw/4398834n9"
+  } ],
   "dateOfBirth" : [ "1893-04-21" ],
   "dateOfDeath" : [ "1952-10-16" ],
   "gender" : [ {
@@ -10,6 +16,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "137243324"
+  }
 }

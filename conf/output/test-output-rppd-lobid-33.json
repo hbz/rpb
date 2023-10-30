@@ -1,7 +1,16 @@
 {
+  "id" : "https://d-nb.info/gnd/1051215587",
   "rppdId" : "pta1498",
-  "id" : "https://lbz.rlp.de/rppd/pta1498",
+  "gndIdentifier" : "1051215587",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Züscher, Peter",
+  "professionOrOccupation" : [ {
+    "label" : "Lehrer",
+    "id" : "https://rpb.lobid.org/sw/4035088n5"
+  }, {
+    "label" : "Heimatkundler",
+    "id" : "https://rpb.lobid.org/sw/4313907n3"
+  } ],
   "dateOfBirth" : [ "1859-12-03" ],
   "dateOfDeath" : [ "1915-06-03" ],
   "gender" : [ {
@@ -10,6 +19,5 @@
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
-  },
-  "gndIdentifier" : "1051215587"
+  }
 }

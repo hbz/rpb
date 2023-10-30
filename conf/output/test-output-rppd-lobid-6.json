@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00013",
   "preferredName" : "Gabele, Anton",
   "variantName" : [ "Gabele, Anton" ],
-  "dateOfBirth" : [ "28.07.1890" ],
-  "dateOfDeath" : [ "13.08.1966" ],
+  "dateOfBirth" : [ "1890-07-28" ],
+  "dateOfDeath" : [ "1966-08-13" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

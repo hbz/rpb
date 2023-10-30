@@ -3,8 +3,12 @@
   "id" : "https://lbz.rlp.de/rppd/pk04515",
   "preferredName" : "Schneider, Anton",
   "variantName" : [ "Schneider, Anton / Bürgermeister" ],
-  "dateOfBirth" : [ "12.11.1899" ],
-  "dateOfDeath" : [ "24.06.1973" ],
+  "dateOfBirth" : [ "1899-11-12" ],
+  "dateOfDeath" : [ "1973-06-24" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2011-02-03"
   },

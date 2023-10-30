@@ -4,6 +4,10 @@
   "preferredName" : "Alexander, Philipp",
   "dateOfBirth" : [ "1787" ],
   "dateOfDeath" : [ "1864" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2019-07-02"
   },

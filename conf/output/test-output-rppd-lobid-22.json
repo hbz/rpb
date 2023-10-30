@@ -2,11 +2,10 @@
   "rppdId" : "pta1485",
   "id" : "https://lbz.rlp.de/rppd/pta1485",
   "preferredName" : "Ziegler, Jakob Anton",
-  "dateOfBirth" : [ "15.06.1893" ],
-  "dateOfDeath" : [ "12.05.1944" ],
+  "dateOfBirth" : [ "1893-06-15" ],
+  "dateOfDeath" : [ "1944-05-12" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

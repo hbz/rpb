@@ -2,8 +2,12 @@
   "rppdId" : "pta1496",
   "id" : "https://lbz.rlp.de/rppd/pta1496",
   "preferredName" : "Zirbes, Peter",
-  "dateOfBirth" : [ "10.01.1825" ],
-  "dateOfDeath" : [ "14.11.1901" ],
+  "dateOfBirth" : [ "1825-01-10" ],
+  "dateOfDeath" : [ "1901-11-14" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   },

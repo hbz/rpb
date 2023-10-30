@@ -2,11 +2,10 @@
   "rppdId" : "pta1487",
   "id" : "https://lbz.rlp.de/rppd/pta1487",
   "preferredName" : "Zillgen, Friedrich Josef",
-  "dateOfBirth" : [ "29.08.1806" ],
-  "dateOfDeath" : [ "10.06.1870" ],
+  "dateOfBirth" : [ "1806-08-29" ],
+  "dateOfDeath" : [ "1870-06-10" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

@@ -4,10 +4,9 @@
   "preferredName" : "Altgeld, Johann Philipp",
   "variantName" : [ "Altgelt, Johann Philipp" ],
   "dateOfBirth" : [ "1603" ],
-  "dateOfDeath" : [ "12.12.1658" ],
+  "dateOfDeath" : [ "1658-12-12" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

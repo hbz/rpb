@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00021",
   "preferredName" : "Anschuez, Carl",
   "variantName" : [ "Anschutz, Carl / 1818-1870", "Anschütz, Karl Friedrich Nikolaus / 1818-1870" ],
-  "dateOfBirth" : [ "10.01.1818" ],
-  "dateOfDeath" : [ "30.12.1870" ],
+  "dateOfBirth" : [ "1818-01-10" ],
+  "dateOfDeath" : [ "1870-12-30" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

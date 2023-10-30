@@ -2,11 +2,10 @@
   "rppdId" : "pta1483",
   "id" : "https://lbz.rlp.de/rppd/pta1483",
   "preferredName" : "Zettelmeyer, Hubert",
-  "dateOfBirth" : [ "08.11.1866" ],
-  "dateOfDeath" : [ "19.06.1930" ],
+  "dateOfBirth" : [ "1866-11-08" ],
+  "dateOfDeath" : [ "1930-06-19" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

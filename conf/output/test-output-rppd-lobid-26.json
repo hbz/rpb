@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pta1489",
   "preferredName" : "Zilliken, Kaspar Josef",
   "variantName" : [ "Zilliken, Kaspar Joseph", "Zilliken, Joseph" ],
-  "dateOfBirth" : [ "17.09.1872" ],
-  "dateOfDeath" : [ "03.10.1942" ],
+  "dateOfBirth" : [ "1872-09-17" ],
+  "dateOfDeath" : [ "1942-10-03" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

@@ -4,8 +4,7 @@
   "preferredName" : "Marquard, Udo",
   "dateOfBirth" : [ "1959" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

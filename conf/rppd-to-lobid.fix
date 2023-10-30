@@ -25,7 +25,7 @@ trim("preferredName")
 
 set_array("variantName[]")
 copy_field("f1nc[].*.f1nc", "variantName[].$append")
-copy_field("f1nd[].*.f1nd", "variantName[].$append")
+copy_field("f1nd[].*.f1nd", "variantName[].$last")
 uniq("variantName[]")
 
 
@@ -56,6 +56,7 @@ uniq("variantName[]")
 # #1np (Geburtsdatum) -> dateOfBirth
 # Kommentar Doku: mit Punkten und führenden Nullen: 04.05.1950; für Jahrestagsanzeige: die erste 4stellige Zahl im Feld wird als Jahr aufgefasst, dh auch "März 1908" ist möglich; Jahre mit „um“, „vor“, „nach“ und „zwischen“ werden nicht als Jubiläumsjahr aufgefasst.
 set_array("dateOfBirth[]")
+replace_all("f1np", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
 copy_field("f1np", "dateOfBirth[].$append")
 
 # -------
@@ -67,6 +68,7 @@ copy_field("f1np", "dateOfBirth[].$append")
 ## Kommentar Doku: s. #1np
 
 set_array("dateOfDeath[]")
+replace_all("f1nr", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
 copy_field("f1nr", "dateOfDeath[].$append")
 
 # -------
@@ -93,11 +95,11 @@ copy_field("f1nr", "dateOfDeath[].$append")
 set_array("gender[]")
 if any_equal("f1nv", "mmm")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#male")
-  set_field("gender[].$append.label", "Männlich")
+  set_field("gender[].$last.label", "Männlich")
 end
 if any_equal("f1nv", "www")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#female")
-  set_field("gender[].$append.label", "Weiblich")
+  set_field("gender[].$last.label", "Weiblich")
 end
 
 # -------

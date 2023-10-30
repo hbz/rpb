@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00018",
   "preferredName" : "Reinirkens, Leonhard",
   "variantName" : [ "Reinirkens, Leonhard" ],
-  "dateOfBirth" : [ "07.08.1924" ],
-  "dateOfDeath" : [ "23.03.2008" ],
+  "dateOfBirth" : [ "1924-08-07" ],
+  "dateOfDeath" : [ "2008-03-23" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

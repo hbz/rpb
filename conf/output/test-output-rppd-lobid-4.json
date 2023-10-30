@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00011",
   "preferredName" : "Grün, Willi H.",
   "variantName" : [ "Grün, Willi-Heinz / 1932-2016", "Grün, Willi Heinz / 1932-2016", "Grün, Willi H. / 1932-2016" ],
-  "dateOfBirth" : [ "10.10.1932" ],
-  "dateOfDeath" : [ "28.09.2016" ],
+  "dateOfBirth" : [ "1932-10-10" ],
+  "dateOfDeath" : [ "2016-09-28" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

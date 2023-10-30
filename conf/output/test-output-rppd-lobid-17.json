@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00031",
   "preferredName" : "Bodewig, Robert",
   "variantName" : [ "Bodewig, Robert / 1857-1923" ],
-  "dateOfBirth" : [ "01.12.1857" ],
-  "dateOfDeath" : [ "02.12.1923" ],
+  "dateOfBirth" : [ "1857-12-01" ],
+  "dateOfDeath" : [ "1923-12-02" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

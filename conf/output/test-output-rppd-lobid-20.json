@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pta1482",
   "preferredName" : "Zenzen, Wilhelm",
   "variantName" : [ "Zenzen, Eucharius ¬[Ordensname]¬" ],
-  "dateOfBirth" : [ "17.10.1903" ],
-  "dateOfDeath" : [ "16.04.1963" ],
+  "dateOfBirth" : [ "1903-10-17" ],
+  "dateOfDeath" : [ "1963-04-16" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

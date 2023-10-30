@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00020",
   "preferredName" : "Bücker, Carl Clemens",
   "variantName" : [ "Bücker, Carl Clemens" ],
-  "dateOfBirth" : [ "11.02.1895" ],
-  "dateOfDeath" : [ "03.03.1976" ],
+  "dateOfBirth" : [ "1895-02-11" ],
+  "dateOfDeath" : [ "1976-03-03" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

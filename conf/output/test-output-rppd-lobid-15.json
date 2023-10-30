@@ -2,11 +2,10 @@
   "rppdId" : "pk00028",
   "id" : "https://lbz.rlp.de/rppd/pk00028",
   "preferredName" : "Lehnen, Ewald",
-  "dateOfBirth" : [ "02.01.1894" ],
+  "dateOfBirth" : [ "1894-01-02" ],
   "dateOfDeath" : [ "Oktober 1989" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

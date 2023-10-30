@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00006",
   "preferredName" : "Humperdinck, Engelbert",
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
-  "dateOfBirth" : [ "01.09.1854" ],
-  "dateOfDeath" : [ "27.09.1921" ],
+  "dateOfBirth" : [ "1854-09-01" ],
+  "dateOfDeath" : [ "1921-09-27" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

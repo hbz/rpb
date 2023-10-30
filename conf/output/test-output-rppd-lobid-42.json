@@ -3,6 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk03654",
   "preferredName" : "Ratka, Alexander Simon",
   "dateOfBirth" : [ "1977" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2009-09-23"
   },

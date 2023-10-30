@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00030",
   "preferredName" : "Meister, Simon",
   "variantName" : [ "Meister, Simon" ],
-  "dateOfBirth" : [ "20.12.1796" ],
-  "dateOfDeath" : [ "29.02.1844" ],
+  "dateOfBirth" : [ "1796-12-20" ],
+  "dateOfDeath" : [ "1844-02-29" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

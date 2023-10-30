@@ -2,11 +2,10 @@
   "rppdId" : "pta1488",
   "id" : "https://lbz.rlp.de/rppd/pta1488",
   "preferredName" : "Zillig, Hermann",
-  "dateOfBirth" : [ "21.04.1893" ],
-  "dateOfDeath" : [ "16.10.1952" ],
+  "dateOfBirth" : [ "1893-04-21" ],
+  "dateOfDeath" : [ "1952-10-16" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

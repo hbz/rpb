@@ -2,11 +2,10 @@
   "rppdId" : "pta1491",
   "id" : "https://lbz.rlp.de/rppd/pta1491",
   "preferredName" : "Zimmer, Franz Nikolaus",
-  "dateOfBirth" : [ "28.07.1883" ],
-  "dateOfDeath" : [ "16.05.1955" ],
+  "dateOfBirth" : [ "1883-07-28" ],
+  "dateOfDeath" : [ "1955-05-16" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

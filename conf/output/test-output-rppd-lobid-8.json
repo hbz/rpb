@@ -2,10 +2,9 @@
   "rppdId" : "pk00015",
   "id" : "https://lbz.rlp.de/rppd/pk00015",
   "preferredName" : "Anhäuser, Uwe",
-  "dateOfBirth" : [ "01.11.1943" ],
+  "dateOfBirth" : [ "1943-11-01" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

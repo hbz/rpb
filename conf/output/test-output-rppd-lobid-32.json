@@ -3,8 +3,12 @@
   "id" : "https://lbz.rlp.de/rppd/pta1497",
   "preferredName" : "Zuckermandel, Moses S.",
   "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],
-  "dateOfBirth" : [ "24.04.1836" ],
+  "dateOfBirth" : [ "1836-04-24" ],
   "dateOfDeath" : [ "1917" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   },

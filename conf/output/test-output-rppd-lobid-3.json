@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pk00010",
   "preferredName" : "Billaudelle, Karl",
   "variantName" : [ "Billaudelle, Karl" ],
-  "dateOfBirth" : [ "05.11.1914" ],
-  "dateOfDeath" : [ "01.07.2003" ],
+  "dateOfBirth" : [ "1914-11-05" ],
+  "dateOfDeath" : [ "2003-07-01" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

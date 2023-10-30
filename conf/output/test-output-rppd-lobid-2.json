@@ -2,11 +2,10 @@
   "rppdId" : "pk00008",
   "id" : "https://lbz.rlp.de/rppd/pk00008",
   "preferredName" : "Daub, Richard",
-  "dateOfBirth" : [ "04.04.1895" ],
-  "dateOfDeath" : [ "23.04.1972" ],
+  "dateOfBirth" : [ "1895-04-04" ],
+  "dateOfDeath" : [ "1972-04-23" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

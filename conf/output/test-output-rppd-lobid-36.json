@@ -2,8 +2,12 @@
   "rppdId" : "pk02185",
   "id" : "https://lbz.rlp.de/rppd/pk02185",
   "preferredName" : "Heinen, Norbert M.",
-  "dateOfBirth" : [ "28.11.1936" ],
-  "dateOfDeath" : [ "30.05.2023" ],
+  "dateOfBirth" : [ "1936-11-28" ],
+  "dateOfDeath" : [ "2023-05-30" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2023-06-01"
   },

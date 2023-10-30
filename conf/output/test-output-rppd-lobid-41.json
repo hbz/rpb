@@ -2,6 +2,10 @@
   "rppdId" : "pk02366",
   "id" : "https://lbz.rlp.de/rppd/pk02366",
   "preferredName" : "Fuchs, Gerhard",
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2008-02-22"
   },

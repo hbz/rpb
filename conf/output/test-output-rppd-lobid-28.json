@@ -3,11 +3,10 @@
   "id" : "https://lbz.rlp.de/rppd/pta1492",
   "preferredName" : "Zimmer, Josef",
   "variantName" : [ "Zimmer, Jupp" ],
-  "dateOfBirth" : [ "03.09.1919" ],
-  "dateOfDeath" : [ "20.11.1995" ],
+  "dateOfBirth" : [ "1919-09-03" ],
+  "dateOfDeath" : [ "1995-11-20" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

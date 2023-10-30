@@ -2,8 +2,12 @@
   "rppdId" : "pta1500",
   "id" : "https://lbz.rlp.de/rppd/pta1500",
   "preferredName" : "Zweiffel, Karl Hermann",
-  "dateOfBirth" : [ "17.08.1800" ],
+  "dateOfBirth" : [ "1800-08-17" ],
   "dateOfDeath" : [ "unbekannt" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   },

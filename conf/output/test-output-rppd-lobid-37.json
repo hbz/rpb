@@ -3,8 +3,12 @@
   "id" : "https://lbz.rlp.de/rppd/pk05270",
   "preferredName" : "Dönges, Klaus",
   "variantName" : [ "Dönges, Klaus", "Dönges, Klaus / 1935-" ],
-  "dateOfBirth" : [ "25.05.1935" ],
-  "dateOfDeath" : [ "14.04.2023" ],
+  "dateOfBirth" : [ "1935-05-25" ],
+  "dateOfDeath" : [ "2023-04-14" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
   "describedBy" : {
     "dateModified" : "2023-06-01"
   },

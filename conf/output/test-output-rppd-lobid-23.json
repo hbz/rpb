@@ -2,11 +2,10 @@
   "rppdId" : "pta1486",
   "id" : "https://lbz.rlp.de/rppd/pta1486",
   "preferredName" : "Zill, Egon",
-  "dateOfBirth" : [ "26.03.1906" ],
-  "dateOfDeath" : [ "23.10.1974" ],
+  "dateOfBirth" : [ "1906-03-26" ],
+  "dateOfDeath" : [ "1974-10-23" ],
   "gender" : [ {
-    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male"
-  }, {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "describedBy" : {

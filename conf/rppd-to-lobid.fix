@@ -165,17 +165,17 @@ copy_field("f1ny", "describedBy.dateModified")
 
 vacuum()
 retain(
-  "rppdId", 
-  "id",
-  "type[]",
-  "preferredName",
-  "variantName[]",
   "dateOfBirth[]",
   "dateOfDeath[]",
   "depiction[]",
-  "gndIdentifier",
   "describedBy",
   "gender[]",
-  "professionOrOccupation[]"
+  "gndIdentifier",
+  "id",
+  "preferredName",
+  "professionOrOccupation[]",
+  "rppdId", 
+  "type[]",
+  "variantName[]"
   )
 	

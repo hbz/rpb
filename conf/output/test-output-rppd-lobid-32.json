@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zuckermandel, Moses S.",
   "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/117021652",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/117021652",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/117021652"
+  },
   "professionOrOccupation" : [ {
     "label" : "Rabbiner",
     "id" : "https://rpb.lobid.org/sw/4176751n2"

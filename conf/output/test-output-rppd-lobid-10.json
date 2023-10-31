@@ -4,6 +4,11 @@
   "gndIdentifier" : "1051147387",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Oppermann, Julius",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147387",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147387",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147387"
+  },
   "professionOrOccupation" : [ {
     "label" : "Journalist",
     "id" : "https://rpb.lobid.org/sw/4028781n6"

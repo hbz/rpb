@@ -4,6 +4,11 @@
   "gndIdentifier" : "1051215587",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Züscher, Peter",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215587",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215587",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215587"
+  },
   "professionOrOccupation" : [ {
     "label" : "Lehrer",
     "id" : "https://rpb.lobid.org/sw/4035088n5"

@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Humperdinck, Engelbert",
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/11855476X",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/11855476X",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/11855476X"
+  },
   "professionOrOccupation" : [ {
     "label" : "Komponist",
     "id" : "https://rpb.lobid.org/sw/4032009n1"

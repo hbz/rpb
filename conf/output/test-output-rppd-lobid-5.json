@@ -4,6 +4,11 @@
   "gndIdentifier" : "1051147360",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Marquard, Udo",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147360",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147360",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147360"
+  },
   "professionOrOccupation" : [ {
     "label" : "Philosoph",
     "id" : "https://rpb.lobid.org/sw/4045790n4"

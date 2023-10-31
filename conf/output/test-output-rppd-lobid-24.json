@@ -4,6 +4,11 @@
   "gndIdentifier" : "1051215528",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zillgen, Friedrich Josef",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215528",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215528",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215528"
+  },
   "professionOrOccupation" : [ {
     "label" : "Polizeibeamter",
     "id" : "https://rpb.lobid.org/sw/4135253n1"

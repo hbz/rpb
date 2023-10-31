@@ -45,7 +45,14 @@ uniq("variantName[]")
 # -------
 # #1ne (Bilddatei) -> depiction.id, oder url, der thumbnail (neue Property?)
 # Komentar Doku: vollständiger Dateiname ohne Pfadangaben, aber inkl. Endung; hinter dem Zeichen "@" kann man eine Quellenangabe einfügen; die zugehörige Datei wird an Herrn Dirx geschickt.; Beispiel: #1ne120251973_1.jpg@Mittelrhein-Museum Koblenz
+# Da wir keine Bilder bisher haben, nutze ich hier die Bilder vom GND Explorer.
 
+copy_field("gndIdentifier","@depiction")
+prepend("@depiction","https://pictureservice.explore.gnd.network/api/v1/picture/")
+
+copy_field("@depiction","depiction.id")
+copy_field("@depiction","depiction.url")
+copy_field("@depiction","depiction.thumbnail")
 
 # -------
 # #1nn (Berufe/Stellungen (m, R)) -> professionOrOccupation
@@ -164,6 +171,7 @@ retain(
   "variantName[]",
   "dateOfBirth[]",
   "dateOfDeath[]",
+  "depiction",
   "gndIdentifier",
   "describedBy",
   "gender[]",

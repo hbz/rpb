@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zilliken, Kaspar Josef",
   "variantName" : [ "Zilliken, Kaspar Joseph", "Zilliken, Joseph" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215536",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215536",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215536"
+  },
   "professionOrOccupation" : [ {
     "label" : "Dekan / Kirche",
     "id" : "https://rpb.lobid.org/sw/4441540n0"

@@ -4,6 +4,11 @@
   "gndIdentifier" : "1051215595",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zunker, Wilhelm",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215595",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215595",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215595"
+  },
   "professionOrOccupation" : [ {
     "label" : "Verwaltungsfachangestellter",
     "id" : "https://rpb.lobid.org/sw/4063330n5"

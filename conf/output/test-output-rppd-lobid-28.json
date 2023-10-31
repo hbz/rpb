@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zimmer, Josef",
   "variantName" : [ "Zimmer, Jupp" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051217350",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051217350",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051217350"
+  },
   "professionOrOccupation" : [ {
     "label" : "Maler",
     "id" : "https://rpb.lobid.org/sw/4037215n7"

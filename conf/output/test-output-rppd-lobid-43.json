@@ -4,6 +4,11 @@
   "gndIdentifier" : "235711-2",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Imo",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2"
+  },
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

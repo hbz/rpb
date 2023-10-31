@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Reinirkens, Leonhard",
   "variantName" : [ "Reinirkens, Leonhard" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/122507487",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/122507487",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/122507487"
+  },
   "professionOrOccupation" : [ {
     "label" : "Schriftsteller",
     "id" : "https://rpb.lobid.org/sw/4053309n8"

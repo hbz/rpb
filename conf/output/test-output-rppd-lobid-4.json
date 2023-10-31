@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Grün, Willi H.",
   "variantName" : [ "Grün, Willi-Heinz / 1932-2016", "Grün, Willi Heinz / 1932-2016", "Grün, Willi H. / 1932-2016" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/120526433",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/120526433",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/120526433"
+  },
   "professionOrOccupation" : [ {
     "label" : "Finanzwirt",
     "id" : "https://rpb.lobid.org/sw/1148297561"

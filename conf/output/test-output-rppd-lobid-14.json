@@ -4,6 +4,11 @@
   "gndIdentifier" : "1051147409",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Giefer, Willy",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147409",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147409",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147409"
+  },
   "professionOrOccupation" : [ {
     "label" : "Komponist",
     "id" : "https://rpb.lobid.org/sw/4032009n1"

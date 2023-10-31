@@ -4,6 +4,11 @@
   "gndIdentifier" : "115839909",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anhäuser, Uwe",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/115839909",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/115839909",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/115839909"
+  },
   "professionOrOccupation" : [ {
     "label" : "Schriftsteller",
     "id" : "https://rpb.lobid.org/sw/4053309n8"

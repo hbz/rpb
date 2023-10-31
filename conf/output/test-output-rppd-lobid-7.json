@@ -4,6 +4,11 @@
   "gndIdentifier" : "1051147379",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Henninger, Wilhelm Albert",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147379",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147379",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147379"
+  },
   "professionOrOccupation" : [ {
     "label" : "Heimatschriftsteller",
     "id" : "https://rpb.lobid.org/sw/4772761n5"

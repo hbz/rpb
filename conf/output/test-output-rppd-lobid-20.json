@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zenzen, Wilhelm",
   "variantName" : [ "Zenzen, Eucharius ¬[Ordensname]¬" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/105121548X",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/105121548X",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/105121548X"
+  },
   "dateOfBirth" : [ "1903-10-17" ],
   "dateOfDeath" : [ "1963-04-16" ],
   "gender" : [ {

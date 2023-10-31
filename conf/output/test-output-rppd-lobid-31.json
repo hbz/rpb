@@ -4,6 +4,11 @@
   "gndIdentifier" : "117006084",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zirbes, Peter",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/117006084",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/117006084",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/117006084"
+  },
   "professionOrOccupation" : [ {
     "label" : "Lyriker",
     "id" : "https://rpb.lobid.org/sw/4168391n2"

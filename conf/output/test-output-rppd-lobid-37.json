@@ -5,6 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Dönges, Klaus",
   "variantName" : [ "Dönges, Klaus", "Dönges, Klaus / 1935-" ],
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1027971725",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1027971725",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1027971725"
+  },
   "professionOrOccupation" : [ {
     "label" : "Journalist",
     "id" : "https://rpb.lobid.org/sw/4028781n6"

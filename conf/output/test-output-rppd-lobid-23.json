@@ -4,6 +4,11 @@
   "gndIdentifier" : "126790086",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zill, Egon",
+  "depiction" : {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/126790086",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/126790086",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/126790086"
+  },
   "professionOrOccupation" : [ {
     "label" : "Bäcker",
     "id" : "https://rpb.lobid.org/sw/4120966n7"

@@ -86,10 +86,6 @@ end
 # #1wz (Wirkungszeitraum) -> periodOfActivity
 # Kommentar Doku: Wenn kein Geburtsdatum und kein Todesdatum ermittelbar ist, kann hier ein Zeitraum eingetragen werden
 
-set_array("periodOfActivity[]")
-replace_all("f1wz", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
-copy_field("f1wz", "periodOfActivity[].$append")
-
 
 # -------
 # #1no (Wirkungsort (m, R))-> placeOfActivity
@@ -179,7 +175,6 @@ retain(
   "professionOrOccupation[]",
   "rppdId", 
   "type[]",
-  "variantName[]", 
-  "periodOfActivity[]"
+  "variantName[]"
   )
 	

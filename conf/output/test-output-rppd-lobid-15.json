@@ -19,6 +19,10 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Technik allgemein",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
+  } ],
   "describedBy" : {
     "dateModified" : "2005-11-16"
   }

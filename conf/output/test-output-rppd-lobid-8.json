@@ -21,6 +21,10 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Presse",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
+  } ],
   "describedBy" : {
     "dateModified" : "2004-08-02"
   }

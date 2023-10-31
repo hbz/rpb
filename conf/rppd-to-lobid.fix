@@ -1,6 +1,10 @@
 do once("map")
   put_filemap("conf/RPB-Export_HBZ_SW.tsv", "SW_map", sep_char: "\t")
 end
+do once("map_category")
+  put_filemap("conf/RPB-Export_HBZ_SWN.tsv", "SWN_map", sep_char: "\t")
+end
+
 
 # ------
 #00 RPPD-ID 
@@ -154,6 +158,27 @@ end
 # -------
 # #1nw	(Fachgebiete (m)) -> 	gndSubjectCategory	
 # Kommentar Doku:  Normdaten aus SWN-Sätzen (Reg. 9 und Reg. 11), getrennt mit @: Bsp.: #1nw_swn12x2p_@_swn3x6p_; entspricht der GND-Systematik; paarig zu Berufen vergeben
+# https://d-nb.info/standards/vocab/gnd/gnd-sc.html#
+# gndSubjectCategory[].*.id
+# gndSubjectCategory[].*.label
+
+set_array("gndSubjectCategory[]")
+do list(path:"f1nw[]", "var": "$i")
+  replace_all("$i.f1nw", "_", "")
+  replace_all("$i.f1nw", "(\\d)x(\\d)", "$1.$2")
+  replace_all("$i.f1nw", "^swn", "")
+  copy_field("$i.f1nw", "gndSubjectCategory[].$append.label")
+  copy_field("$i.f1nw", "gndSubjectCategory[].$last.id")
+end
+
+do list(path:"gndSubjectCategory[]", "var": "$i")
+  lookup("$i.label", "SWN_map", delete: "true")
+  if exists("$i.label")
+    prepend("$i.id", "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#")
+  else
+    prepend("$i.id", "https://rpb.lobid.org/swn/")
+  end
+end
 
 # -------
 # #1nx	(Quelle (m)) ->	biographicalOrHistoricalInformation	
@@ -184,6 +209,7 @@ retain(
   "rppdId", 
   "type[]",
   "variantName[]", 
-  "periodOfActivity[]"
+  "periodOfActivity[]", 
+  "gndSubjectCategory[]"
   )
 	

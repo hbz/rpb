@@ -26,6 +26,16 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  }, {
+    "label" : "Landwirtschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#32.10p"
+  }, {
+    "label" : "Handel. Dienstleistung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+  } ],
   "describedBy" : {
     "dateModified" : "2011-02-03"
   }

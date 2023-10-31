@@ -23,6 +23,13 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  }, {
+    "label" : "Kirche",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.6p"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-03-20"
   }

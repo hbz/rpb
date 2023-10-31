@@ -23,6 +23,13 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Malerei. Zeichnung. Graphik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.4p"
+  }, {
+    "label" : "Plastik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.2p"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   }

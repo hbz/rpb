@@ -29,6 +29,13 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Geschichtswissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.1p"
+  }, {
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-05-15"
   }

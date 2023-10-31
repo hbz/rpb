@@ -25,6 +25,16 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Industrie. Handwerk",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
+  }, {
+    "label" : "Handel. Dienstleistung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+  }, {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  } ],
   "describedBy" : {
     "dateModified" : "2019-07-02"
   }

@@ -25,6 +25,16 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Recht",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.14p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  }, {
+    "label" : "Architektur. Bautechnik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.3p"
+  } ],
   "describedBy" : {
     "dateModified" : "2023-06-01"
   }

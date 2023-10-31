@@ -29,6 +29,16 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Presse",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
+  }, {
+    "label" : "Soziologie. Gesellschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#9.5p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  } ],
   "describedBy" : {
     "dateModified" : "2023-06-01"
   }

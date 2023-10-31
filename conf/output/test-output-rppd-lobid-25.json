@@ -19,6 +19,13 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Landwirtschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#32.10p"
+  }, {
+    "label" : "Öffentliche Verwaltung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.15p"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   }

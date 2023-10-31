@@ -18,6 +18,10 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Plastik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.2p"
+  } ],
   "describedBy" : {
     "dateModified" : "2009-09-23"
   }

@@ -19,6 +19,10 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Kirche",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.6p"
+  } ],
   "describedBy" : {
     "dateModified" : "2010-11-22"
   }

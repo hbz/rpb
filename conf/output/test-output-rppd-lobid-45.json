@@ -21,6 +21,13 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Technik allgemein",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  } ],
   "describedBy" : {
     "dateModified" : "2006-07-11"
   }

@@ -23,6 +23,10 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  } ],
   "describedBy" : {
     "dateModified" : "2020-12-02"
   }

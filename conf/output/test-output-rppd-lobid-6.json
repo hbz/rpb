@@ -23,6 +23,10 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Schreiben. Dichtung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
+  } ],
   "describedBy" : {
     "dateModified" : "2007-03-06"
   }

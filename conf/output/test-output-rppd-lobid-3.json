@@ -5,11 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Billaudelle, Karl",
   "variantName" : [ "Billaudelle, Karl" ],
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/13334066X",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/13334066X",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/13334066X"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Gymnasiallehrer",
     "id" : "https://rpb.lobid.org/sw/4158589n6"

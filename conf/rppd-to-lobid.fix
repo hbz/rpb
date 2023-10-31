@@ -50,9 +50,10 @@ uniq("variantName[]")
 copy_field("gndIdentifier","@depiction")
 prepend("@depiction","https://pictureservice.explore.gnd.network/api/v1/picture/")
 
-copy_field("@depiction","depiction.id")
-copy_field("@depiction","depiction.url")
-copy_field("@depiction","depiction.thumbnail")
+set_array("depiction[]")
+copy_field("@depiction","depiction[].$append.id")
+copy_field("@depiction","depiction[].$last.url")
+copy_field("@depiction","depiction[].$last.thumbnail")
 
 # -------
 # #1nn (Berufe/Stellungen (m, R)) -> professionOrOccupation
@@ -171,7 +172,7 @@ retain(
   "variantName[]",
   "dateOfBirth[]",
   "dateOfDeath[]",
-  "depiction",
+  "depiction[]",
   "gndIdentifier",
   "describedBy",
   "gender[]",

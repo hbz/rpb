@@ -5,11 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anschuez, Joseph Andreas",
   "variantName" : [ "Anschütz, Josef Andreas", "Anschuez, Johann Andreas", "Anschuez, Josef Andreas", "Anschütz, Joseph Andreas", "Anschuetz, Johann Andreas", "Anschuez, J. A.", "Anschütz, J. A.", "Anschütz, Johann Andreas", "Anschuez, Joseph Andreas" ],
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/118649558",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/118649558",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/118649558"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Jurist",
     "id" : "https://rpb.lobid.org/sw/4029050n5"

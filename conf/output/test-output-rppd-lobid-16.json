@@ -5,11 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Meister, Simon",
   "variantName" : [ "Meister, Simon" ],
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/119280957",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/119280957",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/119280957"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Maler",
     "id" : "https://rpb.lobid.org/sw/4037215n7"

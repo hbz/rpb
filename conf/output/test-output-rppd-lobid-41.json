@@ -4,11 +4,11 @@
   "gndIdentifier" : "Keine GND-Ansetzung für pk02366",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Fuchs, Gerhard",
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk02366",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk02366",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk02366"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Beigeordneter",
     "id" : "https://rpb.lobid.org/sw/4144367n6"

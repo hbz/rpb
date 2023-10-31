@@ -4,11 +4,11 @@
   "gndIdentifier" : "Keine GND-Ansetzung für pk03654",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Ratka, Alexander Simon",
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk03654",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk03654",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk03654"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Bildhauer",
     "id" : "https://rpb.lobid.org/sw/4139550n5"

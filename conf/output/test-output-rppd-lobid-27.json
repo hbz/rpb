@@ -4,11 +4,11 @@
   "gndIdentifier" : "1051215544",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zimmer, Franz Nikolaus",
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215544",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215544",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215544"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Lehrer",
     "id" : "https://rpb.lobid.org/sw/4035088n5"

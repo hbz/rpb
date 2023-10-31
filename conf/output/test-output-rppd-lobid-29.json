@@ -4,11 +4,11 @@
   "gndIdentifier" : "1051215552",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zimmer, Michael Kunibert",
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215552",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215552",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215552"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Landwirt",
     "id" : "https://rpb.lobid.org/sw/4034399n6"

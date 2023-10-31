@@ -4,11 +4,11 @@
   "gndIdentifier" : "1120816653",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Herr-Beck, Maria",
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1120816653",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1120816653",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1120816653"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Weibliche Abgeordnete",
     "id" : "https://rpb.lobid.org/sw/4132700n7"

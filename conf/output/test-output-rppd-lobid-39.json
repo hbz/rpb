@@ -5,11 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Schneider, Anton",
   "variantName" : [ "Schneider, Anton / Bürgermeister" ],
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/143451308",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/143451308",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/143451308"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Bürgermeister",
     "id" : "https://rpb.lobid.org/sw/4136676n1"

@@ -5,11 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Gabele, Anton",
   "variantName" : [ "Gabele, Anton" ],
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/116324899",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/116324899",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/116324899"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Lehrer",
     "id" : "https://rpb.lobid.org/sw/4035088n5"

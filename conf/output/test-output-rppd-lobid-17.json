@@ -5,11 +5,11 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Bodewig, Robert",
   "variantName" : [ "Bodewig, Robert / 1857-1923" ],
-  "depiction" : {
+  "depiction" : [ {
     "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/120260948",
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/120260948",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/120260948"
-  },
+  } ],
   "professionOrOccupation" : [ {
     "label" : "Klassischer Philologe",
     "id" : "https://rpb.lobid.org/sw/4199241n6"

@@ -12,10 +12,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Jurist",
-    "id" : "https://rpb.lobid.org/sw/4029050n5"
+    "id" : "https://d-nb.info/gnd/4029050-5"
   }, {
     "label" : "Musikdirektor",
-    "id" : "https://rpb.lobid.org/sw/7628980n1"
+    "id" : "https://d-nb.info/gnd/7628980-1"
   } ],
   "dateOfBirth" : [ "1772-03-19" ],
   "dateOfDeath" : [ "1855-12-26" ],

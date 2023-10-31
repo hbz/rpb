@@ -12,16 +12,16 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Journalist",
-    "id" : "https://rpb.lobid.org/sw/4028781n6"
+    "id" : "https://d-nb.info/gnd/4028781-6"
   }, {
     "label" : "Redakteur",
-    "id" : "https://rpb.lobid.org/sw/4177294n5"
+    "id" : "https://d-nb.info/gnd/4177294-5"
   }, {
     "label" : "Ehrenamtliche Tätigkeit",
-    "id" : "https://rpb.lobid.org/sw/4013673n5"
+    "id" : "https://d-nb.info/gnd/4013673-5"
   }, {
     "label" : "Ortsvorsteher",
-    "id" : "https://rpb.lobid.org/sw/4466532n5"
+    "id" : "https://d-nb.info/gnd/4466532-5"
   } ],
   "dateOfBirth" : [ "1935-05-25" ],
   "dateOfDeath" : [ "2023-04-14" ],

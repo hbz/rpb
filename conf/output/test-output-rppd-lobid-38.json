@@ -12,10 +12,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Gymnasiallehrer",
-    "id" : "https://rpb.lobid.org/sw/4158589n6"
+    "id" : "https://d-nb.info/gnd/4158589-6"
   }, {
     "label" : "Mäzen",
-    "id" : "https://rpb.lobid.org/sw/7607862n0"
+    "id" : "https://d-nb.info/gnd/7607862-0"
   } ],
   "dateOfBirth" : [ "1823-05-24" ],
   "dateOfDeath" : [ "1892-03-11" ],

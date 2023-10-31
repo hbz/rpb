@@ -11,10 +11,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Schriftsteller",
-    "id" : "https://rpb.lobid.org/sw/4053309n8"
+    "id" : "https://d-nb.info/gnd/4053309-8"
   }, {
     "label" : "Journalist",
-    "id" : "https://rpb.lobid.org/sw/4028781n6"
+    "id" : "https://d-nb.info/gnd/4028781-6"
   } ],
   "dateOfBirth" : [ "1943-11-01" ],
   "gender" : [ {

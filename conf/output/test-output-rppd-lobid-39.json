@@ -12,13 +12,13 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Bürgermeister",
-    "id" : "https://rpb.lobid.org/sw/4136676n1"
+    "id" : "https://d-nb.info/gnd/4136676-1"
   }, {
     "label" : "Landwirt",
-    "id" : "https://rpb.lobid.org/sw/4034399n6"
+    "id" : "https://d-nb.info/gnd/4034399-6"
   }, {
     "label" : "Gastwirt",
-    "id" : "https://rpb.lobid.org/sw/4156075n9"
+    "id" : "https://d-nb.info/gnd/4156075-9"
   } ],
   "dateOfBirth" : [ "1899-11-12" ],
   "dateOfDeath" : [ "1973-06-24" ],

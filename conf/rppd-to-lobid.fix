@@ -74,7 +74,12 @@ end
 do list(path:"professionOrOccupation[]", "var": "$i")
   lookup("$i.label", "SW_map", delete: "true")
   if exists("$i.label")
-    prepend("$i.id", "https://rpb.lobid.org/sw/")
+    if all_match("$i.id", "(^\\d*)n(\\d)")
+      replace_all("$i.id", "(^\\d*)n(\\d)", "$1-$2")
+      prepend("$i.id", "https://d-nb.info/gnd/")
+    else
+      prepend("$i.id", "https://rpb.lobid.org/sw/")
+    end
   # TODO kein Beispiel in Testdaten
   else
     move_field("$i.id", "$i.label")

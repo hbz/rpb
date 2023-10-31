@@ -11,10 +11,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Lehrer",
-    "id" : "https://rpb.lobid.org/sw/4035088n5"
+    "id" : "https://d-nb.info/gnd/4035088-5"
   }, {
     "label" : "Heimatkundler",
-    "id" : "https://rpb.lobid.org/sw/4313907n3"
+    "id" : "https://d-nb.info/gnd/4313907-3"
   } ],
   "dateOfBirth" : [ "1859-12-03" ],
   "dateOfDeath" : [ "1915-06-03" ],

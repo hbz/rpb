@@ -16,6 +16,7 @@
     "label" : "Politiker",
     "id" : "https://rpb.lobid.org/sw/4046517n2"
   } ],
+  "periodOfActivity" : [ "1848" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

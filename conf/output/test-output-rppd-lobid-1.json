@@ -12,13 +12,13 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Maler",
-    "id" : "https://rpb.lobid.org/sw/4037215n7"
+    "id" : "https://d-nb.info/gnd/4037215-7"
   }, {
     "label" : "Grafiker",
-    "id" : "https://rpb.lobid.org/sw/4125173n8"
+    "id" : "https://d-nb.info/gnd/4125173-8"
   }, {
     "label" : "Kunsterzieher",
-    "id" : "https://rpb.lobid.org/sw/4302182n7"
+    "id" : "https://d-nb.info/gnd/4302182-7"
   } ],
   "dateOfBirth" : [ "1896-11-14" ],
   "dateOfDeath" : [ "1984" ],

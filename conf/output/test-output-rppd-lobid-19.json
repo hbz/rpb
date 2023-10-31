@@ -12,10 +12,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Lehrer",
-    "id" : "https://rpb.lobid.org/sw/4035088n5"
+    "id" : "https://d-nb.info/gnd/4035088-5"
   }, {
     "label" : "Bürgermeister",
-    "id" : "https://rpb.lobid.org/sw/4136676n1"
+    "id" : "https://d-nb.info/gnd/4136676-1"
   } ],
   "dateOfBirth" : [ "1912-07-24" ],
   "dateOfDeath" : [ "1994-02-03" ],

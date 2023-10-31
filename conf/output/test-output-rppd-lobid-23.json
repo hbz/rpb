@@ -11,10 +11,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Bäcker",
-    "id" : "https://rpb.lobid.org/sw/4120966n7"
+    "id" : "https://d-nb.info/gnd/4120966-7"
   }, {
     "label" : "Lagerkommandant",
-    "id" : "https://rpb.lobid.org/sw/4276356n3"
+    "id" : "https://d-nb.info/gnd/4276356-3"
   } ],
   "dateOfBirth" : [ "1906-03-26" ],
   "dateOfDeath" : [ "1974-10-23" ],

@@ -11,10 +11,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Philosoph",
-    "id" : "https://rpb.lobid.org/sw/4045790n4"
+    "id" : "https://d-nb.info/gnd/4045790-4"
   }, {
     "label" : "Schriftsteller",
-    "id" : "https://rpb.lobid.org/sw/4053309n8"
+    "id" : "https://d-nb.info/gnd/4053309-8"
   } ],
   "dateOfBirth" : [ "1959" ],
   "gender" : [ {

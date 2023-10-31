@@ -11,13 +11,13 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Unternehmer",
-    "id" : "https://rpb.lobid.org/sw/4061949n7"
+    "id" : "https://d-nb.info/gnd/4061949-7"
   }, {
     "label" : "Musikinstrumentenbauer",
-    "id" : "https://rpb.lobid.org/sw/4170830n1"
+    "id" : "https://d-nb.info/gnd/4170830-1"
   }, {
     "label" : "Drechsler",
-    "id" : "https://rpb.lobid.org/sw/4301425n2"
+    "id" : "https://d-nb.info/gnd/4301425-2"
   } ],
   "dateOfBirth" : [ "1787" ],
   "dateOfDeath" : [ "1864" ],

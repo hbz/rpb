@@ -12,13 +12,13 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Gymnasiallehrer",
-    "id" : "https://rpb.lobid.org/sw/4158589n6"
+    "id" : "https://d-nb.info/gnd/4158589-6"
   }, {
     "label" : "Schriftsteller",
-    "id" : "https://rpb.lobid.org/sw/4053309n8"
+    "id" : "https://d-nb.info/gnd/4053309-8"
   }, {
     "label" : "Verleger",
-    "id" : "https://rpb.lobid.org/sw/4138343n6"
+    "id" : "https://d-nb.info/gnd/4138343-6"
   } ],
   "dateOfBirth" : [ "1914-11-05" ],
   "dateOfDeath" : [ "2003-07-01" ],

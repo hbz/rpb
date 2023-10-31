@@ -11,13 +11,13 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Jurist",
-    "id" : "https://rpb.lobid.org/sw/4029050n5"
+    "id" : "https://d-nb.info/gnd/4029050-5"
   }, {
     "label" : "Landrat",
-    "id" : "https://rpb.lobid.org/sw/4166616n1"
+    "id" : "https://d-nb.info/gnd/4166616-1"
   }, {
     "label" : "Ehrenamtliche Tätigkeit",
-    "id" : "https://rpb.lobid.org/sw/4013673n5"
+    "id" : "https://d-nb.info/gnd/4013673-5"
   } ],
   "dateOfBirth" : [ "1936-11-28" ],
   "dateOfDeath" : [ "2023-05-30" ],

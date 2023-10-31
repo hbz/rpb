@@ -15,10 +15,10 @@
     "id" : "https://rpb.lobid.org/sw/1148297561"
   }, {
     "label" : "Schriftsteller",
-    "id" : "https://rpb.lobid.org/sw/4053309n8"
+    "id" : "https://d-nb.info/gnd/4053309-8"
   }, {
     "label" : "Kolumnist",
-    "id" : "https://rpb.lobid.org/sw/4335688n6"
+    "id" : "https://d-nb.info/gnd/4335688-6"
   } ],
   "dateOfBirth" : [ "1932-10-10" ],
   "dateOfDeath" : [ "2016-09-28" ],

@@ -12,16 +12,16 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Klassischer Philologe",
-    "id" : "https://rpb.lobid.org/sw/4199241n6"
+    "id" : "https://d-nb.info/gnd/4199241-6"
   }, {
     "label" : "Historiker",
-    "id" : "https://rpb.lobid.org/sw/4025098n2"
+    "id" : "https://d-nb.info/gnd/4025098-2"
   }, {
     "label" : "Archäologe",
-    "id" : "https://rpb.lobid.org/sw/4191824n1"
+    "id" : "https://d-nb.info/gnd/4191824-1"
   }, {
     "label" : "Gymnasiallehrer",
-    "id" : "https://rpb.lobid.org/sw/4158589n6"
+    "id" : "https://d-nb.info/gnd/4158589-6"
   } ],
   "dateOfBirth" : [ "1857-12-01" ],
   "dateOfDeath" : [ "1923-12-02" ],

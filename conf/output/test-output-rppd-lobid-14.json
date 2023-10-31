@@ -11,7 +11,7 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Komponist",
-    "id" : "https://rpb.lobid.org/sw/4032009n1"
+    "id" : "https://d-nb.info/gnd/4032009-1"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

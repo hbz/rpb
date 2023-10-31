@@ -12,10 +12,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Rabbiner",
-    "id" : "https://rpb.lobid.org/sw/4176751n2"
+    "id" : "https://d-nb.info/gnd/4176751-2"
   }, {
     "label" : "Talmudist",
-    "id" : "https://rpb.lobid.org/sw/4293593n3"
+    "id" : "https://d-nb.info/gnd/4293593-3"
   } ],
   "dateOfBirth" : [ "1836-04-24" ],
   "dateOfDeath" : [ "1917" ],

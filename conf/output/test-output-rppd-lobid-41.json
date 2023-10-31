@@ -11,10 +11,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Beigeordneter",
-    "id" : "https://rpb.lobid.org/sw/4144367n6"
+    "id" : "https://d-nb.info/gnd/4144367-6"
   }, {
     "label" : "Kommunalpolitiker",
-    "id" : "https://rpb.lobid.org/sw/4396366n3"
+    "id" : "https://d-nb.info/gnd/4396366-3"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

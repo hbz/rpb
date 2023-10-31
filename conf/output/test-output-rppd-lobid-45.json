@@ -11,10 +11,10 @@
   } ],
   "professionOrOccupation" : [ {
     "label" : "Techniker",
-    "id" : "https://rpb.lobid.org/sw/4138289n4"
+    "id" : "https://d-nb.info/gnd/4138289-4"
   }, {
     "label" : "Politiker",
-    "id" : "https://rpb.lobid.org/sw/4046517n2"
+    "id" : "https://d-nb.info/gnd/4046517-2"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

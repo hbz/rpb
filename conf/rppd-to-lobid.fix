@@ -85,7 +85,6 @@ end
 # -------
 # #1wz (Wirkungszeitraum) -> periodOfActivity
 # Kommentar Doku: Wenn kein Geburtsdatum und kein Todesdatum ermittelbar ist, kann hier ein Zeitraum eingetragen werden
-# TODO: Wir brauchen ein Beispiel, anscheinend können wir selber nicht die Beispiele aktualisieren, da dabei Sonderzeichenfehler entstehen.
 
 
 # -------

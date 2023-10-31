@@ -1,0 +1,26 @@
+{
+  "id" : "https://d-nb.info/gnd/1051215234",
+  "rppdId" : "pta1435",
+  "gndIdentifier" : "1051215234",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Weyrich, Karl",
+  "depiction" : [ {
+    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215234",
+    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215234",
+    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215234"
+  } ],
+  "professionOrOccupation" : [ {
+    "label" : "Techniker",
+    "id" : "https://rpb.lobid.org/sw/4138289n4"
+  }, {
+    "label" : "Politiker",
+    "id" : "https://rpb.lobid.org/sw/4046517n2"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  }
+}

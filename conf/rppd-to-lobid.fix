@@ -89,7 +89,8 @@ do list(path:"professionOrOccupation[]", "var": "$i")
     end
   # TODO kein Beispiel in Testdaten
   else
-    move_field("$i.id", "$i.label")
+    copy_field("$i.id", "$i.label")
+    prepend("$i.id", "https://rpb.lobid.org/dummi/")
   end
 end
   

@@ -21,6 +21,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13807073"
   } ],
   "dateOfBirth" : [ "1959" ],
+  "placeOfBirth" : [ {
+    "label" : "Werdohl",
+    "id" : "https://rpb.lobid.org/dummi/Werdohl"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -27,6 +27,10 @@
     "id" : "https://rpb.lobid.org/dummi/Berlin"
   } ],
   "dateOfBirth" : [ "1825-06-09" ],
+  "placeOfBirth" : [ {
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
+  } ],
   "dateOfDeath" : [ "1880-01-01" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

@@ -14,6 +14,10 @@
     "id" : "https://d-nb.info/gnd/7628980-1"
   } ],
   "dateOfBirth" : [ "1742-12-27" ],
+  "placeOfBirth" : [ {
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
+  } ],
   "dateOfDeath" : [ "1825-05-06" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

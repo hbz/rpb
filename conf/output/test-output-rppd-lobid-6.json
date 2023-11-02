@@ -22,6 +22,10 @@
     "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
   "dateOfBirth" : [ "1890-07-28" ],
+  "placeOfBirth" : [ {
+    "label" : "Buffenhofen",
+    "id" : "https://rpb.lobid.org/dummi/Buffenhofen"
+  } ],
   "dateOfDeath" : [ "1966-08-13" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

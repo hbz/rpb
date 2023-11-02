@@ -14,6 +14,10 @@
     "id" : "https://d-nb.info/gnd/4063330-5"
   } ],
   "dateOfBirth" : [ "1895-03-15" ],
+  "placeOfBirth" : [ {
+    "label" : "Pallien (T.a. Ortsbezirk 8)",
+    "id" : "https://rpb.lobid.org/spatial#n211000001500"
+  } ],
   "dateOfDeath" : [ "1951-12-10" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

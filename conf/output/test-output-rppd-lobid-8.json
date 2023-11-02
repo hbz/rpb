@@ -17,6 +17,10 @@
     "id" : "https://d-nb.info/gnd/4028781-6"
   } ],
   "dateOfBirth" : [ "1943-11-01" ],
+  "placeOfBirth" : [ {
+    "label" : "Rengsdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13809061"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

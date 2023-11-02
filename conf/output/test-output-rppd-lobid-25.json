@@ -24,6 +24,10 @@
     "id" : "https://rpb.lobid.org/spatial#n231010080200"
   } ],
   "dateOfBirth" : [ "1893-04-21" ],
+  "placeOfBirth" : [ {
+    "label" : "Würzburg",
+    "id" : "https://rpb.lobid.org/dummi/Würzburg"
+  } ],
   "dateOfDeath" : [ "1952-10-16" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

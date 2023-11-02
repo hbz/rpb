@@ -34,6 +34,10 @@
     "id" : "https://rpb.lobid.org/dummi/Hünfelden"
   } ],
   "dateOfBirth" : [ "1935-05-25" ],
+  "placeOfBirth" : [ {
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
+  } ],
   "dateOfDeath" : [ "2023-04-14" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

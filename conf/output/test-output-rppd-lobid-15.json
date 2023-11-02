@@ -18,6 +18,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13309052"
   } ],
   "dateOfBirth" : [ "1894-01-02" ],
+  "placeOfBirth" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  } ],
   "dateOfDeath" : [ "Oktober 1989" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

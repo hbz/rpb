@@ -25,6 +25,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13804041"
   } ],
   "dateOfBirth" : [ "1896-11-14" ],
+  "placeOfBirth" : [ {
+    "label" : "Düsseldorf",
+    "id" : "https://rpb.lobid.org/dummi/Düsseldorf"
+  } ],
   "dateOfDeath" : [ "1984" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

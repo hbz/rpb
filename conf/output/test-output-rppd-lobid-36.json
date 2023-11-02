@@ -30,6 +30,10 @@
     "id" : "https://rpb.lobid.org/dummi/Düsseldorf"
   } ],
   "dateOfBirth" : [ "1936-11-28" ],
+  "placeOfBirth" : [ {
+    "label" : "Betzdorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13209006"
+  } ],
   "dateOfDeath" : [ "2023-05-30" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

@@ -22,6 +22,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13104209"
   } ],
   "dateOfBirth" : [ "1872-09-17" ],
+  "placeOfBirth" : [ {
+    "label" : "Mayen, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13700068"
+  } ],
   "dateOfDeath" : [ "1942-10-03" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

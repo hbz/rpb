@@ -40,6 +40,10 @@
     "id" : "https://rpb.lobid.org/spatial#n31500000"
   } ],
   "dateOfBirth" : [ "1854-09-01" ],
+  "placeOfBirth" : [ {
+    "label" : "Siegburg",
+    "id" : "https://rpb.lobid.org/dummi/Siegburg"
+  } ],
   "dateOfDeath" : [ "1921-09-27" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

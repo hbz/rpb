@@ -17,6 +17,10 @@
     "id" : "https://d-nb.info/gnd/4313907-3"
   } ],
   "dateOfBirth" : [ "1859-12-03" ],
+  "placeOfBirth" : [ {
+    "label" : "Kell am See",
+    "id" : "https://rpb.lobid.org/spatial#n23508058"
+  } ],
   "dateOfDeath" : [ "1915-06-03" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

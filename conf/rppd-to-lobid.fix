@@ -138,6 +138,34 @@ copy_field("f1np", "dateOfBirth[].$append")
 # #1nq (Geburtsort (R)) -> placeOfBirth
 # Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND 
 
+set_array("placeOfBirth[]")
+if any_match("f1nq", "^_o.+")
+  replace_all("f1nq", "^_o|_$", "")
+  prepend("f1nq", "https://rpb.lobid.org/spatial#n")
+  copy_field("f1nq", "placeOfBirth[].$append.label")
+  copy_field("f1nq", "placeOfBirth[].$last.id")
+  lookup("placeOfBirth[].$last.label", "spatial_map")
+else
+  copy_field("f1nq", "placeOfBirth[].$append.label")
+  prepend("f1nq", "https://rpb.lobid.org/dummi/")
+  copy_field("f1nq", "placeOfBirth[].$last.id")
+end 
+
+
+# do list(path:"f1nq[]", "var": "$i")
+#   if any_match("$i.f1nq", "^_o.+")
+#     replace_all("$i.f1nq", "^_o|_$", "")
+#     prepend("$i.f1nq", "https://rpb.lobid.org/spatial#n")
+#     copy_field("$i.f1nq", "placeOfBirth[].$append.label")
+#     copy_field("$i.f1nq", "placeOfBirth[].$last.id")
+#     lookup("placeOfBirth[].$last.label", "spatial_map")
+#   else
+#     copy_field("$i.f1nq", "placeOfBirth[].$append.label")
+#     prepend("$i.f1nq", "https://rpb.lobid.org/dummi/")
+#     copy_field("$i.f1nq", "placeOfBirth[].$last.id")
+#   end
+# end
+
 # -------
 # #1nr (Sterbedatum) -> dateOfDeath
 ## Kommentar Doku: s. #1np
@@ -233,6 +261,7 @@ retain(
   "variantName[]", 
   "periodOfActivity[]", 
   "placeOfActivity[]",
-  "gndSubjectCategory[]"
+  "gndSubjectCategory[]", 
+  "placeOfBirth[]"
   )
 	

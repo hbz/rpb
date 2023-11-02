@@ -31,6 +31,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13210501"
   } ],
   "dateOfBirth" : [ "1603" ],
+  "placeOfBirth" : [ {
+    "label" : "Siegen",
+    "id" : "https://rpb.lobid.org/dummi/Siegen"
+  } ],
   "dateOfDeath" : [ "1658-12-12" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

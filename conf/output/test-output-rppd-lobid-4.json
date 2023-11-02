@@ -25,6 +25,10 @@
     "id" : "https://rpb.lobid.org/spatial#n14302301"
   } ],
   "dateOfBirth" : [ "1932-10-10" ],
+  "placeOfBirth" : [ {
+    "label" : "Wahlrod",
+    "id" : "https://rpb.lobid.org/spatial#n14302301"
+  } ],
   "dateOfDeath" : [ "2016-09-28" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

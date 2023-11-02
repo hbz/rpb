@@ -18,6 +18,10 @@
     "id" : "https://rpb.lobid.org/spatial#n23109501"
   } ],
   "dateOfBirth" : [ "1977" ],
+  "placeOfBirth" : [ {
+    "label" : "Simmern / Hunsrück, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14008144"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -18,6 +18,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13807008"
   } ],
   "dateOfBirth" : [ "1895-04-04" ],
+  "placeOfBirth" : [ {
+    "label" : "Bell",
+    "id" : "https://rpb.lobid.org/spatial#n13704008"
+  } ],
   "dateOfDeath" : [ "1972-04-23" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

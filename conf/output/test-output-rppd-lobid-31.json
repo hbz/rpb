@@ -14,6 +14,10 @@
     "id" : "https://d-nb.info/gnd/4168391-2"
   } ],
   "dateOfBirth" : [ "1825-01-10" ],
+  "placeOfBirth" : [ {
+    "label" : "Niederkail (Ortsbezirk)",
+    "id" : "https://rpb.lobid.org/spatial#n231085030300"
+  } ],
   "dateOfDeath" : [ "1901-11-14" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

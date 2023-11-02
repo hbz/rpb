@@ -14,6 +14,10 @@
     "id" : "https://d-nb.info/gnd/4035088-5"
   } ],
   "dateOfBirth" : [ "1883-07-28" ],
+  "placeOfBirth" : [ {
+    "label" : "Weiten <Dillingen, Saar>",
+    "id" : "https://rpb.lobid.org/dummi/Weiten <Dillingen, Saar>"
+  } ],
   "dateOfDeath" : [ "1955-05-16" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

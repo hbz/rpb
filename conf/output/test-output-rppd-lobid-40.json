@@ -21,6 +21,10 @@
     "id" : "https://rpb.lobid.org/spatial#n31500000"
   } ],
   "dateOfBirth" : [ "1928-06-08" ],
+  "placeOfBirth" : [ {
+    "label" : "Alzey, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n33100003"
+  } ],
   "dateOfDeath" : [ "2015-10-07" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#female",

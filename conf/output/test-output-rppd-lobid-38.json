@@ -25,6 +25,10 @@
     "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
   "dateOfBirth" : [ "1823-05-24" ],
+  "placeOfBirth" : [ {
+    "label" : "Bad Kreuznach, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13300006"
+  } ],
   "dateOfDeath" : [ "1892-03-11" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

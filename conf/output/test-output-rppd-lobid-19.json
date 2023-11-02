@@ -18,6 +18,10 @@
     "id" : "https://d-nb.info/gnd/4136676-1"
   } ],
   "dateOfBirth" : [ "1912-07-24" ],
+  "placeOfBirth" : [ {
+    "label" : "Trier, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  } ],
   "dateOfDeath" : [ "1994-02-03" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

@@ -34,6 +34,10 @@
     "id" : "https://rpb.lobid.org/spatial#n141000750200"
   } ],
   "dateOfBirth" : [ "1857-12-01" ],
+  "placeOfBirth" : [ {
+    "label" : "Wermelskirchen",
+    "id" : "https://rpb.lobid.org/dummi/Wermelskirchen"
+  } ],
   "dateOfDeath" : [ "1923-12-02" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

@@ -14,6 +14,10 @@
     "id" : "https://rpb.lobid.org/sw/929n170632"
   } ],
   "dateOfBirth" : [ "1893-06-15" ],
+  "placeOfBirth" : [ {
+    "label" : "Nalbach",
+    "id" : "https://rpb.lobid.org/dummi/Nalbach"
+  } ],
   "dateOfDeath" : [ "1944-05-12" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

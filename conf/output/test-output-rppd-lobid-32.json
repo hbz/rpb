@@ -18,6 +18,10 @@
     "id" : "https://d-nb.info/gnd/4293593-3"
   } ],
   "dateOfBirth" : [ "1836-04-24" ],
+  "placeOfBirth" : [ {
+    "label" : "Uhersky▐ü Brod",
+    "id" : "https://rpb.lobid.org/dummi/Uhersky▐ü Brod"
+  } ],
   "dateOfDeath" : [ "1917" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

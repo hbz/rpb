@@ -22,6 +22,10 @@
     "id" : "https://rpb.lobid.org/dummi/Berlin"
   } ],
   "dateOfBirth" : [ "1895-02-11" ],
+  "placeOfBirth" : [ {
+    "label" : "Ehrenbreitstein",
+    "id" : "https://rpb.lobid.org/spatial#n111000000500"
+  } ],
   "dateOfDeath" : [ "1976-03-03" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

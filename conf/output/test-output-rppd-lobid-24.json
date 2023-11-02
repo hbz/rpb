@@ -14,6 +14,10 @@
     "id" : "https://d-nb.info/gnd/4135253-1"
   } ],
   "dateOfBirth" : [ "1806-08-29" ],
+  "placeOfBirth" : [ {
+    "label" : "Gillenfeld",
+    "id" : "https://rpb.lobid.org/spatial#n23301027"
+  } ],
   "dateOfDeath" : [ "1870-06-10" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

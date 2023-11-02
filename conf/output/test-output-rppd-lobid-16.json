@@ -22,6 +22,10 @@
     "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
   "dateOfBirth" : [ "1796-12-20" ],
+  "placeOfBirth" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
   "dateOfDeath" : [ "1844-02-29" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

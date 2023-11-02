@@ -18,6 +18,10 @@
     "id" : "https://d-nb.info/gnd/4139550-5"
   } ],
   "dateOfBirth" : [ "1919-09-03" ],
+  "placeOfBirth" : [ {
+    "label" : "Graach an der Mosel",
+    "id" : "https://rpb.lobid.org/spatial#n23101041"
+  } ],
   "dateOfDeath" : [ "1995-11-20" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

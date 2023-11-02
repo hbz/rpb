@@ -11,6 +11,10 @@
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/105121548X"
   } ],
   "dateOfBirth" : [ "1903-10-17" ],
+  "placeOfBirth" : [ {
+    "label" : "Andernach, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13700003"
+  } ],
   "dateOfDeath" : [ "1963-04-16" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

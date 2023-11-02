@@ -14,6 +14,10 @@
     "id" : "https://d-nb.info/gnd/4061949-7"
   } ],
   "dateOfBirth" : [ "1866-11-08" ],
+  "placeOfBirth" : [ {
+    "label" : "Niederbachem",
+    "id" : "https://rpb.lobid.org/dummi/Niederbachem"
+  } ],
   "dateOfDeath" : [ "1930-06-19" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

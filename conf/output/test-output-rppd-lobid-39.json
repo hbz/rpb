@@ -25,6 +25,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13804037"
   } ],
   "dateOfBirth" : [ "1899-11-12" ],
+  "placeOfBirth" : [ {
+    "label" : "Leubsdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13804037"
+  } ],
   "dateOfDeath" : [ "1973-06-24" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

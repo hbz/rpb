@@ -17,6 +17,10 @@
     "id" : "https://rpb.lobid.org/sw/00Sn49x3465a"
   } ],
   "dateOfBirth" : [ "1902-01-05" ],
+  "placeOfBirth" : [ {
+    "label" : "Weiten <Dillingen, Saar>",
+    "id" : "https://rpb.lobid.org/dummi/Weiten <Dillingen, Saar>"
+  } ],
   "dateOfDeath" : [ "1974-12-21" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

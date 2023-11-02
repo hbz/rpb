@@ -17,6 +17,10 @@
     "label" : "Brühl <Rhein-Erft-Kreis>",
     "id" : "https://rpb.lobid.org/dummi/Brühl <Rhein-Erft-Kreis>"
   } ],
+  "placeOfBirth" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

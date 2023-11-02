@@ -8,6 +8,8 @@ do once("map")
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
 end
 
+# @context
+add_field("@context", "http://lobid.org/gnd/context.jsonld")
 
 # ------
 #00 RPPD-ID 
@@ -261,6 +263,7 @@ copy_field("f1ny", "describedBy.dateModified")
 
 vacuum()
 retain(
+  "@context",
   "dateOfBirth[]",
   "dateOfDeath[]",
   "depiction[]",

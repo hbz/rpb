@@ -1,4 +1,5 @@
 {
+  "@context" : "http://lobid.org/gnd/context.jsonld",
   "id" : "https://d-nb.info/gnd/115839909",
   "rppdId" : "pk00015",
   "gndIdentifier" : "115839909",

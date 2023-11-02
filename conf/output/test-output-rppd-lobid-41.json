@@ -1,4 +1,5 @@
 {
+  "@context" : "http://lobid.org/gnd/context.jsonld",
   "id" : "https://rppd.lobid.org/pk02366",
   "rppdId" : "pk02366",
   "gndIdentifier" : "Keine GND-Ansetzung für pk02366",

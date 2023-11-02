@@ -4,4 +4,7 @@ end
 
 copy_field("f00_","rppdId")
 copy_field("f82b","gndId")
-retain("rppdId","gndId")
+copy_field("f1na", "preferredName")
+replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
+trim("preferredName")
+retain("rppdId","gndId", "preferredName")

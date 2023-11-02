@@ -18,9 +18,11 @@
     "id" : "https://d-nb.info/gnd/7607862-0"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Jena"
+    "label" : "Jena",
+    "id" : "https://rpb.lobid.org/dummi/Jena"
   }, {
-    "label" : "Köln"
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
   "dateOfBirth" : [ "1823-05-24" ],
   "dateOfDeath" : [ "1892-03-11" ],

@@ -24,11 +24,14 @@
     "id" : "https://d-nb.info/gnd/4466532-5"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Limburg, Lahn"
+    "label" : "Limburg, Lahn",
+    "id" : "https://rpb.lobid.org/dummi/Limburg, Lahn"
   }, {
-    "label" : "Neesbach"
+    "label" : "Neesbach",
+    "id" : "https://rpb.lobid.org/dummi/Neesbach"
   }, {
-    "label" : "Hünfelden"
+    "label" : "Hünfelden",
+    "id" : "https://rpb.lobid.org/dummi/Hünfelden"
   } ],
   "dateOfBirth" : [ "1935-05-25" ],
   "dateOfDeath" : [ "2023-04-14" ],

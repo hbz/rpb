@@ -15,20 +15,26 @@
     "id" : "https://d-nb.info/gnd/4032009-1"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Köln"
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
   }, {
-    "label" : "München"
+    "label" : "München",
+    "id" : "https://rpb.lobid.org/dummi/München"
   }, {
-    "label" : "Xanten"
+    "label" : "Xanten",
+    "id" : "https://rpb.lobid.org/dummi/Xanten"
   }, {
-    "label" : "Bayreuth"
+    "label" : "Bayreuth",
+    "id" : "https://rpb.lobid.org/dummi/Bayreuth"
   }, {
-    "label" : "https://rpb.lobid.org/spatial#n14000501",
+    "label" : "Boppard, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n14000501"
   }, {
-    "label" : "Barcelona"
+    "label" : "Barcelona",
+    "id" : "https://rpb.lobid.org/dummi/Barcelona"
   }, {
-    "label" : "Frankfurt am Main"
+    "label" : "Frankfurt am Main",
+    "id" : "https://rpb.lobid.org/dummi/Frankfurt am Main"
   }, {
     "label" : "Mainz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n31500000"

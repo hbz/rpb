@@ -118,11 +118,11 @@ do list(path:"f1no[]", "var": "$i")
     prepend("$i.f1no", "https://rpb.lobid.org/spatial#n")
     copy_field("$i.f1no", "placeOfActivity[].$append.label")
     copy_field("$i.f1no", "placeOfActivity[].$last.id")
-    do list(path:"placeOfActivity[]", "var": "$i")
-      lookup("$i.label", "spatial_map")
-    end
+    lookup("placeOfActivity[].$last.label", "spatial_map")
   else
     copy_field("$i.f1no", "placeOfActivity[].$append.label")
+    prepend("$i.f1no", "https://rpb.lobid.org/dummi/")
+    copy_field("$i.f1no", "placeOfActivity[].$last.id")
   end
 end
 

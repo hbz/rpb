@@ -20,9 +20,11 @@
     "label" : "Diez,Stadt",
     "id" : "https://rpb.lobid.org/spatial#n14103029"
   }, {
-    "label" : "Wiesbaden"
+    "label" : "Wiesbaden",
+    "id" : "https://rpb.lobid.org/dummi/Wiesbaden"
   }, {
-    "label" : "Berlin"
+    "label" : "Berlin",
+    "id" : "https://rpb.lobid.org/dummi/Berlin"
   } ],
   "dateOfBirth" : [ "1825-06-09" ],
   "dateOfDeath" : [ "1880-01-01" ],

@@ -15,9 +15,11 @@
     "id" : "https://rpb.lobid.org/sw/00Sn02x0286a"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Schweden"
+    "label" : "Schweden",
+    "id" : "https://rpb.lobid.org/dummi/Schweden"
   }, {
-    "label" : "Berlin"
+    "label" : "Berlin",
+    "id" : "https://rpb.lobid.org/dummi/Berlin"
   } ],
   "dateOfBirth" : [ "1895-02-11" ],
   "dateOfDeath" : [ "1976-03-03" ],

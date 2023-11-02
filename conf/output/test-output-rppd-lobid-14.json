@@ -14,7 +14,8 @@
     "id" : "https://d-nb.info/gnd/4032009-1"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Brühl <Rhein-Erft-Kreis>"
+    "label" : "Brühl <Rhein-Erft-Kreis>",
+    "id" : "https://rpb.lobid.org/dummi/Brühl <Rhein-Erft-Kreis>"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

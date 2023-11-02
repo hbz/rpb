@@ -24,9 +24,11 @@
     "id" : "https://d-nb.info/gnd/4158589-6"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Remscheid"
+    "label" : "Remscheid",
+    "id" : "https://rpb.lobid.org/dummi/Remscheid"
   }, {
-    "label" : "Bünde"
+    "label" : "Bünde",
+    "id" : "https://rpb.lobid.org/dummi/Bünde"
   }, {
     "label" : "Oberlahnstein",
     "id" : "https://rpb.lobid.org/spatial#n141000750200"

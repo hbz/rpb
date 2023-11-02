@@ -20,13 +20,14 @@
     "id" : "https://d-nb.info/gnd/4013673-5"
   } ],
   "placeOfActivity" : [ {
-    "label" : "https://rpb.lobid.org/spatial#n14304048",
+    "label" : "Montabaur, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n14304048"
   }, {
     "label" : "Mainz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n31500000"
   }, {
-    "label" : "Düsseldorf"
+    "label" : "Düsseldorf",
+    "id" : "https://rpb.lobid.org/dummi/Düsseldorf"
   } ],
   "dateOfBirth" : [ "1936-11-28" ],
   "dateOfDeath" : [ "2023-05-30" ],

@@ -14,9 +14,10 @@
     "id" : "https://d-nb.info/gnd/4398834-9"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Würzburg"
+    "label" : "Würzburg",
+    "id" : "https://rpb.lobid.org/dummi/Würzburg"
   }, {
-    "label" : "https://rpb.lobid.org/spatial#n21100000",
+    "label" : "Trier, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n21100000"
   }, {
     "label" : "Bernkastel",

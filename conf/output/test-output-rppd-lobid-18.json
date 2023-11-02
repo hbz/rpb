@@ -18,13 +18,13 @@
     "id" : "https://d-nb.info/gnd/4035088-5"
   } ],
   "placeOfActivity" : [ {
-    "label" : "https://rpb.lobid.org/spatial#n14302229",
+    "label" : "Hachenburg, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n14302229"
   }, {
     "label" : "Bendorf, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n13700203"
   }, {
-    "label" : "https://rpb.lobid.org/spatial#n14302287",
+    "label" : "Roßbach",
     "id" : "https://rpb.lobid.org/spatial#n14302287"
   }, {
     "label" : "Altenkirchen (Westerwald), Stadt",

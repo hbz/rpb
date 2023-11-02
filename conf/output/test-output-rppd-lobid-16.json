@@ -14,6 +14,12 @@
     "label" : "Maler",
     "id" : "https://d-nb.info/gnd/4037215-7"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  }, {
+    "label" : "Köln"
+  } ],
   "dateOfBirth" : [ "1796-12-20" ],
   "dateOfDeath" : [ "1844-02-29" ],
   "gender" : [ {

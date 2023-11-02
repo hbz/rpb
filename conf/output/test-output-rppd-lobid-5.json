@@ -16,6 +16,10 @@
     "label" : "Schriftsteller",
     "id" : "https://d-nb.info/gnd/4053309-8"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Unkel, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13807073"
+  } ],
   "dateOfBirth" : [ "1959" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

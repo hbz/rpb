@@ -14,6 +14,25 @@
     "label" : "Komponist",
     "id" : "https://d-nb.info/gnd/4032009-1"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Köln"
+  }, {
+    "label" : "München"
+  }, {
+    "label" : "Xanten"
+  }, {
+    "label" : "Bayreuth"
+  }, {
+    "label" : "https://rpb.lobid.org/spatial#n14000501",
+    "id" : "https://rpb.lobid.org/spatial#n14000501"
+  }, {
+    "label" : "Barcelona"
+  }, {
+    "label" : "Frankfurt am Main"
+  }, {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
   "dateOfBirth" : [ "1854-09-01" ],
   "dateOfDeath" : [ "1921-09-27" ],
   "gender" : [ {

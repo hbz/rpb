@@ -19,6 +19,10 @@
     "label" : "Drechsler",
     "id" : "https://d-nb.info/gnd/4301425-2"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
   "dateOfBirth" : [ "1787" ],
   "dateOfDeath" : [ "1864" ],
   "gender" : [ {

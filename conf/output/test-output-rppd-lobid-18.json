@@ -17,6 +17,19 @@
     "label" : "Lehrer",
     "id" : "https://d-nb.info/gnd/4035088-5"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "https://rpb.lobid.org/spatial#n14302229",
+    "id" : "https://rpb.lobid.org/spatial#n14302229"
+  }, {
+    "label" : "Bendorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13700203"
+  }, {
+    "label" : "https://rpb.lobid.org/spatial#n14302287",
+    "id" : "https://rpb.lobid.org/spatial#n14302287"
+  }, {
+    "label" : "Altenkirchen (Westerwald), Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13210501"
+  } ],
   "dateOfBirth" : [ "1603" ],
   "dateOfDeath" : [ "1658-12-12" ],
   "gender" : [ {

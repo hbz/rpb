@@ -23,6 +23,13 @@
     "label" : "Ortsvorsteher",
     "id" : "https://d-nb.info/gnd/4466532-5"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Limburg, Lahn"
+  }, {
+    "label" : "Neesbach"
+  }, {
+    "label" : "Hünfelden"
+  } ],
   "dateOfBirth" : [ "1935-05-25" ],
   "dateOfDeath" : [ "2023-04-14" ],
   "gender" : [ {

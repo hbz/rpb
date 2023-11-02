@@ -16,6 +16,10 @@
     "label" : "Juristin",
     "id" : "https://d-nb.info/gnd/4130076-2"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
   "dateOfBirth" : [ "1928-06-08" ],
   "dateOfDeath" : [ "2015-10-07" ],
   "gender" : [ {

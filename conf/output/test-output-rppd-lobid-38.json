@@ -17,6 +17,11 @@
     "label" : "Mäzen",
     "id" : "https://d-nb.info/gnd/7607862-0"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Jena"
+  }, {
+    "label" : "Köln"
+  } ],
   "dateOfBirth" : [ "1823-05-24" ],
   "dateOfDeath" : [ "1892-03-11" ],
   "gender" : [ {

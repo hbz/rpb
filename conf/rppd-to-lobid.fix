@@ -4,6 +4,9 @@ end
 do once("map_category")
   put_filemap("conf/RPB-Export_HBZ_SWN.tsv", "SWN_map", sep_char: "\t")
 end
+do once("map_spatial")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+end
 
 
 # ------
@@ -103,6 +106,25 @@ copy_field("f1wz", "periodOfActivity[].$append")
 # #1no (Wirkungsort (m, R))-> placeOfActivity
 # Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND; getrennt mit @, auch Wohnorte; Orte, von denen aus gewirkt wurde, nicht das Verwaltungsgebiet
 # Müssen anscheinend die RPB Spatial Ids konstruieren.
+# Basis: "spatial_map" ; RPPB-IDs: Unterstriche und vorangestelltes "o" entfernen
+# f1no[].*.f1no
+# placeOfActivity[].*.id
+# placeOfActivity[].*.label
+
+set_array("placeOfActivity[]")
+do list(path:"f1no[]", "var": "$i")
+  if any_match("$i.f1no", "^_o.+")
+    replace_all("$i.f1no", "^_o|_$", "")
+    prepend("$i.f1no", "https://rpb.lobid.org/spatial#n")
+    copy_field("$i.f1no", "placeOfActivity[].$append.label")
+    copy_field("$i.f1no", "placeOfActivity[].$last.id")
+    do list(path:"placeOfActivity[]", "var": "$i")
+      lookup("$i.label", "spatial_map")
+    end
+  else
+    copy_field("$i.f1no", "placeOfActivity[].$append.label")
+  end
+end
 
 
 # -------
@@ -210,6 +232,7 @@ retain(
   "type[]",
   "variantName[]", 
   "periodOfActivity[]", 
+  "placeOfActivity[]",
   "gndSubjectCategory[]"
   )
 	

@@ -14,6 +14,13 @@
     "label" : "Dekan / Kirche",
     "id" : "https://d-nb.info/gnd/4441540-0"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "https://rpb.lobid.org/spatial#n23206296",
+    "id" : "https://rpb.lobid.org/spatial#n23206296"
+  }, {
+    "label" : "Wassenach",
+    "id" : "https://rpb.lobid.org/spatial#n13104209"
+  } ],
   "dateOfBirth" : [ "1872-09-17" ],
   "dateOfDeath" : [ "1942-10-03" ],
   "gender" : [ {

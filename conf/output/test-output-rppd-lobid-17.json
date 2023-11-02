@@ -23,6 +23,14 @@
     "label" : "Gymnasiallehrer",
     "id" : "https://d-nb.info/gnd/4158589-6"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Remscheid"
+  }, {
+    "label" : "Bünde"
+  }, {
+    "label" : "Oberlahnstein",
+    "id" : "https://rpb.lobid.org/spatial#n141000750200"
+  } ],
   "dateOfBirth" : [ "1857-12-01" ],
   "dateOfDeath" : [ "1923-12-02" ],
   "gender" : [ {

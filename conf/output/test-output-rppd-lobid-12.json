@@ -17,6 +17,14 @@
     "label" : "Dirigent",
     "id" : "https://d-nb.info/gnd/4012434-4"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  }, {
+    "label" : "London"
+  }, {
+    "label" : "New York, NY"
+  } ],
   "dateOfBirth" : [ "1818-01-10" ],
   "dateOfDeath" : [ "1870-12-30" ],
   "gender" : [ {

@@ -20,6 +20,10 @@
     "label" : "Verleger",
     "id" : "https://d-nb.info/gnd/4138343-6"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Bad Ems, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14110006"
+  } ],
   "dateOfBirth" : [ "1914-11-05" ],
   "dateOfDeath" : [ "2003-07-01" ],
   "gender" : [ {

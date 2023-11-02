@@ -17,6 +17,10 @@
     "label" : "Schriftsteller",
     "id" : "https://d-nb.info/gnd/4053309-8"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
   "dateOfBirth" : [ "1890-07-28" ],
   "dateOfDeath" : [ "1966-08-13" ],
   "gender" : [ {

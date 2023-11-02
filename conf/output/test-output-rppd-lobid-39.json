@@ -20,6 +20,10 @@
     "label" : "Gastwirt",
     "id" : "https://d-nb.info/gnd/4156075-9"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Leubsdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13804037"
+  } ],
   "dateOfBirth" : [ "1899-11-12" ],
   "dateOfDeath" : [ "1973-06-24" ],
   "gender" : [ {

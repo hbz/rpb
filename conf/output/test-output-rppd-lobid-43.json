@@ -9,6 +9,10 @@
     "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2",
     "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Schifferstadt, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n33800025"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

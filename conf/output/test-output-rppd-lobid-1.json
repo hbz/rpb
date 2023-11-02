@@ -20,6 +20,10 @@
     "label" : "Kunsterzieher",
     "id" : "https://d-nb.info/gnd/4302182-7"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Linz am Rhein, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13804041"
+  } ],
   "dateOfBirth" : [ "1896-11-14" ],
   "dateOfDeath" : [ "1984" ],
   "gender" : [ {

@@ -13,6 +13,10 @@
     "label" : "Lehrer",
     "id" : "https://d-nb.info/gnd/4035088-5"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Bruchhausen",
+    "id" : "https://rpb.lobid.org/spatial#n13807008"
+  } ],
   "dateOfBirth" : [ "1895-04-04" ],
   "dateOfDeath" : [ "1972-04-23" ],
   "gender" : [ {

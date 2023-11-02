@@ -13,6 +13,9 @@
     "label" : "Komponist",
     "id" : "https://d-nb.info/gnd/4032009-1"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Brühl <Rhein-Erft-Kreis>"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

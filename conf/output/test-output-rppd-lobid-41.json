@@ -16,6 +16,10 @@
     "label" : "Kommunalpolitiker",
     "id" : "https://d-nb.info/gnd/4396366-3"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Herdorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13203050"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

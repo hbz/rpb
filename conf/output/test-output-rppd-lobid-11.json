@@ -14,6 +14,11 @@
     "label" : "Flugzeugkonstrukteur",
     "id" : "https://rpb.lobid.org/sw/00Sn02x0286a"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Schweden"
+  }, {
+    "label" : "Berlin"
+  } ],
   "dateOfBirth" : [ "1895-02-11" ],
   "dateOfDeath" : [ "1976-03-03" ],
   "gender" : [ {

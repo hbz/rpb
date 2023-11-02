@@ -20,6 +20,10 @@
     "label" : "Kolumnist",
     "id" : "https://d-nb.info/gnd/4335688-6"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Wahlrod",
+    "id" : "https://rpb.lobid.org/spatial#n14302301"
+  } ],
   "dateOfBirth" : [ "1932-10-10" ],
   "dateOfDeath" : [ "2016-09-28" ],
   "gender" : [ {

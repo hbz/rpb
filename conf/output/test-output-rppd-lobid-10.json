@@ -16,6 +16,14 @@
     "label" : "Politiker",
     "id" : "https://d-nb.info/gnd/4046517-2"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
+  }, {
+    "label" : "Wiesbaden"
+  }, {
+    "label" : "Berlin"
+  } ],
   "dateOfBirth" : [ "1825-06-09" ],
   "dateOfDeath" : [ "1880-01-01" ],
   "gender" : [ {

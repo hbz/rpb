@@ -13,6 +13,10 @@
     "label" : "Heimatschriftsteller",
     "id" : "https://d-nb.info/gnd/4772761-5"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Bad Ems, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14110006"
+  } ],
   "dateOfBirth" : [ "1912" ],
   "dateOfDeath" : [ "1995" ],
   "gender" : [ {

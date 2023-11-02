@@ -13,6 +13,15 @@
     "label" : "Oberregierungsrat",
     "id" : "https://d-nb.info/gnd/4398834-9"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Würzburg"
+  }, {
+    "label" : "https://rpb.lobid.org/spatial#n21100000",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  }, {
+    "label" : "Bernkastel",
+    "id" : "https://rpb.lobid.org/spatial#n231010080200"
+  } ],
   "dateOfBirth" : [ "1893-04-21" ],
   "dateOfDeath" : [ "1952-10-16" ],
   "gender" : [ {

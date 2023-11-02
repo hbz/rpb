@@ -17,6 +17,10 @@
     "label" : "Musikdirektor",
     "id" : "https://d-nb.info/gnd/7628980-1"
   } ],
+  "placeOfActivity" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
   "dateOfBirth" : [ "1772-03-19" ],
   "dateOfDeath" : [ "1855-12-26" ],
   "gender" : [ {

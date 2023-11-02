@@ -31,6 +31,19 @@
     "label" : "Koblenz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
+  "relatedPerson" : [ {
+    "label" : "Anschuez, Carl",
+    "id" : "https://d-nb.info/gnd/1051147395"
+  }, {
+    "label" : "Anschuez, Franz Caspar",
+    "id" : "https://d-nb.info/gnd/1051177324"
+  }, {
+    "label" : "Anschuez, Heinrich Franz",
+    "id" : "https://d-nb.info/gnd/1051177332"
+  }, {
+    "label" : "Anschütz, Hermann",
+    "id" : "https://d-nb.info/gnd/116312351"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

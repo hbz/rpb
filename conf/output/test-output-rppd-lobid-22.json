@@ -23,6 +23,10 @@
     "label" : "Konzentrationslager Dachau",
     "id" : "https://rpb.lobid.org/dummi/Konzentrationslager Dachau"
   } ],
+  "relatedPerson" : [ {
+    "label" : "Ziegler, Hans",
+    "id" : "https://d-nb.info/gnd/1051203023"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

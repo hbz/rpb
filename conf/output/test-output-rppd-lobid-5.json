@@ -25,6 +25,10 @@
     "label" : "Werdohl",
     "id" : "https://rpb.lobid.org/dummi/Werdohl"
   } ],
+  "relatedPerson" : [ {
+    "label" : "Heyberger, Renate",
+    "id" : "https://rpb.lobid.org/dummi/Heyberger, Renate"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

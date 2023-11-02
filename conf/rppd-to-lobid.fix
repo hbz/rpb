@@ -7,6 +7,11 @@ end
 do once("map_spatial")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
 end
+# für lookup relatedPerson
+do once("map_rel")
+  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
+end
 
 
 # ------
@@ -181,9 +186,24 @@ end
 # Kommentar Doku: RPPD-ID-Nr. mit Unterstrichen, falls Person bereits in RPPD aufgenommen (Bsp.: _pk0000_), sonst Klartext: Nachname, Vorname / Lebensdaten; getrennt mit @; nähere Ausführungen in 1nz notwendig; verknüpfte Person ist anklickbar 
 # TODO: Wenn rppd ID angegeben wird, unterstriche löschen und zu URL transformieren (wie id) und auf Feld relatedPerson[].*.id mappen.
 
-# -------
-# #1nt	(persönl. Beziehungen (m, R)) ->	relatedPerson (unspezifisch)	
-# Kommentar Doku: RPPD-ID-Nr. mit Unterstrichen, falls Person bereits in RPPD aufgenommen (Bsp.: _pk0000_), sonst Klartext: Nachname, Vorname / Lebensdaten; getrennt mit @; nähere Ausführungen in 1nz notwendig; verknüpfte Person ist anklickbar 
+
+set_array("relatedPerson[]")
+do list(path:"f1nt[]", "var": "$i")
+  if any_match("$i.f1nt", "^_.+")
+    replace_all("$i.f1nt", "_", "")
+    copy_field("$i.f1nt", "relatedPerson[].$append.label")
+    copy_field("$i.f1nt", "relatedPerson[].$last.id")
+    lookup("relatedPerson[].$last.label", "map_rel_preferredName")
+    lookup("relatedPerson[].$last.id", "map_rel_gndId")
+    prepend("relatedPerson[].$last.id","https://d-nb.info/gnd/")  
+  else
+    copy_field("$i.f1nt", "relatedPerson[].$append.label")
+    prepend("$i.f1nt", "https://rpb.lobid.org/dummi/")
+    copy_field("$i.f1nt", "relatedPerson[].$last.id")
+  end
+end
+
+
 
 # -------
 # #1nu	(Werke (m)) -> 	publication	
@@ -261,6 +281,7 @@ retain(
   "placeOfActivity[]",
   "gndSubjectCategory[]", 
   "placeOfBirth[]", 
-  "placeOfDeath[]"
+  "placeOfDeath[]", 
+  "relatedPerson[]"
   )
 	

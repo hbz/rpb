@@ -28,6 +28,10 @@
     "label" : "Unkel, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n13807073"
   } ],
+  "relatedPerson" : [ {
+    "label" : "Reinirkens, Ernst Leonhard",
+    "id" : "https://d-nb.info/gnd/139865985"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

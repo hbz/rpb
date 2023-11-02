@@ -31,6 +31,13 @@
     "label" : "Konzentrationslager Dachau",
     "id" : "https://rpb.lobid.org/dummi/Konzentrationslager Dachau"
   } ],
+  "relatedPerson" : [ {
+    "label" : "Schulz, Johannes",
+    "id" : "https://d-nb.info/gnd/119273861"
+  }, {
+    "label" : "Bettendorff, Ludwig",
+    "id" : "https://d-nb.info/gnd/1051206464"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -49,6 +49,10 @@
     "label" : "Neustrelitz",
     "id" : "https://rpb.lobid.org/dummi/Neustrelitz"
   } ],
+  "relatedPerson" : [ {
+    "label" : "Wagner, Richard",
+    "id" : "https://rpb.lobid.org/dummi/Wagner, Richard"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

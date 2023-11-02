@@ -202,7 +202,6 @@ do list(path:"f1nt[]", "var": "$i")
 end
 
 
-
 # -------
 # #1nu	(Werke (m)) -> 	publication	
 # Kommentar Doku: nur Auswahl! Möglichst Originalausgabe angeben. Form:  Titel,  Jahr.  Achtung: Nichtsortierzeichen für führenden Artikel (Alt-170); getrennt mit @; auch Werke von Architekten, Künstlern und Regisseuren
@@ -246,20 +245,23 @@ do list(path:"gndSubjectCategory[]", "var": "$i")
   end
 end
 
-# -------
-# #1nx	(Quelle (m)) ->	biographicalOrHistoricalInformation	
-# Kommentar Doku:  getrennt mit @; Beispiel: Westerwälder Zeitung. - (2002), 224 vom 26.9., S. 20 (evtl. Todesanzeige)@Eigene Angaben (Datum); Genaue Adresse bei Websites: http://www...  (Stand: Datum). Alle Quellen zu einer Person, werden hier zusammengeführt, auch wenn sie aus verschiedenen, eingespielten Werken stammen 
 
 # -------
 #1ny	(Datum der letzten inhaltlichen Änderung) ->	describedBy.dateModified	
 # Kommentar Doku:  JJJJMMTT, z.B. 20120928 für 28.09.2012
 
-replace_all("f1ny", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
-copy_field("f1ny", "describedBy.dateModified")
+if any_match("f1ny", "(\\d{4})(\\d{2})(\\d{2})")
+  replace_all("f1ny", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
+  copy_field("f1ny", "describedBy.dateModified")
+end
 
 # -------
 #1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation
 # Kommentar Doku:  getrennt durch "; ". Keine Abkürzungen benutzen, da die Stichworte in Register 9 indexiert werden. Zitate aus Quellen in Anführungszeichen; bei sehr langen, biogr. Anmerkungen wird der Text auf mehrere Kategorien aufgeteilt: #1z2, #1z3, #1z4 ... #1z9. Bei eingespielten Biographien werden die Angaben zum Originalwerk am Ende angegeben:  --- [Daten übernommen aus: ....]
+# #1nx	(Quelle (m)) ->	biographicalOrHistoricalInformation	
+# Kommentar Doku:  getrennt mit @; Beispiel: Westerwälder Zeitung. - (2002), 224 vom 26.9., S. 20 (evtl. Todesanzeige)@Eigene Angaben (Datum); Genaue Adresse bei Websites: http://www...  (Stand: Datum). Alle Quellen zu einer Person, werden hier zusammengeführt, auch wenn sie aus verschiedenen, eingespielten Werken stammen 
+
+
 
 vacuum()
 retain(

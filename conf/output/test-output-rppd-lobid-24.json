@@ -19,6 +19,10 @@
     "id" : "https://rpb.lobid.org/spatial#n23301027"
   } ],
   "dateOfDeath" : [ "1870-06-10" ],
+  "placeOfDeath" : [ {
+    "label" : "Gillenfeld",
+    "id" : "https://rpb.lobid.org/spatial#n23301027"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

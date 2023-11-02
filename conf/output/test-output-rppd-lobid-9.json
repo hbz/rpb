@@ -24,6 +24,10 @@
     "id" : "https://rpb.lobid.org/dummi/Essen"
   } ],
   "dateOfDeath" : [ "2008-03-23" ],
+  "placeOfDeath" : [ {
+    "label" : "Unkel, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13807073"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

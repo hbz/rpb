@@ -30,6 +30,10 @@
     "id" : "https://rpb.lobid.org/spatial#n14110006"
   } ],
   "dateOfDeath" : [ "2003-07-01" ],
+  "placeOfDeath" : [ {
+    "label" : "Bad Ems, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14110006"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

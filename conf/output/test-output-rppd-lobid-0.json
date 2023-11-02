@@ -45,6 +45,10 @@
     "id" : "https://rpb.lobid.org/dummi/Siegburg"
   } ],
   "dateOfDeath" : [ "1921-09-27" ],
+  "placeOfDeath" : [ {
+    "label" : "Neustrelitz",
+    "id" : "https://rpb.lobid.org/dummi/Neustrelitz"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

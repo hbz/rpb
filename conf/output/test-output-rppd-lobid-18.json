@@ -36,6 +36,10 @@
     "id" : "https://rpb.lobid.org/dummi/Siegen"
   } ],
   "dateOfDeath" : [ "1658-12-12" ],
+  "placeOfDeath" : [ {
+    "label" : "Altenkirchen (Westerwald), Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13210501"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

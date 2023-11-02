@@ -16,6 +16,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13700003"
   } ],
   "dateOfDeath" : [ "1963-04-16" ],
+  "placeOfDeath" : [ {
+    "label" : "Dinklage",
+    "id" : "https://rpb.lobid.org/dummi/Dinklage"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

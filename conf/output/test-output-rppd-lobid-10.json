@@ -32,6 +32,10 @@
     "id" : "https://rpb.lobid.org/spatial#n14103029"
   } ],
   "dateOfDeath" : [ "1880-01-01" ],
+  "placeOfDeath" : [ {
+    "label" : "Wiesbaden",
+    "id" : "https://rpb.lobid.org/dummi/Wiesbaden"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -30,6 +30,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13300006"
   } ],
   "dateOfDeath" : [ "1892-03-11" ],
+  "placeOfDeath" : [ {
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

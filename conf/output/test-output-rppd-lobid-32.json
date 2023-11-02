@@ -23,6 +23,10 @@
     "id" : "https://rpb.lobid.org/dummi/Uhersky▐ü Brod"
   } ],
   "dateOfDeath" : [ "1917" ],
+  "placeOfDeath" : [ {
+    "label" : "Breslau",
+    "id" : "https://rpb.lobid.org/dummi/Breslau"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -27,6 +27,10 @@
     "id" : "https://rpb.lobid.org/spatial#n111000000500"
   } ],
   "dateOfDeath" : [ "1976-03-03" ],
+  "placeOfDeath" : [ {
+    "label" : "Mölln",
+    "id" : "https://rpb.lobid.org/dummi/Mölln"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

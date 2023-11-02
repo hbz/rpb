@@ -30,6 +30,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13804037"
   } ],
   "dateOfDeath" : [ "1973-06-24" ],
+  "placeOfDeath" : [ {
+    "label" : "https://rpb.lobid.org/spatial#n13804037_ [?]",
+    "id" : "https://rpb.lobid.org/spatial#n13804037_ [?]"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

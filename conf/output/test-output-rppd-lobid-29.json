@@ -22,6 +22,10 @@
     "id" : "https://rpb.lobid.org/dummi/Weiten <Dillingen, Saar>"
   } ],
   "dateOfDeath" : [ "1974-12-21" ],
+  "placeOfDeath" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

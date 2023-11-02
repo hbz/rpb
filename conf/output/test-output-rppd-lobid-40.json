@@ -26,6 +26,10 @@
     "id" : "https://rpb.lobid.org/spatial#n33100003"
   } ],
   "dateOfDeath" : [ "2015-10-07" ],
+  "placeOfDeath" : [ {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#female",
     "label" : "Weiblich"

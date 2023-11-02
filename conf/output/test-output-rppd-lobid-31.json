@@ -19,6 +19,10 @@
     "id" : "https://rpb.lobid.org/spatial#n231085030300"
   } ],
   "dateOfDeath" : [ "1901-11-14" ],
+  "placeOfDeath" : [ {
+    "label" : "Niederkail (Ortsbezirk)",
+    "id" : "https://rpb.lobid.org/spatial#n231085030300"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

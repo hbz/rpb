@@ -19,6 +19,10 @@
     "id" : "https://rpb.lobid.org/dummi/Nalbach"
   } ],
   "dateOfDeath" : [ "1944-05-12" ],
+  "placeOfDeath" : [ {
+    "label" : "Konzentrationslager Dachau",
+    "id" : "https://rpb.lobid.org/dummi/Konzentrationslager Dachau"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

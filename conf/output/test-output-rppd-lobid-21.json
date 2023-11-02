@@ -19,6 +19,10 @@
     "id" : "https://rpb.lobid.org/dummi/Niederbachem"
   } ],
   "dateOfDeath" : [ "1930-06-19" ],
+  "placeOfDeath" : [ {
+    "label" : "Trier, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

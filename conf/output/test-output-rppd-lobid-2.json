@@ -23,6 +23,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13704008"
   } ],
   "dateOfDeath" : [ "1972-04-23" ],
+  "placeOfDeath" : [ {
+    "label" : "Leutesdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13802038"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

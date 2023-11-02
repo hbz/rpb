@@ -29,6 +29,10 @@
     "id" : "https://rpb.lobid.org/dummi/Würzburg"
   } ],
   "dateOfDeath" : [ "1952-10-16" ],
+  "placeOfDeath" : [ {
+    "label" : "Bernkastel-Kues, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n23101008"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

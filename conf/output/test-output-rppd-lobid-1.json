@@ -30,6 +30,10 @@
     "id" : "https://rpb.lobid.org/dummi/Düsseldorf"
   } ],
   "dateOfDeath" : [ "1984" ],
+  "placeOfDeath" : [ {
+    "label" : "Vallendar, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13707226"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

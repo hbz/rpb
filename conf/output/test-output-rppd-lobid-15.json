@@ -23,6 +23,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13309052"
   } ],
   "dateOfDeath" : [ "Oktober 1989" ],
+  "placeOfDeath" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

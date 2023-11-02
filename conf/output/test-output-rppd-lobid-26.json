@@ -27,6 +27,10 @@
     "id" : "https://rpb.lobid.org/spatial#n13700068"
   } ],
   "dateOfDeath" : [ "1942-10-03" ],
+  "placeOfDeath" : [ {
+    "label" : "Konzentrationslager Dachau",
+    "id" : "https://rpb.lobid.org/dummi/Konzentrationslager Dachau"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

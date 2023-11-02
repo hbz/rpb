@@ -22,6 +22,10 @@
     "id" : "https://rpb.lobid.org/dummi/Plauen"
   } ],
   "dateOfDeath" : [ "1974-10-23" ],
+  "placeOfDeath" : [ {
+    "label" : "München",
+    "id" : "https://rpb.lobid.org/dummi/München"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

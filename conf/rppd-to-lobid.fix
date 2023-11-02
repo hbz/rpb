@@ -1,14 +1,9 @@
 do once("map")
   put_filemap("conf/RPB-Export_HBZ_SW.tsv", "SW_map", sep_char: "\t")
-end
-do once("map_category")
   put_filemap("conf/RPB-Export_HBZ_SWN.tsv", "SWN_map", sep_char: "\t")
-end
-do once("map_spatial")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
-end
-# für lookup relatedPerson
-do once("map_rel")
+
+# maps für lookup relatedPerson
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
 end

@@ -261,6 +261,9 @@ end
 # #1nx	(Quelle (m)) ->	biographicalOrHistoricalInformation	
 # Kommentar Doku:  getrennt mit @; Beispiel: Westerwälder Zeitung. - (2002), 224 vom 26.9., S. 20 (evtl. Todesanzeige)@Eigene Angaben (Datum); Genaue Adresse bei Websites: http://www...  (Stand: Datum). Alle Quellen zu einer Person, werden hier zusammengeführt, auch wenn sie aus verschiedenen, eingespielten Werken stammen 
 
+set_array("biographicalOrHistoricalInformation[]")
+copy_field("f1z1[].*.f1z1", "biographicalOrHistoricalInformation[].$append")
+copy_field("f1nx[].*.f1nx", "biographicalOrHistoricalInformation[].$append")
 
 
 vacuum()
@@ -283,6 +286,7 @@ retain(
   "gndSubjectCategory[]", 
   "placeOfBirth[]", 
   "placeOfDeath[]", 
-  "relatedPerson[]"
+  "relatedPerson[]", 
+  "biographicalOrHistoricalInformation[]"
   )
 	

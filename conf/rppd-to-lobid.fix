@@ -206,6 +206,9 @@ end
 # #1nu	(Werke (m)) -> 	publication	
 # Kommentar Doku: nur Auswahl! Möglichst Originalausgabe angeben. Form:  Titel,  Jahr.  Achtung: Nichtsortierzeichen für führenden Artikel (Alt-170); getrennt mit @; auch Werke von Architekten, Künstlern und Regisseuren
 
+set_array("publication[]")
+copy_field("f1nu[].*.f1nu", "publication[].$append")
+
 # -------
 # #1nv	(Geschlecht) -> 	gender	
 # Kommentar Doku: "mmm" (männlich) oder "www" (weiblich) eintragen, 
@@ -287,6 +290,7 @@ retain(
   "placeOfBirth[]", 
   "placeOfDeath[]", 
   "relatedPerson[]", 
-  "biographicalOrHistoricalInformation[]"
+  "biographicalOrHistoricalInformation[]", 
+  "publication[]"
   )
 	

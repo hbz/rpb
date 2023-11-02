@@ -32,6 +32,7 @@
     "label" : "Koblenz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
+  "publication" : [ "Blinde Passagiere, 1961", "Haus zur Sonne, 1953", "Im Schatten des Schicksals, 1930", "¬Die¬ Prinzessin mit der Geiß, 1958", "Pfingsten, 1934", "Talisman, 1937", "Reise nach Bernkastel, 1957", "¬Die¬ Zwillingsbrüder, 1943", "¬Der¬ Wundermann vom Bodensee, 1956" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

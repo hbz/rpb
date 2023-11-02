@@ -28,6 +28,7 @@
     "label" : "Trier, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n21100000"
   } ],
+  "publication" : [ "Chronik der Stadt Trier. 2000 Jahre in Daten, Berichten und Bildern, Trier 1985", "Geschichte der Stadt Trier in der ersten Hälfte des 20. Jhs, 3 Bde, Trier 1967-1973", "Geschichte der Stadt Trier im 19. Jh, 2 Bde, Trier 1979 f.", "¬Die¬ kommunale Selbstverwaltung der Stadt Trier seit Beginn der preuss. Zeit 1814-1959, Trier 1959", "¬Die¬ Straßennamen der Stadt Trier, 3. Aufl Trier 1984", "Trier im 18. Jahrhundert 1700-1794, Trier 1981", "¬Die¬ Trierer Universität 1473 bis 1798, Trier 1949", "Insgesamt 41 selbständig erschienene Werke und Mitverfasser an 3 weiteren, 140 Aufsätze, 64 Artikel und 60 Buchbesprechungen (dazu Bibliographie bei Franz, s. SekundΣrliteratur", "Z war Mitglied der Redaktionen des Trierisches Jahrbuch, 1950 bis 1960, Kurtrierisches Jahrbuch, 1961 ff, und Jahrbuch des Landkreises Trier-Saarburg" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

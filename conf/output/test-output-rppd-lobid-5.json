@@ -30,6 +30,7 @@
     "label" : "Heyberger, Renate",
     "id" : "https://rpb.lobid.org/dummi/Heyberger, Renate"
   } ],
+  "publication" : [ "Katzenkiller.1995", "Münstermörder. 1996", "Theaterblut. 1997", "¬Die¬ Breisgau-Boheme. 2000" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

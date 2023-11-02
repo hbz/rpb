@@ -24,6 +24,7 @@
     "label" : "Trier, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n21100000"
   } ],
+  "publication" : [ "Albero v. Montreuil, Erzbischof v. Trier - in: Trierische Chronik 3 (1907) 113-123 und 145-154", "¬Ein¬ altes trierisches Stadttor (.. Castelport) - in: Trierisches Archiv, 11 (1907) 86 f.", "Des hl. Bernard v. Clairvaux Beziehungen zu Trier - in: Pastor Bonus, 1951, 41-52 und 87-93", "Wissenschaftl. Bearbeitungr v. 2 Landkarten: Archiepiscopatus Trevirensis", "¬Das¬ Erzbistum Trier bis um 1800, 1952", "Bistum Trier Stand 1.4.1954", "Geschichte der Trierer Bürger-Sodalität, Trier 1912", "¬Das¬ Tugendleben der Dienerin Gottes Schwester Blandine Merten, Ahrweiler 1955", "Urkunden zur Verfassungsgeschichte Triers im 14. Jh - in: TA 11 (1907) 83-83", "Peter v. Wederath, ein trierischer Bildhauer der Spätgotik - in: Trierische Chronik 6 (1910) 153 ff" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

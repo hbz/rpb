@@ -27,6 +27,7 @@
     "label" : "Koblenz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
+  "publication" : [ "Grundstückszersplitterung und Grundstückszusammenlegung im Weinbau, Dissertation Bonn 1930" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

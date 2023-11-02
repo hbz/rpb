@@ -44,6 +44,7 @@
     "label" : "Oberlahnstein",
     "id" : "https://rpb.lobid.org/spatial#n141000750200"
   } ],
+  "publication" : [ "Lahnstein im 30-jährigen Krieg (1894)", "Lahnstein in der zweiten Hälfte des 17. Jahrhunderts (1895)", "¬Die¬ Leiden des Amtes Münstermaifeld während einiger Jahre des 30-jährigen Krieges (1896)", "¬Das¬ Kastell Hunzel (1887)", "¬Das¬ römische Koblenz (1898)", "¬Ein¬ Trevererdorf im Coblenzer Stadtwalde (1900)", "Vorrömische Dörfer in Braubach und Lahnstein (1902/03)", "¬Das¬ Kastell Heddesdorf (1903)", "¬Das¬ Kastell Marienfels (1903)", "Römische Gehöfte zwischen Limes und Rhein (1906)", "Lahnstein in den Kriegsereignissen des 18. Jahrhunderts (1911)", "¬Das¬ Limeskastell Ems (1911)", "¬Das¬ Straßennetz im Gebiet des Limes von der Lahn bis zur Aar I. (1914)", "¬Das¬ Straßennetz im Gebiet des Limes von der Lahn bis zur Aar II. (1916)" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

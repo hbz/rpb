@@ -33,6 +33,7 @@
     "label" : "Reinirkens, Ernst Leonhard",
     "id" : "https://d-nb.info/gnd/139865985"
   } ],
+  "publication" : [ "Geschichtspunkte, 1991", "Burgenzauber, 1995", "Geschichtspunkte am Rhein, 1998", "André Bohnefaß, 1998", "¬Die¬ Musik aus der Bohnefaß-Trilogie, 2006." ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

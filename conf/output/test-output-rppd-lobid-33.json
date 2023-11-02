@@ -27,6 +27,7 @@
     "label" : "Trier, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n21100000"
   } ],
+  "publication" : [ "Topographische Nachrichten über die Stadt Trier, veröffentlicht in verschiedenen Tageszeitungen", "(Mit Nikolaus Haller:) Bilder aus der Geschichte des trierischen Landes und Volkes, Trier 1895, 2. Aufl. Trier 1903" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

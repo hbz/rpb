@@ -31,6 +31,7 @@
     "label" : "Mainz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n31500000"
   } ],
+  "publication" : [ "¬Die¬ Frage nach der Zulässigkeit des staatlichen Rechtsweges für Entscheidungen der Kirchenbehörden in der Bundesrepublik, Diss., Mainz 1958" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#female",
     "label" : "Weiblich"

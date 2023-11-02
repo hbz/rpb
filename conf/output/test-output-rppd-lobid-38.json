@@ -35,6 +35,7 @@
     "label" : "Köln",
     "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
+  "publication" : [ "Homerisches Handbuch für Gymnasien, 1868", "Almania Oideion: Versus Cantabiles Et Memoriales; Dreisprachiges Studentenliederbuch ... ,1885", "De Tacito dialogi, qui de oratoribus inscribitur, auctore, 1857-1859" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -22,6 +22,7 @@
     "label" : "Koblenz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
+  "publication" : [ "Quintette, 1983", "Pater noster, 1985", "Logo, 1989", "Irrlicher, 1990", "Eines Schattens Traum, 1980", "Choräle, 1980", "Sonaten, 1980", "An das Licht, 1991", "Occasione, 1991" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

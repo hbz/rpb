@@ -35,6 +35,7 @@
     "label" : "Wahlrod",
     "id" : "https://rpb.lobid.org/spatial#n14302301"
   } ],
+  "publication" : [ "Steuern sparen leicht gemacht, 1999ff", "Geld verdienen mit Aktien, 1984ff", "Aschenbraten, 1993.", "Mit nix an den Füß, 2003." ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

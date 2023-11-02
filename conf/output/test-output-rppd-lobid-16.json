@@ -39,6 +39,7 @@
     "label" : "Meister, Nikolaus",
     "id" : "https://d-nb.info/gnd/1051179564"
   } ],
+  "publication" : [ "Ausstellungskatalog und Werkverzeichnis 1796-1844. Koblenz, Mittelrhein-Museum 1994" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -24,6 +24,7 @@
     "label" : "Niederkail (Ortsbezirk)",
     "id" : "https://rpb.lobid.org/spatial#n231085030300"
   } ],
+  "publication" : [ "Gedichte v. Peter Z, hausierendem Porzellanhändler v. Niederkail in der Eifel, hrsg. v. Wilhelm Oertel (Pseudonym W.O. v. Horn), 5. Aufl Sobernheim 1852", "Des wandernden Steinguthändlers Peter Z Eifelsagen und Gedichte. Neue Auswahlausgabe, Wittlich 1928", "Josef Feiten/Hermann Spoo (Hrsg.): Ons Muselland. Dichtungen und Erzählungen in moselfränkischen Mundarten, Konz/ Trier 1950", "Peter Z, Eifeldichter und wandernder Steinguthändler aus Niederkail. Auswahl seiner Gedichte und Sagen, hrsg. aus Anlaß seines 75. Todestages v. der Verbandsgemeinde Wittlich-Land, Wittlich 1976" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

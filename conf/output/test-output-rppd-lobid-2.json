@@ -28,6 +28,7 @@
     "label" : "Leutesdorf",
     "id" : "https://rpb.lobid.org/spatial#n13802038"
   } ],
+  "publication" : [ "Wallfahrtsort Bruchhausen in Geschichte und Sage, 1956" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

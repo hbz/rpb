@@ -41,6 +41,7 @@
     "label" : "Altenkirchen (Westerwald), Stadt",
     "id" : "https://rpb.lobid.org/spatial#n13210501"
   } ],
+  "publication" : [ "Arzneibuch" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

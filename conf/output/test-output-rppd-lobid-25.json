@@ -34,6 +34,7 @@
     "label" : "Bernkastel-Kues, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n23101008"
   } ],
+  "publication" : [ "Abschied vom Deutschen Weinmuseum in Trier - in: Illustrierte Weinzeitung, Beilage zur Deutschen Weinzeitung 1950", "¬Der¬ echte Mehltau des Weinstocks und seine Bekämpfung. Spritz- und Staub beim Arbeiten im Weinberg, Flugblatt der Reichsanstalt für Land- und Forstwirtschaft Nrn.52, 55, 88, 89", "¬Das¬ Trierer Weinmuseum - in: Rhein. Heimatblätter 5 (1928) 162-164", "Über die spezialisierten Formen beim Antherenbrand, Jena 1921, zugleich Dissertation Würzburg 1921", "¬Die¬ wirtschaftl. Bedeutung des Rebschutzes in Deutschland, Berlin-Dahlem 1941", "¬Die¬ Zweigstelle der Biologischen Reichsanstalt für Land- und Forstwirtschaft in Trier - in: Gottfried Kentenich: Trier, 2. Aufl Berlin-Halensee 1925, 87 f" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

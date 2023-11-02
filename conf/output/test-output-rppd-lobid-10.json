@@ -37,6 +37,7 @@
     "label" : "Wiesbaden",
     "id" : "https://rpb.lobid.org/dummi/Wiesbaden"
   } ],
+  "publication" : [ "Freiherr Carl vom Stein und das Kleinstaatentum, 1866." ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

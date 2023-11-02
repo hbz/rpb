@@ -45,6 +45,7 @@
     "label" : "Anschütz, Hermann",
     "id" : "https://d-nb.info/gnd/116312351"
   } ],
+  "publication" : [ "¬Das¬ Blümlein Wunderschön", "Trois chansons allemandes", "Rhapsodische Gesänge", "2 Tantum ergo und 1 Ecce panis", "Wer kauft Liebesgötter!" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

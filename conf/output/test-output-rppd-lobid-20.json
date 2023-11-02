@@ -21,6 +21,7 @@
     "label" : "Dinklage",
     "id" : "https://rpb.lobid.org/dummi/Dinklage"
   } ],
+  "publication" : [ "Hrsg. (mit Andreas Winninghoff): Choralmeß-buch für Sonn- und Feiertage, Düsseldorf 1939, 3. Aufl 1957", "Hl. Stunden für jeden Monat im Jahr der Kirche, 3. Aufl, Freiburg i.Brsg. 1951", "Einkehrtage - in: Lexikon der Pädagogik 1, 1952, 858-860", "Neubearbeitung v. Joseph Gredt: Elementa Philosophiae aristotelico-thomisticae 1-2, 13. Aufl, Barcelona/Freiburg i.Brsg, 1961", "Verschiedene Artikel in Musik und Altar", "Inquisitio critica in argumentum Aristotelis pro existentia primi moventis immobilis, Dissertation Rom 1932", "Recherches sur la notion de la société politique, Diplomarbeit Lille 1939" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

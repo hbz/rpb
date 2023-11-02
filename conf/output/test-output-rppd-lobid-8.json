@@ -22,6 +22,7 @@
     "label" : "Rengsdorf",
     "id" : "https://rpb.lobid.org/spatial#n13809061"
   } ],
+  "publication" : [ "Hunsrück und Naheland, 1987", "Lothringen, 1989", "Sagenhafter Hunsrück, 1994-95", "Schinderhannes und seine Bande, 2003", "Teufelchen im Paradies, 2002", "Wanderführer Hunsrück, 1988" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"

@@ -5,11 +5,6 @@
   "gndIdentifier" : "1051147425",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Lehnen, Ewald",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147425",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147425",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147425"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Tiefbauingenieur",
     "id" : "https://rpb.lobid.org/sw/00Sn02x8761a"

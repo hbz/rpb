@@ -5,11 +5,6 @@
   "gndIdentifier" : "235711-2",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Imo",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/235711-2"
-  } ],
   "placeOfActivity" : [ {
     "label" : "Schifferstadt, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n33800025"

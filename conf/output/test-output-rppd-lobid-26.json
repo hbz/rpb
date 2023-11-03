@@ -7,9 +7,9 @@
   "preferredName" : "Zilliken, Kaspar Josef",
   "variantName" : [ "Zilliken, Kaspar Joseph", "Zilliken, Joseph" ],
   "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215536",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215536",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215536"
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Josef%20Zilliken%201918%20Ausschnitt.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Josef%20Zilliken%201918%20Ausschnitt.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Josef%20Zilliken%201918%20Ausschnitt.jpg?width=270"
   } ],
   "professionOrOccupation" : [ {
     "label" : "Dekan / Kirche",

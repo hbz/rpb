@@ -6,11 +6,6 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zenz, Emil",
   "variantName" : [ "Zenz, Emil" ],
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/11698211X",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/11698211X",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/11698211X"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Lehrer",
     "id" : "https://d-nb.info/gnd/4035088-5"

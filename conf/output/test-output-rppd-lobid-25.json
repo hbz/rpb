@@ -5,11 +5,6 @@
   "gndIdentifier" : "137243324",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zillig, Hermann",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/137243324",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/137243324",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/137243324"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Oberregierungsrat",
     "id" : "https://d-nb.info/gnd/4398834-9"

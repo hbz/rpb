@@ -5,11 +5,6 @@
   "gndIdentifier" : "1051215552",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zimmer, Michael Kunibert",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215552",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215552",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215552"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Landwirt",
     "id" : "https://d-nb.info/gnd/4034399-6"

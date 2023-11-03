@@ -5,11 +5,6 @@
   "gndIdentifier" : "1051215498",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zettelmeyer, Hubert",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215498",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215498",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215498"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Unternehmer",
     "id" : "https://d-nb.info/gnd/4061949-7"

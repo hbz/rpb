@@ -7,9 +7,9 @@
   "preferredName" : "Humperdinck, Engelbert",
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
   "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/11855476X",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/11855476X",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/11855476X"
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Engelbert%20humperdinck%201854.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg?width=270"
   } ],
   "professionOrOccupation" : [ {
     "label" : "Komponist",

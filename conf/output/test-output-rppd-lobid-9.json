@@ -7,9 +7,9 @@
   "preferredName" : "Reinirkens, Leonhard",
   "variantName" : [ "Reinirkens, Leonhard" ],
   "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/122507487",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/122507487",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/122507487"
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/LeonhardReinirkens.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:LeonhardReinirkens.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/LeonhardReinirkens.jpg?width=270"
   } ],
   "professionOrOccupation" : [ {
     "label" : "Schriftsteller",

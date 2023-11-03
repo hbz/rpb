@@ -5,11 +5,6 @@
   "gndIdentifier" : "1051215579",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zimmermann, Konstantin",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215579",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215579",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051215579"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Musikdirektor",
     "id" : "https://d-nb.info/gnd/7628980-1"

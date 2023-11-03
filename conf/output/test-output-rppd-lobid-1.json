@@ -6,11 +6,6 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Cornelius, Otto",
   "variantName" : [ "Cornelius, Otto" ],
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1011283956",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1011283956",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1011283956"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Maler",
     "id" : "https://d-nb.info/gnd/4037215-7"

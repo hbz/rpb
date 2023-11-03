@@ -6,11 +6,6 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Altgeld, Johann Philipp",
   "variantName" : [ "Altgelt, Johann Philipp" ],
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147433",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147433",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147433"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Pfarrer / Katholische Kirche",
     "id" : "https://rpb.lobid.org/sw/929n170632"

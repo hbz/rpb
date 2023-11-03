@@ -6,9 +6,9 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zirbes, Peter",
   "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/117006084",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/117006084",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/117006084"
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Zirbes.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Peter%20Zirbes.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Zirbes.jpg?width=270"
   } ],
   "professionOrOccupation" : [ {
     "label" : "Lyriker",

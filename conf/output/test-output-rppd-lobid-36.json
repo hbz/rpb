@@ -5,11 +5,6 @@
   "gndIdentifier" : "1028922108",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Heinen, Norbert M.",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1028922108",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1028922108",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1028922108"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Jurist",
     "id" : "https://d-nb.info/gnd/4029050-5"

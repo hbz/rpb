@@ -6,6 +6,11 @@ do once("map")
 # maps für lookup relatedPerson
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
+
+  # maps für depiction
+  put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_thumbnail", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"4")
+  put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_id", key_column:"0", value_column:"2", sep_char: "\t", expected_columns:"4")
+  put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_url", key_column:"0", value_column:"3", sep_char: "\t", expected_columns:"4")
 end
 
 # @context
@@ -56,13 +61,14 @@ uniq("variantName[]")
 # Komentar Doku: vollständiger Dateiname ohne Pfadangaben, aber inkl. Endung; hinter dem Zeichen "@" kann man eine Quellenangabe einfügen; die zugehörige Datei wird an Herrn Dirx geschickt.; Beispiel: #1ne120251973_1.jpg@Mittelrhein-Museum Koblenz
 # Da wir keine Bilder bisher haben, nutze ich hier die Bilder vom GND Explorer.
 
-copy_field("gndIdentifier","@depiction")
-prepend("@depiction","https://pictureservice.explore.gnd.network/api/v1/picture/")
-
 set_array("depiction[]")
-copy_field("@depiction","depiction[].$append.id")
-copy_field("@depiction","depiction[].$last.url")
-copy_field("@depiction","depiction[].$last.thumbnail")
+copy_field("gndIdentifier","depiction[].$append.id")
+copy_field("gndIdentifier","depiction[].1.url")
+copy_field("gndIdentifier","depiction[].1.thumbnail")
+
+lookup("depiction[].1.id", "gnd_to_id", delete: "true")
+lookup("depiction[].1.url", "gnd_to_url", delete: "true")
+lookup("depiction[].1.thumbnail", "gnd_to_thumbnail", delete: "true")
 
 # -------
 # #1nn (Berufe/Stellungen (m, R)) -> professionOrOccupation

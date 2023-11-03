@@ -5,11 +5,6 @@
   "gndIdentifier" : "105121551X",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Ziegler, Jakob Anton",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/105121551X",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/105121551X",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/105121551X"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Pfarrer / Katholische Kirche",
     "id" : "https://rpb.lobid.org/sw/929n170632"

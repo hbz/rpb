@@ -5,11 +5,6 @@
   "gndIdentifier" : "Keine GND-Ansetzung für pk06675",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Alexander, Philipp",
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk06675",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk06675",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/Keine GND-Ansetzung für pk06675"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Unternehmer",
     "id" : "https://d-nb.info/gnd/4061949-7"

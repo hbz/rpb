@@ -7,9 +7,9 @@
   "preferredName" : "Meister, Simon",
   "variantName" : [ "Meister, Simon" ],
   "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/119280957",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/119280957",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/119280957"
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Simon%20Meister%20%281796%20oder%201803%20-%201844%29.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Simon%20Meister%20%281796%20oder%201803%20-%201844%29.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Simon%20Meister%20%281796%20oder%201803%20-%201844%29.jpg?width=270"
   } ],
   "professionOrOccupation" : [ {
     "label" : "Maler",

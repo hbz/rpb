@@ -6,11 +6,6 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Weinkauff, Franz",
   "variantName" : [ "Weinkauff, Franciscus / 1823-1892", "Weinkauff, Franz / 1823-1892", "Weinkauff, Franz / 1824-1892" ],
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/117269476",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/117269476",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/117269476"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Gymnasiallehrer",
     "id" : "https://d-nb.info/gnd/4158589-6"

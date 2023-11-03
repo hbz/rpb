@@ -7,9 +7,9 @@
   "preferredName" : "Bücker, Carl Clemens",
   "variantName" : [ "Bücker, Carl Clemens" ],
   "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/123205670",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/123205670",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/123205670"
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Carl-Clemens%20B%C3%BCcker.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg?width=270"
   } ],
   "professionOrOccupation" : [ {
     "label" : "Flugzeugkonstrukteur",

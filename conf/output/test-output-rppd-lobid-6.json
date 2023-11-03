@@ -7,9 +7,9 @@
   "preferredName" : "Gabele, Anton",
   "variantName" : [ "Gabele, Anton" ],
   "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/116324899",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/116324899",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/116324899"
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Anton%20Gabele.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Anton%20Gabele.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Anton%20Gabele.jpg?width=270"
   } ],
   "professionOrOccupation" : [ {
     "label" : "Lehrer",

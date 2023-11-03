@@ -6,11 +6,6 @@
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anschuez, Carl",
   "variantName" : [ "Anschutz, Carl / 1818-1870", "Anschütz, Karl Friedrich Nikolaus / 1818-1870" ],
-  "depiction" : [ {
-    "id" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147395",
-    "url" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147395",
-    "thumbnail" : "https://pictureservice.explore.gnd.network/api/v1/picture/1051147395"
-  } ],
   "professionOrOccupation" : [ {
     "label" : "Komponist",
     "id" : "https://d-nb.info/gnd/4032009-1"

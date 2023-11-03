@@ -21,12 +21,21 @@ cd rpb
 
 ## Deployment overview
 
+### RPB & BiblioVino
+
 |     | Production |     | Test |     |
 | --- | ---------- | --- | ---- | --- |
 | Index alias | resources-rpb | http://weywot3.hbz-nrw.de:9200/resources-rpb/_search | resources-rpb-test | http://weywot3.hbz-nrw.de:9200/resources-rpb-test/_search
 | lobid-resources instance (port 1990) | quaoar1:~/git/lobid-resources-rpb | http://quaoar1:1990/resources/search | quaoar3:~/git/lobid-resources-rpb | http://quaoar3:1990/resources/search |
 | rpb instance (port 1991) | quaoar1:~/git/rpb | https://rpb.lobid.org/search  | quaoar3:~/git/rpb | http://test.rpb.lobid.org/search |
 | BiblioVino (port 1992) | quaoar1:~/git/biblioVino | http://wein.lobid.org/search  | quaoar3:~/git/biblioVino | http://test.wein.lobid.org/search |
+
+### RPPD
+
+|     | Production |     | Test |     |
+| --- | ---------- | --- | ---- | --- |
+| Index alias | gnd-rppd | http://weywot3.hbz-nrw.de:9200/gnd-rppd/_search | gnd-rppd-test | http://weywot3.hbz-nrw.de:9200/gnd-rppd-test/_search
+| rppd instance (port 1993) | quaoar1:~/git/rppd | https://rppd.lobid.org/search  | quaoar3:~/git/rppd | http://test.rppd.lobid.org/search |
 
 ## Transformation development
 

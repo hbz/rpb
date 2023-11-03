@@ -1,4 +1,4 @@
-default IN_FILE = "gndId-to-rppdId.tsv"; // TODO set up smaller file for testing
+default IN_FILE = "gndId-to-rppdId.tsv";
 default OUT_FILE = "gndId-to-depiction.tsv";
 MAPS_DIR = "conf/maps/";
 
@@ -8,17 +8,18 @@ MAPS_DIR + IN_FILE
 | decode-csv(hasHeader="true", separator="\t")
 | fix("retain('gndId')")
 | stream-to-triples
-| template("http://lobid.org/gnd/${o}.json")
-| log-object("Will GET: ")
-| open-http // TODO handle 404, skip
+| template("http://lobid.org/gnd/search?format=json&filter=_exists_:depiction&q=gndIdentifier:${o}")
+//| log-object("Will GET: ")
+| open-http
 | as-records
-| decode-json
+//| log-object("GOT: ")
+| decode-json(recordPath="member")
 | fix("
 unless exists('depiction[]')
   reject()
 end
 retain('gndIdentifier','depiction[]')
 ")
-| encode-csv(includeHeader="true", separator="\t")
+| encode-csv(includeHeader="true", separator="\t", noQuotes="true")
 | write(MAPS_DIR + OUT_FILE)
 ;

@@ -42,6 +42,7 @@ set_array("type[]", "AuthorityResource", "Person", "DifferentiatedPerson")
 
 copy_field("f1na", "preferredName")
 replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
+replace_all("preferredName","¬","")
 trim("preferredName")
 
 # ------
@@ -205,6 +206,7 @@ do list(path:"f1nt[]", "var": "$i")
     prepend("$i.f1nt", "https://rpb.lobid.org/dummi/")
     copy_field("$i.f1nt", "relatedPerson[].$last.id")
   end
+  replace_all("relatedPerson[].$last.label","¬","")
 end
 
 

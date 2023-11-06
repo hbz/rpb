@@ -1,0 +1,39 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051147352",
+  "rppdId" : "pk00008",
+  "gndIdentifier" : "1051147352",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Daub, Richard",
+  "professionOrOccupation" : [ {
+    "label" : "Lehrer",
+    "id" : "https://d-nb.info/gnd/4035088-5"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Bruchhausen",
+    "id" : "https://rpb.lobid.org/spatial#n13807008"
+  } ],
+  "dateOfBirth" : [ "1895-04-04" ],
+  "placeOfBirth" : [ {
+    "label" : "Bell",
+    "id" : "https://rpb.lobid.org/spatial#n13704008"
+  } ],
+  "dateOfDeath" : [ "1972-04-23" ],
+  "placeOfDeath" : [ {
+    "label" : "Leutesdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13802038"
+  } ],
+  "publication" : [ "Wallfahrtsort Bruchhausen in Geschichte und Sage, 1956" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2004-12-20"
+  },
+  "biographicalOrHistoricalInformation" : [ "Rhein-Zeitung, Ausg. Neuwied, Nr. 94 vom 23.04.1997" ]
+}

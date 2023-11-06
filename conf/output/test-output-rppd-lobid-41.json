@@ -1,0 +1,31 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://rppd.lobid.org/pk02366",
+  "rppdId" : "pk02366",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk02366",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Fuchs, Gerhard",
+  "professionOrOccupation" : [ {
+    "label" : "Beigeordneter",
+    "id" : "https://d-nb.info/gnd/4144367-6"
+  }, {
+    "label" : "Kommunalpolitiker",
+    "id" : "https://d-nb.info/gnd/4396366-3"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Herdorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13203050"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2008-02-22"
+  },
+  "biographicalOrHistoricalInformation" : [ "1979 bis 1984 und von 1989 bis 1999 war er Mitglied des Stadtrates Herdorf; er war in verschiedenen Ausschüssen tätig; von 1999 - 2006 erster Beigeordneter der Stadt Herdorf; von 1989 - 1991 und von 1994 - 2004 engagierte er sich als Mitglied der CDU und als Kreistagsmitglied; er war viele Jahre im Vorstand des Kolpingvereins Herdorf; 2007 wurde ihm die Freiherr-vom-Stein-Plakette verliehen.", "Siegener Zeitung, Ausg. Altenkirchen. - (2007), 249 vom 26.10., S. 9" ]
+}

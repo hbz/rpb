@@ -1,0 +1,34 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051215498",
+  "rppdId" : "pta1483",
+  "gndIdentifier" : "1051215498",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zettelmeyer, Hubert",
+  "professionOrOccupation" : [ {
+    "label" : "Unternehmer",
+    "id" : "https://d-nb.info/gnd/4061949-7"
+  } ],
+  "dateOfBirth" : [ "1866-11-08" ],
+  "placeOfBirth" : [ {
+    "label" : "Niederbachem",
+    "id" : "https://rpb.lobid.org/dummi/Niederbachem"
+  } ],
+  "dateOfDeath" : [ "1930-06-19" ],
+  "placeOfDeath" : [ {
+    "label" : "Trier, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Industrie. Handwerk",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
+  "biographicalOrHistoricalInformation" : [ "Straßenbauunternehmer und Maschinenfabrikant. - Z, technisch außerordentl. begabt, wurde Maschinenschlosser, Heizer und Maschinist auf Dampf-Straßenwalzen (1889-1897). 1897 gründete er in Konz ein Straßenbauunternehmen. 1902 errichtete er dazu eine Reparaturwerkstatt für den eigenen Maschinenpark. Z übernahm die Vertretung der englischen Firma Clayton & Shuttleworth sowie Verkauf v. Dampfwalzen, Dampflokomobilen und Dreschmaschinen dieser Firma sowie den Einsatz v. Dreschmaschinen im Lohndrusch in der Region Trier. 1905 erfolgte ein großer Werkstattbau und 1908 Beginn der Konstruktion einer Zettelmeyer Einzylinder-Dampfstraßenwalze (Fertigstellung 1910). Die Produktion umfaßte 1930 u.a. Verbund-Dampfwalzen, Hochleistungsstraßenaufreißer und Spezialfahrzeuge für die Walzenzüge. Der Export dehnte sich weltweit aus. Das Bauunternehmen verfügte 1917 bereits über 24 Walzenzüge. Der weitere Ausbau erfolgte besonders nach dem Einsatz der ersten Geräte für den Teerstraßenbau (1928/29). - 1961 wurde Z's Wirken durch Benennung einer Straße in Konz nach seinem Namen gewürdigt. - *Heirat: mit Margarete Sonntag. - ---[Daten übernommen aus: Rudolf Marx, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Rudolf Molter: Straßennamen der Stadt Konz, Konz 1984, 31", "Ders: Zur Geschichte des Unternehmens, in: Festbuch zur Einweihung des Peter-Zettelmeyer-Hauses in Konz, Behindertenzentrum der Lebenshilfe e.V., Konz 1999, 96-107", "Conzer Zeitung Nr.75 v. 24.06.1930", "60 Jahre Z. Werkschronik, in: Die Dampfwalze, Zeitschrift der Werksgemeinschaft Hubert Z, Nr. 21/1957, 1-21", "Mit der Dampfwalze durch den Betrieb. Betriebshandbuch der Firma Hubert Z, Trier 1962, 10-16" ]
+}

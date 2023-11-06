@@ -1,0 +1,33 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://rppd.lobid.org/pk03654",
+  "rppdId" : "pk03654",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk03654",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Ratka, Alexander Simon",
+  "professionOrOccupation" : [ {
+    "label" : "Bildhauer",
+    "id" : "https://d-nb.info/gnd/4139550-5"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Irmenach",
+    "id" : "https://rpb.lobid.org/spatial#n23109501"
+  } ],
+  "dateOfBirth" : [ "1977" ],
+  "placeOfBirth" : [ {
+    "label" : "Simmern / Hunsrück, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14008144"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Plastik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.2p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2009-09-23"
+  },
+  "biographicalOrHistoricalInformation" : [ "Seit 2001 bildhauerisch tätig; 2005/2006 Lehrtätigkeit an der Allgemeinbildenden Schule in Trier-Zewen, 2005/2007 an der Medardschule in Trier; 2006 Dozententätigkeit im Designzentrum der Handwerkskammer Koblenz; seit 2002 freischaffender Bildhauer, der seitdem mit seinen Skulpturen aus Stahl und Sandstein an zahlreichen Ausstellungen und Messen in Deutschland und in Luxemburg teilgenommen hat; lebt in Irmenach", "Aufnahme wird nicht freigeschaltet, da Vermerk auf Homepage, dass Angaben nicht verwertet werden dürfen. Bei anderer Quellenlage möglich.", "http://www.bildhauer-ratka.de (Stand: 23.09.2009)" ]
+}

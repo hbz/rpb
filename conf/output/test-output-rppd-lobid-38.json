@@ -1,0 +1,46 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/117269476",
+  "rppdId" : "pk05621",
+  "gndIdentifier" : "117269476",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Weinkauff, Franz",
+  "variantName" : [ "Weinkauff, Franciscus / 1823-1892", "Weinkauff, Franz / 1823-1892", "Weinkauff, Franz / 1824-1892" ],
+  "professionOrOccupation" : [ {
+    "label" : "Gymnasiallehrer",
+    "id" : "https://d-nb.info/gnd/4158589-6"
+  }, {
+    "label" : "Mäzen",
+    "id" : "https://d-nb.info/gnd/7607862-0"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Jena",
+    "id" : "https://rpb.lobid.org/dummi/Jena"
+  }, {
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
+  } ],
+  "dateOfBirth" : [ "1823-05-24" ],
+  "placeOfBirth" : [ {
+    "label" : "Bad Kreuznach, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13300006"
+  } ],
+  "dateOfDeath" : [ "1892-03-11" ],
+  "placeOfDeath" : [ {
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
+  } ],
+  "publication" : [ "Homerisches Handbuch für Gymnasien, 1868", "Almania Oideion: Versus Cantabiles Et Memoriales; Dreisprachiges Studentenliederbuch ... ,1885", "De Tacito dialogi, qui de oratoribus inscribitur, auctore, 1857-1859" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2023-06-01"
+  },
+  "biographicalOrHistoricalInformation" : [ "Sohn des Kreuznacher Brauerei- und Brennereibesitzers Franz Weinkauff; Besuch des Gymnasiums in Kreuznach; Altphilologisches Studium in Bonn, Heidelberg und Jena; 1853 Promotion; Lehrer an einer Privatschule in Jena; ab 1855 Lehrer vor allem für Hebräisch, Griechisch und Latein am Friedrich-Wilhelms-Gymnasium Köln; aus gesundheitlichen Gründen 1871 Versetzung in den vorzeitigen Ruhestand; danach als Privatgelehrter tätig; wirkte zudem als Bildungsmäzen, so vermachte er der Stadt Kreuznach 100.000 Mark \"zu erzieherischen und schulfreundlichen Zwecken\"; diverse Publikationen, außerdem Verfasser von Einträgen in der Allgemeinen Deutschen Biographie ADB.", "http://www.pantoia.de/Liederbuecher/Weinkauff1885/vita.html (Stand: 06.12.2013)", "Oeffentlicher Anzeiger / Stadt und Kreis Bad Kreuznach. - (2023), 120 vom 25.5., S. 25." ]
+}

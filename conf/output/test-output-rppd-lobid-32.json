@@ -1,0 +1,39 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/117021652",
+  "rppdId" : "pta1497",
+  "gndIdentifier" : "117021652",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zuckermandel, Moses S.",
+  "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],
+  "professionOrOccupation" : [ {
+    "label" : "Rabbiner",
+    "id" : "https://d-nb.info/gnd/4176751-2"
+  }, {
+    "label" : "Talmudist",
+    "id" : "https://d-nb.info/gnd/4293593-3"
+  } ],
+  "dateOfBirth" : [ "1836-04-24" ],
+  "placeOfBirth" : [ {
+    "label" : "Uhersky▐ü Brod",
+    "id" : "https://rpb.lobid.org/dummi/Uhersky▐ü Brod"
+  } ],
+  "dateOfDeath" : [ "1917" ],
+  "placeOfDeath" : [ {
+    "label" : "Breslau",
+    "id" : "https://rpb.lobid.org/dummi/Breslau"
+  } ],
+  "publication" : [ "¬Die¬ Erfurter Handschrift der Tosefta beschrieben und geprüft. Tosefta nach den Erfurter und Wiener Handschriften, Pasewalk 1880", "Gesammelte Aufsätze, Frankfurt a.M. 1912-1914" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Religionswissenschaft und nichtchristliche Religionen",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.1p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11"
+  },
+  "biographicalOrHistoricalInformation" : [ "Oberrabbiner, Talmudist. - Z stammte aus einer Rabbinerfamilie. Er erhielt bereits in der Kindheit eine talmudische Ausbildung, studierte am Rabbinerseminar und an der Universität Breslau, 1863 Promotion, 1864 Rabbinatsprüfung - Z hatte Rabbinerstellen in Gnesen, Mährisch-Friedland und Pasewalk. 1881-1890 war er Oberrabbiner in Trier, danach in Pleschen und Breslau. - Z verfaßte zahlreiche Abhandlungen zu halachischen, sprachl, lexikalischen, exegetischen, archäologischen und pädagogischen Themen. Sein Hauptwerk war die Edition der Tosefta, basierend auf einer Erfurter und Wiener Handschrift. - *Heirat: mit Elise Rawitz. - ---[Daten übernommen aus: Annette Haller, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Geboren in Ungarisch Brod (heute Uhersk¡ Brod, Tschechien)", "Moses Samuel Z (zu seinem 80. Geburtstag), in: Allgemeine Zeitung des Judenthums, 80 (1916), Nr. 20 v. 19.05.1916, 234 f.", "Pinkas Lapide, Hilmar Schmuck (Hg.): Jüdisches Biographisches Archiv, Microfiche-Ausgabe, München 1994-1998, Fiche 660", "Emil Zenz: Geschichte der Stadt Trier im 19. Jahrhundert, Bd. 1 und 2, Trier 1979 f, Band 2, 205 f" ]
+}

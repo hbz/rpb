@@ -1,0 +1,45 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1120816653",
+  "rppdId" : "pke0292",
+  "gndIdentifier" : "1120816653",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Herr-Beck, Maria",
+  "professionOrOccupation" : [ {
+    "label" : "Weibliche Abgeordnete",
+    "id" : "https://d-nb.info/gnd/4132700-7"
+  }, {
+    "label" : "Juristin",
+    "id" : "https://d-nb.info/gnd/4130076-2"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
+  "dateOfBirth" : [ "1928-06-08" ],
+  "placeOfBirth" : [ {
+    "label" : "Alzey, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n33100003"
+  } ],
+  "dateOfDeath" : [ "2015-10-07" ],
+  "placeOfDeath" : [ {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
+  "publication" : [ "¬Die¬ Frage nach der Zulässigkeit des staatlichen Rechtsweges für Entscheidungen der Kirchenbehörden in der Bundesrepublik, Diss., Mainz 1958" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#female",
+    "label" : "Weiblich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  }, {
+    "label" : "Recht",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.14p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2015-12-01"
+  },
+  "biographicalOrHistoricalInformation" : [ "Mitglied des Rheinland-Pfälzischen Landtags. - Partei: CDU. - Mandate: Mandat 7. Wahlperiode: Wahlkreis 4, Listenplatz 3; Mandat 8. Wahlperiode: Wahlkreis 3, Listenplatz 4; Mandat 9. Wahlperiode: Wahlkreis 3, Listenplatz 5, bis 08.01.1981, Nachfolger: Doss, Hansjürgen. - Konfession: Evangelisch. - Ausbildung, beruflicher und persönlicher Werdegang: Volksschule und höhere Schule in Alzey und Wiesbaden, 1947 Abitur, Studium der Rechtswissenschaft in Mainz, 1951 Referendar- und 1955 Assessorexamen, 1958 Promotion zur Dr. jur., 1957 Rechtsanwältin in Mainz. - Politische und gesellschaftliche Funktionen: 1962 Mitglied der CDU; 1962-1970 Vorsitzende der CDU-Frauenvereinigung Mainz; 1964 stellvertretende Kreisvorsitzende der CDU Mainz; 1964-1981 Mitglied des Stadtrats Mainz; 1970-1990 Bezirksvorsitzende der CDU-Frauenvereinigung in Rheinhessen-Pfalz; 1979 Mitglied der 7. Bundesversammlung; 08.01.1981-30.06.1990 Staatssekretärin im Ministerium für Soziales, Gesundheit und Umwelt; stellvertretende Landesvorsitzende und Vorsitzende der Frauen Union; Mitglied des CDU-Landesvorstands; stellvertretende Vorsitzende der Wohnbau Mainz GmbH, des Verwaltungsrats des Studentenwerks Mainz, Mitglied im Kuratorium der Universität Mainz, im Kuratorium der Landeszentrale für politische Bildung, im Vorstand der Stiftung Für das Leben der evangelischen Kirche Hessen-Nassau. - Mitgliedschaft im Landtag, Gremientätigkeit: 18.05.1971-08.01.1981 (7.-9. Wahlperiode) Mitglied des Landtags; 18.05.1979-08.01.1981 Landtagsvizepräsidentin; Oktober 1975 bis Mai 1979 stellvertretende Vorsitzende der CDU-Landtagsfraktion; 7. Wahlperiode: Vorsitzende Untersuchungsausschuss \"Dokumentation Baader-Meinhof des MdI\", Mitglied Kulturpolitischer Ausschuss, Rechtsausschuss, Unterausschuss \"Datenschutzgesetz\"; 8. Wahlperiode: stellvertretende Vorsitzende Rechtsausschuss, Mitglied Kulturpolitischer Ausschuss, Wahlprüfungsausschuss, Unterausschuss \"Datenschutzgesetz\", Untersuchungsausschuss \"IPEKS\"; 9. Wahlperiode: Vizepräsidentin Ältestenrat, Zwischenausschuss, Mitglied Kulturpolitischer Ausschuss, Rechtsausschuss, Untersuchungsausschuss \"Justizvollzugsanstalt Mainz\". - Ehrungen: Bundesverdienstkreuz am Bande (1977), Bundesverdienstkreuz Erster Klasse (1982).- ---[Daten übernommen aus \"Die Stellvertreter des freien Volkes. Die Abgeordneten der Beratenden Landesversammlung und des Landtags Rheinland-Pfalz von 1946 bis 2015\", Mainz 2016 (Red.schluss 01.12.2015)]" ]
+}

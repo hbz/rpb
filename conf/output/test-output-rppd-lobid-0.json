@@ -1,0 +1,69 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/11855476X",
+  "rppdId" : "pk00006",
+  "gndIdentifier" : "11855476X",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Humperdinck, Engelbert",
+  "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Engelbert%20humperdinck%201854.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg?width=270"
+  } ],
+  "professionOrOccupation" : [ {
+    "label" : "Komponist",
+    "id" : "https://d-nb.info/gnd/4032009-1"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
+  }, {
+    "label" : "München",
+    "id" : "https://rpb.lobid.org/dummi/München"
+  }, {
+    "label" : "Xanten",
+    "id" : "https://rpb.lobid.org/dummi/Xanten"
+  }, {
+    "label" : "Bayreuth",
+    "id" : "https://rpb.lobid.org/dummi/Bayreuth"
+  }, {
+    "label" : "Boppard, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14000501"
+  }, {
+    "label" : "Barcelona",
+    "id" : "https://rpb.lobid.org/dummi/Barcelona"
+  }, {
+    "label" : "Frankfurt am Main",
+    "id" : "https://rpb.lobid.org/dummi/Frankfurt am Main"
+  }, {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
+  "dateOfBirth" : [ "1854-09-01" ],
+  "placeOfBirth" : [ {
+    "label" : "Siegburg",
+    "id" : "https://rpb.lobid.org/dummi/Siegburg"
+  } ],
+  "dateOfDeath" : [ "1921-09-27" ],
+  "placeOfDeath" : [ {
+    "label" : "Neustrelitz",
+    "id" : "https://rpb.lobid.org/dummi/Neustrelitz"
+  } ],
+  "relatedPerson" : [ {
+    "label" : "Wagner, Richard",
+    "id" : "https://rpb.lobid.org/dummi/Wagner, Richard"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2005-11-16"
+  },
+  "biographicalOrHistoricalInformation" : [ "Ab 1872 Musikstudium in Köln; gewinnt 1876 den Preis der Frankfurter Mozart-Stiftung, als deren Stipendiat er seine Ausbildung in Frankfurt -später in München- fortsetzen konnte; während einer Italienreise 1880 lernte er Richard Wagner kennen, als dessen Mitarbeiter er 1881/82 in Bayreuth lebte; nach verschiedenen Reisen ins Ausland, arbeitete er ab 1888 als Verlagslektor bei Schott in Mainz; von 1890 bis 1897 lebte er als Musiklehrer, Opernkritiker und Lehrer am Konservatorium in Frankfurt - hier entstand auch seine berühmteste Oper \"Hänsel und Gretel\", die 1893 in Weimar uraufgeführt wurde; 1897 zog er nach Boppard; 1900 wurde er als Kompositionslehrer an die Berliner Musikhochschule berufen.", "http://www.boppard.de", "Rhein-Zeitung, Ausg. AL. - (2004), 262 vom 10.11." ]
+}

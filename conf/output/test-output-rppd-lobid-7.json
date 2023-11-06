@@ -1,0 +1,35 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051147379",
+  "rppdId" : "pk00014",
+  "gndIdentifier" : "1051147379",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Henninger, Wilhelm Albert",
+  "professionOrOccupation" : [ {
+    "label" : "Heimatschriftsteller",
+    "id" : "https://d-nb.info/gnd/4772761-5"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Bad Ems, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14110006"
+  } ],
+  "dateOfBirth" : [ "1912" ],
+  "placeOfBirth" : [ {
+    "label" : "Limburg <Lahn>",
+    "id" : "https://rpb.lobid.org/dummi/Limburg <Lahn>"
+  } ],
+  "dateOfDeath" : [ "1995" ],
+  "publication" : [ "Du Perle des Lahntals, 1960", "¬Die¬ Kunterbunts, 1978", "Märchen, ca. 1948", "Ave Maria, o.J.", "Sklaven des Glücks, o.J.", "Bad Ems, du Labsal der Natur, o.J." ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Schreiben. Dichtung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2005-12-08"
+  },
+  "biographicalOrHistoricalInformation" : [ "Kaufmannslehre; freiberufliche Arbeit als Schriftsteller und Mitarbeiter des bischöflichen Verlages in Limburg; Berufsverbot; Soldat; Eröffnung eines Kaufhauses in Limburg; 1944 Umzug nach Nassau; Anfang der 50er Jahre Umzug nach Bad Ems; Eröffnung des Kaufhauses Henninger und der Pension Lahntal", "Internet" ]
+}

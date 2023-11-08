@@ -13,6 +13,11 @@ do once("map")
   put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_url", key_column:"0", value_column:"3", sep_char: "\t", expected_columns:"4")
 end
 
+# Kommentar Doku: #14 "x" eintragen, falls der Datensatz nicht im Webopac erscheinen soll, z.B. noch nicht aufgearbeitete ps-Sätze
+if exists("f14_")
+  reject()
+end
+
 # @context
 add_field("@context", "http://lobid.org/gnd/context.jsonld")
 

@@ -1,33 +1,42 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://rppd.lobid.org/pk03654",
-  "rppdId" : "pk03654",
-  "gndIdentifier" : "Keine GND-Ansetzung für pk03654",
+  "id" : "https://rppd.lobid.org/pk06675",
+  "rppdId" : "pk06675",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk06675",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Ratka, Alexander Simon",
+  "preferredName" : "Alexander, Philipp",
   "professionOrOccupation" : [ {
-    "label" : "Bildhauer",
-    "id" : "https://d-nb.info/gnd/4139550-5"
+    "label" : "Unternehmer",
+    "id" : "https://d-nb.info/gnd/4061949-7"
+  }, {
+    "label" : "Musikinstrumentenbauer",
+    "id" : "https://d-nb.info/gnd/4170830-1"
+  }, {
+    "label" : "Drechsler",
+    "id" : "https://d-nb.info/gnd/4301425-2"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Irmenach",
-    "id" : "https://rpb.lobid.org/spatial#n23109501"
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
   } ],
-  "dateOfBirth" : [ "1977" ],
-  "placeOfBirth" : [ {
-    "label" : "Simmern / Hunsrück, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14008144"
-  } ],
+  "dateOfBirth" : [ "1787" ],
+  "dateOfDeath" : [ "1864" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Plastik",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.2p"
+    "label" : "Industrie. Handwerk",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
+  }, {
+    "label" : "Handel. Dienstleistung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+  }, {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2009-09-23"
+    "dateModified" : "2019-07-02"
   },
-  "biographicalOrHistoricalInformation" : [ "Seit 2001 bildhauerisch tätig; 2005/2006 Lehrtätigkeit an der Allgemeinbildenden Schule in Trier-Zewen, 2005/2007 an der Medardschule in Trier; 2006 Dozententätigkeit im Designzentrum der Handwerkskammer Koblenz; seit 2002 freischaffender Bildhauer, der seitdem mit seinen Skulpturen aus Stahl und Sandstein an zahlreichen Ausstellungen und Messen in Deutschland und in Luxemburg teilgenommen hat; lebt in Irmenach", "Aufnahme wird nicht freigeschaltet, da Vermerk auf Homepage, dass Angaben nicht verwertet werden dürfen. Bei anderer Quellenlage möglich.", "http://www.bildhauer-ratka.de (Stand: 23.09.2009)" ]
+  "biographicalOrHistoricalInformation" : [ "[FAMILIE]pk06671[/HR]Zur Familiengeschichte Alexander[/FAMILIE]", "Blieb ledig; führte zunächst die Berufsbezeichnung \"Drechsler\", später kam \"Instrumentenmacher\" hinzu", "Duttenhöfer, Eva-Maria: Gebrüder Alexander : 200 Jahre Musikinstrumentenbau in Mainz, Mainz 1982" ]
 }

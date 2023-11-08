@@ -27,7 +27,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
   } ],
   "describedBy" : {
-    "dateModified" : "2004-08-02"
+    "dateModified" : "2004-08-02",
+    "source" : [ "Literarisches Rheinland-Pfalz. 1988." ]
   },
-  "biographicalOrHistoricalInformation" : [ "Seit 1980 freier Schriftsteller; lebt im Hunsrück; Zenta-Maurina-Preis für Literatur 1977", "Literarisches Rheinland-Pfalz. 1988." ]
+  "biographicalOrHistoricalInformation" : [ "Seit 1980 freier Schriftsteller; lebt im Hunsrück; Zenta-Maurina-Preis für Literatur 1977" ]
 }

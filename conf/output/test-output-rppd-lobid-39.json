@@ -45,7 +45,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
   } ],
   "describedBy" : {
-    "dateModified" : "2011-02-03"
+    "dateModified" : "2011-02-03",
+    "source" : [ "Wolfgang Stümper: Anton Schneider, Leubsdorf 2010", "¬Der¬ Rheinländer : das Heimatmagazin. - 3 (2010), Nov. = H. 27, S. 34-36" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Seit 1940 stellvertretender Bürgermeister von Leubsdorf; übergab den Ort am 11. März 1945 kampflos den amerikanischen Truppen; in den ersten Kommunalwahlen 1946 wurde der mittlerweile der CDU beigetretene Schneider zum Bürgermeister gewählt; das Amt hatte er ununterbrochen bis 1969 inne, wobei er 1964 mit Hilfe einer eigenen Bürgerliste wiedergewählt wurde; Ehrung mit der Freiherr-vom-Stein-Plakette und mit dem Bundesverdienstkreuz", "Wolfgang Stümper: Anton Schneider, Leubsdorf 2010", "¬Der¬ Rheinländer : das Heimatmagazin. - 3 (2010), Nov. = H. 27, S. 34-36" ]
+  "biographicalOrHistoricalInformation" : [ "Seit 1940 stellvertretender Bürgermeister von Leubsdorf; übergab den Ort am 11. März 1945 kampflos den amerikanischen Truppen; in den ersten Kommunalwahlen 1946 wurde der mittlerweile der CDU beigetretene Schneider zum Bürgermeister gewählt; das Amt hatte er ununterbrochen bis 1969 inne, wobei er 1964 mit Hilfe einer eigenen Bürgerliste wiedergewählt wurde; Ehrung mit der Freiherr-vom-Stein-Plakette und mit dem Bundesverdienstkreuz" ]
 }

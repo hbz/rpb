@@ -40,7 +40,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2004-08-02"
+    "dateModified" : "2004-08-02",
+    "source" : [ "Literarisches Rheinland-Pfalz heute. 1988" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Studium der Pädagogik, der Deutschen und Englischen Philologie, Geschichte und Psychologie in Marburg und Göttingen; 1952-1953 Lehrer am Görres-Gymnasium und Gymnasium am Ring in Koblenz; 1953-1972 Lehrer am Goethe-Gymnasium in Bad Ems; seit 1979 Buchautor und Verleger.", "Literarisches Rheinland-Pfalz heute. 1988" ]
+  "biographicalOrHistoricalInformation" : [ "Studium der Pädagogik, der Deutschen und Englischen Philologie, Geschichte und Psychologie in Marburg und Göttingen; 1952-1953 Lehrer am Görres-Gymnasium und Gymnasium am Ring in Koblenz; 1953-1972 Lehrer am Goethe-Gymnasium in Bad Ems; seit 1979 Buchautor und Verleger." ]
 }

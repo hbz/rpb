@@ -29,7 +29,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
   } ],
   "describedBy" : {
-    "dateModified" : "2005-12-08"
+    "dateModified" : "2005-12-08",
+    "source" : [ "Internet" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Kaufmannslehre; freiberufliche Arbeit als Schriftsteller und Mitarbeiter des bischöflichen Verlages in Limburg; Berufsverbot; Soldat; Eröffnung eines Kaufhauses in Limburg; 1944 Umzug nach Nassau; Anfang der 50er Jahre Umzug nach Bad Ems; Eröffnung des Kaufhauses Henninger und der Pension Lahntal", "Internet" ]
+  "biographicalOrHistoricalInformation" : [ "Kaufmannslehre; freiberufliche Arbeit als Schriftsteller und Mitarbeiter des bischöflichen Verlages in Limburg; Berufsverbot; Soldat; Eröffnung eines Kaufhauses in Limburg; 1944 Umzug nach Nassau; Anfang der 50er Jahre Umzug nach Bad Ems; Eröffnung des Kaufhauses Henninger und der Pension Lahntal" ]
 }

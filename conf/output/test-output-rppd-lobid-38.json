@@ -40,7 +40,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2023-06-01"
+    "dateModified" : "2023-06-01",
+    "source" : [ "http://www.pantoia.de/Liederbuecher/Weinkauff1885/vita.html (Stand: 06.12.2013)", "Oeffentlicher Anzeiger / Stadt und Kreis Bad Kreuznach. - (2023), 120 vom 25.5., S. 25." ]
   },
-  "biographicalOrHistoricalInformation" : [ "Sohn des Kreuznacher Brauerei- und Brennereibesitzers Franz Weinkauff; Besuch des Gymnasiums in Kreuznach; Altphilologisches Studium in Bonn, Heidelberg und Jena; 1853 Promotion; Lehrer an einer Privatschule in Jena; ab 1855 Lehrer vor allem für Hebräisch, Griechisch und Latein am Friedrich-Wilhelms-Gymnasium Köln; aus gesundheitlichen Gründen 1871 Versetzung in den vorzeitigen Ruhestand; danach als Privatgelehrter tätig; wirkte zudem als Bildungsmäzen, so vermachte er der Stadt Kreuznach 100.000 Mark \"zu erzieherischen und schulfreundlichen Zwecken\"; diverse Publikationen, außerdem Verfasser von Einträgen in der Allgemeinen Deutschen Biographie ADB.", "http://www.pantoia.de/Liederbuecher/Weinkauff1885/vita.html (Stand: 06.12.2013)", "Oeffentlicher Anzeiger / Stadt und Kreis Bad Kreuznach. - (2023), 120 vom 25.5., S. 25." ]
+  "biographicalOrHistoricalInformation" : [ "Sohn des Kreuznacher Brauerei- und Brennereibesitzers Franz Weinkauff; Besuch des Gymnasiums in Kreuznach; Altphilologisches Studium in Bonn, Heidelberg und Jena; 1853 Promotion; Lehrer an einer Privatschule in Jena; ab 1855 Lehrer vor allem für Hebräisch, Griechisch und Latein am Friedrich-Wilhelms-Gymnasium Köln; aus gesundheitlichen Gründen 1871 Versetzung in den vorzeitigen Ruhestand; danach als Privatgelehrter tätig; wirkte zudem als Bildungsmäzen, so vermachte er der Stadt Kreuznach 100.000 Mark \"zu erzieherischen und schulfreundlichen Zwecken\"; diverse Publikationen, außerdem Verfasser von Einträgen in der Allgemeinen Deutschen Biographie ADB." ]
 }

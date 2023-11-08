@@ -32,7 +32,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
   } ],
   "describedBy" : {
-    "dateModified" : "2005-11-16"
+    "dateModified" : "2005-11-16",
+    "source" : [ "Rhein-Zeitung, Ausg. M (Allgemeiner Anzeiger), Nr. 24 vom 29./30.1.1994" ]
   },
-  "biographicalOrHistoricalInformation" : [ "1936 - 1957 Stadtbaumeister", "Rhein-Zeitung, Ausg. M (Allgemeiner Anzeiger), Nr. 24 vom 29./30.1.1994" ]
+  "biographicalOrHistoricalInformation" : [ "1936 - 1957 Stadtbaumeister" ]
 }

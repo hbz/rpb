@@ -49,7 +49,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.6p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-03-20"
+    "dateModified" : "2006-03-20",
+    "source" : [ "Renkhoff, Otto: Nassauische Biographie, 1985" ]
   },
-  "biographicalOrHistoricalInformation" : [ "1625 Oberschulmeister zu Hachenburg; 1627 Kaplan zu Bendorf; ab 1632 Pfarrer zu Roßbach, ab 1637 zu Altenkirchen", "Renkhoff, Otto: Nassauische Biographie, 1985" ]
+  "biographicalOrHistoricalInformation" : [ "1625 Oberschulmeister zu Hachenburg; 1627 Kaplan zu Bendorf; ab 1632 Pfarrer zu Roßbach, ab 1637 zu Altenkirchen" ]
 }

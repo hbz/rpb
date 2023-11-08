@@ -33,7 +33,7 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2004-12-20"
-  },
-  "biographicalOrHistoricalInformation" : [ "Rhein-Zeitung, Ausg. Neuwied, Nr. 94 vom 23.04.1997" ]
+    "dateModified" : "2004-12-20",
+    "source" : [ "Rhein-Zeitung, Ausg. Neuwied, Nr. 94 vom 23.04.1997" ]
+  }
 }

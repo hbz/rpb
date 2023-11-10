@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 # Get the daily Allegro dump:
 cd conf
-wget https://rpb.lbz-rlp.de/rpb04/intern/RPBEXP.ZIP
+wget http://www.rpb-rlp.de/rpb/rpb04/intern/RPBEXP.zip
 unzip -o RPBEXP.ZIP
 mv RPBEXP.ZIP RPBEXP/RPBEXP-$(date "+%Y%m%d-%H%M").ZIP
 cd ..

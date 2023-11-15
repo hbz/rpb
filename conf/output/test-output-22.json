@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147872",
-  "id" : "https://lobid.org/resources/RPB107t01147872",
+  "rpbId" : "107t01147872",
+  "id" : "https://lobid.org/resources/107t01147872",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -24,10 +24,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Burg Neuscharfeneck / Flemlingen | Brunnen",
+    "label" : "Burgruine Neuscharfeneck | Brunnen",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4595996-1",
-      "label" : "Burg Neuscharfeneck / Flemlingen",
+      "label" : "Burgruine Neuscharfeneck",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

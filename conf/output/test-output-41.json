@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982377",
+      "id" : "https://lobid.org/resources/107t982377",
       "label" : "¬Der¬ Rasenspieler : das Journal zur Saison ..."
     } ],
     "numbering" : "Nachgewiesen 1998/99(1998) - 2000/01; 2001/02 - 2002/03"
   } ],
-  "rpbId" : "RPB107t982377b1",
-  "id" : "https://lobid.org/resources/RPB107t982377b1",
+  "rpbId" : "107t982377b1",
+  "id" : "https://lobid.org/resources/107t982377b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

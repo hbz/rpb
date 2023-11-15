@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t112194",
+      "id" : "https://lobid.org/resources/929t112194",
       "label" : "Clubzeitung"
     } ],
     "numbering" : "Nachgewiesen 2006,2 -"
   } ],
-  "rpbId" : "RPB929t112194b1",
-  "id" : "https://lobid.org/resources/RPB929t112194b1",
+  "rpbId" : "929t112194b1",
+  "id" : "https://lobid.org/resources/929t112194b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

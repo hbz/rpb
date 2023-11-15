@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB036t160240",
-  "id" : "https://lobid.org/resources/RPB036t160240",
+  "rpbId" : "036t160240",
+  "id" : "https://lobid.org/resources/036t160240",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

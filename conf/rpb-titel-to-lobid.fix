@@ -49,10 +49,10 @@ prepend("id","https://lobid.org/resources/")
 
 copy_field("f983", "hbzId")
 
-# ------- biblioVinoId -------
+# ------- schoeneNummer -------
 
-copy_field("f84_", "biblioVinoId")
-replace_all("biblioVinoId", "\\.", "")
+copy_field("f84_", "schoeneNummer")
+replace_all("schoeneNummer", "\\.", "")
 
 # ------- "inCollection" -------
 
@@ -296,6 +296,17 @@ elsif exists ("f709")
 end
 replace_all("bibliographicCitation","¬","")
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation", "isPartOf[]", "note[]")
+# fulltextOnline
+
+do list(path:"f90[]", "var": "$i")
+  if all_equal("$i.n90", "Volltext")
+    set_array("fulltextOnline[]")
+    copy_field("$i.f90_", "fulltextOnline[].$append.id")
+    copy_field("$i.f90_", "fulltextOnline[].$last.label")
+    replace_all("fulltextOnline[].$last.label", "https://nbn-resolving.org/", "")
+  end
+end
+
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]")
 
 vacuum()

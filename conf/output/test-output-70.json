@@ -3,7 +3,7 @@
   "type" : [ "BibliographicResource", "Article" ],
   "rpbId" : "RPB929t112440",
   "id" : "https://lobid.org/resources/RPB929t112440",
-  "biblioVinoId" : "Nr27922",
+  "schoeneNummer" : "Nr27922",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

@@ -98,5 +98,9 @@
       "label" : "Illustrator"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-1616",
+    "label" : "urn:nbn:de:hbz:061:2-1616"
   } ]
 }

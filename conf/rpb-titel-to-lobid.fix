@@ -38,7 +38,6 @@ end
 # ------- rpbId -------
 
 copy_field("_id", "rpbId")
-prepend("rpbId","RPB") 
 
 # ------- "id", using https URIs -------
 

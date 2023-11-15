@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t112193",
+      "id" : "https://lobid.org/resources/929t112193",
       "label" : "Aktuell : das Krankenhaus in Ihrer Region"
     } ],
     "numbering" : "Nachgewiesen 2010 - 2012,1"
   } ],
-  "rpbId" : "RPB929t112193b1",
-  "id" : "https://lobid.org/resources/RPB929t112193b1",
+  "rpbId" : "929t112193b1",
+  "id" : "https://lobid.org/resources/929t112193b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

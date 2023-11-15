@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982376",
+      "id" : "https://lobid.org/resources/107t982376",
       "label" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte"
     } ],
     "numbering" : "Ausg. 1.1997(Dez.) -"
   } ],
-  "rpbId" : "RPB107t982376b1",
-  "id" : "https://lobid.org/resources/RPB107t982376b1",
+  "rpbId" : "107t982376b1",
+  "id" : "https://lobid.org/resources/107t982376b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

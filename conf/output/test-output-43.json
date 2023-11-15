@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982378",
+      "id" : "https://lobid.org/resources/107t982378",
       "label" : "¬'s¬ Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen"
     } ],
     "numbering" : "1998,Apr."
   } ],
-  "rpbId" : "RPB107t982378b1",
-  "id" : "https://lobid.org/resources/RPB107t982378b1",
+  "rpbId" : "107t982378b1",
+  "id" : "https://lobid.org/resources/107t982378b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

@@ -273,6 +273,12 @@ public class Application extends Controller {
 		return result;
 	}
 
+	public static Promise<Result> searchSpatial(final String id, final int from, final int size,
+			final String format) {
+		return Promise.pure(found(routes.Application.search("", "", "", "", "", "", "", "",
+				"https://rpb.lobid.org/spatial#n" + id, "", from, size, "", "", "", false, "", "",
+				"", "", format)));
+	}
 	/**
 	 * @param id The resource ID.
 	 * @param format The requested resource format (html, json).

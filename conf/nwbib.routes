@@ -30,4 +30,5 @@ DELETE /stars/:id             controllers.nwbib.Application.unstar(id)
 GET    /assets/*file          controllers.Assets.at(path="/public", file)
 GET    /robots.txt            controllers.Assets.at(path="/public",file="robots.txt")
 
+GET    /o:id                  controllers.nwbib.Application.searchSpatial(id, from:Int?=0, size:Int?=25, format?="html")
 GET    /:id                   controllers.nwbib.Application.show(id, format ?= "")

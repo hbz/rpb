@@ -2,10 +2,19 @@
 set -eu
 IFS=$'\n\t'
 
+# Get the daily Allegro dump:
+cd conf
+wget http://www.rpb-rlp.de/rpb/rpb04/intern/RPBEXP.zip
+unzip -o RPBEXP.zip
+mv RPBEXP.zip RPBEXP/RPBEXP-$(date "+%Y%m%d-%H%M").zip
+cd ..
+
+# Transform the data:
 sbt "runMain rpb.ETL conf/rpb-sw.flux"
 sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
 sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux"
 
+# Index to Elasticsearch:
 unset http_proxy # for posting to weywot3
 for filename in conf/output/bulk/bulk-*.ndjson
 do

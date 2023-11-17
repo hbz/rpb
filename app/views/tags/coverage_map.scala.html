@@ -1,6 +1,6 @@
 @* Copyright 2015 Fabian Steeg, hbz. Licensed under the GPLv2 *@
 
-@(q:String, person:String, name:String, subject:String, id:String, publisher:String, issued:String, medium: String, nwbibspatial: String, nwbibsubject: String, owner: String, t: String, sortParam: String, location: String, word: String, corporation: String, raw: String, from: Int, size: Int)
+@(q:String, person:String, name:String, subject:String, id:String, publisher:String, issued:String, medium: String, rpbspatial: String, rpbsubject: String, owner: String, t: String, sortParam: String, location: String, word: String, corporation: String, raw: String, from: Int, size: Int)
 
 @import helper._
 
@@ -86,7 +86,7 @@ var markers = new L.MarkerClusterGroup({
 var facetFieldName = '@urlEncode("spatial.focus.geo")';
 var queryParams = '&q=@urlEncode(q)&person=@urlEncode(person)&name=@urlEncode(name)'+
 '&subject=@urlEncode(subject)&id=@urlEncode(id)&publisher=@urlEncode(publisher)&issued=@urlEncode(issued)'+
-'&medium=@urlEncode(medium)&nwbibspatial=@urlEncode(nwbibspatial)&nwbibsubject=@urlEncode(nwbibsubject)'+
+'&medium=@urlEncode(medium)&rpbspatial=@urlEncode(rpbspatial)&rpbsubject=@urlEncode(rpbsubject)'+
 '&owner=@urlEncode(owner)&t=@urlEncode(t)&sort=@urlEncode(sortParam)'+
 '&word=@urlEncode(word)&corporation=@urlEncode(corporation)&raw=@urlEncode(raw)';
 

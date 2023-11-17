@@ -111,7 +111,7 @@ public class ExternalIntegrationTest {
 	}
 
 	@Test
-	public void classificationNwbibsubjectHierarchy() {
+	public void classificationrpbsubjectHierarchy() {
 		running(testServer(3333), () -> {
 			Pair<List<JsonNode>, Map<String, List<JsonNode>>> topAndSub =
 					Classification.Type.from("Sachsystematik").buildHierarchy();
@@ -127,7 +127,7 @@ public class ExternalIntegrationTest {
 	}
 
 	@Test
-	public void classificationNwbibsubjectRegister() {
+	public void classificationrpbsubjectRegister() {
 		running(testServer(3333), () -> {
 			JsonNode register =
 					Classification.Type.from("Sachsystematik").buildRegister();

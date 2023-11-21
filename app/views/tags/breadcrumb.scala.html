@@ -5,7 +5,7 @@
 @import controllers.nwbib.Classification.Type
 @import controllers.nwbib.WikidataLocations
 
-@(nwbibsubject: String, nwbibspatial: String, person:String="", name:String="", subject:String="", id:String="", publisher:String="", issued:String="", medium: String="", owner: String="", t: String="", location: String="", word: String="", corporation: String="", raw: String="", search: Boolean = false)
+@(rpbsubject: String, rpbspatial: String, person:String="", name:String="", subject:String="", id:String="", publisher:String="", issued:String="", medium: String="", owner: String="", t: String="", location: String="", word: String="", corporation: String="", raw: String="", search: Boolean = false)
 
 @toInternalGndId(uri: String) = @{ uri.replaceAll("https://d-nb.info/gnd/","n").replaceAll("-", "n") }
 
@@ -21,16 +21,16 @@
 	}
 }}
 
-@if(!nwbibsubject.isEmpty && !nwbibsubject.contains(",") && Seq(nwbibspatial, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw).forall(_.isEmpty)){
+@if(!rpbsubject.isEmpty && !rpbsubject.contains(",") && Seq(rpbspatial, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw).forall(_.isEmpty)){
 	@if(search){in <a href="@nwbib.routes.Application.subjects()"> Sachgebiete</a> &gt;}
-	@labels(nwbibsubject)
+	@labels(rpbsubject)
 } else {
-	@if(!nwbibspatial.isEmpty && !nwbibspatial.contains(",") && Seq(nwbibsubject, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw).forall(_.isEmpty)){
+	@if(!rpbspatial.isEmpty && !rpbspatial.contains(",") && Seq(rpbsubject, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw).forall(_.isEmpty)){
 		@if(search){in <a href="@nwbib.routes.Application.spatial()"> Regionen</a> &gt;}
-		@if(!nwbibspatial.isEmpty && !nwbibspatial.startsWith("https://nwbib.de/spatial#Q")) {
-			@labels(nwbibspatial)
+		@if(!rpbspatial.isEmpty && !rpbspatial.startsWith("https://nwbib.de/spatial#Q")) {
+			@labels(rpbspatial)
 		} else {
-			@defining(Classification.pathTo((if(!nwbibsubject.isEmpty) nwbibsubject else nwbibspatial))) { path => 
+			@defining(Classification.pathTo((if(!rpbsubject.isEmpty) rpbsubject else rpbspatial))) { path => 
 				@defining(path.takeWhile(!Classification.notation(_, Type.SPATIAL).isEmpty())) { withNotation =>
 					@if(!withNotation.isEmpty){@labels(withNotation.last) @if(path.last != withNotation.last) {&gt;}}
 					@for(segment <- path.dropWhile(!Classification.notation(_, Type.SPATIAL).isEmpty())) {

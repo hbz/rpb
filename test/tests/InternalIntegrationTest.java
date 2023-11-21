@@ -88,7 +88,7 @@ public class InternalIntegrationTest {
 		running(testServer(3333), () -> {
 			assertThat(hitsFor("subject=bocholt")).as("less-filtered result count")
 					.isGreaterThan(
-							hitsFor("subject=bocholt&nwbibsubject=" + nwbib("N240000")));
+							hitsFor("subject=bocholt&rpbsubject=" + nwbib("N240000")));
 		});
 	}
 
@@ -97,7 +97,7 @@ public class InternalIntegrationTest {
 		running(testServer(3333), () -> {
 			assertThat(hitsFor("subject=" + gnd("4001307-8")))
 					.as("less-filtered result count").isGreaterThan(hitsFor("subject="
-							+ gnd("4001307-8") + "&nwbibsubject=" + nwbib("N702000")));
+							+ gnd("4001307-8") + "&rpbsubject=" + nwbib("N702000")));
 		});
 	}
 
@@ -176,7 +176,7 @@ public class InternalIntegrationTest {
 	}
 
 	@Test
-	public void sizeRequestNwbibspatial() {
+	public void sizeRequestrpbspatial() {
 		running(testServer(3333), () -> {
 			Long hits =
 					Lobid.getTotalHitsNwbibClassification("https://nwbib.de/spatial#N20");

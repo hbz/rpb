@@ -279,6 +279,11 @@ public class Application extends Controller {
 				"https://rpb.lobid.org/spatial#n" + id, "", from, size, "", "", "", false, "", "",
 				"", "", format)));
 	}
+
+	public static Promise<Result> showPl(String name, String db, int index, int zeilen, String s1) {
+		return Promise.pure(movedPermanently("https://rppd.lobid.org/" + s1));
+	}
+
 	/**
 	 * @param id The resource ID.
 	 * @param format The requested resource format (html, json).

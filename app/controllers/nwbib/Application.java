@@ -281,7 +281,9 @@ public class Application extends Controller {
 	}
 
 	public static Promise<Result> showPl(String name, String db, int index, int zeilen, String s1) {
-		return Promise.pure(movedPermanently("https://rppd.lobid.org/" + s1));
+		return Promise
+				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=https://rppd.lobid.org/"
+						+ s1 + "'/></head>").as("text/html"));
 	}
 
 	/**

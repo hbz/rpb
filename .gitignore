@@ -4,6 +4,7 @@ bin
 .project
 .classpath
 .settings
+/conf/maps/beacons/*.tsv
 /conf/output/*
 !/conf/output/test-output-*.json
 !/conf/output/rpb-50*

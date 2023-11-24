@@ -19,6 +19,7 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-formatting" % "5.7.0-rc1",
   "org.metafacture" % "metafacture-monitoring" % "5.7.0-rc1",
   "org.metafacture" % "metafacture-csv" % "5.7.0-rc1",
+  "org.metafacture" % "metafacture-linkeddata" % "5.7.0-rc1",
   "org.metafacture" % "metafix" % "0.6.0-rc3",
   "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",

@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051147409",
+  "id" : "https://d-nb.info/gnd/134384741",
   "rppdId" : "pk00023",
-  "gndIdentifier" : "1051147409",
+  "gndIdentifier" : "134384741",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Giefer, Willy",
   "professionOrOccupation" : [ {

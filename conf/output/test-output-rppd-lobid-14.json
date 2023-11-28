@@ -6,7 +6,7 @@
   "sameAs" : [ {
     "id" : "https://www.deutsche-biographie.de/pnd118649558.html#adbcontent",
     "collection" : {
-      "name" : "deutsche-biographie.de"
+      "name" : "Historische Kommission bei der Bayerischen Akademie der Wissenschaften und Bayerische Staatsbibliothek"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

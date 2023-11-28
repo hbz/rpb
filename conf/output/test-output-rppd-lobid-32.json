@@ -6,7 +6,7 @@
   "sameAs" : [ {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/117006084",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Deutschsprachige Wikipedia"
     }
   }, {
     "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=117006084",

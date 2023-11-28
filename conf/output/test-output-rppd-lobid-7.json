@@ -6,7 +6,7 @@
   "sameAs" : [ {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/116324899",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Deutschsprachige Wikipedia"
     }
   }, {
     "id" : "http://www.leo-bw.de/web/guest/detail/-/Detail/details/PERSON/wlbblb_personen/116324899/person",

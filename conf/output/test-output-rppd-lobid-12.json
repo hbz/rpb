@@ -6,12 +6,12 @@
   "sameAs" : [ {
     "id" : "https://persondata.toolforge.org/redirect/gnd/commons/123205670",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Wikimedia Commons"
     }
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/123205670",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Deutschsprachige Wikipedia"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

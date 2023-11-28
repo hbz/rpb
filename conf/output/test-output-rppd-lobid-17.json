@@ -6,17 +6,17 @@
   "sameAs" : [ {
     "id" : "https://www.deutsche-biographie.de/pnd119280957.html#adbcontent",
     "collection" : {
-      "name" : "deutsche-biographie.de"
+      "name" : "Historische Kommission bei der Bayerischen Akademie der Wissenschaften und Bayerische Staatsbibliothek"
     }
   }, {
     "id" : "https://persondata.toolforge.org/redirect/gnd/commons/119280957",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Wikimedia Commons"
     }
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/119280957",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Deutschsprachige Wikipedia"
     }
   }, {
     "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=119280957",

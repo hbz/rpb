@@ -6,7 +6,7 @@
   "sameAs" : [ {
     "id" : "http://swb.bsz-bw.de/DB=2.114/CMD?ACT=SRCHA&IKT=2011&TRM=gnd:115839909&REC=2",
     "collection" : {
-      "name" : "swb.bsz-bw.de"
+      "name" : "Bibliotheksservice-Zentrum Baden-Wuerttemberg"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

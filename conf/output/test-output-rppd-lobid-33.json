@@ -6,12 +6,12 @@
   "sameAs" : [ {
     "id" : "https://persondata.toolforge.org/redirect/gnd/ws-blkoe/117021652",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Biographisches Lexikon des Kaiserthums Oesterreich (Wikisource)"
     }
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/117021652",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Deutschsprachige Wikipedia"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

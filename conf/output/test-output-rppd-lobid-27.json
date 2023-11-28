@@ -6,17 +6,17 @@
   "sameAs" : [ {
     "id" : "https://persondata.toolforge.org/redirect/gnd/commons/1051215536",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Wikimedia Commons"
     }
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051215536",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Deutschsprachige Wikipedia"
     }
   }, {
     "id" : "http://swb.bsz-bw.de/DB=2.114/CMD?ACT=SRCHA&IKT=2011&TRM=gnd:1051215536&REC=2",
     "collection" : {
-      "name" : "swb.bsz-bw.de"
+      "name" : "Bibliotheksservice-Zentrum Baden-Wuerttemberg"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

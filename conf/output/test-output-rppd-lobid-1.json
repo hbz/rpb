@@ -6,12 +6,12 @@
   "sameAs" : [ {
     "id" : "https://persondata.toolforge.org/redirect/gnd/commons/11855476X",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Wikimedia Commons"
     }
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/11855476X",
     "collection" : {
-      "name" : "persondata.toolforge.org"
+      "name" : "Deutschsprachige Wikipedia"
     }
   }, {
     "id" : "https://www.lagis-hessen.de/pnd/11855476X",
@@ -21,7 +21,7 @@
   }, {
     "id" : "https://www.deutsche-biographie.de/pnd11855476X.html#ndbcontent",
     "collection" : {
-      "name" : "deutsche-biographie.de"
+      "name" : "Historische Kommission bei der Bayerischen Akademie der Wissenschaften und Bayerische Staatsbibliothek"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

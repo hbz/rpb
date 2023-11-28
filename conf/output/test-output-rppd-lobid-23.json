@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/126790086",
   "rppdId" : "pta1486",
   "gndIdentifier" : "126790086",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/126790086",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zill, Egon",
   "professionOrOccupation" : [ {

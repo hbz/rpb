@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/1051147387",
   "rppdId" : "pk00019",
   "gndIdentifier" : "1051147387",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051147387",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Oppermann, Julius",
   "professionOrOccupation" : [ {

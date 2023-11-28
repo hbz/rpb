@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/117269476",
   "rppdId" : "pk05621",
   "gndIdentifier" : "117269476",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/117269476",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Weinkauff, Franz",
   "variantName" : [ "Weinkauff, Franciscus / 1823-1892", "Weinkauff, Franz / 1823-1892", "Weinkauff, Franz / 1824-1892" ],

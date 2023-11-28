@@ -3,6 +3,17 @@
   "id" : "https://d-nb.info/gnd/117006084",
   "rppdId" : "pta1496",
   "gndIdentifier" : "117006084",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/117006084",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=117006084",
+    "collection" : {
+      "name" : "Tripota - Trierer Porträtdatenbank"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zirbes, Peter",
   "depiction" : [ {

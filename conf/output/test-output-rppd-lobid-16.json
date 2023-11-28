@@ -3,6 +3,27 @@
   "id" : "https://d-nb.info/gnd/119280957",
   "rppdId" : "pk00030",
   "gndIdentifier" : "119280957",
+  "sameAs" : [ {
+    "id" : "https://www.deutsche-biographie.de/pnd119280957.html#adbcontent",
+    "collection" : {
+      "name" : "deutsche-biographie.de"
+    }
+  }, {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/119280957",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/119280957",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=119280957",
+    "collection" : {
+      "name" : "Tripota - Trierer Porträtdatenbank"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Meister, Simon",
   "variantName" : [ "Meister, Simon" ],

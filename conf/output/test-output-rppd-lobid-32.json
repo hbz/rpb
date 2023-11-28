@@ -3,6 +3,17 @@
   "id" : "https://d-nb.info/gnd/117021652",
   "rppdId" : "pta1497",
   "gndIdentifier" : "117021652",
+  "sameAs" : [ {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/ws-blkoe/117021652",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/117021652",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zuckermandel, Moses S.",
   "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],

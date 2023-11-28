@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/1120816653",
   "rppdId" : "pke0292",
   "gndIdentifier" : "1120816653",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1120816653",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Herr-Beck, Maria",
   "professionOrOccupation" : [ {

@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/122507487",
   "rppdId" : "pk00018",
   "gndIdentifier" : "122507487",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/122507487",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Reinirkens, Leonhard",
   "variantName" : [ "Reinirkens, Leonhard" ],

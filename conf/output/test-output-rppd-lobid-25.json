@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/137243324",
   "rppdId" : "pta1488",
   "gndIdentifier" : "137243324",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/137243324",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zillig, Hermann",
   "professionOrOccupation" : [ {

@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/1051215498",
   "rppdId" : "pta1483",
   "gndIdentifier" : "1051215498",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051215498",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zettelmeyer, Hubert",
   "professionOrOccupation" : [ {

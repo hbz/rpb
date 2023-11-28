@@ -3,6 +3,22 @@
   "id" : "https://d-nb.info/gnd/11698211X",
   "rppdId" : "pta1481",
   "gndIdentifier" : "11698211X",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/11698211X",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://opac.regesta-imperii.de/lang_de/suche.php?tags=11698211X",
+    "collection" : {
+      "name" : "opac.regesta-imperii.de"
+    }
+  }, {
+    "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=11698211X",
+    "collection" : {
+      "name" : "Tripota - Trierer Porträtdatenbank"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zenz, Emil",
   "variantName" : [ "Zenz, Emil" ],

@@ -3,6 +3,27 @@
   "id" : "https://d-nb.info/gnd/11855476X",
   "rppdId" : "pk00006",
   "gndIdentifier" : "11855476X",
+  "sameAs" : [ {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/11855476X",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/11855476X",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "https://www.lagis-hessen.de/pnd/11855476X",
+    "collection" : {
+      "name" : "Hessische Biografie"
+    }
+  }, {
+    "id" : "https://www.deutsche-biographie.de/pnd11855476X.html#ndbcontent",
+    "collection" : {
+      "name" : "deutsche-biographie.de"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Humperdinck, Engelbert",
   "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],

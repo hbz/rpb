@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/1051147433",
   "rppdId" : "pk00032",
   "gndIdentifier" : "1051147433",
+  "sameAs" : [ {
+    "id" : "https://www.lagis-hessen.de/pnd/1051147433",
+    "collection" : {
+      "name" : "Hessische Biografie"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Altgeld, Johann Philipp",
   "variantName" : [ "Altgelt, Johann Philipp" ],

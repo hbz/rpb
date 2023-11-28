@@ -3,6 +3,17 @@
   "id" : "https://d-nb.info/gnd/116324899",
   "rppdId" : "pk00013",
   "gndIdentifier" : "116324899",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/116324899",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://www.leo-bw.de/web/guest/detail/-/Detail/details/PERSON/wlbblb_personen/116324899/person",
+    "collection" : {
+      "name" : "Personen der Landesbibliographie Baden-Württemberg"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Gabele, Anton",
   "variantName" : [ "Gabele, Anton" ],

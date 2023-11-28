@@ -3,6 +3,17 @@
   "id" : "https://d-nb.info/gnd/123205670",
   "rppdId" : "pk00020",
   "gndIdentifier" : "123205670",
+  "sameAs" : [ {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/123205670",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/123205670",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Bücker, Carl Clemens",
   "variantName" : [ "Bücker, Carl Clemens" ],

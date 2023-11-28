@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/1051215609",
   "rppdId" : "pta1500",
   "gndIdentifier" : "1051215609",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051215609",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Zweiffel, Karl Hermann",
   "professionOrOccupation" : [ {

@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/115839909",
   "rppdId" : "pk00015",
   "gndIdentifier" : "115839909",
+  "sameAs" : [ {
+    "id" : "http://swb.bsz-bw.de/DB=2.114/CMD?ACT=SRCHA&IKT=2011&TRM=gnd:115839909&REC=2",
+    "collection" : {
+      "name" : "swb.bsz-bw.de"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anhäuser, Uwe",
   "professionOrOccupation" : [ {

@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/118649558",
   "rppdId" : "pk00022",
   "gndIdentifier" : "118649558",
+  "sameAs" : [ {
+    "id" : "https://www.deutsche-biographie.de/pnd118649558.html#adbcontent",
+    "collection" : {
+      "name" : "deutsche-biographie.de"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Anschuez, Joseph Andreas",
   "variantName" : [ "Anschütz, Josef Andreas", "Anschuez, Johann Andreas", "Anschuez, Josef Andreas", "Anschütz, Joseph Andreas", "Anschuetz, Johann Andreas", "Anschuez, J. A.", "Anschütz, J. A.", "Anschütz, Johann Andreas", "Anschuez, Joseph Andreas" ],

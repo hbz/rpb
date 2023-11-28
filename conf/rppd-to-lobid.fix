@@ -1,9 +1,25 @@
+do put_macro("beacon_put")
+  put_filemap("conf/maps/beacons/gndId-to-$[id].tsv", "beacon_$[id]_url", key_column:"0", value_column: "1", sep_char: "\t", expected_columns:"3")
+  put_filemap("conf/maps/beacons/gndId-to-$[id].tsv", "beacon_$[id]_name", key_column:"0", value_column: "2", sep_char: "\t", expected_columns:"3")
+end
+
+do put_macro("beacon_lookup")
+  copy_field("gndIdentifier", "_temp")
+  lookup("_temp", "beacon_$[id]_url", delete: "true")
+  if exists("_temp")
+    move_field("_temp", "sameAs[].$append.id")
+    copy_field("gndIdentifier", "_temp")
+    lookup("_temp", "beacon_$[id]_name", delete: "true")
+    move_field("_temp", "sameAs[].$last.collection.name")
+  end
+end
+
 do once("map")
   put_filemap("conf/RPB-Export_HBZ_SW.tsv", "SW_map", sep_char: "\t")
   put_filemap("conf/RPB-Export_HBZ_SWN.tsv", "SWN_map", sep_char: "\t")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
 
-# maps für lookup relatedPerson
+  # maps für lookup relatedPerson
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
 
@@ -11,6 +27,30 @@ do once("map")
   put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_thumbnail", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"4")
   put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_id", key_column:"0", value_column:"2", sep_char: "\t", expected_columns:"4")
   put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_url", key_column:"0", value_column:"3", sep_char: "\t", expected_columns:"4")
+
+  # maps aus beacons
+  call_macro("beacon_put", id: "adb")
+  call_macro("beacon_put", id: "archinform")
+  call_macro("beacon_put", id: "blkoe")
+  call_macro("beacon_put", id: "bsb")
+  call_macro("beacon_put", id: "commons")
+  call_macro("beacon_put", id: "dewiki")
+  call_macro("beacon_put", id: "germania_sacra")
+  call_macro("beacon_put", id: "gutenberg")
+  call_macro("beacon_put", id: "kupferstichkabinett")
+  call_macro("beacon_put", id: "lagis")
+  call_macro("beacon_put", id: "leo_labi")
+  call_macro("beacon_put", id: "lwl")
+  call_macro("beacon_put", id: "ndb")
+  call_macro("beacon_put", id: "oebl")
+  call_macro("beacon_put", id: "portraitindex")
+  call_macro("beacon_put", id: "radb")
+  call_macro("beacon_put", id: "regionalgeschichte")
+  call_macro("beacon_put", id: "ri")
+  call_macro("beacon_put", id: "sbub")
+  call_macro("beacon_put", id: "tripota")
+  call_macro("beacon_put", id: "usbk")
+  call_macro("beacon_put", id: "vd16")
 end
 
 # Kommentar Doku: #14 "x" eintragen, falls der Datensatz nicht im Webopac erscheinen soll, z.B. noch nicht aufgearbeitete ps-Sätze
@@ -38,6 +78,30 @@ unless all_contain("f82b", "Keine GND-Ansetzung")
   copy_field("f82b","id")
   prepend("id","https://d-nb.info/gnd/")
 end
+
+set_array("sameAs[]")
+call_macro("beacon_lookup", id: "adb")
+call_macro("beacon_lookup", id: "archinform")
+call_macro("beacon_lookup", id: "blkoe")
+call_macro("beacon_lookup", id: "bsb")
+call_macro("beacon_lookup", id: "commons")
+call_macro("beacon_lookup", id: "dewiki")
+call_macro("beacon_lookup", id: "germania_sacra")
+call_macro("beacon_lookup", id: "gutenberg")
+call_macro("beacon_lookup", id: "kupferstichkabinett")
+call_macro("beacon_lookup", id: "lagis")
+call_macro("beacon_lookup", id: "leo_labi")
+call_macro("beacon_lookup", id: "lwl")
+call_macro("beacon_lookup", id: "ndb")
+call_macro("beacon_lookup", id: "oebl")
+call_macro("beacon_lookup", id: "portraitindex")
+call_macro("beacon_lookup", id: "radb")
+call_macro("beacon_lookup", id: "regionalgeschichte")
+call_macro("beacon_lookup", id: "ri")
+call_macro("beacon_lookup", id: "sbub")
+call_macro("beacon_lookup", id: "tripota")
+call_macro("beacon_lookup", id: "usbk")
+call_macro("beacon_lookup", id: "vd16")
 
 set_array("type[]", "AuthorityResource", "Person", "DifferentiatedPerson")
 
@@ -305,6 +369,7 @@ retain(
   "placeOfDeath[]", 
   "relatedPerson[]", 
   "biographicalOrHistoricalInformation[]", 
-  "publication[]"
+  "publication[]",
+  "sameAs[]"
   )
 	

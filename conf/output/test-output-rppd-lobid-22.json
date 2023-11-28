@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/105121551X",
   "rppdId" : "pta1485",
   "gndIdentifier" : "105121551X",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/105121551X",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Ziegler, Jakob Anton",
   "professionOrOccupation" : [ {

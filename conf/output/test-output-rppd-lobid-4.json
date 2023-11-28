@@ -3,6 +3,12 @@
   "id" : "https://d-nb.info/gnd/120526433",
   "rppdId" : "pk00011",
   "gndIdentifier" : "120526433",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/120526433",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Grün, Willi H.",
   "variantName" : [ "Grün, Willi-Heinz / 1932-2016", "Grün, Willi Heinz / 1932-2016", "Grün, Willi H. / 1932-2016" ],

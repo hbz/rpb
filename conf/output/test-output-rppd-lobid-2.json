@@ -1,39 +1,49 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051147352",
-  "rppdId" : "pk00008",
-  "gndIdentifier" : "1051147352",
+  "id" : "https://d-nb.info/gnd/1011283956",
+  "rppdId" : "pk00007",
+  "gndIdentifier" : "1011283956",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Daub, Richard",
+  "preferredName" : "Cornelius, Otto",
+  "variantName" : [ "Cornelius, Otto" ],
   "professionOrOccupation" : [ {
-    "label" : "Lehrer",
-    "id" : "https://d-nb.info/gnd/4035088-5"
+    "label" : "Maler",
+    "id" : "https://d-nb.info/gnd/4037215-7"
+  }, {
+    "label" : "Grafiker",
+    "id" : "https://d-nb.info/gnd/4125173-8"
+  }, {
+    "label" : "Kunsterzieher",
+    "id" : "https://d-nb.info/gnd/4302182-7"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Bruchhausen",
-    "id" : "https://rpb.lobid.org/spatial#n13807008"
+    "label" : "Linz am Rhein, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13804041"
   } ],
-  "dateOfBirth" : [ "1895-04-04" ],
+  "dateOfBirth" : [ "1896-11-14" ],
   "placeOfBirth" : [ {
-    "label" : "Bell",
-    "id" : "https://rpb.lobid.org/spatial#n13704008"
+    "label" : "Düsseldorf",
+    "id" : "https://rpb.lobid.org/dummi/Düsseldorf"
   } ],
-  "dateOfDeath" : [ "1972-04-23" ],
+  "dateOfDeath" : [ "1984" ],
   "placeOfDeath" : [ {
-    "label" : "Leutesdorf",
-    "id" : "https://rpb.lobid.org/spatial#n13802038"
+    "label" : "Vallendar, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13707226"
   } ],
-  "publication" : [ "Wallfahrtsort Bruchhausen in Geschichte und Sage, 1956" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
+    "label" : "Malerei. Zeichnung. Graphik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.4p"
+  }, {
     "label" : "Bildung. Erziehung",
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2004-12-20",
-    "source" : [ "Rhein-Zeitung, Ausg. Neuwied, Nr. 94 vom 23.04.1997" ]
-  }
+    "dateModified" : "2011-02-18",
+    "source" : [ "Rhein-Zeitung, Ausg. AN, Neuwied, Nr.189 vom 16./17.08. 1997", "Neuwied <Landkreis>: Heimatkalender des Landkreises Neuwied. - 1968, S. 27", "Neuwied <Landkreis>: Heimatjahrbuch des Landkreises Neuwied. - 1973, S. 18", "Neuwied <Landkreis>: Heimatjahrbuch des Landkreises Neuwied. - 1985, S. 26" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "1919-1922 Studium an der Düsseldorfer Kunstakademie; Studienreisen nach Holland, Frankreich, Italien, Korsika und in die Schweiz; Kunsterzieher in Oberhausen und 1943 bis 1959 Lehrer für Bildende Kunst und Biologie am Martinus-Gymnasium in Linz; rege Ausstellungstätigkeit; Teilnahme an der Internationalen Kunstausstellung der \"Europäischen Vereinigung Eifel und Ardennen\", 1957 sowie an der Ausstellung um den \"Grand Prix international de Peinture\", Spa/Belgien, 1966; Internationale Kunstausstellung in Kopenhagen, 1967; \"2. Annuale Italiana\", Ancona, 1968; \"3. Biennale delle Regioni\", Ancona, 1969; Mitarbeiter des Neuwieder Heimatkalenders; langjähriges Mitglied der Are-Künstlergilde" ]
 }

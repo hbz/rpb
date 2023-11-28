@@ -1,71 +1,55 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051215536",
-  "rppdId" : "pta1489",
-  "gndIdentifier" : "1051215536",
+  "id" : "https://d-nb.info/gnd/137243324",
+  "rppdId" : "pta1488",
+  "gndIdentifier" : "137243324",
   "sameAs" : [ {
-    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/1051215536",
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/137243324",
     "collection" : {
       "name" : "persondata.toolforge.org"
-    }
-  }, {
-    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051215536",
-    "collection" : {
-      "name" : "persondata.toolforge.org"
-    }
-  }, {
-    "id" : "http://swb.bsz-bw.de/DB=2.114/CMD?ACT=SRCHA&IKT=2011&TRM=gnd:1051215536&REC=2",
-    "collection" : {
-      "name" : "swb.bsz-bw.de"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Zilliken, Kaspar Josef",
-  "variantName" : [ "Zilliken, Kaspar Joseph", "Zilliken, Joseph" ],
-  "depiction" : [ {
-    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Josef%20Zilliken%201918%20Ausschnitt.jpg",
-    "url" : "https://commons.wikimedia.org/wiki/File:Josef%20Zilliken%201918%20Ausschnitt.jpg?uselang=de",
-    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Josef%20Zilliken%201918%20Ausschnitt.jpg?width=270"
-  } ],
+  "preferredName" : "Zillig, Hermann",
   "professionOrOccupation" : [ {
-    "label" : "Dekan / Kirche",
-    "id" : "https://d-nb.info/gnd/4441540-0"
+    "label" : "Oberregierungsrat",
+    "id" : "https://d-nb.info/gnd/4398834-9"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Prüm, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n23206296"
+    "label" : "Würzburg",
+    "id" : "https://rpb.lobid.org/dummi/Würzburg"
   }, {
-    "label" : "Wassenach",
-    "id" : "https://rpb.lobid.org/spatial#n13104209"
+    "label" : "Trier, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  }, {
+    "label" : "Bernkastel",
+    "id" : "https://rpb.lobid.org/spatial#n231010080200"
   } ],
-  "dateOfBirth" : [ "1872-09-17" ],
+  "dateOfBirth" : [ "1893-04-21" ],
   "placeOfBirth" : [ {
-    "label" : "Mayen, große kreisangehörige Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13700068"
+    "label" : "Würzburg",
+    "id" : "https://rpb.lobid.org/dummi/Würzburg"
   } ],
-  "dateOfDeath" : [ "1942-10-03" ],
+  "dateOfDeath" : [ "1952-10-16" ],
   "placeOfDeath" : [ {
-    "label" : "Konzentrationslager Dachau",
-    "id" : "https://rpb.lobid.org/dummi/Konzentrationslager Dachau"
+    "label" : "Bernkastel-Kues, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n23101008"
   } ],
-  "relatedPerson" : [ {
-    "label" : "Schulz, Johannes",
-    "id" : "https://d-nb.info/gnd/119273861"
-  }, {
-    "label" : "Bettendorff, Ludwig",
-    "id" : "https://d-nb.info/gnd/1051206464"
-  } ],
+  "publication" : [ "Abschied vom Deutschen Weinmuseum in Trier - in: Illustrierte Weinzeitung, Beilage zur Deutschen Weinzeitung 1950", "¬Der¬ echte Mehltau des Weinstocks und seine Bekämpfung. Spritz- und Staub beim Arbeiten im Weinberg, Flugblatt der Reichsanstalt für Land- und Forstwirtschaft Nrn.52, 55, 88, 89", "¬Das¬ Trierer Weinmuseum - in: Rhein. Heimatblätter 5 (1928) 162-164", "Über die spezialisierten Formen beim Antherenbrand, Jena 1921, zugleich Dissertation Würzburg 1921", "¬Die¬ wirtschaftl. Bedeutung des Rebschutzes in Deutschland, Berlin-Dahlem 1941", "¬Die¬ Zweigstelle der Biologischen Reichsanstalt für Land- und Forstwirtschaft in Trier - in: Gottfried Kentenich: Trier, 2. Aufl Berlin-Halensee 1925, 87 f" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Kirche",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.6p"
+    "label" : "Landwirtschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#32.10p"
+  }, {
+    "label" : "Öffentliche Verwaltung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.15p"
   } ],
   "describedBy" : {
-    "dateModified" : "2014-06-16",
-    "source" : [ "Der Prümer Landbote. Zeitschrift des Geschichtsvereins \"Prümer Land\", e. V., Nr. 34/ 1992, 3-17 (fünf Beiträge zu Person und Leben v. Z) und Nr. 35/1992, 49-52 (ein Beitrag)", "Ahrweiler <Kreis>: Heimat-Jahrbuch.", "42 (1985), S 69-72", "http://de.wikipedia.org/wiki/Josef_Zilliken (Stand: 20.06.2013)", "verein für heimatkunde im Landkreis Birkenfeld: Mitteilungen.", "85 (2011), S. 81-98" ]
+    "dateModified" : "2006-07-11",
+    "source" : [ "Bernhard Simon: Deutsches Weinmuseum in Trier, in: 2000 Jahre Weinkultur an Mosel-Saar-Ruwer, Trier 1987, 222-227", "Nachruf, in: Blätter für Mosel Hochwald Hunsrück 2 (1952) 47", "Trauerfeier für Dr. Z, in: Rhein. Zeitung (Ausgabe Mittelmosel) Nr.243 v. 18./19.10.1952", "Nachlaß im Stadtarchiv Trier" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Dechant. - Z wurde 1889 in Trier zum Priester geweiht, anschließend Kaplan in Sulzbach, 1901 Pfarrer in Wolfersweiler, 1905 in Thalexweiler und 1922 in Prüm. Z wurde 1922 Definitor und 1922 Dechant des Dekanates Prüm. In einer Predigt 1923 wandte er sich gegen den Separatismus und 1934 gegen den \"Mythos des 20. Jahrhunderts\" v. Alfred Rosenberg; 1935 folgte Strafantrag v. Rosenberg wegen Beleidigung. 1937 wurde Z Pfarrer v. Wassenach; die Gestapo Koblenz bezeichnete ihn als einen \"sehr aktiven Geistlichen im Sinne der Kathol. Aktion\". Es folgten mehrere Strafverfahren und Überwachung durch die Gestapo. Am 28.05.1940 verhaftet, weil er Hermann Göring nicht gegrüßt habe. Am 12./13.06.1940 wurde Z in das Konzentrationslager Buchenwald deportiert, am 30.07.1940 in das Konzentrationslager Sachsenhausen und am 14.12.1940 in das Konzentrationslager Dachau verlegt; dort verstarb er angebl an \"Versagen v. Herz und Kreislauf bei offener Lungentuberkulose\". - ---[Daten übernommen aus: Heinrich Studentkowski, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Laut Wikipedia Priesterweihe 1898; Befreundet mit Johannes Schulz, Pfarrer in Nickenich; Mithäftling von Pfarrer Ludwig Bettendorff" ]
+  "biographicalOrHistoricalInformation" : [ "Abitur 1912 Würzburg, Studium der Naturwissenschaften ebd. 1919 begründete Z das Fränkische Museum für Naturkunde in Würzburg. 1920 Promotion zum Dr. phil. in Würzburg. 1921 Eintritt in die Biologische Reichsanstalt (später Bundesanstalt) für Land- und Forstwirtschaft, Zweigstelle Trier. 1926 Verlegung der Dienststelle nach Bernkastel. Z baute hier das Institut für Weinbau auf und leitete diese als Direktor bis zu seinem Tod. 1927 war er zum Regierungsrat und später zum Oberregierungsrat ernannt worden. - Auf Vorschlag v. Z beschloß die Stadtverordnetenversammlung Trier 1925 die Einrichtung eines Weinmuseums und beauftragte Z mit der Einrichtung. Das Museum wurde 1927 als \"Deutsches Weinmuseum\" eingeweiht und bis 1937 v. Z ehrenamtlich geleitet; offenbar wegen Differenzen mit der inzwischen nationalsozialistisch bestimmten Stadtverwaltung legte er die Leitung nieder. 1933 wurde auf seine Anregung hin eine Wetterbeobachtungsstation auf dem Erbeskopf errichtet. 25 Jahre lang war Z Vorsitzender der Bernkasteler Gruppe des Hunsrückvereins und Mitglied des Hauptvorstandes. - *Heirat: mit Gertrud Niemand. - ---[Daten übernommen aus: Heinz Monz, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
 }

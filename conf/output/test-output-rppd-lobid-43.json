@@ -1,32 +1,43 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051215234",
-  "rppdId" : "pta1435",
-  "gndIdentifier" : "1051215234",
+  "id" : "https://rppd.lobid.org/pk06675",
+  "rppdId" : "pk06675",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk06675",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Weyrich, Karl",
+  "preferredName" : "Alexander, Philipp",
   "professionOrOccupation" : [ {
-    "label" : "Techniker",
-    "id" : "https://d-nb.info/gnd/4138289-4"
+    "label" : "Unternehmer",
+    "id" : "https://d-nb.info/gnd/4061949-7"
   }, {
-    "label" : "Politiker",
-    "id" : "https://d-nb.info/gnd/4046517-2"
+    "label" : "Musikinstrumentenbauer",
+    "id" : "https://d-nb.info/gnd/4170830-1"
+  }, {
+    "label" : "Drechsler",
+    "id" : "https://d-nb.info/gnd/4301425-2"
   } ],
-  "periodOfActivity" : [ "1848" ],
+  "placeOfActivity" : [ {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
+  "dateOfBirth" : [ "1787" ],
+  "dateOfDeath" : [ "1864" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Technik allgemein",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
+    "label" : "Industrie. Handwerk",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
   }, {
-    "label" : "Politiker und historische Persönlichkeiten",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+    "label" : "Handel. Dienstleistung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+  }, {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-07-11",
-    "source" : [ "Jürgen Herres: Vereinsbildung als Gesellschaftsreform, in: Revolution 1848/49, 459 ff.", "Eberhard Klopp: Geschichte der Trierer Arbeiterbewegung: ein deutsches Beispiel, Bd. 3: Kurzbiographien 1836-1933, 2. Aufl. Trier 1979, 136 f" ]
+    "dateModified" : "2019-07-02",
+    "source" : [ "Duttenhöfer, Eva-Maria: Gebrüder Alexander : 200 Jahre Musikinstrumentenbau in Mainz, Mainz 1982" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Techniker. - Lebensdaten unbekannt - W wurde am 21.05.1848 zum Präsidenten des Trierer \"Allgemeinen Handwerkerausschusses\" gewählt, dem die Gründung eines Handwerker- und Arbeitervereins vorangegangen war. Der Verein bezeichnete sich als unpolit. und als seinen Zweck \"die materielle Verbesserung, die geistige und moralische Hebung des Arbeiterstandes\". W war einer der beiden Trierer Delegierten beim Kongreß der demokratischen und Arbeitervereine v. 14.-16.06.1848 in Frankfurt a.M. Anschließend befürworteten die beiden Delegierten das Grundprinzip einer \"socialen demokratischen Republik\". W, der gleichzeitig Ausschußmitgl. des Trierer Demokratischen Vereins war, geriet dadurch in Konflikt zu Kreisen um Karl Grün und Viktor Schily. W war sodann am 6.10.1848 an der Umbildung des Arbeitervereins zu den \"Vereinigten Gewerbeausschüssen v. Trier und der Vororte\" beteiligt. Bald danach trat er aus dieser Verbindung aus. - ---[Daten übernommen aus: Eberhard Klopp, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+  "biographicalOrHistoricalInformation" : [ "[FAMILIE]pk06671[/HR]Zur Familiengeschichte Alexander[/FAMILIE]", "Blieb ledig; führte zunächst die Berufsbezeichnung \"Drechsler\", später kam \"Instrumentenmacher\" hinzu" ]
 }

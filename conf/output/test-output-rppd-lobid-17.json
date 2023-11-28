@@ -1,65 +1,77 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/120260948",
-  "rppdId" : "pk00031",
-  "gndIdentifier" : "120260948",
+  "id" : "https://d-nb.info/gnd/119280957",
+  "rppdId" : "pk00030",
+  "gndIdentifier" : "119280957",
   "sameAs" : [ {
-    "id" : "http://persondata.toolforge.org/redirect/gnd/de/120260948",
+    "id" : "https://www.deutsche-biographie.de/pnd119280957.html#adbcontent",
+    "collection" : {
+      "name" : "deutsche-biographie.de"
+    }
+  }, {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/119280957",
     "collection" : {
       "name" : "persondata.toolforge.org"
     }
+  }, {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/119280957",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=119280957",
+    "collection" : {
+      "name" : "Tripota - Trierer Porträtdatenbank"
+    }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Bodewig, Robert",
-  "variantName" : [ "Bodewig, Robert / 1857-1923" ],
+  "preferredName" : "Meister, Simon",
+  "variantName" : [ "Meister, Simon" ],
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Simon%20Meister%20%281796%20oder%201803%20-%201844%29.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Simon%20Meister%20%281796%20oder%201803%20-%201844%29.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Simon%20Meister%20%281796%20oder%201803%20-%201844%29.jpg?width=270"
+  } ],
   "professionOrOccupation" : [ {
-    "label" : "Klassischer Philologe",
-    "id" : "https://d-nb.info/gnd/4199241-6"
-  }, {
-    "label" : "Historiker",
-    "id" : "https://d-nb.info/gnd/4025098-2"
-  }, {
-    "label" : "Archäologe",
-    "id" : "https://d-nb.info/gnd/4191824-1"
-  }, {
-    "label" : "Gymnasiallehrer",
-    "id" : "https://d-nb.info/gnd/4158589-6"
+    "label" : "Maler",
+    "id" : "https://d-nb.info/gnd/4037215-7"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Remscheid",
-    "id" : "https://rpb.lobid.org/dummi/Remscheid"
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
   }, {
-    "label" : "Bünde",
-    "id" : "https://rpb.lobid.org/dummi/Bünde"
-  }, {
-    "label" : "Oberlahnstein",
-    "id" : "https://rpb.lobid.org/spatial#n141000750200"
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
-  "dateOfBirth" : [ "1857-12-01" ],
+  "dateOfBirth" : [ "1796-12-20" ],
   "placeOfBirth" : [ {
-    "label" : "Wermelskirchen",
-    "id" : "https://rpb.lobid.org/dummi/Wermelskirchen"
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
-  "dateOfDeath" : [ "1923-12-02" ],
+  "dateOfDeath" : [ "1844-02-29" ],
   "placeOfDeath" : [ {
-    "label" : "Oberlahnstein",
-    "id" : "https://rpb.lobid.org/spatial#n141000750200"
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
-  "publication" : [ "Lahnstein im 30-jährigen Krieg (1894)", "Lahnstein in der zweiten Hälfte des 17. Jahrhunderts (1895)", "¬Die¬ Leiden des Amtes Münstermaifeld während einiger Jahre des 30-jährigen Krieges (1896)", "¬Das¬ Kastell Hunzel (1887)", "¬Das¬ römische Koblenz (1898)", "¬Ein¬ Trevererdorf im Coblenzer Stadtwalde (1900)", "Vorrömische Dörfer in Braubach und Lahnstein (1902/03)", "¬Das¬ Kastell Heddesdorf (1903)", "¬Das¬ Kastell Marienfels (1903)", "Römische Gehöfte zwischen Limes und Rhein (1906)", "Lahnstein in den Kriegsereignissen des 18. Jahrhunderts (1911)", "¬Das¬ Limeskastell Ems (1911)", "¬Das¬ Straßennetz im Gebiet des Limes von der Lahn bis zur Aar I. (1914)", "¬Das¬ Straßennetz im Gebiet des Limes von der Lahn bis zur Aar II. (1916)" ],
+  "relatedPerson" : [ {
+    "label" : "Meister, Ernst",
+    "id" : "https://d-nb.info/gnd/1051179556"
+  }, {
+    "label" : "Meister, Nikolaus",
+    "id" : "https://d-nb.info/gnd/1051179564"
+  } ],
+  "publication" : [ "Ausstellungskatalog und Werkverzeichnis 1796-1844. Koblenz, Mittelrhein-Museum 1994" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Geschichtswissenschaft",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.1p"
-  }, {
-    "label" : "Bildung. Erziehung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+    "label" : "Malerei. Zeichnung. Graphik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-05-15",
-    "source" : [ "Kurzbiographien vom Mittelrhein und Moselland, 1968", "Kuhn, Hans G.: Robert Bodewig - Versuch einer Biographie. - In: Bodewig: Professor Dr. Robert Bodewig / hrsg. vom Lahnsteiner Altertumsverein 1880 e.V. - Lahnstein. - 2 (2005).- ISBN 3-9807361-7-2. - S. 233-259" ]
+    "dateModified" : "2015-01-28",
+    "source" : [ "Thieme-Becker: Allgemeines Lexikon der Bildenden Künstler, Leipzig 1907-1950, Bd. 24, S. 348f.", "http://de.wikipedia.org/wiki/Simon_Meister (Stand: 31.10.2013)", "Romanhafte Lebensdarstellung durch Otto Brües: \"Simon im Glück\", 1950" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Stammte aus einfachsten Verhältnissen (Vater war Holzschneider, Tagelöhner, Landmann); 01.09.1878-01.10.1881 Elementarlehrer in Remscheid; 21.03.1882 Abitur in Barmen (nach externer Vorbereitung); SS 1882 - WS 1884/85 Studium der klassischen Philologie in Berlin; SS 1885 und WS 1885/86 Studium in Münster; 10.02.1886 Erstes Staatsexamen für das Lehramt an Gymnasien für Geschichte, Geographie, Latein und Griechisch; ab April 1886 Probejahr am Gymnasium Barmen; 13.08.1886 Promotion; 01.04.1887 bis 31.03.1889 Lehrer an der Höheren Töchterschule mit Knabensexta in Unterbarmen; 01.04.1888 bis 31.09.1890 Gründungsrektor der Höheren Knabenschule in Bünde (das heutige Freiherr-vom-Stein-Gymnasium); 01.10.1890 bis 31.03.1891 Hilfslehrer am Realprogymnasium Oberlahnstein (heutiges Marion-Dönhoff-Gymnasium); 04.12.1890 Erweiterungsprüfung für Evangelische Religion; 01.04.1891 bis 31.03.1923 Oberlehrer am Städtischen (Realpro-)Gymnasium Oberlahnstein; 27.01.1906 Verleihung des Charakters als Professor; 12.03.1906 Verleihung des Ranges eines Rats IV. Klasse; 26.05.1914 Verleihung des Roten Adlerordens IV. Klasse; 1914 Ernennung zum Ehrenmitglied im Verein für Nassauische Altertumskunde und Geschichtsforschung anlässlich der Eröffnung des (später nach ihm benannten) Museums; November 1920 bis 14. Mai 1922 kommissarischer Leiter des Gymnasiums Oberlahnstein; engagierte sich vor allem in der Vor und Frühgeschichte des Taunus und des Rhein-Westerwaldes; führte ab 1892 den Lahnsteiner Altertumsverein; seit 1897 Streckenkommissar der Reichslimeskommission; grub aus und dokumentierte die Kastelle Heddesdorf (bei Neuwied), Ems, Hunzel und Marienfels; bereitete die Archivalien auf für eine \"Geschichte der Stadt Oberlahnstein\", die zum Stadtrechtsjubiläum 1925 erscheinen sollte; sein früher Tod beendete seine Arbeiten, die von Dr. Fritz Michel fortgeführt und beendet wurden." ]
+  "biographicalOrHistoricalInformation" : [ "Wie sein Vater gelernter Sattler; 1821-1825 Ausbildung in Paris bei Horace Vernet mit einem Stipendium des preussischen Königs; 1828 Rückkehr nach Koblenz; malte v.a. Porträts von Koblenzer Bürgern; 1833 Umzug nach Köln; bedeutender Maler der Biedermeierzeit. - Halbbruder und Lehrer von Nikolaus Meister; Vater von Ernst Meister" ]
 }

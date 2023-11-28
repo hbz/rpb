@@ -1,43 +1,32 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://rppd.lobid.org/pk06675",
-  "rppdId" : "pk06675",
-  "gndIdentifier" : "Keine GND-Ansetzung für pk06675",
+  "id" : "https://rppd.lobid.org/pk02366",
+  "rppdId" : "pk02366",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk02366",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Alexander, Philipp",
+  "preferredName" : "Fuchs, Gerhard",
   "professionOrOccupation" : [ {
-    "label" : "Unternehmer",
-    "id" : "https://d-nb.info/gnd/4061949-7"
+    "label" : "Beigeordneter",
+    "id" : "https://d-nb.info/gnd/4144367-6"
   }, {
-    "label" : "Musikinstrumentenbauer",
-    "id" : "https://d-nb.info/gnd/4170830-1"
-  }, {
-    "label" : "Drechsler",
-    "id" : "https://d-nb.info/gnd/4301425-2"
+    "label" : "Kommunalpolitiker",
+    "id" : "https://d-nb.info/gnd/4396366-3"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Mainz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n31500000"
+    "label" : "Herdorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13203050"
   } ],
-  "dateOfBirth" : [ "1787" ],
-  "dateOfDeath" : [ "1864" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Industrie. Handwerk",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
-  }, {
-    "label" : "Handel. Dienstleistung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
-  }, {
-    "label" : "Musik. Musikwissenschaft",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
   } ],
   "describedBy" : {
-    "dateModified" : "2019-07-02",
-    "source" : [ "Duttenhöfer, Eva-Maria: Gebrüder Alexander : 200 Jahre Musikinstrumentenbau in Mainz, Mainz 1982" ]
+    "dateModified" : "2008-02-22",
+    "source" : [ "Siegener Zeitung, Ausg. Altenkirchen. - (2007), 249 vom 26.10., S. 9" ]
   },
-  "biographicalOrHistoricalInformation" : [ "[FAMILIE]pk06671[/HR]Zur Familiengeschichte Alexander[/FAMILIE]", "Blieb ledig; führte zunächst die Berufsbezeichnung \"Drechsler\", später kam \"Instrumentenmacher\" hinzu" ]
+  "biographicalOrHistoricalInformation" : [ "1979 bis 1984 und von 1989 bis 1999 war er Mitglied des Stadtrates Herdorf; er war in verschiedenen Ausschüssen tätig; von 1999 - 2006 erster Beigeordneter der Stadt Herdorf; von 1989 - 1991 und von 1994 - 2004 engagierte er sich als Mitglied der CDU und als Kreistagsmitglied; er war viele Jahre im Vorstand des Kolpingvereins Herdorf; 2007 wurde ihm die Freiherr-vom-Stein-Plakette verliehen." ]
 }

@@ -1,35 +1,41 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051215579",
-  "rppdId" : "pta1495",
-  "gndIdentifier" : "1051215579",
+  "id" : "https://d-nb.info/gnd/1051215552",
+  "rppdId" : "pta1493",
+  "gndIdentifier" : "1051215552",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Zimmermann, Konstantin",
+  "preferredName" : "Zimmer, Michael Kunibert",
   "professionOrOccupation" : [ {
-    "label" : "Musikdirektor",
-    "id" : "https://d-nb.info/gnd/7628980-1"
+    "label" : "Landwirt",
+    "id" : "https://d-nb.info/gnd/4034399-6"
+  }, {
+    "label" : "Kammerdirektor",
+    "id" : "https://rpb.lobid.org/sw/00Sn49x3465a"
   } ],
-  "dateOfBirth" : [ "1742-12-27" ],
+  "dateOfBirth" : [ "1902-01-05" ],
   "placeOfBirth" : [ {
-    "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "label" : "Weiten <Dillingen, Saar>",
+    "id" : "https://rpb.lobid.org/dummi/Weiten <Dillingen, Saar>"
   } ],
-  "dateOfDeath" : [ "1825-05-06" ],
+  "dateOfDeath" : [ "1974-12-21" ],
   "placeOfDeath" : [ {
-    "label" : "Trier, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n21100000"
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
+  "publication" : [ "Grundstückszersplitterung und Grundstückszusammenlegung im Weinbau, Dissertation Bonn 1930" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Musik. Musikwissenschaft",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+    "label" : "Landwirtschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#32.10p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-07-11",
-    "source" : [ "Franz-Josef Faas: Die Abtei Prüm im Jahre 1798, in: Jahrbuch des Kreises Prüm, 1964, 35-39", "Ders: Musik und Musikpflege in der Fürstabtei Prüm, in: Jahrbuch des Kreises Prüm, 1964, 51-55", "Ders: Z, in: Kurzbiographien von Mittelrhein und Moselland, Trier 1967-1975, 196." ]
+    "dateModified" : "2006-07-11"
   },
-  "biographicalOrHistoricalInformation" : [ "Musikdirektor. - Z trat 1764 in das Kloster Prüm ein, wurde Kantor und Musikdirektor. Als ausgezeichneter Organist konnte er den Kurfürsten zur Schenkung einer Nollet-Orgel anregen. 1802 wurde Z Direktor der Musikschule im Bantusseminar in Trier, wo er auch über 1808 hinaus tätig war. - ---[Daten übernommen aus: Franz-Josef Faas, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+  "biographicalOrHistoricalInformation" : [ "Dipl.-Landwirt, Kammerdirektor. - Studium der Landwirtschaft in Bonn. Anschließend Versuchsringleiter und Landwirtschaftslehrer in Bensberg. 1930 in Bonn Promotion zum Dr. agr. Güterdirektor der Vereinigten Hospitien Trier, 1938 Güterdirektor der Freiherr v. Schorlemer'schen Güterverwaltung Trier und Lieser. In der NS-Zeit wegen regimefeindl. Verhaltens Ende 1944 Verhaftung durch die SS, April 1945 Flucht aus dem Gefangenentransport - Z war sodann 1946-1969 Direktor der Landwirtschaftskammer Rheinland-Nassau in Koblenz, die er mit großem Einsatz aufbaute. 1969 Verleihung der Goldenen Kammerplakette. - *Heirat: mit Antonia Platte ---[Daten übernommen aus: Theresia Zimmer, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
 }

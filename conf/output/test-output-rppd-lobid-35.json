@@ -1,37 +1,35 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051215609",
-  "rppdId" : "pta1500",
-  "gndIdentifier" : "1051215609",
-  "sameAs" : [ {
-    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051215609",
-    "collection" : {
-      "name" : "persondata.toolforge.org"
-    }
-  } ],
+  "id" : "https://d-nb.info/gnd/1051215595",
+  "rppdId" : "pta1499",
+  "gndIdentifier" : "1051215595",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Zweiffel, Karl Hermann",
+  "preferredName" : "Zunker, Wilhelm",
   "professionOrOccupation" : [ {
-    "label" : "Richter",
-    "id" : "https://d-nb.info/gnd/4049923-6"
+    "label" : "Verwaltungsfachangestellter",
+    "id" : "https://d-nb.info/gnd/4063330-5"
   } ],
-  "dateOfBirth" : [ "1800-08-17" ],
+  "dateOfBirth" : [ "1895-03-15" ],
   "placeOfBirth" : [ {
-    "label" : "Koblenz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n11100000"
+    "label" : "Pallien (T.a. Ortsbezirk 8)",
+    "id" : "https://rpb.lobid.org/spatial#n211000001500"
   } ],
-  "dateOfDeath" : [ "unbekannt" ],
+  "dateOfDeath" : [ "1951-12-10" ],
+  "placeOfDeath" : [ {
+    "label" : "Trier, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Recht",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.14p"
+    "label" : "Öffentliche Verwaltung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.15p"
   } ],
   "describedBy" : {
     "dateModified" : "2006-07-11",
-    "source" : [ "Heinz-Günther Böse: Die ersten demokratischen Wahlen in den Kreisen Bernkastel und Wittlich im Mai 1848, in: Jahrbuch des Landkreises Bernkastel-Wittlich, 1999, 261-270", "Landeshauptarchiv Koblenz Best.442 Nr.6731", "Konrad Repgen: Märzbewegung und Maiwahlen des Revolutionsjahres 1848 im Rheinland, Bonn 1955", "Hermann Stahl: Die Revolution v. 1848/49 an der Mittelmosel, Bernkastel 1923", "Dieter Dowe: Aktion und Organisation. Arbeiterbewegung, sozialistische Agitation und kommunistische Bewegung in der preuss. Rheinprovinz 1820-1852, Hannover 1970" ]
+    "source" : [ "Eberhard Klopp: Geschichte der Trierer Arbeiterbewegung: ein deutsches Beispiel, Bd. 3: Kurzbiographien 1836-1933, 2. Aufl. Trier 1979, 142" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Landgerichtspräsident. - Besuch der Pfarrschule in Wittlich und des Gymnasiums in Koblenz, 1819-1821 Studium der Rechtswissenschaften in Bonn. 1822 Auskultator, 1825 Referendar, 1827 Friedensrichter in Dudweiler und 1828-1831 in Wadern, 1831-34 Assessor am Landgericht Koblenz, 1834-1843 Staatsprokurator in Trier. 1837 an 1. Stelle als Landrat in Wittlich präsentiert, jedoch ohne Erfolg. 1843-1846 Oberprokurator in Kleve und 1847-1848 in Köln. 1848-1851 Appellationsgerichtsrat in Köln, 1851-1875 Präsident des Landgerichts Saarbrücken, Ruhestand, Umzug nach Kues (Bernkastel) Ende 1874; über den Tod ist dort kein Nachweis vorhanden - Polit. war Z konservativ gesinnt. 1847 meldete er \"ungebührliches Verhalten\" beim Klever Schützenfest durch Singen v. Freiheitsliedern. Als Oberprokurator ging er im Sommer 1848 in Köln scharf gegen den Arbeiterverein und die \"Neue Rhein. Zeitung\" vor. Er klagte (vergebl.) Karl Marx wegen Beleidigung an. Im selben Jahr wurde er zum Mitglied der preussischen Nationalversammlung im Wahlkreis Wittlich gewählt; hier trat er für die Abschaffung der Weinsteuer und für kathol. Belange ein. Er zeigte sich jedoch als Gegner der Volkssouveränität und der demokratischen Forderungen. Wegen seiner regierungsfreundl. Haltung wurde ihm v. den Wittlicher Demokraten das Mißtrauen ausgesprochen, aber erst am 25.10.1848 ließ er sich als Abgeordneter beurlauben; für ihn rückte mit Karl Grün ein Demokrat nach. Unter Z's Vorsitz fällte das Assisengericht in Trier am 7.01.1850 das Todesurteil gegen Ludwig Simon wegen angebl Hochverrats. - *Heirat: mit Katharina Fier. - ---[Daten übernommen aus: Heinz-Günther Böse, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+  "biographicalOrHistoricalInformation" : [ "Verwaltungsangestellter. - 1914-1918 Kriegsdienst, Kriegsbeschädigter. 1920 Beitritt zur SPD. Z war langjähriger Ortsvereinsvorsitzender der SPD in Trier-Biewer und bis zur Eingemeindung 1930 Gemeinderatsmitglied in Biewer. 1925-1932 Mitglied des Kreistages Trier-Land, 1927-1928 Mitglied des Unterbezirksvorstandes der SPD und Vorstandsmitgl. der Arbeiterwohlfahrt sowie deren Geschäftsführer. 1930-1933 war Z SPD-Parteisekretär. Nach dem Zweiten Weltkrieg war er der erste Verwalter des Karl-Marx-Geburtshauses. - ---[Daten übernommen aus: Eberhard Klopp, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
 }

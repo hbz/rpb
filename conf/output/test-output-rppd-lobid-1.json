@@ -1,49 +1,91 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1011283956",
-  "rppdId" : "pk00007",
-  "gndIdentifier" : "1011283956",
+  "id" : "https://d-nb.info/gnd/11855476X",
+  "rppdId" : "pk00006",
+  "gndIdentifier" : "11855476X",
+  "sameAs" : [ {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/11855476X",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/11855476X",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  }, {
+    "id" : "https://www.lagis-hessen.de/pnd/11855476X",
+    "collection" : {
+      "name" : "Hessische Biografie"
+    }
+  }, {
+    "id" : "https://www.deutsche-biographie.de/pnd11855476X.html#ndbcontent",
+    "collection" : {
+      "name" : "deutsche-biographie.de"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Cornelius, Otto",
-  "variantName" : [ "Cornelius, Otto" ],
+  "preferredName" : "Humperdinck, Engelbert",
+  "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Engelbert%20humperdinck%201854.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg?width=270"
+  } ],
   "professionOrOccupation" : [ {
-    "label" : "Maler",
-    "id" : "https://d-nb.info/gnd/4037215-7"
-  }, {
-    "label" : "Grafiker",
-    "id" : "https://d-nb.info/gnd/4125173-8"
-  }, {
-    "label" : "Kunsterzieher",
-    "id" : "https://d-nb.info/gnd/4302182-7"
+    "label" : "Komponist",
+    "id" : "https://d-nb.info/gnd/4032009-1"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Linz am Rhein, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13804041"
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
+  }, {
+    "label" : "München",
+    "id" : "https://rpb.lobid.org/dummi/München"
+  }, {
+    "label" : "Xanten",
+    "id" : "https://rpb.lobid.org/dummi/Xanten"
+  }, {
+    "label" : "Bayreuth",
+    "id" : "https://rpb.lobid.org/dummi/Bayreuth"
+  }, {
+    "label" : "Boppard, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14000501"
+  }, {
+    "label" : "Barcelona",
+    "id" : "https://rpb.lobid.org/dummi/Barcelona"
+  }, {
+    "label" : "Frankfurt am Main",
+    "id" : "https://rpb.lobid.org/dummi/Frankfurt am Main"
+  }, {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
   } ],
-  "dateOfBirth" : [ "1896-11-14" ],
+  "dateOfBirth" : [ "1854-09-01" ],
   "placeOfBirth" : [ {
-    "label" : "Düsseldorf",
-    "id" : "https://rpb.lobid.org/dummi/Düsseldorf"
+    "label" : "Siegburg",
+    "id" : "https://rpb.lobid.org/dummi/Siegburg"
   } ],
-  "dateOfDeath" : [ "1984" ],
+  "dateOfDeath" : [ "1921-09-27" ],
   "placeOfDeath" : [ {
-    "label" : "Vallendar, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13707226"
+    "label" : "Neustrelitz",
+    "id" : "https://rpb.lobid.org/dummi/Neustrelitz"
+  } ],
+  "relatedPerson" : [ {
+    "label" : "Wagner, Richard",
+    "id" : "https://rpb.lobid.org/dummi/Wagner, Richard"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Malerei. Zeichnung. Graphik",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.4p"
-  }, {
-    "label" : "Bildung. Erziehung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2011-02-18",
-    "source" : [ "Rhein-Zeitung, Ausg. AN, Neuwied, Nr.189 vom 16./17.08. 1997", "Neuwied <Landkreis>: Heimatkalender des Landkreises Neuwied. - 1968, S. 27", "Neuwied <Landkreis>: Heimatjahrbuch des Landkreises Neuwied. - 1973, S. 18", "Neuwied <Landkreis>: Heimatjahrbuch des Landkreises Neuwied. - 1985, S. 26" ]
+    "dateModified" : "2005-11-16",
+    "source" : [ "http://www.boppard.de", "Rhein-Zeitung, Ausg. AL. - (2004), 262 vom 10.11." ]
   },
-  "biographicalOrHistoricalInformation" : [ "1919-1922 Studium an der Düsseldorfer Kunstakademie; Studienreisen nach Holland, Frankreich, Italien, Korsika und in die Schweiz; Kunsterzieher in Oberhausen und 1943 bis 1959 Lehrer für Bildende Kunst und Biologie am Martinus-Gymnasium in Linz; rege Ausstellungstätigkeit; Teilnahme an der Internationalen Kunstausstellung der \"Europäischen Vereinigung Eifel und Ardennen\", 1957 sowie an der Ausstellung um den \"Grand Prix international de Peinture\", Spa/Belgien, 1966; Internationale Kunstausstellung in Kopenhagen, 1967; \"2. Annuale Italiana\", Ancona, 1968; \"3. Biennale delle Regioni\", Ancona, 1969; Mitarbeiter des Neuwieder Heimatkalenders; langjähriges Mitglied der Are-Künstlergilde" ]
+  "biographicalOrHistoricalInformation" : [ "Ab 1872 Musikstudium in Köln; gewinnt 1876 den Preis der Frankfurter Mozart-Stiftung, als deren Stipendiat er seine Ausbildung in Frankfurt -später in München- fortsetzen konnte; während einer Italienreise 1880 lernte er Richard Wagner kennen, als dessen Mitarbeiter er 1881/82 in Bayreuth lebte; nach verschiedenen Reisen ins Ausland, arbeitete er ab 1888 als Verlagslektor bei Schott in Mainz; von 1890 bis 1897 lebte er als Musiklehrer, Opernkritiker und Lehrer am Konservatorium in Frankfurt - hier entstand auch seine berühmteste Oper \"Hänsel und Gretel\", die 1893 in Weimar uraufgeführt wurde; 1897 zog er nach Boppard; 1900 wurde er als Kompositionslehrer an die Berliner Musikhochschule berufen." ]
 }

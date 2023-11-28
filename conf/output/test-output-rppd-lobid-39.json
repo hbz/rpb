@@ -1,52 +1,53 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/143451308",
-  "rppdId" : "pk04515",
-  "gndIdentifier" : "143451308",
+  "id" : "https://d-nb.info/gnd/117269476",
+  "rppdId" : "pk05621",
+  "gndIdentifier" : "117269476",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/117269476",
+    "collection" : {
+      "name" : "persondata.toolforge.org"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Schneider, Anton",
-  "variantName" : [ "Schneider, Anton / Bürgermeister" ],
+  "preferredName" : "Weinkauff, Franz",
+  "variantName" : [ "Weinkauff, Franciscus / 1823-1892", "Weinkauff, Franz / 1823-1892", "Weinkauff, Franz / 1824-1892" ],
   "professionOrOccupation" : [ {
-    "label" : "Bürgermeister",
-    "id" : "https://d-nb.info/gnd/4136676-1"
+    "label" : "Gymnasiallehrer",
+    "id" : "https://d-nb.info/gnd/4158589-6"
   }, {
-    "label" : "Landwirt",
-    "id" : "https://d-nb.info/gnd/4034399-6"
-  }, {
-    "label" : "Gastwirt",
-    "id" : "https://d-nb.info/gnd/4156075-9"
+    "label" : "Mäzen",
+    "id" : "https://d-nb.info/gnd/7607862-0"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Leubsdorf",
-    "id" : "https://rpb.lobid.org/spatial#n13804037"
+    "label" : "Jena",
+    "id" : "https://rpb.lobid.org/dummi/Jena"
+  }, {
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
-  "dateOfBirth" : [ "1899-11-12" ],
+  "dateOfBirth" : [ "1823-05-24" ],
   "placeOfBirth" : [ {
-    "label" : "Leubsdorf",
-    "id" : "https://rpb.lobid.org/spatial#n13804037"
+    "label" : "Bad Kreuznach, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13300006"
   } ],
-  "dateOfDeath" : [ "1973-06-24" ],
+  "dateOfDeath" : [ "1892-03-11" ],
   "placeOfDeath" : [ {
-    "label" : "https://rpb.lobid.org/spatial#n13804037_ [?]",
-    "id" : "https://rpb.lobid.org/spatial#n13804037_ [?]"
+    "label" : "Köln",
+    "id" : "https://rpb.lobid.org/dummi/Köln"
   } ],
+  "publication" : [ "Homerisches Handbuch für Gymnasien, 1868", "Almania Oideion: Versus Cantabiles Et Memoriales; Dreisprachiges Studentenliederbuch ... ,1885", "De Tacito dialogi, qui de oratoribus inscribitur, auctore, 1857-1859" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Politiker und historische Persönlichkeiten",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
-  }, {
-    "label" : "Landwirtschaft",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#32.10p"
-  }, {
-    "label" : "Handel. Dienstleistung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2011-02-03",
-    "source" : [ "Wolfgang Stümper: Anton Schneider, Leubsdorf 2010", "¬Der¬ Rheinländer : das Heimatmagazin. - 3 (2010), Nov. = H. 27, S. 34-36" ]
+    "dateModified" : "2023-06-01",
+    "source" : [ "http://www.pantoia.de/Liederbuecher/Weinkauff1885/vita.html (Stand: 06.12.2013)", "Oeffentlicher Anzeiger / Stadt und Kreis Bad Kreuznach. - (2023), 120 vom 25.5., S. 25." ]
   },
-  "biographicalOrHistoricalInformation" : [ "Seit 1940 stellvertretender Bürgermeister von Leubsdorf; übergab den Ort am 11. März 1945 kampflos den amerikanischen Truppen; in den ersten Kommunalwahlen 1946 wurde der mittlerweile der CDU beigetretene Schneider zum Bürgermeister gewählt; das Amt hatte er ununterbrochen bis 1969 inne, wobei er 1964 mit Hilfe einer eigenen Bürgerliste wiedergewählt wurde; Ehrung mit der Freiherr-vom-Stein-Plakette und mit dem Bundesverdienstkreuz" ]
+  "biographicalOrHistoricalInformation" : [ "Sohn des Kreuznacher Brauerei- und Brennereibesitzers Franz Weinkauff; Besuch des Gymnasiums in Kreuznach; Altphilologisches Studium in Bonn, Heidelberg und Jena; 1853 Promotion; Lehrer an einer Privatschule in Jena; ab 1855 Lehrer vor allem für Hebräisch, Griechisch und Latein am Friedrich-Wilhelms-Gymnasium Köln; aus gesundheitlichen Gründen 1871 Versetzung in den vorzeitigen Ruhestand; danach als Privatgelehrter tätig; wirkte zudem als Bildungsmäzen, so vermachte er der Stadt Kreuznach 100.000 Mark \"zu erzieherischen und schulfreundlichen Zwecken\"; diverse Publikationen, außerdem Verfasser von Einträgen in der Allgemeinen Deutschen Biographie ADB." ]
 }

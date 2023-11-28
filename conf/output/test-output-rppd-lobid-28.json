@@ -12,7 +12,7 @@
   "dateOfBirth" : [ "1883-07-28" ],
   "placeOfBirth" : [ {
     "label" : "Weiten <Dillingen, Saar>",
-    "id" : "https://rpb.lobid.org/dummi/Weiten <Dillingen, Saar>"
+    "id" : "Weiten <Dillingen, Saar>"
   } ],
   "dateOfDeath" : [ "1955-05-16" ],
   "placeOfDeath" : [ {

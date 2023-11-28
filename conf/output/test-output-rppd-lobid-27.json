@@ -46,7 +46,7 @@
   "dateOfDeath" : [ "1942-10-03" ],
   "placeOfDeath" : [ {
     "label" : "Konzentrationslager Dachau",
-    "id" : "https://rpb.lobid.org/dummi/Konzentrationslager Dachau"
+    "id" : "Konzentrationslager Dachau"
   } ],
   "relatedPerson" : [ {
     "label" : "Schulz, Johannes",

@@ -23,10 +23,10 @@
     "id" : "https://rpb.lobid.org/spatial#n14103029"
   }, {
     "label" : "Wiesbaden",
-    "id" : "https://rpb.lobid.org/dummi/Wiesbaden"
+    "id" : "Wiesbaden"
   }, {
     "label" : "Berlin",
-    "id" : "https://rpb.lobid.org/dummi/Berlin"
+    "id" : "Berlin"
   } ],
   "dateOfBirth" : [ "1825-06-09" ],
   "placeOfBirth" : [ {
@@ -36,7 +36,7 @@
   "dateOfDeath" : [ "1880-01-01" ],
   "placeOfDeath" : [ {
     "label" : "Wiesbaden",
-    "id" : "https://rpb.lobid.org/dummi/Wiesbaden"
+    "id" : "Wiesbaden"
   } ],
   "publication" : [ "Freiherr Carl vom Stein und das Kleinstaatentum, 1866." ],
   "gender" : [ {

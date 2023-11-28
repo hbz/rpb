@@ -12,7 +12,7 @@
   "dateOfBirth" : [ "1742-12-27" ],
   "placeOfBirth" : [ {
     "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "id" : "Köln"
   } ],
   "dateOfDeath" : [ "1825-05-06" ],
   "placeOfDeath" : [ {

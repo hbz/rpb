@@ -18,12 +18,12 @@
   "dateOfBirth" : [ "1893-06-15" ],
   "placeOfBirth" : [ {
     "label" : "Nalbach",
-    "id" : "https://rpb.lobid.org/dummi/Nalbach"
+    "id" : "Nalbach"
   } ],
   "dateOfDeath" : [ "1944-05-12" ],
   "placeOfDeath" : [ {
     "label" : "Konzentrationslager Dachau",
-    "id" : "https://rpb.lobid.org/dummi/Konzentrationslager Dachau"
+    "id" : "Konzentrationslager Dachau"
   } ],
   "relatedPerson" : [ {
     "label" : "Ziegler, Hans",

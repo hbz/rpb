@@ -27,12 +27,12 @@
   "dateOfBirth" : [ "1836-04-24" ],
   "placeOfBirth" : [ {
     "label" : "Uhersky▐ü Brod",
-    "id" : "https://rpb.lobid.org/dummi/Uhersky▐ü Brod"
+    "id" : "Uhersky▐ü Brod"
   } ],
   "dateOfDeath" : [ "1917" ],
   "placeOfDeath" : [ {
     "label" : "Breslau",
-    "id" : "https://rpb.lobid.org/dummi/Breslau"
+    "id" : "Breslau"
   } ],
   "publication" : [ "¬Die¬ Erfurter Handschrift der Tosefta beschrieben und geprüft. Tosefta nach den Erfurter und Wiener Handschriften, Pasewalk 1880", "Gesammelte Aufsätze, Frankfurt a.M. 1912-1914" ],
   "gender" : [ {

@@ -20,7 +20,7 @@
   "dateOfBirth" : [ "1965" ],
   "placeOfBirth" : [ {
     "label" : "Regensburg",
-    "id" : "https://rpb.lobid.org/dummi/Regensburg"
+    "id" : "Regensburg"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

@@ -28,10 +28,10 @@
   } ],
   "placeOfActivity" : [ {
     "label" : "Schweden",
-    "id" : "https://rpb.lobid.org/dummi/Schweden"
+    "id" : "Schweden"
   }, {
     "label" : "Berlin",
-    "id" : "https://rpb.lobid.org/dummi/Berlin"
+    "id" : "Berlin"
   } ],
   "dateOfBirth" : [ "1895-02-11" ],
   "placeOfBirth" : [ {
@@ -41,7 +41,7 @@
   "dateOfDeath" : [ "1976-03-03" ],
   "placeOfDeath" : [ {
     "label" : "Mölln",
-    "id" : "https://rpb.lobid.org/dummi/Mölln"
+    "id" : "Mölln"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

@@ -21,12 +21,12 @@
   "dateOfBirth" : [ "1906-03-26" ],
   "placeOfBirth" : [ {
     "label" : "Plauen",
-    "id" : "https://rpb.lobid.org/dummi/Plauen"
+    "id" : "Plauen"
   } ],
   "dateOfDeath" : [ "1974-10-23" ],
   "placeOfDeath" : [ {
     "label" : "München",
-    "id" : "https://rpb.lobid.org/dummi/München"
+    "id" : "München"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

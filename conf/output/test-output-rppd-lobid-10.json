@@ -28,7 +28,7 @@
   "dateOfBirth" : [ "1924-08-07" ],
   "placeOfBirth" : [ {
     "label" : "Essen",
-    "id" : "https://rpb.lobid.org/dummi/Essen"
+    "id" : "Essen"
   } ],
   "dateOfDeath" : [ "2008-03-23" ],
   "placeOfDeath" : [ {

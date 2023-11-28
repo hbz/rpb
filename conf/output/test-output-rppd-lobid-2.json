@@ -23,7 +23,7 @@
   "dateOfBirth" : [ "1896-11-14" ],
   "placeOfBirth" : [ {
     "label" : "Düsseldorf",
-    "id" : "https://rpb.lobid.org/dummi/Düsseldorf"
+    "id" : "Düsseldorf"
   } ],
   "dateOfDeath" : [ "1984" ],
   "placeOfDeath" : [ {

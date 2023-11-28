@@ -17,7 +17,7 @@
   } ],
   "placeOfActivity" : [ {
     "label" : "Würzburg",
-    "id" : "https://rpb.lobid.org/dummi/Würzburg"
+    "id" : "Würzburg"
   }, {
     "label" : "Trier, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n21100000"
@@ -28,7 +28,7 @@
   "dateOfBirth" : [ "1893-04-21" ],
   "placeOfBirth" : [ {
     "label" : "Würzburg",
-    "id" : "https://rpb.lobid.org/dummi/Würzburg"
+    "id" : "Würzburg"
   } ],
   "dateOfDeath" : [ "1952-10-16" ],
   "placeOfDeath" : [ {

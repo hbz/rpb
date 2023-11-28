@@ -18,7 +18,7 @@
   "dateOfBirth" : [ "1866-11-08" ],
   "placeOfBirth" : [ {
     "label" : "Niederbachem",
-    "id" : "https://rpb.lobid.org/dummi/Niederbachem"
+    "id" : "Niederbachem"
   } ],
   "dateOfDeath" : [ "1930-06-19" ],
   "placeOfDeath" : [ {

@@ -36,7 +36,7 @@
   "dateOfBirth" : [ "1890-07-28" ],
   "placeOfBirth" : [ {
     "label" : "Buffenhofen",
-    "id" : "https://rpb.lobid.org/dummi/Buffenhofen"
+    "id" : "Buffenhofen"
   } ],
   "dateOfDeath" : [ "1966-08-13" ],
   "placeOfDeath" : [ {

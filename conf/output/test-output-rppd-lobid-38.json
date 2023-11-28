@@ -21,13 +21,13 @@
   } ],
   "placeOfActivity" : [ {
     "label" : "Limburg, Lahn",
-    "id" : "https://rpb.lobid.org/dummi/Limburg, Lahn"
+    "id" : "Limburg, Lahn"
   }, {
     "label" : "Neesbach",
-    "id" : "https://rpb.lobid.org/dummi/Neesbach"
+    "id" : "Neesbach"
   }, {
     "label" : "Hünfelden",
-    "id" : "https://rpb.lobid.org/dummi/Hünfelden"
+    "id" : "Hünfelden"
   } ],
   "dateOfBirth" : [ "1935-05-25" ],
   "placeOfBirth" : [ {

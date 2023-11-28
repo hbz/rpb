@@ -21,10 +21,10 @@
   } ],
   "placeOfActivity" : [ {
     "label" : "Jena",
-    "id" : "https://rpb.lobid.org/dummi/Jena"
+    "id" : "Jena"
   }, {
     "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "id" : "Köln"
   } ],
   "dateOfBirth" : [ "1823-05-24" ],
   "placeOfBirth" : [ {
@@ -34,7 +34,7 @@
   "dateOfDeath" : [ "1892-03-11" ],
   "placeOfDeath" : [ {
     "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "id" : "Köln"
   } ],
   "publication" : [ "Homerisches Handbuch für Gymnasien, 1868", "Almania Oideion: Versus Cantabiles Et Memoriales; Dreisprachiges Studentenliederbuch ... ,1885", "De Tacito dialogi, qui de oratoribus inscribitur, auctore, 1857-1859" ],
   "gender" : [ {

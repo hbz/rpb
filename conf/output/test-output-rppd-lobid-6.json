@@ -19,11 +19,11 @@
   "dateOfBirth" : [ "1959" ],
   "placeOfBirth" : [ {
     "label" : "Werdohl",
-    "id" : "https://rpb.lobid.org/dummi/Werdohl"
+    "id" : "Werdohl"
   } ],
   "relatedPerson" : [ {
     "label" : "Heyberger, Renate",
-    "id" : "https://rpb.lobid.org/dummi/Heyberger, Renate"
+    "id" : "Heyberger, Renate"
   } ],
   "publication" : [ "Katzenkiller.1995", "Münstermörder. 1996", "Theaterblut. 1997", "¬Die¬ Breisgau-Boheme. 2000" ],
   "gender" : [ {

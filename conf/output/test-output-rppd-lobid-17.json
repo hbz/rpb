@@ -41,7 +41,7 @@
     "id" : "https://rpb.lobid.org/spatial#n11100000"
   }, {
     "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "id" : "Köln"
   } ],
   "dateOfBirth" : [ "1796-12-20" ],
   "placeOfBirth" : [ {
@@ -51,7 +51,7 @@
   "dateOfDeath" : [ "1844-02-29" ],
   "placeOfDeath" : [ {
     "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "id" : "Köln"
   } ],
   "relatedPerson" : [ {
     "label" : "Meister, Ernst",

@@ -35,7 +35,7 @@
   "dateOfBirth" : [ "1603" ],
   "placeOfBirth" : [ {
     "label" : "Siegen",
-    "id" : "https://rpb.lobid.org/dummi/Siegen"
+    "id" : "Siegen"
   } ],
   "dateOfDeath" : [ "1658-12-12" ],
   "placeOfDeath" : [ {

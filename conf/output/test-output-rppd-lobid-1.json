@@ -38,25 +38,25 @@
   } ],
   "placeOfActivity" : [ {
     "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "id" : "Köln"
   }, {
     "label" : "München",
-    "id" : "https://rpb.lobid.org/dummi/München"
+    "id" : "München"
   }, {
     "label" : "Xanten",
-    "id" : "https://rpb.lobid.org/dummi/Xanten"
+    "id" : "Xanten"
   }, {
     "label" : "Bayreuth",
-    "id" : "https://rpb.lobid.org/dummi/Bayreuth"
+    "id" : "Bayreuth"
   }, {
     "label" : "Boppard, Stadt",
     "id" : "https://rpb.lobid.org/spatial#n14000501"
   }, {
     "label" : "Barcelona",
-    "id" : "https://rpb.lobid.org/dummi/Barcelona"
+    "id" : "Barcelona"
   }, {
     "label" : "Frankfurt am Main",
-    "id" : "https://rpb.lobid.org/dummi/Frankfurt am Main"
+    "id" : "Frankfurt am Main"
   }, {
     "label" : "Mainz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n31500000"
@@ -64,16 +64,16 @@
   "dateOfBirth" : [ "1854-09-01" ],
   "placeOfBirth" : [ {
     "label" : "Siegburg",
-    "id" : "https://rpb.lobid.org/dummi/Siegburg"
+    "id" : "Siegburg"
   } ],
   "dateOfDeath" : [ "1921-09-27" ],
   "placeOfDeath" : [ {
     "label" : "Neustrelitz",
-    "id" : "https://rpb.lobid.org/dummi/Neustrelitz"
+    "id" : "Neustrelitz"
   } ],
   "relatedPerson" : [ {
     "label" : "Wagner, Richard",
-    "id" : "https://rpb.lobid.org/dummi/Wagner, Richard"
+    "id" : "Wagner, Richard"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

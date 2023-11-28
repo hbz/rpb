@@ -15,7 +15,7 @@
   "dateOfBirth" : [ "1902-01-05" ],
   "placeOfBirth" : [ {
     "label" : "Weiten <Dillingen, Saar>",
-    "id" : "https://rpb.lobid.org/dummi/Weiten <Dillingen, Saar>"
+    "id" : "Weiten <Dillingen, Saar>"
   } ],
   "dateOfDeath" : [ "1974-12-21" ],
   "placeOfDeath" : [ {

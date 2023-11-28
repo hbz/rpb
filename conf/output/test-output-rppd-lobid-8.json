@@ -16,7 +16,7 @@
   "dateOfBirth" : [ "1912" ],
   "placeOfBirth" : [ {
     "label" : "Limburg <Lahn>",
-    "id" : "https://rpb.lobid.org/dummi/Limburg <Lahn>"
+    "id" : "Limburg <Lahn>"
   } ],
   "dateOfDeath" : [ "1995" ],
   "publication" : [ "Du Perle des Lahntals, 1960", "¬Die¬ Kunterbunts, 1978", "Märchen, ca. 1948", "Ave Maria, o.J.", "Sklaven des Glücks, o.J.", "Bad Ems, du Labsal der Natur, o.J." ],

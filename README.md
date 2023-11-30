@@ -134,7 +134,7 @@ If you're not indexing into an existing lobid-resources index, make sure to crea
 
 ```bash
 unset http_proxy # for putting on weywot
-sol@quaoar3:~/git/rpb$ curl -XPUT -H "Content-Type: application/json" weywot5:9200/resources-rpb-20230623?pretty -d @../lobid-resources/src/main/resources/alma/index-config.json
+sol@quaoar3:~/git/rpb$ curl -XPUT -H "Content-Type: application/json" weywot5:9200/resources-rpb-20231130-1045?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
 ```
 
 For testing, the real index name (e.g. `resources-rpb-20230623`) is aliased by `resources-rpb-test`, which is used by https://test.lobid.org/resources / http://test.rpb.lobid.org and in the transformation.

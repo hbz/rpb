@@ -1,10 +1,13 @@
+#!/bin/bash
+set -eu
+
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://persondata.toolforge.org/beacon/dewiki.txt OUT=conf/maps/beacons/gndId-to-dewiki.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.historische-kommission-muenchen-editionen.de/beacon_adb.txt OUT=conf/maps/beacons/gndId-to-adb.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.historische-kommission-muenchen-editionen.de/beacon_ndb.txt OUT=conf/maps/beacons/gndId-to-ndb.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.lagis-hessen.de/gnd.txt OUT=conf/maps/beacons/gndId-to-lagis.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.lwl.org/westfaelische-geschichte/meta/pnd.txt OUT=conf/maps/beacons/gndId-to-lwl.tsv"
 # 403 Forbidden: sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.online.uni-marburg.de/fpmr/pnd.txt OUT=conf/maps/gndId-to-gesa.tsv"
-# No response: sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.statistik-bw.de/LABI/Reichstag-Abgeordnetendatenbank.txt OUT=conf/maps/beacons/gndId-to-radb.tsv"
+sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.statistik-bw.de/LABI/Reichstag-Abgeordnetendatenbank.txt OUT=conf/maps/beacons/gndId-to-radb.tsv"
 # No TARGET: sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=http://www.andreas-praefcke.de/temp/BEACON-PND-HLS.txt OUT=conf/maps/beacons/gndId-to-hls.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=http://germania-sacra-datenbank.uni-goettingen.de/beacon.txt OUT=conf/maps/beacons/gndId-to-germania_sacra.tsv"
 # Picks wrong values: sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.historische-kommission-muenchen-editionen.de/beacon_adr.txt OUT=conf/maps/beacons/gndId-to-adr.tsv"
@@ -12,7 +15,7 @@ sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.archinform.net/
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.biographien.ac.at/oebl/oebl-beacon.txt OUT=conf/maps/beacons/gndId-to-oebl.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://persondata.toolforge.org/beacon/dewikisource_blkoe.txt OUT=conf/maps/beacons/gndId-to-blkoe.tsv"
 # No TARGET: sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=http://www.andreas-praefcke.de/temp/BEACON-GND-Wein.txt OUT=conf/maps/beacons/gndId-to-wein.tsv"
-# No response: sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.statistik-bw.de/LABI/Badische-Biographien.txt OUT=conf/maps/beacons/gndId-to-babi.tsv"
+sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.statistik-bw.de/LABI/Badische-Biographien.txt OUT=conf/maps/beacons/gndId-to-babi.tsv"
 # No TARGET: sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=http://www.andreas-praefcke.de/temp/BEACON-GND-GDW.txt OUT=conf/maps/beacons/gndId-to-gdw.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.historische-kommission-muenchen-editionen.de/beacond/bsb_personen.php?beacon OUT=conf/maps/beacons/gndId-to-bsb.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://swblod.bsz-bw.de/beacon/beacon.sbub.txt OUT=conf/maps/beacons/gndId-to-sbub.tsv"

@@ -1,0 +1,42 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051154626",
+  "rppdId" : "pk01830",
+  "gndIdentifier" : "1051154626",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Burger, Günter",
+  "professionOrOccupation" : [ {
+    "label" : "Briefträger",
+    "id" : "https://d-nb.info/gnd/4327249-6"
+  }, {
+    "label" : "Autor",
+    "id" : "https://d-nb.info/gnd/4003982-1"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  }, {
+    "label" : "Idar-Oberstein, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13400045"
+  } ],
+  "dateOfBirth" : [ "1927-12-22" ],
+  "placeOfBirth" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  } ],
+  "dateOfDeath" : [ "2014-09-14" ],
+  "placeOfDeath" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  } ],
+  "publication" : [ "Keine Kunst, aber Gedichte von mir, 1989" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#notKnown",
+    "label" : "Unbekannt"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2014-09-14",
+    "source" : [ "Geschliffenes Ungeschliffenes - Autoren und Maler im Kunstverein Obere Nahe, 2006", "http://www.literatur-rlp.de/db_suche.php?autor=Burger%2C+G%FCnter", "Todesanzeige, in: Oeffentlicher Anzeiger / Stadt und Kreis Bad Kreuznach, v. 8.10.2014" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Veröffentlichte Kurzgeschichten zum Berufsleben in der Zeitschrift \"Der Hunsrück\" von 1979 bis 1981; Mitveröffentlichung im Buch \"Bitterkraut. Erinnerung\" der Autorengruppe Nahe 1996 und im Buch \"Geschliffenes Ungeschliffenes - Autoren und Maler im Kunstverein Obere Nahe, 2006\"." ]
+}

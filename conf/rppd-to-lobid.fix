@@ -291,10 +291,12 @@ set_array("gender[]")
 if any_equal("f1nv", "mmm")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#male")
   set_field("gender[].$last.label", "Männlich")
-end
-if any_equal("f1nv", "www")
+elsif any_equal("f1nv", "www")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#female")
   set_field("gender[].$last.label", "Weiblich")
+else
+  set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#notKnown")
+  set_field("gender[].$last.label", "Unbekannt")
 end
 
 # -------

@@ -2,6 +2,11 @@
 
 vacuum()
 
+#-------- maps --------
+do once("map")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+end
+
 # ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
@@ -163,6 +168,10 @@ uniq("spatial[]")
 do list (path:"spatial[]", "var": "$i")
   copy_field("$i.id", "$i.label")
   replace_all("$i.label","^http.+[/#](.+)$","$1")
+  if any_match("$i.label", "^n.+")
+    prepend("$i.label", "https://rpb.lobid.org/spatial#")
+    lookup("spatial[].*.label", "spatial_map")
+  end
   if any_match("$i.id", "^https://d-nb.info/gnd/.+")
     lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
     set_array("$i.type[]","PlaceOrGeographicName")

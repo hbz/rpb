@@ -59,7 +59,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n13203050",
-    "label" : "n13203050",
+    "label" : "Herdorf, Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

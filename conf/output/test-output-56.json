@@ -43,7 +43,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n13209039",
-    "label" : "n13209039",
+    "label" : "Gebhardshain",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

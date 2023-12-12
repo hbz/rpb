@@ -47,7 +47,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n14304048",
-    "label" : "n14304048",
+    "label" : "Montabaur, Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

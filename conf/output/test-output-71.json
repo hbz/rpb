@@ -56,7 +56,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n24",
-    "label" : "n24",
+    "label" : "Moseltal",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

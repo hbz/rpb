@@ -43,7 +43,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n332070120200",
-    "label" : "n332070120200",
+    "label" : "Rodenbach (Ortsbezirk)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

@@ -51,7 +51,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n58",
-    "label" : "n58",
+    "label" : "https://rpb.lobid.org/spatial#n58",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,7 +59,7 @@
     }
   }, {
     "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "n316000000700",
+    "label" : "Hambach (Ortsbezirk)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

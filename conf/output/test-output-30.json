@@ -57,7 +57,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n31400000",
-    "label" : "n31400000",
+    "label" : "Ludwigshafen am Rhein, Kreisfreie Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

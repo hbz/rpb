@@ -52,7 +52,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n31200000",
-    "label" : "n31200000",
+    "label" : "Kaiserslautern, Kreisfreie Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

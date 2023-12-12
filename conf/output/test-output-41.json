@@ -59,7 +59,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n31800000",
-    "label" : "n31800000",
+    "label" : "Speyer, Kreisfreie Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

@@ -46,7 +46,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n22",
-    "label" : "n22",
+    "label" : "Mittelrhein-Gebiet",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

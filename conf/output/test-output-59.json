@@ -47,7 +47,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n137",
-    "label" : "n137",
+    "label" : "Mayen-Koblenz, Landkreis",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

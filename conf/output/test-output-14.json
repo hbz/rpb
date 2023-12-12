@@ -15,7 +15,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n339",
-    "label" : "n339",
+    "label" : "Mainz-Bingen, Landkreis",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

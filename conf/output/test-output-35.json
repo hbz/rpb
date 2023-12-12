@@ -53,7 +53,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n01",
-    "label" : "n01",
+    "label" : "Rheinland-Pfalz",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

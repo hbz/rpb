@@ -51,7 +51,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n111000000100",
-    "label" : "n111000000100",
+    "label" : "Arenberg (T.a.Ortsbezirk 1)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

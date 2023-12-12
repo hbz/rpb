@@ -56,7 +56,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n133110870101",
-    "label" : "n133110870101",
+    "label" : "Burg Layen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

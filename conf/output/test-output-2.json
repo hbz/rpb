@@ -1,26 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112203",
-  "id" : "https://lobid.org/resources/RPB929t112203",
-  "hbzId" : "CT003005235",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB929t112202",
+  "id" : "https://lobid.org/resources/RPB929t112202",
+  "hbzId" : "CT003010542",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "The Rhenish minstrel [Elektronische Ressource] : A Series of Ballads, traditional and legendary, of the Rhine",
-  "extent" : "[1], [21] Kunstbl. ; s/w ; 24 x 28 cm",
-  "note" : [ "In Fraktur ; HT010123631 Dt. Ausg. u.d.T.: Stolterfoth, Adelheid ¬von¬: Rheinischer Sagenkreis" ],
-  "responsibilityStatement" : [ "by Adelheid von Stolterfoth. Embellished with twenty-one lithographic sketches, by Dielmann, from the designs of A. Rethel" ],
+  "title" : "Provincia Trevirensis [Elektronische Ressource] : [Ca. 1:1 500 000]",
+  "extent" : "1 Kt. : Kupferstich ; 13 x 9 cm",
+  "note" : [ "Maßstab in graph. Form (Miliaria Germanica), Titelkartusche und Maßstabsleiste unten rechts - rückseitig lateinischer Text" ],
+  "responsibilityStatement" : [ "[Hondius, Jodocus]" ],
   "publication" : [ {
-    "location" : [ "Frankfort o/M." ],
-    "startDate" : "1835",
-    "publishedBy" : [ "Jugel" ],
+    "location" : [ "Amstelodami" ],
+    "startDate" : "1618",
+    "publishedBy" : [ "Judocus Hondius" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n768010",
+    "id" : "http://purl.org/lobid/rpb#n126000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -29,38 +29,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rethel, Alfred / 1816-1859 | Illustration | Lithografie | Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis | Pressendruck",
+    "label" : "Erzstift Trier | Altkarte | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/118744615",
-      "label" : "Rethel, Alfred / 1816-1859",
+      "id" : "https://d-nb.info/gnd/4060882-7",
+      "label" : "Erzstift Trier",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4123412-1",
-      "label" : "Illustration",
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4036042-8",
-      "label" : "Lithografie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/7743324-5",
-      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4159043-0",
-      "label" : "Pressendruck",
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -68,8 +54,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n22",
-    "label" : "n22",
+    "id" : "https://rpb.lobid.org/spatial#n41",
+    "label" : "n41",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -78,33 +64,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/116002468",
-      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
-      "label" : "Rethel, Alfred"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/118702424",
-      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2200547a",
+      "label" : "Hondius, Jodocus (Kartograph, 1563-1612)"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
       "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 378"
 }

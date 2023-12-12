@@ -1,26 +1,17 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121516",
-  "id" : "https://lobid.org/resources/RPB036t0121516",
+  "rpbId" : "RPB036t0121515",
+  "id" : "https://lobid.org/resources/RPB036t0121515",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlingen und das Kloster Lorsch",
+  "title" : "Souvenir ...",
   "publication" : [ {
-    "startDate" : "1967",
+    "startDate" : "1963",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n339",
-    "label" : "n339",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
@@ -33,5 +24,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Landkreis Bingen: Heimat-Jahrbuch. - 1967, S. 23-26"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 1"
 }

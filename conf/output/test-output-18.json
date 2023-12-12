@@ -1,16 +1,16 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121521",
-  "id" : "https://lobid.org/resources/RPB036t0121521",
+  "rpbId" : "RPB036t0121520",
+  "id" : "https://lobid.org/resources/RPB036t0121520",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Steuern in alter Zeit",
+  "title" : "Sprendlinger Stifter und ihre Familien",
   "publication" : [ {
-    "startDate" : "1957",
+    "startDate" : "1983",
     "type" : [ "PublicationEvent" ]
   } ],
   "contribution" : [ {
@@ -24,5 +24,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 12"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 1983, H. 2"
 }

@@ -1,24 +1,68 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t112193",
-      "label" : "Aktuell : das Krankenhaus in Ihrer Region"
-    } ],
-    "numbering" : "Nachgewiesen 2010 - 2012,1"
-  } ],
-  "rpbId" : "RPB929t112193b1",
-  "id" : "https://lobid.org/resources/RPB929t112193b1",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB929t112193",
+  "id" : "https://lobid.org/resources/RPB929t112193",
+  "hbzId" : "HT016746268",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Aktuell : das Krankenhaus in Ihrer Region : Nachgewiesen 2010 - 2012,1",
-  "note" : [ "Nachfolger: Kaleidoskop. 2012 -" ],
+  "title" : "Aktuell : das Krankenhaus in Ihrer Region",
+  "responsibilityStatement" : [ "Krankenhaus der Barmherzigen Brüder Montabaur" ],
   "publication" : [ {
+    "location" : [ "Montabaur" ],
+    "startDate" : "2010",
+    "publishedBy" : [ "Krankenhaus der Barmherzigen Brüder" ],
     "type" : [ "PublicationEvent" ]
+  } ],
+  "zdbId" : "2599128-0",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n534030",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Krankenhaus der Barmherzigen Brüder Montabaur | Zeitschrift",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/7741811-6",
+      "label" : "Krankenhaus der Barmherzigen Brüder Montabaur",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n14304048",
+    "label" : "n14304048",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/5280327-2",
+      "label" : "Krankenhaus der Barmherzigen Brüder / Montabaur"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

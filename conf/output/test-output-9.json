@@ -1,28 +1,102 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121512",
-  "id" : "https://lobid.org/resources/RPB036t0121512",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "RPB929t112209",
+  "id" : "https://lobid.org/resources/RPB929t112209",
+  "hbzId" : "CT003001333",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Serenissimus befehlen zu prügeln",
+  "title" : "Ruins of the Rhine, their times and traditions [Elektronische Ressource]",
+  "extent" : "[2] Bl., IV, 356 S., [7] Bl. : Ill.",
+  "responsibilityStatement" : [ "[Alfred von Reumont]. Ed. by Charles White. Eight engravings after original desings by painters of the Dusseldorf School. [Herrm Kretschmer inv. ; Alfred Rethel del. ; Sonderland del. ; Plüddemann del.]" ],
   "publication" : [ {
-    "startDate" : "1963",
+    "location" : [ "Aix-La Chapelle [u.a.]" ],
+    "startDate" : "1838",
+    "publishedBy" : [ "Kohnen [u.a.]" ],
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n760100",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Rheinland | Literatur | Anthologie | Online-Ressource",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4049788-4",
+      "label" : "Rheinland",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4035964-5",
+      "label" : "Literatur",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4002214-6",
+      "label" : "Anthologie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n03",
+    "label" : "n03",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "https://rpb.lobid.org/agent/00Pn01k18192455a",
+      "label" : "Reumont, Alfred ¬von¬"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 6"
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/119468808",
+      "label" : "White, Charles / 1928-"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/pbl",
+      "label" : "Herausgeber"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2205906a",
+      "label" : "Kretzschmer, Hermann"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ill",
+      "label" : "Illustrator"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

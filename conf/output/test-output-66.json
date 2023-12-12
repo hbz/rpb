@@ -1,21 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t084667",
-  "id" : "https://lobid.org/resources/RPB929t084667",
+  "rpbId" : "RPB929t084664",
+  "id" : "https://lobid.org/resources/RPB929t084664",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "100 Jahre Kirner Volksbank : Chronik 1908 - 2008",
-  "extent" : "[12] S. : zahlr. Ill.",
+  "title" : "100 Jahre St. Barbara in Koblenz : 1908 - 2008",
+  "extent" : "99 S. : zahlr. Ill.",
+  "responsibilityStatement" : [ "Alten- und Pflegeheim St. Barbara Koblenz. [Autoren: Ulrich Keller ... ]" ],
   "publication" : [ {
-    "location" : [ "Kirn" ],
+    "location" : [ "Koblenz" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n548400",
+    "id" : "http://purl.org/lobid/rpb#n523090",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -24,10 +25,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Volksbank Kirn-Sobernheim | Geschichte 1908-2008 | Chronik",
+    "label" : "Alten- und Pflegeheim St. Barbara / Koblenz | Geschichte 1908-2008",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/10360357-8",
-      "label" : "Volksbank Kirn-Sobernheim",
+      "id" : "https://d-nb.info/gnd/10360311-6",
+      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -39,18 +40,11 @@
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
-    }, {
-      "id" : "https://d-nb.info/gnd/4127914-1",
-      "label" : "Chronik",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13309052",
-    "label" : "n13309052",
+    "id" : "https://rpb.lobid.org/spatial#n11100000",
+    "label" : "n11100000",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,8 +53,18 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/10360357-8",
-      "label" : "Volksbank Kirn-Sobernheim"
+      "id" : "https://rpb.lobid.org/agent/00Pn04k3045137a",
+      "label" : "Keller, Ulrich"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/10360311-6",
+      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

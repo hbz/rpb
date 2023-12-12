@@ -1,23 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB107t01147876",
-  "id" : "https://lobid.org/resources/RPB107t01147876",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "RPB107t01147875",
+  "id" : "https://lobid.org/resources/RPB107t01147875",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Die Maxburg bei Hambach. (Mit e. Titelkupfer, Uebersichtsplane u. Grundrisse der Burg.)",
-  "extent" : "VIII, 211 S. 8°",
-  "note" : [ "[Hambacher Schloß]" ],
+  "title" : "Ein Fest aller Deutschen : das Hambacher Schloß wird nationale Gedenkstätte",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Mannheim" ],
-    "startDate" : "1844",
-    "publishedBy" : [ "Meininger" ],
+    "startDate" : "1981",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n246500",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
     "id" : "http://purl.org/lobid/rpb#n844040",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
@@ -27,8 +32,15 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+    "label" : "Hambacher Fest | Hambacher Schloss / Neustadt an der Weinstraße",
     "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4127289-4",
+      "label" : "Hambacher Fest",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
       "id" : "https://d-nb.info/gnd/4094596-0",
       "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
       "source" : {
@@ -38,6 +50,14 @@
     } ]
   } ],
   "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n58",
+    "label" : "n58",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  }, {
     "id" : "https://rpb.lobid.org/spatial#n316000000700",
     "label" : "n316000000700",
     "type" : [ "Concept" ],
@@ -48,13 +68,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/116436425",
-      "label" : "Remling, Franz Xaver / 1803-1873"
+      "id" : "https://rpb.lobid.org/agent/00Pn02s0203b",
+      "label" : "Letzelter, Manfred"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Stimme der Pfalz. - 32 (1981), 1, S. 9-11"
 }

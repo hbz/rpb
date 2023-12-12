@@ -1,23 +1,73 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982373",
-      "label" : "SWR-3-Clubmagazin"
-    } ],
-    "numbering" : "1998,1(Sept.) -"
-  } ],
-  "rpbId" : "RPB107t982373b1",
-  "id" : "https://lobid.org/resources/RPB107t982373b1",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "RPB107t982373",
+  "id" : "https://lobid.org/resources/RPB107t982373",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "SWR-3-Clubmagazin : 1998,1(Sept.) -",
+  "title" : "SWR-3-Clubmagazin",
+  "note" : [ "Vorgänger u.d.T.: On" ],
   "publication" : [ {
+    "location" : [ "Baden-Baden" ],
+    "startDate" : "1998",
+    "publishedBy" : [ "Südwestrundfunk-Media-GmbH" ],
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n882040",
+    "label" : "Platzhalter Schlagwortlabel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Südwestrundfunk | Geschichte 1945- | Zeitschrift",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/5295938-7",
+      "label" : "Südwestrundfunk",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "n01",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/5331496-7",
+      "label" : "SWR-3-Club"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

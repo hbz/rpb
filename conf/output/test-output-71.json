@@ -1,8 +1,9 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t190565",
-  "id" : "https://lobid.org/resources/RPB929t190565",
+  "rpbId" : "RPB929t112440",
+  "id" : "https://lobid.org/resources/RPB929t112440",
+  "biblioVinoId" : "Nr27922",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -12,11 +13,11 @@
     "type" : [ "Collection" ],
     "label" : "BiblioVino"
   } ],
-  "title" : "Weingeschäft im Umbruch : Pieroth setzt auf alten Namen und eine neue Vermarktungsstrategie, um auch neue Kundengruppen zu erreichen",
-  "extent" : "Illustrationen",
-  "responsibilityStatement" : [ "T.S." ],
+  "title" : "Weinkulturlandschaft Mosel : Dornen statt Reben",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Rolfjosef Hamacher und Ulrich Stein" ],
   "publication" : [ {
-    "startDate" : "2018",
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
@@ -28,26 +29,25 @@
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n544325",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ferdinand Pieroth, Weingut - Weinkellerei | Vermarktung",
+    "label" : "Moseltal | Weinbau | Preisentwicklung",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/2075606-9",
-      "label" : "Ferdinand Pieroth, Weingut - Weinkellerei",
+      "id" : "https://d-nb.info/gnd/4102224-5",
+      "label" : "Moseltal",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4121857-7",
-      "label" : "Vermarktung",
+      "id" : "https://d-nb.info/gnd/4065136-8",
+      "label" : "Weinbau",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4125931-2",
+      "label" : "Preisentwicklung",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -55,8 +55,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n133110870101",
-    "label" : "n133110870101",
+    "id" : "https://rpb.lobid.org/spatial#n24",
+    "label" : "n24",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -65,8 +65,18 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/929n981242",
-      "label" : "Strauß, Torsten"
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2440560a",
+      "label" : "Hamacher, Rolfjosef"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/105115975X",
+      "label" : "Stein, Ulrich / 1951-"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -74,5 +84,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Initiativ. - (2018), 3, Seite 20-21. -"
+  "bibliographicCitation" : "In: Rheinische Heimatpflege. - N.F. 48 (2011), 2, Seite 150-152. -"
 }

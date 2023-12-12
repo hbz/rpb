@@ -1,23 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t982372",
-  "id" : "https://lobid.org/resources/RPB107t982372",
+  "rpbId" : "RPB107t982371",
+  "id" : "https://lobid.org/resources/RPB107t982371",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Zur politischen Tragweite schulischer Medienarbeit : was \"lernen\" Gymnasiasten, wenn sie \"im Auftrag\" eines Berufsinformationszentrums Live-Sendungen für Schüler anderer Schularten produzieren?",
-  "extent" : "Graph. Darst.",
-  "note" : [ "Medien-AG d. Wilhelm-von-Humboldt-Gymnasiums" ],
-  "responsibilityStatement" : [ "Karl-Ludwig Kemen ; Gerhard Laubscher" ],
+  "title" : "Ältere Menschen machen Fernsehen : aktivierende Medienarbeit in Offenen Kanälen",
+  "note" : [ "Videoprojekt zwischen Volkshochschule u. Offener Kanal" ],
   "publication" : [ {
     "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n784080",
+    "id" : "http://purl.org/lobid/rpb#n786000",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -34,7 +32,32 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Offener Kanal",
+    "label" : "Ludwigshafen am Rhein | Volkshochschule | Geschichte 1945-",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4036472-0",
+      "label" : "Ludwigshafen am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4136151-9",
+      "label" : "Volkshochschule",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Ludwigshafen am Rhein | Offener Kanal | Geschichte 1945-",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4036472-0",
       "label" : "Ludwigshafen am Rhein",
@@ -49,13 +72,34 @@
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
+    "label" : "Ludwigshafen am Rhein | Alter | Geschichte 1945-",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/107n220353",
-      "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
+      "id" : "https://d-nb.info/gnd/4036472-0",
+      "label" : "Ludwigshafen am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4001446-0",
+      "label" : "Alter",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
@@ -73,18 +117,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372a",
-      "label" : "Kemen, Karl-Ludwig"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372b",
-      "label" : "Laubscher, Gerhard"
+      "id" : "https://rpb.lobid.org/agent/00Pn02s0022a",
+      "label" : "Baum, Herbert"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -92,5 +126,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 124-144"
+  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 119-123"
 }

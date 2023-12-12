@@ -1,25 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112205",
-  "id" : "https://lobid.org/resources/RPB929t112205",
-  "hbzId" : "CT003001334",
+  "rpbId" : "RPB929t112204",
+  "id" : "https://lobid.org/resources/RPB929t112204",
+  "hbzId" : "CT003001337",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sagas légendes des bords du Rhin [Elektronische Ressource] : orné de 8 gravures sur acier",
-  "extent" : "[1] Bl., VIII, 299 S., [7] Bl. : Ill.",
-  "note" : [ "HT003558438 Dt. Ausg. u.d.T.: Rheinlands Sagen, Geschichten und Legenden" ],
-  "responsibilityStatement" : [ "[Alfred von Reumont]. D'après les dessins des peintres de l' Ecole de Dusseldorf [Kretschmer del. ; Plüddemann del. ; Alfred Rethel del. ; Sonderland del.]" ],
+  "title" : "The Rhenish minstrel [Elektronische Ressource] : A Series of Ballads, traditional and legendary, of the Rhine",
+  "extent" : "[3] Bl., 19 S., [1] Bl., 65 S., [21] Bl. : zahlr. Ill. ; quer 4-o",
+  "note" : [ "In Fraktur. Titelbl., Inhaltsverz., und 19 S. Erläuterungen in Engl., Text dt. ; HT010123631 Dt. Ausg. u.d.T.: Stolterfoth, Adelheid ¬von¬: Rheinischer Sagenkreis" ],
+  "responsibilityStatement" : [ "by Adelheid von Stolterfoth. Embellished with twenty-one lithographic sketches, by Dielmann, from the designs of A. Rethel" ],
   "publication" : [ {
-    "location" : [ "Aix-la-Chapelle [u.a.]; Paris; Janet" ],
-    "publishedBy" : [ "Kohnen [u.a.]" ],
+    "location" : [ "Frankfort o/M." ],
+    "startDate" : "1835",
+    "publishedBy" : [ "Jugel" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n760100",
+    "id" : "http://purl.org/lobid/rpb#n768010",
     "label" : "Platzhalter Schlagwortlabel",
     "type" : [ "Concept" ],
     "source" : {
@@ -28,31 +29,31 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rheinland | Literatur | Anthologie | Online-Ressource",
+    "label" : "Rethel, Alfred / 1816-1859 | Illustration | Lithografie | Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4049788-4",
-      "label" : "Rheinland",
+      "id" : "https://d-nb.info/gnd/118744615",
+      "label" : "Rethel, Alfred / 1816-1859",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4035964-5",
-      "label" : "Literatur",
+      "id" : "https://d-nb.info/gnd/4123412-1",
+      "label" : "Illustration",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4002214-6",
-      "label" : "Anthologie",
+      "id" : "https://d-nb.info/gnd/4036042-8",
+      "label" : "Lithografie",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
+      "id" : "https://d-nb.info/gnd/7743324-5",
+      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875 / Rheinischer Sagenkreis",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -60,8 +61,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n03",
-    "label" : "n03",
+    "id" : "https://rpb.lobid.org/spatial#n22",
+    "label" : "n22",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -70,22 +71,12 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18192455a",
-      "label" : "Reumont, Alfred ¬von¬"
+      "id" : "https://d-nb.info/gnd/116002468",
+      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2205906a",
-      "label" : "Kretzschmer, Hermann"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -96,6 +87,16 @@
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ill",
       "label" : "Illustrator"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/118702424",
+      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ]

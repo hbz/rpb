@@ -16,7 +16,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n246500",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Bayerische Pfalz",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,7 +24,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n844040",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Burg. Schloss",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

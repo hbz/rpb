@@ -16,7 +16,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n544322",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Großlage",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,7 +24,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n544325",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Weingut",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

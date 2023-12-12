@@ -18,7 +18,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n882040",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Hörfunk",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

@@ -15,7 +15,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Ortsgeschichte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -23,7 +23,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n207020",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Familie",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

@@ -16,7 +16,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n882026",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Zeitung. Zeitschrift",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

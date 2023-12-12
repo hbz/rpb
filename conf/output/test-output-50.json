@@ -20,7 +20,7 @@
   "zdbId" : "2599128-0",
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n534030",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Krankenhaus",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

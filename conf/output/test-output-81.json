@@ -20,7 +20,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n611070",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Orden",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

@@ -15,7 +15,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n632050",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Judenverfolgung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -23,7 +23,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n882060",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Fernsehen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

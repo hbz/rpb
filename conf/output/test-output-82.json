@@ -19,7 +19,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n142382",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Wasseranalyse",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

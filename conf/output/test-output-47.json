@@ -17,7 +17,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n102045",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Regionenbeschreibung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

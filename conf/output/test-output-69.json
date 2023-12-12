@@ -15,7 +15,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n532030",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Medizinische Versorgung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -23,7 +23,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n428076",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Rettungswesen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

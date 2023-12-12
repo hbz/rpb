@@ -18,7 +18,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n794010",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Einzelne Hochschule",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

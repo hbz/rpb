@@ -18,7 +18,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n882030",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Audiovisuelle Medien",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

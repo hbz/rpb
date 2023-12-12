@@ -16,7 +16,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n824000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Musikerin. Musiker",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

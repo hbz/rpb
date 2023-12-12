@@ -16,7 +16,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n786000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Außerschulische Bildung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,7 +24,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n882060",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Fernsehen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

@@ -19,7 +19,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n706090",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Mundartliteratur",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -27,7 +27,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n102045",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Regionenbeschreibung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -35,7 +35,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n240300",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Regionalgeschichte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

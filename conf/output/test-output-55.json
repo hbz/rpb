@@ -16,7 +16,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n844200",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Denkmalpflege. Denkmalschutz",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,7 +24,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n844000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Baudenkmal. Kunstwerk",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

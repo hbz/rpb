@@ -18,7 +18,7 @@
   "zdbId" : "2603143-7",
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n736050",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Sportverein",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

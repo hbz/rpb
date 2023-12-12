@@ -16,7 +16,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n844030",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Sakralbau",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,7 +24,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n704634",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Gegenstände der Volksfrömmigkeit",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

@@ -20,7 +20,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n226030",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Römer",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -28,7 +28,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n262010",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Militärbau",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

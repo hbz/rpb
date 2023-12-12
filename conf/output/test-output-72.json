@@ -21,7 +21,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n544360",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Weinhandel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -29,7 +29,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n544325",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Weingut",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

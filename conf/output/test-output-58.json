@@ -21,7 +21,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n126000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Karte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

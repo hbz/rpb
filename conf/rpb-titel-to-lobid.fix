@@ -5,6 +5,7 @@ vacuum()
 #-------- maps --------
 do once("map")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
 end
 
 # ------- Set JSON-LD context -------
@@ -140,8 +141,10 @@ set_array("subject[]")
 if exists ("f30[]")
   move_field("f30[].*.f30_", "subject[].$append.id")
   uniq("subject[]")
+  copy_field("subject[].*.id", "subject[].$last.label")
+  lookup("subject[].*.label", "subject_map")
   do list(path: "subject[]")
-    add_field("label", "Platzhalter Schlagwortlabel")
+    # add_field("label", "Platzhalter Schlagwortlabel")
     set_array("type[]")
     add_field("type[].$append", "Concept")
     add_field("source.id", "http://purl.org/lobid/rpb")

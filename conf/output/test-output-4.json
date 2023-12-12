@@ -21,7 +21,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n768010",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Schriftstellerin. Schriftsteller / Primärliteratur",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",

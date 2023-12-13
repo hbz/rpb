@@ -113,7 +113,7 @@ public class Classification {
 				} else
 					addAsSubClass(subClasses, hit, json, broader.findValue("@id").asText());
 			}
-			if (this == SPATIAL && (CONFIG.getBoolean("index.nwbibspatial.enrich")
+			if (this == SPATIAL && (CONFIG.getBoolean("index.rpbspatial.enrich")
 					|| Play.isTest())) { /* SpatialToSkos uses Play test server */
 				addFromCsv(subClasses);
 			}
@@ -479,8 +479,8 @@ public class Classification {
 				.actionGet();
 		if (!client.admin().indices().prepareExists(INDEX).execute().actionGet()
 				.isExists()) {
-			indexData(CONFIG.getString("index.data.nwbibsubject"), Type.NWBIB);
-			indexData(CONFIG.getString("index.data.nwbibspatial"), Type.SPATIAL);
+			indexData(CONFIG.getString("index.data.rpbsubject"), Type.NWBIB);
+			indexData(CONFIG.getString("index.data.rpbspatial"), Type.SPATIAL);
 			client.admin().indices().refresh(new RefreshRequest()).actionGet();
 		}
 	}
@@ -512,7 +512,7 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The nwbib or nwbibspatial URI
+	 * @param uri The nwbib or rpbspatial URI
 	 * @return The list of path segments to the given URI in its classification,
 	 *         e.g. for URI https://nwbib.de/subjects#N582060:
 	 *         [https://nwbib.de/subjects#N5, https://nwbib.de/subjects#N580000,

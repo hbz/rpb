@@ -75,29 +75,25 @@
                     <ul class="nav navbar-nav navbar-right">
                       <li @if(title=="RPB - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
                       <li class="divider"></li>
-                      <li @if(title=="NWBib: Kontakt"){class="active"} class="dropdown">
+                      <li @if(title=="RPB: Kontakt"){class="active"} class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                           @*
                           <li><a href="http://www.landesbibliothek-nrw.de/aufgaben/nrw_bibliographie/">Über die NWBib</a></li>
                           <li><a href="@nwbib.routes.Application.journals()">Ausgewertete Zeitschriften</a></li>
                           *@
-                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20RPB,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback</a></li>
-                          @*
+                          <li class="dropdown-header">Feedback</li>
+                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20RPB,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback zur aktuellen Seite</a></li>
                           <li class="divider"></li>
-                          <li class="dropdown-header">Fachliche Kontakte</li>
-                          <li><a href="https://www.ulb.uni-bonn.de/die-ulb/organisation-ansprechpartner/ansprechpartner-von-a-z/albrink">ULB Bonn</a></li>
-                          <li><a href="http://www.ulb.uni-muenster.de/landesbibliothek/profil/ansprechpartner/index.html">ULB Münster</a></li>
-                          <li><a href="https://www.ulb.hhu.de/sammlungen/landesbibliothek/nordrhein-westfaelische-bibliographie">ULB Düsseldorf</a></li>
+                          <li class="dropdown-header">Fachlicher Kontakt</li>
+                          <li><a href="mailto:pl.rlb@@lbz-rlp.de?Subject=Anfrage%20Zentralredaktion%20RPB">Zentralredaktion (Tel.: 0261/91500-450)</a></li>
                           <li class="divider"></li>
-                          <li class="dropdown-header">Technische Informationen</li>
-                          <li><a href="https://www.hbz-nrw.de/produkte/linked-open-data">Kontakt</a></li>
-                          <li><a href="@nwbib.routes.Application.info()">Daten und Software</a></li>
+                          <li class="dropdown-header">Technischer Kontakt</li>
+                          <li><a href="https://www.hbz-nrw.de/produkte/linked-open-data" target="_blank">Hochschulbibliothekszentrum NRW</a></li>
                           <li class="divider"></li>
                           <li class="dropdown-header">Rechtliche Informationen</li>
-                          <li><a href="http://www.hbz-nrw.de/impressum/">Impressum</a></li>
-                          <li><a href="https://github.com/hbz/nwbib/blob/master/conf/Datenschutzerklaerung_NWBib.textile">Datenschutz</a></li>
-                          *@
+                          <li><a href="https://lbz.rlp.de/de/ueber-das-lbz/impressum/" target="_blank">Impressum</a></li>
+                          <li><a href="https://datenschutz.lbz-rlp.de/rpb_rppd_datenschutzerklaerung.html" target="_blank">Datenschutz</a></li>
                         </ul>
                       </li>
                     </ul>

@@ -91,7 +91,7 @@ public class Lobid {
 	static WSRequest request(final String q, final String person,
 			final String name, final String subject, final String id,
 			final String publisher, final String issued, final String medium,
-			final String nwbibspatial, final String nwbibsubject, final int from,
+			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, String owner, String t, String sort, String location,
 			String word, String corporation, String raw) {
 		WSRequest requestHolder = WS.url(Application.CONFIG.getString("nwbib.api"))
@@ -107,13 +107,13 @@ public class Lobid {
 		if (!raw.trim().isEmpty())
 			requestHolder = requestHolder.setQueryParameter("q",
 					q + (q.isEmpty() ? "" : " AND ") + raw);
-		requestHolder = setupWordParameter(q, nwbibspatial, word, requestHolder);
+		requestHolder = setupWordParameter(q, rpbspatial, word, requestHolder);
 		if (!name.trim().isEmpty())
 			requestHolder = requestHolder.setQueryParameter("name", name);
-		if (!nwbibsubject.trim().isEmpty() && !subject.trim().isEmpty())
+		if (!rpbsubject.trim().isEmpty() && !subject.trim().isEmpty())
 			requestHolder = requestHolder.setQueryParameter("subject",
-					subjectAndNwbibSubject(subject, nwbibsubject));
-		if (!subject.trim().isEmpty() && nwbibsubject.trim().isEmpty())
+					subjectAndrpbsubject(subject, rpbsubject));
+		if (!subject.trim().isEmpty() && rpbsubject.trim().isEmpty())
 			requestHolder = requestHolder.setQueryParameter("subject", subject);
 		if (!id.trim().isEmpty())
 			requestHolder = requestHolder.setQueryParameter("id", id);
@@ -123,8 +123,8 @@ public class Lobid {
 			requestHolder = requestHolder.setQueryParameter("issued", issued);
 		if (!medium.trim().isEmpty())
 			requestHolder = requestHolder.setQueryParameter("medium", medium);
-		if (!nwbibsubject.trim().isEmpty() && subject.trim().isEmpty())
-			requestHolder = requestHolder.setQueryParameter("subject", nwbibsubject);
+		if (!rpbsubject.trim().isEmpty() && subject.trim().isEmpty())
+			requestHolder = requestHolder.setQueryParameter("subject", rpbsubject);
 		if (!owner.isEmpty())
 			requestHolder = requestHolder.setQueryParameter("owner", owner);
 		if (!t.isEmpty())
@@ -146,20 +146,20 @@ public class Lobid {
 	}
 
 	private static WSRequest setupWordParameter(final String q,
-			final String nwbibspatial, String word, WSRequest requestHolder) {
-		if (!q.trim().isEmpty() && nwbibspatial.isEmpty())
+			final String rpbspatial, String word, WSRequest requestHolder) {
+		if (!q.trim().isEmpty() && rpbspatial.isEmpty())
 			return requestHolder.setQueryParameter("word", preprocess(q));
-		else if (!q.trim().isEmpty() && !nwbibspatial.isEmpty())
+		else if (!q.trim().isEmpty() && !rpbspatial.isEmpty())
 			return requestHolder.setQueryParameter("word",
-					preprocess(q) + " AND " + setUpNwbibspatial(nwbibspatial));
-		else if (!word.isEmpty() && nwbibspatial.isEmpty())
+					preprocess(q) + " AND " + setUprpbspatial(rpbspatial));
+		else if (!word.isEmpty() && rpbspatial.isEmpty())
 			return requestHolder.setQueryParameter("word", preprocess(word));
-		else if (!word.isEmpty() && !nwbibspatial.trim().isEmpty()) {
+		else if (!word.isEmpty() && !rpbspatial.trim().isEmpty()) {
 			return requestHolder.setQueryParameter("word",
-					preprocess(word) + " AND " + setUpNwbibspatial(nwbibspatial));
-		} else if (!nwbibspatial.trim().isEmpty())
+					preprocess(word) + " AND " + setUprpbspatial(rpbspatial));
+		} else if (!rpbspatial.trim().isEmpty())
 			return requestHolder.setQueryParameter("word",
-					setUpNwbibspatial(nwbibspatial));
+					setUprpbspatial(rpbspatial));
 		return requestHolder;
 	}
 
@@ -422,8 +422,8 @@ public class Lobid {
 	 * @param publisher Query for the resource publisher
 	 * @param issued Query for the resource issued year
 	 * @param medium Query for the resource medium
-	 * @param nwbibspatial Query for the resource nwbibspatial classification
-	 * @param nwbibsubject Query for the resource nwbibsubject classification
+	 * @param rpbspatial Query for the resource rpbspatial classification
+	 * @param rpbsubject Query for the resource rpbsubject classification
 	 * @param owner Owner filter for resource queries
 	 * @param t Type filter for resource queries
 	 * @param field The facet field (the field to facet over)
@@ -435,7 +435,7 @@ public class Lobid {
 	 */
 	public static Promise<JsonNode> getFacets(String q, String person,
 			String name, String subject, String id, String publisher, String issued,
-			String medium, String nwbibspatial, String nwbibsubject, String owner,
+			String medium, String rpbspatial, String rpbsubject, String owner,
 			String field, String t, String location, String word, String corporation,
 			String raw) {
 		WSRequest request = WS.url(Application.CONFIG.getString("nwbib.api"))
@@ -459,22 +459,22 @@ public class Lobid {
 		else if (!corporation.isEmpty())
 			request = request.setQueryParameter("agent", corporation);
 
-		if (!nwbibsubject.isEmpty() && !subject.isEmpty())
+		if (!rpbsubject.isEmpty() && !subject.isEmpty())
 			request = request.setQueryParameter("subject",
-					subjectAndNwbibSubject(subject, nwbibsubject));
+					subjectAndrpbsubject(subject, rpbsubject));
 
-		if (!nwbibsubject.isEmpty() && subject.isEmpty())
-			request = request.setQueryParameter("subject", nwbibsubject);
+		if (!rpbsubject.isEmpty() && subject.isEmpty())
+			request = request.setQueryParameter("subject", rpbsubject);
 
 		if (!raw.isEmpty()
 				&& !raw.contains(Lobid.escapeUri(Application.COVERAGE_FIELD)))
 			request = request.setQueryParameter("q", raw);
 
-		request = setupWordParameter(q, nwbibspatial, word, request);
+		request = setupWordParameter(q, rpbspatial, word, request);
 
 		if (!field.equals(Application.ITEM_FIELD))
 			request = request.setQueryParameter("owner", owner);
-		if (!field.startsWith("http") && nwbibsubject.isEmpty())
+		if (!field.startsWith("http") && rpbsubject.isEmpty())
 			request = request.setQueryParameter("subject", subject);
 
 		String url = request.getUrl();
@@ -491,13 +491,13 @@ public class Lobid {
 		});
 	}
 
-	private static String subjectAndNwbibSubject(String subject,
-			String nwbibsubject) {
-		return subject + "," + nwbibsubject + ",AND";
+	private static String subjectAndrpbsubject(String subject,
+			String rpbsubject) {
+		return subject + "," + rpbsubject + ",AND";
 	}
 
-	private static String setUpNwbibspatial(String nwbibspatial) {
-		String query = Arrays.asList(nwbibspatial.replace(",AND", "").split(","))
+	private static String setUprpbspatial(String rpbspatial) {
+		String query = Arrays.asList(rpbspatial.replace(",AND", "").split(","))
 				.stream().map(id -> "spatial.id:\"" + id + "\"")
 				.collect(Collectors.joining(" AND "));
 		return query;

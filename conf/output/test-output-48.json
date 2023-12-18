@@ -59,7 +59,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://d-nb.info/gnd/4119314-3",
-    "label" : "4119314-3",
+    "label" : "Unterwesterwald",
     "type" : [ "PlaceOrGeographicName" ],
     "source" : {
       "id" : "https://d-nb.info/gnd/7749153-1",

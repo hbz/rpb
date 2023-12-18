@@ -43,7 +43,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "https://rpb.lobid.org/spatial#n33703036",
+    "label" : "Hainfeld",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",

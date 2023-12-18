@@ -1,9 +1,9 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112440",
-  "id" : "https://lobid.org/resources/RPB929t112440",
-  "biblioVinoId" : "Nr27922",
+  "rpbId" : "929t112440",
+  "id" : "https://lobid.org/resources/929t112440",
+  "schoeneNummer" : "Nr27922",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

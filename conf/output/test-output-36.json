@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982374",
+      "id" : "https://lobid.org/resources/107t982374",
       "label" : "On : SWF 3, das Magazin"
     } ],
     "numbering" : "1992 - 1998,2"
   } ],
-  "rpbId" : "RPB107t982374b1",
-  "id" : "https://lobid.org/resources/RPB107t982374b1",
+  "rpbId" : "107t982374b1",
+  "id" : "https://lobid.org/resources/107t982374b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

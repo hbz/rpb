@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112205",
-  "id" : "https://lobid.org/resources/RPB929t112205",
+  "rpbId" : "929t112205",
+  "id" : "https://lobid.org/resources/929t112205",
   "hbzId" : "CT003001334",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
@@ -98,5 +98,9 @@
       "label" : "Illustrator"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-1616",
+    "label" : "urn:nbn:de:hbz:061:2-1616"
   } ]
 }

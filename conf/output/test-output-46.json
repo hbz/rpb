@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982379",
+      "id" : "https://lobid.org/resources/107t982379",
       "label" : "Wer ist wo"
     } ],
     "numbering" : "1994/95(1995)"
   } ],
-  "rpbId" : "RPB107t982379b1",
-  "id" : "https://lobid.org/resources/RPB107t982379b1",
+  "rpbId" : "107t982379b1",
+  "id" : "https://lobid.org/resources/107t982379b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

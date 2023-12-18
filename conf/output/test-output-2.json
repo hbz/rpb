@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112202",
-  "id" : "https://lobid.org/resources/RPB929t112202",
+  "rpbId" : "929t112202",
+  "id" : "https://lobid.org/resources/929t112202",
   "hbzId" : "CT003010542",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
@@ -73,5 +73,9 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 378"
+  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 378",
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:1-70495",
+    "label" : "urn:nbn:de:hbz:061:1-70495"
+  } ]
 }

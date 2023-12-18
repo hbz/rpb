@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t084695",
-  "id" : "https://lobid.org/resources/RPB929t084695",
+  "rpbId" : "929t084695",
+  "id" : "https://lobid.org/resources/929t084695",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -31,10 +31,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau | Geschichte 1883-2008",
+    "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau | Geschichte 1883-2008",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10361782-6",
-      "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau",
+      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -60,7 +60,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10361782-6",
-      "label" : "Deutsches Rotes Kreuz / Deutschland / Ortsverein Adenau"
+      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

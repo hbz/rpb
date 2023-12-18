@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112208",
-  "id" : "https://lobid.org/resources/RPB929t112208",
+  "rpbId" : "929t112208",
+  "id" : "https://lobid.org/resources/929t112208",
   "hbzId" : "CT003001317",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
@@ -106,5 +106,9 @@
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-1456",
+    "label" : "urn:nbn:de:hbz:061:2-1456"
   } ]
 }

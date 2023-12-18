@@ -1,8 +1,8 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t920749",
-  "id" : "https://lobid.org/resources/RPB929t920749",
+  "rpbId" : "929t920749",
+  "id" : "https://lobid.org/resources/929t920749",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

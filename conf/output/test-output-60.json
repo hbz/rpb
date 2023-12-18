@@ -4,13 +4,13 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t111801",
+      "id" : "https://lobid.org/resources/929t111801",
       "label" : "Rhein-Zeitung : unabhängige Tageszeitung"
     } ],
     "numbering" : "66.2011,77(1.Apr.) -"
   } ],
-  "rpbId" : "RPB929t111801b1",
-  "id" : "https://lobid.org/resources/RPB929t111801b1",
+  "rpbId" : "929t111801b1",
+  "id" : "https://lobid.org/resources/929t111801b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

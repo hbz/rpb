@@ -1,69 +1,41 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/11855476X",
-  "rppdId" : "pk00006",
-  "gndIdentifier" : "11855476X",
+  "id" : "https://d-nb.info/gnd/128707410",
+  "rppdId" : "pk00002",
+  "gndIdentifier" : "128707410",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Humperdinck, Engelbert",
-  "variantName" : [ "Humperdink, Engelbert", "Humperdinck, E.", "Humperdinck, Engelbert" ],
-  "depiction" : [ {
-    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg",
-    "url" : "https://commons.wikimedia.org/wiki/File:Engelbert%20humperdinck%201854.jpg?uselang=de",
-    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Engelbert%20humperdinck%201854.jpg?width=270"
-  } ],
+  "preferredName" : "Renger, Wolfram",
+  "variantName" : [ "Renger, Wolfram" ],
   "professionOrOccupation" : [ {
-    "label" : "Komponist",
-    "id" : "https://d-nb.info/gnd/4032009-1"
+    "label" : "Maler",
+    "id" : "https://d-nb.info/gnd/4037215-7"
+  }, {
+    "label" : "Bildhauer",
+    "id" : "https://d-nb.info/gnd/4139550-5"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
-  }, {
-    "label" : "München",
-    "id" : "https://rpb.lobid.org/dummi/München"
-  }, {
-    "label" : "Xanten",
-    "id" : "https://rpb.lobid.org/dummi/Xanten"
-  }, {
-    "label" : "Bayreuth",
-    "id" : "https://rpb.lobid.org/dummi/Bayreuth"
-  }, {
-    "label" : "Boppard, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14000501"
-  }, {
-    "label" : "Barcelona",
-    "id" : "https://rpb.lobid.org/dummi/Barcelona"
-  }, {
-    "label" : "Frankfurt am Main",
-    "id" : "https://rpb.lobid.org/dummi/Frankfurt am Main"
-  }, {
-    "label" : "Mainz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n31500000"
+    "label" : "Neustadt an der Weinstraße, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31600000"
   } ],
-  "dateOfBirth" : [ "1854-09-01" ],
+  "dateOfBirth" : [ "1965" ],
   "placeOfBirth" : [ {
-    "label" : "Siegburg",
-    "id" : "https://rpb.lobid.org/dummi/Siegburg"
-  } ],
-  "dateOfDeath" : [ "1921-09-27" ],
-  "placeOfDeath" : [ {
-    "label" : "Neustrelitz",
-    "id" : "https://rpb.lobid.org/dummi/Neustrelitz"
-  } ],
-  "relatedPerson" : [ {
-    "label" : "Wagner, Richard",
-    "id" : "https://rpb.lobid.org/dummi/Wagner, Richard"
+    "label" : "Regensburg",
+    "id" : "Regensburg"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Musik. Musikwissenschaft",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+    "label" : "Malerei. Zeichnung. Graphik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.4p"
+  }, {
+    "label" : "Plastik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.2p"
   } ],
   "describedBy" : {
-    "dateModified" : "2005-11-16"
+    "dateModified" : "2004-07-28",
+    "source" : [ "Internet", "Wolfram Renger (Veröffentl. in der RLB)" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Ab 1872 Musikstudium in Köln; gewinnt 1876 den Preis der Frankfurter Mozart-Stiftung, als deren Stipendiat er seine Ausbildung in Frankfurt -später in München- fortsetzen konnte; während einer Italienreise 1880 lernte er Richard Wagner kennen, als dessen Mitarbeiter er 1881/82 in Bayreuth lebte; nach verschiedenen Reisen ins Ausland, arbeitete er ab 1888 als Verlagslektor bei Schott in Mainz; von 1890 bis 1897 lebte er als Musiklehrer, Opernkritiker und Lehrer am Konservatorium in Frankfurt - hier entstand auch seine berühmteste Oper \"Hänsel und Gretel\", die 1893 in Weimar uraufgeführt wurde; 1897 zog er nach Boppard; 1900 wurde er als Kompositionslehrer an die Berliner Musikhochschule berufen.", "http://www.boppard.de", "Rhein-Zeitung, Ausg. AL. - (2004), 262 vom 10.11." ]
+  "biographicalOrHistoricalInformation" : [ "Seit 1990 Teilnahme an Ausstellungen in Deutschland, Frankreich, (Schweiz); Teilnahme an der Expo 2000 in Hannover; 2001 Verwirklichung der ersten Raumklanginstallation in Bern (mit Daniel Peter Biro)" ]
 }

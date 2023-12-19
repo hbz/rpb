@@ -1,34 +1,42 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051215595",
-  "rppdId" : "pta1499",
-  "gndIdentifier" : "1051215595",
+  "id" : "https://d-nb.info/gnd/1051215587",
+  "rppdId" : "pta1498",
+  "gndIdentifier" : "1051215587",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Zunker, Wilhelm",
+  "preferredName" : "Züscher, Peter",
   "professionOrOccupation" : [ {
-    "label" : "Verwaltungsfachangestellter",
-    "id" : "https://d-nb.info/gnd/4063330-5"
+    "label" : "Lehrer",
+    "id" : "https://d-nb.info/gnd/4035088-5"
+  }, {
+    "label" : "Heimatkundler",
+    "id" : "https://d-nb.info/gnd/4313907-3"
   } ],
-  "dateOfBirth" : [ "1895-03-15" ],
+  "dateOfBirth" : [ "1859-12-03" ],
   "placeOfBirth" : [ {
-    "label" : "Pallien (T.a. Ortsbezirk 8)",
-    "id" : "https://rpb.lobid.org/spatial#n211000001500"
+    "label" : "Kell am See",
+    "id" : "https://rpb.lobid.org/spatial#n23508058"
   } ],
-  "dateOfDeath" : [ "1951-12-10" ],
+  "dateOfDeath" : [ "1915-06-03" ],
   "placeOfDeath" : [ {
     "label" : "Trier, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n21100000"
   } ],
+  "publication" : [ "Topographische Nachrichten über die Stadt Trier, veröffentlicht in verschiedenen Tageszeitungen", "(Mit Nikolaus Haller:) Bilder aus der Geschichte des trierischen Landes und Volkes, Trier 1895, 2. Aufl. Trier 1903" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Öffentliche Verwaltung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.15p"
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  }, {
+    "label" : "Geographie, Heimat- und Länderkunde",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#19.1dp"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-07-11"
+    "dateModified" : "2006-07-11",
+    "source" : [ "Nikolaus Haller: Peter Z, in: Trierische Chronik 12 (1915/16), 65", "Hermann Spoo: Biographischer Führer über Triers Friedhöfe, hektographiert Trier 1943, 59" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Verwaltungsangestellter. - 1914-1918 Kriegsdienst, Kriegsbeschädigter. 1920 Beitritt zur SPD. Z war langjähriger Ortsvereinsvorsitzender der SPD in Trier-Biewer und bis zur Eingemeindung 1930 Gemeinderatsmitglied in Biewer. 1925-1932 Mitglied des Kreistages Trier-Land, 1927-1928 Mitglied des Unterbezirksvorstandes der SPD und Vorstandsmitgl. der Arbeiterwohlfahrt sowie deren Geschäftsführer. 1930-1933 war Z SPD-Parteisekretär. Nach dem Zweiten Weltkrieg war er der erste Verwalter des Karl-Marx-Geburtshauses. - ---[Daten übernommen aus: Eberhard Klopp, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Eberhard Klopp: Geschichte der Trierer Arbeiterbewegung: ein deutsches Beispiel, Bd. 3: Kurzbiographien 1836-1933, 2. Aufl. Trier 1979, 142" ]
+  "biographicalOrHistoricalInformation" : [ "Schulrektor und Heimatforscher. - Gymnasium in Trier, 1876 Lehrerprüfung in Brühl, 1884 Ergänzungsprüfung für Mittelschulen, 1893 Rektoratsprüfung in Koblenz. Z war seit 1878 in Trier als Lehrer und schließl als Rektor im Schuldienst. Er blieb vor allem in Erinnerung durch seine Heimatforschung. - ---[Daten übernommen aus: Heinz Monz, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
 }

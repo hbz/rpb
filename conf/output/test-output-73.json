@@ -1,41 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "036t160240",
-  "id" : "https://lobid.org/resources/036t160240",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "929t01069600",
+  "id" : "https://lobid.org/resources/929t01069600",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Piffche-Bahnfahrt durch Rheinhessen",
-  "note" : [ "Text teilweise Hochdeutsch, teilweise in rheinhessischem Dialekt" ],
-  "responsibilityStatement" : [ "Hartmut Keil" ],
+  "title" : "Vortrag über Heinrich Alken von Dr. Born.",
   "publication" : [ {
-    "location" : [ "Worms" ],
-    "startDate" : "2016",
-    "publishedBy" : [ "Hartmut Keil" ],
+    "startDate" : "1920",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n706090",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n102045",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n240300",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n109000",
+    "label" : "Biografie",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -43,8 +23,8 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n05",
-    "label" : "n05",
+    "id" : "https://rpb.lobid.org/spatial#n13700068",
+    "label" : "Mayen, große kreisangehörige Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -53,13 +33,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/122882679",
-      "label" : "Keil, Hartmut / 1951-"
+      "id" : "https://d-nb.info/gnd/1044265310",
+      "label" : "Hörter, Peter / 1860-1930"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Coblenzer Zeitung 25.1.1920."
 }

@@ -1,47 +1,58 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/123205670",
-  "rppdId" : "pk00020",
-  "gndIdentifier" : "123205670",
-  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Bücker, Carl Clemens",
-  "variantName" : [ "Bücker, Carl Clemens" ],
-  "depiction" : [ {
-    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg",
-    "url" : "https://commons.wikimedia.org/wiki/File:Carl-Clemens%20B%C3%BCcker.jpg?uselang=de",
-    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg?width=270"
+  "id" : "https://d-nb.info/gnd/1051147387",
+  "rppdId" : "pk00019",
+  "gndIdentifier" : "1051147387",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051147387",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
   } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Oppermann, Julius",
   "professionOrOccupation" : [ {
-    "label" : "Flugzeugkonstrukteur",
-    "id" : "https://rpb.lobid.org/sw/00Sn02x0286a"
+    "label" : "Journalist",
+    "id" : "https://d-nb.info/gnd/4028781-6"
+  }, {
+    "label" : "Politiker",
+    "id" : "https://d-nb.info/gnd/4046517-2"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Schweden",
-    "id" : "https://rpb.lobid.org/dummi/Schweden"
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
+  }, {
+    "label" : "Wiesbaden",
+    "id" : "Wiesbaden"
   }, {
     "label" : "Berlin",
-    "id" : "https://rpb.lobid.org/dummi/Berlin"
+    "id" : "Berlin"
   } ],
-  "dateOfBirth" : [ "1895-02-11" ],
+  "dateOfBirth" : [ "1825-06-09" ],
   "placeOfBirth" : [ {
-    "label" : "Ehrenbreitstein",
-    "id" : "https://rpb.lobid.org/spatial#n111000000500"
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
   } ],
-  "dateOfDeath" : [ "1976-03-03" ],
+  "dateOfDeath" : [ "1880-01-01" ],
   "placeOfDeath" : [ {
-    "label" : "Mölln",
-    "id" : "https://rpb.lobid.org/dummi/Mölln"
+    "label" : "Wiesbaden",
+    "id" : "Wiesbaden"
   } ],
+  "publication" : [ "Freiherr Carl vom Stein und das Kleinstaatentum, 1866." ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Technik allgemein",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
+    "label" : "Presse",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
   } ],
   "describedBy" : {
-    "dateModified" : "2010-10-28"
+    "dateModified" : "2010-08-02",
+    "source" : [ "Stuck, Wolf-Heino: Julius Oppermann aus Diez (1825-1880), in: Nassauische Annalen. - 78 (1967), S. 216-227", "Rhein-Lahn-Zeitung. - (1996), 104 vom 4./5.5." ]
   },
-  "biographicalOrHistoricalInformation" : [ "Geburtshaus in Ehrenbreitstein (Hofstr. 277 in Ehrenbreitstein, ehemaliger \"Gasthof zum weißen Ross\"); 1912 Abschluss am Kaiserin-Augusta-Gymnasium in Koblenz; Seekadett bei der kaiserlichen Marine in Kiel; 1914 als Leutnant zur See; Ausbildung als Marineflieger und Einsatz auf Seefliegerstationen an der Nordsee; 1918 scheidet er aus der Marine aus; Tätigkeit als Berater und Einflieger bei der schwedischen Marine; Gründung der \"Svensko Aero AB\" 1922; 1932 verkaufte er seinen Betrieb und kehrte nach Deutschland zurück; 1935 gründete er die \"Bücker Flugzeugbau GmbH\" in Berlin zur Produktion von Schul- und Sportflugzeugen; 1945 stellt das Werk seine Arbeit ein; danach lässt er sich zunächst in Hamburg, später in Bonn nieder; Grabstätte auf dem Koblenzer Hauptfriedhof; verschiedene Modelle von Bücker-Flugzeugen im Landesmuseum Koblenz; die Stadt Koblenz ehrte ihn mit der Benennung eines Platzes.", "Rhein-Zeitung, Ausg.N, Nr. 36 vom 11./12.02.1995", "Koblenzer Köpfe, 2002", "http://www.ehrenbreitstein.de/buecker.html (Stand: 28.10.2010)" ]
+  "biographicalOrHistoricalInformation" : [ "Besuch des Landesgymnasiums in Weilburg; Studium der Rechts- und Staatswissenschaften in Marburg, Bonn, Heidelberg; seit 7. Oktober 1847 Amtsakzessist im Justizamt in Diez; vom 18. August 1848 bis zum 20. Juli 1850 Schriftleiter der in Wiesbaden erscheinenden \"Freien Zeitung\" und damit einer der führenden demokratischen Oppositionellen im Herzogtum Nassau; in zwei gegen ihn angestrengten Hochverratsprozessen 1849 und 1850 wurde Oppermann freigesprochen; nach 1850 Anwaltsgehilfe in Limburg und Diez; Mitarbeiter bei der 1859 begründeten \"Rhein-Lahn-Zeitung\" aus Wiesbaden; 1863 für einige Monate Übernahme der Redaktion der \"Elberfelder Zeitung\"; Übersiedlung nach Berlin; in einem Brief an den Zivilkommissar von Nassau und späteren Regierungspräsidenten von Wiesbaden, Gustav von Diest, begrüßte Oppermann die Annexion Nassaus durch Preußen; 1870 Rückkehr nach Wiesbaden; seit 1871 Sekretär der Industrie- und Handelskammer Wiesbaden." ]
 }

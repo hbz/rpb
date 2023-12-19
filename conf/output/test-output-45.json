@@ -1,24 +1,73 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/107t982379",
-      "label" : "Wer ist wo"
-    } ],
-    "numbering" : "1994/95(1995)"
-  } ],
-  "rpbId" : "107t982379b1",
-  "id" : "https://lobid.org/resources/107t982379b1",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "107t982379",
+  "id" : "https://lobid.org/resources/107t982379",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Wer ist wo : 1994/95(1995)",
-  "note" : [ "Letzter Jahrgang, damit Erscheinen eingestellt" ],
+  "title" : "Wer ist wo",
+  "note" : [ "Adressen- u. Personenverz." ],
+  "responsibilityStatement" : [ "Universität Kaiserslautern" ],
   "publication" : [ {
+    "location" : [ "Kaiserslautern" ],
+    "startDate" : "1995",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n794010",
+    "label" : "Einzelne Hochschule",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Technische Universität Kaiserslautern | Geschichte 1945- | Führer",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/10066624-3",
+      "label" : "Technische Universität Kaiserslautern",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4155569-7",
+      "label" : "Führer",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n31200000",
+    "label" : "Kaiserslautern, Kreisfreie Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/26332-1",
+      "label" : "Universität Kaiserslautern"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

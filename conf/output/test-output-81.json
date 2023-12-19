@@ -1,25 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "929t920749",
-  "id" : "https://lobid.org/resources/929t920749",
+  "rpbId" : "929t930040",
+  "id" : "https://lobid.org/resources/929t930040",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sachstand der heutigen Gewässerbelastung : Belastung der letzten Jahrzehnte ; Verhalten von Schadstoffen in Gewässern ; Schadensfälle",
-  "extent" : "28 Bl. : graph. Darst.",
-  "responsibilityStatement" : [ "Hubert Hellmann" ],
+  "title" : "Sein Werk - nicht das meine : Mutter Magdalena Damen und ihre Kongregation der Franziskanerinnen von Heythuysen im neunzehnten Jahrhundert",
+  "extent" : "305 S. : Ill.",
+  "note" : [ "1. dt. Ausg. u.d.T.: Cools, Angelita: Mutter Magdalena Damen und die Entwicklung ihrer Kongregation im neunzehnten Jahrhundert. - Betr. auch Kloster St. Clemens, Nonnenwerth im Rhein" ],
+  "responsibilityStatement" : [ "Angelita Cools ; Hildegard von de Wijnpersse. [Nach Bearb. durch Gian Ackermans ... ]" ],
   "publication" : [ {
-    "location" : [ "Koblenz" ],
+    "location" : [ "Aachen" ],
     "startDate" : "1992",
-    "publishedBy" : [ "Bundesanst. für Gewässerkunde" ],
+    "publishedBy" : [ "Einhard [u.a.]" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n142382",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n611070",
+    "label" : "Orden",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -27,26 +28,44 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Geschichte 1945- | Bericht",
+    "label" : "Magdalena / Mutter / 1787-1858 | Geschichte 1800-",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
+      "id" : "https://d-nb.info/gnd/119067552",
+      "label" : "Magdalena / Mutter / 1787-1858",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/z48",
+      "label" : "Geschichte 1800-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Kongregation der Franziskanerinnen von Heythuysen | Geschichte 1800-",
+    "componentList" : [ {
+      "id" : "https://rpb.lobid.org/sw/00Sn93k0040a",
+      "label" : "Kongregation der Franziskanerinnen von Heythuysen",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4128022-2",
-      "label" : "Bericht",
+      "id" : "https://rpb.lobid.org/sw/z48",
+      "label" : "Geschichte 1800-",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n22",
-    "label" : "n22",
+    "id" : "https://rpb.lobid.org/spatial#n131000700701",
+    "label" : "Insel Nonnenwerth",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -55,12 +74,32 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn92k0749a",
-      "label" : "Hellmann, Hubert"
+      "id" : "https://rpb.lobid.org/agent/00Pn93k0040b",
+      "label" : "Cools, Angelita"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn93k0040c",
+      "label" : "Wijnpersse, Hildegard ¬van de¬"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn93k0040d",
+      "label" : "Ackermans, Gian"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Bearb."
     },
     "type" : [ "Contribution" ]
   } ]

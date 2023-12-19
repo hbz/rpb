@@ -1,29 +1,34 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "929t084695",
-  "id" : "https://lobid.org/resources/929t084695",
+  "rpbId" : "929t084686",
+  "id" : "https://lobid.org/resources/929t084686",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Festschrift des DRK-Ortsverein Adenau e.V. [Elektronische Ressource]",
+  "title" : "Frontiers of the Roman Empire",
+  "extent" : "51, 21 S. : zahlr. Ill.",
+  "note" : [ "Text engl., dt., franz. und arab." ],
+  "responsibilityStatement" : [ "David J. Breeze, Sonja Jilek and Andreas Thiel" ],
   "publication" : [ {
-    "location" : [ "Adenau" ],
+    "location" : [ "Edinburgh" ],
+    "startDate" : "2005",
+    "publishedBy" : [ "Historic Scotland, UK [u.a.]" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n532030",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n226030",
+    "label" : "Römer",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n428076",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n262010",
+    "label" : "Militärbau",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -31,26 +36,37 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau | Geschichte 1883-2008",
+    "label" : "Römisches Reich | Staatsgrenze",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/10361782-6",
-      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau",
+      "id" : "https://d-nb.info/gnd/4076778-4",
+      "label" : "Römisches Reich",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08m0186730g",
-      "label" : "Geschichte 1883-2008",
+      "id" : "https://d-nb.info/gnd/4077781-9",
+      "label" : "Staatsgrenze",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Limes",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4035758-2",
+      "label" : "Limes",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13101001",
-    "label" : "n13101001",
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "Rheinland-Pfalz",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,12 +75,32 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/10361782-6",
-      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k4686808a",
+      "label" : "Breeze, David John"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn08k4686449b",
+      "label" : "Jilek, Sonja"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/122161289",
+      "label" : "Thiel, Andreas / 1964-"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ]

@@ -1,51 +1,56 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051147387",
-  "rppdId" : "pk00019",
-  "gndIdentifier" : "1051147387",
+  "id" : "https://d-nb.info/gnd/122507487",
+  "rppdId" : "pk00018",
+  "gndIdentifier" : "122507487",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/122507487",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Oppermann, Julius",
+  "preferredName" : "Reinirkens, Leonhard",
+  "variantName" : [ "Reinirkens, Leonhard" ],
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/LeonhardReinirkens.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:LeonhardReinirkens.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/LeonhardReinirkens.jpg?width=270"
+  } ],
   "professionOrOccupation" : [ {
-    "label" : "Journalist",
-    "id" : "https://d-nb.info/gnd/4028781-6"
-  }, {
-    "label" : "Politiker",
-    "id" : "https://d-nb.info/gnd/4046517-2"
+    "label" : "Schriftsteller",
+    "id" : "https://d-nb.info/gnd/4053309-8"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Diez,Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14103029"
-  }, {
-    "label" : "Wiesbaden",
-    "id" : "https://rpb.lobid.org/dummi/Wiesbaden"
-  }, {
-    "label" : "Berlin",
-    "id" : "https://rpb.lobid.org/dummi/Berlin"
+    "label" : "Unkel, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13807073"
   } ],
-  "dateOfBirth" : [ "1825-06-09" ],
+  "dateOfBirth" : [ "1924-08-07" ],
   "placeOfBirth" : [ {
-    "label" : "Diez,Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14103029"
+    "label" : "Essen",
+    "id" : "Essen"
   } ],
-  "dateOfDeath" : [ "1880-01-01" ],
+  "dateOfDeath" : [ "2008-03-23" ],
   "placeOfDeath" : [ {
-    "label" : "Wiesbaden",
-    "id" : "https://rpb.lobid.org/dummi/Wiesbaden"
+    "label" : "Unkel, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13807073"
   } ],
-  "publication" : [ "Freiherr Carl vom Stein und das Kleinstaatentum, 1866." ],
+  "relatedPerson" : [ {
+    "label" : "Reinirkens, Ernst Leonhard",
+    "id" : "https://d-nb.info/gnd/139865985"
+  } ],
+  "publication" : [ "Geschichtspunkte, 1991", "Burgenzauber, 1995", "Geschichtspunkte am Rhein, 1998", "André Bohnefaß, 1998", "¬Die¬ Musik aus der Bohnefaß-Trilogie, 2006." ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Presse",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
-  }, {
-    "label" : "Politiker und historische Persönlichkeiten",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+    "label" : "Schreiben. Dichtung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
   } ],
   "describedBy" : {
-    "dateModified" : "2010-08-02"
+    "dateModified" : "2008-03-31",
+    "source" : [ "Rhein-Zeitung, Ausg. A. - (1997), 90 vom 18.04.", "Literatur aus Rheinland-Pfalz: eine Anthologie, 1976", "Wikipedia", "http://www.leonhard-reinirkens.info", "Unkeler Geschichtsbote. - 17.2009, S. 48-49" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Besuch des Landesgymnasiums in Weilburg; Studium der Rechts- und Staatswissenschaften in Marburg, Bonn, Heidelberg; seit 7. Oktober 1847 Amtsakzessist im Justizamt in Diez; vom 18. August 1848 bis zum 20. Juli 1850 Schriftleiter der in Wiesbaden erscheinenden \"Freien Zeitung\" und damit einer der führenden demokratischen Oppositionellen im Herzogtum Nassau; in zwei gegen ihn angestrengten Hochverratsprozessen 1849 und 1850 wurde Oppermann freigesprochen; nach 1850 Anwaltsgehilfe in Limburg und Diez; Mitarbeiter bei der 1859 begründeten \"Rhein-Lahn-Zeitung\" aus Wiesbaden; 1863 für einige Monate Übernahme der Redaktion der \"Elberfelder Zeitung\"; Übersiedlung nach Berlin; in einem Brief an den Zivilkommissar von Nassau und späteren Regierungspräsidenten von Wiesbaden, Gustav von Diest, begrüßte Oppermann die Annexion Nassaus durch Preußen; 1870 Rückkehr nach Wiesbaden; seit 1871 Sekretär der Industrie- und Handelskammer Wiesbaden.", "Stuck, Wolf-Heino: Julius Oppermann aus Diez (1825-1880), in: Nassauische Annalen. - 78 (1967), S. 216-227", "Rhein-Lahn-Zeitung. - (1996), 104 vom 4./5.5." ]
+  "biographicalOrHistoricalInformation" : [ "Seit 1930 in Unkel ansässig; Besuch des Gymnasiums in Linz und Abitur 1942; Studium der Geschichte, der Germanistik und der Psychologie in Bonn; seit 1946 als Schriftsteller aktiv, aber auch als Rezitator bekannt; Autor von Rundfunk- und Fernsehproduktionen; Rheinland-Pfälzischer Literaturpreis 1951; Adolf-Grimme Preis 1967; Gerhard-Hauptmann-Preis 1977; umfangreiche Mitarbeit als Autor auch bei Hörfunk und Fernsehen; seit 1999 Ehrenbürger von Unkel; 2007 Verdienstorden des Landes Rheinland-Pfalz; Vater des Historikers Ernst Leonhard Reinirkens." ]
 }

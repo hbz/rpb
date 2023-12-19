@@ -1,23 +1,57 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/929t111801",
-      "label" : "Rhein-Zeitung : unabhängige Tageszeitung"
-    } ],
-    "numbering" : "66.2011,77(1.Apr.) -"
-  } ],
-  "rpbId" : "929t111801b1",
-  "id" : "https://lobid.org/resources/929t111801b1",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "929t111801",
+  "id" : "https://lobid.org/resources/929t111801",
+  "hbzId" : "HT016782154",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Rhein-Zeitung : unabhängige Tageszeitung : 66.2011,77(1.Apr.) -",
+  "title" : "Rhein-Zeitung : unabhängige Tageszeitung",
+  "note" : [ "Vorg. u.d.T.: Rhein-Zeitung / CA. - Vorg. u.d.T.: Rhein-Zeitung / CM" ],
   "publication" : [ {
+    "location" : [ "Koblenz" ],
+    "startDate" : "2011",
+    "publishedBy" : [ "Mittelrhein-Verl." ],
     "type" : [ "PublicationEvent" ]
+  } ],
+  "zdbId" : "2602949-2",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n882026",
+    "label" : "Zeitung. Zeitschrift",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Landkreis Mayen-Koblenz | Zeitung",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4038117-1",
+      "label" : "Landkreis Mayen-Koblenz",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4067510-5",
+      "label" : "Zeitung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n137",
+    "label" : "Mayen-Koblenz, Landkreis",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ]
 }

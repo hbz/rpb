@@ -1,41 +1,56 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051147360",
-  "rppdId" : "pk00012",
-  "gndIdentifier" : "1051147360",
+  "id" : "https://d-nb.info/gnd/120526433",
+  "rppdId" : "pk00011",
+  "gndIdentifier" : "120526433",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/120526433",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Marquard, Udo",
+  "preferredName" : "Grün, Willi H.",
+  "variantName" : [ "Grün, Willi-Heinz / 1932-2016", "Grün, Willi Heinz / 1932-2016", "Grün, Willi H. / 1932-2016" ],
   "professionOrOccupation" : [ {
-    "label" : "Philosoph",
-    "id" : "https://d-nb.info/gnd/4045790-4"
+    "label" : "Finanzwirt",
+    "id" : "https://rpb.lobid.org/sw/1148297561"
   }, {
     "label" : "Schriftsteller",
     "id" : "https://d-nb.info/gnd/4053309-8"
+  }, {
+    "label" : "Kolumnist",
+    "id" : "https://d-nb.info/gnd/4335688-6"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Unkel, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13807073"
+    "label" : "Wahlrod",
+    "id" : "https://rpb.lobid.org/spatial#n14302301"
   } ],
-  "dateOfBirth" : [ "1959" ],
+  "dateOfBirth" : [ "1932-10-10" ],
   "placeOfBirth" : [ {
-    "label" : "Werdohl",
-    "id" : "https://rpb.lobid.org/dummi/Werdohl"
+    "label" : "Wahlrod",
+    "id" : "https://rpb.lobid.org/spatial#n14302301"
   } ],
-  "relatedPerson" : [ {
-    "label" : "Heyberger, Renate",
-    "id" : "https://rpb.lobid.org/dummi/Heyberger, Renate"
+  "dateOfDeath" : [ "2016-09-28" ],
+  "placeOfDeath" : [ {
+    "label" : "Wahlrod",
+    "id" : "https://rpb.lobid.org/spatial#n14302301"
   } ],
-  "publication" : [ "Katzenkiller.1995", "Münstermörder. 1996", "Theaterblut. 1997", "¬Die¬ Breisgau-Boheme. 2000" ],
+  "publication" : [ "Steuern sparen leicht gemacht, 1999ff", "Geld verdienen mit Aktien, 1984ff", "Aschenbraten, 1993.", "Mit nix an den Füß, 2003." ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Philosophie",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#4.7p"
+    "label" : "Finanzwirtschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.5p"
+  }, {
+    "label" : "Schreiben. Dichtung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
   } ],
   "describedBy" : {
-    "dateModified" : "2004-08-04"
+    "dateModified" : "2016-10-05",
+    "source" : [ "Westerwälder Zeitung. - (2003), 147 vom 28.6.", "Westerwälder Zeitung. - (2007), 259 vom 08.11., S. 11", "http://www.autor-willi-gruen.de/ (Stand: 05.10.2016)", "Kennwort \"Happy Börsday\" in: Oeffentlicher Anzeiger / Kreis Bad Kreuznach (West), vom 05.10.2016, S. 7", "http://www.literatur-rlp.de/db_suche.php?autor=Gr%FCn%2C+Willi+H. (Stand: 05.10.2016)", "[Todesanzeige], in: Westerwälder Zeitung, vom 01.10.2016, S. 32", "http://www.literaturnet.uni-koblenz.de/autoren/Gruen+H+Willi.html. (Stand: 05.10.2016)" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Studium der Philosophie, Germanistik und Religionswissenschaft in Heidelberg, Luzern und Freiburg; Promotion in Philosophie; schreibt seit 1994 zusammen mit Renate Heyberger Krimis; seit 1995 freier Schriftsteller und Fachjournalist für den Bereich Philosophie; Mitarbeit beim ARD-Hörfunk", "Internet" ]
+  "biographicalOrHistoricalInformation" : [ "Diplom-Finanzwirt; stellvertretender Leiter eines Finanzamtes; schrieb Ratgeberbücher zum Thema Finanzen, die in zahlreichen Neuauflagen erschienen sind; Der Titel \"Mehr Geld verdienen mit Aktien\" erlebte bis zu seinem Tod 28 Auflagen; er verfaßte in der Koblenzer \"Rhein-Zeitung\" seit 1994 eine regelmäßige Kolumne über die Börsenwoche (\"Happy Börsday\"); seit 1997 freier Mitarbeiter des SWR; (\"Die Sprechstunde\"); schrieb u.a. auch für \"Börse online\" und die \"Finanz-Rundschau\"; er überarbeitete die Dorfchronik seiner Heimatstadt Wahlrod; 2007 erhielt er vom Gewerbeforum Westerwald die Ehrung \"Mit Ecken und Kanten\" für seine beiden Heimatromane; er war 13 Jahre lang Organist in der Dorfkirche von Wahlrod und Dirigent eines Bläserensembles" ]
 }

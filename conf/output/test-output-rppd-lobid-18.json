@@ -1,55 +1,65 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051147433",
-  "rppdId" : "pk00032",
-  "gndIdentifier" : "1051147433",
+  "id" : "https://d-nb.info/gnd/120260948",
+  "rppdId" : "pk00031",
+  "gndIdentifier" : "120260948",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/120260948",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Altgeld, Johann Philipp",
-  "variantName" : [ "Altgelt, Johann Philipp" ],
+  "preferredName" : "Bodewig, Robert",
+  "variantName" : [ "Bodewig, Robert / 1857-1923" ],
   "professionOrOccupation" : [ {
-    "label" : "Pfarrer / Katholische Kirche",
-    "id" : "https://rpb.lobid.org/sw/929n170632"
+    "label" : "Klassischer Philologe",
+    "id" : "https://d-nb.info/gnd/4199241-6"
   }, {
-    "label" : "Lehrer",
-    "id" : "https://d-nb.info/gnd/4035088-5"
+    "label" : "Historiker",
+    "id" : "https://d-nb.info/gnd/4025098-2"
+  }, {
+    "label" : "Archäologe",
+    "id" : "https://d-nb.info/gnd/4191824-1"
+  }, {
+    "label" : "Gymnasiallehrer",
+    "id" : "https://d-nb.info/gnd/4158589-6"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Hachenburg, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14302229"
+    "label" : "Remscheid",
+    "id" : "Remscheid"
   }, {
-    "label" : "Bendorf, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13700203"
+    "label" : "Bünde",
+    "id" : "Bünde"
   }, {
-    "label" : "Roßbach",
-    "id" : "https://rpb.lobid.org/spatial#n14302287"
-  }, {
-    "label" : "Altenkirchen (Westerwald), Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13210501"
+    "label" : "Oberlahnstein",
+    "id" : "https://rpb.lobid.org/spatial#n141000750200"
   } ],
-  "dateOfBirth" : [ "1603" ],
+  "dateOfBirth" : [ "1857-12-01" ],
   "placeOfBirth" : [ {
-    "label" : "Siegen",
-    "id" : "https://rpb.lobid.org/dummi/Siegen"
+    "label" : "Wermelskirchen",
+    "id" : "Wermelskirchen"
   } ],
-  "dateOfDeath" : [ "1658-12-12" ],
+  "dateOfDeath" : [ "1923-12-02" ],
   "placeOfDeath" : [ {
-    "label" : "Altenkirchen (Westerwald), Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13210501"
+    "label" : "Oberlahnstein",
+    "id" : "https://rpb.lobid.org/spatial#n141000750200"
   } ],
-  "publication" : [ "Arzneibuch" ],
+  "publication" : [ "Lahnstein im 30-jährigen Krieg (1894)", "Lahnstein in der zweiten Hälfte des 17. Jahrhunderts (1895)", "¬Die¬ Leiden des Amtes Münstermaifeld während einiger Jahre des 30-jährigen Krieges (1896)", "¬Das¬ Kastell Hunzel (1887)", "¬Das¬ römische Koblenz (1898)", "¬Ein¬ Trevererdorf im Coblenzer Stadtwalde (1900)", "Vorrömische Dörfer in Braubach und Lahnstein (1902/03)", "¬Das¬ Kastell Heddesdorf (1903)", "¬Das¬ Kastell Marienfels (1903)", "Römische Gehöfte zwischen Limes und Rhein (1906)", "Lahnstein in den Kriegsereignissen des 18. Jahrhunderts (1911)", "¬Das¬ Limeskastell Ems (1911)", "¬Das¬ Straßennetz im Gebiet des Limes von der Lahn bis zur Aar I. (1914)", "¬Das¬ Straßennetz im Gebiet des Limes von der Lahn bis zur Aar II. (1916)" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
+    "label" : "Geschichtswissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.1p"
+  }, {
     "label" : "Bildung. Erziehung",
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
-  }, {
-    "label" : "Kirche",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.6p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-03-20"
+    "dateModified" : "2006-05-15",
+    "source" : [ "Kurzbiographien vom Mittelrhein und Moselland, 1968", "Kuhn, Hans G.: Robert Bodewig - Versuch einer Biographie. - In: Bodewig: Professor Dr. Robert Bodewig / hrsg. vom Lahnsteiner Altertumsverein 1880 e.V. - Lahnstein. - 2 (2005).- ISBN 3-9807361-7-2. - S. 233-259" ]
   },
-  "biographicalOrHistoricalInformation" : [ "1625 Oberschulmeister zu Hachenburg; 1627 Kaplan zu Bendorf; ab 1632 Pfarrer zu Roßbach, ab 1637 zu Altenkirchen", "Renkhoff, Otto: Nassauische Biographie, 1985" ]
+  "biographicalOrHistoricalInformation" : [ "Stammte aus einfachsten Verhältnissen (Vater war Holzschneider, Tagelöhner, Landmann); 01.09.1878-01.10.1881 Elementarlehrer in Remscheid; 21.03.1882 Abitur in Barmen (nach externer Vorbereitung); SS 1882 - WS 1884/85 Studium der klassischen Philologie in Berlin; SS 1885 und WS 1885/86 Studium in Münster; 10.02.1886 Erstes Staatsexamen für das Lehramt an Gymnasien für Geschichte, Geographie, Latein und Griechisch; ab April 1886 Probejahr am Gymnasium Barmen; 13.08.1886 Promotion; 01.04.1887 bis 31.03.1889 Lehrer an der Höheren Töchterschule mit Knabensexta in Unterbarmen; 01.04.1888 bis 31.09.1890 Gründungsrektor der Höheren Knabenschule in Bünde (das heutige Freiherr-vom-Stein-Gymnasium); 01.10.1890 bis 31.03.1891 Hilfslehrer am Realprogymnasium Oberlahnstein (heutiges Marion-Dönhoff-Gymnasium); 04.12.1890 Erweiterungsprüfung für Evangelische Religion; 01.04.1891 bis 31.03.1923 Oberlehrer am Städtischen (Realpro-)Gymnasium Oberlahnstein; 27.01.1906 Verleihung des Charakters als Professor; 12.03.1906 Verleihung des Ranges eines Rats IV. Klasse; 26.05.1914 Verleihung des Roten Adlerordens IV. Klasse; 1914 Ernennung zum Ehrenmitglied im Verein für Nassauische Altertumskunde und Geschichtsforschung anlässlich der Eröffnung des (später nach ihm benannten) Museums; November 1920 bis 14. Mai 1922 kommissarischer Leiter des Gymnasiums Oberlahnstein; engagierte sich vor allem in der Vor und Frühgeschichte des Taunus und des Rhein-Westerwaldes; führte ab 1892 den Lahnsteiner Altertumsverein; seit 1897 Streckenkommissar der Reichslimeskommission; grub aus und dokumentierte die Kastelle Heddesdorf (bei Neuwied), Ems, Hunzel und Marienfels; bereitete die Archivalien auf für eine \"Geschichte der Stadt Oberlahnstein\", die zum Stadtrechtsjubiläum 1925 erscheinen sollte; sein früher Tod beendete seine Arbeiten, die von Dr. Fritz Michel fortgeführt und beendet wurden." ]
 }

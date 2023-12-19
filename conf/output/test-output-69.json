@@ -1,30 +1,29 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "929t084698",
-  "id" : "https://lobid.org/resources/929t084698",
+  "rpbId" : "929t084695",
+  "id" : "https://lobid.org/resources/929t084695",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Pfarr- und Wallfahrtskirche Pfarrer-Kraus-Anlagen Arenberg [Elektronische Ressource]",
-  "responsibilityStatement" : [ "[Gerd Moos]" ],
+  "title" : "Festschrift des DRK-Ortsverein Adenau e.V. [Elektronische Ressource]",
   "publication" : [ {
-    "location" : [ "Koblenz" ],
+    "location" : [ "Adenau" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844030",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n532030",
+    "label" : "Medizinische Versorgung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
   }, {
-    "id" : "http://purl.org/lobid/rpb#n704634",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n428076",
+    "label" : "Rettungswesen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -32,26 +31,26 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sankt Nikolaus / Koblenz | DVD-ROM",
+    "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau | Geschichte 1883-2008",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4515647-5",
-      "label" : "Sankt Nikolaus / Koblenz",
+      "id" : "https://d-nb.info/gnd/10361782-6",
+      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4585131-1",
-      "label" : "DVD-ROM",
+      "id" : "https://rpb.lobid.org/sw/00Sn08m0186730g",
+      "label" : "Geschichte 1883-2008",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n111000000100",
-    "label" : "n111000000100",
+    "id" : "https://rpb.lobid.org/spatial#n13101001",
+    "label" : "Adenau, Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -60,12 +59,12 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0717486a",
-      "label" : "Moos, Gerd"
+      "id" : "https://d-nb.info/gnd/10361782-6",
+      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
   } ]

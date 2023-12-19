@@ -1,23 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "929t084664",
-  "id" : "https://lobid.org/resources/929t084664",
+  "rpbId" : "929t084660",
+  "id" : "https://lobid.org/resources/929t084660",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "100 Jahre St. Barbara in Koblenz : 1908 - 2008",
-  "extent" : "99 S. : zahlr. Ill.",
-  "responsibilityStatement" : [ "Alten- und Pflegeheim St. Barbara Koblenz. [Autoren: Ulrich Keller ... ]" ],
+  "title" : "Chronik [Elektronische Ressource]",
   "publication" : [ {
-    "location" : [ "Koblenz" ],
+    "location" : [ "Wassenach" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n523090",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n736050",
+    "label" : "Sportverein",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -25,26 +23,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Alten- und Pflegeheim St. Barbara / Koblenz | Geschichte 1908-2008",
+    "label" : "Sport-Club 1957 / Wassenach | Geschichte 1957-2007 | Chronik",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/10360311-6",
-      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz",
+      "id" : "https://d-nb.info/gnd/10179791-6",
+      "label" : "Sport-Club 1957 / Wassenach",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08s0514595a",
-      "label" : "Geschichte 1908-2008",
+      "id" : "https://rpb.lobid.org/sw/00Sn07k1956385a",
+      "label" : "Geschichte 1957-2007",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
+    }, {
+      "id" : "https://d-nb.info/gnd/4127914-1",
+      "label" : "Chronik",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n11100000",
-    "label" : "n11100000",
+    "id" : "https://rpb.lobid.org/spatial#n13104209",
+    "label" : "Wassenach",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -53,18 +58,18 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn04k3045137a",
-      "label" : "Keller, Ulrich"
+      "id" : "https://d-nb.info/gnd/10179791-6",
+      "label" : "Sport-Club 1957 / Wassenach"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/oth",
-      "label" : "Sonstige"
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/10360311-6",
-      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz"
+      "id" : "https://d-nb.info/gnd/SC Wassenach 1957",
+      "label" : "SC Wassenach 1957"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

@@ -1,59 +1,56 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/118649558",
-  "rppdId" : "pk00022",
-  "gndIdentifier" : "118649558",
+  "id" : "https://d-nb.info/gnd/1051147395",
+  "rppdId" : "pk00021",
+  "gndIdentifier" : "1051147395",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Anschuez, Joseph Andreas",
-  "variantName" : [ "Anschütz, Josef Andreas", "Anschuez, Johann Andreas", "Anschuez, Josef Andreas", "Anschütz, Joseph Andreas", "Anschuetz, Johann Andreas", "Anschuez, J. A.", "Anschütz, J. A.", "Anschütz, Johann Andreas", "Anschuez, Joseph Andreas" ],
+  "preferredName" : "Anschuez, Carl",
+  "variantName" : [ "Anschutz, Carl / 1818-1870", "Anschütz, Karl Friedrich Nikolaus / 1818-1870" ],
   "professionOrOccupation" : [ {
-    "label" : "Jurist",
-    "id" : "https://d-nb.info/gnd/4029050-5"
+    "label" : "Komponist",
+    "id" : "https://d-nb.info/gnd/4032009-1"
   }, {
-    "label" : "Musikdirektor",
-    "id" : "https://d-nb.info/gnd/7628980-1"
+    "label" : "Dirigent",
+    "id" : "https://d-nb.info/gnd/4012434-4"
   } ],
   "placeOfActivity" : [ {
     "label" : "Koblenz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n11100000"
+  }, {
+    "label" : "London",
+    "id" : "London"
+  }, {
+    "label" : "New York, NY",
+    "id" : "New York, NY"
   } ],
-  "dateOfBirth" : [ "1772-03-19" ],
+  "dateOfBirth" : [ "1818-01-10" ],
   "placeOfBirth" : [ {
     "label" : "Koblenz, Kreisfreie Stadt",
     "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
-  "dateOfDeath" : [ "1855-12-26" ],
+  "dateOfDeath" : [ "1870-12-30" ],
   "placeOfDeath" : [ {
-    "label" : "Koblenz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n11100000"
+    "label" : "New York, NY",
+    "id" : "New York, NY"
   } ],
   "relatedPerson" : [ {
-    "label" : "Anschuez, Carl",
-    "id" : "https://d-nb.info/gnd/1051147395"
-  }, {
-    "label" : "Anschuez, Franz Caspar",
-    "id" : "https://d-nb.info/gnd/1051177324"
-  }, {
-    "label" : "Anschuez, Heinrich Franz",
-    "id" : "https://d-nb.info/gnd/1051177332"
+    "label" : "Anschuez, Joseph Andreas",
+    "id" : "https://d-nb.info/gnd/118649558"
   }, {
     "label" : "Anschütz, Hermann",
     "id" : "https://d-nb.info/gnd/116312351"
   } ],
-  "publication" : [ "¬Das¬ Blümlein Wunderschön", "Trois chansons allemandes", "Rhapsodische Gesänge", "2 Tantum ergo und 1 Ecce panis", "Wer kauft Liebesgötter!" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Recht",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.14p"
-  }, {
     "label" : "Musik. Musikwissenschaft",
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2020-12-01"
+    "dateModified" : "2020-12-02",
+    "source" : [ "Rhein-Zeitung, Ausg. B, Nr. 301 vom 29.12.1995", "Kurzbiographien vom Mittelrhein und Moselland, 1968", "Uwe Baur: Vom \"ungeratenen Sohn\" zum Weltstar ... In: Arbeitsgemeinschaft für Mittelrheinische Musikgeschichte: Mitteilungen. - 90 (2018), Seite 3-51" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Studium der Rechtswissenschaft an der Universität Mainz; Anhänger der cisrhenanischen Bewegung; erhielt 1797 am Kriminalgericht in Koblenz eine Anstellung als Gerichtsschreiber; heiratete 1799 Maria Anna Kröll, der Ehe entstammten u.a. die Söhne Karl Friedrich und Hermann Franz; 1806 bis 1814 Richter; 1808 Gründungsmitglied der Koblenzer Casino-Gesellschaft und Mitglied der Koblenzer Freimaurerloge \"L'Union désirée\"; gründete ebenfalls 1808 das Koblenzer Musik-Institut, welches er bis 1842 leitete; errichtete eine Lehranstalt für Instrumentalmusik und eine Gesangsschule; komponierte auch selbst; ab 1815 Richter am ersten Instanzgericht; im Anschluß bis nach 1848 Staatsprokurator am Landgericht", "Rhein-Zeitung, Ausgabe B, Nr. 301 vom 29.12.1995", "Katharina Thielen: Notabelnpolitik in Koblenz, Trier 2020" ]
+  "biographicalOrHistoricalInformation" : [ "Sohn von Joseph Andreas Anschuez und seiner Frau Anna Maria, geb. Kröll, Bruder von Hermann Franz; studierte von 1835 bis 1838 in Dessau in der Musikschule des dortigen Hofkapellmeisters Friedrich Schneider; danach u.a. als Gesangs- und Klavierlehrer am von seinem Vater gegründeten Koblenzer Musikinstitut tätig; von 1837 bis 1841 Präsident der Liedertafel Koblenz; dirigierte auch am dortigen Stadt-Theater; von 1843 bis 1847 dann Leiter des Musikinstituts; Gründer und Leiter des Gesangvereins Koblenzer Handwerker; 1847 wanderte Anschuez über Amsterdam nach London aus, wo er von 1849 bis 1857 als Dirigent tätig war, seit 1857 dann in New York; von 1862 bis 1865 Musikdirektor der German Opera in New York" ]
 }

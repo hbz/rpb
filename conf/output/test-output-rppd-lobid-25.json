@@ -1,48 +1,35 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/137243324",
-  "rppdId" : "pta1488",
-  "gndIdentifier" : "137243324",
+  "id" : "https://d-nb.info/gnd/1051215528",
+  "rppdId" : "pta1487",
+  "gndIdentifier" : "1051215528",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Zillig, Hermann",
+  "preferredName" : "Zillgen, Friedrich Josef",
   "professionOrOccupation" : [ {
-    "label" : "Oberregierungsrat",
-    "id" : "https://d-nb.info/gnd/4398834-9"
+    "label" : "Polizeibeamter",
+    "id" : "https://d-nb.info/gnd/4135253-1"
   } ],
-  "placeOfActivity" : [ {
-    "label" : "Würzburg",
-    "id" : "https://rpb.lobid.org/dummi/Würzburg"
-  }, {
-    "label" : "Trier, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n21100000"
-  }, {
-    "label" : "Bernkastel",
-    "id" : "https://rpb.lobid.org/spatial#n231010080200"
-  } ],
-  "dateOfBirth" : [ "1893-04-21" ],
+  "dateOfBirth" : [ "1806-08-29" ],
   "placeOfBirth" : [ {
-    "label" : "Würzburg",
-    "id" : "https://rpb.lobid.org/dummi/Würzburg"
+    "label" : "Gillenfeld",
+    "id" : "https://rpb.lobid.org/spatial#n23301027"
   } ],
-  "dateOfDeath" : [ "1952-10-16" ],
+  "dateOfDeath" : [ "1870-06-10" ],
   "placeOfDeath" : [ {
-    "label" : "Bernkastel-Kues, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n23101008"
+    "label" : "Gillenfeld",
+    "id" : "https://rpb.lobid.org/spatial#n23301027"
   } ],
-  "publication" : [ "Abschied vom Deutschen Weinmuseum in Trier - in: Illustrierte Weinzeitung, Beilage zur Deutschen Weinzeitung 1950", "¬Der¬ echte Mehltau des Weinstocks und seine Bekämpfung. Spritz- und Staub beim Arbeiten im Weinberg, Flugblatt der Reichsanstalt für Land- und Forstwirtschaft Nrn.52, 55, 88, 89", "¬Das¬ Trierer Weinmuseum - in: Rhein. Heimatblätter 5 (1928) 162-164", "Über die spezialisierten Formen beim Antherenbrand, Jena 1921, zugleich Dissertation Würzburg 1921", "¬Die¬ wirtschaftl. Bedeutung des Rebschutzes in Deutschland, Berlin-Dahlem 1941", "¬Die¬ Zweigstelle der Biologischen Reichsanstalt für Land- und Forstwirtschaft in Trier - in: Gottfried Kentenich: Trier, 2. Aufl Berlin-Halensee 1925, 87 f" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Landwirtschaft",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#32.10p"
-  }, {
     "label" : "Öffentliche Verwaltung",
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.15p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-07-11"
+    "dateModified" : "2006-07-11",
+    "source" : [ "Horst Romeyk: Die leitenden staatlichen und kommunalen Verwaltungsbeamten der Rheinprovinz 1816-1945, Düsseldorf 1994, 830" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Abitur 1912 Würzburg, Studium der Naturwissenschaften ebd. 1919 begründete Z das Fränkische Museum für Naturkunde in Würzburg. 1920 Promotion zum Dr. phil. in Würzburg. 1921 Eintritt in die Biologische Reichsanstalt (später Bundesanstalt) für Land- und Forstwirtschaft, Zweigstelle Trier. 1926 Verlegung der Dienststelle nach Bernkastel. Z baute hier das Institut für Weinbau auf und leitete diese als Direktor bis zu seinem Tod. 1927 war er zum Regierungsrat und später zum Oberregierungsrat ernannt worden. - Auf Vorschlag v. Z beschloß die Stadtverordnetenversammlung Trier 1925 die Einrichtung eines Weinmuseums und beauftragte Z mit der Einrichtung. Das Museum wurde 1927 als \"Deutsches Weinmuseum\" eingeweiht und bis 1937 v. Z ehrenamtlich geleitet; offenbar wegen Differenzen mit der inzwischen nationalsozialistisch bestimmten Stadtverwaltung legte er die Leitung nieder. 1933 wurde auf seine Anregung hin eine Wetterbeobachtungsstation auf dem Erbeskopf errichtet. 25 Jahre lang war Z Vorsitzender der Bernkasteler Gruppe des Hunsrückvereins und Mitglied des Hauptvorstandes. - *Heirat: mit Gertrud Niemand. - ---[Daten übernommen aus: Heinz Monz, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Bernhard Simon: Deutsches Weinmuseum in Trier, in: 2000 Jahre Weinkultur an Mosel-Saar-Ruwer, Trier 1987, 222-227", "Nachruf, in: Blätter für Mosel Hochwald Hunsrück 2 (1952) 47", "Trauerfeier für Dr. Z, in: Rhein. Zeitung (Ausgabe Mittelmosel) Nr.243 v. 18./19.10.1952", "Nachlaß im Stadtarchiv Trier" ]
+  "biographicalOrHistoricalInformation" : [ "Polizeidirektor. - Gymnasium in Trier, bis 1848 (?) Bürgermeister v. Gillenfeld, 1851 Polizeidirektor in Trier, 1863 wegen Auflösung der Dienststelle zur Disposition gestellt. - *Heirat: 1836 mit Apollonia Reiff. - ---[Daten übernommen aus: Horst Romeyk, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
 }

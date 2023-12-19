@@ -1,39 +1,52 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/117021652",
-  "rppdId" : "pta1497",
-  "gndIdentifier" : "117021652",
-  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Zuckermandel, Moses S.",
-  "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],
-  "professionOrOccupation" : [ {
-    "label" : "Rabbiner",
-    "id" : "https://d-nb.info/gnd/4176751-2"
+  "id" : "https://d-nb.info/gnd/117006084",
+  "rppdId" : "pta1496",
+  "gndIdentifier" : "117006084",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/117006084",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
   }, {
-    "label" : "Talmudist",
-    "id" : "https://d-nb.info/gnd/4293593-3"
+    "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=117006084",
+    "collection" : {
+      "name" : "Tripota - Trierer Porträtdatenbank"
+    }
   } ],
-  "dateOfBirth" : [ "1836-04-24" ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zirbes, Peter",
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Zirbes.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Peter%20Zirbes.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Zirbes.jpg?width=270"
+  } ],
+  "professionOrOccupation" : [ {
+    "label" : "Lyriker",
+    "id" : "https://d-nb.info/gnd/4168391-2"
+  } ],
+  "dateOfBirth" : [ "1825-01-10" ],
   "placeOfBirth" : [ {
-    "label" : "Uhersky▐ü Brod",
-    "id" : "https://rpb.lobid.org/dummi/Uhersky▐ü Brod"
+    "label" : "Niederkail (Ortsbezirk)",
+    "id" : "https://rpb.lobid.org/spatial#n231085030300"
   } ],
-  "dateOfDeath" : [ "1917" ],
+  "dateOfDeath" : [ "1901-11-14" ],
   "placeOfDeath" : [ {
-    "label" : "Breslau",
-    "id" : "https://rpb.lobid.org/dummi/Breslau"
+    "label" : "Niederkail (Ortsbezirk)",
+    "id" : "https://rpb.lobid.org/spatial#n231085030300"
   } ],
-  "publication" : [ "¬Die¬ Erfurter Handschrift der Tosefta beschrieben und geprüft. Tosefta nach den Erfurter und Wiener Handschriften, Pasewalk 1880", "Gesammelte Aufsätze, Frankfurt a.M. 1912-1914" ],
+  "publication" : [ "Gedichte v. Peter Z, hausierendem Porzellanhändler v. Niederkail in der Eifel, hrsg. v. Wilhelm Oertel (Pseudonym W.O. v. Horn), 5. Aufl Sobernheim 1852", "Des wandernden Steinguthändlers Peter Z Eifelsagen und Gedichte. Neue Auswahlausgabe, Wittlich 1928", "Josef Feiten/Hermann Spoo (Hrsg.): Ons Muselland. Dichtungen und Erzählungen in moselfränkischen Mundarten, Konz/ Trier 1950", "Peter Z, Eifeldichter und wandernder Steinguthändler aus Niederkail. Auswahl seiner Gedichte und Sagen, hrsg. aus Anlaß seines 75. Todestages v. der Verbandsgemeinde Wittlich-Land, Wittlich 1976" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Religionswissenschaft und nichtchristliche Religionen",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.1p"
+    "label" : "Schreiben. Dichtung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-07-11"
+    "dateModified" : "2006-07-11",
+    "source" : [ "Christoph Holkenbrink: Verbandsgemeinde Wittlich-Land, in: Zeitenwende. Das 20. Jahrhundert im Landkreis Bernkastel Wittlich, bearbeitet von Erwin Schaaf, Wittlich 2000, 507-509 (508)", "Peter Kremer: Der Eifel-Dichter Peter Z, in: Eifel-Jb 1963, 111-114", "Vera Kuhn: Peter Z, Hausierhändler und Dichter aus Niederkail (1825-1901), in: Heimatkalender Bitburg bzw. Bitburg-Prüm, 1991, 155-157", "Martin Persch: Z, in: Biographisch-Bibliographisches Kirchenlexikon, Hamm bzw. Herzberg 1975 ff., XIII (1998) 547-549", "Ders: Ergänzungen zur Biographie, in: Jahrbuch des Landkreises Bernkastel-Wittlich, 1994, 339-343", "Hans Schaefer/ Peter Kremer (Hrsg.): Land zwischen Mosel und Maaren, Heft 11: Männer der Heimat, Wittlich 1953.", "*Abbildungen: Porträt bei Kremer 111." ]
   },
-  "biographicalOrHistoricalInformation" : [ "Oberrabbiner, Talmudist. - Z stammte aus einer Rabbinerfamilie. Er erhielt bereits in der Kindheit eine talmudische Ausbildung, studierte am Rabbinerseminar und an der Universität Breslau, 1863 Promotion, 1864 Rabbinatsprüfung - Z hatte Rabbinerstellen in Gnesen, Mährisch-Friedland und Pasewalk. 1881-1890 war er Oberrabbiner in Trier, danach in Pleschen und Breslau. - Z verfaßte zahlreiche Abhandlungen zu halachischen, sprachl, lexikalischen, exegetischen, archäologischen und pädagogischen Themen. Sein Hauptwerk war die Edition der Tosefta, basierend auf einer Erfurter und Wiener Handschrift. - *Heirat: mit Elise Rawitz. - ---[Daten übernommen aus: Annette Haller, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Geboren in Ungarisch Brod (heute Uhersk¡ Brod, Tschechien)", "Moses Samuel Z (zu seinem 80. Geburtstag), in: Allgemeine Zeitung des Judenthums, 80 (1916), Nr. 20 v. 19.05.1916, 234 f.", "Pinkas Lapide, Hilmar Schmuck (Hg.): Jüdisches Biographisches Archiv, Microfiche-Ausgabe, München 1994-1998, Fiche 660", "Emil Zenz: Geschichte der Stadt Trier im 19. Jahrhundert, Bd. 1 und 2, Trier 1979 f, Band 2, 205 f" ]
+  "biographicalOrHistoricalInformation" : [ "Dichter und Autodidakt. - Die Eltern waren arme Hausierer, die mit Glas, Porzellan und Steingut v. Dorf zu Dorf zogen. Z reimte und malte schon als Kind gerne, und zwar gegen den Widerstand v. Eltern und Lehrern. Da keine Berufsausbildung mögl. war, zog Z mit seinen Eltern als Wanderhändler durch die Dörfer der Eifel, wo er alte Sagen hörte und in Versform brachte und erzählende Gedichte und Lieder in Hochdeutsch und Mundart verfaßte. 1852 erschien die 1. Auflage seiner Gedichte. Er widmete König Wilhelm IV. ein Exemplar und erhielt 150 Taler dafür. Der Schriftsteller Gustav Freytag und der Prümer Landrat Bärsch setzten sich für Z ein. 1863 gab Z den Hausiererhandel auf, betrieb ein Kolonialwarengeschäft und eine Versicherungsagentur; die finanzielle Lage blieb angespannt. - Das Elternhaus in Niederkail ist heute Gedenkstätte für Z. - *Heirat: 1891 mit Anna Maria Thiel. - ---[Daten übernommen aus: Christoph Krapp, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
 }

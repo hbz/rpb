@@ -1,23 +1,56 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/121t0144215",
-      "label" : "Bibliographie zu den Jahrbüchern des Kreises Daun"
-    } ],
-    "numbering" : "1973/90 (1990) -"
-  } ],
-  "rpbId" : "121t0144215b1",
-  "id" : "https://lobid.org/resources/121t0144215b1",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "121t0144215",
+  "id" : "https://lobid.org/resources/121t0144215",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Bibliographie zu den Jahrbüchern des Kreises Daun : 1973/90 (1990) -",
+  "title" : "Bibliographie zu den Jahrbüchern des Kreises Daun",
+  "responsibilityStatement" : [ "Kreis Daun, Vulkaneifel. Hrsg.: Kreisverwaltung Daun" ],
   "publication" : [ {
+    "location" : [ "Monschau" ],
+    "publishedBy" : [ "Weiss-Dr." ],
     "type" : [ "PublicationEvent" ]
+  } ],
+  "zdbId" : "0939-9607",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n882026",
+    "label" : "Zeitung. Zeitschrift",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Ortsgeschichte",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n23301501",
+    "label" : "Daun, Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/2038546-8",
+      "label" : "Landkreis Daun"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/org",
+      "label" : "HE Urheber"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

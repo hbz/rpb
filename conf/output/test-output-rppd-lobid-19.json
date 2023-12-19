@@ -1,29 +1,48 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/11698211X",
-  "rppdId" : "pta1481",
-  "gndIdentifier" : "11698211X",
+  "id" : "https://d-nb.info/gnd/1051147433",
+  "rppdId" : "pk00032",
+  "gndIdentifier" : "1051147433",
+  "sameAs" : [ {
+    "id" : "https://www.lagis-hessen.de/pnd/1051147433",
+    "collection" : {
+      "name" : "Hessische Biografie"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Zenz, Emil",
-  "variantName" : [ "Zenz, Emil" ],
+  "preferredName" : "Altgeld, Johann Philipp",
+  "variantName" : [ "Altgelt, Johann Philipp" ],
   "professionOrOccupation" : [ {
+    "label" : "Pfarrer / Katholische Kirche",
+    "id" : "https://rpb.lobid.org/sw/929n170632"
+  }, {
     "label" : "Lehrer",
     "id" : "https://d-nb.info/gnd/4035088-5"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Hachenburg, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14302229"
   }, {
-    "label" : "Bürgermeister",
-    "id" : "https://d-nb.info/gnd/4136676-1"
+    "label" : "Bendorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13700203"
+  }, {
+    "label" : "Roßbach",
+    "id" : "https://rpb.lobid.org/spatial#n14302287"
+  }, {
+    "label" : "Altenkirchen (Westerwald), Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13210501"
   } ],
-  "dateOfBirth" : [ "1912-07-24" ],
+  "dateOfBirth" : [ "1603" ],
   "placeOfBirth" : [ {
-    "label" : "Trier, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n21100000"
+    "label" : "Siegen",
+    "id" : "Siegen"
   } ],
-  "dateOfDeath" : [ "1994-02-03" ],
+  "dateOfDeath" : [ "1658-12-12" ],
   "placeOfDeath" : [ {
-    "label" : "Trier, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n21100000"
+    "label" : "Altenkirchen (Westerwald), Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13210501"
   } ],
-  "publication" : [ "Chronik der Stadt Trier. 2000 Jahre in Daten, Berichten und Bildern, Trier 1985", "Geschichte der Stadt Trier in der ersten Hälfte des 20. Jhs, 3 Bde, Trier 1967-1973", "Geschichte der Stadt Trier im 19. Jh, 2 Bde, Trier 1979 f.", "¬Die¬ kommunale Selbstverwaltung der Stadt Trier seit Beginn der preuss. Zeit 1814-1959, Trier 1959", "¬Die¬ Straßennamen der Stadt Trier, 3. Aufl Trier 1984", "Trier im 18. Jahrhundert 1700-1794, Trier 1981", "¬Die¬ Trierer Universität 1473 bis 1798, Trier 1949", "Insgesamt 41 selbständig erschienene Werke und Mitverfasser an 3 weiteren, 140 Aufsätze, 64 Artikel und 60 Buchbesprechungen (dazu Bibliographie bei Franz, s. SekundΣrliteratur", "Z war Mitglied der Redaktionen des Trierisches Jahrbuch, 1950 bis 1960, Kurtrierisches Jahrbuch, 1961 ff, und Jahrbuch des Landkreises Trier-Saarburg" ],
+  "publication" : [ "Arzneibuch" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
@@ -32,11 +51,12 @@
     "label" : "Bildung. Erziehung",
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
   }, {
-    "label" : "Politiker und historische Persönlichkeiten",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+    "label" : "Kirche",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.6p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-07-11"
+    "dateModified" : "2006-03-20",
+    "source" : [ "Renkhoff, Otto: Nassauische Biographie, 1985" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Oberstudiendirektor, Bürgermeister. - Z studierte Geschichte, Germanistik, Anglistik, Philosophie und Kunstgeschichte in Freiburg i.Brsg., London und Köln. Promotion Köln 1939 zum Dr. phil. Nach Kriegsdienst und Gefangenschaft 1940-1946 im höheren Schuldienst, 1951-1957 Oberstudiendirektor an zwei Trierer Gymnasien - 1946-1949 war Z Vorsitzender der Jungen Union in Trier. Der CDU angehörend war er 1947-1957 Mitglied des Stadtrates und 1957-1977 Beigeordneter bzw. Bürgermeister der Stadt Trier. Mit dem ihm eigenen Ideenreichtum, Engagement und Geschick für seine Stadt, verbunden mit einem konsequenten Durchsetzungsvermögen prägte gerade Z entscheidend den Wiederaufbau der Stadt Trier. Bei ihm fand sich eine glückl Synthese v. historisch wissenschaftl. Neigung und praktischer Kommunalpolitik. Seine vielfach grundlegenden historischen Publikationen waren zugleich Grundlage seiner Kommunalpolitik. Den kulturellen Einrichtungen der Stadt galt seine besondere Neigung, so dem Neubau der Stadtbibliothek, des Theaters und vor allem der Wiedereröffnung der Trierer U. - Z war der Begründer der Städtefreundschaften mit Metz und Gloucester. - Die Krönung seines Wirkens für die Stadt blieb Z versagt, weil der Stadtrat bei der Oberbürgermeisterwahl 1963 die einmalige Sternstunde, nach 145 Jahren erstmals wieder einen gebürtigen Trierer berufen zu können, (knapp) verpaßte, obwohl Z wie wenige Trierer nach langer Zeit hierfür besonders befähigt war. - Z war auch in vielen überörtl. Gremien tätig, u.a. als Vorsitzender des Landesbeirates für Denkmalpflege. Ihm wurden zahlreiche Ehrungen zuteil, so die Wahl zum Ehrensenator der Universität Trier, die Verleihung des Ehrensiegels der Stadt Trier, des Bundesverdienstkreuzes, des Verdienstordens des Landes Rheinland-Pfalz und der französ. Palmes académiques. - *Heirat: mit Erika Relles.\n\nSekundärliteratur: Gunther Franz: Glückwunsch für Emil Z zum 80. Geburtstag am 24.07.1992; in: Kurtrierisches Jahrbuch, 1961 ff, 1992 11-19 - Guido Groß: Emil Z zum 80. Geburtstag; in Neues Trierisches Jahrbuch, 1961 ff, 1992, 209 f. - Norbert Kohler: Kommunalpolitiker, Historiker und Trierer Bürger; in: Trierischer Volksfreund, Nr.30 vom 5./6.02.1994, S.6 - Richard Laufner: Dr. Emil Z (1912-1994) zum Gedenken; in: Jahrbuch des Landkreises Trier-Saarburg, 1995, 22-24 - Heinz Monz: Aufbaujahre, Trier 1987, (insbes 168 ff) - Heinz Monz: In memoriam Dr. Emil Z. Non omnis moriar; in: Die Bücherei (Koblenz) 38 (1994) 297 f. - Dr. Emil Z wird 80 Jahre alt; in: Jahrbuch des Landkreises Trier-Saarburg, 1992, 87-89. ---[Daten übernommen aus: Heinz Monz, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+  "biographicalOrHistoricalInformation" : [ "1625 Oberschulmeister zu Hachenburg; 1627 Kaplan zu Bendorf; ab 1632 Pfarrer zu Roßbach, ab 1637 zu Altenkirchen" ]
 }

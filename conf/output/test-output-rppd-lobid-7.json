@@ -1,25 +1,49 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051147379",
-  "rppdId" : "pk00014",
-  "gndIdentifier" : "1051147379",
+  "id" : "https://d-nb.info/gnd/116324899",
+  "rppdId" : "pk00013",
+  "gndIdentifier" : "116324899",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/116324899",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  }, {
+    "id" : "http://www.leo-bw.de/web/guest/detail/-/Detail/details/PERSON/wlbblb_personen/116324899/person",
+    "collection" : {
+      "name" : "Personen der Landesbibliographie Baden-Württemberg"
+    }
+  } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Henninger, Wilhelm Albert",
+  "preferredName" : "Gabele, Anton",
+  "variantName" : [ "Gabele, Anton" ],
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Anton%20Gabele.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Anton%20Gabele.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Anton%20Gabele.jpg?width=270"
+  } ],
   "professionOrOccupation" : [ {
-    "label" : "Heimatschriftsteller",
-    "id" : "https://d-nb.info/gnd/4772761-5"
+    "label" : "Lehrer",
+    "id" : "https://d-nb.info/gnd/4035088-5"
+  }, {
+    "label" : "Schriftsteller",
+    "id" : "https://d-nb.info/gnd/4053309-8"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Bad Ems, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14110006"
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
   } ],
-  "dateOfBirth" : [ "1912" ],
+  "dateOfBirth" : [ "1890-07-28" ],
   "placeOfBirth" : [ {
-    "label" : "Limburg <Lahn>",
-    "id" : "https://rpb.lobid.org/dummi/Limburg <Lahn>"
+    "label" : "Buffenhofen",
+    "id" : "Buffenhofen"
   } ],
-  "dateOfDeath" : [ "1995" ],
-  "publication" : [ "Du Perle des Lahntals, 1960", "¬Die¬ Kunterbunts, 1978", "Märchen, ca. 1948", "Ave Maria, o.J.", "Sklaven des Glücks, o.J.", "Bad Ems, du Labsal der Natur, o.J." ],
+  "dateOfDeath" : [ "1966-08-13" ],
+  "placeOfDeath" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
+  "publication" : [ "Blinde Passagiere, 1961", "Haus zur Sonne, 1953", "Im Schatten des Schicksals, 1930", "¬Die¬ Prinzessin mit der Geiß, 1958", "Pfingsten, 1934", "Talisman, 1937", "Reise nach Bernkastel, 1957", "¬Die¬ Zwillingsbrüder, 1943", "¬Der¬ Wundermann vom Bodensee, 1956" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
@@ -29,7 +53,8 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
   } ],
   "describedBy" : {
-    "dateModified" : "2005-12-08"
+    "dateModified" : "2007-03-06",
+    "source" : [ "Eichendorff-Gymnasium Koblenz - Festschrift, 2005", "Handschr. Konvolut Büchereistelle Koblenz, Henner Grube" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Kaufmannslehre; freiberufliche Arbeit als Schriftsteller und Mitarbeiter des bischöflichen Verlages in Limburg; Berufsverbot; Soldat; Eröffnung eines Kaufhauses in Limburg; 1944 Umzug nach Nassau; Anfang der 50er Jahre Umzug nach Bad Ems; Eröffnung des Kaufhauses Henninger und der Pension Lahntal", "Internet" ]
+  "biographicalOrHistoricalInformation" : [ "Er studierte die \"neueren Sprachen\" in Straßburg, München, Genf, Halle/Saale, Berlin und Bonn; ab 1913 war er Mittelschullehrer in Koblenz und Studienrat in Bonn; er wurde im ersten Weltkrieg bei Verdun verwundet; danach legte er in Bonn nach 1917 das philologische Staatsexamen ab und lehrte ab 1919 als Studienrat in Koblenz, es folgte 1920 seine Promotion in Bonn; er war neben den pädagogischen Aufgaben auch erfolgreich als Schriftsteller tätig; er erhielt das Große Bundesverdienstkreuz, die Stadt Koblenz benannte eine Straße nach ihm und sein Heimatort verlieh ihm die Ehrenbürgerwürde; aufgrund unterschiedlicher Quellenangaben ist sein Sterbedatum nicht genau zu benennen und differiert zwischen 1966 und 1967" ]
 }

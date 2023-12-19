@@ -1,23 +1,24 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "929t084657",
-  "id" : "https://lobid.org/resources/929t084657",
+  "rpbId" : "929t084656",
+  "id" : "https://lobid.org/resources/929t084656",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Fit zur WM 2006 [Elektronische Ressource]",
-  "responsibilityStatement" : [ "Grundschule St. Johannes" ],
+  "title" : "Weinteufel [Elektronische Ressource]",
+  "responsibilityStatement" : [ "nach der Operette von Michael Thelen, Text. Musik Hans Wolf. Regie u. Bearb.: Gisbert Stenz" ],
   "publication" : [ {
-    "location" : [ "Erpel" ],
+    "location" : [ "[Ahrweiler]" ],
     "startDate" : "2006",
+    "publishedBy" : [ "Ahrtal-Video Faupel" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n784041",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n802040",
+    "label" : "Laienspiel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -25,17 +26,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sankt-Johannes-Grundschule Erpel | Bewegte Schule | DVD-ROM",
+    "label" : "Ahrtal | Komödie | DVD-ROM",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4839067-7",
-      "label" : "Sankt-Johannes-Grundschule Erpel",
+      "id" : "https://d-nb.info/gnd/4084812-7",
+      "label" : "Ahrtal",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4510321-5",
-      "label" : "Bewegte Schule",
+      "id" : "https://d-nb.info/gnd/4031952-0",
+      "label" : "Komödie",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -50,8 +51,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13807019",
-    "label" : "n13807019",
+    "id" : "https://rpb.lobid.org/spatial#n28",
+    "label" : "Ahrtal",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -60,12 +61,22 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/10120647-1",
-      "label" : "St.-Johannes-Grundschule / Erpel"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k4656727a",
+      "label" : "Thelen, Michael"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn95s0673b",
+      "label" : "Wolf, Hans"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ]

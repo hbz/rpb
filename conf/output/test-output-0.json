@@ -1,17 +1,17 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "929t112201",
-  "id" : "https://lobid.org/resources/929t112201",
-  "hbzId" : "CT003010543",
+  "rpbId" : "929t112200",
+  "id" : "https://lobid.org/resources/929t112200",
+  "hbzId" : "CT003010348",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Coloniensis Dioecesis [Elektronische Ressource] : [Ca. 1:1 300 000]",
+  "title" : "Palatinatus Rheni [Elektronische Ressource] : [Ca. 1:1 900 000]",
   "extent" : "1 Kt. : Kupferstich ; 13 x 9 cm",
-  "note" : [ "O oben. - Maßstab in graph. Form (Miliaria Germ.), Titelkartusche und Maßstabsleiste unten links - rückseitig lateinischer Text" ],
+  "note" : [ "Maßstab in graph. Form (Milliaria German.), Titelkartusche und Maßstabsleiste oben rechts - rückseitig lateinischer Text" ],
   "responsibilityStatement" : [ "[Hondius, Jodocus]" ],
   "publication" : [ {
     "location" : [ "Amstelodami" ],
@@ -21,7 +21,7 @@
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n126000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Karte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -29,10 +29,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Katholische Kirche / Erzdiözese Köln | Altkarte | Online-Ressource",
+    "label" : "Pfalz | Altkarte | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/2029646-0",
-      "label" : "Katholische Kirche / Erzdiözese Köln",
+      "id" : "https://d-nb.info/gnd/4076031-5",
+      "label" : "Pfalz",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -54,8 +54,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n34",
-    "label" : "n34",
+    "id" : "https://rpb.lobid.org/spatial#n07",
+    "label" : "Pfalz",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -73,9 +73,9 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 380",
+  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 456",
   "fulltextOnline" : [ {
-    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:1-70507",
-    "label" : "urn:nbn:de:hbz:061:1-70507"
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:1-68551",
+    "label" : "urn:nbn:de:hbz:061:1-68551"
   } ]
 }

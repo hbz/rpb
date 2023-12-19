@@ -1,26 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "929t112208",
-  "id" : "https://lobid.org/resources/929t112208",
-  "hbzId" : "CT003001317",
+  "rpbId" : "929t112207",
+  "id" : "https://lobid.org/resources/929t112207",
+  "hbzId" : "CT003001222",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Vom deutschen Rhein [Elektronische Ressource] : mit landschaftlichen u. architektonischen Ansichten nebst Illustrationen zu rheinischen Dichtungen, in 50 Blättern",
-  "extent" : "[1], 50 Bl. : nur Ill. : gr. quer 2-o",
-  "note" : [ "In Fraktur" ],
+  "title" : "Vom deutschen Rhein [Elektronische Ressource] : Mit landschaftlichen u. architektonischen Ansichten nebst Illustrationen zu rheinischen Dichtungen, in 25 Blättern",
+  "extent" : "[1], [24] Bl. : überw. Ill. ; quer 4-o",
+  "note" : [ "Um die Hälfte reduzierte Fassung der Ansichtenfolge \"Vom deutschen Rhein\" (vgl. Schmitt 210). Das Werk erschien gleichzeitig auch bei Neubner in Köln (vgl. Schmitt 212) und 1880 abermals bei Baumann & Co. ; In Fraktur" ],
   "responsibilityStatement" : [ "von Caspar Scheuren" ],
   "publication" : [ {
     "location" : [ "Düsseldorf" ],
-    "publishedBy" : [ "Breidenbach & Baumann" ],
+    "publishedBy" : [ "Baumann" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n102045",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Regionenbeschreibung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -89,7 +89,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n03",
-    "label" : "n03",
+    "label" : "Rheinland",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -108,7 +108,7 @@
     "type" : [ "Contribution" ]
   } ],
   "fulltextOnline" : [ {
-    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-1456",
-    "label" : "urn:nbn:de:hbz:061:2-1456"
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-536",
+    "label" : "urn:nbn:de:hbz:061:2-536"
   } ]
 }

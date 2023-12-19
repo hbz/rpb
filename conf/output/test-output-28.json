@@ -1,49 +1,30 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "107t01147878",
-  "id" : "https://lobid.org/resources/107t01147878",
+  "rpbId" : "107t01147877",
+  "id" : "https://lobid.org/resources/107t01147877",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Um- und Ausbau des Hambacher Schlosses von 1979 bis 1982",
-  "extent" : "Ill.",
+  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
   "publication" : [ {
     "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844040",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Ortsgeschichte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Geschichte 1979-1982",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn01s147878357a",
-      "label" : "Geschichte 1979-1982",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "n316000000700",
+    "label" : "Hambach (Ortsbezirk)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -61,5 +42,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Die Pfalz am Rhein <Neustadt, Weinstraße>. - 55 (1982), S. 175-180"
+  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
 }

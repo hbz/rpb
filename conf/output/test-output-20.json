@@ -1,29 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "107t01147870",
-  "id" : "https://lobid.org/resources/107t01147870",
+  "rpbId" : "107t01147869",
+  "id" : "https://lobid.org/resources/107t01147869",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Die Herren von Hainfeld - zur Geschichte e. vorderpfälzischen Adelssitzes im Mittelalter",
+  "title" : "Grabmal und Taufstein - zwei spätgotische Denkmäler der Pfarrkirche in Hainfeld",
+  "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1983",
+    "startDate" : "1984",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n207020",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n844030",
+    "label" : "Sakralbau",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -31,26 +24,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hainfeld / Familie | Geschichte 1100-1300",
+    "label" : "Sankt Barbara / Hainfeld, Südliche Weinstraße | Grabplatte | Taufbecken",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/00Sn01s147870528a",
-      "label" : "Hainfeld / Familie",
+      "id" : "https://d-nb.info/gnd/7746576-3",
+      "label" : "Sankt Barbara / Hainfeld, Südliche Weinstraße",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn06k1444137a",
-      "label" : "Geschichte 1100-1300",
+      "id" : "https://d-nb.info/gnd/4113778-4",
+      "label" : "Grabplatte",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4135651-2",
+      "label" : "Taufbecken",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "n33703036",
+    "label" : "Hainfeld",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -68,5 +68,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 81 (1983), S. 229-271"
+  "bibliographicCitation" : "Archiv für mittelrheinische Kirchengeschichte. - 36 (1984), S. 47-63"
 }

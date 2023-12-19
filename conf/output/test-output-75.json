@@ -7,17 +7,17 @@
       "id" : "https://lobid.org/resources/036t160240",
       "label" : "Piffche-Bahnfahrt durch Rheinhessen"
     } ],
-    "numbering" : "2"
+    "numbering" : "[1]"
   } ],
-  "rpbId" : "036t160240b2",
-  "id" : "https://lobid.org/resources/036t160240b2",
+  "rpbId" : "036t160240b1",
+  "id" : "https://lobid.org/resources/036t160240b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Piffche-Bahnfahrt durch Rheinhessen : 2",
-  "extent" : "256 Seiten : Illustrationen",
+  "title" : "Piffche-Bahnfahrt durch Rheinhessen : [1]",
+  "extent" : "240 Seiten : Illustrationen",
   "publication" : [ {
     "type" : [ "PublicationEvent" ]
   } ]

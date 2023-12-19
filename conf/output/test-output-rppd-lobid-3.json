@@ -1,36 +1,29 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/13334066X",
-  "rppdId" : "pk00010",
-  "gndIdentifier" : "13334066X",
+  "id" : "https://d-nb.info/gnd/1051147352",
+  "rppdId" : "pk00008",
+  "gndIdentifier" : "1051147352",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Billaudelle, Karl",
-  "variantName" : [ "Billaudelle, Karl" ],
+  "preferredName" : "Daub, Richard",
   "professionOrOccupation" : [ {
-    "label" : "Gymnasiallehrer",
-    "id" : "https://d-nb.info/gnd/4158589-6"
-  }, {
-    "label" : "Schriftsteller",
-    "id" : "https://d-nb.info/gnd/4053309-8"
-  }, {
-    "label" : "Verleger",
-    "id" : "https://d-nb.info/gnd/4138343-6"
+    "label" : "Lehrer",
+    "id" : "https://d-nb.info/gnd/4035088-5"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Bad Ems, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14110006"
+    "label" : "Bruchhausen",
+    "id" : "https://rpb.lobid.org/spatial#n13807008"
   } ],
-  "dateOfBirth" : [ "1914-11-05" ],
+  "dateOfBirth" : [ "1895-04-04" ],
   "placeOfBirth" : [ {
-    "label" : "Bad Ems, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14110006"
+    "label" : "Bell",
+    "id" : "https://rpb.lobid.org/spatial#n13704008"
   } ],
-  "dateOfDeath" : [ "2003-07-01" ],
+  "dateOfDeath" : [ "1972-04-23" ],
   "placeOfDeath" : [ {
-    "label" : "Bad Ems, Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n14110006"
+    "label" : "Leutesdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13802038"
   } ],
-  "publication" : [ "Eemser Babbelmuseum Bd. 1-3, 1979-1982", "Emser Miniaturen, 1991", "Emser Mosaik, 1993", "Jugendjahre in Bad Ems, 1995", "In alten Kurlisten geblättert, 1989", "¬Eine¬ Kindheit in Bad Ems, 1995", "Spiel in Bad Ems, 1990", "Von Flohschnecken und anderen Seltsamkeiten, 1981", "Bad Ems - Zauber einer Badestadt, 1984" ],
+  "publication" : [ "Wallfahrtsort Bruchhausen in Geschichte und Sage, 1956" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
@@ -40,7 +33,7 @@
     "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
   } ],
   "describedBy" : {
-    "dateModified" : "2004-08-02"
-  },
-  "biographicalOrHistoricalInformation" : [ "Studium der Pädagogik, der Deutschen und Englischen Philologie, Geschichte und Psychologie in Marburg und Göttingen; 1952-1953 Lehrer am Görres-Gymnasium und Gymnasium am Ring in Koblenz; 1953-1972 Lehrer am Goethe-Gymnasium in Bad Ems; seit 1979 Buchautor und Verleger.", "Literarisches Rheinland-Pfalz heute. 1988" ]
+    "dateModified" : "2004-12-20",
+    "source" : [ "Rhein-Zeitung, Ausg. Neuwied, Nr. 94 vom 23.04.1997" ]
+  }
 }

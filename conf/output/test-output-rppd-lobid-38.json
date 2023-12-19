@@ -1,46 +1,57 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/117269476",
-  "rppdId" : "pk05621",
-  "gndIdentifier" : "117269476",
+  "id" : "https://d-nb.info/gnd/1027971725",
+  "rppdId" : "pk05270",
+  "gndIdentifier" : "1027971725",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Weinkauff, Franz",
-  "variantName" : [ "Weinkauff, Franciscus / 1823-1892", "Weinkauff, Franz / 1823-1892", "Weinkauff, Franz / 1824-1892" ],
+  "preferredName" : "Dönges, Klaus",
+  "variantName" : [ "Dönges, Klaus", "Dönges, Klaus / 1935-" ],
   "professionOrOccupation" : [ {
-    "label" : "Gymnasiallehrer",
-    "id" : "https://d-nb.info/gnd/4158589-6"
+    "label" : "Journalist",
+    "id" : "https://d-nb.info/gnd/4028781-6"
   }, {
-    "label" : "Mäzen",
-    "id" : "https://d-nb.info/gnd/7607862-0"
+    "label" : "Redakteur",
+    "id" : "https://d-nb.info/gnd/4177294-5"
+  }, {
+    "label" : "Ehrenamtliche Tätigkeit",
+    "id" : "https://d-nb.info/gnd/4013673-5"
+  }, {
+    "label" : "Ortsvorsteher",
+    "id" : "https://d-nb.info/gnd/4466532-5"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Jena",
-    "id" : "https://rpb.lobid.org/dummi/Jena"
+    "label" : "Limburg, Lahn",
+    "id" : "Limburg, Lahn"
   }, {
-    "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
+    "label" : "Neesbach",
+    "id" : "Neesbach"
+  }, {
+    "label" : "Hünfelden",
+    "id" : "Hünfelden"
   } ],
-  "dateOfBirth" : [ "1823-05-24" ],
+  "dateOfBirth" : [ "1935-05-25" ],
   "placeOfBirth" : [ {
-    "label" : "Bad Kreuznach, große kreisangehörige Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n13300006"
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
   } ],
-  "dateOfDeath" : [ "1892-03-11" ],
-  "placeOfDeath" : [ {
-    "label" : "Köln",
-    "id" : "https://rpb.lobid.org/dummi/Köln"
-  } ],
-  "publication" : [ "Homerisches Handbuch für Gymnasien, 1868", "Almania Oideion: Versus Cantabiles Et Memoriales; Dreisprachiges Studentenliederbuch ... ,1885", "De Tacito dialogi, qui de oratoribus inscribitur, auctore, 1857-1859" ],
+  "dateOfDeath" : [ "2023-04-14" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Bildung. Erziehung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+    "label" : "Presse",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
+  }, {
+    "label" : "Soziologie. Gesellschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#9.5p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
   } ],
   "describedBy" : {
-    "dateModified" : "2023-06-01"
+    "dateModified" : "2023-06-01",
+    "source" : [ "Rhein-Lahn-Zeitung / Diez. - (2010), 290 vom 14.12., S. 18", "http://www.landkreis-limburg-weilburg.de/unser-landkreis/ehrungen-auszeichnungen.html (Stand: 13.09.2012)", "http://www.limburgweilburgerleben.de/bad-camberg/klaus-doenges-erhielt-das-bundesverdienstkreuz (Stand: 13.09.2012)", "Rhein-Lahn-Zeitung / Diez. - (2023), 118 vom 23.5., S. 22" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Sohn des Kreuznacher Brauerei- und Brennereibesitzers Franz Weinkauff; Besuch des Gymnasiums in Kreuznach; Altphilologisches Studium in Bonn, Heidelberg und Jena; 1853 Promotion; Lehrer an einer Privatschule in Jena; ab 1855 Lehrer vor allem für Hebräisch, Griechisch und Latein am Friedrich-Wilhelms-Gymnasium Köln; aus gesundheitlichen Gründen 1871 Versetzung in den vorzeitigen Ruhestand; danach als Privatgelehrter tätig; wirkte zudem als Bildungsmäzen, so vermachte er der Stadt Kreuznach 100.000 Mark \"zu erzieherischen und schulfreundlichen Zwecken\"; diverse Publikationen, außerdem Verfasser von Einträgen in der Allgemeinen Deutschen Biographie ADB.", "http://www.pantoia.de/Liederbuecher/Weinkauff1885/vita.html (Stand: 06.12.2013)", "Oeffentlicher Anzeiger / Stadt und Kreis Bad Kreuznach. - (2023), 120 vom 25.5., S. 25." ]
+  "biographicalOrHistoricalInformation" : [ "Ausbildung zum Journalisten und Verlagskaufmann bei der Rhein-Post; anschließende Berufstätigkeit als Redakteur in Limburg an der Lahn; Engagement in zahlreichen Ehrenämtern; seit 1955 Mitglied der SPD, für die er 1960-1981 Vorsitzender des Ortsbezirks Hünfelden-Neesbach war; 1960-1968 Gemeindevertreter der selbstständigen Gemeinde Neesbach; 1972-1981 Gemeindevertreter in Hünfelden, 1972-2001 Ortsvorsteher von Neesbach; 1961-2003 Mitglied im Kirchenvorstand der Evangelischen Gemeinde Hünfelden-Nassau; seit 1975 Lektor der evangelischen Kirche Hessen-Nassau; Mitglied der Synode des Dekanats Runkel; Öffentlichkeitsbeauftragter des Dekanats und der Diakoniestation Brechen; seit 1959 Mitglied im Männergesangverein Frohsinn in Neesbach und seit 1999 dessen Vorsitzender; 1981-1996 ehrenamtlicher Verwaltungsrichter; am 10.12.2012 mit dem Bundesverdienstkreuz am Bande geehrt" ]
 }

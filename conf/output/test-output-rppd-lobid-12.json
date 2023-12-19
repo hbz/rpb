@@ -1,55 +1,59 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051147395",
-  "rppdId" : "pk00021",
-  "gndIdentifier" : "1051147395",
-  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Anschuez, Carl",
-  "variantName" : [ "Anschutz, Carl / 1818-1870", "Anschütz, Karl Friedrich Nikolaus / 1818-1870" ],
-  "professionOrOccupation" : [ {
-    "label" : "Komponist",
-    "id" : "https://d-nb.info/gnd/4032009-1"
+  "id" : "https://d-nb.info/gnd/123205670",
+  "rppdId" : "pk00020",
+  "gndIdentifier" : "123205670",
+  "sameAs" : [ {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/123205670",
+    "collection" : {
+      "name" : "Wikimedia Commons"
+    }
   }, {
-    "label" : "Dirigent",
-    "id" : "https://d-nb.info/gnd/4012434-4"
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/123205670",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Bücker, Carl Clemens",
+  "variantName" : [ "Bücker, Carl Clemens" ],
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Carl-Clemens%20B%C3%BCcker.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg?width=270"
+  } ],
+  "professionOrOccupation" : [ {
+    "label" : "Flugzeugkonstrukteur",
+    "id" : "https://rpb.lobid.org/sw/00Sn02x0286a"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Koblenz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n11100000"
+    "label" : "Schweden",
+    "id" : "Schweden"
   }, {
-    "label" : "London",
-    "id" : "https://rpb.lobid.org/dummi/London"
-  }, {
-    "label" : "New York, NY",
-    "id" : "https://rpb.lobid.org/dummi/New York, NY"
+    "label" : "Berlin",
+    "id" : "Berlin"
   } ],
-  "dateOfBirth" : [ "1818-01-10" ],
+  "dateOfBirth" : [ "1895-02-11" ],
   "placeOfBirth" : [ {
-    "label" : "Koblenz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n11100000"
+    "label" : "Ehrenbreitstein",
+    "id" : "https://rpb.lobid.org/spatial#n111000000500"
   } ],
-  "dateOfDeath" : [ "1870-12-30" ],
+  "dateOfDeath" : [ "1976-03-03" ],
   "placeOfDeath" : [ {
-    "label" : "New York, NY",
-    "id" : "https://rpb.lobid.org/dummi/New York, NY"
-  } ],
-  "relatedPerson" : [ {
-    "label" : "Anschuez, Joseph Andreas",
-    "id" : "https://d-nb.info/gnd/118649558"
-  }, {
-    "label" : "Anschütz, Hermann",
-    "id" : "https://d-nb.info/gnd/116312351"
+    "label" : "Mölln",
+    "id" : "Mölln"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Musik. Musikwissenschaft",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+    "label" : "Technik allgemein",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
   } ],
   "describedBy" : {
-    "dateModified" : "2020-12-02"
+    "dateModified" : "2010-10-28",
+    "source" : [ "Rhein-Zeitung, Ausg.N, Nr. 36 vom 11./12.02.1995", "Koblenzer Köpfe, 2002", "http://www.ehrenbreitstein.de/buecker.html (Stand: 28.10.2010)" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Sohn von Joseph Andreas Anschuez und seiner Frau Anna Maria, geb. Kröll, Bruder von Hermann Franz; studierte von 1835 bis 1838 in Dessau in der Musikschule des dortigen Hofkapellmeisters Friedrich Schneider; danach u.a. als Gesangs- und Klavierlehrer am von seinem Vater gegründeten Koblenzer Musikinstitut tätig; von 1837 bis 1841 Präsident der Liedertafel Koblenz; dirigierte auch am dortigen Stadt-Theater; von 1843 bis 1847 dann Leiter des Musikinstituts; Gründer und Leiter des Gesangvereins Koblenzer Handwerker; 1847 wanderte Anschuez über Amsterdam nach London aus, wo er von 1849 bis 1857 als Dirigent tätig war, seit 1857 dann in New York; von 1862 bis 1865 Musikdirektor der German Opera in New York", "Rhein-Zeitung, Ausg. B, Nr. 301 vom 29.12.1995", "Kurzbiographien vom Mittelrhein und Moselland, 1968", "Uwe Baur: Vom \"ungeratenen Sohn\" zum Weltstar ... In: Arbeitsgemeinschaft für Mittelrheinische Musikgeschichte: Mitteilungen. - 90 (2018), Seite 3-51" ]
+  "biographicalOrHistoricalInformation" : [ "Geburtshaus in Ehrenbreitstein (Hofstr. 277 in Ehrenbreitstein, ehemaliger \"Gasthof zum weißen Ross\"); 1912 Abschluss am Kaiserin-Augusta-Gymnasium in Koblenz; Seekadett bei der kaiserlichen Marine in Kiel; 1914 als Leutnant zur See; Ausbildung als Marineflieger und Einsatz auf Seefliegerstationen an der Nordsee; 1918 scheidet er aus der Marine aus; Tätigkeit als Berater und Einflieger bei der schwedischen Marine; Gründung der \"Svensko Aero AB\" 1922; 1932 verkaufte er seinen Betrieb und kehrte nach Deutschland zurück; 1935 gründete er die \"Bücker Flugzeugbau GmbH\" in Berlin zur Produktion von Schul- und Sportflugzeugen; 1945 stellt das Werk seine Arbeit ein; danach lässt er sich zunächst in Hamburg, später in Bonn nieder; Grabstätte auf dem Koblenzer Hauptfriedhof; verschiedene Modelle von Bücker-Flugzeugen im Landesmuseum Koblenz; die Stadt Koblenz ehrte ihn mit der Benennung eines Platzes." ]
 }

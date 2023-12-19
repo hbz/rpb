@@ -11,15 +11,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Install metafacture-core 5.7.0-rc1
+    - name: Install metafacture-fix 0.7.0
       run: |
-        git clone https://github.com/metafacture/metafacture-core.git -b 5.7.0-rc1
-        cd metafacture-core
-        ./gradlew publishToMavenLocal
-        cd ..
-    - name: Install metafacture-fix 0.6.0-rc3
-      run: |
-        git clone https://github.com/metafacture/metafacture-fix.git -b 0.6.0-rc3
+        git clone https://github.com/metafacture/metafacture-fix.git -b 0.7.0
         cd metafacture-fix
         ./gradlew publishToMavenLocal
         cd ..

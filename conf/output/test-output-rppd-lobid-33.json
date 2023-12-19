@@ -1,41 +1,51 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/1051215587",
-  "rppdId" : "pta1498",
-  "gndIdentifier" : "1051215587",
-  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Züscher, Peter",
-  "professionOrOccupation" : [ {
-    "label" : "Lehrer",
-    "id" : "https://d-nb.info/gnd/4035088-5"
+  "id" : "https://d-nb.info/gnd/117021652",
+  "rppdId" : "pta1497",
+  "gndIdentifier" : "117021652",
+  "sameAs" : [ {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/ws-blkoe/117021652",
+    "collection" : {
+      "name" : "Biographisches Lexikon des Kaiserthums Oesterreich (Wikisource)"
+    }
   }, {
-    "label" : "Heimatkundler",
-    "id" : "https://d-nb.info/gnd/4313907-3"
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/117021652",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
   } ],
-  "dateOfBirth" : [ "1859-12-03" ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zuckermandel, Moses S.",
+  "variantName" : [ "Zuckermandel, Moses Samuel / 1836-1917" ],
+  "professionOrOccupation" : [ {
+    "label" : "Rabbiner",
+    "id" : "https://d-nb.info/gnd/4176751-2"
+  }, {
+    "label" : "Talmudist",
+    "id" : "https://d-nb.info/gnd/4293593-3"
+  } ],
+  "dateOfBirth" : [ "1836-04-24" ],
   "placeOfBirth" : [ {
-    "label" : "Kell am See",
-    "id" : "https://rpb.lobid.org/spatial#n23508058"
+    "label" : "Uhersky▐ü Brod",
+    "id" : "Uhersky▐ü Brod"
   } ],
-  "dateOfDeath" : [ "1915-06-03" ],
+  "dateOfDeath" : [ "1917" ],
   "placeOfDeath" : [ {
-    "label" : "Trier, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n21100000"
+    "label" : "Breslau",
+    "id" : "Breslau"
   } ],
-  "publication" : [ "Topographische Nachrichten über die Stadt Trier, veröffentlicht in verschiedenen Tageszeitungen", "(Mit Nikolaus Haller:) Bilder aus der Geschichte des trierischen Landes und Volkes, Trier 1895, 2. Aufl. Trier 1903" ],
+  "publication" : [ "¬Die¬ Erfurter Handschrift der Tosefta beschrieben und geprüft. Tosefta nach den Erfurter und Wiener Handschriften, Pasewalk 1880", "Gesammelte Aufsätze, Frankfurt a.M. 1912-1914" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Bildung. Erziehung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
-  }, {
-    "label" : "Geographie, Heimat- und Länderkunde",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#19.1dp"
+    "label" : "Religionswissenschaft und nichtchristliche Religionen",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.1p"
   } ],
   "describedBy" : {
-    "dateModified" : "2006-07-11"
+    "dateModified" : "2006-07-11",
+    "source" : [ "Moses Samuel Z (zu seinem 80. Geburtstag), in: Allgemeine Zeitung des Judenthums, 80 (1916), Nr. 20 v. 19.05.1916, 234 f.", "Pinkas Lapide, Hilmar Schmuck (Hg.): Jüdisches Biographisches Archiv, Microfiche-Ausgabe, München 1994-1998, Fiche 660", "Emil Zenz: Geschichte der Stadt Trier im 19. Jahrhundert, Bd. 1 und 2, Trier 1979 f, Band 2, 205 f" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Schulrektor und Heimatforscher. - Gymnasium in Trier, 1876 Lehrerprüfung in Brühl, 1884 Ergänzungsprüfung für Mittelschulen, 1893 Rektoratsprüfung in Koblenz. Z war seit 1878 in Trier als Lehrer und schließl als Rektor im Schuldienst. Er blieb vor allem in Erinnerung durch seine Heimatforschung. - ---[Daten übernommen aus: Heinz Monz, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Nikolaus Haller: Peter Z, in: Trierische Chronik 12 (1915/16), 65", "Hermann Spoo: Biographischer Führer über Triers Friedhöfe, hektographiert Trier 1943, 59" ]
+  "biographicalOrHistoricalInformation" : [ "Oberrabbiner, Talmudist. - Z stammte aus einer Rabbinerfamilie. Er erhielt bereits in der Kindheit eine talmudische Ausbildung, studierte am Rabbinerseminar und an der Universität Breslau, 1863 Promotion, 1864 Rabbinatsprüfung - Z hatte Rabbinerstellen in Gnesen, Mährisch-Friedland und Pasewalk. 1881-1890 war er Oberrabbiner in Trier, danach in Pleschen und Breslau. - Z verfaßte zahlreiche Abhandlungen zu halachischen, sprachl, lexikalischen, exegetischen, archäologischen und pädagogischen Themen. Sein Hauptwerk war die Edition der Tosefta, basierend auf einer Erfurter und Wiener Handschrift. - *Heirat: mit Elise Rawitz. - ---[Daten übernommen aus: Annette Haller, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]", "Geboren in Ungarisch Brod (heute Uhersk¡ Brod, Tschechien)" ]
 }

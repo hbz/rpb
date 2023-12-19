@@ -1,21 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "107t01147873",
-  "id" : "https://lobid.org/resources/107t01147873",
+  "rpbId" : "107t01147872",
+  "id" : "https://lobid.org/resources/107t01147872",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Das Hambacher Schloß.",
+  "title" : "Der Meister des Hainfelder Röhrenbrunnens und des Burgbrunnens auf Neuscharfeneck",
+  "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1982",
+    "startDate" : "1983",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844040",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n844070",
+    "label" : "Brunnen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -23,10 +24,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+    "label" : "Burgruine Neuscharfeneck | Brunnen",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "id" : "https://d-nb.info/gnd/4595996-1",
+      "label" : "Burgruine Neuscharfeneck",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4008491-7",
+      "label" : "Brunnen",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -34,8 +42,16 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "n316000000700",
+    "id" : "https://rpb.lobid.org/spatial#n33703036",
+    "label" : "Hainfeld",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  }, {
+    "id" : "https://rpb.lobid.org/spatial#n33703025",
+    "label" : "Flemlingen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -44,8 +60,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/119277425",
-      "label" : "Böcher, Otto / 1935-2020"
+      "id" : "https://d-nb.info/gnd/11944027X",
+      "label" : "Müller, Carl Werner / 1931-2018"
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -53,5 +69,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Ärzteblatt Rheinland-Pfalz. 35. 1982, 560, 563-65"
+  "bibliographicCitation" : "In: Landkreis Südliche Weinstraße: Heimat-Jahrbuch .... - 5 (1983), Seite 29-36. -"
 }

@@ -1,33 +1,36 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/115839909",
-  "rppdId" : "pk00015",
-  "gndIdentifier" : "115839909",
+  "id" : "https://d-nb.info/gnd/1051147379",
+  "rppdId" : "pk00014",
+  "gndIdentifier" : "1051147379",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Anhäuser, Uwe",
+  "preferredName" : "Henninger, Wilhelm Albert",
   "professionOrOccupation" : [ {
-    "label" : "Schriftsteller",
-    "id" : "https://d-nb.info/gnd/4053309-8"
-  }, {
-    "label" : "Journalist",
-    "id" : "https://d-nb.info/gnd/4028781-6"
+    "label" : "Heimatschriftsteller",
+    "id" : "https://d-nb.info/gnd/4772761-5"
   } ],
-  "dateOfBirth" : [ "1943-11-01" ],
+  "placeOfActivity" : [ {
+    "label" : "Bad Ems, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14110006"
+  } ],
+  "dateOfBirth" : [ "1912" ],
   "placeOfBirth" : [ {
-    "label" : "Rengsdorf",
-    "id" : "https://rpb.lobid.org/spatial#n13809061"
+    "label" : "Limburg <Lahn>",
+    "id" : "Limburg <Lahn>"
   } ],
-  "publication" : [ "Hunsrück und Naheland, 1987", "Lothringen, 1989", "Sagenhafter Hunsrück, 1994-95", "Schinderhannes und seine Bande, 2003", "Teufelchen im Paradies, 2002", "Wanderführer Hunsrück, 1988" ],
+  "dateOfDeath" : [ "1995" ],
+  "publication" : [ "Du Perle des Lahntals, 1960", "¬Die¬ Kunterbunts, 1978", "Märchen, ca. 1948", "Ave Maria, o.J.", "Sklaven des Glücks, o.J.", "Bad Ems, du Labsal der Natur, o.J." ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Presse",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
+    "label" : "Schreiben. Dichtung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
   } ],
   "describedBy" : {
-    "dateModified" : "2004-08-02"
+    "dateModified" : "2005-12-08",
+    "source" : [ "Internet" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Seit 1980 freier Schriftsteller; lebt im Hunsrück; Zenta-Maurina-Preis für Literatur 1977", "Literarisches Rheinland-Pfalz. 1988." ]
+  "biographicalOrHistoricalInformation" : [ "Kaufmannslehre; freiberufliche Arbeit als Schriftsteller und Mitarbeiter des bischöflichen Verlages in Limburg; Berufsverbot; Soldat; Eröffnung eines Kaufhauses in Limburg; 1944 Umzug nach Nassau; Anfang der 50er Jahre Umzug nach Bad Ems; Eröffnung des Kaufhauses Henninger und der Pension Lahntal" ]
 }

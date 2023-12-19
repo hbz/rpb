@@ -1,48 +1,42 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/116324899",
-  "rppdId" : "pk00013",
-  "gndIdentifier" : "116324899",
+  "id" : "https://d-nb.info/gnd/1051147360",
+  "rppdId" : "pk00012",
+  "gndIdentifier" : "1051147360",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
-  "preferredName" : "Gabele, Anton",
-  "variantName" : [ "Gabele, Anton" ],
-  "depiction" : [ {
-    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Anton%20Gabele.jpg",
-    "url" : "https://commons.wikimedia.org/wiki/File:Anton%20Gabele.jpg?uselang=de",
-    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Anton%20Gabele.jpg?width=270"
-  } ],
+  "preferredName" : "Marquard, Udo",
   "professionOrOccupation" : [ {
-    "label" : "Lehrer",
-    "id" : "https://d-nb.info/gnd/4035088-5"
+    "label" : "Philosoph",
+    "id" : "https://d-nb.info/gnd/4045790-4"
   }, {
     "label" : "Schriftsteller",
     "id" : "https://d-nb.info/gnd/4053309-8"
   } ],
   "placeOfActivity" : [ {
-    "label" : "Koblenz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n11100000"
+    "label" : "Unkel, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13807073"
   } ],
-  "dateOfBirth" : [ "1890-07-28" ],
+  "dateOfBirth" : [ "1959" ],
   "placeOfBirth" : [ {
-    "label" : "Buffenhofen",
-    "id" : "https://rpb.lobid.org/dummi/Buffenhofen"
+    "label" : "Werdohl",
+    "id" : "Werdohl"
   } ],
-  "dateOfDeath" : [ "1966-08-13" ],
-  "placeOfDeath" : [ {
-    "label" : "Koblenz, Kreisfreie Stadt",
-    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  "relatedPerson" : [ {
+    "label" : "Heyberger, Renate",
+    "id" : "Heyberger, Renate"
   } ],
-  "publication" : [ "Blinde Passagiere, 1961", "Haus zur Sonne, 1953", "Im Schatten des Schicksals, 1930", "¬Die¬ Prinzessin mit der Geiß, 1958", "Pfingsten, 1934", "Talisman, 1937", "Reise nach Bernkastel, 1957", "¬Die¬ Zwillingsbrüder, 1943", "¬Der¬ Wundermann vom Bodensee, 1956" ],
+  "publication" : [ "Katzenkiller.1995", "Münstermörder. 1996", "Theaterblut. 1997", "¬Die¬ Breisgau-Boheme. 2000" ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
     "label" : "Männlich"
   } ],
   "gndSubjectCategory" : [ {
-    "label" : "Schreiben. Dichtung",
-    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
+    "label" : "Philosophie",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#4.7p"
   } ],
   "describedBy" : {
-    "dateModified" : "2007-03-06"
+    "dateModified" : "2004-08-04",
+    "source" : [ "Internet" ]
   },
-  "biographicalOrHistoricalInformation" : [ "Er studierte die \"neueren Sprachen\" in Straßburg, München, Genf, Halle/Saale, Berlin und Bonn; ab 1913 war er Mittelschullehrer in Koblenz und Studienrat in Bonn; er wurde im ersten Weltkrieg bei Verdun verwundet; danach legte er in Bonn nach 1917 das philologische Staatsexamen ab und lehrte ab 1919 als Studienrat in Koblenz, es folgte 1920 seine Promotion in Bonn; er war neben den pädagogischen Aufgaben auch erfolgreich als Schriftsteller tätig; er erhielt das Große Bundesverdienstkreuz, die Stadt Koblenz benannte eine Straße nach ihm und sein Heimatort verlieh ihm die Ehrenbürgerwürde; aufgrund unterschiedlicher Quellenangaben ist sein Sterbedatum nicht genau zu benennen und differiert zwischen 1966 und 1967", "Eichendorff-Gymnasium Koblenz - Festschrift, 2005", "Handschr. Konvolut Büchereistelle Koblenz, Henner Grube" ]
+  "biographicalOrHistoricalInformation" : [ "Studium der Philosophie, Germanistik und Religionswissenschaft in Heidelberg, Luzern und Freiburg; Promotion in Philosophie; schreibt seit 1994 zusammen mit Renate Heyberger Krimis; seit 1995 freier Schriftsteller und Fachjournalist für den Bereich Philosophie; Mitarbeit beim ARD-Hörfunk" ]
 }

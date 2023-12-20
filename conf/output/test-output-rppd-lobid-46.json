@@ -1,0 +1,85 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1190213958",
+  "rppdId" : "pk06671",
+  "gndIdentifier" : "1190213958",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Alexander / Familie : 1753-",
+  "professionOrOccupation" : [ {
+    "label" : "Unternehmer",
+    "id" : "https://d-nb.info/gnd/4061949-7"
+  }, {
+    "label" : "Musikinstrumentenbauer",
+    "id" : "https://d-nb.info/gnd/4170830-1"
+  }, {
+    "label" : "Familie",
+    "id" : "https://d-nb.info/gnd/4016397-0"
+  } ],
+  "periodOfActivity" : [ "1753-" ],
+  "placeOfActivity" : [ {
+    "label" : "Wertheim",
+    "id" : "Wertheim"
+  }, {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
+  "relatedPerson" : [ {
+    "label" : "Alexander, Franz Ambros",
+    "id" : "https://d-nb.info/gnd/130566969"
+  }, {
+    "label" : "Alexander, Philipp / 1787-1864",
+    "id" : "https://rppd.lobid.org/pk06675"
+  }, {
+    "label" : "Alexander, Kaspar Anton",
+    "id" : "https://d-nb.info/gnd/130566993"
+  }, {
+    "label" : "Alexander, Franz Anton / 1838-1926",
+    "id" : "https://rppd.lobid.org/pk06682"
+  }, {
+    "label" : "Alexander, Georg Philipp",
+    "id" : "https://d-nb.info/gnd/131993496"
+  }, {
+    "label" : "Alexander, Anton",
+    "id" : "https://d-nb.info/gnd/131993518"
+  }, {
+    "label" : "Alexander, Georg Philipp / 1879-1916",
+    "id" : "https://rppd.lobid.org/pk06677"
+  }, {
+    "label" : "Alexander, Philipp",
+    "id" : "https://d-nb.info/gnd/130567019"
+  }, {
+    "label" : "Alexander, Anton Julius",
+    "id" : "https://d-nb.info/gnd/131993577"
+  }, {
+    "label" : "Alexander, Hans Peter",
+    "id" : "https://d-nb.info/gnd/133467317"
+  }, {
+    "label" : "Alexander, Georg Philipp / 1969-",
+    "id" : "https://rppd.lobid.org/pk06681"
+  }, {
+    "label" : "Wagner, Richard / 1813-1883",
+    "id" : "Wagner, Richard / 1813-1883"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Industrie. Handwerk",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
+  }, {
+    "label" : "Handel. Dienstleistung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+  }, {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2019-08-06",
+    "source" : [ "https://gebr-alexander.de/ueber-uns/7-generationen/ (Stand: 02.07.2019)", "https://www.wirtschaftsgeschichte-rlp.de/a-z/g/gebr-alexander.html (Stand: 02.07.2019)", "Duttenhöfer, Eva-Maria: Gebrüder Alexander : 200 Jahre Musikinstrumentenbau in Mainz, Mainz 1982", "Ahrens, Christian: \"Alexander, Gebr., Rheinische Musikinstrumentenfabrik GmbH\", in: MGG Online, hrsg. von Laurenz Lütteken, Kassel, Stuttgart, New York: 2016ff. (= https://www.mgg-online.com/mgg/stable/50292 ; Stand: 05.08.2019)" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Berühmte Familie von Instrumentenbauern für Blech- und Holzblasinstrumente; stammen von Hugenotten ab und waren bis ca. Mitte des 16. Jahrhunderts u.a. in Sedan ansässig; seit 1663 ist in Wertheim ein Dietrich Alexander nachgewiesen; sein Ur-Urenkel Franz Ambros A. (1753-1802), ein gelernter Dreher, zog 1782 von Miltenberg/Main nach Mainz, wobei er sich als \"blasender Instrumentenmacher\", später als \"Lautenmacher\" in die Bürgerschaft aufnehmen ließ; er gründete die erste Instrumentenmanufaktur, fertigte nachweislich Klarinetten und vermutlich Lauten, aber auch Statuetten u.a. Schnitzereien; nach Franz Ambros' Tod wurde die Firma von seiner Witwe und seinen Söhnen Claudius (1783-1816), Martin (1797-1826)) und Philipp (1787-1864) geführt, ab 1826 von dem weiteren Bruder Kaspar Anton (1803-1872), einem gelernten Instrumentenbauer, und Philipp; sie vertrieben die Instrumente nun auch selbst und gelten als Gründer der Firma \"Gebrüder Alexander\"; 1812 findet sich der erste Nachweis der Handelstätigkeit; zu diesem Zeitpunkt und auch in einem anderen Briefwechsel von 1822 wurden die Alexander-Klarinetten als mangelhaft bezeichnet, obwohl sie guten Absatz fanden; Kaspar Anton ging ca. 1820-1824 auf Wanderschaft und erlernte sein Handwerk v.a. in Wien; erweiterte die Produktion mindestens auf Bassetthörner; danach finden sich jahrzehntelang kaum Quellen zur Firma Alexander; spätestens 1864 Ausweitung des Sortiments auf Blechblasinstrumente; Kaspar Antons Söhne Franz Anton (1838-1926) und Georg Philipp (1843-1897) führten die Firma ab 1872; sie gelten als Gründer der fabrikmäßigen Fertigung des Unternehmens; 1862 war Richard Wagner auf der Suche nach dem endgültigen Klangbild für den \"Ring des Nibelungen\"; zusammen mit der Firma Alexander entwickelte er die \"Wagnertuba\", eine Mischform zwischen Waldhorn und Posaune;\n\ndurch einen Aufschwung des deutschen Militärmusikwesens neue Absatzmärkte für Blechblasinstrumente der Firma; Exporte in die ganze Welt, z.B. 1897 nach Honduras; 1883 glanzvolles 100jähriges Jubiläum der Firma; nach der Jahrhundertwende wurde die Produktion der Holzblasinstrumente schrittweise reduziert; Franz Anton schied 1908 aus dem Unternehmen aus; ab 1897 führen Georg Philipps Sohn Friedrich Sebastian Anton (1873-1913) und sein Bruder Georg P. jr. (1879-1916); Anton starb früh, Georg P. jr. fiel im 1. Weltkrieg; ab 1916 übernahmen die beiden Witwen Anna Maria und Helena sowie Franz Anton (1838-1926, Bruder von Georg P. sr.), der seit 1864 im Betrieb tätig war, die Leitung; 1909 Patent auf die Erfindung des ersten voll ausgebauten Doppelhorns; Belieferung aller bedeutenden Orchester in Deutschland, USA, Großbritannien und der Schweiz; 1925 ging die Leitung auf Philipp Johann Christoph (1904-1971) über, wobei ihn Helena bis 1939 unterstützte; nach der Weltwirtschaftskrise forcierte er u.a. die Ausrüstung von Militärkapellen, die zahlreich neu entstanden; 1937 Verleihung des Grand Prix der Weltausstellung in Paris; im 2. Weltkrieg konnte der Betrieb trotz Rohstoffknappheit aufrechterhalten werden, da er als kriegswichtig eingestuft wurde; im Herbst 1944 weitreichende Zerstörung durch Bombenangriff und nachfolgender Wiederaufbau; 1958 Ehrenurkunde bei der Weltausstellung in Brüssel; 1971 Übergabe an Philipps Söhne Anton Julius und Hans P.; 1999 übernahm Anton Julius' Sohn Georg Phillip Alexander (1969-) das Unternehmen; bis heute einer der weltweit führenden Hersteller für Blechblasinstrumente; Referenzen von Orchester- und Solomusikern aus aller Welt" ]
+}

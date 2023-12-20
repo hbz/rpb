@@ -96,6 +96,19 @@ do list(path:"f81[].*.f81_", "var": "$i")
 end
 uniq("note[]")
 
+#-------- "series" -------
+if exists("f85?")
+  set_array("isPartOf[]")
+  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
+  set_array("isPartOf[].$last.hasSuperordinate[]")
+  if exists("f85_")
+    split_field("f85_"," ; ")
+    copy_field("f85_.1","isPartOf[].$last.hasSuperordinate[].$append.label")
+    copy_field("f85_.2", "isPartOf[].$last.numbering")
+  else
+    copy_field("f85?","isPartOf[].$last.hasSuperordinate[].$append.label")
+  end
+end
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 

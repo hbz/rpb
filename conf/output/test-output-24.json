@@ -9,6 +9,13 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Das Hambacher Schloß.",
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Kunst und Geschichte in Rheinland-Pfalz"
+    } ],
+    "numbering" : "82"
+  } ],
   "publication" : [ {
     "startDate" : "1982",
     "type" : [ "PublicationEvent" ]

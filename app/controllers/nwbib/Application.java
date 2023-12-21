@@ -53,6 +53,7 @@ import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
+import play.twirl.api.HtmlFormat;
 import views.html.browse_classification;
 import views.html.browse_register;
 import views.html.classification;
@@ -283,7 +284,7 @@ public class Application extends Controller {
 	public static Promise<Result> showPl(String name, String db, int index, int zeilen, String s1) {
 		return Promise
 				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=https://rppd.lobid.org/"
-						+ s1 + "'/></head>").as("text/html"));
+						+ HtmlFormat.escape(s1) + "'/></head>").as("text/html"));
 	}
 
 	/**

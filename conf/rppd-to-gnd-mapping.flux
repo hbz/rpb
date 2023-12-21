@@ -1,4 +1,4 @@
-FLUX_DIR + "output/output-rppd.json"
+FLUX_DIR + "output/output-rppd-strapi.ndjson"
 | open-file
 | as-lines
 | decode-json

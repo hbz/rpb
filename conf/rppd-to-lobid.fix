@@ -22,6 +22,8 @@ do once("map")
   # maps für lookup relatedPerson
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")  
+  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdLabel",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
 
   # maps für depiction
   put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_thumbnail", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"4")
@@ -267,7 +269,9 @@ do list(path:"f1nt[]", "var": "$i")
     copy_field("$i.f1nt", "relatedPerson[].$last.id")
     lookup("relatedPerson[].$last.label", "map_rel_preferredName")
     lookup("relatedPerson[].$last.id", "map_rel_gndId")
-    prepend("relatedPerson[].$last.id","https://d-nb.info/gnd/")  
+    lookup("relatedPerson[].$last.label", "map_rel_rppdLabel")
+    lookup("relatedPerson[].$last.id", "map_rel_rppdId")    
+    #prepend("relatedPerson[].$last.id","https://d-nb.info/gnd/")  
   else
     copy_field("$i.f1nt", "relatedPerson[].$append.label")
     copy_field("$i.f1nt", "relatedPerson[].$last.id")

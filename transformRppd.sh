@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -u
 
 bash transformBeacons.sh
 rm conf/output/bulk/rppd/*

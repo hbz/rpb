@@ -79,7 +79,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/116002468",
-      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875"
+      "label" : "Stolterfoth, Adelheid ¬von¬ / 1800-1875",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -89,7 +90,8 @@
   }, {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
-      "label" : "Rethel, Alfred"
+      "label" : "Rethel, Alfred",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ill",
@@ -99,7 +101,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/118702424",
-      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885"
+      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",

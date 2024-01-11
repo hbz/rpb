@@ -52,7 +52,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/119277425",
-      "label" : "Böcher, Otto / 1935-2020"
+      "label" : "Böcher, Otto / 1935-2020",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

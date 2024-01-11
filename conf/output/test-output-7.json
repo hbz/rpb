@@ -99,7 +99,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/118607359",
-      "label" : "Scheuren, Caspar / 1810-1887"
+      "label" : "Scheuren, Caspar / 1810-1887",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

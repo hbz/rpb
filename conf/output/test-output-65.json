@@ -59,7 +59,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10179791-6",
-      "label" : "Sport-Club 1957 / Wassenach"
+      "label" : "Sport-Club 1957 / Wassenach",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",
@@ -69,7 +70,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/SC Wassenach 1957",
-      "label" : "SC Wassenach 1957"
+      "label" : "SC Wassenach 1957",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

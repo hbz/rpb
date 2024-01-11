@@ -62,7 +62,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5331496-7",
-      "label" : "SWR-3-Club"
+      "label" : "SWR-3-Club",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

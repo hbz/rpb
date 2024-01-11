@@ -115,7 +115,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Gn11k2199217a",
-      "label" : "Rausch, Johannes / 1703-1730"
+      "label" : "Rausch, Johannes / 1703-1730",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ctb",
@@ -125,7 +126,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/178964131",
-      "label" : "Güssefeld, Franz Ludwig"
+      "label" : "Güssefeld, Franz Ludwig",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -135,7 +137,8 @@
   }, {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn01k23917383a",
-      "label" : "Homann, ..."
+      "label" : "Homann, ...",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -145,7 +148,8 @@
   }, {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn01t22981785a",
-      "label" : "Rausch, Johannes"
+      "label" : "Rausch, Johannes",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",

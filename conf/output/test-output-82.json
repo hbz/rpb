@@ -56,7 +56,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn92k0749a",
-      "label" : "Hellmann, Hubert"
+      "label" : "Hellmann, Hubert",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

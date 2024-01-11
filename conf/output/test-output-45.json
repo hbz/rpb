@@ -62,7 +62,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/26332-1",
-      "label" : "Universität Kaiserslautern"
+      "label" : "Universität Kaiserslautern",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

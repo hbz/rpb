@@ -62,7 +62,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn08k4656727a",
-      "label" : "Thelen, Michael"
+      "label" : "Thelen, Michael",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -72,7 +73,8 @@
   }, {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn95s0673b",
-      "label" : "Wolf, Hans"
+      "label" : "Wolf, Hans",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",

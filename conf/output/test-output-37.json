@@ -55,7 +55,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5295938-7",
-      "label" : "Südwestrundfunk"
+      "label" : "Südwestrundfunk",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",
@@ -65,7 +66,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/Südwestrundfunk",
-      "label" : "Südwestrundfunk"
+      "label" : "Südwestrundfunk",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

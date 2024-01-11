@@ -74,7 +74,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn98s2372a",
-      "label" : "Kemen, Karl-Ludwig"
+      "label" : "Kemen, Karl-Ludwig",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -84,7 +85,8 @@
   }, {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn98s2372b",
-      "label" : "Laubscher, Gerhard"
+      "label" : "Laubscher, Gerhard",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

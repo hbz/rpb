@@ -63,7 +63,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5166552-9",
-      "label" : "SWF 3, Der Club"
+      "label" : "SWF 3, Der Club",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

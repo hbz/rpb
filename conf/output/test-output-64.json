@@ -127,7 +127,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner / 1943-"
+      "label" : "Kussmaul, Heiner / 1943-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -137,7 +138,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/136596061",
-      "label" : "Kussmaul, Yvonne / 1972-"
+      "label" : "Kussmaul, Yvonne / 1972-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -147,7 +149,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10344831-7",
-      "label" : "Bilderausstellung Von der Wied an den Rhein / 2007 / Neuwied"
+      "label" : "Bilderausstellung Von der Wied an den Rhein / 2007 / Neuwied",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

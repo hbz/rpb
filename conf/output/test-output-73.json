@@ -34,7 +34,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/1044265310",
-      "label" : "Hörter, Peter / 1860-1930"
+      "label" : "Hörter, Peter / 1860-1930",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

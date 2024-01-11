@@ -76,7 +76,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn08k4686808a",
-      "label" : "Breeze, David John"
+      "label" : "Breeze, David John",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -86,7 +87,8 @@
   }, {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn08k4686449b",
-      "label" : "Jilek, Sonja"
+      "label" : "Jilek, Sonja",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -96,7 +98,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/122161289",
-      "label" : "Thiel, Andreas / 1964-"
+      "label" : "Thiel, Andreas / 1964-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",

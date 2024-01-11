@@ -54,7 +54,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/122882679",
-      "label" : "Keil, Hartmut / 1951-"
+      "label" : "Keil, Hartmut / 1951-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

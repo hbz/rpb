@@ -61,7 +61,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn08k0717486a",
-      "label" : "Moos, Gerd"
+      "label" : "Moos, Gerd",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",

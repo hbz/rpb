@@ -26,7 +26,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/132394235",
-      "label" : "Gensicke, Hellmuth / 1917-2006"
+      "label" : "Gensicke, Hellmuth / 1917-2006",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

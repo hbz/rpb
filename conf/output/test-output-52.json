@@ -55,7 +55,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/16107604nX",
-      "label" : "Volleyballclub Neuwied 77"
+      "label" : "Volleyballclub Neuwied 77",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",
@@ -65,7 +66,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/VCN 77",
-      "label" : "VCN 77"
+      "label" : "VCN 77",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

@@ -141,7 +141,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner / 1943-"
+      "label" : "Kussmaul, Heiner / 1943-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",

@@ -65,7 +65,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn11k2200547a",
-      "label" : "Hondius, Jodocus (Kartograph, 1563-1612)"
+      "label" : "Hondius, Jodocus (Kartograph, 1563-1612)",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",

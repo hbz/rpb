@@ -66,7 +66,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn11k2440560a",
-      "label" : "Hamacher, Rolfjosef"
+      "label" : "Hamacher, Rolfjosef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -76,7 +77,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/105115975X",
-      "label" : "Stein, Ulrich / 1951-"
+      "label" : "Stein, Ulrich / 1951-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

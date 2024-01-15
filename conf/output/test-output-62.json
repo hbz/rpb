@@ -61,7 +61,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10120647-1",
-      "label" : "St.-Johannes-Grundschule / Erpel"
+      "label" : "St.-Johannes-Grundschule / Erpel",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

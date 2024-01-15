@@ -52,7 +52,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/107939061",
-      "label" : "Kermann, Joachim / 1942-"
+      "label" : "Kermann, Joachim / 1942-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

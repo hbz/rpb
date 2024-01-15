@@ -45,7 +45,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/2038546-8",
-      "label" : "Landkreis Daun"
+      "label" : "Landkreis Daun",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

@@ -53,7 +53,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/7832695-3",
-      "label" : "Ebertsheim-Rodenbach"
+      "label" : "Ebertsheim-Rodenbach",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

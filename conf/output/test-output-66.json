@@ -54,7 +54,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn04k3045137a",
-      "label" : "Keller, Ulrich"
+      "label" : "Keller, Ulrich",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/oth",
@@ -64,7 +65,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10360311-6",
-      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz"
+      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

@@ -61,7 +61,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "label" : "Müller, Carl Werner / 1931-2018",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

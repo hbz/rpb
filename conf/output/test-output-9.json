@@ -71,7 +71,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn01k18192455a",
-      "label" : "Reumont, Alfred ¬von¬"
+      "label" : "Reumont, Alfred ¬von¬",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -81,7 +82,8 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/119468808",
-      "label" : "White, Charles / 1928-"
+      "label" : "White, Charles / 1928-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/pbl",
@@ -91,7 +93,8 @@
   }, {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn11k2205906a",
-      "label" : "Kretzschmer, Hermann"
+      "label" : "Kretzschmer, Hermann",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ill",

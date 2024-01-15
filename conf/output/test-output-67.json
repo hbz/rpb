@@ -60,7 +60,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10360357-8",
-      "label" : "Volksbank Kirn-Sobernheim"
+      "label" : "Volksbank Kirn-Sobernheim",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

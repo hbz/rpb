@@ -69,7 +69,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5325261-5",
-      "label" : "Verein für Rasenspiele Speyer 1950"
+      "label" : "Verein für Rasenspiele Speyer 1950",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",

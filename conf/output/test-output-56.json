@@ -53,7 +53,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/929n991002",
-      "label" : "Weger, Joachim"
+      "label" : "Weger, Joachim",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",

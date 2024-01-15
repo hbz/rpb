@@ -60,7 +60,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10361782-6",
-      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau"
+      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/org",

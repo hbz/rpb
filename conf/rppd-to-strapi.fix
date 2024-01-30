@@ -63,7 +63,8 @@ end
 replace_all("f82b", "(\\d+)n(\\d)", "$1-$2")
 lookup("f82b", "map_gndid_to_new")
 
-replace_all("f1nv", "w+", "www") # z.B. ww -> www
-replace_all("f1nv", "m+", "mmm") # z.B. mmmm -> mmm
+replace_all("f1nv", "w+", "weiblich")
+replace_all("f1nv", "m+", "männlich")
+replace_all("f1nv", "d+", "divers")
 
 vacuum()

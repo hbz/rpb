@@ -1,5 +1,5 @@
 default HOST = "localhost"; // pass e.g. test-metadaten-nrw.hbz-nrw.de
-API_URL = "http://" + HOST + ":1339/api/" + PATH;
+API_URL = "http://" + HOST + ":1337/api/" + PATH;
 
 FIX = "
 unless " + PICK + "

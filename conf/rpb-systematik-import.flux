@@ -1,5 +1,5 @@
 default HOST = "localhost"; // pass e.g. HOST=test-metadaten-nrw.hbz-nrw.de
-API_URL = "http://" + HOST + ":1339/api/" + PATH;
+API_URL = "http://" + HOST + ":1337/api/" + PATH;
 
 "https://raw.githubusercontent.com/acka47/scripts/master/skos2json/" + INPUT
 | open-http

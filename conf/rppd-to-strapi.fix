@@ -33,6 +33,7 @@ do once()
 end
 
 call_macro("to_bool", field: "f11_")
+call_macro("to_bool", field: "f12_")
 call_macro("to_bool", field: "f13_")
 call_macro("to_bool", field: "f14_")
 call_macro("to_bool", field: "f15_")

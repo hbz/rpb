@@ -1,0 +1,76 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "107t182053",
+  "id" : "https://lobid.org/resources/107t182053",
+  "hbzId" : "HT019399122",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Friedrich Christian Laukhard (1757-1822) : Schriftsteller, Radikalaufklärer und gelehrter Soldat",
+  "extent" : "218 Seiten : Illustrationen, Karte",
+  "responsibilityStatement" : [ "Guido Naschert (Hg.)" ],
+  "publication" : [ {
+    "location" : [ "Paderborn" ],
+    "publishedBy" : [ "Ferdinand Schöningh" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n768030",
+    "label" : "Schriftstellerin. Schriftsteller / Sekundärliteratur",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Laukhard, Friedrich Christian / 1757-1822 | Biografie",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/118726692",
+      "label" : "Laukhard, Friedrich Christian / 1757-1822",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4006804-3",
+      "label" : "Biografie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33105070",
+    "label" : "Wendelsheim",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Gn18s2053186a",
+      "label" : "Naschert, Guido",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/pbl",
+      "label" : "Herausgeber"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "description" : [ {
+    "id" : "http://digitale-objekte.hbz-nrw.de/storage2/2017/08/19/file_28/7343682.pdf",
+    "label" : "Inhaltstext"
+  } ],
+  "tableOfContents" : [ {
+    "id" : "https://www.hsozkult.de/publicationreview/id/reb-22111",
+    "label" : "Inhaltsverzeichnis"
+  } ]
+}

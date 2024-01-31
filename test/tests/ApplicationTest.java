@@ -115,7 +115,7 @@ public class ApplicationTest {
 				Json.newObject().put("label", "Stadtbezirk 8"),
 				Json.newObject().put("label", "Stadtbezirk 9"),
 				Json.newObject().put("label", "Stadtbezirk 10") };
-		Arrays.sort(in, Classification.comparator);
+		Arrays.sort(in, Classification.comparator(Classification::labelText));
 		Assert.assertArrayEquals(correct, in);
 	}
 
@@ -143,7 +143,7 @@ public class ApplicationTest {
 				Json.newObject().put("label", "Stadtbezirk VIII"),
 				Json.newObject().put("label", "Stadtbezirk IX"),
 				Json.newObject().put("label", "Stadtbezirk X") };
-		Arrays.sort(in, Classification.comparator);
+		Arrays.sort(in, Classification.comparator(Classification::labelText));
 		Assert.assertArrayEquals(correct, in);
 	}
 

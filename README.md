@@ -21,7 +21,11 @@ cd rpb
 
 ## Deployment overview
 
+The overall RPB system consists of 4 applications: RPB & BiblioVino (Java/Play, based on [NWBib](https://github.com/hbz/nwbib)), RPPD (Java/Play, based on [lobid-gnd](https://github.com/hbz/lobid-gnd)), and Strapi-RPB (JavaScript/React).
+
 ### RPB & BiblioVino
+
+Source code: https://github.com/hbz/rpb & https://github.com/hbz/rpb/tree/biblioVino (https://github.com/hbz/rpb/pull/52)
 
 |     | Production |     | Test |     |
 | --- | ---------- | --- | ---- | --- |
@@ -32,10 +36,21 @@ cd rpb
 
 ### RPPD
 
+Source code: https://github.com/hbz/lobid-gnd/tree/rppd (https://github.com/hbz/lobid-gnd/pull/361)
+
 |     | Production |     | Test |     |
 | --- | ---------- | --- | ---- | --- |
 | Index alias | gnd-rppd | http://weywot3.hbz-nrw.de:9200/gnd-rppd/_search | gnd-rppd-test | http://weywot3.hbz-nrw.de:9200/gnd-rppd-test/_search
 | rppd instance (port 1993) | quaoar1:~/git/rppd | https://rppd.lobid.org/search  | quaoar3:~/git/rppd | http://test.rppd.lobid.org/search |
+
+### Strapi-RPB
+
+Source code: https://github.com/hbz/strapi-rpb
+
+|     | Production |     | Test |     |
+| --- | ---------- | --- | ---- | --- |
+| Admin UI | metadaten-nrw:/opt/strapi-rpb$ | https://rpb-cms.lobid.org/admin | test-metadaten-nrw:/opt/strapi-rpb$ | https://rpb-cms-test.lobid.org/admin
+| Search API | " | [https://rpb-cms.lobid.org/api/articles?populate=*](https://rpb-cms.lobid.org/api/articles?populate=*)  | " | [https://rpb-cms-test.lobid.org/api/articles?populate=*](https://rpb-cms-test.lobid.org/api/articles?populate=*) |
 
 ## Transformation development
 

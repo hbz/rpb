@@ -143,6 +143,18 @@ sh validateJsonOutput.sh
 
 This validates the resulting files against the JSON schemas in `test/rpb/schemas/`.
 
+### Adding test data
+
+During development, you'll sometimes want to add a record with specific fields or values to the test data, e.g. when handling new fields or fixing edge cases in the transformation. Due to the unusual encoding of the input data (`IBM437`), editing the files in a text editor may result in a faulty encoding. Instead, we can use the command line and append to the test data directly with `>>`.
+
+E.g. to add the last record in `conf/RPB-Export_HBZ_Bio.txt` that contains `#82b` to `conf/RPB-Export_HBZ_Bio_Test.txt`:
+
+```bash
+cat conf/RPB-Export_HBZ_Bio.txt | grep -a '#82b' | tail -n 1 >> conf/RPB-Export_HBZ_Bio_Test.txt
+```
+
+The `-a` is required to return all results since grep views parts of the files as binary data.
+
 ### Index creation
 
 If you're not indexing into an existing lobid-resources index, make sure to create one with the proper index settings, e.g. to create `resources-rpb-20230623` from `quaoar3`:

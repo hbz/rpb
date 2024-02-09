@@ -243,6 +243,7 @@ public class Application extends Controller {
 			final int size, final String owner, String t, String sort,
 			boolean details, String location, String word, String corporation,
 			String raw, String format) {
+		response().setHeader("Access-Control-Allow-Origin", "*");
 		String uuid = session("uuid");
 		if (uuid == null)
 			session("uuid", UUID.randomUUID().toString());

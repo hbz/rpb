@@ -67,10 +67,9 @@
   } ],
   "description" : [ {
     "id" : "http://digitale-objekte.hbz-nrw.de/storage2/2017/08/19/file_28/7343682.pdf",
-    "label" : "Inhaltstext"
-  } ],
-  "tableOfContents" : [ {
+    "label" : "http://digitale-objekte.hbz-nrw.de/stor..."
+  }, {
     "id" : "https://www.hsozkult.de/publicationreview/id/reb-22111",
-    "label" : "Inhaltsverzeichnis"
+    "label" : "https://www.hsozkult.de/publ..."
   } ]
 }

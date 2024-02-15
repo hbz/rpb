@@ -34,7 +34,6 @@ do put_macro("add_url")
   if exists("$[from]")
     if all_match("$[from]", "(https?|ftp):\\/\\/(\\S+\\.)+\\S+(\\/\\S*)?|")
       move_field("$[from]", "f90[].$append.f90_")
-      #add_field("f90[].*.n90", "$[type]")
       set_field("f90[].$last.n90", "$[type]")
     end
   end

@@ -346,8 +346,6 @@ do list(path:"f90[]", "var": "$i")
   end
 end
 
-replace_all("description[].*.label", "^([^\\.]+[^/]+/....).+$","$1...")
-
 retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]")
 
 vacuum()

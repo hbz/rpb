@@ -1,0 +1,377 @@
+do put_macro("beacon_put")
+  put_filemap("conf/maps/beacons/gndId-to-$[id].tsv", "beacon_$[id]_url", key_column:"0", value_column: "1", sep_char: "\t", expected_columns:"3")
+  put_filemap("conf/maps/beacons/gndId-to-$[id].tsv", "beacon_$[id]_name", key_column:"0", value_column: "2", sep_char: "\t", expected_columns:"3")
+end
+
+do put_macro("beacon_lookup")
+  copy_field("gndIdentifier", "_temp")
+  lookup("_temp", "beacon_$[id]_url", delete: "true")
+  if exists("_temp")
+    move_field("_temp", "sameAs[].$append.id")
+    copy_field("gndIdentifier", "_temp")
+    lookup("_temp", "beacon_$[id]_name", delete: "true")
+    move_field("_temp", "sameAs[].$last.collection.name")
+  end
+end
+
+do once("map")
+  put_filemap("conf/RPB-Export_HBZ_SW.tsv", "SW_map", sep_char: "\t")
+  put_filemap("conf/RPB-Export_HBZ_SWN.tsv", "SWN_map", sep_char: "\t")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+
+  # maps für lookup relatedPerson
+  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")  
+  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdLabel",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
+
+  # maps für depiction
+  put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_thumbnail", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"4")
+  put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_id", key_column:"0", value_column:"2", sep_char: "\t", expected_columns:"4")
+  put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_url", key_column:"0", value_column:"3", sep_char: "\t", expected_columns:"4")
+
+  # maps aus beacons
+  call_macro("beacon_put", id: "adb")
+  call_macro("beacon_put", id: "archinform")
+  call_macro("beacon_put", id: "babi")
+  call_macro("beacon_put", id: "blkoe")
+  call_macro("beacon_put", id: "bsb")
+  call_macro("beacon_put", id: "commons")
+  call_macro("beacon_put", id: "dewiki")
+  call_macro("beacon_put", id: "germania_sacra")
+  call_macro("beacon_put", id: "gutenberg")
+  call_macro("beacon_put", id: "kupferstichkabinett")
+  call_macro("beacon_put", id: "lagis")
+  call_macro("beacon_put", id: "leo_labi")
+  call_macro("beacon_put", id: "lwl")
+  call_macro("beacon_put", id: "ndb")
+  call_macro("beacon_put", id: "oebl")
+  call_macro("beacon_put", id: "portraitindex")
+  call_macro("beacon_put", id: "radb")
+  call_macro("beacon_put", id: "regionalgeschichte")
+  call_macro("beacon_put", id: "ri")
+  call_macro("beacon_put", id: "sbub")
+  call_macro("beacon_put", id: "tripota")
+  call_macro("beacon_put", id: "usbk")
+  call_macro("beacon_put", id: "vd16")
+end
+
+# Kommentar Doku: #14 "x" eintragen, falls der Datensatz nicht im Webopac erscheinen soll, z.B. noch nicht aufgearbeitete ps-Sätze
+if exists("f14_")
+  reject()
+end
+
+# @context
+add_field("@context", "http://lobid.org/gnd/context.jsonld")
+
+# ------
+#00 RPPD-ID 
+# Komentar Doku:  (Achtung: 00 BLANK)
+
+copy_field("f00_","id")
+copy_field("f00_","rppdId")
+prepend("id","https://rppd.lobid.org/")
+
+# -------
+#82b	(GND-ID (R)) ->	gndIdentifier	
+# Kommentar Doku:  ohne das vorangestellte Präfix (DE-588)
+
+copy_field("f82b", "gndIdentifier")
+unless all_contain("f82b", "Keine GND-Ansetzung")
+  copy_field("f82b","id")
+  prepend("id","https://d-nb.info/gnd/")
+end
+
+set_array("sameAs[]")
+call_macro("beacon_lookup", id: "adb")
+call_macro("beacon_lookup", id: "archinform")
+call_macro("beacon_lookup", id: "babi")
+call_macro("beacon_lookup", id: "blkoe")
+call_macro("beacon_lookup", id: "bsb")
+call_macro("beacon_lookup", id: "commons")
+call_macro("beacon_lookup", id: "dewiki")
+call_macro("beacon_lookup", id: "germania_sacra")
+call_macro("beacon_lookup", id: "gutenberg")
+call_macro("beacon_lookup", id: "kupferstichkabinett")
+call_macro("beacon_lookup", id: "lagis")
+call_macro("beacon_lookup", id: "leo_labi")
+call_macro("beacon_lookup", id: "lwl")
+call_macro("beacon_lookup", id: "ndb")
+call_macro("beacon_lookup", id: "oebl")
+call_macro("beacon_lookup", id: "portraitindex")
+call_macro("beacon_lookup", id: "radb")
+call_macro("beacon_lookup", id: "regionalgeschichte")
+call_macro("beacon_lookup", id: "ri")
+call_macro("beacon_lookup", id: "sbub")
+call_macro("beacon_lookup", id: "tripota")
+call_macro("beacon_lookup", id: "usbk")
+call_macro("beacon_lookup", id: "vd16")
+
+set_array("type[]", "AuthorityResource", "Person", "DifferentiatedPerson")
+
+# #1na (Name, bevorzugte Form) -> preferredName
+# Name ist aber Kombination aus Geburtsdaten und Name e.g. "f1na": "Marquard, Udo / 1959-"
+# Daher müss alles hinter dem Namen ab dem Leerzeichen gelöscht werden
+
+copy_field("f1na", "preferredName")
+replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
+replace_all("preferredName","¬","")
+trim("preferredName")
+
+# ------
+# #1nc (Name Vw-Formen (m)) und #1nd (Andere Namensformen (m)) -> variantName
+# In 1nc kann es sein, dass der Name aus #1na erneut wieder vorkommt, das könnte man mit einem Conditional prüfen.
+# Kommentar #1nc Doku: sowohl GND, als auch lokale; getrennt mit @; auch bei Doppelnamen vom 2. Teil des Namens; auch Vw-Formen von Pseud/Wirkl. Name;  (wird im web-Katalog nicht angezeigt)
+# Kommentar #1nd Doku: sowohl GND, als auch lokale; getrennt mit @, gekennzeichnet mit ¬[Pseud.]¬/¬[Wirkl. Name]¬/¬[Früherer Name]¬/¬[Späterer Name]¬, oder ohne Kennzeichnung bei prägnanter, weiterer Namensform (wird im web-Katalog angezeigt)
+
+set_array("variantName[]")
+copy_field("f1nc[].*.f1nc", "variantName[].$append")
+copy_field("f1nd[].*.f1nd", "variantName[].$append")
+uniq("variantName[]")
+
+
+# -------
+# #1ne (Bilddatei) -> depiction.id, oder url, der thumbnail (neue Property?)
+# Komentar Doku: vollständiger Dateiname ohne Pfadangaben, aber inkl. Endung; hinter dem Zeichen "@" kann man eine Quellenangabe einfügen; die zugehörige Datei wird an Herrn Dirx geschickt.; Beispiel: #1ne120251973_1.jpg@Mittelrhein-Museum Koblenz
+# Da wir keine Bilder bisher haben, nutze ich hier die Bilder vom GND Explorer.
+
+set_array("depiction[]")
+copy_field("gndIdentifier","depiction[].$append.id")
+copy_field("gndIdentifier","depiction[].1.url")
+copy_field("gndIdentifier","depiction[].1.thumbnail")
+
+lookup("depiction[].1.id", "gnd_to_id", delete: "true")
+lookup("depiction[].1.url", "gnd_to_url", delete: "true")
+lookup("depiction[].1.thumbnail", "gnd_to_thumbnail", delete: "true")
+
+# -------
+# #1nn (Berufe/Stellungen (m, R)) -> professionOrOccupation
+# Kommentar Doku: nach Möglichkeit aus Register 3, sonst Klartext gemäß GND, getrennt mit @
+# Hier brauchen wir die Werte aus Register 3, eine Konkoranz auf die GND. Falls nur GND dann nur auf label mappen?
+# professionOrOccupationAsLiteral[].*
+# professionOrOccupation[].*.id
+# professionOrOccupation[].*.label
+
+
+set_array("professionOrOccupation[]")
+do list(path:"f1nn[]", "var": "$i")
+  replace_all("$i.f1nn", "_", "")
+  copy_field("$i.f1nn", "professionOrOccupation[].$append.label")
+  copy_field("$i.f1nn", "professionOrOccupation[].$last.id")
+end
+
+do list(path:"professionOrOccupation[]", "var": "$i")
+  lookup("$i.label", "SW_map", delete: "true")
+  if exists("$i.label")
+    if all_match("$i.id", "(^\\d*)n(\\d)")
+      replace_all("$i.id", "(^\\d*)n(\\d)", "$1-$2")
+      prepend("$i.id", "https://d-nb.info/gnd/")
+    else
+      prepend("$i.id", "https://rpb.lobid.org/sw/")
+    end
+  # TODO kein Beispiel in Testdaten
+  else
+    copy_field("$i.id", "$i.label")
+  end
+end
+  
+
+# -------
+# #1wz (Wirkungszeitraum) -> periodOfActivity
+# Kommentar Doku: Wenn kein Geburtsdatum und kein Todesdatum ermittelbar ist, kann hier ein Zeitraum eingetragen werden
+# TODO kein Beispiel in Testdaten
+set_array("periodOfActivity[]")
+replace_all("f1wz", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
+copy_field("f1wz", "periodOfActivity[].$append")
+
+# -------
+# #1no (Wirkungsort (m, R))-> placeOfActivity
+# Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND; getrennt mit @, auch Wohnorte; Orte, von denen aus gewirkt wurde, nicht das Verwaltungsgebiet
+# Müssen anscheinend die RPB Spatial Ids konstruieren.
+# Basis: "spatial_map" ; RPPB-IDs: Unterstriche und vorangestelltes "o" entfernen
+# f1no[].*.f1no
+# placeOfActivity[].*.id
+# placeOfActivity[].*.label
+
+set_array("placeOfActivity[]")
+do list(path:"f1no[]", "var": "$i")
+  if any_match("$i.f1no", "^_o.+")
+    replace_all("$i.f1no", "^_o|_$", "")
+    prepend("$i.f1no", "https://rpb.lobid.org/spatial#n")
+    copy_field("$i.f1no", "placeOfActivity[].$append.label")
+    copy_field("$i.f1no", "placeOfActivity[].$last.id")
+    lookup("placeOfActivity[].$last.label", "spatial_map")
+  else
+    copy_field("$i.f1no", "placeOfActivity[].$append.label")
+    copy_field("$i.f1no", "placeOfActivity[].$last.id")
+  end
+end
+
+
+# -------
+# #1np (Geburtsdatum) -> dateOfBirth
+# Kommentar Doku: mit Punkten und führenden Nullen: 04.05.1950; für Jahrestagsanzeige: die erste 4stellige Zahl im Feld wird als Jahr aufgefasst, dh auch "März 1908" ist möglich; Jahre mit „um“, „vor“, „nach“ und „zwischen“ werden nicht als Jubiläumsjahr aufgefasst.
+set_array("dateOfBirth[]")
+replace_all("f1np", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
+copy_field("f1np", "dateOfBirth[].$append")
+
+# -------
+# #1nq (Geburtsort (R)) -> placeOfBirth
+# Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND 
+
+set_array("placeOfBirth[]")
+if any_match("f1nq", "^_o.+")
+  replace_all("f1nq", "^_o|_$", "")
+  prepend("f1nq", "https://rpb.lobid.org/spatial#n")
+  copy_field("f1nq", "placeOfBirth[].$append.label")
+  copy_field("f1nq", "placeOfBirth[].$last.id")
+  lookup("placeOfBirth[].$last.label", "spatial_map")
+else
+  copy_field("f1nq", "placeOfBirth[].$append.label")
+  copy_field("f1nq", "placeOfBirth[].$last.id")
+end 
+
+# -------
+# #1nr (Sterbedatum) -> dateOfDeath
+## Kommentar Doku: s. #1np
+
+set_array("dateOfDeath[]")
+replace_all("f1nr", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
+copy_field("f1nr", "dateOfDeath[].$append")
+
+# -------
+# #1ns (Sterbeort (R)) -> placeOfDeath
+# Kommentar Doku: s. #1nq
+
+set_array("placeOfDeath[]")
+if any_match("f1ns", "^_o.+")
+  replace_all("f1ns", "^_o|_$", "")
+  prepend("f1ns", "https://rpb.lobid.org/spatial#n")
+  copy_field("f1ns", "placeOfDeath[].$append.label")
+  copy_field("f1ns", "placeOfDeath[].$last.id")
+  lookup("placeOfDeath[].$last.label", "spatial_map")
+else
+  copy_field("f1ns", "placeOfDeath[].$append.label")
+  copy_field("f1ns", "placeOfDeath[].$last.id")
+end 
+
+# -------
+# #1nt (persönl. Beziehungen (m, R)) -> relatedPerson (unspezifisch)
+# Kommentar Doku: RPPD-ID-Nr. mit Unterstrichen, falls Person bereits in RPPD aufgenommen (Bsp.: _pk0000_), sonst Klartext: Nachname, Vorname / Lebensdaten; getrennt mit @; nähere Ausführungen in 1nz notwendig; verknüpfte Person ist anklickbar 
+# TODO: Wenn rppd ID angegeben wird, unterstriche löschen und zu URL transformieren (wie id) und auf Feld relatedPerson[].*.id mappen.
+
+
+set_array("relatedPerson[]")
+do list(path:"f1nt[]", "var": "$i")
+  if any_match("$i.f1nt", "^_.+")
+    replace_all("$i.f1nt", "_", "")
+    copy_field("$i.f1nt", "relatedPerson[].$append.label")
+    copy_field("$i.f1nt", "relatedPerson[].$last.id")
+    lookup("relatedPerson[].$last.label", "map_rel_preferredName")
+    lookup("relatedPerson[].$last.id", "map_rel_gndId")
+    lookup("relatedPerson[].$last.label", "map_rel_rppdLabel")
+    lookup("relatedPerson[].$last.id", "map_rel_rppdId")    
+    #prepend("relatedPerson[].$last.id","https://d-nb.info/gnd/")  
+  else
+    copy_field("$i.f1nt", "relatedPerson[].$append.label")
+    copy_field("$i.f1nt", "relatedPerson[].$last.id")
+  end
+  replace_all("relatedPerson[].$last.label","¬","")
+end
+
+
+# -------
+# #1nu	(Werke (m)) -> 	publication	
+# Kommentar Doku: nur Auswahl! Möglichst Originalausgabe angeben. Form:  Titel,  Jahr.  Achtung: Nichtsortierzeichen für führenden Artikel (Alt-170); getrennt mit @; auch Werke von Architekten, Künstlern und Regisseuren
+
+set_array("publication[]")
+copy_field("f1nu[].*.f1nu", "publication[].$append")
+
+# -------
+# #1nv	(Geschlecht) -> 	gender	
+
+set_array("gender[]")
+if any_equal("f1nv", "männlich")
+  set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#male")
+  set_field("gender[].$last.label", "Männlich")
+elsif any_equal("f1nv", "weiblich")
+  set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#female")
+  set_field("gender[].$last.label", "Weiblich")
+else
+  set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#notKnown")
+  set_field("gender[].$last.label", "Unbekannt")
+end
+
+# -------
+# #1nw	(Fachgebiete (m)) -> 	gndSubjectCategory	
+# Kommentar Doku:  Normdaten aus SWN-Sätzen (Reg. 9 und Reg. 11), getrennt mit @: Bsp.: #1nw_swn12x2p_@_swn3x6p_; entspricht der GND-Systematik; paarig zu Berufen vergeben
+# https://d-nb.info/standards/vocab/gnd/gnd-sc.html#
+# gndSubjectCategory[].*.id
+# gndSubjectCategory[].*.label
+
+set_array("gndSubjectCategory[]")
+do list(path:"f1nw[]", "var": "$i")
+  replace_all("$i.f1nw", "_", "")
+  replace_all("$i.f1nw", "(\\d)x(\\d)", "$1.$2")
+  replace_all("$i.f1nw", "^swn", "")
+  copy_field("$i.f1nw", "gndSubjectCategory[].$append.label")
+  copy_field("$i.f1nw", "gndSubjectCategory[].$last.id")
+end
+
+do list(path:"gndSubjectCategory[]", "var": "$i")
+  lookup("$i.label", "SWN_map", delete: "true")
+  if exists("$i.label")
+    prepend("$i.id", "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#")
+  else
+    prepend("$i.id", "https://rpb.lobid.org/swn/")
+  end
+end
+
+
+# -------
+#1ny	(Datum der letzten inhaltlichen Änderung) ->	describedBy.dateModified	
+# Kommentar Doku:  JJJJMMTT, z.B. 20120928 für 28.09.2012
+
+if any_match("f1ny", "(\\d{4})(\\d{2})(\\d{2})")
+  replace_all("f1ny", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
+  copy_field("f1ny", "describedBy.dateModified")
+end
+
+# -------
+#1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation
+# Kommentar Doku:  getrennt durch "; ". Keine Abkürzungen benutzen, da die Stichworte in Register 9 indexiert werden. Zitate aus Quellen in Anführungszeichen; bei sehr langen, biogr. Anmerkungen wird der Text auf mehrere Kategorien aufgeteilt: #1z2, #1z3, #1z4 ... #1z9. Bei eingespielten Biographien werden die Angaben zum Originalwerk am Ende angegeben:  --- [Daten übernommen aus: ....]
+
+set_array("biographicalOrHistoricalInformation[]")
+copy_field("f1z1[].*.f1z1", "biographicalOrHistoricalInformation[].$append")
+
+# #1nx	(Quelle (m)) ->	describedBy.source	
+# Kommentar Doku:  getrennt mit @; Beispiel: Westerwälder Zeitung. - (2002), 224 vom 26.9., S. 20 (evtl. Todesanzeige)@Eigene Angaben (Datum); Genaue Adresse bei Websites: http://www...  (Stand: Datum). Alle Quellen zu einer Person, werden hier zusammengeführt, auch wenn sie aus verschiedenen, eingespielten Werken stammen 
+set_array("describedBy.source[]")
+copy_field("f1nx[].*.f1nx", "describedBy.source[].$append")
+
+vacuum()
+retain(
+  "@context",
+  "dateOfBirth[]",
+  "dateOfDeath[]",
+  "depiction[]",
+  "describedBy",
+  "gender[]",
+  "gndIdentifier",
+  "id",
+  "preferredName",
+  "professionOrOccupation[]",
+  "rppdId", 
+  "type[]",
+  "variantName[]", 
+  "periodOfActivity[]", 
+  "placeOfActivity[]",
+  "gndSubjectCategory[]", 
+  "placeOfBirth[]", 
+  "placeOfDeath[]", 
+  "relatedPerson[]", 
+  "biographicalOrHistoricalInformation[]", 
+  "publication[]",
+  "sameAs[]"
+  )
+	

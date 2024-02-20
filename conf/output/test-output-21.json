@@ -1,31 +1,56 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147871",
-  "id" : "https://lobid.org/resources/RPB107t01147871",
+  "rpbId" : "107t01147870",
+  "id" : "https://lobid.org/resources/107t01147870",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Juden in Hainfeld : ein Beitrag zur Geschichte der Dorfjuden im Hochstift Speyer",
-  "extent" : "Ill.",
+  "title" : "Die Herren von Hainfeld - zur Geschichte e. vorderpfälzischen Adelssitzes im Mittelalter",
   "publication" : [ {
     "startDate" : "1983",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n632000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Ortsgeschichte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n207020",
+    "label" : "Familie",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Hainfeld / Familie | Geschichte 1100-1300",
+    "componentList" : [ {
+      "id" : "https://rpb.lobid.org/sw/00Sn01s147870528a",
+      "label" : "Hainfeld / Familie",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn06k1444137a",
+      "label" : "Geschichte 1100-1300",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "n33703036",
+    "label" : "Hainfeld",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -35,7 +60,8 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "label" : "Müller, Carl Werner / 1931-2018",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -43,5 +69,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167"
+  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 81 (1983), S. 229-271"
 }

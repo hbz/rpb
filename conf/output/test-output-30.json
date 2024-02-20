@@ -1,22 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t982371",
-  "id" : "https://lobid.org/resources/RPB107t982371",
+  "rpbId" : "107t982370",
+  "id" : "https://lobid.org/resources/107t982370",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Ältere Menschen machen Fernsehen : aktivierende Medienarbeit in Offenen Kanälen",
-  "note" : [ "Videoprojekt zwischen Volkshochschule u. Offener Kanal" ],
+  "title" : "\"Der Holocaust ist immer da\": Kooperationsprojekt Offener Kanal Ludwigshafen, Vorderpfalz und Community Television, Israel",
   "publication" : [ {
     "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n786000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n632050",
+    "label" : "Judenverfolgung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,7 +23,7 @@
     }
   }, {
     "id" : "http://purl.org/lobid/rpb#n882060",
-    "label" : "Platzhalter Schlagwortlabel",
+    "label" : "Fernsehen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -32,32 +31,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Volkshochschule | Geschichte 1945-",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4136151-9",
-      "label" : "Volkshochschule",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Offener Kanal | Geschichte 1945-",
+    "label" : "Ludwigshafen am Rhein | Offener Kanal | Judenvernichtung",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4036472-0",
       "label" : "Ludwigshafen am Rhein",
@@ -73,42 +47,17 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Alter | Geschichte 1945-",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
+      "id" : "https://d-nb.info/gnd/4073091-8",
+      "label" : "Judenvernichtung",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4001446-0",
-      "label" : "Alter",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n31400000",
-    "label" : "n31400000",
+    "label" : "Ludwigshafen am Rhein, Kreisfreie Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -117,8 +66,9 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02s0022a",
-      "label" : "Baum, Herbert"
+      "id" : "https://d-nb.info/gnd/106837800X",
+      "label" : "Minor, Ulrike",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -126,5 +76,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 119-123"
+  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 102-106"
 }

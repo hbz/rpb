@@ -1,30 +1,62 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t01069600",
-  "id" : "https://lobid.org/resources/RPB929t01069600",
+  "rpbId" : "929t190565",
+  "id" : "https://lobid.org/resources/929t190565",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
+  }, {
+    "id" : "http://lobid.org/resources/HT013678171#!",
+    "type" : [ "Collection" ],
+    "label" : "BiblioVino"
   } ],
-  "title" : "Vortrag über Heinrich Alken von Dr. Born.",
+  "title" : "Weingeschäft im Umbruch : Pieroth setzt auf alten Namen und eine neue Vermarktungsstrategie, um auch neue Kundengruppen zu erreichen",
+  "extent" : "Illustrationen",
+  "responsibilityStatement" : [ "T.S." ],
   "publication" : [ {
-    "startDate" : "1920",
+    "startDate" : "2018",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n109000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n544360",
+    "label" : "Weinhandel",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544325",
+    "label" : "Weingut",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Ferdinand Pieroth, Weingut - Weinkellerei | Vermarktung",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/2075606-9",
+      "label" : "Ferdinand Pieroth, Weingut - Weinkellerei",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4121857-7",
+      "label" : "Vermarktung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13700068",
-    "label" : "n13700068",
+    "id" : "https://rpb.lobid.org/spatial#n133110870101",
+    "label" : "Burg Layen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -33,8 +65,9 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1044265310",
-      "label" : "Hörter, Peter / 1860-1930"
+      "id" : "https://rpb.lobid.org/agent/929n981242",
+      "label" : "Strauß, Torsten",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -42,5 +75,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Coblenzer Zeitung 25.1.1920."
+  "bibliographicCitation" : "In: Initiativ. - (2018), 3, Seite 20-21. -"
 }

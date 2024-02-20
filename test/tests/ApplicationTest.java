@@ -70,24 +70,24 @@ public class ApplicationTest {
 	}
 
 	@Test
-	public void classificationNwbibsubject()
+	public void classificationrpbsubject()
 			throws MalformedURLException, IOException {
-		List<String> nwbibsubjects = Classification
-				.toJsonLd(new URL(CONFIG.getString("index.data.nwbibsubject")));
-		nwbibsubjects.forEach(System.out::println);
-		assertThat(nwbibsubjects.size()).isGreaterThan(1000);
-		assertThat(nwbibsubjects.toString()).contains("Landeskunde allgemein")
+		List<String> rpbsubjects = Classification
+				.toJsonLd(new URL(CONFIG.getString("index.data.rpbsubject")));
+		rpbsubjects.forEach(System.out::println);
+		assertThat(rpbsubjects.size()).isGreaterThan(1000);
+		assertThat(rpbsubjects.toString()).contains("Landeskunde allgemein")
 				.contains("Landesbeschreibung").contains("Hydroökologie");
 	}
 
 	@Test
-	public void classificationNwbibspatial()
+	public void classificationrpbspatial()
 			throws MalformedURLException, IOException {
-		List<String> nwbibspatials = Classification
-				.toJsonLd(new URL(CONFIG.getString("index.data.nwbibspatial")));
-		nwbibspatials.forEach(System.out::println);
-		assertThat(nwbibspatials.size()).isGreaterThan(5);
-		assertThat(nwbibspatials.toString()).contains("Rheinland-Pfalz")
+		List<String> rpbspatials = Classification
+				.toJsonLd(new URL(CONFIG.getString("index.data.rpbspatial")));
+		rpbspatials.forEach(System.out::println);
+		assertThat(rpbspatials.size()).isGreaterThan(5);
+		assertThat(rpbspatials.toString()).contains("Rheinland-Pfalz")
 				.contains("Landschaften").contains("Verbandsgemeinden");
 	}
 
@@ -115,7 +115,7 @@ public class ApplicationTest {
 				Json.newObject().put("label", "Stadtbezirk 8"),
 				Json.newObject().put("label", "Stadtbezirk 9"),
 				Json.newObject().put("label", "Stadtbezirk 10") };
-		Arrays.sort(in, Classification.comparator);
+		Arrays.sort(in, Classification.comparator(Classification::labelText));
 		Assert.assertArrayEquals(correct, in);
 	}
 
@@ -143,7 +143,7 @@ public class ApplicationTest {
 				Json.newObject().put("label", "Stadtbezirk VIII"),
 				Json.newObject().put("label", "Stadtbezirk IX"),
 				Json.newObject().put("label", "Stadtbezirk X") };
-		Arrays.sort(in, Classification.comparator);
+		Arrays.sort(in, Classification.comparator(Classification::labelText));
 		Assert.assertArrayEquals(correct, in);
 	}
 

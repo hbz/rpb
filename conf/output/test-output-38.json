@@ -1,73 +1,24 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB107t982376",
-  "id" : "https://lobid.org/resources/RPB107t982376",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "https://lobid.org/resources/107t982375",
+      "label" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz"
+    } ],
+    "numbering" : "1998,1(Sept.) - 2001,9(Sept.)"
+  } ],
+  "rpbId" : "107t982375b1",
+  "id" : "https://lobid.org/resources/107t982375b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte",
-  "responsibilityStatement" : [ "Institut für Angewandte Vogelkunde, Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland" ],
+  "title" : "Die Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz : 1998,1(Sept.) - 2001,9(Sept.)",
+  "note" : [ "Forts. u.d.T.: Doppelpfeil" ],
   "publication" : [ {
-    "location" : [ "Frankfurt/Main" ],
-    "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n163080",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n584060",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Geschichte 1945- | Zeitschrift",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n01",
-    "label" : "n01",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/1033772-6",
-      "label" : "Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland / Frankfurt, Main"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
-    },
-    "type" : [ "Contribution" ]
   } ]
 }

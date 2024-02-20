@@ -1,0 +1,11 @@
+if any_contain("f82b","Keine")
+	reject()
+end
+
+copy_field("f00_","rppdId")
+copy_field("f82b","gndId")
+prepend("gndId","https://d-nb.info/gnd/")
+copy_field("f1na", "preferredName")
+replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
+trim("preferredName")
+retain("rppdId","gndId", "preferredName")

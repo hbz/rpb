@@ -1,22 +1,32 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121517",
-  "id" : "https://lobid.org/resources/RPB036t0121517",
+  "rpbId" : "036t0121516",
+  "id" : "https://lobid.org/resources/036t0121516",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlingens Einwohnerzahl",
+  "title" : "Sprendlingen und das Kloster Lorsch",
   "publication" : [ {
-    "startDate" : "1959",
+    "startDate" : "1967",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n339",
+    "label" : "Mainz-Bingen, Landkreis",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ],
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "label" : "Wagner, Hermann Josef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -24,5 +34,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 4 (1959), Nr. 1"
+  "bibliographicCitation" : "Landkreis Bingen: Heimat-Jahrbuch. - 1967, S. 23-26"
 }

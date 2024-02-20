@@ -21,6 +21,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -113,11 +114,11 @@ public class Classification {
 				} else
 					addAsSubClass(subClasses, hit, json, broader.findValue("@id").asText());
 			}
-			if (this == SPATIAL && (CONFIG.getBoolean("index.nwbibspatial.enrich")
+			if (this == SPATIAL && (CONFIG.getBoolean("index.rpbspatial.enrich")
 					|| Play.isTest())) { /* SpatialToSkos uses Play test server */
 				addFromCsv(subClasses);
 			}
-			Collections.sort(topClasses, comparator);
+			Collections.sort(topClasses, comparator(Classification::idText));
 			return Pair.of(topClasses, subClasses);
 		}
 
@@ -154,7 +155,7 @@ public class Classification {
 		 */
 		public JsonNode buildRegister() {
 			final List<JsonNode> result = ids(classificationData()).stream()
-					.sorted(comparator).collect(Collectors.toList());
+					.sorted(comparator(Classification::labelText)).collect(Collectors.toList());
 			return Json.toJson(result);
 		}
 
@@ -188,12 +189,18 @@ public class Classification {
 	private static Node node;
 
 	/** Compare German strings */
-	public static Comparator<JsonNode> comparator =
-			(JsonNode o1, JsonNode o2) -> Collator.getInstance(Locale.GERMAN)
-					.compare(labelText(o1), labelText(o2));
+	public static Comparator<JsonNode> comparator(Function<JsonNode, String> fun) {
+		return (JsonNode o1, JsonNode o2) -> Collator.getInstance(Locale.GERMAN)
+				.compare(fun.apply(o1), fun.apply(o2));
+	}
 
 	private Classification() {
 		/* Use via static functions, no instantiation. */
+	}
+
+	private static String idText(JsonNode node) {
+		String[] segments = node.get("value").asText().split("#");
+		return segments[segments.length-1].replaceAll("^n6$", "n0");
 	}
 
 	/**
@@ -229,11 +236,8 @@ public class Classification {
 	 */
 	public static JsonNode ids(String q, String t) {
 		QueryBuilder queryBuilder = QueryBuilders.boolQuery()
-				.should(QueryBuilders.matchQuery(//
-						"@graph." + Property.LABEL.value + ".@value", q))
-				.should(QueryBuilders.idsQuery(Type.NWBIB.elasticsearchType,
-						Type.SPATIAL.elasticsearchType).ids(q))
-				.minimumNumberShouldMatch(1);
+				.must(QueryBuilders.idsQuery(Type.NWBIB.elasticsearchType,
+						Type.SPATIAL.elasticsearchType).ids(q));
 		SearchRequestBuilder requestBuilder = client.prepareSearch(INDEX)
 				.setSearchType(SearchType.DFS_QUERY_THEN_FETCH).setQuery(queryBuilder);
 		if (t.isEmpty()) {
@@ -296,7 +300,7 @@ public class Classification {
 		return result;
 	}
 
-	private static String labelText(JsonNode json) {
+	public static String labelText(JsonNode json) {
 		String label = json.get("label").asText();
 		if (label.contains("Stadtbezirk")) {
 			List<Pair<String, String>> roman = Arrays.asList(Pair.of("I", "a"),
@@ -349,7 +353,7 @@ public class Classification {
 							subClasses.put(broaderId, new ArrayList<JsonNode>());
 						List<JsonNode> sub = subClasses.get(broaderId);
 						sub.add(Json.toJson(ImmutableMap.of("value", thisId, "label", vg + ", Verbandsgemeinde", "notation", thisNotation, "hits", hits)));
-						Collections.sort(sub, comparator);
+						Collections.sort(sub, comparator(Classification::labelText));
 						broader = thisNotation;
 					}
 				} 
@@ -362,13 +366,13 @@ public class Classification {
 						subClasses.put(broaderId, new ArrayList<JsonNode>());
 					List<JsonNode> sub = subClasses.get(broaderId);
 					sub.add(Json.toJson(ImmutableMap.of("value", id, "label", label, "notation", notation, "hits", hits)));
-					Collections.sort(sub, comparator);
+					Collections.sort(sub, comparator(Classification::labelText));
 				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Collections.sort(topClasses, comparator);
+		Collections.sort(topClasses, comparator(Classification::labelText));
 		return Pair.of(topClasses, removeDuplicates(subClasses));
 	}
 
@@ -419,7 +423,9 @@ public class Classification {
 			subClasses.put(broader, new ArrayList<JsonNode>());
 		List<JsonNode> list = subClasses.get(broader);
 		list.addAll(valueAndLabelWithNotation(hit, json));
-		Collections.sort(list, comparator);
+		// non-n6 entries have 2-digit IDs or a second `n` -> sort by ID (RPB-47)
+		boolean sortById = idText(list.get(0)).matches("^n\\d{2}$|^n\\d+n\\d+$");
+		Collections.sort(list, comparator(sortById ? Classification::idText : Classification::labelText));
 	}
 
 	private static String focus(JsonNode json) {
@@ -482,8 +488,8 @@ public class Classification {
 				.actionGet();
 		if (!client.admin().indices().prepareExists(INDEX).execute().actionGet()
 				.isExists()) {
-			indexData(CONFIG.getString("index.data.nwbibsubject"), Type.NWBIB);
-			indexData(CONFIG.getString("index.data.nwbibspatial"), Type.SPATIAL);
+			indexData(CONFIG.getString("index.data.rpbsubject"), Type.NWBIB);
+			indexData(CONFIG.getString("index.data.rpbspatial"), Type.SPATIAL);
 			client.admin().indices().refresh(new RefreshRequest()).actionGet();
 		}
 	}
@@ -515,7 +521,7 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The nwbib or nwbibspatial URI
+	 * @param uri The nwbib or rpbspatial URI
 	 * @return The list of path segments to the given URI in its classification,
 	 *         e.g. for URI https://nwbib.de/subjects#N582060:
 	 *         [https://nwbib.de/subjects#N5, https://nwbib.de/subjects#N580000,

@@ -1,22 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121513",
-  "id" : "https://lobid.org/resources/RPB036t0121513",
+  "rpbId" : "036t0121512",
+  "id" : "https://lobid.org/resources/036t0121512",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Soldaten für Holland",
+  "title" : "Serenissimus befehlen zu prügeln",
   "publication" : [ {
-    "startDate" : "1957",
+    "startDate" : "1963",
     "type" : [ "PublicationEvent" ]
   } ],
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "label" : "Wagner, Hermann Josef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -24,5 +25,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 6"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 6"
 }

@@ -1,28 +1,30 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112440",
-  "id" : "https://lobid.org/resources/RPB929t112440",
-  "biblioVinoId" : "Nr27922",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t084698",
+  "id" : "https://lobid.org/resources/929t084698",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
-  }, {
-    "id" : "http://lobid.org/resources/HT013678171#!",
-    "type" : [ "Collection" ],
-    "label" : "BiblioVino"
   } ],
-  "title" : "Weinkulturlandschaft Mosel : Dornen statt Reben",
-  "extent" : "Ill.",
-  "responsibilityStatement" : [ "Rolfjosef Hamacher und Ulrich Stein" ],
+  "title" : "Pfarr- und Wallfahrtskirche Pfarrer-Kraus-Anlagen Arenberg [Elektronische Ressource]",
+  "responsibilityStatement" : [ "[Gerd Moos]" ],
   "publication" : [ {
-    "startDate" : "2011",
+    "location" : [ "Koblenz" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n544360",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n844030",
+    "label" : "Sakralbau",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n704634",
+    "label" : "Gegenstände der Volksfrömmigkeit",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -30,24 +32,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Moseltal | Weinbau | Preisentwicklung",
+    "label" : "Sankt Nikolaus / Koblenz | DVD-ROM",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4102224-5",
-      "label" : "Moseltal",
+      "id" : "https://d-nb.info/gnd/4515647-5",
+      "label" : "Sankt Nikolaus / Koblenz",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4065136-8",
-      "label" : "Weinbau",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4125931-2",
-      "label" : "Preisentwicklung",
+      "id" : "https://d-nb.info/gnd/4585131-1",
+      "label" : "DVD-ROM",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -55,8 +50,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n24",
-    "label" : "n24",
+    "id" : "https://rpb.lobid.org/spatial#n111000000100",
+    "label" : "Arenberg (T.a.Ortsbezirk 1)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -65,24 +60,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2440560a",
-      "label" : "Hamacher, Rolfjosef"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k0717486a",
+      "label" : "Moos, Gerd",
+      "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/105115975X",
-      "label" : "Stein, Ulrich / 1951-"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "In: Rheinische Heimatpflege. - N.F. 48 (2011), 2, Seite 150-152. -"
+  } ]
 }

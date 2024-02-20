@@ -53,6 +53,7 @@ import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
+import play.twirl.api.HtmlFormat;
 import views.html.browse_classification;
 import views.html.browse_register;
 import views.html.classification;
@@ -220,8 +221,8 @@ public class Application extends Controller {
 	 * @param publisher Query for the resource publisher
 	 * @param issued Query for the resource issued year
 	 * @param medium Query for the resource medium
-	 * @param nwbibspatial Query for the resource nwbibspatial classification
-	 * @param nwbibsubject Query for the resource nwbibsubject classification
+	 * @param rpbspatial Query for the resource rpbspatial classification
+	 * @param rpbsubject Query for the resource rpbsubject classification
 	 * @param from The page start (offset of page of resource to return)
 	 * @param size The page size (size of page of resource to return)
 	 * @param owner Owner filter for resource queries
@@ -238,10 +239,11 @@ public class Application extends Controller {
 	public static Promise<Result> search(final String q, final String person,
 			final String name, final String subject, final String id,
 			final String publisher, final String issued, final String medium,
-			final String nwbibspatial, final String nwbibsubject, final int from,
+			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, final String owner, String t, String sort,
 			boolean details, String location, String word, String corporation,
 			String raw, String format) {
+		response().setHeader("Access-Control-Allow-Origin", "*");
 		String uuid = session("uuid");
 		if (uuid == null)
 			session("uuid", UUID.randomUUID().toString());
@@ -262,15 +264,28 @@ public class Application extends Controller {
 		if (form.hasErrors())
 			return Promise.promise(
 					() -> badRequest(search.render(null, q, person, name, subject, id,
-							publisher, issued, medium, nwbibspatial, nwbibsubject, from, size,
+							publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 							0L, owner, t, sort, location, word, corporation, raw)));
 		String query = form.data().get("q");
 		Promise<Result> result = okPromise(query != null ? query : q, person, name,
-				subject, id, publisher, issued, medium, nwbibspatial, nwbibsubject,
+				subject, id, publisher, issued, medium, rpbspatial, rpbsubject,
 				from, size, owner, t, sort, details, location, word, corporation, raw,
 				format.isEmpty() ? "html" : format);
 		cacheOnRedeem(cacheId, result, ONE_HOUR);
 		return result;
+	}
+
+	public static Promise<Result> searchSpatial(final String id, final int from, final int size,
+			final String format) {
+		return Promise.pure(found(routes.Application.search("", "", "", "", "", "", "", "",
+				"https://rpb.lobid.org/spatial#n" + id, "", from, size, "", "", "", false, "", "",
+				"", "", format)));
+	}
+
+	public static Promise<Result> showPl(String name, String db, int index, int zeilen, String s1) {
+		return Promise
+				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=https://rppd.lobid.org/"
+						+ HtmlFormat.escape(s1) + "'/></head>").as("text/html"));
 	}
 
 	/**
@@ -401,8 +416,8 @@ public class Application extends Controller {
 					"attachment; filename=" + filename);
 			try {
 				return ok(new URL(CONFIG
-						.getString(t.equals("Raumsystematik") ? "index.data.nwbibspatial"
-								: "index.data.nwbibsubject")).openStream());
+						.getString(t.equals("Raumsystematik") ? "index.data.rpbspatial"
+								: "index.data.rpbsubject")).openStream());
 			} catch (IOException e) {
 				e.printStackTrace();
 				return internalServerError(e.getMessage());
@@ -476,18 +491,18 @@ public class Application extends Controller {
 	private static Promise<Result> okPromise(final String q, final String person,
 			final String name, final String subject, final String id,
 			final String publisher, final String issued, final String medium,
-			final String nwbibspatial, final String nwbibsubject, final int from,
+			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, final String owner, String t, String sort,
 			boolean details, String location, String word, String corporation,
 			String raw, String format) {
 		final Promise<Result> result = call(q, person, name, subject, id, publisher,
-				issued, medium, nwbibspatial, nwbibsubject, from, size, owner, t, sort,
+				issued, medium, rpbspatial, rpbsubject, from, size, owner, t, sort,
 				details, location, word, corporation, raw, format);
 		return result.recover((Throwable throwable) -> {
 			Logger.error("Could not call Lobid", throwable);
 			flashError();
 			return internalServerError(search.render("[]", q, person, name, subject,
-					id, publisher, issued, medium, nwbibspatial, nwbibsubject, from, size,
+					id, publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 					0L, owner, t, sort, location, word, corporation, raw));
 		});
 	}
@@ -511,12 +526,12 @@ public class Application extends Controller {
 	static Promise<Result> call(final String q, final String person,
 			final String name, final String subject, final String id,
 			final String publisher, final String issued, final String medium,
-			final String nwbibspatial, final String nwbibsubject, final int from,
+			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, String owner, String t, String sort, boolean showDetails,
 			String location, String word, String corporation, String raw,
 			String format) {
 		final WSRequest requestHolder = Lobid.request(q, person, name, subject, id,
-				publisher, issued, medium, nwbibspatial, nwbibsubject, from, size,
+				publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 				owner, t, sort, location, word, corporation, raw);
 		return requestHolder.get().map((WSResponse response) -> {
 			Long hits = 0L;
@@ -549,7 +564,7 @@ public class Application extends Controller {
 
 			return format.equals("html")
 					? ok(search.render(s, q, person, name, subject, id, publisher, issued,
-							medium, nwbibspatial, nwbibsubject, from, size, hits, owner, t,
+							medium, rpbspatial, rpbsubject, from, size, hits, owner, t,
 							sort, location, word, corporation, raw))
 					: ok(new ObjectMapper().writerWithDefaultPrettyPrinter()
 							.writeValueAsString(Json.parse(s)))
@@ -572,8 +587,8 @@ public class Application extends Controller {
 	 * @param publisher Query for the resource publisher
 	 * @param issued Query for the resource issued year
 	 * @param medium Query for the resource medium
-	 * @param nwbibspatial Query for the resource nwbibspatial classification
-	 * @param nwbibsubject Query for the resource nwbibsubject classification
+	 * @param rpbspatial Query for the resource rpbspatial classification
+	 * @param rpbsubject Query for the resource rpbsubject classification
 	 * @param from The page start (offset of page of resource to return)
 	 * @param size The page size (size of page of resource to return)
 	 * @param owner Owner filter for resource queries
@@ -588,14 +603,14 @@ public class Application extends Controller {
 	 */
 	public static Promise<Result> facets(String q, String person, String name,
 			String subject, String id, String publisher, String issued, String medium,
-			String nwbibspatial, String nwbibsubject, int from, int size,
+			String rpbspatial, String rpbsubject, int from, int size,
 			String owner, String t, String field, String sort, String location,
 			String word, String corporation, String raw) {
 
 		String key = String.format(
 				"facets.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s", field, q,
 				person, name, id, publisher, location, word, corporation, raw, subject,
-				issued, medium, nwbibspatial, nwbibsubject, owner, t);
+				issued, medium, rpbspatial, rpbsubject, owner, t);
 		Result cachedResult = (Result) Cache.get(key);
 		if (cachedResult != null) {
 			return Promise.promise(() -> cachedResult);
@@ -624,9 +639,9 @@ public class Application extends Controller {
 		Comparator<Pair<JsonNode, String>> sorter = (p1, p2) -> {
 			String t1 = p1.getLeft().get("key").asText();
 			String t2 = p2.getLeft().get("key").asText();
-			boolean t1Current = current(subject, medium, nwbibspatial, nwbibsubject,
+			boolean t1Current = current(subject, medium, rpbspatial, rpbsubject,
 					owner, t, field, t1, raw);
-			boolean t2Current = current(subject, medium, nwbibspatial, nwbibsubject,
+			boolean t2Current = current(subject, medium, rpbspatial, rpbsubject,
 					owner, t, field, t2, raw);
 			if (t1Current == t2Current) {
 				if (!field.equals(ISSUED_FIELD)) {
@@ -655,12 +670,12 @@ public class Application extends Controller {
 					: queryParam(t, term);
 			String ownerQuery = !field.equals(ITEM_FIELD) ? owner //
 					: withoutAndOperator(queryParam(owner, term));
-			String nwbibsubjectQuery =
-					!field.equals(RPB_SUBJECT_FIELD) ? nwbibsubject //
-							: queryParam(nwbibsubject, term);
-			String nwbibspatialQuery =
-					!field.equals(NWBIB_SPATIAL_FIELD) ? nwbibspatial //
-							: queryParam(nwbibspatial, term);
+			String rpbsubjectQuery =
+					!field.equals(RPB_SUBJECT_FIELD) ? rpbsubject //
+							: queryParam(rpbsubject, term);
+			String rpbspatialQuery =
+					!field.equals(NWBIB_SPATIAL_FIELD) ? rpbspatial //
+							: queryParam(rpbspatial, term);
 			String rawQuery = !field.equals(COVERAGE_FIELD) ? raw //
 					: rawQueryParam(raw, term);
 			String locationQuery = !field.equals(SUBJECT_LOCATION_FIELD) ? location //
@@ -670,12 +685,12 @@ public class Application extends Controller {
 			String issuedQuery = !field.equals(ISSUED_FIELD) ? issued //
 					: queryParam(issued, term);
 
-			boolean current = current(subject, medium, nwbibspatial, nwbibsubject,
+			boolean current = current(subject, medium, rpbspatial, rpbsubject,
 					owner, t, field, term, raw);
 			String routeUrl = routes.Application.search(q, person, name, subjectQuery,
-					id, publisher, issuedQuery, mediumQuery, nwbibspatialQuery,
-					nwbibsubjectQuery, from, size, ownerQuery, typeQuery,
-					sort(sort, nwbibspatialQuery, nwbibsubjectQuery, subjectQuery), false,
+					id, publisher, issuedQuery, mediumQuery, rpbspatialQuery,
+					rpbsubjectQuery, from, size, ownerQuery, typeQuery,
+					sort(sort, rpbspatialQuery, rpbsubjectQuery, subjectQuery), false,
 					locationQuery, word, corporation, rawQuery, "").url();
 
 			String result = String.format(
@@ -690,7 +705,7 @@ public class Application extends Controller {
 		};
 
 		Promise<Result> promise = Lobid.getFacets(q, person, name, subject, id,
-				publisher, issued, medium, nwbibspatial, nwbibsubject, owner, field, t,
+				publisher, issued, medium, rpbspatial, rpbsubject, owner, field, t,
 				location, word, corporation, raw).map(json -> {
 					Stream<JsonNode> stream = StreamSupport.stream(
 							Spliterators.spliteratorUnknownSize(json.findValue("aggregation")
@@ -705,7 +720,7 @@ public class Application extends Controller {
 					String labelKey = String.format(
 							"facets-labels.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s",
 							field, raw, q, person, name, id, publisher, word, corporation,
-							subject, issued, medium, nwbibspatial, nwbibsubject, raw,
+							subject, issued, medium, rpbspatial, rpbsubject, raw,
 							field.equals(ITEM_FIELD) ? "" : owner, t, location);
 
 					@SuppressWarnings("unchecked")
@@ -723,22 +738,22 @@ public class Application extends Controller {
 		return promise;
 	}
 
-	private static String sort(String sort, String nwbibspatialQuery,
-			String nwbibsubjectQuery, String subjectQuery) {
-		return (nwbibspatialQuery + nwbibsubjectQuery + subjectQuery).contains(",")
+	private static String sort(String sort, String rpbspatialQuery,
+			String rpbsubjectQuery, String subjectQuery) {
+		return (rpbspatialQuery + rpbsubjectQuery + subjectQuery).contains(",")
 				? ""
 				/* relevance */ : sort;
 	}
 
 	private static boolean current(String subject, String medium,
-			String nwbibspatial, String nwbibsubject, String owner, String t,
+			String rpbspatial, String rpbsubject, String owner, String t,
 			String field, String term, String raw) {
 		return field.equals(MEDIUM_FIELD) && contains(medium, term)
 				|| field.equals(TYPE_FIELD) && contains(t, term)
 				|| field.equals(ITEM_FIELD) && contains(owner, term)
-				|| field.equals(NWBIB_SPATIAL_FIELD) && contains(nwbibspatial, term)
+				|| field.equals(NWBIB_SPATIAL_FIELD) && contains(rpbspatial, term)
 				|| field.equals(COVERAGE_FIELD) && rawContains(raw, quotedEscaped(term))
-				|| field.equals(RPB_SUBJECT_FIELD) && contains(nwbibsubject, term)
+				|| field.equals(RPB_SUBJECT_FIELD) && contains(rpbsubject, term)
 				|| field.equals(SUBJECT_FIELD) && contains(subject, term);
 	}
 

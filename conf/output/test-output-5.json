@@ -1,30 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112206",
-  "id" : "https://lobid.org/resources/RPB929t112206",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t112205",
+  "id" : "https://lobid.org/resources/929t112205",
+  "hbzId" : "CT003001334",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Funkeln aus dem Sonnenberg : Winzer Oliver Krupp aus Bruchhausen bearbeitet die Lage \"Unkeler Sonnenberg\"",
-  "extent" : "Ill.",
+  "title" : "Sagas légendes des bords du Rhin [Elektronische Ressource] : orné de 8 gravures sur acier",
+  "extent" : "[1] Bl., VIII, 299 S., [7] Bl. : Ill.",
+  "note" : [ "HT003558438 Dt. Ausg. u.d.T.: Rheinlands Sagen, Geschichten und Legenden" ],
+  "responsibilityStatement" : [ "[Alfred von Reumont]. D'après les dessins des peintres de l' Ecole de Dusseldorf [Kretschmer del. ; Plüddemann del. ; Alfred Rethel del. ; Sonderland del.]" ],
   "publication" : [ {
-    "startDate" : "2011",
+    "location" : [ "Aix-la-Chapelle [u.a.]; Paris; Janet" ],
+    "publishedBy" : [ "Kohnen [u.a.]" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n544322",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n544325",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n760100",
+    "label" : "Literatur allgemein",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -32,34 +28,40 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Unkeler Sonnenberg | Weingut Krupp",
+    "label" : "Rheinland | Literatur | Anthologie | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n110302",
-      "label" : "Unkeler Sonnenberg",
+      "id" : "https://d-nb.info/gnd/4049788-4",
+      "label" : "Rheinland",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/929n110303",
-      "label" : "Weingut Krupp",
+      "id" : "https://d-nb.info/gnd/4035964-5",
+      "label" : "Literatur",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4002214-6",
+      "label" : "Anthologie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13807073",
-    "label" : "n13807073",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  }, {
-    "id" : "https://rpb.lobid.org/spatial#n13807008",
-    "label" : "n13807008",
+    "id" : "https://rpb.lobid.org/spatial#n03",
+    "label" : "Rheinland",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -68,14 +70,40 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
-      "label" : "Ruland, Wolfgang"
+      "id" : "https://rpb.lobid.org/agent/00Pn01k18192455a",
+      "label" : "Reumont, Alfred ¬von¬",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn11k2205906a",
+      "label" : "Kretzschmer, Hermann",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ill",
+      "label" : "Illustrator"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
+      "label" : "Rethel, Alfred",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ill",
+      "label" : "Illustrator"
+    },
+    "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 32-33"
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-1616",
+    "label" : "urn:nbn:de:hbz:061:2-1616"
+  } ]
 }

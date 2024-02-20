@@ -1,26 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112209",
-  "id" : "https://lobid.org/resources/RPB929t112209",
-  "hbzId" : "CT003001333",
+  "rpbId" : "929t112208",
+  "id" : "https://lobid.org/resources/929t112208",
+  "hbzId" : "CT003001317",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Ruins of the Rhine, their times and traditions [Elektronische Ressource]",
-  "extent" : "[2] Bl., IV, 356 S., [7] Bl. : Ill.",
-  "responsibilityStatement" : [ "[Alfred von Reumont]. Ed. by Charles White. Eight engravings after original desings by painters of the Dusseldorf School. [Herrm Kretschmer inv. ; Alfred Rethel del. ; Sonderland del. ; Plüddemann del.]" ],
+  "title" : "Vom deutschen Rhein [Elektronische Ressource] : mit landschaftlichen u. architektonischen Ansichten nebst Illustrationen zu rheinischen Dichtungen, in 50 Blättern",
+  "extent" : "[1], 50 Bl. : nur Ill. : gr. quer 2-o",
+  "note" : [ "In Fraktur" ],
+  "responsibilityStatement" : [ "von Caspar Scheuren" ],
   "publication" : [ {
-    "location" : [ "Aix-La Chapelle [u.a.]" ],
-    "startDate" : "1838",
-    "publishedBy" : [ "Kohnen [u.a.]" ],
+    "location" : [ "Düsseldorf" ],
+    "publishedBy" : [ "Breidenbach & Baumann" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n760100",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n102045",
+    "label" : "Regionenbeschreibung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -28,17 +28,38 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rheinland | Literatur | Anthologie | Online-Ressource",
+    "label" : "Scheuren, Caspar / 1810-1887 | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4049788-4",
-      "label" : "Rheinland",
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4035964-5",
-      "label" : "Literatur",
+      "id" : "https://d-nb.info/gnd/4123412-1",
+      "label" : "Illustration",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4279198-4",
+      "label" : "Farblithografie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4049739-2",
+      "label" : "Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4036774-5",
+      "label" : "Lyrik",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -46,6 +67,13 @@
     }, {
       "id" : "https://d-nb.info/gnd/4002214-6",
       "label" : "Anthologie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4159043-0",
+      "label" : "Pressendruck",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -61,7 +89,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n03",
-    "label" : "n03",
+    "label" : "Rheinland",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -70,33 +98,18 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18192455a",
-      "label" : "Reumont, Alfred ¬von¬"
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/119468808",
-      "label" : "White, Charles / 1928-"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/pbl",
-      "label" : "Herausgeber"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2205906a",
-      "label" : "Kretzschmer, Hermann"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
-    },
-    "type" : [ "Contribution" ]
+  } ],
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-1456",
+    "label" : "urn:nbn:de:hbz:061:2-1456"
   } ]
 }

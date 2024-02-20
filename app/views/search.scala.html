@@ -1,6 +1,6 @@
 @* Copyright 2014 Fabian Steeg, hbz. Licensed under the GPLv2 *@
 
-@(result: String, q:String, person:String, name:String, subject:String, id:String, publisher:String, issued:String, medium: String, nwbibspatial: String, nwbibsubject: String, from: Int, size: Int, allHits: Long, owner: String, t: String, sortParam: String, location: String, word: String, corporation: String, raw: String)
+@(result: String, q:String, person:String, name:String, subject:String, id:String, publisher:String, issued:String, medium: String, rpbspatial: String, rpbsubject: String, from: Int, size: Int, allHits: Long, owner: String, t: String, sortParam: String, location: String, word: String, corporation: String, raw: String)
 
 @import helper._
 @import tags._
@@ -16,17 +16,17 @@
   <nav>
     <ul class="pagination">
       <li class="previous @if(from==0){disabled}">
-        <a href="@if(from==0){#} else {@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,from-size,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)}">&larr;</a>
+        <a href="@if(from==0){#} else {@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,from-size,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)}">&larr;</a>
       </li>
       @defining((((from+1)/size)+1,(if(allHits%size==0) allHits/size else allHits/size+1).toInt)) { case (currentPage,lastPage) =>
           @defining(Math.min(Math.max(1,currentPage-4)+9,lastPage)) { toPage =>
               @for(i <- Math.max(1,toPage-9) to toPage){
-                  <li @if(currentPage==i){class="active"}><a href="@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,(i*size)-size,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)">@i</a></li>
+                  <li @if(currentPage==i){class="active"}><a href="@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,(i*size)-size,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)">@i</a></li>
               }
           }
       }
       <li class="next @if(from+size >= allHits){disabled}">
-        <a href="@if(from+size >= allHits){#} else {@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,from+size,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)}">&rarr;</a>
+        <a href="@if(from+size >= allHits){#} else {@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,from+size,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)}">&rarr;</a>
       </li>
     </ul>
   </nav>
@@ -34,13 +34,13 @@
 
 @sort(param: String, label: String)={
 <li role="tab" @if(sortParam==param){class="active" aria-selected="true"} else {aria-selected="false" tabindex="-1" aria-controls="@label"}>
-  <a href="@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,from,size,owner,t,param,location=location,word=word,corporation=corporation,raw=raw)">@label</a>
+  <a href="@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,from,size,owner,t,param,location=location,word=word,corporation=corporation,raw=raw)">@label</a>
 </li>
 }
 
 @pageLink(num: Int)={
 <li role="tab" @if(size==num){class="active" aria-selected="true"} else {aria-selected="false" tabindex="-1" aria-controls="@num"}>
-  <a href="@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,from,num,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)">@num</a>
+  <a href="@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,from,num,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)">@num</a>
 </li>
 }
 
@@ -62,7 +62,7 @@
 
 @main("BiblioVino - Ergebnisliste") {
     @if(Seq(person, name, subject, id, publisher, issued, word, corporation).exists(!_.isEmpty)){
-      @tags.search_advanced("Suche aktualisieren", q, person, name, subject, nwbibspatial, nwbibsubject, id, publisher, issued, sortParam, word=word, corporation=corporation)
+      @tags.search_advanced("Suche aktualisieren", q, person, name, subject, rpbspatial, rpbsubject, id, publisher, issued, sortParam, word=word, corporation=corporation)
     } else {
       @tags.search_form(q, location)
     }
@@ -93,14 +93,14 @@
                  <div class="panel-body" style="text-align:center">
                  <div class="row">
                     <div class="col-md-1" style="text-align: left; padding-left: 4px;">
-                    <a rel='alternate' type='application/ld+json' href='@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,from,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw,format="json")'>
+                    <a rel='alternate' type='application/ld+json' href='@nwbib.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,from,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw,format="json")'>
                         <img class='json-ld-icon' src='@routes.Assets.at("images/json-ld.png")' title='JSON-LD für diese Suchanfrage'>
                     </a>
                     </div>
                     <div class="col-md-10">
                      @allHits @if(!raw.isEmpty && !raw.contains(Lobid.escapeUri(Application.COVERAGE_FIELD.replace(".raw","")))){
                       @defining(String.format(Application.CONFIG.getString("indexUrlFormat"), raw.substring(raw.lastIndexOf("/")+1))) { lobidUrl =>
-                       @labelRaw in: <a href="@(lobidUrl.replaceAll("://[^/]+/resources/(?:search\\?q=rpbId:)?","://rpb.lobid.org/").split("[\\\\\"]")(0))">@Html(Lobid.resourceLabel(lobidUrl))</a>}}else{Treffer } @breadcrumb(nwbibsubject,nwbibspatial, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw, search=true)</i> &mdash;
+                       @labelRaw in: <a href="@(lobidUrl.replaceAll("://[^/]+/resources/(?:search\\?q=rpbId:)?","://rpb.lobid.org/").split("[\\\\\"]")(0))">@Html(Lobid.resourceLabel(lobidUrl))</a>}}else{Treffer } @breadcrumb(rpbsubject,rpbspatial, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw, search=true)</i> &mdash;
                        zeige @(from+1) bis @(Math.min(from+hits.size,from+size)):
                     </div>
                     <div class="col-md-1" style="text-align: right; padding-right: 4px;">
@@ -141,7 +141,7 @@
             }
          }
         </div>
-        @if(allHits > 0) {@facets(q,person,name,subject,id,publisher,issued,medium,nwbibspatial,nwbibsubject,owner,t,sortParam,location,word,corporation,raw,from,size)}
+        @if(allHits > 0) {@facets(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,owner,t,sortParam,location,word,corporation,raw,from,size)}
       </div>
     }
     @*

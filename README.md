@@ -21,12 +21,36 @@ cd rpb
 
 ## Deployment overview
 
+The overall RPB system consists of 4 applications: RPB & BiblioVino (Java/Play, based on [NWBib](https://github.com/hbz/nwbib)), RPPD (Java/Play, based on [lobid-gnd](https://github.com/hbz/lobid-gnd)), and Strapi-RPB (JavaScript/React).
+
+### RPB & BiblioVino
+
+Source code: https://github.com/hbz/rpb & https://github.com/hbz/rpb/tree/biblioVino (https://github.com/hbz/rpb/pull/52)
+
 |     | Production |     | Test |     |
 | --- | ---------- | --- | ---- | --- |
 | Index alias | resources-rpb | http://weywot3.hbz-nrw.de:9200/resources-rpb/_search | resources-rpb-test | http://weywot3.hbz-nrw.de:9200/resources-rpb-test/_search
 | lobid-resources instance (port 1990) | quaoar1:~/git/lobid-resources-rpb | http://quaoar1:1990/resources/search | quaoar3:~/git/lobid-resources-rpb | http://quaoar3:1990/resources/search |
 | rpb instance (port 1991) | quaoar1:~/git/rpb | https://rpb.lobid.org/search  | quaoar3:~/git/rpb | http://test.rpb.lobid.org/search |
 | BiblioVino (port 1992) | quaoar1:~/git/biblioVino | http://wein.lobid.org/search  | quaoar3:~/git/biblioVino | http://test.wein.lobid.org/search |
+
+### RPPD
+
+Source code: https://github.com/hbz/lobid-gnd/tree/rppd (https://github.com/hbz/lobid-gnd/pull/361)
+
+|     | Production |     | Test |     |
+| --- | ---------- | --- | ---- | --- |
+| Index alias | gnd-rppd | http://weywot3.hbz-nrw.de:9200/gnd-rppd/_search | gnd-rppd-test | http://weywot3.hbz-nrw.de:9200/gnd-rppd-test/_search
+| rppd instance (port 1993) | quaoar1:~/git/rppd | https://rppd.lobid.org/search  | quaoar3:~/git/rppd | http://test.rppd.lobid.org/search |
+
+### Strapi-RPB
+
+Source code: https://github.com/hbz/strapi-rpb
+
+|     | Production |     | Test |     |
+| --- | ---------- | --- | ---- | --- |
+| Admin UI | metadaten-nrw:/opt/strapi-rpb$ | https://rpb-cms.lobid.org/admin | test-metadaten-nrw:/opt/strapi-rpb$ | https://rpb-cms-test.lobid.org/admin
+| Search API | " | [https://rpb-cms.lobid.org/api/articles?populate=*](https://rpb-cms.lobid.org/api/articles?populate=*)  | " | [https://rpb-cms-test.lobid.org/api/articles?populate=*](https://rpb-cms-test.lobid.org/api/articles?populate=*) |
 
 ## Transformation development
 
@@ -60,14 +84,14 @@ This attempts to import all data selected with the `PICK` variable to the API en
 To reimport existing entries, these may need to be deleted first, e.g. for `articles/1` to `articles/5`:
 
 ```
-curl --request DELETE http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles/[1-5]
+curl --request DELETE http://test-metadaten-nrw.hbz-nrw.de:1337/api/articles/[1-5]
 ```
 
-After import they are available at e.g. http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles?populate=*
+After import they are available at e.g. http://test-metadaten-nrw.hbz-nrw.de:1337/api/articles?populate=*
 
 Entries using the same path can be filtered, e.g. to get only volumes (`f36_=sbd`):
 
-http://test-metadaten-nrw.hbz-nrw.de:1339/api/independent-works?filters[f36_][$eq]=sbd&populate=*
+http://test-metadaten-nrw.hbz-nrw.de:1337/api/independent-works?filters[f36_][$eq]=sbd&populate=*
 
 ### Import SKOS data into strapi
 
@@ -119,13 +143,25 @@ sh validateJsonOutput.sh
 
 This validates the resulting files against the JSON schemas in `test/rpb/schemas/`.
 
+### Adding test data
+
+During development, you'll sometimes want to add a record with specific fields or values to the test data, e.g. when handling new fields or fixing edge cases in the transformation. Due to the unusual encoding of the input data (`IBM437`), editing the files in a text editor may result in a faulty encoding. Instead, we can use the command line and append to the test data directly with `>>`.
+
+E.g. to add the last record in `conf/RPB-Export_HBZ_Bio.txt` that contains `#82b` to `conf/RPB-Export_HBZ_Bio_Test.txt`:
+
+```bash
+cat conf/RPB-Export_HBZ_Bio.txt | grep -a '#82b' | tail -n 1 >> conf/RPB-Export_HBZ_Bio_Test.txt
+```
+
+The `-a` is required to return all results since grep views parts of the files as binary data.
+
 ### Index creation
 
 If you're not indexing into an existing lobid-resources index, make sure to create one with the proper index settings, e.g. to create `resources-rpb-20230623` from `quaoar3`:
 
 ```bash
 unset http_proxy # for putting on weywot
-sol@quaoar3:~/git/rpb$ curl -XPUT -H "Content-Type: application/json" weywot5:9200/resources-rpb-20230623?pretty -d @../lobid-resources/src/main/resources/alma/index-config.json
+sol@quaoar3:~/git/rpb$ curl -XPUT -H "Content-Type: application/json" weywot5:9200/resources-rpb-20231130-1045?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
 ```
 
 For testing, the real index name (e.g. `resources-rpb-20230623`) is aliased by `resources-rpb-test`, which is used by https://test.lobid.org/resources / http://test.rpb.lobid.org and in the transformation.

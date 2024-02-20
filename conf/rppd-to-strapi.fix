@@ -1,3 +1,4 @@
+
 do put_macro("to_bool")
   if exists("$[field]")
     move_field("$[field]","$[field]~")
@@ -26,8 +27,13 @@ do put_macro("add_bio")
   join_field("_temp", "\n\n") # als Absätze...
   move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
 end
+do once()
+  # map zum Ersetzen der alten GND-ID
+  put_filemap("conf/maps/gndId-old-to-new.tsv", "map_gndid_to_new", sep_char: "\t")
+end
 
 call_macro("to_bool", field: "f11_")
+call_macro("to_bool", field: "f12_")
 call_macro("to_bool", field: "f13_")
 call_macro("to_bool", field: "f14_")
 call_macro("to_bool", field: "f15_")
@@ -56,8 +62,10 @@ unless exists("f82b")
   paste("f82b", "~Keine GND-Ansetzung für", "f00_")
 end
 replace_all("f82b", "(\\d+)n(\\d)", "$1-$2")
+lookup("f82b", "map_gndid_to_new")
 
-replace_all("f1nv", "w+", "www") # z.B. ww -> www
-replace_all("f1nv", "m+", "mmm") # z.B. mmmm -> mmm
+replace_all("f1nv", "w+", "weiblich")
+replace_all("f1nv", "m+", "männlich")
+replace_all("f1nv", "d+", "divers")
 
 vacuum()

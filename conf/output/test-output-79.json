@@ -1,38 +1,71 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0115179",
-  "id" : "https://lobid.org/resources/RPB036t0115179",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929w18032522",
+  "id" : "https://lobid.org/resources/929w18032522",
+  "schoeneNummer" : "Nr32522",
   "inCollection" : [ {
-    "id" : "http://lobid.org/resources/HT013494180#!",
+    "id" : "http://lobid.org/resources/HT013678171#!",
     "type" : [ "Collection" ],
-    "label" : "Rheinland-Pfälzische Bibliographie"
+    "label" : "BiblioVino"
   } ],
-  "title" : "Beiträge zur Wormser Stadtbeschreibung des Hochmittelalters",
-  "note" : [ "[Wichtige Arbeit für die historische Topographie der Stadt Worms im Früh- und Hochmittelalter Umsichtige Quelleninterpretation und Anwendung der patrozinienkundlichen Methode führen weit über die Ergebnisse der seitherigen Forschung hinaus So wird das Datum der Pfarreinteilung des Kernes der Stadt um mindestens 2 Jahrhunderte zurückverlegt Aufhellung der ältesten Geschichte der Kirchen in der Stadt (St Rupert St Lambert St Magnus St Johann Dom) sowie der Vorstädte (Liebfrauen Amandus Remigius im Norden Andreas im Westen St Michael und St Caecilia im Süden) - Besiedlung der Vorstädte sowie Besiedlung der Stadt im 11-13 Jh]" ],
+  "title" : "Einfluss von Lesetermin und Mostbehandlung auf die Alterung von Weißwein, am Beispiel von Vitis vinifera L. cv. Riesling.",
+  "responsibilityStatement" : [ "Aus f39x: Geisenheim: Ges. zur Förderung der Forschungsanst. Geisenheim 2013." ],
   "publication" : [ {
-    "startDate" : "1952",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n560100",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/132394235",
-      "label" : "Gensicke, Hellmuth / 1917-2006"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Der Wormsgau. Bd 3, H. 2 (Okt. 1952), 49-63"
+    "type" : [ "ComplexSubject" ],
+    "label" : "Most | Lebensmittelverarbeitung | Riesling | Chemie | Wein | Weinlese | Lebensmittelqualität",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4040354-3",
+      "label" : "Most",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4167045-0",
+      "label" : "Lebensmittelverarbeitung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4138434-9",
+      "label" : "Riesling",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4009816-3",
+      "label" : "Chemie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4065133-2",
+      "label" : "Wein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4432509-5",
+      "label" : "Weinlese",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4343361-3",
+      "label" : "Lebensmittelqualität",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ]
 }

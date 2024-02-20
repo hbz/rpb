@@ -2,6 +2,12 @@
 
 vacuum()
 
+#-------- maps --------
+do once("map")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
+end
+
 # ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
@@ -38,7 +44,6 @@ end
 # ------- rpbId -------
 
 copy_field("_id", "rpbId")
-prepend("rpbId","RPB") 
 
 # ------- "id", using https URIs -------
 
@@ -49,10 +54,10 @@ prepend("id","https://lobid.org/resources/")
 
 copy_field("f983", "hbzId")
 
-# ------- biblioVinoId -------
+# ------- schoeneNummer -------
 
-copy_field("f84_", "biblioVinoId")
-replace_all("biblioVinoId", "\\.", "")
+copy_field("f84_", "schoeneNummer")
+replace_all("schoeneNummer", "\\.", "")
 
 # ------- "inCollection" -------
 
@@ -91,6 +96,19 @@ do list(path:"f81[].*.f81_", "var": "$i")
 end
 uniq("note[]")
 
+#-------- "series" -------
+if exists("f85?")
+  set_array("isPartOf[]")
+  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
+  set_array("isPartOf[].$last.hasSuperordinate[]")
+  if exists("f85_")
+    split_field("f85_"," ; ")
+    copy_field("f85_.1","isPartOf[].$last.hasSuperordinate[].$append.label")
+    copy_field("f85_.2", "isPartOf[].$last.numbering")
+  else
+    copy_field("f85?","isPartOf[].$last.hasSuperordinate[].$append.label")
+  end
+end
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 
@@ -135,8 +153,10 @@ set_array("subject[]")
 if exists ("f30[]")
   move_field("f30[].*.f30_", "subject[].$append.id")
   uniq("subject[]")
+  copy_field("subject[].*.id", "subject[].$last.label")
+  lookup("subject[].*.label", "subject_map")
   do list(path: "subject[]")
-    add_field("label", "Platzhalter Schlagwortlabel")
+    # add_field("label", "Platzhalter Schlagwortlabel")
     set_array("type[]")
     add_field("type[].$append", "Concept")
     add_field("source.id", "http://purl.org/lobid/rpb")
@@ -164,11 +184,14 @@ do list (path:"spatial[]", "var": "$i")
   copy_field("$i.id", "$i.label")
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   if any_match("$i.id", "^https://d-nb.info/gnd/.+")
+    replace_all("$i.label","-","n")                             # IDs in lookup-map have the original syntax with an "n" instead of "-"
     lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
     set_array("$i.type[]","PlaceOrGeographicName")
     add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
     add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
   else
+    prepend("$i.label", "https://rpb.lobid.org/spatial#")
+    lookup("$i.label", "spatial_map", delete: "true")
     set_array("$i.type[]","Concept")
     add_field("$i.source.id", "https://rpb.lobid.org/spatial")
     add_field("$i.source.label", "RPB-Raumsystematik")
@@ -245,6 +268,7 @@ do put_macro("contributions")
   copy_field("f$[from][].*.f$[from]_", "_temp.$append.agent.id")
   do list_as(f: "f$[from][]", c: "_temp")
     copy_field("c.agent.id", "c.agent.label")
+    set_array("c.agent.type[]", "Person")
     replace_all("c.agent.label","^http.+[/#](.+)$","$1")
     replace_all("c.agent.label","^(\\d+)-(\\d+)$","$1n$2")
     lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
@@ -252,6 +276,9 @@ do put_macro("contributions")
     copy_field("f.n$[from]a", "c.role.label")
     lookup("c.role.label", "uri-to-role")
     lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
+    if all_match("c.role.label","NE hrsg. Körperschaft|Gefeierte Körperschaft|HE Urheber")
+      set_field("c.agent.type[]", "CorporateBody")
+    end
     set_array("c.type[]", "Contribution")
   end
   move_field("_temp.*", "contribution[].$append")
@@ -296,6 +323,29 @@ elsif exists ("f709")
 end
 replace_all("bibliographicCitation","¬","")
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation", "isPartOf[]", "note[]")
+# fulltextOnline and link to external description/ToC
+
+if any_match("f90[].*.n90", "Inhaltsverzeichnis|Inhaltstext")
+  set_array("description[]")
+end
+
+do list(path:"f90[]", "var": "$i")
+  if all_equal("$i.n90", "Volltext")
+    set_array("fulltextOnline[]")
+    copy_field("$i.f90_", "fulltextOnline[].$append.id")
+    copy_field("$i.f90_", "fulltextOnline[].$last.label")
+    replace_all("fulltextOnline[].$last.label", "https://nbn-resolving.org/", "")
+  
+  elsif all_equal("$i.n90", "Inhaltstext")
+    copy_field("$i.f90_", "description[].$append.id")
+    copy_field("$i.f90_", "description[].$last.label") 
+  
+  elsif all_equal("$i.n90", "Inhaltsverzeichnis")
+    copy_field("$i.f90_", "description[].$append.id")
+    copy_field("$i.f90_", "description[].$last.label")
+  end
+end
+
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]")
 
 vacuum()

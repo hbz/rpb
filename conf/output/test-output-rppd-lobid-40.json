@@ -1,0 +1,52 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/143451308",
+  "rppdId" : "pk04515",
+  "gndIdentifier" : "143451308",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Schneider, Anton",
+  "variantName" : [ "Schneider, Anton / Bürgermeister" ],
+  "professionOrOccupation" : [ {
+    "label" : "Bürgermeister",
+    "id" : "https://d-nb.info/gnd/4136676-1"
+  }, {
+    "label" : "Landwirt",
+    "id" : "https://d-nb.info/gnd/4034399-6"
+  }, {
+    "label" : "Gastwirt",
+    "id" : "https://d-nb.info/gnd/4156075-9"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Leubsdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13804037"
+  } ],
+  "dateOfBirth" : [ "1899-11-12" ],
+  "placeOfBirth" : [ {
+    "label" : "Leubsdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13804037"
+  } ],
+  "dateOfDeath" : [ "1973-06-24" ],
+  "placeOfDeath" : [ {
+    "label" : "https://rpb.lobid.org/spatial#n13804037_ [?]",
+    "id" : "https://rpb.lobid.org/spatial#n13804037_ [?]"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  }, {
+    "label" : "Landwirtschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#32.10p"
+  }, {
+    "label" : "Handel. Dienstleistung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2011-02-03",
+    "source" : [ "Wolfgang Stümper: Anton Schneider, Leubsdorf 2010", "¬Der¬ Rheinländer : das Heimatmagazin. - 3 (2010), Nov. = H. 27, S. 34-36" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Seit 1940 stellvertretender Bürgermeister von Leubsdorf; übergab den Ort am 11. März 1945 kampflos den amerikanischen Truppen; in den ersten Kommunalwahlen 1946 wurde der mittlerweile der CDU beigetretene Schneider zum Bürgermeister gewählt; das Amt hatte er ununterbrochen bis 1969 inne, wobei er 1964 mit Hilfe einer eigenen Bürgerliste wiedergewählt wurde; Ehrung mit der Freiherr-vom-Stein-Plakette und mit dem Bundesverdienstkreuz" ]
+}

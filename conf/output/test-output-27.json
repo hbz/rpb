@@ -1,30 +1,45 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147877",
-  "id" : "https://lobid.org/resources/RPB107t01147877",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "107t01147876",
+  "id" : "https://lobid.org/resources/107t01147876",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
+  "title" : "Die Maxburg bei Hambach. (Mit e. Titelkupfer, Uebersichtsplane u. Grundrisse der Burg.)",
+  "extent" : "VIII, 211 S. 8°",
+  "note" : [ "[Hambacher Schloß]" ],
   "publication" : [ {
-    "startDate" : "1982",
+    "location" : [ "Mannheim" ],
+    "startDate" : "1844",
+    "publishedBy" : [ "Meininger" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n844040",
+    "label" : "Burg. Schloss",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
       "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
     }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4094596-0",
+      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
   } ],
   "spatial" : [ {
     "id" : "https://rpb.lobid.org/spatial#n316000000700",
-    "label" : "n316000000700",
+    "label" : "Hambach (Ortsbezirk)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -33,14 +48,14 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1123984425",
-      "label" : "Trautmann, Herbert / 1948-2006"
+      "id" : "https://d-nb.info/gnd/116436425",
+      "label" : "Remling, Franz Xaver / 1803-1873",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
+  } ]
 }

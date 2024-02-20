@@ -1,21 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t084660",
-  "id" : "https://lobid.org/resources/RPB929t084660",
+  "rpbId" : "929t084659",
+  "id" : "https://lobid.org/resources/929t084659",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Chronik [Elektronische Ressource]",
+  "title" : "Bilderausstellung \"Von der Wied an den Rhein\" - Dr. Heiner Kussmaul, Yvonne Kussmaul [Elektronische Ressource]",
   "publication" : [ {
-    "location" : [ "Wassenach" ],
+    "location" : [ "Waldbreitbach" ],
+    "startDate" : "2007",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n736050",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n841060",
+    "label" : "Kunstausstellung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -23,24 +24,91 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sport-Club 1957 / Wassenach | Geschichte 1957-2007 | Chronik",
+    "label" : "Kussmaul, Heiner / 1943- | Wied-Gebiet | Malerei | Ausstellung | Neuwied / 2007 | CD-ROM",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/10179791-6",
-      "label" : "Sport-Club 1957 / Wassenach",
+      "id" : "https://d-nb.info/gnd/136595545",
+      "label" : "Kussmaul, Heiner / 1943-",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn07k1956385a",
-      "label" : "Geschichte 1957-2007",
+      "id" : "https://d-nb.info/gnd/4491668-1",
+      "label" : "Wied-Gebiet",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4037220-0",
+      "label" : "Malerei",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4129601-1",
+      "label" : "Ausstellung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn08k0845220a",
+      "label" : "Neuwied / 2007",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4127914-1",
-      "label" : "Chronik",
+      "id" : "https://d-nb.info/gnd/4139307-7",
+      "label" : "CD-ROM",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Kussmaul, Yvonne / 1972- | Wied-Gebiet | Malerei | Ausstellung | Neuwied / 2007 | CD-ROM",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/136596061",
+      "label" : "Kussmaul, Yvonne / 1972-",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4491668-1",
+      "label" : "Wied-Gebiet",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4037220-0",
+      "label" : "Malerei",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4129601-1",
+      "label" : "Ausstellung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://rpb.lobid.org/sw/00Sn08k0845220a",
+      "label" : "Neuwied / 2007",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4139307-7",
+      "label" : "CD-ROM",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -48,8 +116,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13104209",
-    "label" : "n13104209",
+    "id" : "https://rpb.lobid.org/spatial#n13800045",
+    "label" : "Neuwied, große kreisangehörige Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -58,22 +126,35 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/10179791-6",
-      "label" : "Sport-Club 1957 / Wassenach"
+      "id" : "https://d-nb.info/gnd/136595545",
+      "label" : "Kussmaul, Heiner / 1943-",
+      "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/SC Wassenach 1957",
-      "label" : "SC Wassenach 1957"
+      "id" : "https://d-nb.info/gnd/136596061",
+      "label" : "Kussmaul, Yvonne / 1972-",
+      "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/10344831-7",
+      "label" : "Bilderausstellung Von der Wied an den Rhein / 2007 / Neuwied",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "NE hrsg. Körperschaft"
     },
     "type" : [ "Contribution" ]
   } ]

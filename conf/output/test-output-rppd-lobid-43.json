@@ -1,0 +1,43 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://rppd.lobid.org/pk06675",
+  "rppdId" : "pk06675",
+  "gndIdentifier" : "Keine GND-Ansetzung für pk06675",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Alexander, Philipp",
+  "professionOrOccupation" : [ {
+    "label" : "Unternehmer",
+    "id" : "https://d-nb.info/gnd/4061949-7"
+  }, {
+    "label" : "Musikinstrumentenbauer",
+    "id" : "https://d-nb.info/gnd/4170830-1"
+  }, {
+    "label" : "Drechsler",
+    "id" : "https://d-nb.info/gnd/4301425-2"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  } ],
+  "dateOfBirth" : [ "1787" ],
+  "dateOfDeath" : [ "1864" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Industrie. Handwerk",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
+  }, {
+    "label" : "Handel. Dienstleistung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.13p"
+  }, {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2019-07-02",
+    "source" : [ "Duttenhöfer, Eva-Maria: Gebrüder Alexander : 200 Jahre Musikinstrumentenbau in Mainz, Mainz 1982" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "[FAMILIE]pk06671[/HR]Zur Familiengeschichte Alexander[/FAMILIE]", "Blieb ledig; führte zunächst die Berufsbezeichnung \"Drechsler\", später kam \"Instrumentenmacher\" hinzu" ]
+}

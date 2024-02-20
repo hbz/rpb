@@ -1,22 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121520",
-  "id" : "https://lobid.org/resources/RPB036t0121520",
+  "rpbId" : "036t0121519",
+  "id" : "https://lobid.org/resources/036t0121519",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlinger Stifter und ihre Familien",
+  "title" : "Sprendlinger kämpften unter Napoleon",
   "publication" : [ {
-    "startDate" : "1983",
+    "startDate" : "1963",
     "type" : [ "PublicationEvent" ]
   } ],
   "contribution" : [ {
     "agent" : {
       "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "label" : "Wagner, Hermann Josef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
@@ -24,5 +25,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 1983, H. 2"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 12"
 }

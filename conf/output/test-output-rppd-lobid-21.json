@@ -1,0 +1,35 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/105121548X",
+  "rppdId" : "pta1482",
+  "gndIdentifier" : "105121548X",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/105121548X",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zenzen, Wilhelm",
+  "variantName" : [ "Zenzen, Eucharius ¬[Ordensname]¬" ],
+  "dateOfBirth" : [ "1903-10-17" ],
+  "placeOfBirth" : [ {
+    "label" : "Andernach, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13700003"
+  } ],
+  "dateOfDeath" : [ "1963-04-16" ],
+  "placeOfDeath" : [ {
+    "label" : "Dinklage",
+    "id" : "Dinklage"
+  } ],
+  "publication" : [ "Hrsg. (mit Andreas Winninghoff): Choralmeß-buch für Sonn- und Feiertage, Düsseldorf 1939, 3. Aufl 1957", "Hl. Stunden für jeden Monat im Jahr der Kirche, 3. Aufl, Freiburg i.Brsg. 1951", "Einkehrtage - in: Lexikon der Pädagogik 1, 1952, 858-860", "Neubearbeitung v. Joseph Gredt: Elementa Philosophiae aristotelico-thomisticae 1-2, 13. Aufl, Barcelona/Freiburg i.Brsg, 1961", "Verschiedene Artikel in Musik und Altar", "Inquisitio critica in argumentum Aristotelis pro existentia primi moventis immobilis, Dissertation Rom 1932", "Recherches sur la notion de la société politique, Diplomarbeit Lille 1939" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11",
+    "source" : [ "Johannes Aengenvoord: Abt Eucharius Z +, in: Musik und Altar 15 (1963) 98-101", "Das Porträt: Abt Eucharius Z (Mattheiser Brief 1964 2.H.)." ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Abitur Koblenz 1922 und Eintritt in das Bischöfliche Priesterseminar Trier und bald in die Abtei Trier-St. Matthias. Dort Profeß 1926. Nach Studium der Philosophie und Theologie in Trier 1929 Priesterweihe. Studium in Rom mit Promotion 1932 zum Dr. phil. Seelsorgearbeit in Trier. Besondere Begabung für die Jugendseelsorge führte Z 1936 zur Zentrale des Jungmännerverbandes in das \"Jugendhaus Düsseldorf\". Das NS-Regime zerschlug diesen groß gedachten Seelsorgeplan; Z wurde zum Studium der Volkswirtschaft und Soziologie nach Paris und Lille geschickt. Erneut schlug 1941 die kirchenfeindl. Regierung zu und vertrieb den Konvent v. St. Matthias aus seiner Heimat. Z konnte im St. Heinrichs-Haus Engers als geistlich Vater für körperl behinderte Jungen und ihre Betreuer eine segensreiche Tätigkeit finden. Nach dem Kriege half er bei der Errichtung und Formung des \"Bundes der deutschen kathol. Jugend\". Z wurde dann an die Ordenshochschule \"Collegium Anselmianum\" nach Rom berufen, wo er Philosophie lehrte und eine Neubearbeitung des lateinisch verfaßten Lehrbuches seines St. Mattheiser Mitbruders und Vorgängers Joseph Gredt vornahm. Als 1950 ein Teil des St. Mattheiser Konvents zur Neugründung in die ehemal Abtei Tholey übersiedelte, war es weitgehend Z zu verdanken, daß dennoch der Bestand der Trierer Abtei gesichert werden konnte. Z kehrte als Prior-Administrator nach Trier zurück. Neben der geistigen und geistlich Sorge und der wirtschaftl. und organisatorischen Aufgabe im Konvent wurde ihm die Dozentur für Philosophie am Bischöflichen Priesterseminar Trier übertragen. Zu nennen ist weiter der Einsatz für die Kirchenmusik und die Heranführung der Gläubigen zur Teilnahme an der Liturgie, die Bearbeitung des deutsch-lateinischen Choralmeßbuches. - Nachdem 1961 die Erneuerung und Festigung des Klosters als gesichert galt, wurde Z zum Abt gewählt. 1963 wurde eine Krebserkrankung festgestellt, die während eines zur Gesundung gedachten Aufenthaltes im Benediktinerinnenpriorat Dinklage zum Tode führte. - ---[Daten übernommen aus: Petrus Becker, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+}

@@ -1,24 +1,66 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB036t160240",
-      "label" : "Piffche-Bahnfahrt durch Rheinhessen"
-    } ],
-    "numbering" : "[1]"
-  } ],
-  "rpbId" : "RPB036t160240b1",
-  "id" : "https://lobid.org/resources/RPB036t160240b1",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "036t160240",
+  "id" : "https://lobid.org/resources/036t160240",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Piffche-Bahnfahrt durch Rheinhessen : [1]",
-  "extent" : "240 Seiten : Illustrationen",
+  "title" : "Piffche-Bahnfahrt durch Rheinhessen",
+  "note" : [ "Text teilweise Hochdeutsch, teilweise in rheinhessischem Dialekt" ],
+  "responsibilityStatement" : [ "Hartmut Keil" ],
   "publication" : [ {
+    "location" : [ "Worms" ],
+    "startDate" : "2016",
+    "publishedBy" : [ "Hartmut Keil" ],
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n706090",
+    "label" : "Mundartliteratur",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n102045",
+    "label" : "Regionenbeschreibung",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n240300",
+    "label" : "Regionalgeschichte",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n05",
+    "label" : "Rheinhessen",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/122882679",
+      "label" : "Keil, Hartmut / 1951-",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
   } ]
 }

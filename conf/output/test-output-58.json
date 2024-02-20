@@ -1,26 +1,27 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "RPB929t111801",
-  "id" : "https://lobid.org/resources/RPB929t111801",
-  "hbzId" : "HT016782154",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t112199",
+  "id" : "https://lobid.org/resources/929t112199",
+  "hbzId" : "CT003007380",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Rhein-Zeitung : unabhängige Tageszeitung",
-  "note" : [ "Vorg. u.d.T.: Rhein-Zeitung / CA. - Vorg. u.d.T.: Rhein-Zeitung / CM" ],
+  "title" : "Charte vom Laufe des Rheins von Coblenz bis Wesel [Elektronische Ressource] : das Herzogthum Berg, die Grafschaften Wied, Nieder-Isenburg und andere Länder vorstellend : mit röm. kaiserl. allergnaed. Freyheit",
+  "extent" : "1 Kt. : Kupferst. ; 57 x 41 cm",
+  "note" : [ "Nebenkarte oben rechts: \"Charte den Lauf des Rheins von Coblenz bis Unkel nebst den anliegenden Ländern enthaltend\" (16 x 23 cm). - Nullmeridian: Ferro - Maßstab in graph,. Form (Deutsche Meilen) - Titelkartusche unten links" ],
+  "responsibilityStatement" : [ "entworfen von F. L. Güssefeld ; [Stecher:] I. Rausch" ],
   "publication" : [ {
-    "location" : [ "Koblenz" ],
-    "startDate" : "2011",
-    "publishedBy" : [ "Mittelrhein-Verl." ],
+    "location" : [ "Nürnberg" ],
+    "startDate" : "1797",
+    "publishedBy" : [ "Homännische Erben" ],
     "type" : [ "PublicationEvent" ]
   } ],
-  "zdbId" : "2602949-2",
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n882026",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n126000",
+    "label" : "Karte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -28,17 +29,74 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Landkreis Mayen-Koblenz | Zeitung",
+    "label" : "Mittelrhein-Gebiet | Altkarte | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4038117-1",
-      "label" : "Landkreis Mayen-Koblenz",
+      "id" : "https://d-nb.info/gnd/4074902-2",
+      "label" : "Mittelrhein-Gebiet",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4067510-5",
-      "label" : "Zeitung",
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Niederrheinisches Tiefland | Altkarte | Online-Ressource",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4042224-0",
+      "label" : "Niederrheinisches Tiefland",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Bergisches Land | Altkarte | Online-Ressource",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4005659-4",
+      "label" : "Bergisches Land",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -46,12 +104,61 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n137",
-    "label" : "n137",
+    "id" : "https://rpb.lobid.org/spatial#n22",
+    "label" : "Mittelrhein-Gebiet",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Gn11k2199217a",
+      "label" : "Rausch, Johannes / 1703-1730",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Mitwirkender"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/178964131",
+      "label" : "Güssefeld, Franz Ludwig",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn01k23917383a",
+      "label" : "Homann, ...",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://rpb.lobid.org/agent/00Pn01t22981785a",
+      "label" : "Rausch, Johannes",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:1-42026",
+    "label" : "urn:nbn:de:hbz:061:1-42026"
   } ]
 }

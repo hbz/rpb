@@ -1,0 +1,59 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1028922108",
+  "rppdId" : "pk02185",
+  "gndIdentifier" : "1028922108",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1028922108",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Heinen, Norbert M.",
+  "professionOrOccupation" : [ {
+    "label" : "Jurist",
+    "id" : "https://d-nb.info/gnd/4029050-5"
+  }, {
+    "label" : "Landrat",
+    "id" : "https://d-nb.info/gnd/4166616-1"
+  }, {
+    "label" : "Ehrenamtliche Tätigkeit",
+    "id" : "https://d-nb.info/gnd/4013673-5"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Montabaur, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14304048"
+  }, {
+    "label" : "Mainz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31500000"
+  }, {
+    "label" : "Düsseldorf",
+    "id" : "Düsseldorf"
+  } ],
+  "dateOfBirth" : [ "1936-11-28" ],
+  "placeOfBirth" : [ {
+    "label" : "Betzdorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13209006"
+  } ],
+  "dateOfDeath" : [ "2023-05-30" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Recht",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.14p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  }, {
+    "label" : "Architektur. Bautechnik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.3p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2023-06-01",
+    "source" : [ "Westerwälder Zeitung. - (2006), 276 vom 28.11., S. 11", "Westerwälder Zeitung. - (2010), 132 vom 11.06., S. 17", "Westerwälder Zeitung. - (2011), 276 vom 28.11., S. 11", "www.auf-geschichte-bauen.de/downloads/Kurzportraet_Dr_Norbert_Heinen.pdf (Stand: 02.01.2012)", "http://www.rhein-zeitung.de/regionales_artikel,-War-Initiative-Mittelrhein-beim-OLG-zu-diskret-_arid,326233.html (Stand: 02.01.2012)", "Westerwälder Zeitung. - (2023), 125 vom 1.6., S. 25." ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Studium der Rechts- und Staatswissenschaften in Freiburg und Münster; 1968 Promotion; war in der Bezirksregierung Montabaur und im Landratsamt Montabaur tätig; 1969 Leitung des Büros von Ministerpräsident Helmut Kohl in der Mainzer Staatskanzlei; 1970-1974 Landrat des Unterwesterwaldkreises; 1974 bis 1984 Landrat des neugebildeten Westerwaldkreises; in seine Amtszeit fielen die Errichtung des Kreishauses mit Tiefgarage in Montabaur, der Neubau der Berufsbildenden Schule in Montabaur, der Bau der Kreisporthalle sowie der Realschule in der Kreisstadt sowie des Schulzentrums mit Gymnasium in Höhr-Grenzhausen; 1985 Wechsel in den Vorstand der Provinzial Versicherung in Düsseldorf; dort bis zu seiner Pensionierung 1998 tätig; ehrenamtlich v.a. im Bereich der Denkmalpflege aktiv; seit 1990 Vorsitzender und seit 2009 Ehrenvorsitzender des Rheinischen Vereins für Denkmalpflege und Landschaftsschutz in Köln; in diesem Zusammenhang starkes Engagement für den Unterhalt der Burgruinen Virneburg und Stahlberg; 1998 gründete er das Forum Abtei Marienstatt und übernahm den Vorsitz; Gründer des Vereins \"Jugendbauhütten der Deutschen Stiftung Denkmalschutz\"; 2001 Mitbegünder und bis 2011 Mitglied der Initiative Region Mittelrhein; Mitbegründer und bis 2011 Sprecher des Aktionsbündnisses Welterbe Oberes Mittelrheintal; 2010 Auszeichnung mit dem ersten Sparkassen-Denkmalpreis Rheinland-Pfalz in der Kategorie \"Herausragendes Engagement\"; Auszeichnung mit dem Bundesverdienstkreuz am Bande; Träger der Konrad-Adenauer-Plakette; Ehrenvorsitzender des Westerwaldvereins" ]
+}

@@ -1,0 +1,41 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/128707410",
+  "rppdId" : "pk00002",
+  "gndIdentifier" : "128707410",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Renger, Wolfram",
+  "variantName" : [ "Renger, Wolfram" ],
+  "professionOrOccupation" : [ {
+    "label" : "Maler",
+    "id" : "https://d-nb.info/gnd/4037215-7"
+  }, {
+    "label" : "Bildhauer",
+    "id" : "https://d-nb.info/gnd/4139550-5"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Neustadt an der Weinstraße, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31600000"
+  } ],
+  "dateOfBirth" : [ "1965" ],
+  "placeOfBirth" : [ {
+    "label" : "Regensburg",
+    "id" : "Regensburg"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Malerei. Zeichnung. Graphik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.4p"
+  }, {
+    "label" : "Plastik",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#13.2p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2004-07-28",
+    "source" : [ "Internet", "Wolfram Renger (Veröffentl. in der RLB)" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Seit 1990 Teilnahme an Ausstellungen in Deutschland, Frankreich, (Schweiz); Teilnahme an der Expo 2000 in Hannover; 2001 Verwirklichung der ersten Raumklanginstallation in Bern (mit Daniel Peter Biro)" ]
+}

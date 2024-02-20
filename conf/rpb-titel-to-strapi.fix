@@ -10,7 +10,7 @@
 #   put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
 #     "rpbId2almaMmsId", "key_column": "1", "value_column": "0", "sep_char": "\t")
 # end
-# paste("inLobid", "~RPB", "f00_", "join_char": "")
+# paste("inLobid", "f00_", "join_char": "")
 # lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
 # if exists("inLobid")
 #   reject()
@@ -34,7 +34,7 @@ do put_macro("add_url")
   if exists("$[from]")
     if all_match("$[from]", "(https?|ftp):\\/\\/(\\S+\\.)+\\S+(\\/\\S*)?|")
       move_field("$[from]", "f90[].$append.f90_")
-      add_field("f90[].*.n90", "$[type]")
+      set_field("f90[].$last.n90", "$[type]")
     end
   end
 end
@@ -152,7 +152,9 @@ call_macro("add_all", to: "85", from: "85?") # Gesamttitel
 set_array("f90[]")
 
 call_macro("add_url", from: "f90e", type: "Volltext")
-call_macro("add_url", from: "f90f", type: "Andere URL")
+call_macro("add_url", from: "f90f", type: "Inhaltstext")
+call_macro("add_url", from: "f90g", type: "Inhaltsverzeichnis")
+
 
 # Signatur
 set_array("f90a[]")
@@ -217,7 +219,7 @@ if exists("f01_")
   end
   copy_field("_id", "f01.f01u") # Verknüpfung zur MtM (ÜO)
   replace_all("f01.f01u","b\\d+","")
-  prepend("f01.f01u","https://lobid.org/resources/RPB")
+  prepend("f01.f01u","https://lobid.org/resources/")
 end
 
 # ISBNs (f87_, f871 ff.)

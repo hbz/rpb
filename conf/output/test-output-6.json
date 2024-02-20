@@ -1,26 +1,30 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112207",
-  "id" : "https://lobid.org/resources/RPB929t112207",
-  "hbzId" : "CT003001222",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "929t112206",
+  "id" : "https://lobid.org/resources/929t112206",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Vom deutschen Rhein [Elektronische Ressource] : Mit landschaftlichen u. architektonischen Ansichten nebst Illustrationen zu rheinischen Dichtungen, in 25 Blättern",
-  "extent" : "[1], [24] Bl. : überw. Ill. ; quer 4-o",
-  "note" : [ "Um die Hälfte reduzierte Fassung der Ansichtenfolge \"Vom deutschen Rhein\" (vgl. Schmitt 210). Das Werk erschien gleichzeitig auch bei Neubner in Köln (vgl. Schmitt 212) und 1880 abermals bei Baumann & Co. ; In Fraktur" ],
-  "responsibilityStatement" : [ "von Caspar Scheuren" ],
+  "title" : "Funkeln aus dem Sonnenberg : Winzer Oliver Krupp aus Bruchhausen bearbeitet die Lage \"Unkeler Sonnenberg\"",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Düsseldorf" ],
-    "publishedBy" : [ "Baumann" ],
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n102045",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n544322",
+    "label" : "Großlage",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544325",
+    "label" : "Weingut",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -28,68 +32,34 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Scheuren, Caspar / 1810-1887 | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
+    "label" : "Unkeler Sonnenberg | Weingut Krupp",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/118607359",
-      "label" : "Scheuren, Caspar / 1810-1887",
+      "id" : "https://rpb.lobid.org/sw/929n110302",
+      "label" : "Unkeler Sonnenberg",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4123412-1",
-      "label" : "Illustration",
+      "id" : "https://rpb.lobid.org/sw/929n110303",
+      "label" : "Weingut Krupp",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4279198-4",
-      "label" : "Farblithografie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4049739-2",
-      "label" : "Rhein",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4036774-5",
-      "label" : "Lyrik",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4002214-6",
-      "label" : "Anthologie",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4159043-0",
-      "label" : "Pressendruck",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n03",
-    "label" : "n03",
+    "id" : "https://rpb.lobid.org/spatial#n13807073",
+    "label" : "Unkel, Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  }, {
+    "id" : "https://rpb.lobid.org/spatial#n13807008",
+    "label" : "Bruchhausen",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -98,13 +68,15 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/118607359",
-      "label" : "Scheuren, Caspar / 1810-1887"
+      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
+      "label" : "Ruland, Wolfgang",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 32-33"
 }

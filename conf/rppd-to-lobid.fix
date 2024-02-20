@@ -289,13 +289,12 @@ copy_field("f1nu[].*.f1nu", "publication[].$append")
 
 # -------
 # #1nv	(Geschlecht) -> 	gender	
-# Kommentar Doku: "mmm" (männlich) oder "www" (weiblich) eintragen, 
 
 set_array("gender[]")
-if any_equal("f1nv", "mmm")
+if any_equal("f1nv", "männlich")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#male")
   set_field("gender[].$last.label", "Männlich")
-elsif any_equal("f1nv", "www")
+elsif any_equal("f1nv", "weiblich")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#female")
   set_field("gender[].$last.label", "Weiblich")
 else

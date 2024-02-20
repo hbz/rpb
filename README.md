@@ -84,14 +84,14 @@ This attempts to import all data selected with the `PICK` variable to the API en
 To reimport existing entries, these may need to be deleted first, e.g. for `articles/1` to `articles/5`:
 
 ```
-curl --request DELETE http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles/[1-5]
+curl --request DELETE http://test-metadaten-nrw.hbz-nrw.de:1337/api/articles/[1-5]
 ```
 
-After import they are available at e.g. http://test-metadaten-nrw.hbz-nrw.de:1339/api/articles?populate=*
+After import they are available at e.g. http://test-metadaten-nrw.hbz-nrw.de:1337/api/articles?populate=*
 
 Entries using the same path can be filtered, e.g. to get only volumes (`f36_=sbd`):
 
-http://test-metadaten-nrw.hbz-nrw.de:1339/api/independent-works?filters[f36_][$eq]=sbd&populate=*
+http://test-metadaten-nrw.hbz-nrw.de:1337/api/independent-works?filters[f36_][$eq]=sbd&populate=*
 
 ### Import SKOS data into strapi
 

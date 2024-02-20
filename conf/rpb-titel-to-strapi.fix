@@ -34,7 +34,7 @@ do put_macro("add_url")
   if exists("$[from]")
     if all_match("$[from]", "(https?|ftp):\\/\\/(\\S+\\.)+\\S+(\\/\\S*)?|")
       move_field("$[from]", "f90[].$append.f90_")
-      add_field("f90[].*.n90", "$[type]")
+      set_field("f90[].$last.n90", "$[type]")
     end
   end
 end
@@ -152,7 +152,9 @@ call_macro("add_all", to: "85", from: "85?") # Gesamttitel
 set_array("f90[]")
 
 call_macro("add_url", from: "f90e", type: "Volltext")
-call_macro("add_url", from: "f90f", type: "Andere URL")
+call_macro("add_url", from: "f90f", type: "Inhaltstext")
+call_macro("add_url", from: "f90g", type: "Inhaltsverzeichnis")
+
 
 # Signatur
 set_array("f90a[]")

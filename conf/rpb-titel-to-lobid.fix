@@ -323,7 +323,11 @@ elsif exists ("f709")
 end
 replace_all("bibliographicCitation","¬","")
 
-# fulltextOnline
+# fulltextOnline and link to external description/ToC
+
+if any_match("f90[].*.n90", "Inhaltsverzeichnis|Inhaltstext")
+  set_array("description[]")
+end
 
 do list(path:"f90[]", "var": "$i")
   if all_equal("$i.n90", "Volltext")
@@ -331,9 +335,17 @@ do list(path:"f90[]", "var": "$i")
     copy_field("$i.f90_", "fulltextOnline[].$append.id")
     copy_field("$i.f90_", "fulltextOnline[].$last.label")
     replace_all("fulltextOnline[].$last.label", "https://nbn-resolving.org/", "")
+  
+  elsif all_equal("$i.n90", "Inhaltstext")
+    copy_field("$i.f90_", "description[].$append.id")
+    copy_field("$i.f90_", "description[].$last.label") 
+  
+  elsif all_equal("$i.n90", "Inhaltsverzeichnis")
+    copy_field("$i.f90_", "description[].$append.id")
+    copy_field("$i.f90_", "description[].$last.label")
   end
 end
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]")
+retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]")
 
 vacuum()

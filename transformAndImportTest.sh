@@ -14,6 +14,8 @@ API_TOKEN=$API_TOKEN
 sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb.ndjson PATH=rpb-notations HOST=$HOST API_TOKEN=$API_TOKEN"
 # curl --request DELETE "http://$HOST:1337/api/rpb-spatials/[1-5]"
 sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PATH=rpb-spatials HOST=$HOST API_TOKEN=$API_TOKEN"
+# curl --request DELETE "http://$HOST:1337/api/fachgebiete/[1-5]"
+sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-fachgebiete.ndjson PATH=fachgebiete HOST=$HOST API_TOKEN=$API_TOKEN"
 
 # Personen
 # curl --request DELETE "http://$HOST:1337/api/rppds/[1-5]"

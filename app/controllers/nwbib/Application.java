@@ -283,8 +283,9 @@ public class Application extends Controller {
 	}
 
 	public static Promise<Result> showPl(String name, String db, int index, int zeilen, String s1) {
+		String url = db.equals("rpb") ? "https://rpb.lbz-rlp.de/" : "https://rppd.lobid.org/";
 		return Promise
-				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=https://rppd.lobid.org/"
+				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=" + url
 						+ HtmlFormat.escape(s1) + "'/></head>").as("text/html"));
 	}
 

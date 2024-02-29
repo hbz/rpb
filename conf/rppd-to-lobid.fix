@@ -20,9 +20,7 @@ do once("map")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
 
   # maps für lookup relatedPerson
-  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
-  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
-  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")  
+  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"1",value_column:"2", sep_char: "\t", expected_columns:"-1")
   put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdLabel",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
 
   # maps für depiction
@@ -155,26 +153,15 @@ lookup("depiction[].1.thumbnail", "gnd_to_thumbnail", delete: "true")
 
 set_array("professionOrOccupation[]")
 do list(path:"f1nn[]", "var": "$i")
-  replace_all("$i.f1nn", "_", "")
   copy_field("$i.f1nn", "professionOrOccupation[].$append.label")
   copy_field("$i.f1nn", "professionOrOccupation[].$last.id")
 end
 
 do list(path:"professionOrOccupation[]", "var": "$i")
-  lookup("$i.label", "SW_map", delete: "true")
-  if exists("$i.label")
-    if all_match("$i.id", "(^\\d*)n(\\d)")
-      replace_all("$i.id", "(^\\d*)n(\\d)", "$1-$2")
-      prepend("$i.id", "https://d-nb.info/gnd/")
-    else
-      prepend("$i.id", "https://rpb.lobid.org/sw/")
-    end
-  # TODO kein Beispiel in Testdaten
-  else
-    copy_field("$i.id", "$i.label")
-  end
+  replace_all("$i.label", "^http.+/(\\d.+)", "$1")
+  replace_all("$i.label", "^(\\d*)-(\\d)", "$1n$2")
+  lookup("$i.label", "SW_map", delete: "false")
 end
-  
 
 # -------
 # #1wz (Wirkungszeitraum) -> periodOfActivity
@@ -195,9 +182,7 @@ copy_field("f1wz", "periodOfActivity[].$append")
 
 set_array("placeOfActivity[]")
 do list(path:"f1no[]", "var": "$i")
-  if any_match("$i.f1no", "^_o.+")
-    replace_all("$i.f1no", "^_o|_$", "")
-    prepend("$i.f1no", "https://rpb.lobid.org/spatial#n")
+  if any_match("$i.f1no", "^http.+")
     copy_field("$i.f1no", "placeOfActivity[].$append.label")
     copy_field("$i.f1no", "placeOfActivity[].$last.id")
     lookup("placeOfActivity[].$last.label", "spatial_map")
@@ -220,9 +205,7 @@ copy_field("f1np", "dateOfBirth[].$append")
 # Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND 
 
 set_array("placeOfBirth[]")
-if any_match("f1nq", "^_o.+")
-  replace_all("f1nq", "^_o|_$", "")
-  prepend("f1nq", "https://rpb.lobid.org/spatial#n")
+if any_match("f1nq", "^http.+")
   copy_field("f1nq", "placeOfBirth[].$append.label")
   copy_field("f1nq", "placeOfBirth[].$last.id")
   lookup("placeOfBirth[].$last.label", "spatial_map")
@@ -244,9 +227,7 @@ copy_field("f1nr", "dateOfDeath[].$append")
 # Kommentar Doku: s. #1nq
 
 set_array("placeOfDeath[]")
-if any_match("f1ns", "^_o.+")
-  replace_all("f1ns", "^_o|_$", "")
-  prepend("f1ns", "https://rpb.lobid.org/spatial#n")
+if any_match("f1ns", "^http.+")
   copy_field("f1ns", "placeOfDeath[].$append.label")
   copy_field("f1ns", "placeOfDeath[].$last.id")
   lookup("placeOfDeath[].$last.label", "spatial_map")
@@ -263,18 +244,12 @@ end
 
 set_array("relatedPerson[]")
 do list(path:"f1nt[]", "var": "$i")
-  if any_match("$i.f1nt", "^_.+")
-    replace_all("$i.f1nt", "_", "")
-    copy_field("$i.f1nt", "relatedPerson[].$append.label")
-    copy_field("$i.f1nt", "relatedPerson[].$last.id")
+  copy_field("$i.f1nt", "relatedPerson[].$append.label")
+  copy_field("$i.f1nt", "relatedPerson[].$last.id")
+  if any_match("relatedPerson[].$last.label", "^http.+")
     lookup("relatedPerson[].$last.label", "map_rel_preferredName")
-    lookup("relatedPerson[].$last.id", "map_rel_gndId")
+    replace_all("relatedPerson[].$last.label", "^http.+/([p\\d].+)", "$1")
     lookup("relatedPerson[].$last.label", "map_rel_rppdLabel")
-    lookup("relatedPerson[].$last.id", "map_rel_rppdId")    
-    #prepend("relatedPerson[].$last.id","https://d-nb.info/gnd/")  
-  else
-    copy_field("$i.f1nt", "relatedPerson[].$append.label")
-    copy_field("$i.f1nt", "relatedPerson[].$last.id")
   end
   replace_all("relatedPerson[].$last.label","¬","")
 end
@@ -311,19 +286,17 @@ end
 
 set_array("gndSubjectCategory[]")
 do list(path:"f1nw[]", "var": "$i")
-  replace_all("$i.f1nw", "_", "")
-  replace_all("$i.f1nw", "(\\d)x(\\d)", "$1.$2")
-  replace_all("$i.f1nw", "^swn", "")
   copy_field("$i.f1nw", "gndSubjectCategory[].$append.label")
   copy_field("$i.f1nw", "gndSubjectCategory[].$last.id")
 end
 
 do list(path:"gndSubjectCategory[]", "var": "$i")
+  replace_all("$i.label|$i.id", "^http.+/n?(\\d.*)", "$1")
   lookup("$i.label", "SWN_map", delete: "true")
   if exists("$i.label")
     prepend("$i.id", "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#")
   else
-    prepend("$i.id", "https://rpb.lobid.org/swn/")
+    prepend("$i.id", "https://w3id.org/lobid/rpb-fachgebiete/n")
   end
 end
 

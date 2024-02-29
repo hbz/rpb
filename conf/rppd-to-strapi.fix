@@ -27,9 +27,19 @@ do put_macro("add_bio")
   join_field("_temp", "\n\n") # als Absätze...
   move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
 end
+
+do put_macro("place_to_uri")
+  if any_match("$[field]", "^_o.+")
+    replace_all("$[field]", "^_o|_$", "")
+    prepend("$[field]", "https://rpb.lobid.org/spatial#n")
+  end
+end
+
 do once()
   # map zum Ersetzen der alten GND-ID
   put_filemap("conf/maps/gndId-old-to-new.tsv", "map_gndid_to_new", sep_char: "\t")
+  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")  
 end
 
 call_macro("to_bool", field: "f11_")
@@ -67,5 +77,42 @@ lookup("f82b", "map_gndid_to_new")
 replace_all("f1nv", "w+", "weiblich")
 replace_all("f1nv", "m+", "männlich")
 replace_all("f1nv", "d+", "divers")
+
+# URIs / Lookup-Felder
+
+# Geburts-, Sterbe- und Wirkungsorte
+call_macro("place_to_uri", field: "f1nq") 
+call_macro("place_to_uri", field: "f1ns")
+do list_as(f: "f1no[].*")
+  call_macro("place_to_uri", field: "f.f1no")
+end
+
+# Berufe
+do list(path:"f1nn[]", "var": "$i")
+  replace_all("$i.f1nn", "_", "")
+  if all_match("$i.f1nn", "(^\\d*)n(\\d)")
+    replace_all("$i.f1nn", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.f1nn", "https://d-nb.info/gnd/")
+  else
+    prepend("$i.f1nn", "https://rpb.lobid.org/sw/")
+  end
+end
+
+# Fachgebiete
+do list(path:"f1nw[]", "var": "$i")
+  replace_all("$i.f1nw", "_", "")
+  replace_all("$i.f1nw", "(\\d)x(\\d)", "$1.$2")
+  replace_all("$i.f1nw", "^swn", "")
+  prepend("$i.f1nw", "https://w3id.org/lobid/rpb-fachgebiete/n")
+end
+
+# Beziehungen
+do list(path:"f1nt[]", "var": "$i")
+  if any_match("$i.f1nt", "^_.+")
+    replace_all("$i.f1nt", "_", "")
+    lookup("$i.f1nt", "map_rel_gndId")
+    lookup("$i.f1nt", "map_rel_rppdId")
+  end
+end
 
 vacuum()

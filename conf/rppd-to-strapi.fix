@@ -42,6 +42,9 @@ do once()
   put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")  
 end
 
+move_field("f00_","rppdId")
+move_field("f82b", "gndIdentifier")
+
 call_macro("to_bool", field: "f11_")
 call_macro("to_bool", field: "f12_")
 call_macro("to_bool", field: "f13_")
@@ -64,15 +67,15 @@ call_macro("add_bio", field: "f1ä?")
 call_macro("add_bio", field: "f1ö?")
 call_macro("add_bio", field: "f1ß?")
 
-# f82b ist 'required' und 'unique'
-if all_match("f82b", "Familienmitglied|Keine GND-Ansetzung")
-  paste("f82b", "~Keine GND-Ansetzung für", "f00_")
+# gndIdentifier ist 'required' und 'unique'
+if all_match("gndIdentifier", "Familienmitglied|Keine GND-Ansetzung")
+  paste("gndIdentifier", "~Keine GND-Ansetzung für", "rppdId")
 end
-unless exists("f82b")
-  paste("f82b", "~Keine GND-Ansetzung für", "f00_")
+unless exists("gndIdentifier")
+  paste("gndIdentifier", "~Keine GND-Ansetzung für", "rppdId")
 end
-replace_all("f82b", "(\\d+)n(\\d)", "$1-$2")
-lookup("f82b", "map_gndid_to_new")
+replace_all("gndIdentifier", "(\\d+)n(\\d)", "$1-$2")
+lookup("gndIdentifier", "map_gndid_to_new")
 
 replace_all("f1nv", "w+", "weiblich")
 replace_all("f1nv", "m+", "männlich")

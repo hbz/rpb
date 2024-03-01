@@ -66,17 +66,15 @@ add_field("@context", "http://lobid.org/gnd/context.jsonld")
 #00 RPPD-ID 
 # Komentar Doku:  (Achtung: 00 BLANK)
 
-copy_field("f00_","id")
-copy_field("f00_","rppdId")
+copy_field("rppdId","id")
 prepend("id","https://rppd.lobid.org/")
 
 # -------
 #82b	(GND-ID (R)) ->	gndIdentifier	
 # Kommentar Doku:  ohne das vorangestellte Präfix (DE-588)
 
-copy_field("f82b", "gndIdentifier")
-unless all_contain("f82b", "Keine GND-Ansetzung")
-  copy_field("f82b","id")
+unless all_contain("gndIdentifier", "Keine GND-Ansetzung")
+  copy_field("gndIdentifier","id")
   prepend("id","https://d-nb.info/gnd/")
 end
 

@@ -23,6 +23,14 @@ cd rpb
 
 The overall RPB system consists of 4 applications: RPB & BiblioVino (Java/Play, based on [NWBib](https://github.com/hbz/nwbib)), RPPD (Java/Play, based on [lobid-gnd](https://github.com/hbz/lobid-gnd)), and Strapi-RPB (JavaScript/React).
 
+### Proxies and redirects
+
+|     | LBZ-URLs | Lobid-URL |
+| --- | -------- | --------- |
+| RPB | https://rpb.lbz-rlp.de, http://www.rpb-rlp.de/ | https://rpb.lobid.org |
+| BiblioVino |  https://wein.lbz-rlp.de/, http://weinbibliographie.de/ | https://wein.lobid.org |
+| RPPD | http://www.rppd-rlp.de/ | https://rppd.lobid.org |
+
 ### RPB & BiblioVino
 
 Source code: https://github.com/hbz/rpb & https://github.com/hbz/rpb/tree/biblioVino (https://github.com/hbz/rpb/pull/52)

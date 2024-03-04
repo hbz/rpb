@@ -1,8 +1,8 @@
 
 do put_macro("to_bool")
-  if exists("$[field]")
-    move_field("$[field]","$[field]~")
-    set_field("$[field]~", "true")
+  if exists("$[source_field]")
+    move_field("$[source_field]","$[target_field]~")
+    set_field("$[target_field]~", "true")
   end
 end
 
@@ -45,11 +45,11 @@ end
 move_field("f00_","rppdId")
 move_field("f82b", "gndIdentifier")
 
-call_macro("to_bool", field: "f11_")
-call_macro("to_bool", field: "f12_")
-call_macro("to_bool", field: "f13_")
-call_macro("to_bool", field: "f14_")
-call_macro("to_bool", field: "f15_")
+call_macro("to_bool", source_field: "f11_", target_field: "consentGiven")
+call_macro("to_bool", source_field: "f12_", target_field: "doDelete")
+call_macro("to_bool", source_field: "f13_", target_field: "doNotCrawl")
+call_macro("to_bool", source_field: "f14_", target_field: "doNotIndex")
+call_macro("to_bool", source_field: "f15_", target_field: "doNotFeature")
 
 call_macro("to_array", field: "f1nc")
 call_macro("to_array", field: "f1nd")

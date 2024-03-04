@@ -55,7 +55,7 @@ do once("map")
 end
 
 # Kommentar Doku: #14 "x" eintragen, falls der Datensatz nicht im Webopac erscheinen soll, z.B. noch nicht aufgearbeitete ps-Sätze
-if exists("f14_")
+if exists("doNotIndex")
   reject()
 end
 

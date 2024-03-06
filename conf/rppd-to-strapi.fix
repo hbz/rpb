@@ -1,8 +1,8 @@
 
 do put_macro("to_bool")
-  if exists("$[source_field]")
-    move_field("$[source_field]","$[target_field]~")
-    set_field("$[target_field]~", "true")
+  if exists("$[from]")
+    move_field("$[from]","$[to]~")
+    set_field("$[to]~", "true")
   end
 end
 
@@ -16,9 +16,9 @@ do put_macro("add")
 end
 
 do put_macro("to_array")
-  split_field("$[source_field]", "@")
-  set_array("$[target_field][]")
-  call_macro("add", to: "$[target_field]", from: "$[source_field]")
+  split_field("$[from]", "@")
+  set_array("$[to][]")
+  call_macro("add", to: "$[to]", from: "$[from]")
 end
 
 do put_macro("add_bio")
@@ -45,20 +45,20 @@ end
 move_field("f00_","rppdId")
 move_field("f82b", "gndIdentifier")
 
-call_macro("to_bool", source_field: "f11_", target_field: "consentGiven")
-call_macro("to_bool", source_field: "f12_", target_field: "doDelete")
-call_macro("to_bool", source_field: "f13_", target_field: "doNotCrawl")
-call_macro("to_bool", source_field: "f14_", target_field: "doNotIndex")
-call_macro("to_bool", source_field: "f15_", target_field: "doNotFeature")
+call_macro("to_bool", from: "f11_", to: "consentGiven")
+call_macro("to_bool", from: "f12_", to: "doDelete")
+call_macro("to_bool", from: "f13_", to: "doNotCrawl")
+call_macro("to_bool", from: "f14_", to: "doNotIndex")
+call_macro("to_bool", from: "f15_", to: "doNotFeature")
 
-call_macro("to_array", source_field: "f1nc", target_field: "variantName")
-call_macro("to_array", source_field: "f1nd", target_field: "otherName")
-call_macro("to_array", source_field: "f1nn", target_field: "professionOrOccupation")
-call_macro("to_array", source_field: "f1no", target_field: "placeOfActivity")
-call_macro("to_array", source_field: "f1nt", target_field: "relatedPerson")
-call_macro("to_array", source_field: "f1nu", target_field: "publication")
-call_macro("to_array", source_field: "f1nw", target_field: "gndSubjectCategory")
-call_macro("to_array", source_field: "f1nx", target_field: "source")
+call_macro("to_array", from: "f1nc", to: "variantName")
+call_macro("to_array", from: "f1nd", to: "otherName")
+call_macro("to_array", from: "f1nn", to: "professionOrOccupation")
+call_macro("to_array", from: "f1no", to: "placeOfActivity")
+call_macro("to_array", from: "f1nt", to: "relatedPerson")
+call_macro("to_array", from: "f1nu", to: "publication")
+call_macro("to_array", from: "f1nw", to: "gndSubjectCategory")
+call_macro("to_array", from: "f1nx", to: "source")
 
 set_array("biographicalOrHistoricalInformation[]")
 call_macro("add_bio", field: "f1z?")

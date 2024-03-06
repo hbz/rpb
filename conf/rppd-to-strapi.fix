@@ -9,23 +9,23 @@ end
 do put_macro("add")
   if exists("$[from]")
     set_array("_temp")
-    copy_field("$[from]", "_temp.$append.$[to]")
+    copy_field("$[from]", "_temp.$append.value")
     move_field("_temp.*", "$[to][].$append")
     remove_field("$[from]")
   end
 end
 
 do put_macro("to_array")
-  split_field("$[field]", "@")
-  set_array("$[field][]")
-  call_macro("add", to: "$[field]", from: "$[field]")
+  split_field("$[source_field]", "@")
+  set_array("$[target_field][]")
+  call_macro("add", to: "$[target_field]", from: "$[source_field]")
 end
 
 do put_macro("add_bio")
   set_array("_temp")
   move_field("$[field]", "_temp.$append") # aufgeteilt: f1?1..9
   join_field("_temp", "\n\n") # als Absätze...
-  move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
+  move_field("_temp", "biographicalOrHistoricalInformation[].$append.value") # in 1 Feld
 end
 
 do put_macro("place_to_uri")
@@ -51,16 +51,16 @@ call_macro("to_bool", source_field: "f13_", target_field: "doNotCrawl")
 call_macro("to_bool", source_field: "f14_", target_field: "doNotIndex")
 call_macro("to_bool", source_field: "f15_", target_field: "doNotFeature")
 
-call_macro("to_array", field: "f1nc")
-call_macro("to_array", field: "f1nd")
-call_macro("to_array", field: "f1nn")
-call_macro("to_array", field: "f1no")
-call_macro("to_array", field: "f1nt")
-call_macro("to_array", field: "f1nu")
-call_macro("to_array", field: "f1nw")
-call_macro("to_array", field: "f1nx")
+call_macro("to_array", source_field: "f1nc", target_field: "variantName")
+call_macro("to_array", source_field: "f1nd", target_field: "otherName")
+call_macro("to_array", source_field: "f1nn", target_field: "professionOrOccupation")
+call_macro("to_array", source_field: "f1no", target_field: "placeOfActivity")
+call_macro("to_array", source_field: "f1nt", target_field: "relatedPerson")
+call_macro("to_array", source_field: "f1nu", target_field: "publication")
+call_macro("to_array", source_field: "f1nw", target_field: "gndSubjectCategory")
+call_macro("to_array", source_field: "f1nx", target_field: "source")
 
-set_array("f1z1[]") # Biogramme
+set_array("biographicalOrHistoricalInformation[]")
 call_macro("add_bio", field: "f1z?")
 call_macro("add_bio", field: "f1ü?")
 call_macro("add_bio", field: "f1ä?")
@@ -83,38 +83,36 @@ replace_all("f1nv", "d+", "divers")
 
 # URIs / Lookup-Felder
 
-# Geburts-, Sterbe- und Wirkungsorte
+# Geburts- und Sterbeorte
 call_macro("place_to_uri", field: "f1nq") 
 call_macro("place_to_uri", field: "f1ns")
-do list_as(f: "f1no[].*")
-  call_macro("place_to_uri", field: "f.f1no")
+
+do list_as(f: "placeOfActivity[].*")
+  call_macro("place_to_uri", field: "f.value")
 end
 
-# Berufe
-do list(path:"f1nn[]", "var": "$i")
-  replace_all("$i.f1nn", "_", "")
-  if all_match("$i.f1nn", "(^\\d*)n(\\d)")
-    replace_all("$i.f1nn", "(^\\d*)n(\\d)", "$1-$2")
-    prepend("$i.f1nn", "https://d-nb.info/gnd/")
+do list(path:"professionOrOccupation[]", "var": "$i")
+  replace_all("$i.value", "_", "")
+  if all_match("$i.value", "(^\\d*)n(\\d)")
+    replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.value", "https://d-nb.info/gnd/")
   else
-    prepend("$i.f1nn", "https://rpb.lobid.org/sw/")
+    prepend("$i.value", "https://rpb.lobid.org/sw/")
   end
 end
 
-# Fachgebiete
-do list(path:"f1nw[]", "var": "$i")
-  replace_all("$i.f1nw", "_", "")
-  replace_all("$i.f1nw", "(\\d)x(\\d)", "$1.$2")
-  replace_all("$i.f1nw", "^swn", "")
-  prepend("$i.f1nw", "https://w3id.org/lobid/rpb-fachgebiete/n")
+do list(path:"gndSubjectCategory[]", "var": "$i")
+  replace_all("$i.value", "_", "")
+  replace_all("$i.value", "(\\d)x(\\d)", "$1.$2")
+  replace_all("$i.value", "^swn", "")
+  prepend("$i.value", "https://w3id.org/lobid/rpb-fachgebiete/n")
 end
 
-# Beziehungen
-do list(path:"f1nt[]", "var": "$i")
-  if any_match("$i.f1nt", "^_.+")
-    replace_all("$i.f1nt", "_", "")
-    lookup("$i.f1nt", "map_rel_gndId")
-    lookup("$i.f1nt", "map_rel_rppdId")
+do list(path:"relatedPerson[]", "var": "$i")
+  if any_match("$i.value", "^_.+")
+    replace_all("$i.value", "_", "")
+    lookup("$i.value", "map_rel_gndId")
+    lookup("$i.value", "map_rel_rppdId")
   end
 end
 

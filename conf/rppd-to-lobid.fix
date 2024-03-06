@@ -78,6 +78,12 @@ unless all_contain("gndIdentifier", "Keine GND-Ansetzung")
   prepend("id","https://d-nb.info/gnd/")
 end
 
+# Temp for clean refactoring with no diff on output, will remove after rename (strapi-rpb#20)
+move_field("rppdId", "_rppdId")
+move_field("_rppdId", "rppdId")
+move_field("gndIdentifier", "_gndIdentifier")
+move_field("_gndIdentifier", "gndIdentifier")
+
 set_array("sameAs[]")
 call_macro("beacon_lookup", id: "adb")
 call_macro("beacon_lookup", id: "archinform")
@@ -120,10 +126,11 @@ trim("preferredName")
 # Kommentar #1nc Doku: sowohl GND, als auch lokale; getrennt mit @; auch bei Doppelnamen vom 2. Teil des Namens; auch Vw-Formen von Pseud/Wirkl. Name;  (wird im web-Katalog nicht angezeigt)
 # Kommentar #1nd Doku: sowohl GND, als auch lokale; getrennt mit @, gekennzeichnet mit ¬[Pseud.]¬/¬[Wirkl. Name]¬/¬[Früherer Name]¬/¬[Späterer Name]¬, oder ohne Kennzeichnung bei prägnanter, weiterer Namensform (wird im web-Katalog angezeigt)
 
-set_array("variantName[]")
-copy_field("f1nc[].*.f1nc", "variantName[].$append")
-copy_field("f1nd[].*.f1nd", "variantName[].$append")
-uniq("variantName[]")
+set_array("_temp")
+copy_field("variantName[].*.value", "_temp.$append")
+copy_field("otherName[].*.value", "_temp.$append")
+uniq("_temp")
+move_field("_temp", "variantName[]")
 
 
 # -------
@@ -149,17 +156,19 @@ lookup("depiction[].1.thumbnail", "gnd_to_thumbnail", delete: "true")
 # professionOrOccupation[].*.label
 
 
-set_array("professionOrOccupation[]")
-do list(path:"f1nn[]", "var": "$i")
-  copy_field("$i.f1nn", "professionOrOccupation[].$append.label")
-  copy_field("$i.f1nn", "professionOrOccupation[].$last.id")
+set_array("_temp")
+do list(path:"professionOrOccupation[]", "var": "$i")
+  copy_field("$i.value", "_temp.$append.label")
+  copy_field("$i.value", "_temp.$last.id")
 end
 
-do list(path:"professionOrOccupation[]", "var": "$i")
+do list(path:"_temp", "var": "$i")
   replace_all("$i.label", "^http.+/(\\d.+)", "$1")
   replace_all("$i.label", "^(\\d*)-(\\d)", "$1n$2")
   lookup("$i.label", "SW_map", delete: "false")
 end
+
+move_field("_temp", "professionOrOccupation[]")
 
 # -------
 # #1wz (Wirkungszeitraum) -> periodOfActivity
@@ -178,17 +187,18 @@ copy_field("f1wz", "periodOfActivity[].$append")
 # placeOfActivity[].*.id
 # placeOfActivity[].*.label
 
-set_array("placeOfActivity[]")
-do list(path:"f1no[]", "var": "$i")
-  if any_match("$i.f1no", "^http.+")
-    copy_field("$i.f1no", "placeOfActivity[].$append.label")
-    copy_field("$i.f1no", "placeOfActivity[].$last.id")
-    lookup("placeOfActivity[].$last.label", "spatial_map")
+set_array("_temp")
+do list(path:"placeOfActivity[]", "var": "$i")
+  if any_match("$i.value", "^http.+")
+    copy_field("$i.value", "_temp.$append.label")
+    copy_field("$i.value", "_temp.$last.id")
+    lookup("_temp.$last.label", "spatial_map")
   else
-    copy_field("$i.f1no", "placeOfActivity[].$append.label")
-    copy_field("$i.f1no", "placeOfActivity[].$last.id")
+    copy_field("$i.value", "_temp.$append.label")
+    copy_field("$i.value", "_temp.$last.id")
   end
 end
+move_field("_temp", "placeOfActivity[]")
 
 
 # -------
@@ -240,25 +250,27 @@ end
 # TODO: Wenn rppd ID angegeben wird, unterstriche löschen und zu URL transformieren (wie id) und auf Feld relatedPerson[].*.id mappen.
 
 
-set_array("relatedPerson[]")
-do list(path:"f1nt[]", "var": "$i")
-  copy_field("$i.f1nt", "relatedPerson[].$append.label")
-  copy_field("$i.f1nt", "relatedPerson[].$last.id")
-  if any_match("relatedPerson[].$last.label", "^http.+")
-    lookup("relatedPerson[].$last.label", "map_rel_preferredName")
-    replace_all("relatedPerson[].$last.label", "^http.+/([p\\d].+)", "$1")
-    lookup("relatedPerson[].$last.label", "map_rel_rppdLabel")
+set_array("_temp")
+do list(path:"relatedPerson[]", "var": "$i")
+  copy_field("$i.value", "_temp.$append.label")
+  copy_field("$i.value", "_temp.$last.id")
+  if any_match("_temp.$last.label", "^http.+")
+    lookup("_temp.$last.label", "map_rel_preferredName")
+    replace_all("_temp.$last.label", "^http.+/([p\\d].+)", "$1")
+    lookup("_temp.$last.label", "map_rel_rppdLabel")
   end
-  replace_all("relatedPerson[].$last.label","¬","")
+  replace_all("_temp.$last.label","¬","")
 end
+move_field("_temp", "relatedPerson[]")
 
 
 # -------
 # #1nu	(Werke (m)) -> 	publication	
 # Kommentar Doku: nur Auswahl! Möglichst Originalausgabe angeben. Form:  Titel,  Jahr.  Achtung: Nichtsortierzeichen für führenden Artikel (Alt-170); getrennt mit @; auch Werke von Architekten, Künstlern und Regisseuren
 
-set_array("publication[]")
-copy_field("f1nu[].*.f1nu", "publication[].$append")
+set_array("_temp")
+copy_field("publication[].*.value", "_temp.$append")
+move_field("_temp", "publication[]")
 
 # -------
 # #1nv	(Geschlecht) -> 	gender	
@@ -282,14 +294,15 @@ end
 # gndSubjectCategory[].*.id
 # gndSubjectCategory[].*.label
 
-set_array("gndSubjectCategory[]")
-do list(path:"f1nw[]", "var": "$i")
-  copy_field("$i.f1nw", "gndSubjectCategory[].$append.label")
-  copy_field("$i.f1nw", "gndSubjectCategory[].$last.id")
+set_array("_temp")
+do list(path:"gndSubjectCategory[]", "var": "$i")
+  copy_field("$i.value", "_temp.$append.label")
+  copy_field("$i.value", "_temp.$last.id")
 end
 
-do list(path:"gndSubjectCategory[]", "var": "$i")
-  replace_all("$i.label|$i.id", "^http.+/n?(\\d.*)", "$1")
+do list(path:"_temp", "var": "$i")
+  replace_all("$i.label", "^http.+/n?(\\d.*)", "$1")
+  replace_all("$i.id", "^http.+/n?(\\d.*)", "$1")
   lookup("$i.label", "SWN_map", delete: "true")
   if exists("$i.label")
     prepend("$i.id", "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#")
@@ -298,6 +311,7 @@ do list(path:"gndSubjectCategory[]", "var": "$i")
   end
 end
 
+move_field("_temp", "gndSubjectCategory[]")
 
 # -------
 #1ny	(Datum der letzten inhaltlichen Änderung) ->	describedBy.dateModified	
@@ -312,13 +326,15 @@ end
 #1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation
 # Kommentar Doku:  getrennt durch "; ". Keine Abkürzungen benutzen, da die Stichworte in Register 9 indexiert werden. Zitate aus Quellen in Anführungszeichen; bei sehr langen, biogr. Anmerkungen wird der Text auf mehrere Kategorien aufgeteilt: #1z2, #1z3, #1z4 ... #1z9. Bei eingespielten Biographien werden die Angaben zum Originalwerk am Ende angegeben:  --- [Daten übernommen aus: ....]
 
-set_array("biographicalOrHistoricalInformation[]")
-copy_field("f1z1[].*.f1z1", "biographicalOrHistoricalInformation[].$append")
+set_array("_temp")
+copy_field("biographicalOrHistoricalInformation[].*.value", "_temp.$append")
+move_field("_temp", "biographicalOrHistoricalInformation[]")
 
 # #1nx	(Quelle (m)) ->	describedBy.source	
 # Kommentar Doku:  getrennt mit @; Beispiel: Westerwälder Zeitung. - (2002), 224 vom 26.9., S. 20 (evtl. Todesanzeige)@Eigene Angaben (Datum); Genaue Adresse bei Websites: http://www...  (Stand: Datum). Alle Quellen zu einer Person, werden hier zusammengeführt, auch wenn sie aus verschiedenen, eingespielten Werken stammen 
-set_array("describedBy.source[]")
-copy_field("f1nx[].*.f1nx", "describedBy.source[].$append")
+set_array("_temp")
+copy_field("source[].*.value", "_temp.$append")
+move_field("_temp", "describedBy.source[]")
 
 vacuum()
 retain(

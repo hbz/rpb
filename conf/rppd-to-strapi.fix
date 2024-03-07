@@ -51,6 +51,17 @@ call_macro("to_bool", from: "f13_", to: "doNotCrawl")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
 call_macro("to_bool", from: "f15_", to: "doNotFeature")
 
+move_field("f1na", "preferredName")
+move_field("f1ne", "depictionId")
+move_field("f1nv", "gender")
+move_field("f1np", "dateOfBirth")
+move_field("f1nq", "placeOfBirth")
+move_field("f1nr", "dateOfDeath")
+move_field("f1ns", "placeOfDeath")
+move_field("f1ny", "dateModified")
+move_field("f1wz", "periodOfActivity")
+move_field("f98_", "internalNote")
+
 call_macro("to_array", from: "f1nc", to: "variantName")
 call_macro("to_array", from: "f1nd", to: "otherName")
 call_macro("to_array", from: "f1nn", to: "professionOrOccupation")
@@ -77,15 +88,15 @@ end
 replace_all("gndIdentifier", "(\\d+)n(\\d)", "$1-$2")
 lookup("gndIdentifier", "map_gndid_to_new")
 
-replace_all("f1nv", "w+", "weiblich")
-replace_all("f1nv", "m+", "männlich")
-replace_all("f1nv", "d+", "divers")
+replace_all("gender", "w+", "weiblich")
+replace_all("gender", "m+", "männlich")
+replace_all("gender", "d+", "divers")
 
 # URIs / Lookup-Felder
 
 # Geburts- und Sterbeorte
-call_macro("place_to_uri", field: "f1nq") 
-call_macro("place_to_uri", field: "f1ns")
+call_macro("place_to_uri", field: "placeOfBirth") 
+call_macro("place_to_uri", field: "placeOfDeath")
 
 do list_as(f: "placeOfActivity[].*")
   call_macro("place_to_uri", field: "f.value")

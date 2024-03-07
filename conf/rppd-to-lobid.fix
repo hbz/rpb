@@ -14,6 +14,11 @@ do put_macro("beacon_lookup")
   end
 end
 
+do put_macro("move_here")
+  move_field("$[field]", "_temp")
+  move_field("_temp", "$[field]")
+end
+
 do once("map")
   put_filemap("conf/RPB-Export_HBZ_SW.tsv", "SW_map", sep_char: "\t")
   put_filemap("conf/RPB-Export_HBZ_SWN.tsv", "SWN_map", sep_char: "\t")
@@ -68,21 +73,17 @@ add_field("@context", "http://lobid.org/gnd/context.jsonld")
 
 copy_field("rppdId","id")
 prepend("id","https://rppd.lobid.org/")
+call_macro("move_here", field: "rppdId")
 
 # -------
 #82b	(GND-ID (R)) ->	gndIdentifier	
 # Kommentar Doku:  ohne das vorangestellte Präfix (DE-588)
 
+call_macro("move_here", field: "gndIdentifier")
 unless all_contain("gndIdentifier", "Keine GND-Ansetzung")
   copy_field("gndIdentifier","id")
   prepend("id","https://d-nb.info/gnd/")
 end
-
-# Temp for clean refactoring with no diff on output, will remove after rename (strapi-rpb#20)
-move_field("rppdId", "_rppdId")
-move_field("_rppdId", "rppdId")
-move_field("gndIdentifier", "_gndIdentifier")
-move_field("_gndIdentifier", "gndIdentifier")
 
 set_array("sameAs[]")
 call_macro("beacon_lookup", id: "adb")
@@ -115,7 +116,7 @@ set_array("type[]", "AuthorityResource", "Person", "DifferentiatedPerson")
 # Name ist aber Kombination aus Geburtsdaten und Name e.g. "f1na": "Marquard, Udo / 1959-"
 # Daher müss alles hinter dem Namen ab dem Leerzeichen gelöscht werden
 
-copy_field("f1na", "preferredName")
+call_macro("move_here", field: "preferredName")
 replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
 replace_all("preferredName","¬","")
 trim("preferredName")
@@ -175,8 +176,8 @@ move_field("_temp", "professionOrOccupation[]")
 # Kommentar Doku: Wenn kein Geburtsdatum und kein Todesdatum ermittelbar ist, kann hier ein Zeitraum eingetragen werden
 # TODO kein Beispiel in Testdaten
 set_array("periodOfActivity[]")
-replace_all("f1wz", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
-copy_field("f1wz", "periodOfActivity[].$append")
+replace_all("periodOfActivity", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
+copy_field("periodOfActivity", "periodOfActivity[].$append")
 
 # -------
 # #1no (Wirkungsort (m, R))-> placeOfActivity
@@ -205,21 +206,21 @@ move_field("_temp", "placeOfActivity[]")
 # #1np (Geburtsdatum) -> dateOfBirth
 # Kommentar Doku: mit Punkten und führenden Nullen: 04.05.1950; für Jahrestagsanzeige: die erste 4stellige Zahl im Feld wird als Jahr aufgefasst, dh auch "März 1908" ist möglich; Jahre mit „um“, „vor“, „nach“ und „zwischen“ werden nicht als Jubiläumsjahr aufgefasst.
 set_array("dateOfBirth[]")
-replace_all("f1np", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
-copy_field("f1np", "dateOfBirth[].$append")
+replace_all("dateOfBirth", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
+copy_field("dateOfBirth", "dateOfBirth[].$append")
 
 # -------
 # #1nq (Geburtsort (R)) -> placeOfBirth
 # Kommentar Doku: Bei Orten aus RLP: ID-Nr. aus Register 2, sonst Klartext gem. GND 
 
 set_array("placeOfBirth[]")
-if any_match("f1nq", "^http.+")
-  copy_field("f1nq", "placeOfBirth[].$append.label")
-  copy_field("f1nq", "placeOfBirth[].$last.id")
+if any_match("placeOfBirth", "^http.+")
+  copy_field("placeOfBirth", "placeOfBirth[].$append.label")
+  copy_field("placeOfBirth", "placeOfBirth[].$last.id")
   lookup("placeOfBirth[].$last.label", "spatial_map")
 else
-  copy_field("f1nq", "placeOfBirth[].$append.label")
-  copy_field("f1nq", "placeOfBirth[].$last.id")
+  copy_field("placeOfBirth", "placeOfBirth[].$append.label")
+  copy_field("placeOfBirth", "placeOfBirth[].$last.id")
 end 
 
 # -------
@@ -227,21 +228,21 @@ end
 ## Kommentar Doku: s. #1np
 
 set_array("dateOfDeath[]")
-replace_all("f1nr", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
-copy_field("f1nr", "dateOfDeath[].$append")
+replace_all("dateOfDeath", "(\\d{2})\\.(\\d{2})\\.(\\d{4})", "$3-$2-$1")
+copy_field("dateOfDeath", "dateOfDeath[].$append")
 
 # -------
 # #1ns (Sterbeort (R)) -> placeOfDeath
 # Kommentar Doku: s. #1nq
 
 set_array("placeOfDeath[]")
-if any_match("f1ns", "^http.+")
-  copy_field("f1ns", "placeOfDeath[].$append.label")
-  copy_field("f1ns", "placeOfDeath[].$last.id")
+if any_match("placeOfDeath", "^http.+")
+  copy_field("placeOfDeath", "placeOfDeath[].$append.label")
+  copy_field("placeOfDeath", "placeOfDeath[].$last.id")
   lookup("placeOfDeath[].$last.label", "spatial_map")
 else
-  copy_field("f1ns", "placeOfDeath[].$append.label")
-  copy_field("f1ns", "placeOfDeath[].$last.id")
+  copy_field("placeOfDeath", "placeOfDeath[].$append.label")
+  copy_field("placeOfDeath", "placeOfDeath[].$last.id")
 end 
 
 # -------
@@ -276,10 +277,10 @@ move_field("_temp", "publication[]")
 # #1nv	(Geschlecht) -> 	gender	
 
 set_array("gender[]")
-if any_equal("f1nv", "männlich")
+if any_equal("gender", "männlich")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#male")
   set_field("gender[].$last.label", "Männlich")
-elsif any_equal("f1nv", "weiblich")
+elsif any_equal("gender", "weiblich")
   set_field("gender[].$append.id", "https://d-nb.info/standards/vocab/gnd/gender#female")
   set_field("gender[].$last.label", "Weiblich")
 else
@@ -317,9 +318,9 @@ move_field("_temp", "gndSubjectCategory[]")
 #1ny	(Datum der letzten inhaltlichen Änderung) ->	describedBy.dateModified	
 # Kommentar Doku:  JJJJMMTT, z.B. 20120928 für 28.09.2012
 
-if any_match("f1ny", "(\\d{4})(\\d{2})(\\d{2})")
-  replace_all("f1ny", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
-  copy_field("f1ny", "describedBy.dateModified")
+if any_match("dateModified", "(\\d{4})(\\d{2})(\\d{2})")
+  replace_all("dateModified", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
+  copy_field("dateModified", "describedBy.dateModified")
 end
 
 # -------

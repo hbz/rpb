@@ -18,7 +18,7 @@ sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PA
 sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-fachgebiete.ndjson PATH=fachgebiete HOST=$HOST API_TOKEN=$API_TOKEN"
 
 # Personen
-# curl --request DELETE "http://$HOST:1337/api/rppds/[1-5]"
+# curl --request DELETE "http://$HOST:1337/api/persons/[1-5]"
 sbt "runMain rpb.ETL conf/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio.txt OUT_FILE=output-rppd-strapi.ndjson"
 sbt "runMain rpb.ETL conf/rppd-import.flux IN_FILE=output-rppd-strapi.ndjson HOST=$HOST API_TOKEN=$API_TOKEN"
 

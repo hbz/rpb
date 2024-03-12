@@ -8,7 +8,7 @@ FLUX_DIR + "output/test-output-strapi.json"
 unless " + PICK + "
   reject()
 end
-prepend(f00_, 'http://rpb-cms-test.lobid.org/api/" + PATH + "?populate=*&filters[f00_][$eq]=')
+prepend(f00_, 'https://rpb-cms-test.lobid.org/api/" + PATH + "?populate=*&filters[f00_][$eq]=')
 retain(f00_)
 ")
 | literal-to-object

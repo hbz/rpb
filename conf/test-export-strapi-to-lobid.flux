@@ -1,4 +1,4 @@
-"http://rpb-cms-test.lobid.org/api/articles?populate=*&pagination[pageSize]=5"
+"https://rpb-cms-test.lobid.org/api/articles?populate=*&pagination[pageSize]=5"
 | open-http
 | as-records
 | decode-json(recordPath="data.[*].attributes")

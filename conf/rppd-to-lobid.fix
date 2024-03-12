@@ -60,7 +60,7 @@ do once("map")
 end
 
 # Kommentar Doku: #14 "x" eintragen, falls der Datensatz nicht im Webopac erscheinen soll, z.B. noch nicht aufgearbeitete ps-Sätze
-if exists("doNotIndex")
+if all_equal("doNotIndex", "true")
   reject()
 end
 
@@ -318,10 +318,12 @@ move_field("_temp", "gndSubjectCategory[]")
 #1ny	(Datum der letzten inhaltlichen Änderung) ->	describedBy.dateModified	
 # Kommentar Doku:  JJJJMMTT, z.B. 20120928 für 28.09.2012
 
-if any_match("dateModified", "(\\d{4})(\\d{2})(\\d{2})")
-  replace_all("dateModified", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
-  copy_field("dateModified", "describedBy.dateModified")
-end
+# Strapi: 2024-03-12T10:05:45.841Z -> 2024-03-12
+substring("updatedAt", "0", "10")
+move_field("updatedAt", "dateModified")
+# Allegro: "20240312" -> 2024-03-12
+replace_all("dateModified", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
+copy_field("dateModified", "describedBy.dateModified")
 
 # -------
 #1z1	(1. biogr. Anmerkung) ->	biographicalOrHistoricalInformation

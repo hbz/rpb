@@ -30,7 +30,7 @@ The overall RPB system consists of 4 applications: RPB & BiblioVino (Java/Play, 
 | RPB | https://rpb.lbz-rlp.de<br/> http://www.rpb-rlp.de/ | https://rpb.lobid.org | http://test.rpb.lobid.org |
 | BiblioVino |  https://wein.lbz-rlp.de/<br/> http://weinbibliographie.de/ | https://wein.lobid.org | http://test.wein.lobid.org |
 | RPPD | http://www.rppd-rlp.de/ | https://rppd.lobid.org | http://test.rppd.lobid.org |
-| Strapi | -- | https://rpb-cms.lobid.org/admin<br/>https://rpb-cms.lobid.org/api/persons?populate=* | https://rpb-cms-test.lobid.org/admin<br/> https://rpb-cms-test.lobid.org/api/persons?populate=* |
+| Strapi | -- | https://rpb-cms.lobid.org/admin<br/>[https://rpb-cms.lobid.org/api/persons?populate=*](https://rpb-cms.lobid.org/api/persons?populate=*) | https://rpb-cms-test.lobid.org/admin<br/> [https://rpb-cms-test.lobid.org/api/persons?populate=*](https://rpb-cms-test.lobid.org/api/persons?populate=*) |
 
 For details on our setup see https://dienst-wiki.hbz-nrw.de/display/SEM/RPB (internal).
 

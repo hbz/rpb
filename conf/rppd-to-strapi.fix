@@ -78,6 +78,9 @@ call_macro("add_bio", field: "f1ä?")
 call_macro("add_bio", field: "f1ö?")
 call_macro("add_bio", field: "f1ß?")
 
+# Allegro: "20240312" -> 2024-03-12
+replace_all("dateModified", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
+
 # gndIdentifier ist 'required' und 'unique'
 if all_match("gndIdentifier", "Familienmitglied|Keine GND-Ansetzung")
   paste("gndIdentifier", "~Keine GND-Ansetzung für", "rppdId")

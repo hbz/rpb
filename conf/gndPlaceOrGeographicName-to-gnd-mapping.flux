@@ -4,5 +4,5 @@
 | decode-json
 | fix("retain(id, preferredName)")
 | encode-csv(includeheader="true", noquotes="true",separator="\t")
-| write(FLUX_DIR + "maps/gndGeograpicName.tsv")
+| write(FLUX_DIR + "maps/gndGeographicName.tsv")
 ;

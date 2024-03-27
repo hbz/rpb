@@ -1,5 +1,5 @@
 "http://lobid.org/gnd/search?q=type%3APlaceOrGeographicName+AND+NOT+type%3ABuildingOrMemorial+AND+NOT+type%3AWayBorderOrLine&format=jsonl"
-| open-http(acceptencoding="gzip")
+| open-http
 | as-lines
 | decode-json
 | fix("retain(id, preferredName)")

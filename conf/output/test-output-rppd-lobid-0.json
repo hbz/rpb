@@ -20,7 +20,7 @@
   "dateOfBirth" : [ "1965" ],
   "placeOfBirth" : [ {
     "label" : "Regensburg",
-    "id" : "Regensburg"
+    "id" : "https://d-nb.info/gnd/4048989-9"
   } ],
   "gender" : [ {
     "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",

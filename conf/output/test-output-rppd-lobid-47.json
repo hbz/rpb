@@ -1,6 +1,6 @@
 {
   "@context" : "http://lobid.org/gnd/context.jsonld",
-  "id" : "https://d-nb.info/gnd/https://rppd.lobid.org/75fae589-07c0-4777-9362-91d1df4657f0",
+  "id" : "https://rppd.lobid.org/75fae589-07c0-4777-9362-91d1df4657f0",
   "rppdId" : "75fae589-07c0-4777-9362-91d1df4657f0",
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
   "preferredName" : "Heinz, Klaus-Martin",

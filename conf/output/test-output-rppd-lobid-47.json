@@ -1,0 +1,41 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://rppd.lobid.org/75fae589-07c0-4777-9362-91d1df4657f0",
+  "rppdId" : "75fae589-07c0-4777-9362-91d1df4657f0",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Heinz, Klaus-Martin",
+  "professionOrOccupation" : [ {
+    "label" : "Musiklehrer",
+    "id" : "https://d-nb.info/gnd/4140880-9"
+  }, {
+    "label" : "Fagottist",
+    "id" : "https://d-nb.info/gnd/4738419-0"
+  } ],
+  "periodOfActivity" : [ "1988-1999" ],
+  "placeOfActivity" : [ {
+    "label" : "Trier, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  }, {
+    "label" : "Konz,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n23503068"
+  }, {
+    "label" : "Engers (Ortsbezirk)",
+    "id" : "https://rpb.lobid.org/spatial#n138000450200"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  }, {
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2024-03-26",
+    "source" : [ "http://rpb.lobid.org/929t240568", "https://kurse.miz.org/ausbildung-zum-musikmentor-fuer-blaeserensembles-k48865 (Stand:26.03.2024)." ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Schulmusikerzieher an Gymnasien in Trier und Konz; 1988 bis 1999 Gesamtleiter des Landesjugendorchesters Rheinland-Pfalz; im Anschluß Leiter der Landesmusikakademie Rheinland-Pfalz in Engers; wohnhaft am Bodensee." ]
+}

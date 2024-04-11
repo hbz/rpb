@@ -80,10 +80,12 @@ call_macro("move_here", field: "rppdId")
 #82b	(GND-ID (R)) ->	gndIdentifier	
 # Kommentar Doku:  ohne das vorangestellte Präfix (DE-588)
 
-call_macro("move_here", field: "gndIdentifier")
-unless all_contain("gndIdentifier", "Keine GND-Ansetzung")
-  copy_field("gndIdentifier","id")
-  prepend("id","https://d-nb.info/gnd/")
+if exists("gndIdentifier")
+  call_macro("move_here", field: "gndIdentifier")
+  unless all_contain("gndIdentifier", "Keine GND-Ansetzung")
+    copy_field("gndIdentifier","id")
+    prepend("id","https://d-nb.info/gnd/")
+  end
 end
 
 set_array("sameAs[]")

@@ -54,10 +54,10 @@
     "id" : "Köln"
   } ],
   "relatedPerson" : [ {
-    "label" : "Meister, Ernst",
+    "label" : "1051179556",
     "id" : "https://d-nb.info/gnd/1051179556"
   }, {
-    "label" : "Meister, Nikolaus",
+    "label" : "1051179564",
     "id" : "https://d-nb.info/gnd/1051179564"
   } ],
   "publication" : [ "Ausstellungskatalog und Werkverzeichnis 1796-1844. Koblenz, Mittelrhein-Museum 1994" ],

@@ -27,7 +27,7 @@ do once("map")
 
   # maps für lookup relatedPerson
   put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"1",value_column:"2", sep_char: "\t", expected_columns:"-1")
-  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdLabel",key_column:"0",value_column:"2", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdLabel",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
 
   # maps für depiction
   put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_thumbnail", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"4")

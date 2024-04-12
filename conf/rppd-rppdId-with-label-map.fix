@@ -2,9 +2,9 @@ unless any_contain("gndIdentifier", "Keine")
 	reject()
 end
 
-copy_field("rppdId", "rppdUri")
-prepend("rppdUri", "https://rppd.lobid.org/")
+copy_field("rppdId", "uri")
+prepend("uri", "https://rppd.lobid.org/")
 replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
 trim("preferredName")
 
-retain("rppdId", "rppdUri", "preferredName")
+retain("rppdId", "preferredName", "uri")

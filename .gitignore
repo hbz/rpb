@@ -22,4 +22,5 @@ RPB-Export_HBZ_SWN.txt
 RPB-Export_HBZ_Syst.txt
 RPB-Export_HBZ_ZSS.txt
 conf/RPBEXP/*.ZIP
+conf/strapi-export.tar.gz
 nohup.out*

@@ -2,9 +2,7 @@ if any_contain("gndIdentifier", "Keine")
 	reject()
 end
 
-copy_field("gndIdentifier", "uri")
-prepend("uri", "https://d-nb.info/gnd/")
 replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
 trim("preferredName")
 
-retain("rppdId", "preferredName", "uri")
+retain("gndIdentifier", "preferredName")

@@ -26,8 +26,8 @@ do once("map")
   put_filemap("conf/maps/gndGeographicName.tsv", "gnd_spatial_map", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"2")
 
   # maps für lookup relatedPerson
-  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_preferredName",key_column:"2",value_column:"1", sep_char: "\t", expected_columns:"-1")
-  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdLabel",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/gndId-to-label.tsv", "gnd_to_label",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/rppdId-to-label.tsv", "rppd_to_label",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
 
   # maps für depiction
   put_filemap("conf/maps/gndId-to-depiction.tsv", "gnd_to_thumbnail", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"4")
@@ -262,9 +262,9 @@ do list(path:"relatedPerson[]", "var": "$i")
   copy_field("$i.value", "_temp.$append.label")
   copy_field("$i.value", "_temp.$last.id")
   if any_match("_temp.$last.label", "^http.+")
-    lookup("_temp.$last.label", "map_rel_preferredName")
     replace_all("_temp.$last.label", "^http.+/([p\\d].+)", "$1")
-    lookup("_temp.$last.label", "map_rel_rppdLabel")
+    lookup("_temp.$last.label", "gnd_to_label")
+    lookup("_temp.$last.label", "rppd_to_label")
   end
   replace_all("_temp.$last.label","¬","")
 end

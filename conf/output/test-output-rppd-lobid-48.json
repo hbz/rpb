@@ -1,0 +1,54 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/121384462",
+  "rppdId" : "5b0420ef-0fd9-410d-ad1c-777c93323b35",
+  "gndIdentifier" : "121384462",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/121384462",
+    "collection" : {
+      "name" : "Deutschsprachige Wikipedia"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Deffès,Louis Pierre",
+  "variantName" : [ "Deffès,Louis / 1819-1900 " ],
+  "professionOrOccupation" : [ {
+    "label" : "Komponist",
+    "id" : "https://d-nb.info/gnd/4032009-1"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Bad Ems, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14110006"
+  } ],
+  "dateOfBirth" : [ "1819-07-25" ],
+  "placeOfBirth" : [ {
+    "label" : "Toulouse",
+    "id" : "https://d-nb.info/gnd/4060518-8"
+  } ],
+  "dateOfDeath" : [ "1900-05-28" ],
+  "placeOfDeath" : [ {
+    "label" : "Toulouse",
+    "id" : "https://d-nb.info/gnd/4060518-8"
+  } ],
+  "relatedPerson" : [ {
+    "label" : "105178932X",
+    "id" : "https://d-nb.info/gnd/105178932X"
+  }, {
+    "label" : "Offenbach, Jacques",
+    "id" : "http://rppd.lobid.org/118589598"
+  } ],
+  "publication" : [ "http://lobid.org/resources/99372430407606441#!" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2024-04-10",
+    "source" : [ "http://rpb.lobid.org/929t240793" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Französischer Komponist; gewann 1847 für seine Kantate \"L' Ange et Tobie\" den Rompreis,die höchste Aufzeichnung für einen Musikstudenten in Frankreich,die mit einem zweijährigen Stipendium an der Villa de Medici in Rom honoriert wurde; fünf seiner musikalischen Einakter erlebten zwischen 1861 und 1867 ihre Premiere im Bad Emser Kursaal; eine Erklärung für die Wahl von Ems bieten eventuell Kontakte Deffès zu Offenbachs Bouffes-Parisiens oder zu dem ebenfalls aus Südfrankreich stammenden Spielbankpächter Briguiboul." ]
+}

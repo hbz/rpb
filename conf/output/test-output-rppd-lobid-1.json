@@ -11,7 +11,7 @@
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/11855476X",
     "collection" : {
-      "name" : "Deutschsprachige Wikipedia"
+      "name" : "Wikipedia-Personenartikel"
     }
   }, {
     "id" : "https://www.lagis-hessen.de/pnd/11855476X",
@@ -21,7 +21,7 @@
   }, {
     "id" : "https://www.deutsche-biographie.de/pnd11855476X.html#ndbcontent",
     "collection" : {
-      "name" : "Historische Kommission bei der Bayerischen Akademie der Wissenschaften und Bayerische Staatsbibliothek"
+      "name" : "Biographien der NDB"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

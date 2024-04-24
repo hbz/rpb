@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -u
 
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://persondata.toolforge.org/beacon/dewiki.txt OUT=conf/maps/beacons/gndId-to-dewiki.tsv"
 sbt "runMain rpb.ETL conf/rppd-beacon-to-tsv.flux IN=https://www.historische-kommission-muenchen-editionen.de/beacon_adb.txt OUT=conf/maps/beacons/gndId-to-adb.tsv"

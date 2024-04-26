@@ -10,6 +10,7 @@ do put_macro("beacon_lookup")
     move_field("_temp", "sameAs[].$append.id")
     copy_field("gndIdentifier", "_temp")
     lookup("_temp", "beacon_$[id]_name", delete: "true")
+    replace_all('_temp', '\\"+', '\\"')
     move_field("_temp", "sameAs[].$last.collection.name")
   end
 end

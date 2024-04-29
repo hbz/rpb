@@ -10,7 +10,7 @@
 #   put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
 #     "rpbId2almaMmsId", "key_column": "1", "value_column": "0", "sep_char": "\t")
 # end
-# paste("inLobid", "f00_", "join_char": "")
+# paste("inLobid", "rpbId", "join_char": "")
 # lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
 # if exists("inLobid")
 #   reject()
@@ -56,6 +56,8 @@ do put_macro("contribution_to_uri")
     end
   end
 end
+
+move_field("f00_", "rpbId")
 
 call_macro("add_all", to: "24", from: "24?") # Paralleltitel
 call_macro("add_all", to: "27", from: "27?") # Abweichende Titel
@@ -197,7 +199,7 @@ call_macro("contribution_to_uri", field: "60")
 if exists("f18_")
   set_field("f18_", "RPB und BiblioVino")
 else
-  if all_contain("f00_", "w")
+  if all_contain("rpbId", "w")
     set_field("f18_", "nur BiblioVino")
   else
     set_field("f18_", "nur RPB")

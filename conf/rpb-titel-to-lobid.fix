@@ -8,13 +8,18 @@ do once("map")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
 end
 
+do put_macro("move_here")
+  move_field("$[field]", "_temp")
+  move_field("_temp", "$[field]")
+end
+
 # ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
 
 # ------- Set internal _id -------
 
-copy_field("f00_", "_id")
+copy_field("rpbId", "_id")
 
 # ------- Set "type" -------
 
@@ -43,7 +48,7 @@ end
 
 # ------- rpbId -------
 
-copy_field("_id", "rpbId")
+call_macro("move_here", field: "rpbId")
 
 # ------- "id", using https URIs -------
 

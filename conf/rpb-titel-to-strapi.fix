@@ -67,6 +67,7 @@ end
 move_field("f00_", "rpbId")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f20_", "title")
+move_field("f77_", "extent")
 
 call_macro("add_all", to: "24", from: "24?") # Paralleltitel
 call_macro("add_all", to: "27", from: "27?") # Abweichende Titel

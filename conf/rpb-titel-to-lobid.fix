@@ -94,7 +94,7 @@ replace_all("title", "\\s\\+", "")
 
 # ------- "extent" -------
 
-move_field("f77_", "extent")
+call_macro("move_here", field: "extent")
 
 # ------- "note" -------
 

@@ -13,6 +13,10 @@ do put_macro("move_here")
   move_field("_temp", "$[field]")
 end
 
+if all_equal("doNotIndex", "true")
+  reject()
+end
+
 # ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")

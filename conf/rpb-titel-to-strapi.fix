@@ -57,7 +57,15 @@ do put_macro("contribution_to_uri")
   end
 end
 
+do put_macro("to_bool")
+  if exists("$[from]")
+    move_field("$[from]","$[to]~")
+    set_field("$[to]~", "true")
+  end
+end
+
 move_field("f00_", "rpbId")
+call_macro("to_bool", from: "f14_", to: "doNotIndex")
 
 call_macro("add_all", to: "24", from: "24?") # Paralleltitel
 call_macro("add_all", to: "27", from: "27?") # Abweichende Titel

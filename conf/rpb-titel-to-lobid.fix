@@ -85,10 +85,9 @@ unless all_equal("f18_", "nur RPB")
 end
 
 # ------- "title" field -------
-if is_string("f20_")
-  copy_field("f20_", "title")
-elsif is_array("f20_")
-  copy_field("f20_.$last", "title")
+call_macro("move_here", field: "title")
+if is_array("title")
+  copy_field("title.$last", "title")
 end
 replace_all("title","¬","")
 replace_all("title", "\\s\\+", "")

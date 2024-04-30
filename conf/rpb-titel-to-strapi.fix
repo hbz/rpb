@@ -123,6 +123,7 @@ unless exists("f39_")
   move_field("f39x", "f39_") # 39x ist nicht Teil der Planung Eingabeformulare, verschwindet sonst
   prepend("f39_", "Aus f39x: ")
 end
+move_field("f39_", "responsibilityStatement")
 
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
 if all_equal("f36_", "u")

@@ -124,8 +124,7 @@ end
 # -------- "responsibilityStatement" --------
 # f39_ ist nach Quelldatendoku die "Verfasserangabe (Vorlageform)"
 
-set_array("responsibilityStatement")
-move_field("f39_", "responsibilityStatement[]")
+move_field("responsibilityStatement", "responsibilityStatement[]")
 
 # ------- "language" -------
 # Dafür scheint es keine explizite Angabe zu geben.

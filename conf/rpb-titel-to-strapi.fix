@@ -74,6 +74,8 @@ move_field("f70h", "issue")
 move_field("f70j", "year")
 move_field("f70s", "pages")
 move_field("f70z", "alternativeNumbering")
+move_field("f76a", "publicationDate")
+move_field("f76b", "publicationYear")
 move_field("f77_", "extent")
 
 call_macro("add_all", to: "24", from: "24?") # Paralleltitel
@@ -113,17 +115,17 @@ call_macro("add_all", to: "70", from: "70[_123456789]") # Quelle
 
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
 if all_equal("f36_", "sbd")
-  call_macro("ref_f01_unless_exists", field: "f76a")
-  call_macro("ref_f01_unless_exists", field: "f76b")
+  call_macro("ref_f01_unless_exists", field: "publicationDate")
+  call_macro("ref_f01_unless_exists", field: "publicationYear")
 end
 
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht bei allen selbständigen Werken (Einheitsmaske):
 if all_match("f36_", "s|sbd|sm")
-  unless exists("f76a")
-    add_field("f76a", "N/A")
+  unless exists("publicationDate")
+    add_field("publicationDate", "N/A")
   end
-  unless exists("f76b")
-    add_field("f76b", "N/A")
+  unless exists("publicationYear")
+    add_field("publicationYear", "N/A")
   end
 end
 

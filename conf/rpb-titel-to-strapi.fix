@@ -166,8 +166,8 @@ call_macro("add_all", to: "85", from: "85?") # Gesamttitel
 set_array("f90[]")
 
 call_macro("add_url", from: "f90e", type: "Volltext")
-call_macro("add_url", from: "f90f", type: "Inhaltstext")
-call_macro("add_url", from: "f90g", type: "Inhaltsverzeichnis")
+call_macro("add_url", from: "f90f", type: "Andere URL")
+call_macro("add_url", from: "f90g", type: "Andere URL")
 
 
 # Signatur

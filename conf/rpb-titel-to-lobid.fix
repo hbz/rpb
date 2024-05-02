@@ -332,7 +332,7 @@ replace_all("bibliographicCitation","¬","")
 
 # fulltextOnline and link to external description/ToC
 
-if any_match("f90[].*.n90", "Inhaltsverzeichnis|Inhaltstext")
+if any_match("f90[].*.n90", "Andere URL")
   set_array("description[]")
 end
 
@@ -343,13 +343,10 @@ do list(path:"f90[]", "var": "$i")
     copy_field("$i.f90_", "fulltextOnline[].$last.label")
     replace_all("fulltextOnline[].$last.label", "https://nbn-resolving.org/", "")
   
-  elsif all_equal("$i.n90", "Inhaltstext")
+  elsif all_equal("$i.n90", "Andere URL")
     copy_field("$i.f90_", "description[].$append.id")
     copy_field("$i.f90_", "description[].$last.label") 
-  
-  elsif all_equal("$i.n90", "Inhaltsverzeichnis")
-    copy_field("$i.f90_", "description[].$append.id")
-    copy_field("$i.f90_", "description[].$last.label")
+
   end
 end
 

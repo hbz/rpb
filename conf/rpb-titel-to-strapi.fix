@@ -69,6 +69,11 @@ call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f20_", "title")
 move_field("f21_", "preferredTitle")
 move_field("f28_", "alternativeSpelling")
+move_field("f70b", "volume")
+move_field("f70h", "issue")
+move_field("f70j", "year")
+move_field("f70s", "pages")
+move_field("f70z", "alternativeNumbering")
 move_field("f77_", "extent")
 
 call_macro("add_all", to: "24", from: "24?") # Paralleltitel
@@ -131,24 +136,24 @@ move_field("f39_", "responsibilityStatement")
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
 if all_equal("f36_", "u")
   unless exists("f70[].1")
-    add_field("f70[].$append.f70_", "s. spez. Felder f70b ff.")
+    add_field("f70[].$append.f70_", "s. spez. Felder (volume, issue, etc.)")
   end
 end
 
-# Seitenzahl in f70s ist Pflichtfeld für Artikel (f36_=u)
-unless exists("f70s")
+# Seitenzahl in pages ist Pflichtfeld für Artikel (f36_=u)
+unless exists("pages")
  if all_equal("f36_", "u")
   if exists("f70_")
-    copy_field("f70_", "f70s")
-    prepend("f70s", "Kopiert aus f70_: ")
+    copy_field("f70_", "pages")
+    prepend("pages", "Kopiert aus f70_: ")
     put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
     if all_match("f70_", "$[pages]")
       if is_string("f70_")
-        replace_all("f70s", "$[pages]", "Aus f70_: $1")
+        replace_all("pages", "$[pages]", "Aus f70_: $1")
       end
     end
   else
-    add_field("f70s", "N/A")
+    add_field("pages", "N/A")
   end
  end
 end

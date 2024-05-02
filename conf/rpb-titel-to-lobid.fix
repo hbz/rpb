@@ -301,7 +301,7 @@ call_macro("contributions", from: "60")
 
 if exists ("f70t")
   do list(path:"f70*", "var": "$i")
-    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "f70b", "~ (", "f70j", "~), ", "f70h", " ", "f70z", "~, Seite ", "f70s", "~. -" join_char: "")
+    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "volume", "~ (", "year", "~), ", "issue", " ", "alternativeNumbering", "~, Seite ", "pages", "~. -" join_char: "")
     replace_all("bibliographicCitation", "In: : ", "In: ")
     replace_all("bibliographicCitation", ", Seite . -$", "")
     replace_all("bibliographicCitation", "  ", " ")

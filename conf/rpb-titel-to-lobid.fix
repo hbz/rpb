@@ -71,13 +71,13 @@ replace_all("schoeneNummer", "\\.", "")
 # ------- "inCollection" -------
 
 set_array("inCollection[]")
-unless all_equal("f18_", "nur BiblioVino")
+unless all_equal("inCollection", "nur BiblioVino")
   set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013494180#!")
   set_array("inCollection[].$last.type[]")
   add_field("inCollection[].$last.type[].$append", "Collection")
   add_field("inCollection[].$last.label", "Rheinland-Pfälzische Bibliographie")
 end
-unless all_equal("f18_", "nur RPB")
+unless all_equal("inCollection", "nur RPB")
   set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013678171#!")
   set_array("inCollection[].$last.type[]")
   add_field("inCollection[].$last.type[].$append", "Collection")

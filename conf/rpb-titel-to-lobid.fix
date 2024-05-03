@@ -272,15 +272,15 @@ put_map("uri-to-role",
 
 do put_macro("contributions")
   set_array("_temp")
-  copy_field("f$[from][].*.f$[from]_", "_temp.$append.agent.id")
-  do list_as(f: "f$[from][]", c: "_temp")
+  copy_field("$[from][].*.$[valueField]", "_temp.$append.agent.id")
+  do list_as(f: "$[from][]", c: "_temp")
     copy_field("c.agent.id", "c.agent.label")
     set_array("c.agent.type[]", "Person")
     replace_all("c.agent.label","^http.+[/#](.+)$","$1")
     replace_all("c.agent.label","^(\\d+)-(\\d+)$","$1n$2")
     lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-    copy_field("f.n$[from]a", "c.role.id")
-    copy_field("f.n$[from]a", "c.role.label")
+    copy_field("f.type", "c.role.id")
+    copy_field("f.type", "c.role.label")
     lookup("c.role.label", "uri-to-role")
     lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
     if all_match("c.role.label","NE hrsg. Körperschaft|Gefeierte Körperschaft|HE Urheber")
@@ -293,8 +293,8 @@ end
 
 set_array("contribution[]")
 
-call_macro("contributions", from: "40")
-call_macro("contributions", from: "60")
+call_macro("contributions", from: "person", valueField: "value")
+call_macro("contributions", from: "f60", valueField: "f60_")
 
 # ------- bibliographicCitation -------
 # Siehe https://jira.hbz-nrw.de/browse/RPB-26

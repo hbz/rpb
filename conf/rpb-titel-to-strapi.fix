@@ -47,12 +47,12 @@ end
 
 do put_macro("contribution_to_uri")
   do list (path:"$[field][]", "var": "$i")
-    replace_all("$i.$[valueField]","_(.*)_","$1")
-    if all_match("$i.$[valueField]","^00.*|^107n.*|^929n.*")
-      prepend("$i.$[valueField]", "https://rpb.lobid.org/agent/")
-    elsif all_match("$i.$[valueField]","^\\d.*")
-      replace_all("$i.$[valueField]", "(^\\d*)n(\\d)", "$1-$2")
-      prepend("$i.$[valueField]", "https://d-nb.info/gnd/")
+    replace_all("$i.value","_(.*)_","$1")
+    if all_match("$i.value","^00.*|^107n.*|^929n.*")
+      prepend("$i.value", "https://rpb.lobid.org/agent/")
+    elsif all_match("$i.value","^\\d.*")
+      replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
+      prepend("$i.value", "https://d-nb.info/gnd/")
     end
   end
 end
@@ -206,7 +206,7 @@ call_macro("add", to: "person", from: "f57?", type: "http://id.loc.gov/vocabular
 call_macro("add", to: "person", from: "f58?", type: "http://id.loc.gov/vocabulary/relators/act", valueField: "value")
 call_macro("add", to: "person", from: "f59?", type: "http://id.loc.gov/vocabulary/relators/hnr", valueField: "value")
 
-call_macro("contribution_to_uri", field: "person", valueField: "value")
+call_macro("contribution_to_uri", field: "person")
 
 # Körperschaft
 set_array("corporateBody[]")
@@ -215,7 +215,7 @@ call_macro("add", to: "corporateBody", from: "f60?", type: "http://id.loc.gov/vo
 call_macro("add", to: "corporateBody", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb", valueField: "value")
 call_macro("add", to: "corporateBody", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr", valueField: "value")
 
-call_macro("contribution_to_uri", field: "corporateBody", valueField: "value")
+call_macro("contribution_to_uri", field: "corporateBody")
 
 if exists("inCollection")
   set_field("inCollection", "RPB und BiblioVino")

@@ -272,7 +272,7 @@ put_map("uri-to-role",
 
 do put_macro("contributions")
   set_array("_temp")
-  copy_field("$[from][].*.$[valueField]", "_temp.$append.agent.id")
+  copy_field("$[from][].*.value", "_temp.$append.agent.id")
   do list_as(f: "$[from][]", c: "_temp")
     copy_field("c.agent.id", "c.agent.label")
     set_array("c.agent.type[]", "Person")
@@ -293,8 +293,8 @@ end
 
 set_array("contribution[]")
 
-call_macro("contributions", from: "person", valueField: "value")
-call_macro("contributions", from: "corporateBody", valueField: "value")
+call_macro("contributions", from: "person")
+call_macro("contributions", from: "corporateBody")
 
 # ------- bibliographicCitation -------
 # Siehe https://jira.hbz-nrw.de/browse/RPB-26

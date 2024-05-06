@@ -294,7 +294,7 @@ end
 set_array("contribution[]")
 
 call_macro("contributions", from: "person", valueField: "value")
-call_macro("contributions", from: "f60", valueField: "f60_")
+call_macro("contributions", from: "corporateBody", valueField: "value")
 
 # ------- bibliographicCitation -------
 # Siehe https://jira.hbz-nrw.de/browse/RPB-26

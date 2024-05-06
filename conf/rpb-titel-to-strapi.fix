@@ -209,13 +209,13 @@ call_macro("add", to: "person", from: "f59?", type: "http://id.loc.gov/vocabular
 call_macro("contribution_to_uri", field: "person", valueField: "value")
 
 # Körperschaft
-set_array("f60[]")
+set_array("corporateBody[]")
 
-call_macro("add", to: "f60", from: "f60?", type: "http://id.loc.gov/vocabulary/relators/org", valueField: "f60_")
-call_macro("add", to: "f60", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb", valueField: "f60_")
-call_macro("add", to: "f60", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr", valueField: "f60_")
+call_macro("add", to: "corporateBody", from: "f60?", type: "http://id.loc.gov/vocabulary/relators/org", valueField: "value")
+call_macro("add", to: "corporateBody", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb", valueField: "value")
+call_macro("add", to: "corporateBody", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr", valueField: "value")
 
-call_macro("contribution_to_uri", field: "f60", valueField: "f60_")
+call_macro("contribution_to_uri", field: "corporateBody", valueField: "value")
 
 if exists("inCollection")
   set_field("inCollection", "RPB und BiblioVino")

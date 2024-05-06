@@ -105,19 +105,19 @@ end
 move_field("temp", "note[]")
 uniq("note[]")
 
-#-------- "series" -------
-if exists("f85?")
-  set_array("isPartOf[]")
-  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
-  set_array("isPartOf[].$last.hasSuperordinate[]")
-  if exists("f85_")
-    split_field("f85_"," ; ")
-    copy_field("f85_.1","isPartOf[].$last.hasSuperordinate[].$append.label")
-    copy_field("f85_.2", "isPartOf[].$last.numbering")
-  else
-    copy_field("f85?","isPartOf[].$last.hasSuperordinate[].$append.label")
+#-------- "isPartOf" -------
+if exists("isPartOf[]")
+  unless any_equal("f36_", "Band") # also sets isPartOf
+    set_array("temp")
+    set_array("temp.$append.type[]", "IsPartOfRelation")
+    set_array("temp.$last.hasSuperordinate[]")
+    split_field("isPartOf[].1.value", " ; ")
+    copy_field("isPartOf[].1.value.1", "temp.$last.hasSuperordinate[].$append.label")
+    copy_field("isPartOf[].1.value.2", "temp.$last.numbering")
+    move_field("temp", "isPartOf[]")
   end
 end
+
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 

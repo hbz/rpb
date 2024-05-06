@@ -27,7 +27,7 @@ end
 
 do put_macro("add_all")
   set_array("$[to][]")
-  call_macro("add", to: "$[to]", from: "$[from]", type: "", valueField: "$[to]_")
+  call_macro("add", to: "$[to]", from: "$[from]", type: "", valueField: "$[valueField]")
 end
 
 do put_macro("add_url")
@@ -69,6 +69,8 @@ call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f18_", "inCollection")
 move_field("f20_", "title")
 move_field("f21_", "preferredTitle")
+call_macro("add_all", from: "f24?", to: "parallelTitle", valueField: "value")
+call_macro("add_all", from: "f27?", to: "alternativeTitle", valueField: "value")
 move_field("f28_", "alternativeSpelling")
 move_field("f70b", "volume")
 move_field("f70h", "issue")
@@ -79,13 +81,11 @@ move_field("f76a", "publicationDate")
 move_field("f76b", "publicationYear")
 move_field("f77_", "extent")
 
-call_macro("add_all", to: "f24", from: "f24?") # Paralleltitel
-call_macro("add_all", to: "f27", from: "f27?") # Abweichende Titel
 
-call_macro("add_all", to: "f30", from: "f30?") # Sachnotation
+call_macro("add_all", to: "f30", from: "f30?", valueField: "f30_") # Sachnotation
 replace_all("f30[].*.f30_","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
 
-call_macro("add_all", to: "f31", from: "f31?") # Ortsnotation
+call_macro("add_all", to: "f31", from: "f31?", valueField: "f31_") # Ortsnotation
 do list (path:"f31[]", "var": "$i")
   if any_match("$i.f31_", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
     replace_all("$i.f31_","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
@@ -96,7 +96,7 @@ do list (path:"f31[]", "var": "$i")
   end
 end
 
-call_macro("add_all", to: "f32", from: "f32?") # Schlagwortkette
+call_macro("add_all", to: "f32", from: "f32?", valueField: "f32_") # Schlagwortkette
 do list (path:"f32[]", "var": "$i")
   split_field("$i.f32_", " ; ")
   set_array("$i.f32_[]")
@@ -112,7 +112,7 @@ do list (path:"f32[].*.f32_[]", "var": "$i")
   end
 end
 
-call_macro("add_all", to: "f70", from: "f70[_123456789]") # Quelle
+call_macro("add_all", to: "f70", from: "f70[_123456789]", valueField: "f70_") # Quelle
 
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
 if all_equal("f36_", "sbd")
@@ -168,8 +168,8 @@ if is_array("f36_")
 end
 lookup("f36_", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
 
-call_macro("add_all", to: "f81", from: "f81?") # Anmerkungen
-call_macro("add_all", to: "f85", from: "f85?") # Gesamttitel
+call_macro("add_all", to: "f81", from: "f81?", valueField: "f81_") # Anmerkungen
+call_macro("add_all", to: "f85", from: "f85?", valueField: "f85_") # Gesamttitel
 
 # URL
 set_array("f90[]")

@@ -82,7 +82,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/[Sebapharma GmbH & Co. KG, Boppard]",
+      "id" : "[Sebapharma GmbH & Co. KG, Boppard]",
       "label" : "[Sebapharma GmbH & Co. KG, Boppard]",
       "type" : [ "CorporateBody" ]
     },

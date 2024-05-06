@@ -50,7 +50,7 @@ do put_macro("contribution_to_uri")
     replace_all("$i.$[valueField]","_(.*)_","$1")
     if all_match("$i.$[valueField]","^00.*|^107n.*|^929n.*")
       prepend("$i.$[valueField]", "https://rpb.lobid.org/agent/")
-    else
+    elsif all_match("$i.$[valueField]","^\\d.*")
       replace_all("$i.$[valueField]", "(^\\d*)n(\\d)", "$1-$2")
       prepend("$i.$[valueField]", "https://d-nb.info/gnd/")
     end

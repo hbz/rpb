@@ -69,7 +69,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/SC Wassenach 1957",
+      "id" : "SC Wassenach 1957",
       "label" : "SC Wassenach 1957",
       "type" : [ "CorporateBody" ]
     },

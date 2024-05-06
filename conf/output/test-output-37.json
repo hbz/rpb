@@ -65,7 +65,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/Südwestrundfunk",
+      "id" : "Südwestrundfunk",
       "label" : "Südwestrundfunk",
       "type" : [ "CorporateBody" ]
     },

@@ -98,10 +98,11 @@ call_macro("move_here", field: "extent")
 
 # ------- "note" -------
 
-set_array("note[]")
-do list(path:"f81[].*.f81_", "var": "$i")
-  copy_field("$i", "note[].$append")
+set_array("temp")
+do list(path:"note[].*.value", "var": "$i")
+  copy_field("$i", "temp.$append")
 end
+move_field("temp", "note[]")
 uniq("note[]")
 
 #-------- "series" -------

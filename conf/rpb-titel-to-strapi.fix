@@ -33,8 +33,8 @@ end
 do put_macro("add_url")
   if exists("$[from]")
     if all_match("$[from]", "(https?|ftp):\\/\\/(\\S+\\.)+\\S+(\\/\\S*)?|")
-      move_field("$[from]", "f90[].$append.f90_")
-      set_field("f90[].$last.n90", "$[type]")
+      move_field("$[from]", "url[].$append.value")
+      set_field("url[].$last.type", "$[type]")
     end
   end
 end
@@ -169,8 +169,7 @@ end
 lookup("f36_", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
 
 
-# URL
-set_array("f90[]")
+set_array("url[]")
 
 call_macro("add_url", from: "f90e", type: "Volltext")
 call_macro("add_url", from: "f90f", type: "Andere URL")

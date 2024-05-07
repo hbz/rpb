@@ -84,8 +84,8 @@ call_macro("add_all", from: "f81?", to: "note", valueField: "value")
 call_macro("add_all", from: "f85?", to: "isPartOf", valueField: "value")
 
 
-call_macro("add_all", to: "f30", from: "f30?", valueField: "f30_") # Sachnotation
-replace_all("f30[].*.f30_","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
+call_macro("add_all", from: "f30?", to: "subject", valueField: "value") # Sachnotation
+replace_all("subject[].*.value","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
 
 call_macro("add_all", to: "f31", from: "f31?", valueField: "f31_") # Ortsnotation
 do list (path:"f31[]", "var": "$i")

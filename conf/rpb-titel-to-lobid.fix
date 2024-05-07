@@ -156,14 +156,14 @@ end
 
 # -------RPB-Sachnotationen --------
 
-set_array("subject[]")
+set_array("temp_subject")
 
-if exists ("f30[]")
-  move_field("f30[].*.f30_", "subject[].$append.id")
-  uniq("subject[]")
-  copy_field("subject[].*.id", "subject[].$last.label")
-  lookup("subject[].*.label", "subject_map")
-  do list(path: "subject[]")
+if exists ("subject[]")
+  move_field("subject[].*.value", "temp_subject.$append.id")
+  uniq("temp_subject")
+  copy_field("temp_subject.*.id", "temp_subject.$last.label")
+  lookup("temp_subject.*.label", "subject_map")
+  do list(path: "temp_subject")
     # add_field("label", "Platzhalter Schlagwortlabel")
     set_array("type[]")
     add_field("type[].$append", "Concept")
@@ -171,6 +171,51 @@ if exists ("f30[]")
     add_field("source.label", "Systematik der Rheinland-Pfälzischen Bibliographie")
   end
 end
+
+# ------- GND-Schlagwörter -------
+# To Do:
+# 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
+# f32_ _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
+# 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
+# 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
+# "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
+# To Do: Die Transformation behandelt bisher GND-Ids (hier und in `spatial`) so, als würden sie allesamt einen Bindestrich enthalten, was ja nicht der Fall ist.
+
+set_array("@temp_subject")
+
+copy_field("f32[].*", "@temp_subject.$append")
+
+do list (path:"@temp_subject", "var": "$i")
+  set_array("temp_subject.$append.type[]","ComplexSubject")
+  set_array("temp_subject.$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
+  set_array("temp_subject.$last.componentList[]")
+  copy_field("$i.f32_[]", "temp_subject.$last.componentList[]")
+end
+
+do
+ list (path:"temp_subject.*.componentList[]", "var": "$i")
+  move_field("$i.f32_", "$i.id")
+  copy_field("$i.id", "$i.label")
+  replace_all("$i.label","^http.+[/#](.+)$","$1")
+  replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
+  lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+  if all_match("$i.id","^https://rpb.lobid.org/sw/.*$")
+    add_field("$i.source.id", "http://rpb.lobid.org/sw")
+    add_field("$i.source.label", "RPB-Sachsystematik")
+  else
+    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
+    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
+  end
+end
+
+# Generierung des pipe-separaierten Labels für eine gesamte Schlagwortfolge ("subject.label").
+
+do list (path:"temp_subject", "var": "$i")
+  copy_field("$i.*.componentList[].label", "$i.label.$append")
+  join_field("$i.label"," | ")
+end
+
+move_field("temp_subject", "subject[]")
 
 # ------- Ortsnotation -------
 
@@ -204,49 +249,6 @@ do list (path:"spatial[]", "var": "$i")
     add_field("$i.source.id", "https://rpb.lobid.org/spatial")
     add_field("$i.source.label", "RPB-Raumsystematik")
   end
-end
-
-# ------- GND-Schlagwörter -------
-# To Do:
-# 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
-# f32_ _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
-# 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
-# 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
-# "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
-# To Do: Die Transformation behandelt bisher GND-Ids (hier und in `spatial`) so, als würden sie allesamt einen Bindestrich enthalten, was ja nicht der Fall ist.
-
-set_array("@subject[]")
-
-copy_field("f32[].*", "@subject[].$append")
-
-do list (path:"@subject[]", "var": "$i")
-  set_array("subject[].$append.type[]","ComplexSubject")
-  set_array("subject[].$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
-  set_array("subject[].$last.componentList[]")
-  copy_field("$i.f32_[]", "subject[].$last.componentList[]")
-end
-
-do
- list (path:"subject[].*.componentList[]", "var": "$i")
-  move_field("$i.f32_", "$i.id")
-  copy_field("$i.id", "$i.label")
-  replace_all("$i.label","^http.+[/#](.+)$","$1")
-  replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
-  lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-  if all_match("$i.id","^https://rpb.lobid.org/sw/.*$")
-    add_field("$i.source.id", "http://rpb.lobid.org/sw")
-    add_field("$i.source.label", "RPB-Sachsystematik")
-  else
-    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
-    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
-  end
-end
-
-# Generierung des pipe-separaierten Labels für eine gesamte Schlagwortfolge ("subject.label").
-
-do list (path:"subject[]", "var": "$i")
-  copy_field("$i.*.componentList[].label", "$i.label.$append")
-  join_field("$i.label"," | ")
 end
 
 # ------- Contribution -------

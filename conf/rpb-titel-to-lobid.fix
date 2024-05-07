@@ -225,15 +225,11 @@ move_field("temp_subject", "subject[]")
 # 1. Sich wiederholende Werte werden momentan doppelt im JSON abgelegt, siehe test-output-27.json
 # 2. Lookup der RPB-Raumsystematik-Labels
 
-set_array("spatial[]")
-
-do list (path:"f31[].*.f31_", "var": "$i")
-  copy_field("$i", "spatial[].$append.id")
-end
-
+call_macro("move_here", field: "spatial[]")
 uniq("spatial[]")
 
 do list (path:"spatial[]", "var": "$i")
+  move_field("$i.value", "$i.id")
   copy_field("$i.id", "$i.label")
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   if any_match("$i.id", "^https://d-nb.info/gnd/.+")

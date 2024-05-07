@@ -83,18 +83,17 @@ move_field("f77_", "extent")
 call_macro("add_all", from: "f81?", to: "note", valueField: "value")
 call_macro("add_all", from: "f85?", to: "isPartOf", valueField: "value")
 
-
 call_macro("add_all", from: "f30?", to: "subject", valueField: "value") # Sachnotation
 replace_all("subject[].*.value","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
 
-call_macro("add_all", to: "f31", from: "f31?", valueField: "f31_") # Ortsnotation
-do list (path:"f31[]", "var": "$i")
-  if any_match("$i.f31_", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
-    replace_all("$i.f31_","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
-  elsif any_contain("$i.f31_", "_r99_")
-    replace_all("$i.f31_","^_r99_\\s_o(\\d+)_$","https://rpb.lobid.org/spatial#n$1")
+call_macro("add_all", to: "spatial", from: "f31?", valueField: "value") # Ortsnotation
+do list (path:"spatial[]", "var": "$i")
+  if any_match("$i.value", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
+    replace_all("$i.value","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
+  elsif any_contain("$i.value", "_r99_")
+    replace_all("$i.value","^_r99_\\s_o(\\d+)_$","https://rpb.lobid.org/spatial#n$1")
   else
-    replace_all("$i.f31_","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
+    replace_all("$i.value","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
   end
 end
 

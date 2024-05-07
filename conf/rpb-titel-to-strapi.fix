@@ -72,6 +72,7 @@ move_field("f21_", "preferredTitle")
 call_macro("add_all", from: "f24?", to: "parallelTitle", valueField: "value")
 call_macro("add_all", from: "f27?", to: "alternativeTitle", valueField: "value")
 move_field("f28_", "alternativeSpelling")
+call_macro("add_all", from: "f70[_123456789]", to: "bibliographicCitation", valueField: "value")
 move_field("f70b", "volume")
 move_field("f70h", "issue")
 move_field("f70j", "year")
@@ -113,8 +114,6 @@ do list (path:"subjectComponentList[].*.subject[]", "var": "$i")
   end
 end
 
-call_macro("add_all", to: "f70", from: "f70[_123456789]", valueField: "f70_") # Quelle
-
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
 if all_equal("f36_", "sbd")
   call_macro("ref_f01_unless_exists", field: "publicationDate")
@@ -139,21 +138,21 @@ move_field("f39_", "responsibilityStatement")
 
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
 if all_equal("f36_", "u")
-  unless exists("f70[].1")
-    add_field("f70[].$append.f70_", "s. spez. Felder (volume, issue, etc.)")
+  unless exists("bibliographicCitation[].1")
+    add_field("bibliographicCitation[].$append.value", "s. spez. Felder (volume, issue, etc.)")
   end
 end
 
 # Seitenzahl in pages ist Pflichtfeld für Artikel (f36_=u)
 unless exists("pages")
  if all_equal("f36_", "u")
-  if exists("f70_")
-    copy_field("f70_", "pages")
-    prepend("pages", "Kopiert aus f70_: ")
+  if exists("bibliographicCitation[].1")
+    copy_field("bibliographicCitation[].1.value", "pages")
+    prepend("pages", "Kopiert aus bibliographicCitation: ")
     put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
-    if all_match("f70_", "$[pages]")
-      if is_string("f70_")
-        replace_all("pages", "$[pages]", "Aus f70_: $1")
+    if all_match("bibliographicCitation[].1.value", "$[pages]")
+      if is_string("bibliographicCitation[].1.value")
+        replace_all("pages", "$[pages]", "Aus bibliographicCitation: $1")
       end
     end
   else

@@ -98,19 +98,19 @@ do list (path:"f31[]", "var": "$i")
   end
 end
 
-call_macro("add_all", to: "f32", from: "f32?", valueField: "f32_") # Schlagwortkette
-do list (path:"f32[]", "var": "$i")
-  split_field("$i.f32_", " ; ")
-  set_array("$i.f32_[]")
-  move_field("$i.f32_", "$i.f32_[].$append.f32_")
+call_macro("add_all", to: "subjectComponentList", from: "f32?", valueField: "value") # Schlagwortkette
+do list (path:"subjectComponentList[]", "var": "$i")
+  split_field("$i.value", " ; ")
+  set_array("$i.subject[]")
+  move_field("$i.value", "$i.subject[].$append.value")
 end
-do list (path:"f32[].*.f32_[]", "var": "$i")
-  replace_all("$i.f32_","_(.*)_","$1")
-  if all_match("$i.f32_","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
-    prepend("$i.f32_", "https://rpb.lobid.org/sw/")
+do list (path:"subjectComponentList[].*.subject[]", "var": "$i")
+  replace_all("$i.value","_(.*)_","$1")
+  if all_match("$i.value","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
+    prepend("$i.value", "https://rpb.lobid.org/sw/")
   else
-    replace_all("$i.f32_", "(^\\d*)n(\\d)", "$1-$2")
-    prepend("$i.f32_", "https://d-nb.info/gnd/")
+    replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.value", "https://d-nb.info/gnd/")
   end
 end
 

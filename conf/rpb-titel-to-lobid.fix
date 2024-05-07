@@ -175,7 +175,7 @@ end
 # ------- GND-Schlagwörter -------
 # To Do:
 # 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
-# f32_ _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
+# subjectComponentList _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
 # 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
 # 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
 # "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
@@ -183,18 +183,18 @@ end
 
 set_array("@temp_subject")
 
-copy_field("f32[].*", "@temp_subject.$append")
+copy_field("subjectComponentList[].*", "@temp_subject.$append")
 
 do list (path:"@temp_subject", "var": "$i")
   set_array("temp_subject.$append.type[]","ComplexSubject")
   set_array("temp_subject.$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
   set_array("temp_subject.$last.componentList[]")
-  copy_field("$i.f32_[]", "temp_subject.$last.componentList[]")
+  copy_field("$i.subject[]", "temp_subject.$last.componentList[]")
 end
 
 do
  list (path:"temp_subject.*.componentList[]", "var": "$i")
-  move_field("$i.f32_", "$i.id")
+  move_field("$i.value", "$i.id")
   copy_field("$i.id", "$i.label")
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")

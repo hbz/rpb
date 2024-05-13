@@ -72,6 +72,7 @@ move_field("f21_", "preferredTitle")
 call_macro("add_all", from: "f24?", to: "parallelTitle", valueField: "value")
 call_macro("add_all", from: "f27?", to: "alternativeTitle", valueField: "value")
 move_field("f28_", "alternativeSpelling")
+move_field("f36_", "type")
 call_macro("add_all", from: "f70[_123456789]", to: "bibliographicCitation", valueField: "value")
 move_field("f70b", "volume")
 move_field("f70h", "issue")
@@ -115,13 +116,13 @@ do list (path:"subjectComponentList[].*.subject[]", "var": "$i")
 end
 
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
-if all_equal("f36_", "sbd")
+if all_equal("type", "sbd")
   call_macro("ref_f01_unless_exists", field: "publicationDate")
   call_macro("ref_f01_unless_exists", field: "publicationYear")
 end
 
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht bei allen selbständigen Werken (Einheitsmaske):
-if all_match("f36_", "s|sbd|sm")
+if all_match("type", "s|sbd|sm")
   unless exists("publicationDate")
     add_field("publicationDate", "N/A")
   end
@@ -137,15 +138,15 @@ end
 move_field("f39_", "responsibilityStatement")
 
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
-if all_equal("f36_", "u")
+if all_equal("type", "u")
   unless exists("bibliographicCitation[].1")
     add_field("bibliographicCitation[].$append.value", "s. spez. Felder (volume, issue, etc.)")
   end
 end
 
-# Seitenzahl in pages ist Pflichtfeld für Artikel (f36_=u)
+# Seitenzahl in pages ist Pflichtfeld für Artikel (type=u)
 unless exists("pages")
- if all_equal("f36_", "u")
+ if all_equal("type", "u")
   if exists("bibliographicCitation[].1")
     copy_field("bibliographicCitation[].1.value", "pages")
     prepend("pages", "Kopiert aus bibliographicCitation: ")
@@ -162,11 +163,11 @@ unless exists("pages")
 end
 
 # Menschenlesbare Werte nutzen (für die Erfassung in Strapi)
-if is_array("f36_")
+if is_array("type")
   # print_record("Mehrere Satztypen gefunden: ")
-  set_field("f36_", "f36_.$last")
+  set_field("type", "type.$last")
 end
-lookup("f36_", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
+lookup("type", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
 
 
 set_array("url[]")

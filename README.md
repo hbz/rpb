@@ -62,9 +62,9 @@ This writes a single `.json` file to `output/` (it's actually JSON lines, but th
 ### Import strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','u') PATH=articles"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','Monografie') PATH=independent-works"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','Band') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works"
 sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
 ```
 
@@ -78,9 +78,9 @@ curl --request DELETE http://localhost:1337/api/articles/[1-5]
 
 After import they are available at e.g. https://rpb-cms-test.lobid.org/api/articles?populate=*
 
-Entries using the same path can be filtered, e.g. to get only volumes (`f36_=sbd`):
+Entries using the same path can be filtered, e.g. to get only volumes (`type=Band`):
 
-https://rpb-cms-test.lobid.org/api/independent-works?filters[f36_][$eq]=sbd&populate=*
+https://rpb-cms-test.lobid.org/api/independent-works?filters[type][$eq]=Band&populate=*
 
 ### Import SKOS data into strapi
 
@@ -132,9 +132,9 @@ This writes individual `.json` files for Strapi records to `output/`.
 ### Compare export data
 
 ```bash
-sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36_','u') PATH=articles"
-sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36_','s') PATH=independent-works"
-sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36_','sbd') PATH=independent-works"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','Band') PATH=independent-works"
 sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
 ```
 

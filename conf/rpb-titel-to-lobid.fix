@@ -28,16 +28,16 @@ copy_field("rpbId", "_id")
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
-if all_equal("f36_", "u")
+if all_equal("type", "u")
   set_field("type[].$append", "Article")
 end
-if all_equal("f36_", "Monografie")
+if all_equal("type", "Monografie")
   set_field("type[].$append", "Book")
 end
-if any_equal("f36_", "Mehrt. Mono (ÜO)")
+if any_equal("type", "Mehrt. Mono (ÜO)")
   set_field("type[].$append", "MultiVolumeBook")
 end
-if any_equal("f36_", "Band")
+if any_equal("type", "Band")
   set_field("type[].$append", "Book")
   set_array("isPartOf[]")
   set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
@@ -107,7 +107,7 @@ uniq("note[]")
 
 #-------- "isPartOf" -------
 if exists("isPartOf[]")
-  unless any_equal("f36_", "Band") # also sets isPartOf
+  unless any_equal("type", "Band") # also sets isPartOf
     set_array("temp")
     set_array("temp.$append.type[]", "IsPartOfRelation")
     set_array("temp.$last.hasSuperordinate[]")
@@ -150,7 +150,7 @@ move_field("pub", "publication[]")
 
 # ------- "zdbId" -------
 
-if any_equal("f36_", "Mehrt. Mono (ÜO)")
+if any_equal("type", "Mehrt. Mono (ÜO)")
   move_field("f88_", "zdbId")
 end
 

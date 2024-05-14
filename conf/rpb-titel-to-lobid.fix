@@ -39,13 +39,14 @@ if any_equal("type", "Mehrt. Mono (ÜO)")
 end
 if any_equal("type", "Band")
   set_field("type[].$append", "Book")
+  call_macro("move_here", field: "isPartOf[]")
+  copy_field("isPartOf[].value", "superordinateLabel")
   set_array("isPartOf[]")
   set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
   set_array("isPartOf[].$last.hasSuperordinate[]")
   # Set up superordinate ID: use the volume ID, remove the numbering part:
   copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
-  # Set up superordinate label, output by decoder as f20u
-  copy_field("f20u", "isPartOf[].$last.hasSuperordinate[].$last.label")
+  copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
   copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
 end
 

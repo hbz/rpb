@@ -84,5 +84,6 @@
       "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "edition" : [ "11. Aufl." ]
 }

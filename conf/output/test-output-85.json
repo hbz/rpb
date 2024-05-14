@@ -83,5 +83,6 @@
   "description" : [ {
     "id" : "http://d-nb.info/1069609889/04",
     "label" : "http://d-nb.info/1069609889/04"
-  } ]
+  } ],
+  "edition" : [ "4., aktualisierte Auflage" ]
 }

@@ -133,7 +133,7 @@ move_field("responsibilityStatement", "responsibilityStatement[]")
 
 set_hash("pub")
 set_array("pub.location[]")
-copy_field("f74_", "pub.location[].$append")
+copy_field("publicationLocation", "pub.location[].$append")
 if all_match("publicationDate", "\\d{4}")
   copy_field("publicationDate", "pub.startDate")
 end
@@ -141,7 +141,7 @@ end
 # Folgendes rausgenommen wegen 929t130101, in dem sich publicationDate wiederholt
 # replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")
 set_array("pub.publishedBy[]")
-copy_field("f75_", "pub.publishedBy[].$append")
+copy_field("publishedBy", "pub.publishedBy[].$append")
 set_array("pub.type[]")
 add_field("pub.type[].$append", "PublicationEvent")
 set_array("publication[]")

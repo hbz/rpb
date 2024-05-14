@@ -39,9 +39,9 @@ do put_macro("add_url")
   end
 end
 
-do put_macro("ref_f01_unless_exists")
+do put_macro("ref_volumeIn_unless_exists")
   unless exists("$[field]")
-    add_field("$[field]", "s. Zählung in f01_")
+    add_field("$[field]", "s. Zählung in numbering")
   end
 end
 
@@ -65,6 +65,7 @@ do put_macro("to_bool")
 end
 
 move_field("f00_", "rpbId")
+move_field("f01_", "numbering")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f18_", "inCollection")
 move_field("f20_", "title")
@@ -115,10 +116,10 @@ do list (path:"subjectComponentList[].*.subject[]", "var": "$i")
   end
 end
 
-# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur f01_ (Zählung) vorhanden:
+# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur numbering (Zählung) vorhanden:
 if all_equal("type", "sbd")
-  call_macro("ref_f01_unless_exists", field: "publicationDate")
-  call_macro("ref_f01_unless_exists", field: "publicationYear")
+  call_macro("ref_volumeIn_unless_exists", field: "publicationDate")
+  call_macro("ref_volumeIn_unless_exists", field: "publicationYear")
 end
 
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht bei allen selbständigen Werken (Einheitsmaske):
@@ -220,22 +221,22 @@ else
   end
 end
 
-if exists("f01_")
-  set_hash("f01")
-  if is_array("f01_") # Nicht wiederholbar, 1. Wert nehmen
-    move_field("f01_.1", "f01_t")
-    remove_field("f01_")
-    move_field("f01_t", "f01_")
+if exists("numbering")
+  set_hash("volumeIn")
+  if is_array("numbering") # Nicht wiederholbar, 1. Wert nehmen
+    move_field("numbering.1", "numbering_temp")
+    remove_field("numbering")
+    move_field("numbering_temp", "numbering")
   end
-  copy_field("f01_", "f01.f01_") # Zählung (Vorlage)
-  copy_field("f01_", "f01.f01s") # Zählung (Sortierform)
-  replace_all("f01.f01s", "^.*((19|20)\\d\\d).*$", "$1")
-  unless all_match("f01.f01s", "\\d{4}")
-    remove_field("f01.f01s")
+  copy_field("numbering", "volumeIn.numbering") # Zählung (Vorlage)
+  copy_field("numbering", "volumeIn.sortBy") # Zählung (Sortierform)
+  replace_all("volumeIn.sortBy", "^.*((19|20)\\d\\d).*$", "$1")
+  unless all_match("volumeIn.sortBy", "\\d{4}")
+    remove_field("volumeIn.sortBy")
   end
-  copy_field("_id", "f01.f01u") # Verknüpfung zur MtM (ÜO)
-  replace_all("f01.f01u","b\\d+","")
-  prepend("f01.f01u","https://lobid.org/resources/")
+  copy_field("_id", "volumeIn.value") # Verknüpfung zur MtM (ÜO)
+  replace_all("volumeIn.value","b\\d+","")
+  prepend("volumeIn.value","https://lobid.org/resources/")
 end
 
 # ISBNs (f87_, f871 ff.)

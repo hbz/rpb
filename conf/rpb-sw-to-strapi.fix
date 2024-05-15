@@ -1,4 +1,4 @@
-do put_macro("add")
+do put_macro("move")
   if exists("$[from]")
     set_array("_temp")
     move_field("$[from]", "_temp.$append.value")
@@ -6,17 +6,17 @@ do put_macro("add")
   end
 end
 
-do put_macro("add_all")
+do put_macro("move_all")
   set_array("$[to][]")
-  call_macro("add", to: "$[to]", from: "f$[from]", type: "")
+  call_macro("move", to: "$[to]", from: "f$[from]")
 end
 
 move_field("f00_", "rpbId")
 move_field("f3na", "preferredName")
 move_field("f3nz", "otherInformation")
 
-call_macro("add_all", to: "variantName", from: "3n[bcdefghijklmnopqrstuvwxy]")
-call_macro("add_all", to: "relatedEntity", from: "3r?")
+call_macro("move_all", to: "variantName", from: "3n[bcdefghijklmnopqrstuvwxy]")
+call_macro("move_all", to: "relatedEntity", from: "3r?")
 
 move_field("f99z", "type")
 

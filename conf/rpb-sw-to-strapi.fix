@@ -16,8 +16,10 @@ move_field("f00_", "rpbId")
 call_macro("add_all", to: "3n", from: "3n[bcdefghijklmnopqrstuvwxy]")
 call_macro("add_all", to: "3r", from: "3r?")
 
-if exists("f99z")
-  lookup("f99z", 
+move_field("f99z", "type")
+
+if exists("type")
+  lookup("type", 
     GEE: "Geografikum",
     KEE: "Körperschaft",
     PEE: "Person", # ?
@@ -29,7 +31,7 @@ if exists("f99z")
     XSO: "N/A", # ?
     __default: "N/A")
 else
-  add_field("f99z", "N/A")
+  add_field("type", "N/A")
 end
 
 vacuum()

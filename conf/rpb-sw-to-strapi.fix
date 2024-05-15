@@ -11,6 +11,8 @@ do put_macro("add_all")
   call_macro("add", to: "$[to]", from: "f$[from]", type: "")
 end
 
+move_field("f00_", "rpbId")
+
 call_macro("add_all", to: "3n", from: "3n[bcdefghijklmnopqrstuvwxy]")
 call_macro("add_all", to: "3r", from: "3r?")
 

@@ -12,6 +12,7 @@ do put_macro("add_all")
 end
 
 move_field("f00_", "rpbId")
+move_field("f3na", "preferredName")
 
 call_macro("add_all", to: "3n", from: "3n[bcdefghijklmnopqrstuvwxy]")
 call_macro("add_all", to: "3r", from: "3r?")

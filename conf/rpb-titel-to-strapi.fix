@@ -89,6 +89,7 @@ move_field("f77_", "extent")
 call_macro("add_all", from: "f81?", to: "note", valueField: "value")
 call_macro("add_all", from: "f85?", to: "isPartOf", valueField: "value")
 call_macro("add", to: "isPartOf", from: "f20u", type: "", valueField: "value")
+move_field("f86_", "otherId")
 
 call_macro("add_all", from: "f30?", to: "subject", valueField: "value") # Sachnotation
 replace_all("subject[].*.value","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")

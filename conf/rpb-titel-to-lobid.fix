@@ -68,6 +68,12 @@ copy_field("f983", "hbzId")
 copy_field("f84_", "schoeneNummer")
 replace_all("schoeneNummer", "\\.", "")
 
+# ------- isbn -------
+
+move_field("isbn[]", "isbn_objects") # with `value` & `valid` subfields
+set_array("isbn[]") # plain string array
+copy_field("isbn_objects.*.value", "isbn[].$append")
+
 # ------- "inCollection" -------
 
 set_array("inCollection[]")
@@ -351,6 +357,6 @@ end
 
 move_field("edition", "edition[]")
 
-retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]")
+retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]")
 
 vacuum()

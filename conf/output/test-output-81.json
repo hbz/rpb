@@ -3,6 +3,7 @@
   "type" : [ "BibliographicResource", "Book" ],
   "rpbId" : "929t930040",
   "id" : "https://lobid.org/resources/929t930040",
+  "isbn" : [ "3-920284-67-4", "3-7666-9809-5" ],
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

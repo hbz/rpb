@@ -245,12 +245,12 @@ if exists("numbering")
 end
 
 # ISBNs (f87_, f871 ff.)
-set_array("f87[]")
+set_array("isbn[]")
 if exists("f87?")
   set_array("_temp")
-  copy_field("f87?", "_temp.$append.f87_")
-  add_field("_temp.*.n87~", "true")
-  move_field("_temp.*", "f87[].$append")
+  copy_field("f87?", "_temp.$append.value")
+  add_field("_temp.*.valid~", "true")
+  move_field("_temp.*", "isbn[].$append")
 end
 
 vacuum()

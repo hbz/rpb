@@ -16,18 +16,19 @@
 #   reject()
 # end
 
-do put_macro("add")
+do put_macro("move")
   if exists("$[from]")
     set_array("_temp")
-    copy_field("$[from]", "_temp.$append.$[valueField]")
+    copy_field("$[from]", "_temp.$append.value")
     add_field("_temp.*.type", "$[type]")
     move_field("_temp.*", "$[to][].$append")
+    remove_field("$[from]")
   end
 end
 
-do put_macro("add_all")
+do put_macro("move_all")
   set_array("$[to][]")
-  call_macro("add", to: "$[to]", from: "$[from]", type: "", valueField: "$[valueField]")
+  call_macro("move", to: "$[to]", from: "$[from]", type: "")
 end
 
 do put_macro("add_url")
@@ -70,11 +71,11 @@ call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f18_", "inCollection")
 move_field("f20_", "title")
 move_field("f21_", "preferredTitle")
-call_macro("add_all", from: "f24?", to: "parallelTitle", valueField: "value")
-call_macro("add_all", from: "f27?", to: "alternativeTitle", valueField: "value")
+call_macro("move_all", from: "f24?", to: "parallelTitle")
+call_macro("move_all", from: "f27?", to: "alternativeTitle")
 move_field("f28_", "alternativeSpelling")
 move_field("f36_", "type")
-call_macro("add_all", from: "f70[_123456789]", to: "bibliographicCitation", valueField: "value")
+call_macro("move_all", from: "f70[_123456789]", to: "bibliographicCitation")
 move_field("f70b", "volume")
 move_field("f70h", "issue")
 move_field("f70j", "year")
@@ -86,15 +87,15 @@ move_field("f75_", "publishedBy")
 move_field("f76a", "publicationDate")
 move_field("f76b", "publicationYear")
 move_field("f77_", "extent")
-call_macro("add_all", from: "f81?", to: "note", valueField: "value")
-call_macro("add_all", from: "f85?", to: "isPartOf", valueField: "value")
-call_macro("add", to: "isPartOf", from: "f20u", type: "", valueField: "value")
+call_macro("move_all", from: "f81?", to: "note")
+call_macro("move_all", from: "f85?", to: "isPartOf")
+call_macro("move", to: "isPartOf", from: "f20u", type: "")
 move_field("f86_", "otherId")
 
-call_macro("add_all", from: "f30?", to: "subject", valueField: "value") # Sachnotation
+call_macro("move_all", from: "f30?", to: "subject") # Sachnotation
 replace_all("subject[].*.value","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
 
-call_macro("add_all", to: "spatial", from: "f31?", valueField: "value") # Ortsnotation
+call_macro("move_all", to: "spatial", from: "f31?") # Ortsnotation
 do list (path:"spatial[]", "var": "$i")
   if any_match("$i.value", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
     replace_all("$i.value","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
@@ -105,7 +106,7 @@ do list (path:"spatial[]", "var": "$i")
   end
 end
 
-call_macro("add_all", to: "subjectComponentList", from: "f32?", valueField: "value") # Schlagwortkette
+call_macro("move_all", to: "subjectComponentList", from: "f32?") # Schlagwortkette
 do list (path:"subjectComponentList[]", "var": "$i")
   split_field("$i.value", " ; ")
   set_array("$i.subject[]")
@@ -189,30 +190,30 @@ move_field("f90a", "item[].$append.value") # Signatur
 # Person
 set_array("person[]")
 
-call_macro("add", to: "person", from: "f40?", type: "http://id.loc.gov/vocabulary/relators/aut", valueField: "value")
-call_macro("add", to: "person", from: "f41?", type: "http://id.loc.gov/vocabulary/relators/pbl", valueField: "value")
-call_macro("add", to: "person", from: "f42?", type: "http://id.loc.gov/vocabulary/relators/ctb", valueField: "value")
-call_macro("add", to: "person", from: "f43?", type: "http://id.loc.gov/vocabulary/relators/edt", valueField: "value")
-call_macro("add", to: "person", from: "f44?", type: "http://id.loc.gov/vocabulary/relators/ccp", valueField: "value")
-call_macro("add", to: "person", from: "f45?", type: "http://id.loc.gov/vocabulary/relators/col", valueField: "value")
-call_macro("add", to: "person", from: "f46?", type: "http://id.loc.gov/vocabulary/relators/lbt", valueField: "value")
-call_macro("add", to: "person", from: "f47?", type: "http://id.loc.gov/vocabulary/relators/trl", valueField: "value")
-call_macro("add", to: "person", from: "f50?", type: "http://id.loc.gov/vocabulary/relators/ill", valueField: "value")
-call_macro("add", to: "person", from: "f51?", type: "http://id.loc.gov/vocabulary/relators/wst", valueField: "value")
-call_macro("add", to: "person", from: "f52?", type: "http://id.loc.gov/vocabulary/relators/cmp", valueField: "value")
-call_macro("add", to: "person", from: "f56?", type: "http://id.loc.gov/vocabulary/relators/red", valueField: "value")
-call_macro("add", to: "person", from: "f57?", type: "http://id.loc.gov/vocabulary/relators/oth", valueField: "value")
-call_macro("add", to: "person", from: "f58?", type: "http://id.loc.gov/vocabulary/relators/act", valueField: "value")
-call_macro("add", to: "person", from: "f59?", type: "http://id.loc.gov/vocabulary/relators/hnr", valueField: "value")
+call_macro("move", to: "person", from: "f40?", type: "http://id.loc.gov/vocabulary/relators/aut")
+call_macro("move", to: "person", from: "f41?", type: "http://id.loc.gov/vocabulary/relators/pbl")
+call_macro("move", to: "person", from: "f42?", type: "http://id.loc.gov/vocabulary/relators/ctb")
+call_macro("move", to: "person", from: "f43?", type: "http://id.loc.gov/vocabulary/relators/edt")
+call_macro("move", to: "person", from: "f44?", type: "http://id.loc.gov/vocabulary/relators/ccp")
+call_macro("move", to: "person", from: "f45?", type: "http://id.loc.gov/vocabulary/relators/col")
+call_macro("move", to: "person", from: "f46?", type: "http://id.loc.gov/vocabulary/relators/lbt")
+call_macro("move", to: "person", from: "f47?", type: "http://id.loc.gov/vocabulary/relators/trl")
+call_macro("move", to: "person", from: "f50?", type: "http://id.loc.gov/vocabulary/relators/ill")
+call_macro("move", to: "person", from: "f51?", type: "http://id.loc.gov/vocabulary/relators/wst")
+call_macro("move", to: "person", from: "f52?", type: "http://id.loc.gov/vocabulary/relators/cmp")
+call_macro("move", to: "person", from: "f56?", type: "http://id.loc.gov/vocabulary/relators/red")
+call_macro("move", to: "person", from: "f57?", type: "http://id.loc.gov/vocabulary/relators/oth")
+call_macro("move", to: "person", from: "f58?", type: "http://id.loc.gov/vocabulary/relators/act")
+call_macro("move", to: "person", from: "f59?", type: "http://id.loc.gov/vocabulary/relators/hnr")
 
 call_macro("contribution_to_uri", field: "person")
 
 # Körperschaft
 set_array("corporateBody[]")
 
-call_macro("add", to: "corporateBody", from: "f60?", type: "http://id.loc.gov/vocabulary/relators/org", valueField: "value")
-call_macro("add", to: "corporateBody", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb", valueField: "value")
-call_macro("add", to: "corporateBody", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr", valueField: "value")
+call_macro("move", to: "corporateBody", from: "f60?", type: "http://id.loc.gov/vocabulary/relators/org")
+call_macro("move", to: "corporateBody", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb")
+call_macro("move", to: "corporateBody", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr")
 
 call_macro("contribution_to_uri", field: "corporateBody")
 

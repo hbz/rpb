@@ -109,10 +109,10 @@ end
 call_macro("move_all", to: "subjectComponentList", from: "f32?") # Schlagwortkette
 do list (path:"subjectComponentList[]", "var": "$i")
   split_field("$i.value", " ; ")
-  set_array("$i.subject[]")
-  move_field("$i.value", "$i.subject[].$append.value")
+  set_array("$i.subjectComponent[]")
+  move_field("$i.value", "$i.subjectComponent[].$append.value")
 end
-do list (path:"subjectComponentList[].*.subject[]", "var": "$i")
+do list (path:"subjectComponentList[].*.subjectComponent[]", "var": "$i")
   replace_all("$i.value","_(.*)_","$1")
   if all_match("$i.value","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
     prepend("$i.value", "https://rpb.lobid.org/sw/")

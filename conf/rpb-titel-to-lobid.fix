@@ -195,7 +195,7 @@ do list (path:"@temp_subject", "var": "$i")
   set_array("temp_subject.$append.type[]","ComplexSubject")
   set_array("temp_subject.$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
   set_array("temp_subject.$last.componentList[]")
-  copy_field("$i.subject[]", "temp_subject.$last.componentList[]")
+  copy_field("$i.subjectComponent[]", "temp_subject.$last.componentList[]")
 end
 
 do

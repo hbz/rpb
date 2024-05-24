@@ -112,6 +112,10 @@ move_field("temp", "note[]")
 uniq("note[]")
 
 #-------- "isPartOf" -------
+if exists("inSeries[]")
+  set_array("isPartOf[]")
+  move_field("inSeries[].*", "isPartOf[].$append")
+end
 if exists("isPartOf[]")
   unless any_equal("type", "Band") # also sets isPartOf
     set_array("temp")

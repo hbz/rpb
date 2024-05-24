@@ -128,6 +128,10 @@ if all_equal("type", "sbd")
   call_macro("ref_volumeIn_unless_exists", field: "publicationYear")
 end
 
+if all_match("type", "s|sm")
+  move_field("isPartOf[]", "inSeries[]")
+end
+
 # Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht bei allen selbständigen Werken (Einheitsmaske):
 if all_match("type", "s|sbd|sm")
   unless exists("publicationDate")

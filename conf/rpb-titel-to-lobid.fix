@@ -8,42 +8,51 @@ do once("map")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
 end
 
+do put_macro("move_here")
+  move_field("$[field]", "_temp")
+  move_field("_temp", "$[field]")
+end
+
+if all_equal("doNotIndex", "true")
+  reject()
+end
+
 # ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
 
 # ------- Set internal _id -------
 
-copy_field("f00_", "_id")
+copy_field("rpbId", "_id")
 
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
-if all_equal("f36_", "u")
+if all_equal("type", "u")
   set_field("type[].$append", "Article")
 end
-if all_equal("f36_", "Monografie")
+if all_equal("type", "Monografie")
   set_field("type[].$append", "Book")
 end
-if any_equal("f36_", "Mehrt. Mono (ÜO)")
+if any_equal("type", "Mehrt. Mono (ÜO)")
   set_field("type[].$append", "MultiVolumeBook")
 end
-if any_equal("f36_", "Band")
+if any_equal("type", "Band")
   set_field("type[].$append", "Book")
+  call_macro("move_here", field: "isPartOf[]")
+  copy_field("isPartOf[].value", "superordinateLabel")
   set_array("isPartOf[]")
   set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
   set_array("isPartOf[].$last.hasSuperordinate[]")
   # Set up superordinate ID: use the volume ID, remove the numbering part:
-  copy_field("f01.f01u", "isPartOf[].$last.hasSuperordinate[].$append.id")
-  # Set up superordinate label, output by decoder as f20u
-  copy_field("f20u", "isPartOf[].$last.hasSuperordinate[].$last.label")
-  # Take volume numbering from `f01_`
-  copy_field("f01.f01_", "isPartOf[].$last.numbering")
+  copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
+  copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
+  copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
 end
 
 # ------- rpbId -------
 
-copy_field("_id", "rpbId")
+call_macro("move_here", field: "rpbId")
 
 # ------- "id", using https URIs -------
 
@@ -59,16 +68,22 @@ copy_field("f983", "hbzId")
 copy_field("f84_", "schoeneNummer")
 replace_all("schoeneNummer", "\\.", "")
 
+# ------- isbn -------
+
+move_field("isbn[]", "isbn_objects") # with `value` & `valid` subfields
+set_array("isbn[]") # plain string array
+copy_field("isbn_objects.*.value", "isbn[].$append")
+
 # ------- "inCollection" -------
 
 set_array("inCollection[]")
-unless all_equal("f18_", "nur BiblioVino")
+unless all_equal("inCollection", "nur BiblioVino")
   set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013494180#!")
   set_array("inCollection[].$last.type[]")
   add_field("inCollection[].$last.type[].$append", "Collection")
   add_field("inCollection[].$last.label", "Rheinland-Pfälzische Bibliographie")
 end
-unless all_equal("f18_", "nur RPB")
+unless all_equal("inCollection", "nur RPB")
   set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013678171#!")
   set_array("inCollection[].$last.type[]")
   add_field("inCollection[].$last.type[].$append", "Collection")
@@ -76,39 +91,39 @@ unless all_equal("f18_", "nur RPB")
 end
 
 # ------- "title" field -------
-if is_string("f20_")
-  copy_field("f20_", "title")
-elsif is_array("f20_")
-  copy_field("f20_.$last", "title")
+call_macro("move_here", field: "title")
+if is_array("title")
+  copy_field("title.$last", "title")
 end
 replace_all("title","¬","")
 replace_all("title", "\\s\\+", "")
 
 # ------- "extent" -------
 
-move_field("f77_", "extent")
+call_macro("move_here", field: "extent")
 
 # ------- "note" -------
 
-set_array("note[]")
-do list(path:"f81[].*.f81_", "var": "$i")
-  copy_field("$i", "note[].$append")
+set_array("temp")
+do list(path:"note[].*.value", "var": "$i")
+  copy_field("$i", "temp.$append")
 end
+move_field("temp", "note[]")
 uniq("note[]")
 
-#-------- "series" -------
-if exists("f85?")
-  set_array("isPartOf[]")
-  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
-  set_array("isPartOf[].$last.hasSuperordinate[]")
-  if exists("f85_")
-    split_field("f85_"," ; ")
-    copy_field("f85_.1","isPartOf[].$last.hasSuperordinate[].$append.label")
-    copy_field("f85_.2", "isPartOf[].$last.numbering")
-  else
-    copy_field("f85?","isPartOf[].$last.hasSuperordinate[].$append.label")
+#-------- "isPartOf" -------
+if exists("isPartOf[]")
+  unless any_equal("type", "Band") # also sets isPartOf
+    set_array("temp")
+    set_array("temp.$append.type[]", "IsPartOfRelation")
+    set_array("temp.$last.hasSuperordinate[]")
+    split_field("isPartOf[].1.value", " ; ")
+    copy_field("isPartOf[].1.value.1", "temp.$last.hasSuperordinate[].$append.label")
+    copy_field("isPartOf[].1.value.2", "temp.$last.numbering")
+    move_field("temp", "isPartOf[]")
   end
 end
+
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 
@@ -116,8 +131,7 @@ end
 # -------- "responsibilityStatement" --------
 # f39_ ist nach Quelldatendoku die "Verfasserangabe (Vorlageform)"
 
-set_array("responsibilityStatement")
-move_field("f39_", "responsibilityStatement[]")
+move_field("responsibilityStatement", "responsibilityStatement[]")
 
 # ------- "language" -------
 # Dafür scheint es keine explizite Angabe zu geben.
@@ -126,15 +140,15 @@ move_field("f39_", "responsibilityStatement[]")
 
 set_hash("pub")
 set_array("pub.location[]")
-copy_field("f74_", "pub.location[].$append")
-if all_match("f76a", "\\d{4}")
-  copy_field("f76a", "pub.startDate")
+copy_field("publicationLocation", "pub.location[].$append")
+if all_match("publicationDate", "\\d{4}")
+  copy_field("publicationDate", "pub.startDate")
 end
 
-# Folgendes rausgenommen wegen 929t130101, in dem sich f76a wiederholt
+# Folgendes rausgenommen wegen 929t130101, in dem sich publicationDate wiederholt
 # replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")
 set_array("pub.publishedBy[]")
-copy_field("f75_", "pub.publishedBy[].$append")
+copy_field("publishedBy", "pub.publishedBy[].$append")
 set_array("pub.type[]")
 add_field("pub.type[].$append", "PublicationEvent")
 set_array("publication[]")
@@ -142,20 +156,20 @@ move_field("pub", "publication[]")
 
 # ------- "zdbId" -------
 
-if any_equal("f36_", "Mehrt. Mono (ÜO)")
+if any_equal("type", "Mehrt. Mono (ÜO)")
   move_field("f88_", "zdbId")
 end
 
 # -------RPB-Sachnotationen --------
 
-set_array("subject[]")
+set_array("temp_subject")
 
-if exists ("f30[]")
-  move_field("f30[].*.f30_", "subject[].$append.id")
-  uniq("subject[]")
-  copy_field("subject[].*.id", "subject[].$last.label")
-  lookup("subject[].*.label", "subject_map")
-  do list(path: "subject[]")
+if exists ("subject[]")
+  move_field("subject[].*.value", "temp_subject.$append.id")
+  uniq("temp_subject")
+  copy_field("temp_subject.*.id", "temp_subject.$last.label")
+  lookup("temp_subject.*.label", "subject_map")
+  do list(path: "temp_subject")
     # add_field("label", "Platzhalter Schlagwortlabel")
     set_array("type[]")
     add_field("type[].$append", "Concept")
@@ -164,63 +178,29 @@ if exists ("f30[]")
   end
 end
 
-# ------- Ortsnotation -------
-
-# In den Testdaten sind die Werte in "f31_" und "f31a" identisch und ergeben eine Dublette. Der Grund ist, dass sie kombiniert mit "f30" und "f31a" eine Schlagwortfolge ergeben. Beim Treffen am 14.6.2022 wurde – wenn AP sich richtig erinnert – beschlossen, diese Ketten aufzuspalten in `spatial`- und `subject` -Einräge (analog zur NWbib).
-# Einige Ortsschlagwörter in "f31_" stammen aus der GND, werden aber nicht nach "subject" verschoben, sondern bleiben in `spatial`, siehe https://jira.hbz-nrw.de/browse/RPB-14?focusedCommentId=287089#comment-287089
-# To Do: 
-# 1. Sich wiederholende Werte werden momentan doppelt im JSON abgelegt, siehe test-output-27.json
-# 2. Lookup der RPB-Raumsystematik-Labels
-
-set_array("spatial[]")
-
-do list (path:"f31[].*.f31_", "var": "$i")
-  copy_field("$i", "spatial[].$append.id")
-end
-
-uniq("spatial[]")
-
-do list (path:"spatial[]", "var": "$i")
-  copy_field("$i.id", "$i.label")
-  replace_all("$i.label","^http.+[/#](.+)$","$1")
-  if any_match("$i.id", "^https://d-nb.info/gnd/.+")
-    replace_all("$i.label","-","n")                             # IDs in lookup-map have the original syntax with an "n" instead of "-"
-    lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-    set_array("$i.type[]","PlaceOrGeographicName")
-    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
-    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
-  else
-    prepend("$i.label", "https://rpb.lobid.org/spatial#")
-    lookup("$i.label", "spatial_map", delete: "true")
-    set_array("$i.type[]","Concept")
-    add_field("$i.source.id", "https://rpb.lobid.org/spatial")
-    add_field("$i.source.label", "RPB-Raumsystematik")
-  end
-end
-
 # ------- GND-Schlagwörter -------
 # To Do:
 # 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
-# f32_ _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
+# subjectComponentList _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
 # 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
 # 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
 # "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
 # To Do: Die Transformation behandelt bisher GND-Ids (hier und in `spatial`) so, als würden sie allesamt einen Bindestrich enthalten, was ja nicht der Fall ist.
 
-set_array("@subject[]")
+set_array("@temp_subject")
 
-copy_field("f32[].*", "@subject[].$append")
+copy_field("subjectComponentList[].*", "@temp_subject.$append")
 
-do list (path:"@subject[]", "var": "$i")
-  set_array("subject[].$append.type[]","ComplexSubject")
-  set_array("subject[].$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
-  set_array("subject[].$last.componentList[]")
-  copy_field("$i.f32_[]", "subject[].$last.componentList[]")
+do list (path:"@temp_subject", "var": "$i")
+  set_array("temp_subject.$append.type[]","ComplexSubject")
+  set_array("temp_subject.$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
+  set_array("temp_subject.$last.componentList[]")
+  copy_field("$i.subject[]", "temp_subject.$last.componentList[]")
 end
 
 do
- list (path:"subject[].*.componentList[]", "var": "$i")
-  move_field("$i.f32_", "$i.id")
+ list (path:"temp_subject.*.componentList[]", "var": "$i")
+  move_field("$i.value", "$i.id")
   copy_field("$i.id", "$i.label")
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
@@ -236,9 +216,41 @@ end
 
 # Generierung des pipe-separaierten Labels für eine gesamte Schlagwortfolge ("subject.label").
 
-do list (path:"subject[]", "var": "$i")
+do list (path:"temp_subject", "var": "$i")
   copy_field("$i.*.componentList[].label", "$i.label.$append")
   join_field("$i.label"," | ")
+end
+
+move_field("temp_subject", "subject[]")
+
+# ------- Ortsnotation -------
+
+# In den Testdaten sind die Werte in "f31_" und "f31a" identisch und ergeben eine Dublette. Der Grund ist, dass sie kombiniert mit "f30" und "f31a" eine Schlagwortfolge ergeben. Beim Treffen am 14.6.2022 wurde – wenn AP sich richtig erinnert – beschlossen, diese Ketten aufzuspalten in `spatial`- und `subject` -Einräge (analog zur NWbib).
+# Einige Ortsschlagwörter in "f31_" stammen aus der GND, werden aber nicht nach "subject" verschoben, sondern bleiben in `spatial`, siehe https://jira.hbz-nrw.de/browse/RPB-14?focusedCommentId=287089#comment-287089
+# To Do: 
+# 1. Sich wiederholende Werte werden momentan doppelt im JSON abgelegt, siehe test-output-27.json
+# 2. Lookup der RPB-Raumsystematik-Labels
+
+call_macro("move_here", field: "spatial[]")
+uniq("spatial[]")
+
+do list (path:"spatial[]", "var": "$i")
+  move_field("$i.value", "$i.id")
+  copy_field("$i.id", "$i.label")
+  replace_all("$i.label","^http.+[/#](.+)$","$1")
+  if any_match("$i.id", "^https://d-nb.info/gnd/.+")
+    replace_all("$i.label","-","n")                             # IDs in lookup-map have the original syntax with an "n" instead of "-"
+    lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+    set_array("$i.type[]","PlaceOrGeographicName")
+    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
+    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
+  else
+    prepend("$i.label", "https://rpb.lobid.org/spatial#")
+    lookup("$i.label", "spatial_map", delete: "true")
+    set_array("$i.type[]","Concept")
+    add_field("$i.source.id", "https://rpb.lobid.org/spatial")
+    add_field("$i.source.label", "RPB-Raumsystematik")
+  end
 end
 
 # ------- Contribution -------
@@ -265,15 +277,15 @@ put_map("uri-to-role",
 
 do put_macro("contributions")
   set_array("_temp")
-  copy_field("f$[from][].*.f$[from]_", "_temp.$append.agent.id")
-  do list_as(f: "f$[from][]", c: "_temp")
+  copy_field("$[from][].*.value", "_temp.$append.agent.id")
+  do list_as(f: "$[from][]", c: "_temp")
     copy_field("c.agent.id", "c.agent.label")
     set_array("c.agent.type[]", "Person")
     replace_all("c.agent.label","^http.+[/#](.+)$","$1")
     replace_all("c.agent.label","^(\\d+)-(\\d+)$","$1n$2")
     lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-    copy_field("f.n$[from]a", "c.role.id")
-    copy_field("f.n$[from]a", "c.role.label")
+    copy_field("f.type", "c.role.id")
+    copy_field("f.type", "c.role.label")
     lookup("c.role.label", "uri-to-role")
     lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
     if all_match("c.role.label","NE hrsg. Körperschaft|Gefeierte Körperschaft|HE Urheber")
@@ -286,22 +298,22 @@ end
 
 set_array("contribution[]")
 
-call_macro("contributions", from: "40")
-call_macro("contributions", from: "60")
+call_macro("contributions", from: "person")
+call_macro("contributions", from: "corporateBody")
 
 # ------- bibliographicCitation -------
 # Siehe https://jira.hbz-nrw.de/browse/RPB-26
 
 if exists ("f70t")
   do list(path:"f70*", "var": "$i")
-    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "f70b", "~ (", "f70j", "~), ", "f70h", " ", "f70z", "~, Seite ", "f70s", "~. -" join_char: "")
+    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "volume", "~ (", "year", "~), ", "issue", " ", "alternativeNumbering", "~, Seite ", "pages", "~. -" join_char: "")
     replace_all("bibliographicCitation", "In: : ", "In: ")
     replace_all("bibliographicCitation", ", Seite . -$", "")
     replace_all("bibliographicCitation", "  ", " ")
     replace_all("bibliographicCitation", ", , ", ", ")
   end
-elsif exists ("f70_")
-  paste("bibliographicCitation", "f70_")
+elsif exists ("bibliographicCitation[].1")
+  paste("bibliographicCitation", "bibliographicCitation[].1.value")
 elsif exists ("f701")
   paste("bibliographicCitation", "f701")
 elsif exists ("f702")
@@ -325,27 +337,26 @@ replace_all("bibliographicCitation","¬","")
 
 # fulltextOnline and link to external description/ToC
 
-if any_match("f90[].*.n90", "Inhaltsverzeichnis|Inhaltstext")
+if any_match("url[].*.type", "Andere URL")
   set_array("description[]")
 end
 
-do list(path:"f90[]", "var": "$i")
-  if all_equal("$i.n90", "Volltext")
+do list(path:"url[]", "var": "$i")
+  if all_equal("$i.type", "Volltext")
     set_array("fulltextOnline[]")
-    copy_field("$i.f90_", "fulltextOnline[].$append.id")
-    copy_field("$i.f90_", "fulltextOnline[].$last.label")
+    copy_field("$i.value", "fulltextOnline[].$append.id")
+    copy_field("$i.value", "fulltextOnline[].$last.label")
     replace_all("fulltextOnline[].$last.label", "https://nbn-resolving.org/", "")
   
-  elsif all_equal("$i.n90", "Inhaltstext")
-    copy_field("$i.f90_", "description[].$append.id")
-    copy_field("$i.f90_", "description[].$last.label") 
-  
-  elsif all_equal("$i.n90", "Inhaltsverzeichnis")
-    copy_field("$i.f90_", "description[].$append.id")
-    copy_field("$i.f90_", "description[].$last.label")
+  elsif all_equal("$i.type", "Andere URL")
+    copy_field("$i.value", "description[].$append.id")
+    copy_field("$i.value", "description[].$last.label") 
+
   end
 end
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]")
+move_field("edition", "edition[]")
+
+retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]")
 
 vacuum()

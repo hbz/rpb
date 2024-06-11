@@ -106,5 +106,6 @@
   "fulltextOnline" : [ {
     "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-1643",
     "label" : "urn:nbn:de:hbz:061:2-1643"
-  } ]
+  } ],
+  "edition" : [ "[Ausg. Ill. mit Text]" ]
 }

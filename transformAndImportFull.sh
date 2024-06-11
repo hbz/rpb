@@ -30,8 +30,8 @@ sbt "runMain rpb.ETL conf/rpb-sw-import.flux IN_FILE=output-sw-strapi.ndjson HOS
 # Titeldaten
 sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
 # curl --request DELETE "http://$HOST:1337/api/articles/[1-5]"
-sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36_','u') PATH=articles HOST=$HOST API_TOKEN=$API_TOKEN"
+sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('type','u') PATH=articles HOST=$HOST API_TOKEN=$API_TOKEN"
 # curl --request DELETE "http://$HOST:1337/api/independent-works/[1-5]"
-sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36_','Monografie') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
-sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36_','Band') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
+sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
+sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
 sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"

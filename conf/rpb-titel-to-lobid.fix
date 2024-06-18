@@ -259,25 +259,25 @@ end
 
 # ------- Contribution -------
 
-put_map("uri-to-role",
-  "http://id.loc.gov/vocabulary/relators/aut": "Verfasser",
-  "http://id.loc.gov/vocabulary/relators/pbl": "Herausgeber",
-  "http://id.loc.gov/vocabulary/relators/ctb": "Mitwirkender",
-  "http://id.loc.gov/vocabulary/relators/edt": "Bearb.",
-  "http://id.loc.gov/vocabulary/relators/ccp": "Begr.",
-  "http://id.loc.gov/vocabulary/relators/col": "Sammler",
-  "http://id.loc.gov/vocabulary/relators/lbt": "Librettist",
-  "http://id.loc.gov/vocabulary/relators/trl": "Übersetzer",
-  "http://id.loc.gov/vocabulary/relators/ill": "Illustrator",
-  "http://id.loc.gov/vocabulary/relators/wst": "Verfasser von ergänzendem Text",
-  "http://id.loc.gov/vocabulary/relators/cmp": "Komponist",
-  "http://id.loc.gov/vocabulary/relators/red": "Red.",
-  "http://id.loc.gov/vocabulary/relators/oth": "Sonstige",
-  "http://id.loc.gov/vocabulary/relators/act": "Ausführender",
-  "http://id.loc.gov/vocabulary/relators/hnr": "Gefeierter",
-  "http://id.loc.gov/vocabulary/relators/org": "HE Urheber",
-  "http://id.loc.gov/vocabulary/relators/isb": "NE hrsg. Körperschaft",
-  "http://id.loc.gov/vocabulary/relators/hnr": "Gefeierte Körperschaft")
+put_map("role-to-uri",
+  "Verfasser" : "http://id.loc.gov/vocabulary/relators/aut",
+  "Herausgeber" : "http://id.loc.gov/vocabulary/relators/pbl",
+  "Mitwirkender" : "http://id.loc.gov/vocabulary/relators/ctb",
+  "Bearb." : "http://id.loc.gov/vocabulary/relators/edt",
+  "Begr." : "http://id.loc.gov/vocabulary/relators/ccp",
+  "Sammler" : "http://id.loc.gov/vocabulary/relators/col",
+  "Librettist" : "http://id.loc.gov/vocabulary/relators/lbt",
+  "Übersetzer" : "http://id.loc.gov/vocabulary/relators/trl",
+  "Illustrator" : "http://id.loc.gov/vocabulary/relators/ill",
+  "Verfasser von ergänzendem Text" : "http://id.loc.gov/vocabulary/relators/wst",
+  "Komponist" : "http://id.loc.gov/vocabulary/relators/cmp",
+  "Red." : "http://id.loc.gov/vocabulary/relators/red",
+  "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth",
+  "Ausführender" : "http://id.loc.gov/vocabulary/relators/act",
+  "Gefeierter" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "HE Urheber" : "http://id.loc.gov/vocabulary/relators/org",
+  "NE hrsg. Körperschaft" : "http://id.loc.gov/vocabulary/relators/isb",
+  "Gefeierte Körperschaft" : "http://id.loc.gov/vocabulary/relators/hnr")
 
 do put_macro("contributions")
   set_array("_temp")
@@ -290,7 +290,7 @@ do put_macro("contributions")
     lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
     copy_field("f.type", "c.role.id")
     copy_field("f.type", "c.role.label")
-    lookup("c.role.label", "uri-to-role")
+    lookup("c.role.id", "role-to-uri")
     lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
     if all_match("c.role.label","NE hrsg. Körperschaft|Gefeierte Körperschaft|HE Urheber")
       set_field("c.agent.type[]", "CorporateBody")

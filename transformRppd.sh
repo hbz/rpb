@@ -8,6 +8,7 @@ rm conf/output/bulk/rppd/*
 # sbt "runMain rpb.ETL conf/rppd-to-lobid.flux"
 # But now we use the Strapi export:
 zgrep -a '"type":"api::person.person"' conf/strapi-export.tar.gz > conf/output/rppd-export.jsonl
+cp conf/output/rppd-export.jsonl ../rppd/conf/ # used in rppd for robots.txt
 sbt "runMain rpb.ETL conf/rppd-to-gnd-mapping.flux"
 sbt "runMain rpb.ETL conf/rppd-rppdId-with-label-map.flux"
 sbt "runMain rpb.ETL conf/rppd-to-lobid.flux IN_FILE=rppd-export.jsonl RECORD_PATH=data"

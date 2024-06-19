@@ -275,9 +275,14 @@ put_map("role-to-uri",
   "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth",
   "Ausführender" : "http://id.loc.gov/vocabulary/relators/act",
   "Gefeierter" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Fotograf" : "http://id.loc.gov/vocabulary/relators/pht",
   "HE Urheber" : "http://id.loc.gov/vocabulary/relators/org",
   "NE hrsg. Körperschaft" : "http://id.loc.gov/vocabulary/relators/isb",
-  "Gefeierte Körperschaft" : "http://id.loc.gov/vocabulary/relators/hnr")
+  "Gefeierte Körperschaft" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Veranstalter" : "http://id.loc.gov/vocabulary/relators/orm",
+  "Geistiger Schöpfer" : "http://id.loc.gov/vocabulary/relators/cre",
+  "Auftraggeber" : "http://id.loc.gov/vocabulary/relators/pat",
+  "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth")
 
 do put_macro("contributions")
   set_array("_temp")

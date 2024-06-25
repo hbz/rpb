@@ -120,7 +120,7 @@
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ctb",
-      "label" : "Mitwirkender"
+      "label" : "Mitwirkung"
     },
     "type" : [ "Contribution" ]
   }, {

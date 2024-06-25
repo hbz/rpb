@@ -61,8 +61,8 @@
       "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/pbl",
-      "label" : "Herausgeber"
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
     },
     "type" : [ "Contribution" ]
   } ],

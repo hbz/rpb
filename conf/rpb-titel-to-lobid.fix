@@ -260,27 +260,23 @@ end
 # ------- Contribution -------
 
 put_map("role-to-uri",
-  "Verfasser" : "http://id.loc.gov/vocabulary/relators/aut",
-  "Herausgeber" : "http://id.loc.gov/vocabulary/relators/pbl",
-  "Mitwirkender" : "http://id.loc.gov/vocabulary/relators/ctb",
-  "Bearb." : "http://id.loc.gov/vocabulary/relators/edt",
-  "Begr." : "http://id.loc.gov/vocabulary/relators/ccp",
-  "Sammler" : "http://id.loc.gov/vocabulary/relators/col",
-  "Librettist" : "http://id.loc.gov/vocabulary/relators/lbt",
-  "Übersetzer" : "http://id.loc.gov/vocabulary/relators/trl",
-  "Illustrator" : "http://id.loc.gov/vocabulary/relators/ill",
-  "Verfasser von ergänzendem Text" : "http://id.loc.gov/vocabulary/relators/wst",
-  "Komponist" : "http://id.loc.gov/vocabulary/relators/cmp",
-  "Red." : "http://id.loc.gov/vocabulary/relators/red",
-  "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth",
-  "Ausführender" : "http://id.loc.gov/vocabulary/relators/act",
-  "Gefeierter" : "http://id.loc.gov/vocabulary/relators/hnr",
-  "Fotograf" : "http://id.loc.gov/vocabulary/relators/pht",
-  "HE Urheber" : "http://id.loc.gov/vocabulary/relators/org",
-  "NE hrsg. Körperschaft" : "http://id.loc.gov/vocabulary/relators/isb",
+  "Verfasser/in" : "http://id.loc.gov/vocabulary/relators/aut",
+  "Herausgeber/in" : "http://id.loc.gov/vocabulary/relators/edt",
+  "Mitwirkung" : "http://id.loc.gov/vocabulary/relators/ctb",
+  "Begründer/in eines Werks" : "http://id.loc.gov/vocabulary/relators/ccp",
+  "Sammler/in" : "http://id.loc.gov/vocabulary/relators/col",
+  "Libretto" : "http://id.loc.gov/vocabulary/relators/lbt",
+  "Übersetzer/in" : "http://id.loc.gov/vocabulary/relators/trl",
+  "Illustrator/in" : "http://id.loc.gov/vocabulary/relators/ill",
+  "Verfasser/in von ergänzendem Text" : "http://id.loc.gov/vocabulary/relators/wst",
+  "Komponist/in" : "http://id.loc.gov/vocabulary/relators/cmp",
+  "Performer/in" : "http://id.loc.gov/vocabulary/relators/pfr",
+  "Gefeierte Person" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Fotograf/in" : "http://id.loc.gov/vocabulary/relators/pht",
+  "Geistiger Schöpfer" : "http://id.loc.gov/vocabulary/relators/cre",
+  "Herausgebendes Organ" : "http://id.loc.gov/vocabulary/relators/isb",
   "Gefeierte Körperschaft" : "http://id.loc.gov/vocabulary/relators/hnr",
   "Veranstalter" : "http://id.loc.gov/vocabulary/relators/orm",
-  "Geistiger Schöpfer" : "http://id.loc.gov/vocabulary/relators/cre",
   "Auftraggeber" : "http://id.loc.gov/vocabulary/relators/pat",
   "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth")
 
@@ -296,8 +292,7 @@ do put_macro("contributions")
     copy_field("f.type", "c.role.id")
     copy_field("f.type", "c.role.label")
     lookup("c.role.id", "role-to-uri")
-    lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
-    if all_match("c.role.label","NE hrsg. Körperschaft|Gefeierte Körperschaft|HE Urheber")
+    if all_match("c.role.label","Geistiger Schöpfer|Herausgebendes Organ|Gefeierte Körperschaft|Veranstalter|Auftraggeber")
       set_field("c.agent.type[]", "CorporateBody")
     end
     set_array("c.type[]", "Contribution")

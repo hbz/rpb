@@ -80,16 +80,5 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "[Sebapharma GmbH & Co. KG, Boppard]",
-      "label" : "[Sebapharma GmbH & Co. KG, Boppard]",
-      "type" : [ "CorporateBody" ]
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/cre",
-      "label" : "Geistiger Schöpfer"
-    },
-    "type" : [ "Contribution" ]
   } ]
 }

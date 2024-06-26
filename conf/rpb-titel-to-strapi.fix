@@ -216,6 +216,7 @@ call_macro("contribution_to_uri", field: "person")
 # Körperschaft
 set_array("corporateBody[]")
 
+remove_field("f60e") # redundante alte RAK-Angabe (s. RPB-79)
 call_macro("move", to: "corporateBody", from: "f60?", type: "Geistiger Schöpfer")
 call_macro("move", to: "corporateBody", from: "f61?", type: "Herausgebendes Organ")
 call_macro("move", to: "corporateBody", from: "f69?", type: "Gefeierte Körperschaft")

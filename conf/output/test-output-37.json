@@ -63,16 +63,5 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "Südwestrundfunk",
-      "label" : "Südwestrundfunk",
-      "type" : [ "CorporateBody" ]
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/cre",
-      "label" : "Geistiger Schöpfer"
-    },
-    "type" : [ "Contribution" ]
   } ]
 }

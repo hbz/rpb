@@ -63,16 +63,5 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "VCN 77",
-      "label" : "VCN 77",
-      "type" : [ "CorporateBody" ]
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/cre",
-      "label" : "Geistiger Schöpfer"
-    },
-    "type" : [ "Contribution" ]
   } ]
 }

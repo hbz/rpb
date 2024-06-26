@@ -67,16 +67,5 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "SC Wassenach 1957",
-      "label" : "SC Wassenach 1957",
-      "type" : [ "CorporateBody" ]
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/cre",
-      "label" : "Geistiger Schöpfer"
-    },
-    "type" : [ "Contribution" ]
   } ]
 }

@@ -31,5 +31,6 @@ GET    /assets/*file          controllers.Assets.at(path="/public", file)
 GET    /robots.txt            controllers.Assets.at(path="/public",file="robots.txt")
 
 GET    /cgi-bin/wwwalleg/:name.pl   controllers.nwbib.Application.showPl(name, db ?= "rnam", index: Int ?= 1, zeilen: Int ?= 1, s1)
+GET    /sw/:rpbId             controllers.nwbib.Application.showSw(rpbId)
 GET    /o:id                  controllers.nwbib.Application.searchSpatial(id, from:Int?=0, size:Int?=25, format?="html")
 GET    /:id                   controllers.nwbib.Application.show(id, format ?= "")

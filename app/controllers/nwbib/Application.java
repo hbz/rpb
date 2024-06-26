@@ -901,6 +901,12 @@ public class Application extends Controller {
 				});
 	}
 
+	public static Promise<Result> showSw(String rpbId) {
+		String strapiUrl = "https://rpb-cms.lobid.org/admin/content-manager/collectionType/"
+				+ "api::rpb-authority.rpb-authority?filters[$and][0][rpbId][$eq]=";
+		return Promise.pure(seeOther(strapiUrl + rpbId));
+	}
+
 	/**
 	 * @param ids The ids of the resources to unstar, or empty string to clear all
 	 * @return If ids is empty: an OK result to confirm deletion of all starred

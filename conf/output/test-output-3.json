@@ -89,7 +89,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
+      "id" : "http://rpb.lobid.org/sw/00Pn01k18744579a",
       "label" : "Rethel, Alfred",
       "type" : [ "Person" ]
     },

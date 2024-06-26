@@ -65,7 +65,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2440560a",
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2440560a",
       "label" : "Hamacher, Rolfjosef",
       "type" : [ "Person" ]
     },

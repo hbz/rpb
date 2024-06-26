@@ -68,7 +68,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02s0203b",
+      "id" : "http://rpb.lobid.org/sw/00Pn02s0203b",
       "label" : "Letzelter, Manfred",
       "type" : [ "Person" ]
     },

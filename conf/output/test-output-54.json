@@ -59,7 +59,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
+      "id" : "http://rpb.lobid.org/sw/00Pn08k0685884a",
       "label" : "Ruland, Wolfgang",
       "type" : [ "Person" ]
     },

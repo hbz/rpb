@@ -53,7 +53,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn04k3045137a",
+      "id" : "http://rpb.lobid.org/sw/00Pn04k3045137a",
       "label" : "Keller, Ulrich",
       "type" : [ "Person" ]
     },

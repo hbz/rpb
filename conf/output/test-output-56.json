@@ -52,7 +52,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/929n991002",
+      "id" : "http://rpb.lobid.org/sw/929n991002",
       "label" : "Weger, Joachim",
       "type" : [ "Person" ]
     },

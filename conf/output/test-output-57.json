@@ -76,7 +76,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2198999a",
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2198999a",
       "label" : "Berger, John",
       "type" : [ "Person" ]
     },

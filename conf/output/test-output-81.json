@@ -75,7 +75,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040b",
+      "id" : "http://rpb.lobid.org/sw/00Pn93k0040b",
       "label" : "Cools, Angelita",
       "type" : [ "Person" ]
     },
@@ -86,7 +86,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040c",
+      "id" : "http://rpb.lobid.org/sw/00Pn93k0040c",
       "label" : "Wijnpersse, Hildegard ¬van de¬",
       "type" : [ "Person" ]
     },
@@ -97,7 +97,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040d",
+      "id" : "http://rpb.lobid.org/sw/00Pn93k0040d",
       "label" : "Ackermans, Gian",
       "type" : [ "Person" ]
     },

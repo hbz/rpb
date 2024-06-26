@@ -74,7 +74,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372a",
+      "id" : "http://rpb.lobid.org/sw/00Pn98s2372a",
       "label" : "Kemen, Karl-Ludwig",
       "type" : [ "Person" ]
     },
@@ -85,7 +85,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372b",
+      "id" : "http://rpb.lobid.org/sw/00Pn98s2372b",
       "label" : "Laubscher, Gerhard",
       "type" : [ "Person" ]
     },

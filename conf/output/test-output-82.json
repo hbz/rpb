@@ -55,7 +55,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn92k0749a",
+      "id" : "http://rpb.lobid.org/sw/00Pn92k0749a",
       "label" : "Hellmann, Hubert",
       "type" : [ "Person" ]
     },

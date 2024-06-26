@@ -56,7 +56,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Gn18s2053186a",
+      "id" : "http://rpb.lobid.org/sw/00Gn18s2053186a",
       "label" : "Naschert, Guido",
       "type" : [ "Person" ]
     },

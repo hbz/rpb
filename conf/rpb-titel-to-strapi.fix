@@ -105,6 +105,7 @@ do list (path:"spatial[]", "var": "$i")
     replace_all("$i.value","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
   end
 end
+uniq("spatial[]")
 
 call_macro("move_all", to: "subjectComponentList", from: "f32?") # Schlagwortkette
 do list (path:"subjectComponentList[]", "var": "$i")

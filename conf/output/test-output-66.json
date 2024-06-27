@@ -34,7 +34,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08s0514595a",
+      "id" : "http://rpb.lobid.org/sw/00Sn08s0514595a",
       "label" : "Geschichte 1908-2008",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",

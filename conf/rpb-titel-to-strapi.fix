@@ -116,7 +116,7 @@ end
 do list (path:"subjectComponentList[].*.subjectComponent[]", "var": "$i")
   replace_all("$i.value","_(.*)_","$1")
   if all_match("$i.value","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
-    prepend("$i.value", "https://rpb.lobid.org/sw/")
+    prepend("$i.value", "http://rpb.lobid.org/sw/")
   else
     replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
     prepend("$i.value", "https://d-nb.info/gnd/")

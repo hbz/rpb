@@ -33,14 +33,14 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Hainfeld / Familie | Geschichte 1100-1300",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/00Sn01s147870528a",
+      "id" : "http://rpb.lobid.org/sw/00Sn01s147870528a",
       "label" : "Hainfeld / Familie",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn06k1444137a",
+      "id" : "http://rpb.lobid.org/sw/00Sn06k1444137a",
       "label" : "Geschichte 1100-1300",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",

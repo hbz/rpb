@@ -38,7 +38,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z48",
+      "id" : "http://rpb.lobid.org/sw/z48",
       "label" : "Geschichte 1800-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -49,14 +49,14 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Kongregation der Franziskanerinnen von Heythuysen | Geschichte 1800-",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/00Sn93k0040a",
+      "id" : "http://rpb.lobid.org/sw/00Sn93k0040a",
       "label" : "Kongregation der Franziskanerinnen von Heythuysen",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z48",
+      "id" : "http://rpb.lobid.org/sw/z48",
       "label" : "Geschichte 1800-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",

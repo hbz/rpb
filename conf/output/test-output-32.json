@@ -55,7 +55,7 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/107n220353",
+      "id" : "http://rpb.lobid.org/sw/107n220353",
       "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",

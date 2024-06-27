@@ -65,13 +65,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/929n981242",
+      "id" : "http://rpb.lobid.org/sw/929n981242",
       "label" : "Strauß, Torsten",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],

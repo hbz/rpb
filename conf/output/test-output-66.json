@@ -34,7 +34,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08s0514595a",
+      "id" : "http://rpb.lobid.org/sw/00Sn08s0514595a",
       "label" : "Geschichte 1908-2008",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -53,7 +53,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn04k3045137a",
+      "id" : "http://rpb.lobid.org/sw/00Pn04k3045137a",
       "label" : "Keller, Ulrich",
       "type" : [ "Person" ]
     },
@@ -69,8 +69,8 @@
       "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
   } ]

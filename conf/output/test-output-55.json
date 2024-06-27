@@ -34,7 +34,7 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Deutscher Orden / Kommende Waldbreitbach | Denkmalschutz | Schicker, Viktor | Private Investition | Geschichte 2009-2011",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n090287",
+      "id" : "http://rpb.lobid.org/sw/929n090287",
       "label" : "Deutscher Orden / Kommende Waldbreitbach",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -48,7 +48,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09k1362487a",
+      "id" : "http://rpb.lobid.org/sw/00Sn09k1362487a",
       "label" : "Schicker, Viktor",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -62,7 +62,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09m0508511a",
+      "id" : "http://rpb.lobid.org/sw/00Sn09m0508511a",
       "label" : "Geschichte 2009-2011",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -81,13 +81,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
+      "id" : "http://rpb.lobid.org/sw/00Pn08k0685884a",
       "label" : "Ruland, Wolfgang",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],

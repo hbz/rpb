@@ -61,7 +61,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k4656727a",
+      "id" : "http://rpb.lobid.org/sw/00Pn08k4656727a",
       "label" : "Thelen, Michael",
       "type" : [ "Person" ]
     },
@@ -72,7 +72,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn95s0673b",
+      "id" : "http://rpb.lobid.org/sw/00Pn95s0673b",
       "label" : "Wolf, Hans",
       "type" : [ "Person" ]
     },

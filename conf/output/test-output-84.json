@@ -56,13 +56,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Gn18s2053186a",
+      "id" : "http://rpb.lobid.org/sw/00Gn18s2053186a",
       "label" : "Naschert, Guido",
       "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/pbl",
-      "label" : "Herausgeber"
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
     },
     "type" : [ "Contribution" ]
   } ],

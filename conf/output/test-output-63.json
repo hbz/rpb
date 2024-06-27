@@ -61,7 +61,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08k4658445b",
+      "id" : "http://rpb.lobid.org/sw/00Sn08k4658445b",
       "label" : "Reichenhall / 2007",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -114,7 +114,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08k4658445b",
+      "id" : "http://rpb.lobid.org/sw/00Sn08k4658445b",
       "label" : "Reichenhall / 2007",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",

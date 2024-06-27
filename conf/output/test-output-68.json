@@ -76,7 +76,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k4686808a",
+      "id" : "http://rpb.lobid.org/sw/00Pn08k4686808a",
       "label" : "Breeze, David John",
       "type" : [ "Person" ]
     },
@@ -87,7 +87,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k4686449b",
+      "id" : "http://rpb.lobid.org/sw/00Pn08k4686449b",
       "label" : "Jilek, Sonja",
       "type" : [ "Person" ]
     },

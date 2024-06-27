@@ -70,35 +70,35 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18192455a",
+      "id" : "http://rpb.lobid.org/sw/00Pn01k18192455a",
       "label" : "Reumont, Alfred ¬von¬",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2205906a",
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2205906a",
       "label" : "Kretzschmer, Hermann",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
+      "label" : "Illustrator/in"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k18744579a",
+      "id" : "http://rpb.lobid.org/sw/00Pn01k18744579a",
       "label" : "Rethel, Alfred",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ill",
-      "label" : "Illustrator"
+      "label" : "Illustrator/in"
     },
     "type" : [ "Contribution" ]
   } ],

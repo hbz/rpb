@@ -68,13 +68,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2191236a",
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2191236a",
       "label" : "Oetz, Erich",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ]

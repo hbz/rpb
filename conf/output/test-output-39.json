@@ -35,7 +35,7 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Geschichte 1945- | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/z64",
+      "id" : "http://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -67,7 +67,7 @@
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "label" : "Herausgebendes Organ"
     },
     "type" : [ "Contribution" ]
   } ]

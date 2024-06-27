@@ -50,7 +50,7 @@ do put_macro("contribution_to_uri")
   do list (path:"$[field][]", "var": "$i")
     replace_all("$i.value","_(.*)_","$1")
     if all_match("$i.value","^00.*|^107n.*|^929n.*")
-      prepend("$i.value", "https://rpb.lobid.org/agent/")
+      prepend("$i.value", "http://rpb.lobid.org/sw/")
     elsif all_match("$i.value","^\\d.*")
       replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
       prepend("$i.value", "https://d-nb.info/gnd/")
@@ -105,6 +105,7 @@ do list (path:"spatial[]", "var": "$i")
     replace_all("$i.value","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
   end
 end
+uniq("spatial[]")
 
 call_macro("move_all", to: "subjectComponentList", from: "f32?") # Schlagwortkette
 do list (path:"subjectComponentList[]", "var": "$i")
@@ -115,7 +116,7 @@ end
 do list (path:"subjectComponentList[].*.subjectComponent[]", "var": "$i")
   replace_all("$i.value","_(.*)_","$1")
   if all_match("$i.value","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
-    prepend("$i.value", "https://rpb.lobid.org/sw/")
+    prepend("$i.value", "http://rpb.lobid.org/sw/")
   else
     replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
     prepend("$i.value", "https://d-nb.info/gnd/")
@@ -194,30 +195,31 @@ move_field("f90a", "item[].$append.value") # Signatur
 # Person
 set_array("person[]")
 
-call_macro("move", to: "person", from: "f40?", type: "http://id.loc.gov/vocabulary/relators/aut")
-call_macro("move", to: "person", from: "f41?", type: "http://id.loc.gov/vocabulary/relators/pbl")
-call_macro("move", to: "person", from: "f42?", type: "http://id.loc.gov/vocabulary/relators/ctb")
-call_macro("move", to: "person", from: "f43?", type: "http://id.loc.gov/vocabulary/relators/edt")
-call_macro("move", to: "person", from: "f44?", type: "http://id.loc.gov/vocabulary/relators/ccp")
-call_macro("move", to: "person", from: "f45?", type: "http://id.loc.gov/vocabulary/relators/col")
-call_macro("move", to: "person", from: "f46?", type: "http://id.loc.gov/vocabulary/relators/lbt")
-call_macro("move", to: "person", from: "f47?", type: "http://id.loc.gov/vocabulary/relators/trl")
-call_macro("move", to: "person", from: "f50?", type: "http://id.loc.gov/vocabulary/relators/ill")
-call_macro("move", to: "person", from: "f51?", type: "http://id.loc.gov/vocabulary/relators/wst")
-call_macro("move", to: "person", from: "f52?", type: "http://id.loc.gov/vocabulary/relators/cmp")
-call_macro("move", to: "person", from: "f56?", type: "http://id.loc.gov/vocabulary/relators/red")
-call_macro("move", to: "person", from: "f57?", type: "http://id.loc.gov/vocabulary/relators/oth")
-call_macro("move", to: "person", from: "f58?", type: "http://id.loc.gov/vocabulary/relators/act")
-call_macro("move", to: "person", from: "f59?", type: "http://id.loc.gov/vocabulary/relators/hnr")
+call_macro("move", to: "person", from: "f40?", type: "Verfasser/in")
+call_macro("move", to: "person", from: "f41?", type: "Herausgeber/in")
+call_macro("move", to: "person", from: "f42?", type: "Mitwirkung")
+call_macro("move", to: "person", from: "f43?", type: "Herausgeber/in")
+call_macro("move", to: "person", from: "f44?", type: "Begründer/in eines Werks")
+call_macro("move", to: "person", from: "f45?", type: "Sammler/in")
+call_macro("move", to: "person", from: "f46?", type: "Libretto")
+call_macro("move", to: "person", from: "f47?", type: "Übersetzer/in")
+call_macro("move", to: "person", from: "f50?", type: "Illustrator/in")
+call_macro("move", to: "person", from: "f51?", type: "Verfasser/in von ergänzendem Text")
+call_macro("move", to: "person", from: "f52?", type: "Komponist/in")
+call_macro("move", to: "person", from: "f56?", type: "Herausgeber/in")
+call_macro("move", to: "person", from: "f57?", type: "Sonstige")
+call_macro("move", to: "person", from: "f58?", type: "Performer/in")
+call_macro("move", to: "person", from: "f59?", type: "Gefeierte Person")
 
 call_macro("contribution_to_uri", field: "person")
 
 # Körperschaft
 set_array("corporateBody[]")
 
-call_macro("move", to: "corporateBody", from: "f60?", type: "http://id.loc.gov/vocabulary/relators/org")
-call_macro("move", to: "corporateBody", from: "f61?", type: "http://id.loc.gov/vocabulary/relators/isb")
-call_macro("move", to: "corporateBody", from: "f69?", type: "http://id.loc.gov/vocabulary/relators/hnr")
+remove_field("f60e") # redundante alte RAK-Angabe (s. RPB-79)
+call_macro("move", to: "corporateBody", from: "f60?", type: "Geistiger Schöpfer")
+call_macro("move", to: "corporateBody", from: "f61?", type: "Herausgebendes Organ")
+call_macro("move", to: "corporateBody", from: "f69?", type: "Gefeierte Körperschaft")
 
 call_macro("contribution_to_uri", field: "corporateBody")
 

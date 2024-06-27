@@ -209,7 +209,7 @@ do
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
   lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-  if all_match("$i.id","^https://rpb.lobid.org/sw/.*$")
+  if all_match("$i.id","^http://rpb.lobid.org/sw/.*$")
     add_field("$i.source.id", "http://rpb.lobid.org/sw")
     add_field("$i.source.label", "RPB-Sachsystematik")
   else
@@ -259,25 +259,26 @@ end
 
 # ------- Contribution -------
 
-put_map("uri-to-role",
-  "http://id.loc.gov/vocabulary/relators/aut": "Verfasser",
-  "http://id.loc.gov/vocabulary/relators/pbl": "Herausgeber",
-  "http://id.loc.gov/vocabulary/relators/ctb": "Mitwirkender",
-  "http://id.loc.gov/vocabulary/relators/edt": "Bearb.",
-  "http://id.loc.gov/vocabulary/relators/ccp": "Begr.",
-  "http://id.loc.gov/vocabulary/relators/col": "Sammler",
-  "http://id.loc.gov/vocabulary/relators/lbt": "Librettist",
-  "http://id.loc.gov/vocabulary/relators/trl": "Übersetzer",
-  "http://id.loc.gov/vocabulary/relators/ill": "Illustrator",
-  "http://id.loc.gov/vocabulary/relators/wst": "Verfasser von ergänzendem Text",
-  "http://id.loc.gov/vocabulary/relators/cmp": "Komponist",
-  "http://id.loc.gov/vocabulary/relators/red": "Red.",
-  "http://id.loc.gov/vocabulary/relators/oth": "Sonstige",
-  "http://id.loc.gov/vocabulary/relators/act": "Ausführender",
-  "http://id.loc.gov/vocabulary/relators/hnr": "Gefeierter",
-  "http://id.loc.gov/vocabulary/relators/org": "HE Urheber",
-  "http://id.loc.gov/vocabulary/relators/isb": "NE hrsg. Körperschaft",
-  "http://id.loc.gov/vocabulary/relators/hnr": "Gefeierte Körperschaft")
+put_map("role-to-uri",
+  "Verfasser/in" : "http://id.loc.gov/vocabulary/relators/aut",
+  "Herausgeber/in" : "http://id.loc.gov/vocabulary/relators/edt",
+  "Mitwirkung" : "http://id.loc.gov/vocabulary/relators/ctb",
+  "Begründer/in eines Werks" : "http://id.loc.gov/vocabulary/relators/ccp",
+  "Sammler/in" : "http://id.loc.gov/vocabulary/relators/col",
+  "Libretto" : "http://id.loc.gov/vocabulary/relators/lbt",
+  "Übersetzer/in" : "http://id.loc.gov/vocabulary/relators/trl",
+  "Illustrator/in" : "http://id.loc.gov/vocabulary/relators/ill",
+  "Verfasser/in von ergänzendem Text" : "http://id.loc.gov/vocabulary/relators/wst",
+  "Komponist/in" : "http://id.loc.gov/vocabulary/relators/cmp",
+  "Performer/in" : "http://id.loc.gov/vocabulary/relators/pfr",
+  "Gefeierte Person" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Fotograf/in" : "http://id.loc.gov/vocabulary/relators/pht",
+  "Geistiger Schöpfer" : "http://id.loc.gov/vocabulary/relators/cre",
+  "Herausgebendes Organ" : "http://id.loc.gov/vocabulary/relators/isb",
+  "Gefeierte Körperschaft" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Veranstalter" : "http://id.loc.gov/vocabulary/relators/orm",
+  "Auftraggeber" : "http://id.loc.gov/vocabulary/relators/pat",
+  "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth")
 
 do put_macro("contributions")
   set_array("_temp")
@@ -290,9 +291,8 @@ do put_macro("contributions")
     lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
     copy_field("f.type", "c.role.id")
     copy_field("f.type", "c.role.label")
-    lookup("c.role.label", "uri-to-role")
-    lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
-    if all_match("c.role.label","NE hrsg. Körperschaft|Gefeierte Körperschaft|HE Urheber")
+    lookup("c.role.id", "role-to-uri")
+    if all_match("c.role.label","Geistiger Schöpfer|Herausgebendes Organ|Gefeierte Körperschaft|Veranstalter|Auftraggeber")
       set_field("c.agent.type[]", "CorporateBody")
     end
     set_array("c.type[]", "Contribution")

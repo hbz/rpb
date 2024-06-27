@@ -60,7 +60,7 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0717486a",
+      "id" : "http://rpb.lobid.org/sw/00Pn08k0717486a",
       "label" : "Moos, Gerd",
       "type" : [ "Person" ]
     },

@@ -39,7 +39,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn01s147878357a",
+      "id" : "http://rpb.lobid.org/sw/00Sn01s147878357a",
       "label" : "Geschichte 1979-1982",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -64,7 +64,7 @@
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],

@@ -114,13 +114,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Gn11k2199217a",
+      "id" : "http://rpb.lobid.org/sw/00Gn11k2199217a",
       "label" : "Rausch, Johannes / 1703-1730",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/ctb",
-      "label" : "Mitwirkender"
+      "label" : "Mitwirkung"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -136,7 +136,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01k23917383a",
+      "id" : "http://rpb.lobid.org/sw/00Pn01k23917383a",
       "label" : "Homann, ...",
       "type" : [ "Person" ]
     },
@@ -147,7 +147,7 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01t22981785a",
+      "id" : "http://rpb.lobid.org/sw/00Pn01t22981785a",
       "label" : "Rausch, Johannes",
       "type" : [ "Person" ]
     },

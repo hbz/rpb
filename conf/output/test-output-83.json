@@ -26,7 +26,7 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Wiedweg | Führer",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n110124",
+      "id" : "http://rpb.lobid.org/sw/929n110124",
       "label" : "Wiedweg",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",

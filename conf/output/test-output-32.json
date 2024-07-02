@@ -55,7 +55,7 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/107n220353",
+      "id" : "http://rpb.lobid.org/sw/107n220353",
       "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -74,24 +74,24 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372a",
+      "id" : "http://rpb.lobid.org/sw/00Pn98s2372a",
       "label" : "Kemen, Karl-Ludwig",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372b",
+      "id" : "http://rpb.lobid.org/sw/00Pn98s2372b",
       "label" : "Laubscher, Gerhard",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],

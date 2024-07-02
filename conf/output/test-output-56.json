@@ -33,7 +33,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn10s3817103a",
+      "id" : "http://rpb.lobid.org/sw/00Sn10s3817103a",
       "label" : "Geschichte 1911-2011",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -52,13 +52,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/929n991002",
+      "id" : "http://rpb.lobid.org/sw/929n991002",
       "label" : "Weger, Joachim",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],

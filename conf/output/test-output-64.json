@@ -54,7 +54,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08k0845220a",
+      "id" : "http://rpb.lobid.org/sw/00Sn08k0845220a",
       "label" : "Neuwied / 2007",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -100,7 +100,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn08k0845220a",
+      "id" : "http://rpb.lobid.org/sw/00Sn08k0845220a",
       "label" : "Neuwied / 2007",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -154,7 +154,7 @@
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "NE hrsg. Körperschaft"
+      "label" : "Herausgebendes Organ"
     },
     "type" : [ "Contribution" ]
   } ]

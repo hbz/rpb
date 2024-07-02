@@ -29,7 +29,7 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Geschichte 1945- | Bericht",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/z64",
+      "id" : "http://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -55,13 +55,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn92k0749a",
+      "id" : "http://rpb.lobid.org/sw/00Pn92k0749a",
       "label" : "Hellmann, Hubert",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ]

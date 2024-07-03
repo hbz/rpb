@@ -360,7 +360,7 @@ public class Classification {
 				if(broader == null || broader.trim().isEmpty()) {
 					// directly under n6
 					topClasses.add(Json.toJson(ImmutableMap.of("value", id, "label", label)));
-				} else if (hits > 0) {
+				} else if (hits > 0 || Play.isTest()) { /* SpatialToSkos uses Play test server */
 					String broaderId = RPB_SPATIAL + "n" + broader;
 					if (!subClasses.containsKey(broaderId))
 						subClasses.put(broaderId, new ArrayList<JsonNode>());

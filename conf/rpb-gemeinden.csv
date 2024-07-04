@@ -3308,9 +3308,9 @@ GemSchlNr,WpNr,Gemeinde_Gemeindeteile,Landkreis,Verbandsgemeinde,PLZ
 14008058,,Horn,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,55469
 14008065,,Keidelheim,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,55471
 14008068,,Kisselbach,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,56291
-14006068,0101,Grings-Mühle,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
-14006068,0102,Kesselhannesmühle,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
-14006068,0103,Ölmühle,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
+14008068,0101,Grings-Mühle,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
+14008068,0102,Kesselhannesmühle,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
+14008068,0103,Ölmühle,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
 14008070,,Klosterkumbd,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,55469
 14008070,0101,Birkenhof,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
 14008070,0102,Binnenbergermühle,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
@@ -3387,9 +3387,9 @@ GemSchlNr,WpNr,Gemeinde_Gemeindeteile,Landkreis,Verbandsgemeinde,PLZ
 14008127,0102,Kallerbacherhof,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
 14008127,0103,Lindenhof,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
 14008134,,Sargenroth,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,55471
-14007134,0101,Forsthaus Ellerspring,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
-14007134,0102,Johanneshof,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
-14007134,0103,Wildburg,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
+14008134,0101,Forsthaus Ellerspring,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
+14008134,0102,Johanneshof,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
+14008134,0103,Wildburg,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
 14008138,,Schnorbach,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,55497
 14008139,,Schönborn,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,55469
 14008139,0101,Sonnenhof,Rhein-Hunsrück-Kreis,Simmern-Rheinböllen,
@@ -8446,7 +8446,7 @@ GemSchlNr,WpNr,Gemeinde_Gemeindeteile,Landkreis,Verbandsgemeinde,PLZ
 33307024,,Gehrweiler,Donnersberg-Kreis,Nordpfälzer Land,67724
 33307024,0101,Gehrweilermühle,Donnersberg-Kreis,Nordpfälzer Land,
 33307025,,Gerbach,Donnersberg-Kreis,Nordpfälzer Land,67813
-333075025,0101,Althof,Donnersberg-Kreis,Nordpfälzer Land,
+33307025,0101,Althof,Donnersberg-Kreis,Nordpfälzer Land,
 33307025,0102,Kahlenbergweiher,Donnersberg-Kreis,Nordpfälzer Land,
 33307025,0103,Köhlerhof,Donnersberg-Kreis,Nordpfälzer Land,
 33307025,0104,Schneebergerhof,Donnersberg-Kreis,Nordpfälzer Land,

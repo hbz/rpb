@@ -75,7 +75,7 @@ public class SpatialToSkos {
 						"en")
 				.addProperty(DCTerms.license, model.createResource("http://creativecommons.org/publicdomain/zero/1.0/"))
 				.addProperty(DCTerms.description,
-						"This controlled vocabulary for areas in Rineland-Palatinate was created for use in the Bibliography of Rhineland (RPB).")
+						"This controlled vocabulary for areas in Rineland-Palatinate was created for use in the Bibliography of Rhineland (RPB).", "en")
 				.addProperty(DCTerms.issued, "2022-08-26")
 				.addProperty(DCTerms.modified, ZonedDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE))
 				.addProperty(DCTerms.publisher, model.createResource("http://lobid.org/organisations/DE-605"))

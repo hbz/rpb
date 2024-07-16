@@ -305,22 +305,6 @@ set_array("contribution[]")
 call_macro("contributions", from: "person")
 call_macro("contributions", from: "corporateBody")
 
-# ------- bibliographicCitation -------
-# Siehe https://jira.hbz-nrw.de/browse/RPB-26
-
-# TODO: move to rpb-titel-to-strapi.fix, see https://jira.hbz-nrw.de/browse/RPB-177
-if exists ("f70t")
-  do list(path:"f70*", "var": "$i")
-    paste("bibliographicCitation.value", "~In: ", "f70k", "~: ", "f70t", "~. - ", 
-      "bibliographicCitation.volume", "~ (", "bibliographicCitation.year", "~), ", 
-      "bibliographicCitation.issue", " ", "bibliographicCitation.alternativeNumbering", 
-      "~, Seite ", "bibliographicCitation.pages", "~. -" join_char: "")
-    replace_all("bibliographicCitation.value", "In: : ", "In: ")
-    replace_all("bibliographicCitation.value", ", Seite . -$", "")
-    replace_all("bibliographicCitation.value", "  ", " ")
-    replace_all("bibliographicCitation.value", ", , ", ", ")
-  end
-end
 move_field("bibliographicCitation.value", "_temp")
 remove_field("bibliographicCitation")
 move_field("_temp", "bibliographicCitation")

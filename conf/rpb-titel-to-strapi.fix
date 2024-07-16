@@ -150,10 +150,22 @@ unless exists("f39_")
 end
 move_field("f39_", "responsibilityStatement")
 
+# Quelle, s. https://jira.hbz-nrw.de/browse/RPB-26, https://jira.hbz-nrw.de/browse/RPB-177
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
 if all_equal("type", "u")
   unless exists("bibliographicCitation.value")
-    add_field("bibliographicCitation.value", "s. spez. Felder (volume, issue, etc.)")
+    if exists ("f70t")
+      paste("bibliographicCitation.value", "~In: ", "f70k", "~: ", "f70t", "~. - ", 
+        "bibliographicCitation.volume", "~ (", "bibliographicCitation.year", "~), ", 
+        "bibliographicCitation.issue", " ", "bibliographicCitation.alternativeNumbering", 
+        "~, Seite ", "bibliographicCitation.pages", "~. -" join_char: "")
+      replace_all("bibliographicCitation.value", "In: : ", "In: ")
+      replace_all("bibliographicCitation.value", ", Seite . -$", "")
+      replace_all("bibliographicCitation.value", "  ", " ")
+      replace_all("bibliographicCitation.value", ", , ", ", ")
+    else
+      add_field("bibliographicCitation.value", "s. spez. Felder (volume, issue, etc.)")
+    end
   end
 end
 
@@ -162,11 +174,11 @@ unless exists("bibliographicCitation.pages")
  if all_equal("type", "u")
   if exists("bibliographicCitation")
     copy_field("bibliographicCitation.value", "bibliographicCitation.pages")
-    prepend("bibliographicCitation.pages", "Kopiert aus bibliographicCitation: ")
+    prepend("bibliographicCitation.pages", "Kopiert aus #70~, #701 ff.: ")
     put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
     if all_match("bibliographicCitation.value", "$[pages]")
       if is_string("bibliographicCitation.value")
-        replace_all("bibliographicCitation.pages", "$[pages]", "Aus bibliographicCitation: $1")
+        replace_all("bibliographicCitation.pages", "$[pages]", "Aus #70~, #701 ff.: $1")
       end
     end
   else

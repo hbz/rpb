@@ -1,0 +1,8 @@
+if any_contain("gndIdentifier", "Keine")
+	reject()
+end
+
+replace_all("preferredName", "\\/\\s(ca\\.|um)?-?\\s?\\d.+$", "")
+trim("preferredName")
+
+retain("gndIdentifier", "preferredName")

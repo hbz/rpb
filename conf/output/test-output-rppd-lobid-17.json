@@ -6,7 +6,7 @@
   "sameAs" : [ {
     "id" : "https://www.deutsche-biographie.de/pnd119280957.html#adbcontent",
     "collection" : {
-      "name" : "Historische Kommission bei der Bayerischen Akademie der Wissenschaften und Bayerische Staatsbibliothek"
+      "name" : "Biographien der ADB"
     }
   }, {
     "id" : "https://persondata.toolforge.org/redirect/gnd/commons/119280957",
@@ -16,7 +16,7 @@
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/119280957",
     "collection" : {
-      "name" : "Deutschsprachige Wikipedia"
+      "name" : "Wikipedia-Personenartikel"
     }
   }, {
     "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=119280957",

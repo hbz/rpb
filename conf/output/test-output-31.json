@@ -3,6 +3,7 @@
   "type" : [ "BibliographicResource", "Article" ],
   "rpbId" : "107t982371",
   "id" : "https://lobid.org/resources/107t982371",
+  "isbn" : [ "3-89331-303-6" ],
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -48,7 +49,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
+      "id" : "http://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -73,7 +74,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
+      "id" : "http://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -98,7 +99,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
+      "id" : "http://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -117,13 +118,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02s0022a",
+      "id" : "http://rpb.lobid.org/sw/00Pn02s0022a",
       "label" : "Baum, Herbert",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],

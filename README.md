@@ -23,34 +23,23 @@ cd rpb
 
 The overall RPB system consists of 4 applications: RPB & BiblioVino (Java/Play, based on [NWBib](https://github.com/hbz/nwbib)), RPPD (Java/Play, based on [lobid-gnd](https://github.com/hbz/lobid-gnd)), and Strapi-RPB (JavaScript/React).
 
-### RPB & BiblioVino
+### Proxies and redirects
 
-Source code: https://github.com/hbz/rpb & https://github.com/hbz/rpb/tree/biblioVino (https://github.com/hbz/rpb/pull/52)
+|     | LBZ-URLs | Lobid-URL | Test-System |
+| --- | -------- | --------- | ----------- |
+| RPB | https://rpb.lbz-rlp.de<br/> http://www.rpb-rlp.de/ | https://rpb.lobid.org | http://test.rpb.lobid.org |
+| BiblioVino |  https://wein.lbz-rlp.de/<br/> http://weinbibliographie.de/ | https://wein.lobid.org | http://test.wein.lobid.org |
+| RPPD | http://www.rppd-rlp.de/ | https://rppd.lobid.org | http://test.rppd.lobid.org |
+| Strapi | -- | https://rpb-cms.lobid.org/admin<br/>[https://rpb-cms.lobid.org/api/persons?populate=*](https://rpb-cms.lobid.org/api/persons?populate=*) | https://rpb-cms-test.lobid.org/admin<br/> [https://rpb-cms-test.lobid.org/api/persons?populate=*](https://rpb-cms-test.lobid.org/api/persons?populate=*) |
 
-|     | Production |     | Test |     |
-| --- | ---------- | --- | ---- | --- |
-| Index alias | resources-rpb | http://weywot3.hbz-nrw.de:9200/resources-rpb/_search | resources-rpb-test | http://weywot3.hbz-nrw.de:9200/resources-rpb-test/_search
-| lobid-resources instance (port 1990) | quaoar1:~/git/lobid-resources-rpb | http://quaoar1:1990/resources/search | quaoar3:~/git/lobid-resources-rpb | http://quaoar3:1990/resources/search |
-| rpb instance (port 1991) | quaoar1:~/git/rpb | https://rpb.lobid.org/search  | quaoar3:~/git/rpb | http://test.rpb.lobid.org/search |
-| BiblioVino (port 1992) | quaoar1:~/git/biblioVino | http://wein.lobid.org/search  | quaoar3:~/git/biblioVino | http://test.wein.lobid.org/search |
+For details on our setup see https://dienst-wiki.hbz-nrw.de/display/SEM/RPB (internal).
 
-### RPPD
+### Source code
 
-Source code: https://github.com/hbz/lobid-gnd/tree/rppd (https://github.com/hbz/lobid-gnd/pull/361)
-
-|     | Production |     | Test |     |
-| --- | ---------- | --- | ---- | --- |
-| Index alias | gnd-rppd | http://weywot3.hbz-nrw.de:9200/gnd-rppd/_search | gnd-rppd-test | http://weywot3.hbz-nrw.de:9200/gnd-rppd-test/_search
-| rppd instance (port 1993) | quaoar1:~/git/rppd | https://rppd.lobid.org/search  | quaoar3:~/git/rppd | http://test.rppd.lobid.org/search |
-
-### Strapi-RPB
-
-Source code: https://github.com/hbz/strapi-rpb
-
-|     | Production |     | Test |     |
-| --- | ---------- | --- | ---- | --- |
-| Admin UI | metadaten-nrw:/opt/strapi-rpb$ | https://rpb-cms.lobid.org/admin | test-metadaten-nrw:/opt/strapi-rpb$ | https://rpb-cms-test.lobid.org/admin
-| Search API | " | [https://rpb-cms.lobid.org/api/articles?populate=*](https://rpb-cms.lobid.org/api/articles?populate=*)  | " | [https://rpb-cms-test.lobid.org/api/articles?populate=*](https://rpb-cms-test.lobid.org/api/articles?populate=*) |
+- RPB: https://github.com/hbz/rpb
+- BiblioVino: https://github.com/hbz/rpb/tree/biblioVino (https://github.com/hbz/rpb/pull/52)
+- RPPD: https://github.com/hbz/lobid-gnd/tree/rppd (https://github.com/hbz/lobid-gnd/pull/361)
+- Strapi-RPB: https://github.com/hbz/strapi-rpb
 
 ## Transformation development
 
@@ -73,9 +62,9 @@ This writes a single `.json` file to `output/` (it's actually JSON lines, but th
 ### Import strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','u') PATH=articles"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','Monografie') PATH=independent-works"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36_','Band') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works"
 sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
 ```
 
@@ -84,14 +73,14 @@ This attempts to import all data selected with the `PICK` variable to the API en
 To reimport existing entries, these may need to be deleted first, e.g. for `articles/1` to `articles/5`:
 
 ```
-curl --request DELETE http://test-metadaten-nrw.hbz-nrw.de:1337/api/articles/[1-5]
+curl --request DELETE http://localhost:1337/api/articles/[1-5]
 ```
 
-After import they are available at e.g. http://test-metadaten-nrw.hbz-nrw.de:1337/api/articles?populate=*
+After import they are available at e.g. https://rpb-cms-test.lobid.org/api/articles?populate=*
 
-Entries using the same path can be filtered, e.g. to get only volumes (`f36_=sbd`):
+Entries using the same path can be filtered, e.g. to get only volumes (`type=Band`):
 
-http://test-metadaten-nrw.hbz-nrw.de:1337/api/independent-works?filters[f36_][$eq]=sbd&populate=*
+https://rpb-cms-test.lobid.org/api/independent-works?filters[type][$eq]=Band&populate=*
 
 ### Import SKOS data into strapi
 
@@ -132,6 +121,29 @@ sbt "runMain rpb.ETL conf/rpb-test-titel-to-lobid.flux"
 
 This writes individual `.json` files for each record in the input data to `output/`.
 
+### Export strapi data
+
+```bash
+sbt "runMain rpb.ETL conf/test-export-strapi-to-lobid.flux"
+```
+
+This writes individual `.json` files for Strapi records to `output/`.
+
+### Compare export data
+
+```bash
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','Band') PATH=independent-works"
+sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
+```
+
+This selects parts of the test data and write two files:
+
+1) for each test record, get the data from the Strapi HTTP API, convert the result to the lobid format, write to `test-lobid-output-from-strapi.json`
+2) convert each record directly to lobid, write to `test-lobid-output-from-file.json`
+
+We can then compare the two files (e.g. in VSC: Select for Compare, Format Document) to see differences. Since fields that are not defined in the Strapi content types are omitted upon import, missing data here points to missing fields in the Strapi content types.
 
 ### Validate output
 
@@ -157,18 +169,15 @@ The `-a` is required to return all results since grep views parts of the files a
 
 ### Index creation
 
-If you're not indexing into an existing lobid-resources index, make sure to create one with the proper index settings, e.g. to create `resources-rpb-20230623` from `quaoar3`:
+If you're not indexing into an existing lobid-resources index, make sure to create one with the proper index settings, e.g. to index into Elasticsearch on `localhost`:
 
 ```bash
-unset http_proxy # for putting on weywot
-sol@quaoar3:~/git/rpb$ curl -XPUT -H "Content-Type: application/json" weywot5:9200/resources-rpb-20231130-1045?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
+~/git/rpb$ curl -XPUT -H "Content-Type: application/json" localhost:9200/resources-rpb-20231130-1045?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
 ```
 
-For testing, the real index name (e.g. `resources-rpb-20230623`) is aliased by `resources-rpb-test`, which is used by https://test.lobid.org/resources / http://test.rpb.lobid.org and in the transformation.
+For testing, the real index name (e.g. `resources-rpb-20231130-1045`) is aliased by `resources-rpb-test`, which is used by http://test.rpb.lobid.org and in the transformation.
 
 ### Run full transformation and indexing
-
-Get full data at: http://lobid.org/download/rpb-gesamtexport/, place files in `conf/`.
 
 ```bash
 

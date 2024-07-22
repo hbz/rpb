@@ -33,7 +33,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn11k2192145a",
+      "id" : "http://rpb.lobid.org/sw/00Sn11k2192145a",
       "label" : "Geschichte 1922-2011",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",

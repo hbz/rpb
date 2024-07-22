@@ -283,8 +283,9 @@ public class Application extends Controller {
 	}
 
 	public static Promise<Result> showPl(String name, String db, int index, int zeilen, String s1) {
+		String url = db.equals("rpb") ? "https://rpb.lbz-rlp.de/" : "https://rppd.lobid.org/";
 		return Promise
-				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=https://rppd.lobid.org/"
+				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=" + url
 						+ HtmlFormat.escape(s1) + "'/></head>").as("text/html"));
 	}
 
@@ -898,6 +899,12 @@ public class Application extends Controller {
 					Cache.set(cacheKey, vals, ONE_DAY);
 					return ok(stars.render(starredIds, vals, format));
 				});
+	}
+
+	public static Promise<Result> showSw(String rpbId) {
+		String strapiUrl = "https://rpb-cms.lobid.org/admin/content-manager/collectionType/"
+				+ "api::rpb-authority.rpb-authority?filters[$and][0][rpbId][$eq]=";
+		return Promise.pure(seeOther(strapiUrl + rpbId));
 	}
 
 	/**

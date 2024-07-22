@@ -34,14 +34,14 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Unkeler Sonnenberg | Weingut Krupp",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n110302",
+      "id" : "http://rpb.lobid.org/sw/929n110302",
       "label" : "Unkeler Sonnenberg",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/929n110303",
+      "id" : "http://rpb.lobid.org/sw/929n110303",
       "label" : "Weingut Krupp",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -68,13 +68,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
+      "id" : "http://rpb.lobid.org/sw/00Pn08k0685884a",
       "label" : "Ruland, Wolfgang",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],

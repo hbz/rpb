@@ -1,7 +1,7 @@
 default HOST = "localhost"; // pass e.g. HOST=test-metadaten-nrw.hbz-nrw.de
 default IN_FILE = "test-output-rppd.json"; // pass e.g. IN_FILE=output-rppd-strapi.ndjson
 default API_TOKEN = ""; // pass e.g. API_TOKEN=e8d...
-API_URL = "http://" + HOST + ":1337/api/rppds";
+API_URL = "http://" + HOST + ":1337/api/persons";
 
 FLUX_DIR + "output/" + IN_FILE
 | open-file

@@ -6,7 +6,7 @@
   "sameAs" : [ {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/126790086",
     "collection" : {
-      "name" : "Deutschsprachige Wikipedia"
+      "name" : "Wikipedia-Personenartikel"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

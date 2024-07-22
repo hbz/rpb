@@ -4,6 +4,7 @@
   "rpbId" : "929t112198",
   "id" : "https://lobid.org/resources/929t112198",
   "hbzId" : "HT015954631",
+  "isbn" : [ "3-8031-1114-5", "978-3-8031-1114-2" ],
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -75,14 +76,15 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2198999a",
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2198999a",
       "label" : "Berger, John",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "edition" : [ "11. Aufl." ]
 }

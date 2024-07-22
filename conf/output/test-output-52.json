@@ -28,7 +28,7 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Volleyballclub Neuwied 77 / Neuwied | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n110300",
+      "id" : "http://rpb.lobid.org/sw/929n110300",
       "label" : "Volleyballclub Neuwied 77 / Neuwied",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -59,19 +59,8 @@
       "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/VCN 77",
-      "label" : "VCN 77",
-      "type" : [ "CorporateBody" ]
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
   } ]

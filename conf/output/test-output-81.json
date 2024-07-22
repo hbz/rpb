@@ -3,6 +3,7 @@
   "type" : [ "BibliographicResource", "Book" ],
   "rpbId" : "929t930040",
   "id" : "https://lobid.org/resources/929t930040",
+  "isbn" : [ "3-920284-67-4", "3-7666-9809-5" ],
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -37,7 +38,7 @@
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z48",
+      "id" : "http://rpb.lobid.org/sw/z48",
       "label" : "Geschichte 1800-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -48,14 +49,14 @@
     "type" : [ "ComplexSubject" ],
     "label" : "Kongregation der Franziskanerinnen von Heythuysen | Geschichte 1800-",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/00Sn93k0040a",
+      "id" : "http://rpb.lobid.org/sw/00Sn93k0040a",
       "label" : "Kongregation der Franziskanerinnen von Heythuysen",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/z48",
+      "id" : "http://rpb.lobid.org/sw/z48",
       "label" : "Geschichte 1800-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
@@ -74,36 +75,37 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040b",
+      "id" : "http://rpb.lobid.org/sw/00Pn93k0040b",
       "label" : "Cools, Angelita",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040c",
+      "id" : "http://rpb.lobid.org/sw/00Pn93k0040c",
       "label" : "Wijnpersse, Hildegard ¬van de¬",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn93k0040d",
+      "id" : "http://rpb.lobid.org/sw/00Pn93k0040d",
       "label" : "Ackermans, Gian",
       "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/edt",
-      "label" : "Bearb."
+      "label" : "Herausgeber/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "edition" : [ "2. dt. Ausg." ]
 }

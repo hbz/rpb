@@ -11,7 +11,7 @@
   }, {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/123205670",
     "collection" : {
-      "name" : "Deutschsprachige Wikipedia"
+      "name" : "Wikipedia-Personenartikel"
     }
   } ],
   "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],

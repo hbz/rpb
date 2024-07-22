@@ -76,19 +76,8 @@
       "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/[Sebapharma GmbH & Co. KG, Boppard]",
-      "label" : "[Sebapharma GmbH & Co. KG, Boppard]",
-      "type" : [ "CorporateBody" ]
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/org",
-      "label" : "HE Urheber"
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
   } ]

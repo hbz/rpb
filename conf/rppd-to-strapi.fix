@@ -1,71 +1,133 @@
 
 do put_macro("to_bool")
-  if exists("$[field]")
-    move_field("$[field]","$[field]~")
-    set_field("$[field]~", "true")
+  if exists("$[from]")
+    move_field("$[from]","$[to]~")
+    set_field("$[to]~", "true")
   end
 end
 
 do put_macro("add")
   if exists("$[from]")
     set_array("_temp")
-    copy_field("$[from]", "_temp.$append.$[to]")
+    copy_field("$[from]", "_temp.$append.value")
     move_field("_temp.*", "$[to][].$append")
     remove_field("$[from]")
   end
 end
 
 do put_macro("to_array")
-  split_field("$[field]", "@")
-  set_array("$[field][]")
-  call_macro("add", to: "$[field]", from: "$[field]")
+  split_field("$[from]", "@")
+  set_array("$[to][]")
+  call_macro("add", to: "$[to]", from: "$[from]")
 end
 
 do put_macro("add_bio")
   set_array("_temp")
   move_field("$[field]", "_temp.$append") # aufgeteilt: f1?1..9
   join_field("_temp", "\n\n") # als Absätze...
-  move_field("_temp", "f1z1[].$append.f1z1") # in 1 Feld
+  move_field("_temp", "biographicalOrHistoricalInformation[].$append.value") # in 1 Feld
 end
+
+do put_macro("place_to_uri")
+  if any_match("$[field]", "^_o.+")
+    replace_all("$[field]", "^_o|_$", "")
+    prepend("$[field]", "https://rpb.lobid.org/spatial#n")
+  end
+end
+
 do once()
   # map zum Ersetzen der alten GND-ID
   put_filemap("conf/maps/gndId-old-to-new.tsv", "map_gndid_to_new", sep_char: "\t")
+  put_filemap("conf/maps/gndId-to-rppdId.tsv", "map_rel_gndId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")
+  put_filemap("conf/maps/rppdId-with-label.tsv", "map_rel_rppdId",key_column:"0",value_column:"1", sep_char: "\t", expected_columns:"-1")  
 end
 
-call_macro("to_bool", field: "f11_")
-call_macro("to_bool", field: "f12_")
-call_macro("to_bool", field: "f13_")
-call_macro("to_bool", field: "f14_")
-call_macro("to_bool", field: "f15_")
+move_field("f00_","rppdId")
+move_field("f82b", "gndIdentifier")
 
-call_macro("to_array", field: "f1nc")
-call_macro("to_array", field: "f1nd")
-call_macro("to_array", field: "f1nn")
-call_macro("to_array", field: "f1no")
-call_macro("to_array", field: "f1nt")
-call_macro("to_array", field: "f1nu")
-call_macro("to_array", field: "f1nw")
-call_macro("to_array", field: "f1nx")
+call_macro("to_bool", from: "f11_", to: "consentGiven")
+call_macro("to_bool", from: "f12_", to: "doDelete")
+call_macro("to_bool", from: "f13_", to: "doNotCrawl")
+call_macro("to_bool", from: "f14_", to: "doNotIndex")
+call_macro("to_bool", from: "f15_", to: "doNotFeature")
 
-set_array("f1z1[]") # Biogramme
+move_field("f1na", "preferredName")
+move_field("f1ne", "depictionId")
+move_field("f1nv", "gender")
+move_field("f1np", "dateOfBirth")
+move_field("f1nq", "placeOfBirth")
+move_field("f1nr", "dateOfDeath")
+move_field("f1ns", "placeOfDeath")
+move_field("f1ny", "dateModified")
+move_field("f1wz", "periodOfActivity")
+move_field("f98_", "internalNote")
+
+call_macro("to_array", from: "f1nc", to: "variantName")
+call_macro("to_array", from: "f1nd", to: "otherName")
+call_macro("to_array", from: "f1nn", to: "professionOrOccupation")
+call_macro("to_array", from: "f1no", to: "placeOfActivity")
+call_macro("to_array", from: "f1nt", to: "relatedPerson")
+call_macro("to_array", from: "f1nu", to: "publication")
+call_macro("to_array", from: "f1nw", to: "gndSubjectCategory")
+call_macro("to_array", from: "f1nx", to: "source")
+
+set_array("biographicalOrHistoricalInformation[]")
 call_macro("add_bio", field: "f1z?")
 call_macro("add_bio", field: "f1ü?")
 call_macro("add_bio", field: "f1ä?")
 call_macro("add_bio", field: "f1ö?")
 call_macro("add_bio", field: "f1ß?")
 
-# f82b ist 'required' und 'unique'
-if all_match("f82b", "Familienmitglied|Keine GND-Ansetzung")
-  paste("f82b", "~Keine GND-Ansetzung für", "f00_")
-end
-unless exists("f82b")
-  paste("f82b", "~Keine GND-Ansetzung für", "f00_")
-end
-replace_all("f82b", "(\\d+)n(\\d)", "$1-$2")
-lookup("f82b", "map_gndid_to_new")
+# Allegro: "20240312" -> 2024-03-12
+replace_all("dateModified", "(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3")
 
-replace_all("f1nv", "w+", "weiblich")
-replace_all("f1nv", "m+", "männlich")
-replace_all("f1nv", "d+", "divers")
+# gndIdentifier ist 'required' und 'unique'
+if all_match("gndIdentifier", "Familienmitglied|Keine GND-Ansetzung")
+  paste("gndIdentifier", "~Keine GND-Ansetzung für", "rppdId")
+end
+unless exists("gndIdentifier")
+  paste("gndIdentifier", "~Keine GND-Ansetzung für", "rppdId")
+end
+replace_all("gndIdentifier", "(\\d+)n(\\d)", "$1-$2")
+lookup("gndIdentifier", "map_gndid_to_new")
+
+replace_all("gender", "w+", "weiblich")
+replace_all("gender", "m+", "männlich")
+replace_all("gender", "d+", "divers")
+
+# URIs / Lookup-Felder
+
+# Geburts- und Sterbeorte
+call_macro("place_to_uri", field: "placeOfBirth") 
+call_macro("place_to_uri", field: "placeOfDeath")
+
+do list_as(f: "placeOfActivity[].*")
+  call_macro("place_to_uri", field: "f.value")
+end
+
+do list(path:"professionOrOccupation[]", "var": "$i")
+  replace_all("$i.value", "_", "")
+  if all_match("$i.value", "(^\\d*)n(\\d)")
+    replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.value", "https://d-nb.info/gnd/")
+  else
+    prepend("$i.value", "https://rpb.lobid.org/sw/")
+  end
+end
+
+do list(path:"gndSubjectCategory[]", "var": "$i")
+  replace_all("$i.value", "_", "")
+  replace_all("$i.value", "(\\d)x(\\d)", "$1.$2")
+  replace_all("$i.value", "^swn", "")
+  prepend("$i.value", "https://w3id.org/lobid/rpb-fachgebiete/n")
+end
+
+do list(path:"relatedPerson[]", "var": "$i")
+  if any_match("$i.value", "^_.+")
+    replace_all("$i.value", "_", "")
+    lookup("$i.value", "map_rel_gndId")
+    lookup("$i.value", "map_rel_rppdId")
+  end
+end
 
 vacuum()

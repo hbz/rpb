@@ -14,9 +14,11 @@ API_TOKEN=$API_TOKEN
 sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb.ndjson PATH=rpb-notations HOST=$HOST API_TOKEN=$API_TOKEN"
 # curl --request DELETE "http://$HOST:1337/api/rpb-spatials/[1-5]"
 sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PATH=rpb-spatials HOST=$HOST API_TOKEN=$API_TOKEN"
+# curl --request DELETE "http://$HOST:1337/api/fachgebiete/[1-5]"
+sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-fachgebiete.ndjson PATH=fachgebiete HOST=$HOST API_TOKEN=$API_TOKEN"
 
 # Personen
-# curl --request DELETE "http://$HOST:1337/api/rppds/[1-5]"
+# curl --request DELETE "http://$HOST:1337/api/persons/[1-5]"
 sbt "runMain rpb.ETL conf/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio.txt OUT_FILE=output-rppd-strapi.ndjson"
 sbt "runMain rpb.ETL conf/rppd-import.flux IN_FILE=output-rppd-strapi.ndjson HOST=$HOST API_TOKEN=$API_TOKEN"
 
@@ -28,8 +30,8 @@ sbt "runMain rpb.ETL conf/rpb-sw-import.flux IN_FILE=output-sw-strapi.ndjson HOS
 # Titeldaten
 sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
 # curl --request DELETE "http://$HOST:1337/api/articles/[1-5]"
-sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36_','u') PATH=articles HOST=$HOST API_TOKEN=$API_TOKEN"
+sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('type','u') PATH=articles HOST=$HOST API_TOKEN=$API_TOKEN"
 # curl --request DELETE "http://$HOST:1337/api/independent-works/[1-5]"
-sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36_','Monografie') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
-sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36_','Band') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
+sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
+sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"
 sbt "runMain rpb.ETL conf/rpb-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works HOST=$HOST API_TOKEN=$API_TOKEN"

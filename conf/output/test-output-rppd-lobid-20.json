@@ -6,12 +6,12 @@
   "sameAs" : [ {
     "id" : "http://persondata.toolforge.org/redirect/gnd/de/11698211X",
     "collection" : {
-      "name" : "Deutschsprachige Wikipedia"
+      "name" : "Wikipedia-Personenartikel"
     }
   }, {
     "id" : "http://opac.regesta-imperii.de/lang_de/suche.php?tags=11698211X",
     "collection" : {
-      "name" : "Akademieprojekt Regesta Imperii (Quellen zur Reichsgeschichte) - Akademie der Wissenschaften und der Literatur Mainz"
+      "name" : "REGESTA IMPERII RI OPAC GND"
     }
   }, {
     "id" : "http://www.tripota.uni-trier.de/beacon.php?ID=11698211X",

@@ -27,7 +27,7 @@
 } else {
 	@if(!rpbspatial.isEmpty && !rpbspatial.contains(",") && Seq(rpbsubject, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw).forall(_.isEmpty)){
 		@if(search){in <a href="@nwbib.routes.Application.spatial()"> Regionen</a> &gt;}
-		@if(!rpbspatial.isEmpty && !rpbspatial.startsWith("https://nwbib.de/spatial#Q")) {
+		@if(!rpbspatial.isEmpty && !rpbspatial.startsWith("https://rpb.lobid.org/spatial#n")) {
 			@labels(rpbspatial)
 		} else {
 			@defining(Classification.pathTo((if(!rpbsubject.isEmpty) rpbsubject else rpbspatial))) { path => 

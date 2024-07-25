@@ -8,9 +8,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.jena.rdf.model.Model;
@@ -24,6 +26,7 @@ import org.apache.jena.vocabulary.SKOS;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import controllers.nwbib.Classification;
+import controllers.nwbib.Lobid;
 
 /**
  * Generate a SKOS representation from the internal spatial classification data
@@ -97,8 +100,13 @@ public class SpatialToSkos {
 			sub.getValue().forEach(entry -> {
 				try {
 					String superSubject = sub.getKey();
-					addInSchemeAndPrefLabel(model, entry).addProperty(SKOS.broader,
-							model.createResource(superSubject));
+					Resource resource = addInSchemeAndPrefLabel(model, entry);
+					resource.addProperty(SKOS.broader, model.createResource(superSubject));
+					resource.addProperty(SKOS.definition,
+							Classification
+									.pathTo(entry.get("value").asText()).stream().map(uri -> String.format("%s (n%s)",
+											Lobid.facetLabel(Arrays.asList(uri), "", ""), Classification.shortId(uri)))
+									.collect(Collectors.joining(" > ")), "de");
 				} catch (Exception e) {
 					System.err.println("Error processing: " + entry);
 					e.printStackTrace();

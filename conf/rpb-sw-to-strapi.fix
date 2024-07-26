@@ -1,3 +1,7 @@
+if exists("f82b") # GND-ID
+  reject()
+end
+
 do put_macro("move")
   if exists("$[from]")
     set_array("_temp")

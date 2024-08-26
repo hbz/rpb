@@ -75,12 +75,13 @@ call_macro("move_all", from: "f24?", to: "parallelTitle")
 call_macro("move_all", from: "f27?", to: "alternativeTitle")
 move_field("f28_", "alternativeSpelling")
 move_field("f36_", "type")
-call_macro("move_all", from: "f70[_123456789]", to: "bibliographicCitation")
-move_field("f70b", "volume")
-move_field("f70h", "issue")
-move_field("f70j", "year")
-move_field("f70s", "pages")
-move_field("f70z", "alternativeNumbering")
+move_field("f70[_123456789]", "bibliographicCitation.value")
+join_field("bibliographicCitation.value", "; ")
+move_field("f70b", "bibliographicCitation.volume")
+move_field("f70h", "bibliographicCitation.issue")
+move_field("f70j", "bibliographicCitation.year")
+move_field("f70s", "bibliographicCitation.pages")
+move_field("f70z", "bibliographicCitation.alternativeNumbering")
 move_field("f71_", "edition")
 move_field("f74_", "publicationLocation")
 move_field("f75_", "publishedBy")
@@ -149,27 +150,39 @@ unless exists("f39_")
 end
 move_field("f39_", "responsibilityStatement")
 
+# Quelle, s. https://jira.hbz-nrw.de/browse/RPB-26, https://jira.hbz-nrw.de/browse/RPB-177
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
 if all_equal("type", "u")
-  unless exists("bibliographicCitation[].1")
-    add_field("bibliographicCitation[].$append.value", "s. spez. Felder (volume, issue, etc.)")
+  unless exists("bibliographicCitation.value")
+    if exists ("f70t")
+      paste("bibliographicCitation.value", "~In: ", "f70k", "~: ", "f70t", "~. - ", 
+        "bibliographicCitation.volume", "~ (", "bibliographicCitation.year", "~), ", 
+        "bibliographicCitation.issue", " ", "bibliographicCitation.alternativeNumbering", 
+        "~, Seite ", "bibliographicCitation.pages", "~. -" join_char: "")
+      replace_all("bibliographicCitation.value", "In: : ", "In: ")
+      replace_all("bibliographicCitation.value", ", Seite . -$", "")
+      replace_all("bibliographicCitation.value", "  ", " ")
+      replace_all("bibliographicCitation.value", ", , ", ", ")
+    else
+      add_field("bibliographicCitation.value", "s. spez. Felder (volume, issue, etc.)")
+    end
   end
 end
 
 # Seitenzahl in pages ist Pflichtfeld für Artikel (type=u)
-unless exists("pages")
+unless exists("bibliographicCitation.pages")
  if all_equal("type", "u")
-  if exists("bibliographicCitation[].1")
-    copy_field("bibliographicCitation[].1.value", "pages")
-    prepend("pages", "Kopiert aus bibliographicCitation: ")
+  if exists("bibliographicCitation")
+    copy_field("bibliographicCitation.value", "bibliographicCitation.pages")
+    prepend("bibliographicCitation.pages", "Kopiert aus #70~, #701 ff.: ")
     put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
-    if all_match("bibliographicCitation[].1.value", "$[pages]")
-      if is_string("bibliographicCitation[].1.value")
-        replace_all("pages", "$[pages]", "Aus bibliographicCitation: $1")
+    if all_match("bibliographicCitation.value", "$[pages]")
+      if is_string("bibliographicCitation.value")
+        replace_all("bibliographicCitation.pages", "$[pages]", "Aus #70~, #701 ff.: $1")
       end
     end
   else
-    add_field("pages", "N/A")
+    add_field("bibliographicCitation.pages", "N/A")
   end
  end
 end

@@ -305,38 +305,9 @@ set_array("contribution[]")
 call_macro("contributions", from: "person")
 call_macro("contributions", from: "corporateBody")
 
-# ------- bibliographicCitation -------
-# Siehe https://jira.hbz-nrw.de/browse/RPB-26
-
-if exists ("f70t")
-  do list(path:"f70*", "var": "$i")
-    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "volume", "~ (", "year", "~), ", "issue", " ", "alternativeNumbering", "~, Seite ", "pages", "~. -" join_char: "")
-    replace_all("bibliographicCitation", "In: : ", "In: ")
-    replace_all("bibliographicCitation", ", Seite . -$", "")
-    replace_all("bibliographicCitation", "  ", " ")
-    replace_all("bibliographicCitation", ", , ", ", ")
-  end
-elsif exists ("bibliographicCitation[].1")
-  paste("bibliographicCitation", "bibliographicCitation[].1.value")
-elsif exists ("f701")
-  paste("bibliographicCitation", "f701")
-elsif exists ("f702")
-  paste("bibliographicCitation", "f702")
-elsif exists ("f703")
-  paste("bibliographicCitation", "f703")
-elsif exists ("f704")
-  paste("bibliographicCitation", "f704")
-elsif exists ("f705")
-  paste("bibliographicCitation", "f705")
-elsif exists ("f706")
-  paste("bibliographicCitation", "f706")
-elsif exists ("f707")
-  paste("bibliographicCitation", "f707")
-elsif exists ("f708")
-  paste("bibliographicCitation", "f708")
-elsif exists ("f709")
-  paste("bibliographicCitation", "f709")
-end
+move_field("bibliographicCitation.value", "_temp")
+remove_field("bibliographicCitation")
+move_field("_temp", "bibliographicCitation")
 replace_all("bibliographicCitation","¬","")
 
 # fulltextOnline and link to external description/ToC

@@ -4,8 +4,8 @@ vacuum()
 
 #-------- maps --------
 do once("map")
-  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
-  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
 end
 
 do put_macro("move_here")

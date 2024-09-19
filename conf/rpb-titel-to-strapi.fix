@@ -65,6 +65,13 @@ do put_macro("to_bool")
   end
 end
 
+do put_macro("add_item")
+  if exists("$[from]")
+    move_field("$[from]", "item[].$append.value")
+    add_field("item[].$last.type", "$[type]")
+  end
+end
+
 move_field("f00_", "rpbId")
 move_field("f01_", "numbering")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
@@ -203,7 +210,10 @@ call_macro("add_url", from: "f90g", type: "Andere URL")
 
 set_array("item[]")
 
-move_field("f90a", "item[].$append.value") # Signatur
+call_macro("add_item", from: "f90a", type: "MZ") # Mainz
+call_macro("add_item", from: "f90b", type: "SP") # Speyer
+call_macro("add_item", from: "f90c", type: "TR") # Trier
+call_macro("add_item", from: "f90d", type: "KO") # Koblenz
 
 # Person
 set_array("person[]")

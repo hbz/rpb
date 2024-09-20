@@ -74,14 +74,12 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                       <li @if(title=="RPB - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
+                      <li><a href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/rheinland-pfaelzische-bibliographie-infotext" target="_blank">Über die RPB</a></li>
+                      <li><a href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/rheinland-pfaelzische-bibliographie-weitere-links-mit-landeskundlichem-bezug" target="_blank">Weitere Bibliographien</a></li>
                       <li class="divider"></li>
                       <li @if(title=="RPB: Kontakt"){class="active"} class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                          @*
-                          <li><a href="http://www.landesbibliothek-nrw.de/aufgaben/nrw_bibliographie/">Über die NWBib</a></li>
-                          <li><a href="@nwbib.routes.Application.journals()">Ausgewertete Zeitschriften</a></li>
-                          *@
                           <li class="dropdown-header">Feedback</li>
                           <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20RPB,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback zur aktuellen Seite</a></li>
                           <li class="divider"></li>
@@ -93,7 +91,7 @@
                           <li class="divider"></li>
                           <li class="dropdown-header">Rechtliche Informationen</li>
                           <li><a href="https://lbz.rlp.de/de/ueber-das-lbz/impressum/" target="_blank">Impressum</a></li>
-                          <li><a href="https://datenschutz.lbz-rlp.de/rpb_rppd_datenschutzerklaerung.html" target="_blank">Datenschutz</a></li>
+                          <li><a href="https://lbz.rlp.de/ueber-das-lbz/datenschutz" target="_blank">Datenschutz</a></li>
                         </ul>
                       </li>
                     </ul>

@@ -75,6 +75,7 @@ call_macro("move_all", from: "f24?", to: "parallelTitle")
 call_macro("move_all", from: "f27?", to: "alternativeTitle")
 move_field("f28_", "alternativeSpelling")
 move_field("f36_", "type")
+replace_all("type", "um", "u") # https://jira.hbz-nrw.de/browse/RPB-205
 move_field("f70[_123456789]", "bibliographicCitation.value")
 join_field("bibliographicCitation.value", "; ")
 move_field("f70b", "bibliographicCitation.volume")

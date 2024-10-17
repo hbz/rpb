@@ -3,7 +3,8 @@ default index = "resources-rpb-test";
 "conf/output/output-strapi.ndjson"
 | open-file
 | as-lines
-| decode-json
+| match(pattern="(\\{.+\\}).*", replacement="$1") // remove trailing strapi data in line after JSON record
+| decode-json(recordPath="data")
 | fix(FLUX_DIR + "rpb-titel-to-lobid.fix")
 | batch-reset(batchsize="1000")
 | encode-json(prettyPrinting="false")

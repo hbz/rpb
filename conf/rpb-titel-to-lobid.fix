@@ -28,6 +28,9 @@ copy_field("rpbId", "_id")
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
+unless exists("type")
+  set_field("type[].$append", "Article")
+end
 if all_equal("type", "u")
   set_field("type[].$append", "Article")
 end
@@ -209,6 +212,7 @@ do
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
   lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+  lookup("$i.label", "./RPB-Export_HBZ_SW_GND.tsv","sep_char":"\t")
   if all_match("$i.id","^http://rpb.lobid.org/sw/.*$")
     add_field("$i.source.id", "http://rpb.lobid.org/sw")
     add_field("$i.source.label", "RPB-Sachsystematik")
@@ -245,6 +249,7 @@ do list (path:"spatial[]", "var": "$i")
   if any_match("$i.id", "^https://d-nb.info/gnd/.+")
     replace_all("$i.label","-","n")                             # IDs in lookup-map have the original syntax with an "n" instead of "-"
     lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+    lookup("$i.label", "./RPB-Export_HBZ_SW_GND.tsv","sep_char":"\t")
     set_array("$i.type[]","PlaceOrGeographicName")
     add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
     add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
@@ -289,6 +294,7 @@ do put_macro("contributions")
     replace_all("c.agent.label","^http.+[/#](.+)$","$1")
     replace_all("c.agent.label","^(\\d+)-(\\d+)$","$1n$2")
     lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+    lookup("c.agent.label", "./RPB-Export_HBZ_SW_GND.tsv","sep_char":"\t")
     copy_field("f.type", "c.role.id")
     copy_field("f.type", "c.role.label")
     lookup("c.role.id", "role-to-uri")

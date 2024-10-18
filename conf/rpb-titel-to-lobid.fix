@@ -28,6 +28,9 @@ copy_field("rpbId", "_id")
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
+unless exists("type")
+  set_field("type[].$append", "Article")
+end
 if all_equal("type", "u")
   set_field("type[].$append", "Article")
 end

@@ -75,7 +75,11 @@ call_macro("move_all", from: "f24?", to: "parallelTitle")
 call_macro("move_all", from: "f27?", to: "alternativeTitle")
 move_field("f28_", "alternativeSpelling")
 move_field("f36_", "type")
-replace_all("type", "um", "u") # https://jira.hbz-nrw.de/browse/RPB-205
+if is_array("type")
+  move_field("type.$first", "_temp")
+  move_field("_temp", "type") # e.g. ["um","sbd"] -> "um"
+end
+lookup("type", "um": "u") # https://jira.hbz-nrw.de/browse/RPB-205
 move_field("f70[_123456789]", "bibliographicCitation.value")
 join_field("bibliographicCitation.value", "; ")
 move_field("f70b", "bibliographicCitation.volume")
@@ -190,10 +194,6 @@ unless exists("bibliographicCitation.pages")
 end
 
 # Menschenlesbare Werte nutzen (für die Erfassung in Strapi)
-if is_array("type")
-  # print_record("Mehrere Satztypen gefunden: ")
-  set_field("type", "type.$last")
-end
 lookup("type", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
 
 

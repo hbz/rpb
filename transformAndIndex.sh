@@ -1,30 +1,36 @@
 #!/bin/bash
-set -eu
+set -u
 IFS=$'\n\t'
 
 TIME=$(date "+%Y%m%d-%H%M")
 INDEX="resources-rpb-$TIME"
 ALIAS="resources-rpb-test"
 
+# Here, we used to import Allegro data:
 # Get the daily Allegro dump:
-cd conf
-wget http://www.rpb-rlp.de/rpb/rpb04/intern/RPBEXP.zip
-unzip -o RPBEXP.zip
-mv RPBEXP.zip RPBEXP/RPBEXP-$TIME.zip
-cd ..
+## cd conf
+## wget http://www.rpb-rlp.de/rpb/rpb04/intern/RPBEXP.zip
+## unzip -o RPBEXP.zip
+## mv RPBEXP.zip RPBEXP/RPBEXP-$TIME.zip
+## cd ..
+## sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
+# But now we use the Strapi export:
 
-# Transform the data:
+# Transform the Strapi data:
+zgrep -a '"type":"api::rpb-authority.rpb-authority"' conf/strapi-export.tar.gz > conf/output/output-strapi-sw.ndjson
 sbt "runMain rpb.ETL conf/rpb-sw.flux"
-sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
+zgrep -a -E '"type":"api::article.article"|"type":"api::independent-work.independent-work"' conf/strapi-export.tar.gz > conf/output/output-strapi.ndjson
+rm conf/output/bulk/bulk-*.ndjson
 sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
 
 # Index to Elasticsearch:
 unset http_proxy # for posting to weywot3
 curl -XPUT -H "Content-Type: application/json" weywot3:9200/$INDEX?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
+rm conf/output/es-curl-post.log
 for filename in conf/output/bulk/bulk-*.ndjson
 do
 	echo "$filename"
-	curl -XPOST --header 'Content-Type: application/x-ndjson' --data-binary @"$filename" 'weywot3:9200/_bulk'
+	curl -XPOST --silent --show-error --fail --header 'Content-Type: application/x-ndjson' --data-binary @"$filename" 'weywot3:9200/_bulk' >> conf/output/es-curl-post.log
 done
 curl -X POST "weywot3:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'
 {

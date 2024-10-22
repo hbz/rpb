@@ -1,9 +1,9 @@
-FLUX_DIR + "RPB-Export_HBZ_SW.txt"
-| open-file(encoding="IBM437")
+FLUX_DIR + "output/output-strapi-sw.ndjson"
+| open-file
 | as-lines
-| rpb.Decode
+| decode-json
 | fix("
-paste('row', 'f00_', 'f3na', join_char : '\t')
+paste('row', 'data.rpbId', 'data.preferredName', join_char : '\t')
 retain(row)
 ")
 | stream-to-triples

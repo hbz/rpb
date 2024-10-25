@@ -19,7 +19,12 @@ ALIAS="resources-rpb-test"
 # Transform the Strapi data:
 zgrep -a '"type":"api::rpb-authority.rpb-authority"' conf/strapi-export.tar.gz > conf/output/output-strapi-sw.ndjson
 sbt "runMain rpb.ETL conf/rpb-sw.flux"
-zgrep -a -E '"type":"api::article.article"|"type":"api::independent-work.independent-work"' conf/strapi-export.tar.gz > conf/output/output-strapi.ndjson
+# Strapi title data export is incomplete, see https://jira.hbz-nrw.de/browse/RPB-202
+## zgrep -a -E '"type":"api::article.article"|"type":"api::independent-work.independent-work"' conf/strapi-export.tar.gz > conf/output/output-strapi.ndjson
+# Instead, we use the backup exports created in Strapi lifecycle afterCreate and afterUpdate hooks (copy from backup/ in Strapi instance):
+cat conf/articles.ndjson > conf/output/output-strapi.ndjson
+cat conf/independent_works.ndjson >> conf/output/output-strapi.ndjson
+# Remove old index data:
 rm conf/output/bulk/bulk-*.ndjson
 sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
 

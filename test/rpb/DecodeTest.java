@@ -156,6 +156,18 @@ public final class DecodeTest {
     }
 
     @Test
+    public void processRecordWithNonfilingCharacters() {
+        test("[/]#00 929t124030b6[/]#20 ¬Der¬ Rhein - Rheinfelden bis Koblenz[/]", () -> {
+                    final InOrder ordered = inOrder(receiver);
+                    ordered.verify(receiver).startRecord("929t124030b6");
+                    ordered.verify(receiver).literal("f00_", "929t124030b6");
+                    ordered.verify(receiver).literal("f20_", "Der Rhein - Rheinfelden bis Koblenz");
+                    ordered.verify(receiver).endRecord();
+                    ordered.verifyNoMoreInteractions();
+                });
+    }
+
+    @Test
     public void processError() {
         exception.expect(MetafactureException.class);
         exception.expectMessage(startsWith("Can't get ID from input"));

@@ -95,7 +95,6 @@ call_macro("move_here", field: "title")
 if is_array("title")
   copy_field("title.$last", "title")
 end
-replace_all("title","¬","")
 replace_all("title", "\\s\\+", "")
 
 # ------- "extent" -------
@@ -308,7 +307,6 @@ call_macro("contributions", from: "corporateBody")
 move_field("bibliographicCitation.value", "_temp")
 remove_field("bibliographicCitation")
 move_field("_temp", "bibliographicCitation")
-replace_all("bibliographicCitation","¬","")
 
 # fulltextOnline and link to external description/ToC
 

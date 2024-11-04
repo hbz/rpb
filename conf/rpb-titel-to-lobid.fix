@@ -304,9 +304,8 @@ set_array("contribution[]")
 call_macro("contributions", from: "person")
 call_macro("contributions", from: "corporateBody")
 
-move_field("bibliographicCitation.value", "_temp")
-remove_field("bibliographicCitation")
-move_field("_temp", "bibliographicCitation")
+move_field("bibliographicCitation[].*.value", "bibliographicCitation")
+join_field("bibliographicCitation", "; ")
 
 # fulltextOnline and link to external description/ToC
 

@@ -61,7 +61,7 @@ prepend("id","https://lobid.org/resources/")
 
 # ------- hbzId -------
 
-copy_field("f983", "hbzId")
+call_macro("move_here", field: "hbzId")
 
 # ------- schoeneNummer -------
 

@@ -943,4 +943,12 @@ public class Application extends Controller {
 		return new ArrayList<>(Arrays.asList(currentlyStarred().split(" ")).stream()
 				.filter(s -> !s.trim().isEmpty()).collect(Collectors.toList()));
 	}
+
+	public static Result put(String id, String secret) {
+		JsonNode inputData = request().body().asJson();
+		System.out.println(id + ", will transform: " + inputData); // TODO run flux transformation
+		boolean willIndex = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
+		System.out.printf("Secret '%s', will index: %b\n", secret, willIndex);
+		return ok(Json.toJson("TODO: not implemented"));
+	}
 }

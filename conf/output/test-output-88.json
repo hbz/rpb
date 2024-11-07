@@ -3,7 +3,6 @@
   "type" : [ "BibliographicResource", "Article" ],
   "rpbId" : "107t01167281",
   "id" : "https://lobid.org/resources/107t01167281",
-  "hbzId" : "2158",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

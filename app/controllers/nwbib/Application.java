@@ -3,6 +3,7 @@
 package controllers.nwbib;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -28,6 +29,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import org.antlr.runtime.RecognitionException;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.elasticsearch.common.base.Charsets;
 import org.elasticsearch.common.geo.GeoPoint;
@@ -54,6 +57,7 @@ import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
 import play.twirl.api.HtmlFormat;
+import rpb.ETL;
 import views.html.browse_classification;
 import views.html.browse_register;
 import views.html.classification;
@@ -944,11 +948,20 @@ public class Application extends Controller {
 				.filter(s -> !s.trim().isEmpty()).collect(Collectors.toList()));
 	}
 
-	public static Result put(String id, String secret) {
-		JsonNode inputData = request().body().asJson();
-		System.out.println(id + ", will transform: " + inputData); // TODO run flux transformation
-		boolean willIndex = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
-		System.out.printf("Secret '%s', will index: %b\n", secret, willIndex);
-		return ok(Json.toJson("TODO: not implemented"));
+	public static Promise<Result> put(String id, String secret) throws FileNotFoundException, RecognitionException, IOException {
+		File input = new File("conf/output/test-output-strapi.json");
+		File output = new File("conf/output/test-output-0.json");
+		FileUtils.writeStringToFile(input, request().body().asJson().toString(), Charsets.UTF_8);
+		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
+		String result = FileUtils.readFileToString(output, Charsets.UTF_8);
+		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
+		if (authorized) {
+			String url = "http://weywot3:9200/resources-rpb-test/resource/"
+					+ URLEncoder.encode("https://lobid.org/resources/" + id, "UTF-8");
+			WSRequest request = WS.url(url).setHeader("Content-Type", "application/json");
+			return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
+		} else {
+			return Promise.pure(unauthorized());
+		}
 	}
 }

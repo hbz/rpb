@@ -21,10 +21,10 @@ public final class Decode extends DefaultObjectPipe<String, StreamReceiver> {
 
     @Override
     public void process(final String obj) {
-        currentRecord = obj;
-        LOG.debug("Process record: " + obj);
-        final String[] vals = obj.split("\\[/\\]");
-        recordId = getId(obj, vals);
+    	LOG.debug("Process record: " + obj);
+        currentRecord = obj.replace("¬", ""); // Nonfiling character
+        final String[] vals = currentRecord.split("\\[/\\]");
+        recordId = getId(currentRecord, vals);
         getReceiver().startRecord(recordId);
         processFields(vals);
         getReceiver().endRecord();

@@ -1,0 +1,71 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "107t01167281",
+  "id" : "https://lobid.org/resources/107t01167281",
+  "hbzId" : "2158",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Bericht über die erste ordentliche Hauptversammlung",
+  "responsibilityStatement" : [ "[H. Heilmann]" ],
+  "publication" : [ {
+    "startDate" : "1925",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n613010",
+    "label" : "Kirchengeschichte",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Verein für Pfälzische Kirchengeschichte / Hauptversammlung / 1925 | Online-Ressource",
+    "componentList" : [ {
+      "id" : "http://rpb.lobid.org/sw/00Sn01s167281807a",
+      "label" : "Verein für Pfälzische Kirchengeschichte / Hauptversammlung / 1925",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n32",
+    "label" : "Evangelische Kirche der Pfalz (Protestantische Landeskirche)",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn01s22568415a",
+      "label" : "Heilmann, Heinrich",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "Blätter für pfälzische Kirchengeschichte. - 1 (1925), S. 124-125",
+  "fulltextOnline" : [ {
+    "id" : "https://www.dilibri.de/rlb/periodical/pageview/2495547",
+    "label" : "https://www.dilibri.de/rlb/periodical/pageview/2495547"
+  } ]
+}

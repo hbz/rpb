@@ -6,26 +6,30 @@ TIME=$(date "+%Y%m%d-%H%M")
 INDEX="resources-rpb-$TIME"
 ALIAS="resources-rpb-test"
 
-# Here, we used to import Allegro data:
+# Here, we still import Allegro data:
 # Get the daily Allegro dump:
-## cd conf
-## wget http://www.rpb-rlp.de/rpb/rpb04/intern/RPBEXP.zip
-## unzip -o RPBEXP.zip
-## mv RPBEXP.zip RPBEXP/RPBEXP-$TIME.zip
-## cd ..
-## sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
-# But now we use the Strapi export:
+cd conf
+wget http://www.rpb-rlp.de/rpb/rpb04/intern/RPBEXP.zip
+unzip -o RPBEXP.zip
+mv RPBEXP.zip RPBEXP/RPBEXP-$TIME.zip
+cd ..
+sbt "runMain rpb.ETL conf/rpb-sw.flux"
+sbt "runMain rpb.ETL conf/rpb-titel-to-strapi.flux"
+# But now we also use the Strapi export and backup data:
 
 # Transform the Strapi data:
-zgrep -a '"type":"api::rpb-authority.rpb-authority"' conf/strapi-export.tar.gz > conf/output/output-strapi-sw.ndjson
-sbt "runMain rpb.ETL conf/rpb-sw.flux"
+# After switching rpb-authority cataloging from Allegro to Strapi:
+## zgrep -a '"type":"api::rpb-authority.rpb-authority"' conf/strapi-export.tar.gz > conf/output/output-strapi-sw.ndjson
 # Strapi title data export is incomplete, see https://jira.hbz-nrw.de/browse/RPB-202
 ## zgrep -a -E '"type":"api::article.article"|"type":"api::independent-work.independent-work"' conf/strapi-export.tar.gz > conf/output/output-strapi.ndjson
 # Instead, we use the backup exports created in Strapi lifecycle afterCreate and afterUpdate hooks (copy from backup/ in Strapi instance):
-cat conf/articles.ndjson > conf/output/output-strapi.ndjson
-cat conf/independent_works.ndjson >> conf/output/output-strapi.ndjson
+cat conf/articles.ndjson | jq -c .data >> conf/output/output-strapi.ndjson
+# After switching independent-works cataloging from Allegro to Strapi, use Strapi data only:
+## cat conf/articles.ndjson | jq -c .data > conf/output/output-strapi.ndjson
+## cat conf/independent_works.ndjson | jq -c .data >> conf/output/output-strapi.ndjson
 # Remove old index data:
 rm conf/output/bulk/bulk-*.ndjson
+## sbt "runMain rpb.ETL conf/rpb-sw.flux" # creates TSV lookup file for to-lobid transformation
 sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
 
 # Index to Elasticsearch:

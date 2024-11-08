@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +32,6 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 import org.antlr.runtime.RecognitionException;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.elasticsearch.common.base.Charsets;
 import org.elasticsearch.common.geo.GeoPoint;
@@ -951,9 +952,9 @@ public class Application extends Controller {
 	public static Promise<Result> put(String id, String secret) throws FileNotFoundException, RecognitionException, IOException {
 		File input = new File("conf/output/test-output-strapi.json");
 		File output = new File("conf/output/test-output-0.json");
-		FileUtils.writeStringToFile(input, request().body().asJson().toString(), Charsets.UTF_8);
+		Files.write(Paths.get(input.getAbsolutePath()), request().body().asJson().toString().getBytes(Charsets.UTF_8));
 		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
-		String result = FileUtils.readFileToString(output, Charsets.UTF_8);
+		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
 		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
 		if (authorized) {
 			String url = "http://weywot3:9200/resources-rpb-test/resource/"

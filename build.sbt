@@ -45,6 +45,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
+javaOptions += "-Dnet.sf.ehcache.disabled=true"
+
 import com.typesafe.sbteclipse.core.EclipsePlugin.EclipseKeys
 
 EclipseKeys.projectFlavor := EclipseProjectFlavor.Java // Java project. Don't expect Scala IDE

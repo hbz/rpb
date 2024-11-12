@@ -137,6 +137,7 @@
 }
 
 @subjects(subjects: Seq[JsValue]) = {
+  @if(!subjects.isEmpty) {
   <tr>
     <td>Schlagwörter</td>
     <td>
@@ -157,6 +158,7 @@
       } else { | }
     }</td>
   </tr>
+  }
 }
 
 @sortedPublications(seq: Seq[JsValue]) = @{

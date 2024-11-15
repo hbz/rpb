@@ -324,7 +324,7 @@ public class Lobid {
 		Callable<String> getLabel = () -> {
 			// e.g. take TT000086525 from http://lobid.org/resources/TT000086525#!
 			String simpleId =
-					id.replaceAll("https?://[^/]+/resources?/(?:search\\?q=rpbId:)?(.+?)[^A-Z0-9]*$", "$1");
+					id.replaceAll("https?://[^/]+/(?:resources?/)?(?:search\\?q=rpbId:)?(.+?)[^A-Z0-9]*$", "$1");
 			JsonNode json = getResource(simpleId).findValue("title");
 			String label =
 					json == null ? "" : HtmlEscapers.htmlEscaper().escape(json.asText());

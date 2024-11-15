@@ -3,11 +3,14 @@
 package controllers.nwbib;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,6 +31,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import org.antlr.runtime.RecognitionException;
 import org.apache.commons.lang3.tuple.Pair;
 import org.elasticsearch.common.base.Charsets;
 import org.elasticsearch.common.geo.GeoPoint;
@@ -54,6 +58,7 @@ import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
 import play.twirl.api.HtmlFormat;
+import rpb.ETL;
 import views.html.browse_classification;
 import views.html.browse_register;
 import views.html.classification;
@@ -942,5 +947,22 @@ public class Application extends Controller {
 	private static List<String> starredIds() {
 		return new ArrayList<>(Arrays.asList(currentlyStarred().split(" ")).stream()
 				.filter(s -> !s.trim().isEmpty()).collect(Collectors.toList()));
+	}
+
+	public static Promise<Result> put(String id, String secret) throws FileNotFoundException, RecognitionException, IOException {
+		File input = new File("conf/output/test-output-strapi.json");
+		File output = new File("conf/output/test-output-0.json");
+		Files.write(Paths.get(input.getAbsolutePath()), request().body().asJson().toString().getBytes(Charsets.UTF_8));
+		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
+		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
+		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
+		if (authorized) {
+			String url = "http://weywot3:9200/resources-rpb-test/resource/"
+					+ URLEncoder.encode("https://lobid.org/resources/" + id, "UTF-8");
+			WSRequest request = WS.url(url).setHeader("Content-Type", "application/json");
+			return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
+		} else {
+			return Promise.pure(unauthorized());
+		}
 	}
 }

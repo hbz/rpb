@@ -38,6 +38,7 @@ public enum TableRow {
 			return filtered.isEmpty() ? ""
 					: String.format("<tr><td>%s</td><td>%s</td></tr>", label,
 							filtered.stream()
+									.flatMap(s -> Arrays.asList(s.split("; ")).stream())
 									.map(val -> label(doc, property, param, val, keys))
 									.collect(Collectors.joining(
 											property.equals("subjectChain") ? " <br/> " : " | ")));
@@ -48,7 +49,9 @@ public enum TableRow {
 			String value = property.equals("subjectChain")
 					? val.replaceAll("\\([\\d,]+\\)$", "").trim() : val;
 			if (!labels.isPresent()) {
-				return refAndLabel(property, value, labels)[0];
+				String[] refAndLabel = refAndLabel(property, value, labels);
+				return value.startsWith("http") ? String.format("<a title='%s' href='%s'>%s</a>",
+						refAndLabel[0], refAndLabel[0], refAndLabel[1]) : refAndLabel[0];
 			}
 			String term = value;
 			if (param.equals("q")) {
@@ -210,11 +213,9 @@ public enum TableRow {
 	String[] refAndLabel(String property, String value,
 			Optional<List<String>> labels) {
 		if ((property.equals("containedIn") || property.equals("hasPart")
-				|| property.equals("isPartOf") || property.equals("hasSuperordinate"))
-				&& value.contains("lobid.org")) {
-			return new String[] {
-					value.replaceAll("https://lobid.org/resources?/", "http://rpb.lobid.org/"),
-					Lobid.resourceLabel(value) };
+				|| property.equals("isPartOf") || property.equals("hasSuperordinate")
+				|| property.equals("bibliographicCitation")) && value.contains("lobid.org")) {
+			return new String[] { value, Lobid.resourceLabel(value) };
 		}
 		String label =
 				labels.isPresent() && labels.get().size() > 0 ? labels.get().get(0)

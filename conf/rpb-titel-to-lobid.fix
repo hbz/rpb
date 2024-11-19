@@ -328,9 +328,9 @@ do list_as(citation: "bibliographicCitation[]")
   if all_match("citation.value", "^http.*")
     copy_field("citation.value", "containedIn[].$append.id")
     copy_field("citation.label", "containedIn[].$last.label")
-    paste("fullLabel", "citation.label", "~. ", 
-      "citation.volume", "~ (", "citation.year", "~) ", 
-      "citation.issue", "~ ", "citation.alternativeNumbering", 
+    paste("fullLabel", "citation.label", "~ ",
+      "citation.volume", "~ (", "citation.year", "~) ",
+      "citation.issue", "~ ", "citation.alternativeNumbering",
       "~ Seite ", "citation.pages", join_char: "")
     replace_all("fullLabel", "\\(\\)", "") # empty year
   end

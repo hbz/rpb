@@ -103,6 +103,9 @@ if is_array("title")
 end
 replace_all("title", "\\s\\+", "")
 
+move_field("alternativeTitle[]", "alternativeTitleObjects[]")
+copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[]")
+
 # ------- "extent" -------
 
 call_macro("move_here", field: "extent")
@@ -362,6 +365,6 @@ end
 
 move_field("edition", "edition[]")
 
-retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]", "containedIn[]")
+retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "alternativeTitle[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]", "containedIn[]")
 
 vacuum()

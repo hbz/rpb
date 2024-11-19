@@ -243,6 +243,7 @@
 
 @table(){
   <tr><td>Titel</td><td><b>@((doc \ "title").asOpt[String].getOrElse(""))</b></td></tr>
+  @result_field("Alternativer Titel", "alternativeTitle", doc, TableRow.VALUES)
   @for(x <- (doc \ "otherTitleInformation").asOpt[Seq[JsValue]]) {
     <tr><td>Titelzusatz</td><td><i>@x.head.asOpt[String].getOrElse("")</i></td></tr>
   }

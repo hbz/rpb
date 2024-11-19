@@ -337,6 +337,7 @@ do list_as(citation: "bibliographicCitation[]")
   move_field("fullLabel", "bibliographicCitation.$append")
 end
 
+uniq("containedIn[]")
 join_field("bibliographicCitation", "; ")
 
 # fulltextOnline and link to external description/ToC

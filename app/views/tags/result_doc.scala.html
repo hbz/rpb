@@ -264,7 +264,7 @@
   @withPrefixedLink("URN", "https://nbn-resolving.org/", doc \ "urn")
   @result_field("Umfang", "extent", doc, TableRow.VALUES)
   @result_field("Quelle", "bibliographicCitation", doc, TableRow.VALUES)
-  @result_field("In", "containedIn", doc, TableRow.LINKS)
+  @labelled("In", "containedIn")
 
   @part_of("isPartOf", "hasSuperordinate")
   @subordinateSearchFor(String.format("http://lobid.org/resources/%s#!", (doc \ "hbzId").asOpt[String].getOrElse("")))

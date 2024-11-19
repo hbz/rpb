@@ -138,7 +138,7 @@ public class Lobid {
 
 		if (requestHolder.getQueryParameters().get("q") == null
 				&& requestHolder.getQueryParameters().get("word") == null) {
-			requestHolder.setQueryParameter("word", "*");
+			requestHolder.setQueryParameter("q", "*");
 		}
 		Logger.debug("Request URL {}, query params {} ", requestHolder.getUrl(),
 				requestHolder.getQueryParameters());
@@ -147,18 +147,19 @@ public class Lobid {
 
 	private static WSRequest setupWordParameter(final String q,
 			final String rpbspatial, String word, WSRequest requestHolder) {
+		String searchParam = "q";
 		if (!q.trim().isEmpty() && rpbspatial.isEmpty())
-			return requestHolder.setQueryParameter("word", preprocess(q));
+			return requestHolder.setQueryParameter(searchParam, preprocess(q));
 		else if (!q.trim().isEmpty() && !rpbspatial.isEmpty())
-			return requestHolder.setQueryParameter("word",
+			return requestHolder.setQueryParameter(searchParam,
 					preprocess(q) + " AND " + setUprpbspatial(rpbspatial));
 		else if (!word.isEmpty() && rpbspatial.isEmpty())
-			return requestHolder.setQueryParameter("word", preprocess(word));
+			return requestHolder.setQueryParameter(searchParam, preprocess(word));
 		else if (!word.isEmpty() && !rpbspatial.trim().isEmpty()) {
-			return requestHolder.setQueryParameter("word",
+			return requestHolder.setQueryParameter(searchParam,
 					preprocess(word) + " AND " + setUprpbspatial(rpbspatial));
 		} else if (!rpbspatial.trim().isEmpty())
-			return requestHolder.setQueryParameter("word",
+			return requestHolder.setQueryParameter(searchParam,
 					setUprpbspatial(rpbspatial));
 		return requestHolder;
 	}

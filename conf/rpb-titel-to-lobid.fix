@@ -320,7 +320,24 @@ set_array("contribution[]")
 call_macro("contributions", from: "person")
 call_macro("contributions", from: "corporateBody")
 
-move_field("bibliographicCitation[].*.value", "bibliographicCitation")
+set_array("containedIn[]")
+set_array("bibliographicCitation")
+
+do list_as(citation: "bibliographicCitation[]")
+  copy_field("citation.value", "fullLabel")
+  if all_match("citation.value", "^http.*")
+    copy_field("citation.value", "containedIn[].$append.id")
+    copy_field("citation.label", "containedIn[].$last.label")
+    paste("fullLabel", "citation.label", "~ ",
+      "citation.volume", "~ (", "citation.year", "~) ",
+      "citation.issue", "~ ", "citation.alternativeNumbering",
+      "~ Seite ", "citation.pages", join_char: "")
+    replace_all("fullLabel", "\\(\\)", "") # empty year
+  end
+  move_field("fullLabel", "bibliographicCitation.$append")
+end
+
+uniq("containedIn[]")
 join_field("bibliographicCitation", "; ")
 
 # fulltextOnline and link to external description/ToC
@@ -345,6 +362,6 @@ end
 
 move_field("edition", "edition[]")
 
-retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]")
+retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]", "containedIn[]")
 
 vacuum()

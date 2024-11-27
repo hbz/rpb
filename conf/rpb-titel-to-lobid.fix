@@ -103,8 +103,17 @@ if is_array("title")
 end
 replace_all("title", "\\s\\+", "")
 
+# ------- "otherTitleInformation" -------
+set_array("otherTitleInformation[]")
+copy_field("otherTitleInformation", "otherTitleInformation[].$append")
+prepend("parallelTitle[].*.value", "= ")
+copy_field("parallelTitle[].*.value", "otherTitleInformation[].$append")
+
+# ------- "alternativeTitle" -------
 move_field("alternativeTitle[]", "alternativeTitleObjects[]")
-copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[]")
+set_array("alternativeTitle[]")
+copy_field("alternativeSpelling", "alternativeTitle[].$append")
+copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[].$append")
 
 # ------- "extent" -------
 

@@ -10,6 +10,7 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Rhein-Zeitung : unabhängige Tageszeitung",
+  "alternativeTitle" : [ "Ausg. C, Andernach/Mayen" ],
   "note" : [ "Vorg. u.d.T.: Rhein-Zeitung / CA. - Vorg. u.d.T.: Rhein-Zeitung / CM" ],
   "publication" : [ {
     "location" : [ "Koblenz" ],

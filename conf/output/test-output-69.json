@@ -9,6 +9,7 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Festschrift des DRK-Ortsverein Adenau e.V. [Elektronische Ressource]",
+  "alternativeTitle" : [ "\"Helfen, ohne zu fragen wem!\"" ],
   "publication" : [ {
     "location" : [ "Adenau" ],
     "type" : [ "PublicationEvent" ]

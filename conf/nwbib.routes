@@ -34,3 +34,4 @@ GET    /cgi-bin/wwwalleg/:name.pl   controllers.nwbib.Application.showPl(name, d
 GET    /sw/:rpbId             controllers.nwbib.Application.showSw(rpbId)
 GET    /o:id                  controllers.nwbib.Application.searchSpatial(id, from:Int?=0, size:Int?=25, format?="html")
 GET    /:id                   controllers.nwbib.Application.show(id, format ?= "")
+PUT    /:id                   controllers.nwbib.Application.put(id, secret ?= "")

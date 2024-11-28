@@ -1,0 +1,100 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "929t091078",
+  "id" : "https://lobid.org/resources/929t091078",
+  "isbn" : [ "978-3-935690-66-9" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Zur Geschichte und Organisation der Neuwieder Feuerwehr",
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Dr. Wolfgang Dietz" ],
+  "publication" : [ {
+    "startDate" : "2008",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n428074",
+    "label" : "Feuerwehr",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Freiwillige Feuerwehr Neuwied | Innenstadt | Geschichte 1867-2008",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/5094678nX",
+      "label" : "Freiwillige Feuerwehr Neuwied",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4072821-3",
+      "label" : "Innenstadt",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn09k1078995a",
+      "label" : "Geschichte 1867-2008",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Freiwillige Feuerwehr Neuwied | Stadtviertel | Geschichte 1600-2008",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/5094678nX",
+      "label" : "Freiwillige Feuerwehr Neuwied",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4077814-9",
+      "label" : "Stadtviertel",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn09k1078114a",
+      "label" : "Geschichte 1600-2008",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n13800045",
+    "label" : "Neuwied, große kreisangehörige Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/132532336",
+      "label" : "Dietz, Wolfgang / 1956-",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "Landkreis Neuwied: Heimatjahrbuch des Landkreises Neuwied. - 2009, S. 383-392 (1. Teil: Innenstadt); 2010, S. 287-305 (2. Teil: Stadtteile)"
+}

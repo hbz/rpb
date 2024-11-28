@@ -65,22 +65,39 @@ do put_macro("to_bool")
   end
 end
 
+do put_macro("add_item")
+  if exists("$[from]")
+    move_field("$[from]", "item[].$append.value")
+    add_field("item[].$last.type", "$[type]")
+  end
+end
+
 move_field("f00_", "rpbId")
 move_field("f01_", "numbering")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f18_", "inCollection")
 move_field("f20_", "title")
+join_field("title", "; ")
 move_field("f21_", "preferredTitle")
 call_macro("move_all", from: "f24?", to: "parallelTitle")
 call_macro("move_all", from: "f27?", to: "alternativeTitle")
 move_field("f28_", "alternativeSpelling")
 move_field("f36_", "type")
-call_macro("move_all", from: "f70[_123456789]", to: "bibliographicCitation")
-move_field("f70b", "volume")
-move_field("f70h", "issue")
-move_field("f70j", "year")
-move_field("f70s", "pages")
-move_field("f70z", "alternativeNumbering")
+if is_array("type")
+  move_field("type.$first", "_temp")
+  move_field("_temp", "type") # e.g. ["um","sbd"] -> "um"
+end
+lookup("type", "um": "u") # https://jira.hbz-nrw.de/browse/RPB-205
+
+set_array("bibliographicCitation[]")
+set_array("bibliographicCitation[].$append.value")
+move_field("f70[_123456789]", "bibliographicCitation[].1.value")
+join_field("bibliographicCitation[].1.value", "; ")
+move_field("f70b", "bibliographicCitation[].1.volume")
+move_field("f70h", "bibliographicCitation[].1.issue")
+move_field("f70j", "bibliographicCitation[].1.year")
+move_field("f70s", "bibliographicCitation[].1.pages")
+move_field("f70z", "bibliographicCitation[].1.alternativeNumbering")
 move_field("f71_", "edition")
 move_field("f74_", "publicationLocation")
 move_field("f75_", "publishedBy")
@@ -91,6 +108,11 @@ call_macro("move_all", from: "f81?", to: "note")
 call_macro("move_all", from: "f85?", to: "isPartOf")
 call_macro("move", to: "isPartOf", from: "f20u", type: "")
 move_field("f86_", "otherId")
+move_field("f95_", "created")
+
+unless all_match("f983", "\\d{4,5}") # https://jira.hbz-nrw.de/browse/RPB-222
+  move_field("f983", "hbzId")
+end
 
 call_macro("move_all", from: "f30?", to: "subject") # Sachnotation
 replace_all("subject[].*.value","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
@@ -149,36 +171,44 @@ unless exists("f39_")
 end
 move_field("f39_", "responsibilityStatement")
 
+# Quelle, s. https://jira.hbz-nrw.de/browse/RPB-26, https://jira.hbz-nrw.de/browse/RPB-177
 # 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
 if all_equal("type", "u")
-  unless exists("bibliographicCitation[].1")
-    add_field("bibliographicCitation[].$append.value", "s. spez. Felder (volume, issue, etc.)")
+  if is_empty("bibliographicCitation[].1.value")
+    if exists ("f70t")
+      paste("bibliographicCitation[].1.value", "~In: ", "f70k", "~: ", "f70t", "~. - ", 
+        "bibliographicCitation[].1.volume", "~ (", "bibliographicCitation[].1.year", "~), ", 
+        "bibliographicCitation[].1.issue", " ", "bibliographicCitation[].1.alternativeNumbering", 
+        "~, Seite ", "bibliographicCitation[].1.pages", "~. -" join_char: "")
+      replace_all("bibliographicCitation[].1.value", "In: : ", "In: ")
+      replace_all("bibliographicCitation[].1.value", ", Seite . -$", "")
+      replace_all("bibliographicCitation[].1.value", "  ", " ")
+      replace_all("bibliographicCitation[].1.value", ", , ", ", ")
+    else
+      add_field("bibliographicCitation[].1.value", "s. spez. Felder (volume, issue, etc.)")
+    end
   end
 end
 
 # Seitenzahl in pages ist Pflichtfeld für Artikel (type=u)
-unless exists("pages")
+unless exists("bibliographicCitation[].1.pages")
  if all_equal("type", "u")
   if exists("bibliographicCitation[].1")
-    copy_field("bibliographicCitation[].1.value", "pages")
-    prepend("pages", "Kopiert aus bibliographicCitation: ")
+    copy_field("bibliographicCitation[].1.value", "bibliographicCitation[].1.pages")
+    prepend("bibliographicCitation[].1.pages", "Kopiert aus #70~, #701 ff.: ")
     put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
     if all_match("bibliographicCitation[].1.value", "$[pages]")
       if is_string("bibliographicCitation[].1.value")
-        replace_all("pages", "$[pages]", "Aus bibliographicCitation: $1")
+        replace_all("bibliographicCitation[].1.pages", "$[pages]", "Aus #70~, #701 ff.: $1")
       end
     end
   else
-    add_field("pages", "N/A")
+    add_field("bibliographicCitation[].1.pages", "N/A")
   end
  end
 end
 
 # Menschenlesbare Werte nutzen (für die Erfassung in Strapi)
-if is_array("type")
-  # print_record("Mehrere Satztypen gefunden: ")
-  set_field("type", "type.$last")
-end
 lookup("type", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
 
 
@@ -190,7 +220,10 @@ call_macro("add_url", from: "f90g", type: "Andere URL")
 
 set_array("item[]")
 
-move_field("f90a", "item[].$append.value") # Signatur
+call_macro("add_item", from: "f90a", type: "MZ") # Mainz
+call_macro("add_item", from: "f90b", type: "SP") # Speyer
+call_macro("add_item", from: "f90c", type: "TR") # Trier
+call_macro("add_item", from: "f90d", type: "KO") # Koblenz
 
 # Person
 set_array("person[]")

@@ -1,21 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "929t01069600",
-  "id" : "https://lobid.org/resources/929t01069600",
+  "rpbId" : "121t0146618",
+  "id" : "https://lobid.org/resources/121t0146618",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Vortrag über Heinrich Alken von Dr. Born.",
+  "title" : "2000 Jahre Meilbrück : vom römischen Tempelbezirk zur modernen Raststätte; Von den Anfängen bis zum Ende der Römerherrschaft",
+  "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1920",
+    "startDate" : "1990",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n109000",
-    "label" : "Biografie",
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Ortsgeschichte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -23,8 +24,8 @@
     }
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13700068",
-    "label" : "Mayen, große kreisangehörige Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n232080600101",
+    "label" : "Meilbrück",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -33,8 +34,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/1044265310",
-      "label" : "Hörter, Peter / 1860-1930",
+      "id" : "http://rpb.lobid.org/sw/00Pn02t0375a",
+      "label" : "Schmitt, Heinz",
       "type" : [ "Person" ]
     },
     "role" : {
@@ -43,5 +44,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Coblenzer Zeitung 25.1.1920.; Mayener Volkszeitung. - 26.1.1920.; Mayener Zeitung. - 31.1.1920."
+  "bibliographicCitation" : "Heimatkalender Landkreis Bitburg-Prüm. - 1990, S. 74 - 78"
 }

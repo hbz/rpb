@@ -2,7 +2,7 @@ default HOST = "localhost"; // pass e.g. HOST=test-metadaten-nrw.hbz-nrw.de
 default API_TOKEN = ""; // pass e.g. API_TOKEN=e8d...
 API_URL = "http://" + HOST + ":1337/api/" + PATH;
 
-"https://raw.githubusercontent.com/acka47/scripts/master/skos2json/" + INPUT
+"https://raw.githubusercontent.com/hbz/lbz-vocabs/main/output/" + INPUT
 | open-http
 | as-lines
 | regex-decode("(?<data>.+)")

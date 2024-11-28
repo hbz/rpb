@@ -4,8 +4,8 @@ vacuum()
 
 #-------- maps --------
 do once("map")
-  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
-  put_rdfmap("https://raw.githubusercontent.com/hbz/lobid-vocabs/master/rpb/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
 end
 
 do put_macro("move_here")
@@ -28,6 +28,9 @@ copy_field("rpbId", "_id")
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
+unless exists("type")
+  set_field("type[].$append", "Article")
+end
 if all_equal("type", "u")
   set_field("type[].$append", "Article")
 end
@@ -40,7 +43,10 @@ end
 if any_equal("type", "Band")
   set_field("type[].$append", "Book")
   call_macro("move_here", field: "isPartOf[]")
-  copy_field("isPartOf[].value", "superordinateLabel")
+  copy_field("isPartOf[].label", "superordinateLabel")
+  unless exists("superordinateLabel")
+    copy_field("isPartOf[].value", "superordinateLabel")
+  end
   set_array("isPartOf[]")
   set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
   set_array("isPartOf[].$last.hasSuperordinate[]")
@@ -61,7 +67,7 @@ prepend("id","https://lobid.org/resources/")
 
 # ------- hbzId -------
 
-copy_field("f983", "hbzId")
+call_macro("move_here", field: "hbzId")
 
 # ------- schoeneNummer -------
 
@@ -95,7 +101,6 @@ call_macro("move_here", field: "title")
 if is_array("title")
   copy_field("title.$last", "title")
 end
-replace_all("title","¬","")
 replace_all("title", "\\s\\+", "")
 
 # ------- "extent" -------
@@ -121,9 +126,14 @@ if exists("isPartOf[]")
     set_array("temp")
     set_array("temp.$append.type[]", "IsPartOfRelation")
     set_array("temp.$last.hasSuperordinate[]")
-    split_field("isPartOf[].1.value", " ; ")
-    copy_field("isPartOf[].1.value.1", "temp.$last.hasSuperordinate[].$append.label")
-    copy_field("isPartOf[].1.value.2", "temp.$last.numbering")
+    if exists("isPartOf[].1.label")
+      copy_field("isPartOf[].1.value", "temp.$last.hasSuperordinate[].$append.id")
+      copy_field("isPartOf[].1.label", "temp.$last.hasSuperordinate[].$last.label")
+    else
+      split_field("isPartOf[].1.value", " ; ")
+      copy_field("isPartOf[].1.value.1", "temp.$last.hasSuperordinate[].$append.label")
+      copy_field("isPartOf[].1.value.2", "temp.$last.numbering")
+    end
     move_field("temp", "isPartOf[]")
   end
 end
@@ -205,10 +215,12 @@ end
 do
  list (path:"temp_subject.*.componentList[]", "var": "$i")
   move_field("$i.value", "$i.id")
-  copy_field("$i.id", "$i.label")
-  replace_all("$i.label","^http.+[/#](.+)$","$1")
-  replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
-  lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+  unless exists("$i.label")
+    copy_field("$i.id", "$i.label")
+    replace_all("$i.label","^http.+[/#](.+)$","$1")
+    replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
+    lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+  end
   if all_match("$i.id","^http://rpb.lobid.org/sw/.*$")
     add_field("$i.source.id", "http://rpb.lobid.org/sw")
     add_field("$i.source.label", "RPB-Sachsystematik")
@@ -284,11 +296,14 @@ do put_macro("contributions")
   set_array("_temp")
   copy_field("$[from][].*.value", "_temp.$append.agent.id")
   do list_as(f: "$[from][]", c: "_temp")
-    copy_field("c.agent.id", "c.agent.label")
+    copy_field("f.label", "c.agent.label")
+    unless exists("c.agent.label")
+      copy_field("c.agent.id", "c.agent.label")
+      replace_all("c.agent.label","^http.+[/#](.+)$","$1")
+      replace_all("c.agent.label","^(\\d+)-(\\d+)$","$1n$2")
+      lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+    end
     set_array("c.agent.type[]", "Person")
-    replace_all("c.agent.label","^http.+[/#](.+)$","$1")
-    replace_all("c.agent.label","^(\\d+)-(\\d+)$","$1n$2")
-    lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
     copy_field("f.type", "c.role.id")
     copy_field("f.type", "c.role.label")
     lookup("c.role.id", "role-to-uri")
@@ -305,39 +320,25 @@ set_array("contribution[]")
 call_macro("contributions", from: "person")
 call_macro("contributions", from: "corporateBody")
 
-# ------- bibliographicCitation -------
-# Siehe https://jira.hbz-nrw.de/browse/RPB-26
+set_array("containedIn[]")
+set_array("bibliographicCitation")
 
-if exists ("f70t")
-  do list(path:"f70*", "var": "$i")
-    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "volume", "~ (", "year", "~), ", "issue", " ", "alternativeNumbering", "~, Seite ", "pages", "~. -" join_char: "")
-    replace_all("bibliographicCitation", "In: : ", "In: ")
-    replace_all("bibliographicCitation", ", Seite . -$", "")
-    replace_all("bibliographicCitation", "  ", " ")
-    replace_all("bibliographicCitation", ", , ", ", ")
+do list_as(citation: "bibliographicCitation[]")
+  copy_field("citation.value", "fullLabel")
+  if all_match("citation.value", "^http.*")
+    copy_field("citation.value", "containedIn[].$append.id")
+    copy_field("citation.label", "containedIn[].$last.label")
+    paste("fullLabel", "citation.label", "~ ",
+      "citation.volume", "~ (", "citation.year", "~) ",
+      "citation.issue", "~ ", "citation.alternativeNumbering",
+      "~ Seite ", "citation.pages", join_char: "")
+    replace_all("fullLabel", "\\(\\)", "") # empty year
   end
-elsif exists ("bibliographicCitation[].1")
-  paste("bibliographicCitation", "bibliographicCitation[].1.value")
-elsif exists ("f701")
-  paste("bibliographicCitation", "f701")
-elsif exists ("f702")
-  paste("bibliographicCitation", "f702")
-elsif exists ("f703")
-  paste("bibliographicCitation", "f703")
-elsif exists ("f704")
-  paste("bibliographicCitation", "f704")
-elsif exists ("f705")
-  paste("bibliographicCitation", "f705")
-elsif exists ("f706")
-  paste("bibliographicCitation", "f706")
-elsif exists ("f707")
-  paste("bibliographicCitation", "f707")
-elsif exists ("f708")
-  paste("bibliographicCitation", "f708")
-elsif exists ("f709")
-  paste("bibliographicCitation", "f709")
+  move_field("fullLabel", "bibliographicCitation.$append")
 end
-replace_all("bibliographicCitation","¬","")
+
+uniq("containedIn[]")
+join_field("bibliographicCitation", "; ")
 
 # fulltextOnline and link to external description/ToC
 
@@ -361,6 +362,6 @@ end
 
 move_field("edition", "edition[]")
 
-retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]")
+retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]", "containedIn[]")
 
 vacuum()

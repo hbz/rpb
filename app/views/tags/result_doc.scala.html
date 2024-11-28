@@ -243,9 +243,8 @@
 
 @table(){
   <tr><td>Titel</td><td><b>@((doc \ "title").asOpt[String].getOrElse(""))</b></td></tr>
-  @for(x <- (doc \ "otherTitleInformation").asOpt[Seq[JsValue]]) {
-    <tr><td>Titelzusatz</td><td><i>@x.head.asOpt[String].getOrElse("")</i></td></tr>
-  }
+  @result_field("Titelzusatz", "otherTitleInformation", doc, TableRow.VALUES)
+  @result_field("Alternativer Titel", "alternativeTitle", doc, TableRow.VALUES)
   @result_field("Unterreihe", "titleOfSubSeries", doc, TableRow.VALUES)
   @result_field("Verantwortlich", "responsibilityStatement", doc, TableRow.VALUES)
   @contributions((doc \ "contribution").asOpt[Seq[JsValue]].getOrElse(Seq()))
@@ -274,7 +273,7 @@
   @raumsystematik("https://rpb.lobid.org/spatial")
   @sachsystematik("http://purl.org/lobid/rpb")
 
-  @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()))
+  @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()).filter(v => !(v \ "source").toString.contains("Systematik")))
 
   @result_field("Schlagwortfolge", "subjectChain", doc, TableRow.VALUES, valueLabel = Option(Seq()))
 

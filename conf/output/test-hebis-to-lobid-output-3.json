@@ -1,0 +1,126 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/512849919#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Findet Hadi - Lernorte in der Ausstellung Der charismatische Ort - Stationen der reisenden Könige im Mittelalter",
+  "almaMmsId" : "512849919",
+  "oclcNumber" : [ "1407112396" ],
+  "otherTitleInformation" : [ "Rätselheft für Kinder und Erwachsene" ],
+  "publication" : [ {
+    "startDate" : "2019",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Ingelheim am Rhein" ],
+    "publishedBy" : [ "Stadt Ingelheim am Rhein" ]
+  } ],
+  "describedBy" : {
+    "id" : "http://lobid.org/resources/512849919",
+    "label" : "Webseite der hbz-Ressource 512849919",
+    "type" : [ "BibliographicDescription" ],
+    "inDataset" : {
+      "id" : "http://lobid.org/resources/dataset#!",
+      "label" : "lobid-resources – Der hbz-Verbundkatalog als Linked Open Data"
+    },
+    "resultOf" : {
+      "type" : [ "CreateAction" ],
+      "endTime" : "2024-12-03T10:18:32",
+      "instrument" : {
+        "id" : "https://github.com/hbz/lobid-resources",
+        "type" : [ "SoftwareApplication" ],
+        "label" : "Software lobid-resources"
+      },
+      "object" : {
+        "id" : "https://lobid.org/marcxml/512849919",
+        "type" : [ "DataFeedItem" ],
+        "label" : "hbz-Ressource 512849919 im Exportformat MARC21 XML",
+        "inDataset" : {
+          "id" : "https://datahub.io/dataset/hbz_unioncatalog",
+          "label" : "hbz_unioncatalog"
+        },
+        "sourceOrganization" : {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        },
+        "provider" : {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        },
+        "modifiedBy" : [ {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        } ]
+      }
+    },
+    "license" : [ {
+      "id" : "http://creativecommons.org/publicdomain/zero/1.0",
+      "label" : "Creative Commons-Lizenz CC0 1.0 Universal"
+    } ]
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1407112396",
+    "label" : "OCLC Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "12 Seiten : Illustrationen",
+  "natureOfContent" : [ {
+    "label" : "Kindersachbuch",
+    "id" : "https://d-nb.info/gnd/4163854-2"
+  }, {
+    "label" : "Ausstellungskatalog",
+    "id" : "https://d-nb.info/gnd/4135467-9"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Herausgeber: Stadt Ingelheim am Rhein ; Konzept und Inhalte: Dr. Barbara Gaertner ; Veranstalter der Ausstellung: Stadtverwaltung Ingelheim am Rhein, Forschungsstelle Kaiserpfalz" ],
+  "contribution" : [ {
+    "agent" : {
+      "label" : "Gaertner, Barbara",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "16162519-8",
+      "id" : "https://d-nb.info/gnd/16162519-8",
+      "label" : "Forschungsstelle Kaiserpfalz",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/orm"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "16162519-8",
+      "id" : "https://d-nb.info/gnd/16162519-8",
+      "label" : "Forschungsstelle Kaiserpfalz",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/sng"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "1175257540",
+      "id" : "https://d-nb.info/gnd/1175257540",
+      "label" : "Kunstforum Ingelheim - Altes Rathaus",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/his"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

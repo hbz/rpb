@@ -6,7 +6,7 @@ bin
 .settings
 /conf/maps/beacons/*.tsv
 /conf/output/*
-!/conf/output/test-output-*.json
+!/conf/output/test*.json
 !/conf/output/rpb-50*
 /data/*
 !/data/.empty

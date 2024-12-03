@@ -1,8 +1,8 @@
 put_filemap("./maps/maps-institutions.tsv","alma-iz-code-to-isil", sep_char:"\t",key_column:"2",value_column:"4",expected_columns:"-1")
 put_filemap("./maps/maps-institutions.tsv","alma-institution-code-to-isil", sep_char:"\t",key_column:"3",value_column:"4",expected_columns:"-1")
 
-put_filemap("./maps/sublibraryIsil","sublibraryIsil", sep_char:"\t")
-put_filemap("./maps/suppressedLocations","suppressedLocations", sep_char:"\t")
+put_filemap("./maps/sublibraryIsil.tsv","sublibraryIsil", sep_char:"\t")
+put_filemap("./maps/suppressedLocations.tsv","suppressedLocations", sep_char:"\t")
 
 # lobid Organisations id -> label
 put_filemap("./maps/lobidOrganisationsMapping.tsv","lobidOrgLabels", sep_char:"\t",key_column:"0",value_column:"3",expected_columns:"-1")
@@ -19,8 +19,8 @@ put_filemap("./maps/nwbibWikidataLabelTypeCoords.tsv","nwbibWikidataTypes", sep_
 put_filemap("./maps/nwbibWikidataLabelTypeCoords.tsv","nwbibWikidataGeodata", sep_char:"\t",key_column:"0",value_column:"4",expected_columns:"-1")
 
 # DDC & DNB-Sachgruppen
-put_filemap("./maps/deweyLabels","deweyLabels",sep_char:"\t")
-put_filemap("./maps/dnbSachgruppen","dnbSachgruppen",sep_char:"\t")
+put_filemap("./maps/deweyLabels.tsv","deweyLabels",sep_char:"\t")
+put_filemap("./maps/dnbSachgruppen.tsv","dnbSachgruppen",sep_char:"\t")
 
 # Library Classifications
 put_filemap("./maps/classification.tsv","classificationCode2Label", sep_char:"\t",key_column:"0",value_column:"1",expected_columns:"-1")

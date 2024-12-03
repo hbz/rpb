@@ -1,0 +1,134 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/090363000#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Mainz transparent",
+  "almaMmsId" : "090363000",
+  "isbn" : [ "3874395340", "9783874395342" ],
+  "oclcNumber" : [ "57680814" ],
+  "dnbId" : "958645337",
+  "otherTitleInformation" : [ "2000 years of a city ; [city guide]" ],
+  "publication" : [ {
+    "startDate" : "2000",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Mainz" ],
+    "publishedBy" : [ "Schmidt" ]
+  } ],
+  "describedBy" : {
+    "id" : "http://lobid.org/resources/090363000",
+    "label" : "Webseite der hbz-Ressource 090363000",
+    "type" : [ "BibliographicDescription" ],
+    "inDataset" : {
+      "id" : "http://lobid.org/resources/dataset#!",
+      "label" : "lobid-resources – Der hbz-Verbundkatalog als Linked Open Data"
+    },
+    "resultOf" : {
+      "type" : [ "CreateAction" ],
+      "endTime" : "2024-12-03T10:18:33",
+      "instrument" : {
+        "id" : "https://github.com/hbz/lobid-resources",
+        "type" : [ "SoftwareApplication" ],
+        "label" : "Software lobid-resources"
+      },
+      "object" : {
+        "id" : "https://lobid.org/marcxml/090363000",
+        "type" : [ "DataFeedItem" ],
+        "label" : "hbz-Ressource 090363000 im Exportformat MARC21 XML",
+        "inDataset" : {
+          "id" : "https://datahub.io/dataset/hbz_unioncatalog",
+          "label" : "hbz_unioncatalog"
+        },
+        "sourceOrganization" : {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        },
+        "provider" : {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        },
+        "modifiedBy" : [ {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        } ]
+      }
+    },
+    "license" : [ {
+      "id" : "http://creativecommons.org/publicdomain/zero/1.0",
+      "label" : "Creative Commons-Lizenz CC0 1.0 Universal"
+    } ]
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/57680814",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/958645337",
+    "label" : "DNB-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/eng",
+    "label" : "Englisch"
+  } ],
+  "extent" : "127 S. : zahlr. Ill., graph. Darst., Kt.",
+  "natureOfContent" : [ {
+    "label" : "Führer",
+    "id" : "https://d-nb.info/gnd/4155569-7"
+  } ],
+  "subject" : [ {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Mainz",
+    "id" : "https://d-nb.info/gnd/4037124-4",
+    "gndIdentifier" : "4037124-4"
+  }, {
+    "notation" : "61",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Systematik der DNB (bis 2003)",
+      "id" : "https://bartoc.org/en/node/18497"
+    }
+  }, {
+    "notation" : "19.1d",
+    "type" : [ "Concept" ]
+  } ],
+  "subjectslabels" : [ "Mainz" ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "by Georg Schuler, Ellen Vest and Frank Herda" ],
+  "contribution" : [ {
+    "agent" : {
+      "label" : "Schuler, Georg",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Vest, Ellen",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Herda, Frank",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

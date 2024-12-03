@@ -1,0 +1,152 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/478607776#!",
+  "type" : [ "BibliographicResource", "Festschrift", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Die Alzeyer Nikolaikirche",
+  "almaMmsId" : "478607776",
+  "oclcNumber" : [ "1196889751" ],
+  "dnbId" : "121992976X",
+  "alternativeTitle" : [ "Festschrift zur Wiederindienststellung zweitausendzwanzig" ],
+  "otherTitleInformation" : [ "Festschrift zur Wiederindienststellung 2020" ],
+  "publication" : [ {
+    "startDate" : "2020",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Alzey" ],
+    "publishedBy" : [ "Evangelische Kirchengemeinde" ]
+  } ],
+  "manufacture" : [ {
+    "type" : [ "Event" ],
+    "location" : [ "Radebeul" ],
+    "manufacturedBy" : [ "Unitedprint.com" ]
+  } ],
+  "describedBy" : {
+    "id" : "http://lobid.org/resources/478607776",
+    "label" : "Webseite der hbz-Ressource 478607776",
+    "type" : [ "BibliographicDescription" ],
+    "inDataset" : {
+      "id" : "http://lobid.org/resources/dataset#!",
+      "label" : "lobid-resources – Der hbz-Verbundkatalog als Linked Open Data"
+    },
+    "resultOf" : {
+      "type" : [ "CreateAction" ],
+      "endTime" : "2024-12-03T10:18:33",
+      "instrument" : {
+        "id" : "https://github.com/hbz/lobid-resources",
+        "type" : [ "SoftwareApplication" ],
+        "label" : "Software lobid-resources"
+      },
+      "object" : {
+        "id" : "https://lobid.org/marcxml/478607776",
+        "type" : [ "DataFeedItem" ],
+        "label" : "hbz-Ressource 478607776 im Exportformat MARC21 XML",
+        "inDataset" : {
+          "id" : "https://datahub.io/dataset/hbz_unioncatalog",
+          "label" : "hbz_unioncatalog"
+        },
+        "sourceOrganization" : {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        },
+        "provider" : {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        },
+        "modifiedBy" : [ {
+          "id" : "http://lobid.org/organisations/DE-603#!",
+          "label" : "Hessisches BibliotheksInformationsSystem hebis"
+        } ]
+      }
+    },
+    "license" : [ {
+      "id" : "http://creativecommons.org/publicdomain/zero/1.0",
+      "label" : "Creative Commons-Lizenz CC0 1.0 Universal"
+    } ]
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1196889751",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/121992976X",
+    "label" : "DNB-Ressource"
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "https://d-nb.info/121992976X/04"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "172 Seiten : Illustrationen ; 30 cm",
+  "natureOfContent" : [ {
+    "label" : "Festschrift",
+    "id" : "https://d-nb.info/gnd/4016928-5"
+  } ],
+  "subject" : [ {
+    "notation" : "720",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Architektur"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "720",
+    "notation" : "720",
+    "version" : "sdnb"
+  }, {
+    "notation" : "230",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Theologie, Christentum"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Christentum",
+    "notation" : "230",
+    "version" : "sdnb"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Herausgeberin Evangelische Kirchengemeinde Alzey ; verantwortlich, Redaktion: Hartmut Müller" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "1232182699",
+      "id" : "https://d-nb.info/gnd/1232182699",
+      "label" : "Müller, Hartmut",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "2038312-5",
+      "id" : "https://d-nb.info/gnd/2038312-5",
+      "label" : "Evangelische Kirchengemeinde Alzey",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

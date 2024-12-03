@@ -1,0 +1,101 @@
+{
+  "extent" : "175 Seiten : Illustrationen",
+  "rpbId" : "036t220004",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n262012",
+    "label" : "Festung",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n724030",
+    "label" : "Jugend",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n735020",
+    "label" : "Freizeiteinrichtung",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n611044",
+    "label" : "Kirchlicher Verein",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/5185690-6",
+      "label" : "St.-Stanislaus-Kongregation",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4020517-4",
+      "label" : "Geschichte",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "St.-Stanislaus-Kongregation | Geschichte",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "isbn" : [ "978-3-943915-53-2", "3-943915-53-0" ],
+  "responsibilityStatement" : [ "Manfred Göbel" ],
+  "edition" : [ "1. Auflage" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Der Stahlberg in Mainz : Festung - Spielplatz - Jugendhaus",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/114667449X",
+      "label" : "Göbel, Manfred / 1954-",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "morisel Verlag" ],
+    "location" : [ "München" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t220004",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n31500000",
+    "label" : "Mainz, Kreisfreie Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "https://rpb.lobid.org/spatial#n36",
+    "label" : "Katholische Kirche / Diözese Mainz",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

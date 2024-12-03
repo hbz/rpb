@@ -1,0 +1,68 @@
+{
+  "extent" : "40 Seiten : Illustrationen",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/3042322-3",
+      "label" : "Carneval-Club 1948 Ober-Olm",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "rpbId" : "036t220001",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n704043",
+    "label" : "Karneval",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/3042322-3",
+      "label" : "Carneval-Club 1948 Ober-Olm",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn05k0001457a",
+      "label" : "Geschichte 2002",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ],
+    "label" : "Carneval-Club 1948 Ober-Olm | Geschichte 2002",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Carneval Club 1948 Ober-Olm e.V." ],
+    "location" : [ "Ober-Olm" ],
+    "type" : [ "PublicationEvent" ],
+    "startDate" : "2002"
+  } ],
+  "responsibilityStatement" : [ "Carneval Club 1948 Ober-Olm e.V." ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t220001",
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Liederheft",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33906047",
+    "label" : "Ober-Olm",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ],
+  "@context" : "http://lobid.org/resources/context.jsonld"
+}

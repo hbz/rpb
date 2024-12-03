@@ -1,0 +1,68 @@
+{
+  "extent" : "271 Seiten : Illustrationen",
+  "rpbId" : "036t220003",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n444070",
+    "label" : "Kriminalfall",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4049762-8",
+      "label" : "Rheinhessen",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/119004356",
+      "label" : "Jack / the Ripper",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Rheinhessen | Jack / the Ripper",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "isbn" : [ "978-3-7392-7169-9" ],
+  "responsibilityStatement" : [ "Thomas Hattemer" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Jack the Ripper - Verdächtigter vom Rhein : Mörder in USA aus Region Bingen, Alzey",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn03m1223b",
+      "label" : "Hattemer, Thomas",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Bod - Books on Demand" ],
+    "location" : [ "[Norderstedt]" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t220003",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n05",
+    "label" : "Rheinhessen",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

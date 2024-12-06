@@ -1,0 +1,93 @@
+{
+  "extent" : "72 S. : zahlr. Ill.",
+  "rpbId" : "036t000007",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102050",
+    "label" : "Ortsbeschreibung",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4019445-0",
+      "label" : "Gau-Algesheim",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4145395-5",
+      "label" : "Bildband",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Gau-Algesheim | Geschichte 1945- | Bildband",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "responsibilityStatement" : [ "Fotos: Philipp Eckert. [Texte: Ludwig Hellriegel]" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Gau-Algesheim : mit Kamera und Herz eines Winzers gesehen",
+  "isPartOf" : [ {
+    "hasSuperordinate" : [ {
+      "label" : "Beiträge zur Geschichte des Gau-Algesheimer Raumes"
+    } ],
+    "numbering" : "42",
+    "type" : [ "IsPartOfRelation" ]
+  } ],
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn00m0007a",
+      "label" : "Eckert, Philipp",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/118183575",
+      "label" : "Hellriegel, Ludwig / 1932-2011",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Kügler" ],
+    "location" : [ "Ingelheim am Rhein" ],
+    "type" : [ "PublicationEvent" ],
+    "startDate" : "2000"
+  } ],
+  "id" : "https://lobid.org/resources/036t000007",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33903019",
+    "label" : "Gau-Algesheim, Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

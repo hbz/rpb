@@ -12,6 +12,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" % "play-test_2.11" % "2.4.11",
   "org.metafacture" % "metafacture-elasticsearch" % "5.7.0",
   "org.metafacture" % "metafacture-io" % "5.7.0",
+  "org.metafacture" % "metafacture-xml" % "5.7.0",
+  "org.metafacture" % "metafacture-biblio" % "5.7.0",
   "org.metafacture" % "metafacture-strings" % "5.7.0",
   "org.metafacture" % "metafacture-json" % "5.7.0",
   "org.metafacture" % "metafacture-flux" % "5.7.0",

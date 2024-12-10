@@ -259,7 +259,8 @@ public class Application extends Controller {
 			response().setHeader("Pragma", "no-cache");
 			response().setHeader("Expires", "0");
 		}
-		String cacheId = String.format("%s-%s", uuid, request().uri());
+		String cacheId = request().queryString().isEmpty() ? request().uri()
+				: String.format("%s-%s", uuid, request().uri());
 		@SuppressWarnings("unchecked")
 		Promise<Result> cachedResult = (Promise<Result>) Cache.get(cacheId);
 		if (cachedResult != null)
@@ -957,6 +958,7 @@ public class Application extends Controller {
 		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
 		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
 		if (authorized) {
+			Cache.remove(String.format("/%s", id));
 			String url = "http://weywot3:9200/resources-rpb-test/resource/"
 					+ URLEncoder.encode("https://lobid.org/resources/" + id, "UTF-8");
 			WSRequest request = WS.url(url).setHeader("Content-Type", "application/json");

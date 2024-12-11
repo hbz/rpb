@@ -357,6 +357,16 @@ do list_as(citation: "bibliographicCitation[]")
   move_field("fullLabel", "bibliographicCitation.$append")
 end
 
+# containedIn - For articles we should move hbzId of parent records to containedIn since they are not the article records hbzId
+
+if any_equal("type[]", "Article")
+  if exists("hbzId")
+    paste("containedIn[].$append.id","~https://lobid.org/resources/","hbzId","~#!", join_char:"")
+    remove_field("hbzId")
+  end
+end
+
+
 uniq("containedIn[]")
 join_field("bibliographicCitation", "; ")
 

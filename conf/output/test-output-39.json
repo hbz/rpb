@@ -62,7 +62,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/1033772-6",
-      "label" : "Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland / Frankfurt, Main",
+      "label" : "Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

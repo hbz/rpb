@@ -3,7 +3,6 @@
   "type" : [ "BibliographicResource", "Article" ],
   "rpbId" : "929t112200",
   "id" : "https://lobid.org/resources/929t112200",
-  "hbzId" : "CT003010348",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -73,6 +72,9 @@
       "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "containedIn" : [ {
+    "id" : "https://lobid.org/resources/CT003010348#!"
   } ],
   "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 456",
   "fulltextOnline" : [ {

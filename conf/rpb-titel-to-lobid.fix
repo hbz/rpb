@@ -141,20 +141,22 @@ end
 if exists("isPartOf[]")
   unless any_equal("type", "Band") # also sets isPartOf
     set_array("temp")
-    set_array("temp.$append.type[]", "IsPartOfRelation")
-    set_array("temp.$last.hasSuperordinate[]")
-    if exists("isPartOf[].1.label")
-      copy_field("isPartOf[].1.value", "temp.$last.hasSuperordinate[].$append.id")
-      copy_field("isPartOf[].1.label", "temp.$last.hasSuperordinate[].$last.label")
-      unless all_match("temp.$last.hasSuperordinate[].$last.id", "^http.+")
-        set_field("temp.$last.hasSuperordinate[].$last.id", "") # free text in Strapi
-        copy_field("isPartOf[].1.value", "temp.$last.hasSuperordinate[].$last.label")
+    do list (path:"isPartOf[]", "var": "$i")
+      set_array("temp.$append.type[]", "IsPartOfRelation")
+      set_array("temp.$last.hasSuperordinate[]")
+      if exists("$i.label")
+        split_field("$i.label", " ; ")
+        copy_field("$i.value", "temp.$last.hasSuperordinate[].$append.id")
+        copy_field("$i.label.1", "temp.$last.hasSuperordinate[].$last.label")
+        unless all_match("temp.$last.hasSuperordinate[].$last.id", "^http.+")
+          set_field("temp.$last.hasSuperordinate[].$last.id", "") # free text in Strapi
+        end
+        copy_field("$i.numbering", "temp.$last.numbering")
+      else
+        split_field("$i.value", " ; ")
+        copy_field("$i.value.1", "temp.$last.hasSuperordinate[].$append.label")
+        copy_field("$i.value.2", "temp.$last.numbering")
       end
-      copy_field("isPartOf[].1.numbering", "temp.$last.numbering")
-    else
-      split_field("isPartOf[].1.value", " ; ")
-      copy_field("isPartOf[].1.value.1", "temp.$last.hasSuperordinate[].$append.label")
-      copy_field("isPartOf[].1.value.2", "temp.$last.numbering")
     end
     move_field("temp", "isPartOf[]")
   end

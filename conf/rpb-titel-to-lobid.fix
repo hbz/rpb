@@ -146,6 +146,11 @@ if exists("isPartOf[]")
     if exists("isPartOf[].1.label")
       copy_field("isPartOf[].1.value", "temp.$last.hasSuperordinate[].$append.id")
       copy_field("isPartOf[].1.label", "temp.$last.hasSuperordinate[].$last.label")
+      unless all_match("temp.$last.hasSuperordinate[].$last.id", "^http.+")
+        set_field("temp.$last.hasSuperordinate[].$last.id", "") # free text in Strapi
+        copy_field("isPartOf[].1.value", "temp.$last.hasSuperordinate[].$last.label")
+      end
+      copy_field("isPartOf[].1.numbering", "temp.$last.numbering")
     else
       split_field("isPartOf[].1.value", " ; ")
       copy_field("isPartOf[].1.value.1", "temp.$last.hasSuperordinate[].$append.label")

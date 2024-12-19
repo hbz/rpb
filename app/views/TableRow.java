@@ -107,16 +107,18 @@ public enum TableRow {
 		private String label(JsonNode doc, String value, List<String> properties) {
 			List<String> results = new ArrayList<>();
 			List<String> resultValues = labelsFor(doc, value, properties);
+			JsonNode labelNode = doc.get(properties.get(0)).iterator().next().get("label");
 			for (int i = 0; i < resultValues.size(); i++) {
 				String currentValue = resultValues.get(i);
 				String[] refAndLabel =
 						refAndLabel(properties.get(i), currentValue, Optional.empty());
+				String label = labelNode != null ? labelNode.textValue() : refAndLabel[1];
 				String result =
 						properties.get(i).equals("numbering") || value.equals("--")
 								? currentValue
 								: String.format(
 										"<a title=\"Titeldetails anzeigen\" href=\"%s\">%s</a>",
-										refAndLabel[0], refAndLabel[1]);
+										refAndLabel[0], label);
 				results.add(result.replace("Band", "").trim());
 			}
 			return results.stream().collect(Collectors.joining(", Band "));
@@ -129,8 +131,8 @@ public enum TableRow {
 				JsonNode node = doc.get(keys.get(0)).iterator().next();
 				JsonNode id = node.get("id");
 				JsonNode label = node.get("label");
-				result.add(label != null ? label.textValue()
-						: id != null ? id.textValue() : "--");
+				result.add(id != null ? id.textValue()
+						: label != null ? label.textValue() : "--");
 				JsonNode val = doc.get(keys.get(1));
 				if (val != null)
 					result.add(val.textValue());

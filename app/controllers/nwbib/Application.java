@@ -951,20 +951,43 @@ public class Application extends Controller {
 	}
 
 	public static Promise<Result> put(String id, String secret) throws FileNotFoundException, RecognitionException, IOException {
-		File input = new File("conf/output/test-output-strapi.json");
-		File output = new File("conf/output/test-output-0.json");
-		Files.write(Paths.get(input.getAbsolutePath()), request().body().asJson().toString().getBytes(Charsets.UTF_8));
-		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
-		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
 		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
 		if (authorized) {
-			Cache.remove(String.format("/%s", id));
-			String url = "http://weywot3:9200/resources-rpb-test/resource/"
-					+ URLEncoder.encode("https://lobid.org/resources/" + id, "UTF-8");
-			WSRequest request = WS.url(url).setHeader("Content-Type", "application/json");
-			return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
+			return transformAndIndex(id, request().body().asJson());
 		} else {
-			return Promise.pure(unauthorized());
+			return Promise.pure(unauthorized(secret));
 		}
+	}
+
+	public static Promise<Result> delete(String id, String secret) throws FileNotFoundException, RecognitionException, IOException {
+		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
+		if (authorized) {
+			return deleteFromIndex(id);
+		} else {
+			return Promise.pure(unauthorized(secret));
+		}
+	}
+
+	private static Promise<Result> deleteFromIndex(String id) throws UnsupportedEncodingException {
+		Cache.remove(String.format("/%s", id));
+		WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
+		return request.delete().map(response -> status(response.getStatus(), response.getBody()));
+	}
+
+	private static Promise<Result> transformAndIndex(String id, JsonNode jsonBody)
+			throws IOException, FileNotFoundException, RecognitionException, UnsupportedEncodingException {
+		File input = new File("conf/output/test-output-strapi.json");
+		File output = new File("conf/output/test-output-0.json");
+		Files.write(Paths.get(input.getAbsolutePath()), jsonBody.toString().getBytes(Charsets.UTF_8));
+		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
+		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
+		Cache.remove(String.format("/%s", id));
+		WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
+		return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
+	}
+	
+	private static String elasticsearchUrl(String id) throws UnsupportedEncodingException {
+		return "http://weywot3:9200/resources-rpb-test/resource/"
+				+ URLEncoder.encode("https://lobid.org/resources/" + id, "UTF-8");
 	}
 }

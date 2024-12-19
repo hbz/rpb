@@ -105,13 +105,15 @@
 
 @part_of(field: String, subField: String) = {
  @if(!(doc \ field).isInstanceOf[JsUndefined]){
-  @defining((doc \ field).as[Seq[JsValue]].sortBy((v: JsValue) => (v\"numbering").isInstanceOf[JsUndefined]).get(0)) { case (isPartOf) =>
+  @defining((doc \ field).as[Seq[JsValue]].sortBy((v: JsValue) => (v\"numbering").isInstanceOf[JsUndefined])) { case (isPartOfs) =>
+    @for((isPartOf) <- isPartOfs) {
       @Html(TableRow.VALUES_MULTI.process(new com.fasterxml.jackson.databind.ObjectMapper().readTree(String.format("{\"%s\":[%s]}", field, isPartOf)),
       field,
       "q",
-      if((isPartOf \ "numbering").asOpt[String].isDefined) {"Erschienen als"} else {"Erschienen in"},
+      if(isPartOf == isPartOfs.head) { if((isPartOf \ "numbering").asOpt[String].isDefined) {"Erschienen als"} else {"Erschienen in"} } else {""},
       Seq(((isPartOf \ subField)(0) \ "id").asOpt[String].getOrElse("--")),
       Optional.of(Seq(subField, "numbering"))))
+    }
   }
  }
 }

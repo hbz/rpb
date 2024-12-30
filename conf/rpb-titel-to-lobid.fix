@@ -233,7 +233,11 @@ do list (path:"@temp_subject", "var": "$i")
   set_array("temp_subject.$append.type[]","ComplexSubject")
   set_array("temp_subject.$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
   set_array("temp_subject.$last.componentList[]")
-  copy_field("$i.subjectComponent[]", "temp_subject.$last.componentList[]")
+  do list_as (component: "$i.subjectComponent[]")
+    if exists("component.value")
+      copy_field("component", "temp_subject.$last.componentList[].$append")
+    end
+  end
 end
 
 do

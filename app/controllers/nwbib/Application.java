@@ -908,7 +908,7 @@ public class Application extends Controller {
 	}
 
 	public static Promise<Result> showSw(String rpbId) {
-		String strapiUrl = "https://rpb-cms.lobid.org/admin/content-manager/collectionType/"
+		String strapiUrl = "https://rpb-cms.lobid.org/admin/content-manager/collection-types/"
 				+ "api::rpb-authority.rpb-authority?filters[$and][0][rpbId][$eq]=";
 		return Promise.pure(seeOther(strapiUrl + rpbId));
 	}

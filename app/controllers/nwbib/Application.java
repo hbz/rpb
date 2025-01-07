@@ -37,8 +37,12 @@ import org.elasticsearch.common.base.Charsets;
 import org.elasticsearch.common.geo.GeoPoint;
 import org.elasticsearch.common.io.Streams;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.MapType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
@@ -976,16 +980,58 @@ public class Application extends Controller {
 
 	private static Promise<Result> transformAndIndex(String id, JsonNode jsonBody)
 			throws IOException, FileNotFoundException, RecognitionException, UnsupportedEncodingException {
+		JsonNode transformedJson = transform(jsonBody);
+		Promise<JsonNode> dataPromise = id.startsWith("f") && transformedJson.has("hbzId") ? // hbz-Fremddaten
+				addToLobidData(transformedJson) : Promise.pure(transformedJson);
+		return dataPromise.flatMap(result -> {
+			Cache.remove(String.format("/%s", id));
+			WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
+			return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
+		});
+	}
+
+	private static JsonNode transform(JsonNode jsonBody)
+			throws IOException, FileNotFoundException, RecognitionException {
 		File input = new File("conf/output/test-output-strapi.json");
 		File output = new File("conf/output/test-output-0.json");
 		Files.write(Paths.get(input.getAbsolutePath()), jsonBody.toString().getBytes(Charsets.UTF_8));
-		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
-		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
-		Cache.remove(String.format("/%s", id));
-		WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
-		return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
+		ETL.main(new String[] { "conf/rpb-test-titel-to-lobid.flux" });
+		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream()
+				.collect(Collectors.joining("\n"));
+		return Json.parse(result);
 	}
-	
+
+	private static Promise<JsonNode> addToLobidData(JsonNode transformedJson) {
+		String lobidUrl = transformedJson.get("hbzId").textValue();
+		WSRequest lobidRequest = WS.url(lobidUrl).setHeader("Content-Type", "application/json");
+		Promise<JsonNode> lobidPromise = lobidRequest.get().map(WSResponse::asJson);
+		Promise<JsonNode> merged = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
+		return merged;
+	}
+
+	private static JsonNode mergeRecords(JsonNode transformedJson, JsonNode lobidJson)
+			throws JsonMappingException, JsonProcessingException {
+		ObjectMapper objectMapper = new ObjectMapper();
+		MapType mapType = TypeFactory.defaultInstance().constructMapType(Map.class, String.class, Object.class);
+		Map<String, Object> transformedMap = objectMapper.readValue(transformedJson.toString(), mapType);
+		Map<String, Object> lobidMap = objectMapper.readValue(lobidJson.toString(), mapType);
+		transformedMap.keySet().forEach(key -> {
+			Object transformedObject = transformedMap.get(key);
+			Object lobidObject = lobidMap.getOrDefault(key, new ArrayList<Object>());
+			Object values = transformedObject instanceof List ? mergeValues(transformedObject, lobidObject)
+					: transformedObject;
+			lobidMap.put(key, values);
+		});
+		return Json.toJson(lobidMap);
+	}
+
+	private static Object mergeValues(Object transformedObject, Object lobidObject) {
+		List<Object> mergedValues = lobidObject instanceof List ? new ArrayList<>((List<?>) lobidObject)
+				: Arrays.asList(lobidObject);
+		mergedValues.addAll((List<?>) transformedObject);
+		return mergedValues;
+	}
+
 	private static String elasticsearchUrl(String id) throws UnsupportedEncodingException {
 		return "http://weywot3:9200/resources-rpb-test/resource/"
 				+ URLEncoder.encode("https://lobid.org/resources/" + id, "UTF-8");

@@ -13,6 +13,10 @@
 @import play.mvc.Controller.session
 @import play.cache.Cache
 
+@idAndLabelLink(e: JsValue) = {
+  <a href='@((e\"id").asOpt[String].getOrElse("--"))'>@((e\"label").asOpt[String].getOrElse("--"))</a>
+}
+
 @pageLink(last: Seq[String], key: String, label: String, tip: String) = {
   @defining((last.indexOf(session(key))-1,last.indexOf(session(key))+1)) { case (prev,next) =>
   <li class="@if(session(key).isEmpty){disabled}">
@@ -100,10 +104,13 @@
             <dd>
             <table class="table table-striped table-condensed">
               <tr>
-                <th style="width: 30%"></th>
-                <th style="width: 70%"></th>
+                <th style="width: 40%"></th>
+                <th style="width: 60%"></th>
               </tr>
-              @result_field("Zum Bestand siehe:", "containedIn", doc, TableRow.LINKS)
+              <tr>
+                <td>Zum Bestand siehe:</td>
+                <td>@idAndLabelLink((doc\"containedIn").as[Seq[JsValue]].head)</td>
+              </tr>
             </table>
             </dd>
             }

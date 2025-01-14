@@ -1015,6 +1015,7 @@ public class Application extends Controller {
 		MapType mapType = TypeFactory.defaultInstance().constructMapType(Map.class, String.class, Object.class);
 		Map<String, Object> transformedMap = objectMapper.readValue(transformedJson.toString(), mapType);
 		Map<String, Object> lobidMap = objectMapper.readValue(lobidJson.toString(), mapType);
+		transformedMap.remove("type");
 		transformedMap.keySet().forEach(key -> {
 			Object transformedObject = transformedMap.get(key);
 			Object lobidObject = lobidMap.getOrDefault(key, new ArrayList<Object>());

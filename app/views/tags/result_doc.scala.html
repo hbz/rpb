@@ -148,7 +148,10 @@
          component <- components;
          label <- (component \ "label").asOpt[String];
          id = (component \ "id").asOpt[String].getOrElse("")) {
-      <span style="white-space: nowrap;"><a title="Nach weiteren Titeln zu '@label' suchen" href='@nwbib.routes.Application.search(subject=if(id.contains("/gnd/")) {id} else {"\""+label+"\""})'/>@label</a></span>
+      <span style="white-space: nowrap;">
+        <a title="Nach weiteren Titeln zu '@label' suchen" href='@nwbib.routes.Application.search(subject=if(id.contains("/gnd/")) {id} else {"\""+label+"\""})'/>@label</a>
+        @if(id.startsWith("http") && !id.contains("/sw/")){<a title="Linked-Data-Quelle zu '@label' abrufen" href='@id'><span class='glyphicon glyphicon-link'></span></a>}
+      </span>
       @if(components.last == component) {
         @for(topic <- (subject\"label").asOpt[String]; hits = Lobid.getTotalHits("subject.label.raw", topic.trim, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT); if hits > 1){
           | <a href='@nwbib.routes.Application.search(q="subject.label.raw:\""+topic.trim+"\"")' title="Alle @hits Titel zum Thema '@topic.trim' anzeigen"><span class='badge progress-bar-success'>@hits</span></a>

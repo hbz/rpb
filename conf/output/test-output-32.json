@@ -57,6 +57,7 @@
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/107n220353",
       "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
+      "altLabel" : [ "WHG-Medien-AG" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"

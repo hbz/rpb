@@ -36,6 +36,7 @@
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/929n090287",
       "label" : "Deutscher Orden / Kommende Waldbreitbach",
+      "altLabel" : [ "Kommende Waldbreitbach", "Deutschordenskommende Waldbreitbach", "Deutschherren-Ordenshaus Waldbreitbach", "Commende Waldbreitbach", "Deutsches Huis zu Brettbach" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
@@ -83,6 +84,7 @@
     "agent" : {
       "id" : "http://rpb.lobid.org/sw/00Pn08k0685884a",
       "label" : "Ruland, Wolfgang",
+      "altLabel" : [ "WR" ],
       "type" : [ "Person" ]
     },
     "role" : {

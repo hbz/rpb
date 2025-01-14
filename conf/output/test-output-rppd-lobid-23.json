@@ -13,7 +13,8 @@
   "preferredName" : "Ziegler, Jakob Anton",
   "professionOrOccupation" : [ {
     "label" : "Pfarrer / Katholische Kirche",
-    "id" : "https://rpb.lobid.org/sw/929n170632"
+    "id" : "https://rpb.lobid.org/sw/929n170632",
+    "altLabel" : [ "Katholische Kirche / Pfarrer" ]
   } ],
   "dateOfBirth" : [ "1893-06-15" ],
   "placeOfBirth" : [ {

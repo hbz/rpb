@@ -7,13 +7,32 @@ do once("map")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
   put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
 
-  put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb_map", "sep_char": "\t")
+  put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"1")
+  put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb-variants_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"2")
   put_filemap("./RPB-Export_HBZ_SW_GND.tsv", "sw-gnd_map", "sep_char": "\t")
 end
 
 do put_macro("move_here")
   move_field("$[field]", "_temp")
   move_field("_temp", "$[field]")
+end
+
+do put_macro("normalize")
+  replace_all("$[field]","^http.+[/#](.+)$","$1")
+  replace_all("$[field]","^(\\d+)-(\\d+)$","$1n$2")
+end
+
+do put_macro("add_labels")
+  unless exists("$[field].label")
+    copy_field("$[field].id", "$[field].label")
+    call_macro("normalize", field: "$[field].label")
+    lookup("$[field].label", "sw-rpb_map")
+    lookup("$[field].label", "sw-gnd_map")
+  end
+  copy_field("$[field].id", "$[field].altLabel[]")
+  call_macro("normalize", field: "$[field].altLabel[]")
+  lookup("$[field].altLabel[]", "sw-rpb-variants_map", delete: "true")
+  split_field("$[field].altLabel[]", "; ")
 end
 
 if all_equal("doNotIndex", "true")
@@ -243,13 +262,7 @@ end
 do
  list (path:"temp_subject.*.componentList[]", "var": "$i")
   move_field("$i.value", "$i.id")
-  unless exists("$i.label")
-    copy_field("$i.id", "$i.label")
-    replace_all("$i.label","^http.+[/#](.+)$","$1")
-    replace_all("$i.label","^(\\d+)-(\\d+)$","$1n$2")
-    lookup("$i.label", "sw-rpb_map")
-    lookup("$i.label", "sw-gnd_map")
-  end
+  call_macro("add_labels", field: "$i")
   if all_match("$i.id","^http://rpb.lobid.org/sw/.*$")
     add_field("$i.source.id", "http://rpb.lobid.org/sw")
     add_field("$i.source.label", "RPB-Sachsystematik")
@@ -327,13 +340,7 @@ do put_macro("contributions")
   copy_field("$[from][].*.value", "_temp.$append.agent.id")
   do list_as(f: "$[from][]", c: "_temp")
     copy_field("f.label", "c.agent.label")
-    unless exists("c.agent.label")
-      copy_field("c.agent.id", "c.agent.label")
-      replace_all("c.agent.label","^http.+[/#](.+)$","$1")
-      replace_all("c.agent.label","^(\\d+)-(\\d+)$","$1n$2")
-      lookup("c.agent.label", "sw-rpb_map")
-      lookup("c.agent.label", "sw-gnd_map")
-    end
+    call_macro("add_labels", field: "c.agent")
     set_array("c.agent.type[]", "Person")
     copy_field("f.type", "c.role.id")
     copy_field("f.type", "c.role.label")

@@ -76,6 +76,16 @@
     "label" : "Ausstellungskatalog",
     "id" : "https://d-nb.info/gnd/4135467-9"
   } ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "K 2023 Q 140"
+  }, {
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    }
+  } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

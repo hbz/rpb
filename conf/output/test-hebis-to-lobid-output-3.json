@@ -34,6 +34,7 @@
       },
       "object" : {
         "id" : "https://lobid.org/marcxml/512849919",
+        "dateCreated" : "2023-11-02",
         "type" : [ "DataFeedItem" ],
         "label" : "hbz-Ressource 512849919 im Exportformat MARC21 XML",
         "inDataset" : {
@@ -86,7 +87,8 @@
       "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/edt"
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -97,7 +99,8 @@
       "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/orm"
+      "id" : "http://id.loc.gov/vocabulary/relators/orm",
+      "label" : "Veranstalter/in"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -108,7 +111,8 @@
       "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/sng"
+      "id" : "http://id.loc.gov/vocabulary/relators/sng",
+      "label" : "Gesang"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -119,7 +123,8 @@
       "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/his"
+      "id" : "http://id.loc.gov/vocabulary/relators/his",
+      "label" : "Gastgebende Institution"
     },
     "type" : [ "Contribution" ]
   } ]

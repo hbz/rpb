@@ -5,14 +5,14 @@ prepend("describedBy.id", "http://lobid.org/resources/")
 copy_field("almaMmsId", "describedBy.label")
 prepend("describedBy.label", "Webseite der hbz-Ressource ")
 
-set_array("describedBy.type[]", "BibliographicDescription")
+add_array("describedBy.type[]", "BibliographicDescription")
 
 
 add_field("describedBy.inDataset.id","http://lobid.org/resources/dataset#!")
 
 add_field("describedBy.inDataset.label","lobid-resources – Der hbz-Verbundkatalog als Linked Open Data")
 
-set_array("describedBy.resultOf.type[]", "CreateAction")
+add_array("describedBy.resultOf.type[]", "CreateAction")
 
 add_field("@createTime","$[createEndTime]")
 if all_match("@createTime","0")
@@ -24,16 +24,31 @@ end
 
 add_field("describedBy.resultOf.instrument.id","https://github.com/hbz/lobid-resources")
 
-set_array("describedBy.resultOf.instrument.type[]", "SoftwareApplication")
+add_array("describedBy.resultOf.instrument.type[]", "SoftwareApplication")
 
 add_field("describedBy.resultOf.instrument.label","Software lobid-resources")
 
 copy_field("almaMmsId","describedBy.resultOf.object.id")
 prepend("describedBy.resultOf.object.id","https://lobid.org/marcxml/")
 
-# MNG is a ALMA-specific element
+# 008/00-05 has the initial cataloguing date. We test strictly if 008 only has 6 digits, sometimes records have 8 digits that are not valid.
+# We use MNG info as fallback.
+# MNG is a ALMA-specific element (MNG  .b only states the indexing date into ALMA.)
 
-copy_field("MNG  .b","describedBy.resultOf.object.dateCreated")
+if any_match("008", "^\\d{6}\\D.*") # 008/00-05 is the correct form for the cataloguing date in MARC.
+  copy_field("008","@initialCataloguingDate")
+  substring("@initialCataloguingDate","0","6")
+end
+
+if any_match("@initialCataloguingDate","^[0-4]\\d*") # Complete dates after 2000
+  prepend("@initialCataloguingDate","20")
+elsif any_match("@initialCataloguingDate","\\d*") # Complete dates before 2000
+  prepend("@initialCataloguingDate","19")
+else
+  copy_field("MNG  .b","@initialCataloguingDate")
+end
+copy_field("@initialCataloguingDate","describedBy.resultOf.object.dateCreated")
+
 copy_field("MNG  .d","describedBy.resultOf.object.dateModified")
 replace_all("describedBy.resultOf.object.dateCreated","-","")
 replace_all("describedBy.resultOf.object.dateCreated"," .*","")
@@ -41,18 +56,18 @@ replace_all("describedBy.resultOf.object.dateCreated","c|©|\\s?|,|.|:|;|/|=",""
 replace_all("describedBy.resultOf.object.dateModified","-","")
 replace_all("describedBy.resultOf.object.dateModified"," .*","")
 replace_all("describedBy.resultOf.object.dateModified","c|©|\\s?|,|.|:|;|/|=","")
-unless any_match("describedBy.resultOf.object.dateCreated","\\d{8}|\\d{4}")
-	remove_field("describedBy.resultOf.object.dateCreated")
-end
-unless any_match("describedBy.resultOf.object.dateModified","\\d{8}|\\d{4}")
-	remove_field("describedBy.resultOf.object.dateModified")
-end
+#unless any_match("describedBy.resultOf.object.dateCreated","\\d{8}|\\d{4}")
+#	remove_field("describedBy.resultOf.object.dateCreated")
+#end
+#unless any_match("describedBy.resultOf.object.dateModified","\\d{8}|\\d{4}")
+#	remove_field("describedBy.resultOf.object.dateModified")
+#end
 replace_all("describedBy.resultOf.object.dateCreated","^(\\d{4})(\\d{2})(\\d{2})$","$1-$2-$3")
 replace_all("describedBy.resultOf.object.dateModified","^(\\d{4})(\\d{2})(\\d{2})$","$1-$2-$3")
 replace_all("describedBy.resultOf.object.dateCreated","^(\\d{4})$","$1-01-01")
 replace_all("describedBy.resultOf.object.dateModified","^(\\d{4})$","$1-01-01")
 
-set_array("describedBy.resultOf.object.type[]", "DataFeedItem")
+add_array("describedBy.resultOf.object.type[]", "DataFeedItem")
 
 copy_field("almaMmsId","describedBy.resultOf.object.label")
 prepend("describedBy.resultOf.object.label","hbz-Ressource ")
@@ -62,7 +77,7 @@ add_field("describedBy.resultOf.object.inDataset.id", "https://datahub.io/datase
 
 add_field("describedBy.resultOf.object.inDataset.label", "hbz_unioncatalog")
 
-set_array("describedBy.license[]")
+add_array("describedBy.license[]")
 add_field("describedBy.license[].$append.id","http://creativecommons.org/publicdomain/zero/1.0" )
 add_field("describedBy.license[].$last.label","Creative Commons-Lizenz CC0 1.0 Universal" )
 
@@ -85,23 +100,17 @@ do list(path: "040  ", "var":"$i")
     end
   end
 
-set_array("describedBy.resultOf.object.modifiedBy[]")
+add_array("describedBy.resultOf.object.modifiedBy[]")
   do list(path:"$i.d", "var":"$j")
     copy_field("$j", "describedBy.resultOf.object.modifiedBy[].$append.id")
   end
 
 end
 
-call_macro("provenanceLinks",field: "describedBy.resultOf.object.sourceOrganization.id")
-copy_field("describedBy.resultOf.object.sourceOrganization.id","describedBy.resultOf.object.sourceOrganization.label")
-lookup("describedBy.resultOf.object.sourceOrganization.label","lobidOrgLabels",delete:"true")
-call_macro("provenanceLinks",field: "describedBy.resultOf.object.provider.id")
-copy_field("describedBy.resultOf.object.provider.id","describedBy.resultOf.object.provider.label")
-lookup("describedBy.resultOf.object.provider.label","lobidOrgLabels",delete:"true")
+call_macro("provenanceLinks",field: "describedBy.resultOf.object.sourceOrganization.id",label: "describedBy.resultOf.object.sourceOrganization.label")
+call_macro("provenanceLinks",field: "describedBy.resultOf.object.provider.id",label: "describedBy.resultOf.object.provider.label")
 do list(path:"describedBy.resultOf.object.modifiedBy[]","var":"$i")
-  call_macro("provenanceLinks",field: "$i.id")
-  copy_field("$i.id","$i.label")
+  call_macro("provenanceLinks",field: "$i.id",label:"$i.label")
 end
-lookup("describedBy.resultOf.object.modifiedBy[].*.label","lobidOrgLabels",delete:"true")
 
 uniq("describedBy.resultOf.object.modifiedBy[]")

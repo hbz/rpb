@@ -35,6 +35,7 @@
       },
       "object" : {
         "id" : "https://lobid.org/marcxml/512013683",
+        "dateCreated" : "2023-10-02",
         "type" : [ "DataFeedItem" ],
         "label" : "hbz-Ressource 512013683 im Exportformat MARC21 XML",
         "inDataset" : {
@@ -82,7 +83,8 @@
       "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb"
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgeber/in"
     },
     "type" : [ "Contribution" ]
   } ]

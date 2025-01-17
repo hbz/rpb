@@ -34,6 +34,7 @@
       },
       "object" : {
         "id" : "https://lobid.org/marcxml/090680634",
+        "dateCreated" : "2000-04-06",
         "type" : [ "DataFeedItem" ],
         "label" : "hbz-Ressource 090680634 im Exportformat MARC21 XML",
         "inDataset" : {
@@ -101,7 +102,8 @@
       "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ctb"
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
     },
     "type" : [ "Contribution" ]
   }, {
@@ -114,7 +116,8 @@
       "dateOfDeath" : "2011"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/ctb"
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
     },
     "type" : [ "Contribution" ]
   } ]

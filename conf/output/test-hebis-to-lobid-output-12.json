@@ -39,6 +39,7 @@
       },
       "object" : {
         "id" : "https://lobid.org/marcxml/508037980",
+        "dateCreated" : "2023-05-25",
         "type" : [ "DataFeedItem" ],
         "label" : "hbz-Ressource 508037980 im Exportformat MARC21 XML",
         "inDataset" : {
@@ -213,7 +214,8 @@
       "dateOfBirth" : "1961"
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut"
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
     },
     "type" : [ "Contribution" ]
   } ]

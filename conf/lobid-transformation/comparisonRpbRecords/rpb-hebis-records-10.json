@@ -1,0 +1,91 @@
+{
+  "extent" : "127 S. : zahlr. Ill., Kt.",
+  "rpbId" : "036t000008",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102050",
+    "label" : "Ortsbeschreibung",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "http://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4155569-7",
+      "label" : "Führer",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Geschichte 1945- | Führer",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "isbn" : [ "3-87439-488-3" ],
+  "responsibilityStatement" : [ "[Konzept und Texte: Frank Herda ; Georg Schuler ; Ellen Vest]" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Mainz transparent : 2000 Jahre einer Stadt ; [Stadtbegleiter]",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn00m0019c",
+      "label" : "Herda, Frank",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn00m0019a",
+      "label" : "Schuler, Georg",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn00m0019b",
+      "label" : "Vest, Ellen",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Schmidt" ],
+    "location" : [ "Mainz" ],
+    "type" : [ "PublicationEvent" ],
+    "startDate" : "2000"
+  } ],
+  "id" : "https://lobid.org/resources/036t000008",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n31500000",
+    "label" : "Mainz, Kreisfreie Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

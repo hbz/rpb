@@ -54,6 +54,7 @@
     "agent" : {
       "id" : "http://rpb.lobid.org/sw/929n991002",
       "label" : "Weger, Joachim",
+      "altLabel" : [ "jw" ],
       "type" : [ "Person" ]
     },
     "role" : {

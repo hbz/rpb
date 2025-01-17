@@ -30,6 +30,7 @@
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/929n110300",
       "label" : "Volleyballclub Neuwied 77 / Neuwied",
+      "altLabel" : [ "VC Neuwied 77 / Neuwied" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"

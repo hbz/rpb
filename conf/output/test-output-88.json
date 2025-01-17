@@ -28,6 +28,7 @@
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/00Sn01s167281807a",
       "label" : "Verein für Pfälzische Kirchengeschichte / Hauptversammlung / 1925",
+      "altLabel" : [ "Hauptversammlung / 1925 / Verein für Pfälzische Kirchengeschichte" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"

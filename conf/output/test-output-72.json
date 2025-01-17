@@ -67,6 +67,7 @@
     "agent" : {
       "id" : "http://rpb.lobid.org/sw/929n981242",
       "label" : "Strauß, Torsten",
+      "altLabel" : [ "TS", "T.S." ],
       "type" : [ "Person" ]
     },
     "role" : {

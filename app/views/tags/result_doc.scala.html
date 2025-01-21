@@ -267,6 +267,7 @@
   @labelled("In", "containedIn")
 
   @part_of("isPartOf", "hasSuperordinate")
+  @subordinateSearchFor(String.format("http://rpb.lobid.org/%s", (doc \ "rpbId").asOpt[String].getOrElse("")))
   @subordinateSearchFor(String.format("http://lobid.org/resources/%s#!", (doc \ "hbzId").asOpt[String].getOrElse("")))
   @subordinateSearchFor(String.format("https://lobid.org/resources/%s", (doc \ "rpbId").asOpt[String].getOrElse("")))
   @subordinateSearchFor(String.format("http://lobid.org/resources/"+ZDB_PREFIX+"%s#!", (doc \ "zdbId").asOpt[String].getOrElse("")))

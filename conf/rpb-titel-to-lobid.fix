@@ -157,6 +157,14 @@ if exists("inSeries[]")
   set_array("isPartOf[]")
   move_field("inSeries[].*", "isPartOf[].$append")
 end
+if exists("volumeIn")
+  unless any_equal("type", "Band") # not for Allegro
+    unless exists("isPartOf[]")
+      set_array("isPartOf[]")
+    end
+    move_field("volumeIn", "isPartOf[].$append")
+  end
+end
 if exists("isPartOf[]")
   unless any_equal("type", "Band") # also sets isPartOf
     set_array("temp")
@@ -173,8 +181,16 @@ if exists("isPartOf[]")
         copy_field("$i.numbering", "temp.$last.numbering")
       else
         split_field("$i.value", " ; ")
-        copy_field("$i.value.1", "temp.$last.hasSuperordinate[].$append.label")
-        copy_field("$i.value.2", "temp.$last.numbering")
+        if all_match("$i.value", "^http.+")
+          copy_field("$i.value", "temp.$last.hasSuperordinate[].$append.id")
+        else
+          copy_field("$i.value.1", "temp.$last.hasSuperordinate[].$append.label")
+        end
+        if exists("$i.numbering")
+          copy_field("$i.numbering", "temp.$last.numbering")
+        else
+          copy_field("$i.value.2", "temp.$last.numbering")
+        end
       end
     end
     move_field("temp", "isPartOf[]")

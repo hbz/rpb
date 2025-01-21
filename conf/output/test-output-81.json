@@ -40,6 +40,7 @@
     }, {
       "id" : "http://rpb.lobid.org/sw/z48",
       "label" : "Geschichte 1800-",
+      "altLabel" : [ "Neuzeit 1800-Gegenwart" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
@@ -58,6 +59,7 @@
     }, {
       "id" : "http://rpb.lobid.org/sw/z48",
       "label" : "Geschichte 1800-",
+      "altLabel" : [ "Neuzeit 1800-Gegenwart" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"

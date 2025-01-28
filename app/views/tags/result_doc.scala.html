@@ -274,7 +274,7 @@
   @raumsystematik("https://rpb.lobid.org/spatial")
   @sachsystematik("http://purl.org/lobid/rpb")
 
-  @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()).filter(v => !(v \ "source").toString.matches(".*(Systematik|Notationen|Dewey).*")))
+  @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()).filter(v => !(v \ "source").toString.matches(".*(Systematik|Notationen|Sachgruppen|Dewey).*")))
 
   @result_field("Schlagwortfolge", "subjectChain", doc, TableRow.VALUES, valueLabel = Option(Seq()))
 

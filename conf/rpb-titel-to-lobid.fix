@@ -65,17 +65,18 @@ end
 if any_equal("type", "Band")
   set_field("type[].$append", "Book")
   call_macro("move_here", field: "isPartOf[]")
-  copy_field("isPartOf[].label", "superordinateLabel")
-  unless exists("superordinateLabel")
-    copy_field("isPartOf[].value", "superordinateLabel")
-  end
-  set_array("isPartOf[]")
-  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
-  set_array("isPartOf[].$last.hasSuperordinate[]")
-  # Set up superordinate ID: use the volume ID, remove the numbering part:
-  copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
-  copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
-  copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
+  # enable for Allegro import:
+  # copy_field("isPartOf[].label", "superordinateLabel")
+  # unless exists("superordinateLabel")
+  #   copy_field("isPartOf[].value", "superordinateLabel")
+  # end
+  # set_array("isPartOf[]")
+  # set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
+  # set_array("isPartOf[].$last.hasSuperordinate[]")
+  # # Set up superordinate ID: use the volume ID, remove the numbering part:
+  # copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
+  # copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
+  # copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
 end
 
 # ------- rpbId -------
@@ -154,19 +155,21 @@ uniq("note[]")
 
 #-------- "isPartOf" -------
 if exists("inSeries[]")
-  set_array("isPartOf[]")
+  unless exists("isPartOf[]")
+    set_array("isPartOf[]")
+  end
   move_field("inSeries[].*", "isPartOf[].$append")
 end
 if exists("volumeIn")
-  unless any_equal("type", "Band") # not for Allegro
+  #unless any_equal("type", "Band") # enable for Allegro import
     unless exists("isPartOf[]")
       set_array("isPartOf[]")
     end
     move_field("volumeIn", "isPartOf[].$append")
-  end
+  #end
 end
 if exists("isPartOf[]")
-  unless any_equal("type", "Band") # also sets isPartOf
+  #unless any_equal("type", "Band") # enable for Allegro import
     set_array("temp")
     do list (path:"isPartOf[]", "var": "$i")
       set_array("temp.$append.type[]", "IsPartOfRelation")
@@ -194,7 +197,7 @@ if exists("isPartOf[]")
       end
     end
     move_field("temp", "isPartOf[]")
-  end
+  #end
 end
 
 # ------- "medium" -------

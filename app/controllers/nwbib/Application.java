@@ -506,6 +506,11 @@ public class Application extends Controller {
 				issued, medium, rpbspatial, rpbsubject, from, size, owner, t, sort,
 				details, location, word, corporation, raw, format);
 		return result.recover((Throwable throwable) -> {
+			Logger.error("Error on Lobid call with q={}, person={}, name={}, subject={}, id={}, publisher={},\n"
+					+ "issued={}, medium={}, rpbspatial={}, rpbsubject={}, from={}, size={}, owner={}, t={}, sort={},\n"
+					+ "details={}, location={}, word={}, corporation={}, raw={}, format={}", //
+					q, person, name, subject, id, publisher, issued, medium, rpbspatial, rpbsubject, from, size, owner,
+					t, sort, details, location, word, corporation, raw, format);
 			Logger.error("Could not call Lobid", throwable);
 			flashError();
 			return internalServerError(search.render("[]", q, person, name, subject,

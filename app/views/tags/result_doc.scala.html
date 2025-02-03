@@ -267,9 +267,12 @@
   @labelled("In", "containedIn")
 
   @part_of("isPartOf", "hasSuperordinate")
-  @subordinateSearchFor(Seq(String.format("http://rpb.lobid.org/%s", (doc \ "rpbId").asOpt[String].getOrElse("")), String.format("https://lobid.org/resources/%s", (doc \ "rpbId").asOpt[String].getOrElse(""))))
-  @subordinateSearchFor(Seq(String.format("http://lobid.org/resources/%s#!", (doc \ "hbzId").asOpt[String].getOrElse(""))))
-  @subordinateSearchFor(Seq(String.format("http://lobid.org/resources/"+ZDB_PREFIX+"%s#!", (doc \ "zdbId").asOpt[String].getOrElse(""))))
+  @subordinateSearchFor(Seq(
+    String.format("http://lobid.org/resources/"+ZDB_PREFIX+"%s#!", (doc \ "zdbId").asOpt[String].getOrElse("")),
+    String.format("http://lobid.org/resources/%s#!", (doc \ "hbzId").asOpt[String].getOrElse("")),
+    String.format("https://lobid.org/resources/%s", (doc \ "rpbId").asOpt[String].getOrElse("")),
+    String.format("http://rpb.lobid.org/%s", (doc \ "rpbId").asOpt[String].getOrElse(""))
+  ))
   @parallelausgabe()
   @raumsystematik("https://rpb.lobid.org/spatial")
   @sachsystematik("http://purl.org/lobid/rpb")

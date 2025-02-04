@@ -14,7 +14,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/121t0146618"
+      "id" : "http://rpb.lobid.org/121t0146618"
     } ],
     "numbering" : "1"
   } ],

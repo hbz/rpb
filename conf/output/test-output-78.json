@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/121t0144215",
+      "id" : "http://rpb.lobid.org/121t0144215",
       "label" : "Bibliographie zu den Jahrbüchern des Kreises Daun"
     } ],
     "numbering" : "1973/90 (1990) -"

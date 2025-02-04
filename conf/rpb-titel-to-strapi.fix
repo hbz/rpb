@@ -281,7 +281,7 @@ if exists("numbering")
   end
   copy_field("_id", "volumeIn.value") # Verknüpfung zur MtM (ÜO)
   replace_all("volumeIn.value","b\\d+","")
-  prepend("volumeIn.value","https://lobid.org/resources/")
+  prepend("volumeIn.value","http://rpb.lobid.org/")
 end
 
 # ISBNs (f87_, f871 ff.)

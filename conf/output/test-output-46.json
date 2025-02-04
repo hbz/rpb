@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/107t982379",
+      "id" : "http://rpb.lobid.org/107t982379",
       "label" : "Wer ist wo"
     } ],
     "numbering" : "1994/95(1995)"

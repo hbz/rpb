@@ -3,6 +3,7 @@
   "type" : [ "BibliographicResource", "Article" ],
   "rpbId" : "929t112201",
   "id" : "https://lobid.org/resources/929t112201",
+  "hbzId" : "CT003010543",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
@@ -72,9 +73,6 @@
       "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
-  } ],
-  "containedIn" : [ {
-    "id" : "https://lobid.org/resources/CT003010543#!"
   } ],
   "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 380",
   "fulltextOnline" : [ {

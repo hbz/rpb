@@ -361,8 +361,10 @@ end
 
 if any_equal("type[]", "Article")
   if exists("hbzId")
-    paste("containedIn[].$append.id","~https://lobid.org/resources/","hbzId","~#!", join_char:"")
-    remove_field("hbzId")
+    unless any_match("hbzId","CT.*") # exclude delibris and edoweb. See: https://jira.hbz-nrw.de/browse/RPB-232?focusedId=330532&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-330532
+      paste("containedIn[].$append.id","~https://lobid.org/resources/","hbzId","~#!", join_char:"")
+      remove_field("hbzId")
+    end
   end
 end
 

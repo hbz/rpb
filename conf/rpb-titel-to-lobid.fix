@@ -375,6 +375,17 @@ do list_as(citation: "bibliographicCitation[]")
   move_field("fullLabel", "bibliographicCitation.$append")
 end
 
+# containedIn - For articles we should move hbzId of parent records to containedIn since they are not the article records hbzId except for edoweb and dilibri resources
+
+if any_equal("type[]", "Article")
+  if exists("hbzId")
+    unless any_match("hbzId","CT.*") # exclude delibris and edoweb. See: https://jira.hbz-nrw.de/browse/RPB-232?focusedId=330532&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-330532
+      paste("containedIn[].$append.id","~https://lobid.org/resources/","hbzId","~#!", join_char:"")
+      remove_field("hbzId")
+    end
+  end
+end
+
 uniq("containedIn[]")
 join_field("bibliographicCitation", "; ")
 

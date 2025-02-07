@@ -1,0 +1,8 @@
+if exists ('f76b')
+  if exists ('f76a')
+    reject()
+  end
+else
+  reject()
+end
+retain('f20','f76*')

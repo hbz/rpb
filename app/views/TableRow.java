@@ -217,8 +217,8 @@ public enum TableRow {
 		if ((property.equals("containedIn") || property.equals("hasPart")
 				|| property.equals("isPartOf") || property.equals("hasSuperordinate")
 				|| property.equals("bibliographicCitation")) && value.contains("lobid.org")) {
-			return new String[] { value.matches(".*?[as]\\d+.*|.*?\\d{3}[a-z]\\d+.*") // rpbId
-					? value.replace("https://lobid.org/resources/", "/")
+			return new String[] { value.matches(".*?[asf]\\d+.*|.*?\\d{3}[a-z]\\d+.*") // rpbId
+					? value.replaceAll("http.+/", "/") // full URL -> relative link
 					: value, Lobid.resourceLabel(value) };
 		}
 		String label =

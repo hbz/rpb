@@ -36,6 +36,7 @@
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/929n110302",
       "label" : "Unkeler Sonnenberg",
+      "altLabel" : [ "Unkeler Sonneberg", "Sonnenberg / Unkel", "Sonneberg / Unkel", "Unkel / Sonneberg" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
@@ -43,6 +44,7 @@
     }, {
       "id" : "http://rpb.lobid.org/sw/929n110303",
       "label" : "Weingut Krupp",
+      "altLabel" : [ "Krupp, Oliver / Firma" ],
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
@@ -70,6 +72,7 @@
     "agent" : {
       "id" : "http://rpb.lobid.org/sw/00Pn08k0685884a",
       "label" : "Ruland, Wolfgang",
+      "altLabel" : [ "WR" ],
       "type" : [ "Person" ]
     },
     "role" : {

@@ -18,6 +18,10 @@ import controllers.nwbib.Application;
 import controllers.nwbib.Classification;
 import controllers.nwbib.Lobid;
 import play.Logger;
+import play.libs.F.Promise;
+import play.libs.ws.WS;
+import play.libs.ws.WSRequest;
+import play.libs.ws.WSResponse;
 
 /**
  * Different ways of serializing a table row
@@ -214,17 +218,26 @@ public enum TableRow {
 
 	String[] refAndLabel(String property, String value,
 			Optional<List<String>> labels) {
+		if (value.contains("lobid.org/resources/")) {
+			value = rpbUrlIfInRpb(value);
+		}
 		if ((property.equals("containedIn") || property.equals("hasPart")
 				|| property.equals("isPartOf") || property.equals("hasSuperordinate")
 				|| property.equals("bibliographicCitation")) && value.contains("lobid.org")) {
-			return new String[] { value.matches(".*?[as]\\d+.*|.*?\\d{3}[a-z]\\d+.*") // rpbId
-					? value.replace("https://lobid.org/resources/", "/")
+			return new String[] { value.matches(".*?[asf]\\d+.*|.*?\\d{3}[a-z]\\d+.*") // rpbId
+					? value.replaceAll("http.+/", "/") // full URL -> relative link
 					: value, Lobid.resourceLabel(value) };
 		}
 		String label =
 				labels.isPresent() && labels.get().size() > 0 ? labels.get().get(0)
 						: value.startsWith("http") ? URI.create(value).getHost() : value;
 		return new String[] { value, label };
+	}
+
+	String rpbUrlIfInRpb(String value) {
+		WSRequest lobidRequest = WS.url(value).setHeader("Content-Type", "application/json");
+		JsonNode lobidJson = lobidRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
+		return lobidJson.has("rpbId") ? "https://rpb.lobid.org/" + lobidJson.get("rpbId").textValue() : value;
 	}
 
 	public abstract String process(JsonNode doc, String property, String param,

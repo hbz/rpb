@@ -96,10 +96,10 @@
   }
 }
 
-@subordinate(field:String, id:String, label:String, values:(String,String)) = {
-  @defining(Lobid.getTotalHits(field, id, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT)){ hits => @if(hits > 0) {
+@subordinate(field:String, ids:Seq[String], label:String, values:(String,String)) = {
+  @defining(ids.map((id) => Lobid.getTotalHits(field, id, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT)).reduce((a, b) => a + b)){ hits => @if(hits > 0) {
     @defining(if(hits==1){values._1} else {values._2}){ value =>
-    <tr><td>@label</td><td><a title="@value" href="@nwbib.routes.Application.search(raw=field+":\""+Lobid.escapeUri(id)+"\"")">@hits @value</a></td></tr>
+    <tr><td>@label</td><td><a title="@value" href="@nwbib.routes.Application.search(raw=ids.map((id)=>field+":\""+Lobid.escapeUri(id)+"\"").mkString(" OR "))">@hits @value</a></td></tr>
   }}}
 }
 
@@ -148,7 +148,10 @@
          component <- components;
          label <- (component \ "label").asOpt[String];
          id = (component \ "id").asOpt[String].getOrElse("")) {
-      <span style="white-space: nowrap;"><a title="Nach weiteren Titeln zu '@label' suchen" href='@nwbib.routes.Application.search(subject=if(id.contains("/gnd/")) {id} else {"\""+label+"\""})'/>@label</a></span>
+      <span style="white-space: nowrap;">
+        <a title="Nach weiteren Titeln zu '@label' suchen" href='@nwbib.routes.Application.search(subject=if(id.contains("/gnd/")) {id} else {"\""+label+"\""})'/>@label</a>
+        @if(id.startsWith("http") && !id.contains("/sw/")){<a title="Linked-Data-Quelle zu '@label' abrufen" href='@id'><span class='glyphicon glyphicon-link'></span></a>}
+      </span>
       @if(components.last == component) {
         @for(topic <- (subject\"label").asOpt[String]; hits = Lobid.getTotalHits("subject.label.raw", topic.trim, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT); if hits > 1){
           | <a href='@nwbib.routes.Application.search(q="subject.label.raw:\""+topic.trim+"\"")' title="Alle @hits Titel zum Thema '@topic.trim' anzeigen"><span class='badge progress-bar-success'>@hits</span></a>
@@ -234,9 +237,9 @@
   }
 }
 
-@subordinateSearchFor(id: String) = {
-  @subordinate("isPartOf.hasSuperordinate.id", id, "Bände", ("zugehöriger Band", "zugehörige Bände"))
-  @subordinate("containedIn.id", id, "Enthält", ("Beitrag", "Beiträge"))
+@subordinateSearchFor(ids: Seq[String]) = {
+  @subordinate("isPartOf.hasSuperordinate.id", ids, "Bände", ("zugehöriger Band", "zugehörige Bände"))
+  @subordinate("containedIn.id", ids, "Enthält", ("Beitrag", "Beiträge"))
 }
 
 @table(){
@@ -264,14 +267,17 @@
   @labelled("In", "containedIn")
 
   @part_of("isPartOf", "hasSuperordinate")
-  @subordinateSearchFor(String.format("http://lobid.org/resources/%s#!", (doc \ "hbzId").asOpt[String].getOrElse("")))
-  @subordinateSearchFor(String.format("https://lobid.org/resources/%s", (doc \ "rpbId").asOpt[String].getOrElse("")))
-  @subordinateSearchFor(String.format("http://lobid.org/resources/"+ZDB_PREFIX+"%s#!", (doc \ "zdbId").asOpt[String].getOrElse("")))
+  @subordinateSearchFor(Seq(
+    String.format("http://lobid.org/resources/"+ZDB_PREFIX+"%s#!", (doc \ "zdbId").asOpt[String].getOrElse("")),
+    String.format("http://lobid.org/resources/%s#!", (doc \ "hbzId").asOpt[String].getOrElse("")),
+    String.format("https://lobid.org/resources/%s", (doc \ "rpbId").asOpt[String].getOrElse("")),
+    String.format("http://rpb.lobid.org/%s", (doc \ "rpbId").asOpt[String].getOrElse(""))
+  ))
   @parallelausgabe()
   @raumsystematik("https://rpb.lobid.org/spatial")
   @sachsystematik("http://purl.org/lobid/rpb")
 
-  @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()).filter(v => !(v \ "source").toString.matches(".*(Systematik|Notationen|Dewey).*")))
+  @subjects((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()).filter(v => !(v \ "source").toString.matches(".*(Systematik|Notationen|Sachgruppen|Dewey).*")))
 
   @result_field("Schlagwortfolge", "subjectChain", doc, TableRow.VALUES, valueLabel = Option(Seq()))
 

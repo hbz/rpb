@@ -6,10 +6,10 @@
 #     reject()
 #   end
 # end
-# do once()
-#   put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
-#     "rpbId2almaMmsId", "key_column": "1", "value_column": "0", "sep_char": "\t")
-# end
+do once()
+  put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
+    "rpbId2hbzId", "expected_columns": "4", "key_column": "1", "value_column": "2", "sep_char": "\t")
+end
 # paste("inLobid", "rpbId", "join_char": "")
 # lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
 # if exists("inLobid")
@@ -73,6 +73,9 @@ do put_macro("add_item")
 end
 
 move_field("f00_", "rpbId")
+copy_field("rpbId", "hbzId")
+prepend("hbzId", "RPB")
+lookup("hbzId", "rpbId2hbzId", "delete": "true")
 move_field("f01_", "numbering")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f18_", "inCollection")

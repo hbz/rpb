@@ -19,6 +19,7 @@
   "title" : "Wer ist wo : 1994/95(1995)",
   "note" : [ "Letzter Jahrgang, damit Erscheinen eingestellt" ],
   "publication" : [ {
+    "startDate" : "1995",
     "type" : [ "PublicationEvent" ]
   } ]
 }

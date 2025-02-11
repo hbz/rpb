@@ -1,0 +1,147 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "121t970621",
+  "id" : "https://lobid.org/resources/121t970621",
+  "isbn" : [ "3-9802913-8-3" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Der Krieg war aus! : Nachkriegsalltag in Wittlich",
+  "extent" : "254 S. : Ill.",
+  "note" : [ "Darin u.a. S. 7-20: Schreier, Susanne: \"Der Krieg war aus, aber er war auch nicht aus\". - S. 21-52: Schindelka, Martina: Das Leben unter und mit der Besatzung. - S. 53-76: Fritzsche, Wolfgang: Maggeln, Hamstern und Kompensieren bestimmten die Versorgung. - S. 77-93: Fritzsche, Wolfgang: \"Von 700 Litern Schnaps ein Haus gebaut\". - S. 227-233: Schreier, Susanne: \"Das ging leise, nicht wie eine Explosion\". - S. 235-241: Schreier, Susanne: Nachkriegszeit in Wittlich." ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Beiträge zur Geschichte und Kultur der Stadt Wittlich"
+    } ]
+  } ],
+  "responsibilityStatement" : [ "hrsg. von Susanne Schreier im Auftr. der Stiftung Stadt Wittlich" ],
+  "publication" : [ {
+    "location" : [ "Wittlich" ],
+    "startDate" : "1997",
+    "publishedBy" : [ "Stiftung Stadt Wittlich" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Ortsgeschichte",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Geschichte 1901-2000",
+    "componentList" : [ {
+      "id" : "http://rpb.lobid.org/sw/z60",
+      "label" : "Geschichte 1901-2000",
+      "altLabel" : [ "20. Jahrhundert" ],
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n23100134",
+    "label" : "Wittlich, Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97t0624a",
+      "label" : "Schreier, Susanne",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97t0624a:",
+      "label" : "00Pn97t0624a:",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97t0621a:",
+      "label" : "00Pn97t0621a:",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97k0134a:",
+      "label" : "00Pn97k0134a:",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97k0134a:",
+      "label" : "00Pn97k0134a:",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97t0624a:",
+      "label" : "00Pn97t0624a:",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97t0624a:",
+      "label" : "00Pn97t0624a:",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/5270920-6",
+      "label" : "Stiftung Stadt Wittlich",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

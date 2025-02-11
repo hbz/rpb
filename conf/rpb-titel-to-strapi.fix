@@ -6,10 +6,10 @@
 #     reject()
 #   end
 # end
-# do once()
-#   put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
-#     "rpbId2almaMmsId", "key_column": "1", "value_column": "0", "sep_char": "\t")
-# end
+do once()
+  put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
+    "rpbId2hbzId", "expected_columns": "4", "key_column": "1", "value_column": "2", "sep_char": "\t")
+end
 # paste("inLobid", "rpbId", "join_char": "")
 # lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
 # if exists("inLobid")
@@ -55,6 +55,7 @@ do put_macro("contribution_to_uri")
       replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
       prepend("$i.value", "https://d-nb.info/gnd/")
     end
+    replace_all("$i.value", ":?\\s.*", "")
   end
 end
 
@@ -73,6 +74,9 @@ do put_macro("add_item")
 end
 
 move_field("f00_", "rpbId")
+copy_field("rpbId", "hbzId")
+prepend("hbzId", "RPB")
+lookup("hbzId", "rpbId2hbzId", "delete": "true")
 move_field("f01_", "numbering")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f18_", "inCollection")
@@ -101,6 +105,9 @@ move_field("f70z", "bibliographicCitation[].1.alternativeNumbering")
 move_field("f71_", "edition")
 move_field("f74_", "publicationLocation")
 move_field("f75_", "publishedBy")
+unless exists("f76a")
+  copy_field("f76b", "f76a")
+end
 move_field("f76a", "publicationDate")
 move_field("f76b", "publicationYear")
 move_field("f77_", "extent")
@@ -281,7 +288,7 @@ if exists("numbering")
   end
   copy_field("_id", "volumeIn.value") # Verknüpfung zur MtM (ÜO)
   replace_all("volumeIn.value","b\\d+","")
-  prepend("volumeIn.value","https://lobid.org/resources/")
+  prepend("volumeIn.value","http://rpb.lobid.org/")
 end
 
 # ISBNs (f87_, f871 ff.)

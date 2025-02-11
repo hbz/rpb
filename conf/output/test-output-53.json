@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/929t112194",
+      "id" : "http://rpb.lobid.org/929t112194",
       "label" : "Clubzeitung"
     } ],
     "numbering" : "Nachgewiesen 2006,2 -"

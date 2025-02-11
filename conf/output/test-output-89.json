@@ -88,8 +88,8 @@
     "type" : [ "Contribution" ]
   }, {
     "agent" : {
-      "id" : "http://rpb.lobid.org/sw/00Pn91t0643a [Bearb.]",
-      "label" : "00Pn91t0643a [Bearb.]",
+      "id" : "http://rpb.lobid.org/sw/00Pn91t0643a",
+      "label" : "Schmidt, Klaus",
       "type" : [ "Person" ]
     },
     "role" : {

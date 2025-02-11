@@ -55,6 +55,7 @@ do put_macro("contribution_to_uri")
       replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
       prepend("$i.value", "https://d-nb.info/gnd/")
     end
+    replace_all("$i.value", "\\s.*", "")
   end
 end
 

@@ -1,0 +1,102 @@
+{
+  "extent" : "24 Seiten : Illustrationen",
+  "note" : [ "Abweichender Titel: Miteinander für Integration in Mainz - Ehrenamtsbündnis für Flüchtlingsarbeit" ],
+  "rpbId" : "036t240113",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n503440",
+    "label" : "Einwanderung",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n725070",
+    "label" : "Ausländerin. Ausländer",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4037124-4",
+      "label" : "Mainz",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4017604-6",
+      "label" : "Flüchtling",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4027238-2",
+      "label" : "Integration",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Mainz | Flüchtling | Integration",
+    "type" : [ "ComplexSubject" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4037124-4",
+      "label" : "Mainz",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4128300-4",
+      "label" : "Flüchtlingshilfe",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Mainz | Flüchtlingshilfe",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "responsibilityStatement" : [ "Landeshauptstadt Mainz, Dezernat für Soziales, Kinder, Jugend, Schule und Gesundheit, Flüchtlingskoordination" ],
+  "alternativeTitle" : [ "Miteinander für Integration in Mainz - Ehrenamtsbündnis für Flüchtlingsarbeit" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Miteinander für Integration - Das Ehrenamtsbündnis für Flüchtlingsarbeit stellt sich vor : eine Präsentation der vielfältigen und vielseitigen Angebotslandschaft ehrenamtlich engagierter Initiativen, Institutionen und Vereine in der Mainzer Flüchtlingsarbeit",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1304715574",
+      "label" : "Mainz / Dezernat für Soziales, Kinder, Jugend, Schule und Gesundheit / Flüchtlingskoordination",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Dezernat für Soziales, Kinder, Jugend, Schule und Gesundheit, Flüchtlingskoordination" ],
+    "location" : [ "Mainz" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t240113",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n31500000",
+    "label" : "Mainz, Kreisfreie Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

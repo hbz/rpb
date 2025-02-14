@@ -1,0 +1,85 @@
+{
+  "extent" : "28 Seiten : Illustrationen",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1324708093",
+      "label" : "Sportwoche / 1977 / Ingelheim am Rhein",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/4026954-1",
+      "label" : "Ingelheim am Rhein",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "rpbId" : "036t240339",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n736000",
+    "label" : "Sport und Spiel",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4026954-1",
+      "label" : "Ingelheim am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4056431-9",
+      "label" : "Sportveranstaltung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn01k13697892a",
+      "label" : "Geschichte 1977",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ],
+    "label" : "Ingelheim am Rhein | Sportveranstaltung | Geschichte 1977",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Stadtverwaltung" ],
+    "location" : [ "Ingelheim am Rhein" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "responsibilityStatement" : [ "Herausgeber: Stadtverwaltung Ingelheim am Rhein" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t240339",
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Sportwoche Ingelheim am Rhein vom 10.-18. September 1977 : Programm und Vereinsspiegel der teilnehmenden Vereine",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33900030",
+    "label" : "Ingelheim am Rhein, große kreisangeh. Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ],
+  "@context" : "http://lobid.org/resources/context.jsonld"
+}

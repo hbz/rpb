@@ -1,0 +1,80 @@
+{
+  "extent" : "191 Seiten : Illustrationen, Karten",
+  "note" : [ "Rückentitel: Auszeiten für die Seele Rhein-Main-Gebiet; Erscheint auch als Online-Ausgabe" ],
+  "rpbId" : "036t240055",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102045",
+    "label" : "Regionenbeschreibung",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n735040",
+    "label" : "Freizeitgestaltung",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n102070",
+    "label" : "Wandern / Führer",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4155569-7",
+      "label" : "Führer",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Führer",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "isbn" : [ "978-3-8464-0962-6" ],
+  "responsibilityStatement" : [ "Annette Bernjus" ],
+  "edition" : [ "1. Auflage" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Auszeiten für die Seele - 33 Orte im Rhein-Main-Gebiet : innehalten, lauschen, aufblühen",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1156186978",
+      "label" : "Bernjus, Annette / 1961-",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Polyglott" ],
+    "location" : [ "München" ],
+    "type" : [ "PublicationEvent" ],
+    "startDate" : "2023"
+  } ],
+  "id" : "https://lobid.org/resources/036t240055",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n92",
+    "label" : "Rhein-Main-Gebiet",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

@@ -1,0 +1,71 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "929t163432",
+  "id" : "https://lobid.org/resources/929t163432",
+  "hbzId" : "HT003729454",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Adressbuch der Stadt Ems : in 3 Heften",
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Bad Emser Hefte"
+    } ],
+    "numbering" : "..."
+  } ],
+  "responsibilityStatement" : [ "Verein für Geschichte, Denkmal- u. Landschaftspflege e.V. Bad Ems" ],
+  "publication" : [ {
+    "location" : [ "Bad Ems" ],
+    "startDate" : "1989",
+    "publishedBy" : [ "VGDL" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n503050",
+    "label" : "Einwohnerverzeichnis",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Bad Ems | Geschichte 1896 | Adressbuch",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4014614-5",
+      "label" : "Bad Ems",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn05k0879884a",
+      "label" : "Geschichte 1896",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4141451-2",
+      "label" : "Adressbuch",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n14110006",
+    "label" : "Bad Ems, Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "edition" : [ "Faks.-Ausg. [d. Ausg.] Ems, Sommer, 1896" ]
+}

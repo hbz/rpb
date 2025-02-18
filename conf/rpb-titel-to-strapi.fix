@@ -282,11 +282,6 @@ if exists("numbering")
     move_field("numbering_temp", "numbering")
   end
   copy_field("numbering", "volumeIn.numbering") # Zählung (Vorlage)
-  copy_field("numbering", "volumeIn.sortBy") # Zählung (Sortierform)
-  replace_all("volumeIn.sortBy", "^.*((19|20)\\d\\d).*$", "$1")
-  unless all_match("volumeIn.sortBy", "\\d{4}")
-    remove_field("volumeIn.sortBy")
-  end
   copy_field("_id", "volumeIn.value") # Verknüpfung zur MtM (ÜO)
   replace_all("volumeIn.value","b\\d+","")
   prepend("volumeIn.value","http://rpb.lobid.org/")

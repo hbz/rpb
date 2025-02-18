@@ -19,7 +19,7 @@ end
 
 do put_macro("normalize")
   replace_all("$[field]","^http.+[/#](.+)$","$1")
-  replace_all("$[field]","^(\\d+)-(\\d+)$","$1n$2")
+  replace_all("$[field]","^(\\d+)-(\\d+|X)$","$1n$2")
 end
 
 do put_macro("add_labels")

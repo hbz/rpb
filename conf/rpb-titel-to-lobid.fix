@@ -62,6 +62,13 @@ end
 if any_equal("type", "Mehrt. Mono (ÜO)")
   set_field("type[].$append", "MultiVolumeBook")
 end
+
+if exists("inSeries[]")
+  unless exists("isPartOf[]")
+    set_array("isPartOf[]")
+  end
+  move_field("inSeries[].*", "isPartOf[].$append")
+end
 if any_equal("type", "Band")
   set_field("type[].$append", "Book")
   call_macro("move_here", field: "isPartOf[]")
@@ -155,12 +162,6 @@ move_field("temp", "note[]")
 uniq("note[]")
 
 #-------- "isPartOf" -------
-if exists("inSeries[]")
-  unless exists("isPartOf[]")
-    set_array("isPartOf[]")
-  end
-  move_field("inSeries[].*", "isPartOf[].$append")
-end
 if exists("volumeIn")
   unless any_equal("type", "Band") # disable after Allegro import
     unless exists("isPartOf[]")

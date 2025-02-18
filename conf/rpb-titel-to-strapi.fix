@@ -159,7 +159,7 @@ if all_equal("type", "sbd")
   call_macro("ref_volumeIn_unless_exists", field: "publicationYear")
 end
 
-if all_match("type", "s|sm")
+if all_match("type", "s|sm|sbd")
   move_field("isPartOf[]", "inSeries[]")
 end
 

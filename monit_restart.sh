@@ -34,7 +34,7 @@ case $ACTION in
                         kill $(cat target/universal/stage/RUNNING_PID)
 			rm target/universal/stage/RUNNING_PID
                 fi
-                JAVA_OPTS="$JAVA_OPTS -XX:+HeapDumpOnOutOfMemoryError" sbt "start $PORT"
+                JAVA_OPTS="$JAVA_OPTS -XX:+ExitOnOutOfMemoryError" sbt "start $PORT"
                 ;;
         stop)
                 kill $(cat target/universal/stage/RUNNING_PID)

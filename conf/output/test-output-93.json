@@ -5,9 +5,9 @@
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
       "id" : "http://rpb.lobid.org/929t163432",
-      "label" : "Bad Emser Hefte ; 77"
+      "label" : "Bad Emser Hefte"
     } ],
-    "numbering" : "2 ([1989])"
+    "numbering" : "77"
   } ],
   "rpbId" : "929t163432b2",
   "id" : "https://lobid.org/resources/929t163432b2",

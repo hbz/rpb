@@ -5,8 +5,7 @@
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
       "id" : "http://rpb.lobid.org/929t163432",
-      "label" : "Bad Emser Hefte ; 76",
-      "label" : "Adressbuch der Stadt Ems : in 3 Heften"
+      "label" : "Bad Emser Hefte ; 76"
     } ],
     "numbering" : "1 (1989)"
   } ],

@@ -201,7 +201,13 @@ if exists("isPartOf[]")
     move_field("temp", "isPartOf[]")
   end
 end
-
+do list_as(partOf: "isPartOf[]")
+ do list_as(hasSuperordinate: "partOf.hasSuperordinate[]")
+  unless exists("hasSuperordinate.label")
+    move_field("superordinate", "hasSuperordinate.label")
+  end
+ end
+end
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 

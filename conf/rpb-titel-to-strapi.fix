@@ -114,7 +114,7 @@ move_field("f77_", "extent")
 call_macro("move_all", from: "f81?", to: "note")
 replace_all("note[].*.value", "/\\. -$", "/")
 call_macro("move_all", from: "f85?", to: "isPartOf")
-call_macro("move", to: "isPartOf", from: "f20u", type: "")
+copy_field("f20u", "superordinate")
 move_field("f86_", "otherId")
 move_field("f95_", "created")
 

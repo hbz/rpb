@@ -4,22 +4,22 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "http://rpb.lobid.org/107t982379",
-      "label" : "Wer ist wo"
+      "id" : "http://rpb.lobid.org/929t163432",
+      "label" : "Bad Emser Hefte ; 77"
     } ],
-    "numbering" : "1994/95(1995)"
+    "numbering" : "2 ([1989])"
   } ],
-  "rpbId" : "107t982379b1",
-  "id" : "https://lobid.org/resources/107t982379b1",
+  "rpbId" : "929t163432b2",
+  "id" : "https://lobid.org/resources/929t163432b2",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Wer ist wo : 1994/95(1995)",
-  "note" : [ "Letzter Jahrgang, damit Erscheinen eingestellt" ],
+  "title" : "Adressbuch der Stadt Ems : in 3 Heften : 2 ([1989])",
+  "extent" : "S. 42 - 84",
   "publication" : [ {
-    "startDate" : "1995",
+    "startDate" : "1989",
     "type" : [ "PublicationEvent" ]
   } ]
 }

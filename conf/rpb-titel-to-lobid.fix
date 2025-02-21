@@ -19,7 +19,7 @@ end
 
 do put_macro("normalize")
   replace_all("$[field]","^http.+[/#](.+)$","$1")
-  replace_all("$[field]","^(\\d+)-(\\d+)$","$1n$2")
+  replace_all("$[field]","^(\\d+)-(\\d+|X)$","$1n$2")
 end
 
 do put_macro("add_labels")
@@ -62,21 +62,35 @@ end
 if any_equal("type", "Mehrt. Mono (ÜO)")
   set_field("type[].$append", "MultiVolumeBook")
 end
+
+if exists("inSeries[]")
+  unless exists("isPartOf[]")
+    set_array("isPartOf[]")
+  end
+  move_field("inSeries[].*", "isPartOf[].$append")
+end
 if any_equal("type", "Band")
   set_field("type[].$append", "Book")
   call_macro("move_here", field: "isPartOf[]")
-  # enable for Allegro import:
-  # copy_field("isPartOf[].label", "superordinateLabel")
-  # unless exists("superordinateLabel")
-  #   copy_field("isPartOf[].value", "superordinateLabel")
-  # end
-  # set_array("isPartOf[]")
-  # set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
-  # set_array("isPartOf[].$last.hasSuperordinate[]")
-  # # Set up superordinate ID: use the volume ID, remove the numbering part:
-  # copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
-  # copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
-  # copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
+  # disable after Allegro import:
+  copy_field("isPartOf[].label", "superordinateLabel")
+  unless exists("superordinateLabel")
+    copy_field("isPartOf[].value", "superordinateLabel")
+  end
+  copy_field("isPartOf[].numbering", "tempNumbering")
+  set_array("isPartOf[]")
+  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
+  set_array("isPartOf[].$last.hasSuperordinate[]")
+  # Set up superordinate ID: use the volume ID, remove the numbering part:
+  copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
+  copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
+  if exists("tempNumbering")
+    unless all_match("superordinateLabel", ".+ ; .+")
+      paste("isPartOf[].$last.hasSuperordinate[].$last.label", "superordinateLabel", "~;", "tempNumbering")
+    end
+  end
+  copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
+  # disable after Allegro import until here ^
 end
 
 # ------- rpbId -------
@@ -154,22 +168,16 @@ move_field("temp", "note[]")
 uniq("note[]")
 
 #-------- "isPartOf" -------
-if exists("inSeries[]")
-  unless exists("isPartOf[]")
-    set_array("isPartOf[]")
-  end
-  move_field("inSeries[].*", "isPartOf[].$append")
-end
 if exists("volumeIn")
-  #unless any_equal("type", "Band") # enable for Allegro import
+  unless any_equal("type", "Band") # disable after Allegro import
     unless exists("isPartOf[]")
       set_array("isPartOf[]")
     end
     move_field("volumeIn", "isPartOf[].$append")
-  #end
+  end
 end
 if exists("isPartOf[]")
-  #unless any_equal("type", "Band") # enable for Allegro import
+  unless any_equal("type", "Band") # disable after Allegro import
     set_array("temp")
     do list (path:"isPartOf[]", "var": "$i")
       set_array("temp.$append.type[]", "IsPartOfRelation")
@@ -197,9 +205,15 @@ if exists("isPartOf[]")
       end
     end
     move_field("temp", "isPartOf[]")
-  #end
+  end
 end
-
+do list_as(partOf: "isPartOf[]")
+ do list_as(hasSuperordinate: "partOf.hasSuperordinate[]")
+  unless exists("hasSuperordinate.label")
+    move_field("superordinate", "hasSuperordinate.label")
+  end
+ end
+end
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 

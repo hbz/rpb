@@ -3,6 +3,7 @@
   "type" : [ "BibliographicResource", "MultiVolumeBook" ],
   "rpbId" : "107t982373",
   "id" : "https://lobid.org/resources/107t982373",
+  "hbzId" : "HT012717208",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],

@@ -84,10 +84,10 @@ if any_equal("type", "Band")
   # Set up superordinate ID: use the volume ID, remove the numbering part:
   copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
   copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
-  copy_field("tempNumbering", "isPartOf[].$last.numbering")
-  unless exists("isPartOf[].$last.numbering")
-    copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
+  if exists("tempNumbering")
+    paste("isPartOf[].$last.hasSuperordinate[].$last.label", "superordinateLabel", "~;", "tempNumbering")
   end
+  copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
   # disable after Allegro import until here ^
 end
 

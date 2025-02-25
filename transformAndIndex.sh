@@ -6,6 +6,14 @@ TIME=$(date "+%Y%m%d-%H%M")
 INDEX="resources-rpb-$TIME"
 ALIAS="resources-rpb-test"
 
+RPB_INPUT="conf/output/output-strapi-external-rpb.ndjson"
+RPB_URL="http://test.rpb.lobid.org/"
+
+VINO_INPUT="conf/output/output-strapi-external-vino.ndjson"
+VINO_URL="http://test.wein.lobid.org/"
+
+RPB_SECRET=""
+
 # Transform the Strapi data
 
 # Get rpb-authority data from Strapi export:
@@ -17,9 +25,16 @@ sbt "runMain rpb.ETL conf/rpb-sw.flux" # creates TSV lookup file for to-lobid tr
 # Instead, we use the backup exports created in Strapi lifecycle afterCreate and afterUpdate hooks (copy from backup/ in Strapi instance):
 cat conf/articles.ndjson | grep '"data"' | jq -c .data > conf/output/output-strapi.ndjson
 cat conf/independent_works.ndjson | grep '"data"' | jq -c .data >> conf/output/output-strapi.ndjson
+# External records:
+cat conf/external_records.ndjson | grep '"data"' | jq -c .data >> conf/output/output-strapi-external.ndjson
+cat conf/output/output-strapi-external.ndjson | grep '"nur RPB"\|"RPB und BiblioVino"' >> conf/output/output-strapi-external-rpb.ndjson
+cat conf/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und BiblioVino"' >> conf/output/output-strapi-external-vino.ndjson
 # Remove old index data:
 rm conf/output/bulk/bulk-*.ndjson
+# Transform:
 sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
+sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$RPB_INPUT url=$RPB_URL secret=$RPB_SECRET"
+sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$VINO_INPUT url=$VINO_URL secret=$RPB_SECRET"
 
 # Index to Elasticsearch:
 unset http_proxy # for posting to weywot3

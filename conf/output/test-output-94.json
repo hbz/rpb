@@ -4,6 +4,12 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
+      "label" : "Bad Emser Hefte"
+    } ],
+    "numbering" : "78"
+  }, {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
       "id" : "http://rpb.lobid.org/929t163432",
       "label" : "Adressbuch der Stadt Ems : in 3 Heften"
     } ],
@@ -17,7 +23,6 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Adressbuch der Stadt Ems : in 3 Heften : 3 ([1989])",
-  "alternativeTitle" : [ "Bad Emser Hefte ; 78" ],
   "extent" : "S. 86 - 128",
   "publication" : [ {
     "startDate" : "1989",

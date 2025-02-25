@@ -63,28 +63,29 @@ if any_equal("type", "Mehrt. Mono (ÜO)")
   set_field("type[].$append", "MultiVolumeBook")
 end
 
+# ------- isPartOf -------
+
 if any_equal("type", "Band")
   set_field("type[].$append", "Book")
-  call_macro("move_here", field: "isPartOf[]")
-  # disable after Allegro import:
-  copy_field("isPartOf[].label", "superordinateLabel")
-  unless exists("superordinateLabel")
-    copy_field("isPartOf[].value", "superordinateLabel")
-  end
-  copy_field("isPartOf[].numbering", "tempNumbering")
   set_array("isPartOf[]")
-  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
-  set_array("isPartOf[].$last.hasSuperordinate[]")
-  # Set up superordinate ID: use the volume ID, remove the numbering part:
-  copy_field("volumeIn.value", "isPartOf[].$last.hasSuperordinate[].$append.id")
-  copy_field("superordinateLabel", "isPartOf[].$last.hasSuperordinate[].$last.label")
-  if exists("tempNumbering")
-    unless all_match("superordinateLabel", ".+ ; .+")
-      paste("isPartOf[].$last.hasSuperordinate[].$last.label", "superordinateLabel", "~;", "tempNumbering")
-    end
+  copy_field("inSeries[].*", "isPartOf[].$append") # Strapi: inSeries[] (Gesamttitel) -> isPartOf
+  copy_field("volumeIn", "isPartOf[].$append") #  Strapi volumeIn (Bandangaben) -> isPartOf
+  copy_field("f20u", "isPartOf[].$last.label") # label is in f20u
+end
+
+# For all types: lobid structure
+do list_as("ipo": "isPartOf[]")
+  set_array("ipo.type[]", "IsPartOfRelation")
+  if all_match("ipo.value", "^http.+")
+    move_field("ipo.value", "ipo.id")
+  else
+    move_field("ipo.value", "ipo.label")
   end
-  copy_field("volumeIn.numbering", "isPartOf[].$last.numbering")
-  # disable after Allegro import until here ^
+  set_array("ipo.hasSuperordinate[]")
+  set_hash("ipo.hasSuperordinate[].$append")
+  move_field("ipo.id", "ipo.hasSuperordinate[].$last.id")
+  move_field("ipo.label", "ipo.hasSuperordinate[].$last.label")
+  call_macro("move_here", field: "ipo.numbering")
 end
 
 # ------- rpbId -------
@@ -144,13 +145,6 @@ copy_field("parallelTitle[].*.value", "otherTitleInformation[].$append")
 move_field("alternativeTitle[]", "alternativeTitleObjects[]")
 set_array("alternativeTitle[]")
 copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[].$append")
-do list_as("inSeries": "inSeries[]")
-  if exists("inSeries.numbering")
-    paste("alternativeTitle[].$append", "inSeries.value", "~;", "inSeries.numbering")
-  else
-    copy_field("inSeries.value", "alternativeTitle[].$append")
-  end
-end
 
 # ------- "titleKeyword" -------
 set_array("titleKeyword[]")
@@ -169,53 +163,6 @@ end
 move_field("temp", "note[]")
 uniq("note[]")
 
-#-------- "isPartOf" -------
-if exists("volumeIn")
-  unless any_equal("type", "Band") # disable after Allegro import
-    unless exists("isPartOf[]")
-      set_array("isPartOf[]")
-    end
-    move_field("volumeIn", "isPartOf[].$append")
-  end
-end
-if exists("isPartOf[]")
-  unless any_equal("type", "Band") # disable after Allegro import
-    set_array("temp")
-    do list (path:"isPartOf[]", "var": "$i")
-      set_array("temp.$append.type[]", "IsPartOfRelation")
-      set_array("temp.$last.hasSuperordinate[]")
-      if exists("$i.label")
-        split_field("$i.label", " ; ")
-        copy_field("$i.value", "temp.$last.hasSuperordinate[].$append.id")
-        copy_field("$i.label.1", "temp.$last.hasSuperordinate[].$last.label")
-        unless all_match("temp.$last.hasSuperordinate[].$last.id", "^http.+")
-          set_field("temp.$last.hasSuperordinate[].$last.id", "") # free text in Strapi
-        end
-        copy_field("$i.numbering", "temp.$last.numbering")
-      else
-        split_field("$i.value", " ; ")
-        if all_match("$i.value", "^http.+")
-          copy_field("$i.value", "temp.$last.hasSuperordinate[].$append.id")
-        else
-          copy_field("$i.value.1", "temp.$last.hasSuperordinate[].$append.label")
-        end
-        if exists("$i.numbering")
-          copy_field("$i.numbering", "temp.$last.numbering")
-        else
-          copy_field("$i.value.2", "temp.$last.numbering")
-        end
-      end
-    end
-    move_field("temp", "isPartOf[]")
-  end
-end
-do list_as(partOf: "isPartOf[]")
- do list_as(hasSuperordinate: "partOf.hasSuperordinate[]")
-  unless exists("hasSuperordinate.label")
-    move_field("superordinate", "hasSuperordinate.label")
-  end
- end
-end
 # ------- "medium" -------
 # Dafür scheint es keine explizite Angabe zu geben.
 

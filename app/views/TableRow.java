@@ -38,7 +38,7 @@ public enum TableRow {
 			return filtered.isEmpty() ? ""
 					: String.format("<tr><td>%s</td><td>%s</td></tr>", label,
 							filtered.stream()
-									.flatMap(s -> Arrays.asList(s.split("; ")).stream())
+									.flatMap(s -> Arrays.asList(s.split("[^\\s]; ")).stream())
 									.map(val -> label(doc, property, param, val, keys))
 									.collect(Collectors.joining(
 											property.equals("subjectChain") ? " <br/> " : " | ")));

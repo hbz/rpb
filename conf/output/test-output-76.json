@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/036t160240",
+      "id" : "http://rpb.lobid.org/036t160240",
       "label" : "Piffche-Bahnfahrt durch Rheinhessen"
     } ],
     "numbering" : "2"

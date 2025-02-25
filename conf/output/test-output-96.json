@@ -4,32 +4,30 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "label" : "Salto"
+      "label" : "Serie Musik"
     } ],
-    "numbering" : "[13]"
+    "numbering" : "8309"
   } ],
-  "rpbId" : "929t112198",
-  "id" : "https://lobid.org/resources/929t112198",
-  "hbzId" : "HT015954631",
-  "isbn" : [ "3-8031-1114-5", "978-3-8031-1114-2" ],
+  "rpbId" : "107t110017",
+  "id" : "https://lobid.org/resources/107t110017",
+  "isbn" : [ "978-3-254-08309-8" ],
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Das Leben der Bilder oder die Kunst des Sehens",
-  "extent" : "141 S. : Ill.",
-  "note" : [ "Aus dem Engl. übers." ],
-  "responsibilityStatement" : [ "John Berger" ],
+  "title" : "Fritz Wunderlich : eine Biografie",
+  "extent" : "463 S. : Ill.",
+  "responsibilityStatement" : [ "Werner Pfister" ],
   "publication" : [ {
-    "location" : [ "Berlin" ],
-    "startDate" : "2009",
-    "publishedBy" : [ "Wagenbach" ],
+    "location" : [ "Mainz" ],
+    "startDate" : "2010",
+    "publishedBy" : [ "Schott" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n848000",
-    "label" : "Fotografie",
+    "id" : "http://purl.org/lobid/rpb#n824080",
+    "label" : "Sängerin. Sänger",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -37,28 +35,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kunst | Aufsatzsammlung",
+    "label" : "Wunderlich, Fritz / 1930-1966 | Biografie",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4114333-4",
-      "label" : "Kunst",
+      "id" : "https://d-nb.info/gnd/11893869X",
+      "label" : "Wunderlich, Fritz / 1930-1966",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4143413-4",
-      "label" : "Aufsatzsammlung",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Sander, August / 1876-1964",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/118605364",
-      "label" : "Sander, August / 1876-1964",
+      "id" : "https://d-nb.info/gnd/4006804-3",
+      "label" : "Biografie",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -66,8 +53,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13203050",
-    "label" : "Herdorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n33610055",
+    "label" : "Kusel,Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -76,8 +63,8 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "http://rpb.lobid.org/sw/00Pn11k2198999a",
-      "label" : "Berger, John",
+      "id" : "http://rpb.lobid.org/sw/00Pn97m1186b",
+      "label" : "Pfister, Werner",
       "type" : [ "Person" ]
     },
     "role" : {
@@ -86,5 +73,5 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "edition" : [ "11. Aufl." ]
+  "edition" : [ "Überarb. Neuausg., aktualisierte Taschenbuchausg." ]
 }

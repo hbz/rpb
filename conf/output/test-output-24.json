@@ -1,4 +1,11 @@
 {
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Kunst und Geschichte in Rheinland-Pfalz"
+    } ],
+    "numbering" : "82"
+  } ],
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
   "rpbId" : "107t01147873",
@@ -9,13 +16,6 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Das Hambacher Schloß.",
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "label" : "Kunst und Geschichte in Rheinland-Pfalz"
-    } ],
-    "numbering" : "82"
-  } ],
   "publication" : [ {
     "startDate" : "1982",
     "type" : [ "PublicationEvent" ]

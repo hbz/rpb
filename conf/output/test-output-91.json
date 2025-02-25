@@ -1,26 +1,32 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "MultiVolumeBook" ],
-  "rpbId" : "107t982374",
-  "id" : "https://lobid.org/resources/107t982374",
-  "hbzId" : "HT012468298",
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Bad Emser Hefte"
+    } ],
+    "numbering" : "..."
+  } ],
+  "rpbId" : "929t163432",
+  "id" : "https://lobid.org/resources/929t163432",
+  "hbzId" : "HT003729454",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "On : SWF 3, das Magazin",
-  "note" : [ "Ersch. früher in: Offenburg : Opal-Verl. [1995,2]" ],
-  "responsibilityStatement" : [ "hrsg. von: SWF 3, Der Club" ],
+  "title" : "Adressbuch der Stadt Ems : in 3 Heften",
+  "responsibilityStatement" : [ "Verein für Geschichte, Denkmal- u. Landschaftspflege e.V. Bad Ems" ],
   "publication" : [ {
-    "location" : [ "Rastatt" ],
-    "startDate" : "1992",
-    "publishedBy" : [ "Pabel-Moewig" ],
+    "location" : [ "Bad Ems" ],
+    "startDate" : "1989",
+    "publishedBy" : [ "VGDL" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n882040",
-    "label" : "Hörfunk",
+    "id" : "http://purl.org/lobid/rpb#n503050",
+    "label" : "Einwohnerverzeichnis",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -28,24 +34,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "SWF 3 | Geschichte 1945- | Zeitschrift",
+    "label" : "Bad Ems | Geschichte 1896 | Adressbuch",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4264102-0",
-      "label" : "SWF 3",
+      "id" : "https://d-nb.info/gnd/4014614-5",
+      "label" : "Bad Ems",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "http://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
+      "id" : "http://rpb.lobid.org/sw/00Sn05k0879884a",
+      "label" : "Geschichte 1896",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "id" : "https://d-nb.info/gnd/4141451-2",
+      "label" : "Adressbuch",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -53,24 +59,13 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n01",
-    "label" : "Rheinland-Pfalz",
+    "id" : "https://rpb.lobid.org/spatial#n14110006",
+    "label" : "Bad Ems, Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://d-nb.info/gnd/5166552-9",
-      "label" : "SWF 3, Der Club",
-      "type" : [ "CorporateBody" ]
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/isb",
-      "label" : "Herausgebendes Organ"
-    },
-    "type" : [ "Contribution" ]
-  } ]
+  "edition" : [ "Faks.-Ausg. [d. Ausg.] Ems, Sommer, 1896" ]
 }

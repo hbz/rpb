@@ -1,0 +1,101 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t061308",
+  "id" : "https://lobid.org/resources/929t061308",
+  "isbn" : [ "3-920388-85-2" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Die Mühlsteinbrüche zwischen Mayen und dem Laacher See",
+  "extent" : "S. 386 - 432 : Ill., Kt.",
+  "responsibilityStatement" : [ "von dem Herrn Bergmeister Schulze zu Düren. Abschrift aus \"Archiv für Bergbau und Hüttenwesen\", hrsg. von C. J. B. Karsten, Bd. 17, Berlin 1828, von Klaus Schmidt" ],
+  "publication" : [ {
+    "location" : [ "Koblenz" ],
+    "startDate" : "2000",
+    "publishedBy" : [ "Görres" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n545040",
+    "label" : "Gesteinsabbau",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Mayen / Region | Mühlstein | Steinbruch | Laacher See / Region | Geschichte 1828",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4038114-6",
+      "label" : "Mayen / Region",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4327809-7",
+      "label" : "Mühlstein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4057145-2",
+      "label" : "Steinbruch",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4033914-2",
+      "label" : "Laacher See / Region",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn06k1308307a",
+      "label" : "Geschichte 1828",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://d-nb.info/gnd/4038114-6",
+    "label" : "Mayen / Region",
+    "type" : [ "PlaceOrGeographicName" ],
+    "source" : {
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn06k1308579b",
+      "label" : "Schulze, ...",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn91t0643a",
+      "label" : "Schmidt, Klaus",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

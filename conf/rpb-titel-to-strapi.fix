@@ -6,10 +6,10 @@
 #     reject()
 #   end
 # end
-# do once()
-#   put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
-#     "rpbId2almaMmsId", "key_column": "1", "value_column": "0", "sep_char": "\t")
-# end
+do once()
+  put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
+    "rpbId2hbzId", "expected_columns": "4", "key_column": "1", "value_column": "2", "sep_char": "\t")
+end
 # paste("inLobid", "rpbId", "join_char": "")
 # lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
 # if exists("inLobid")
@@ -52,9 +52,10 @@ do put_macro("contribution_to_uri")
     if all_match("$i.value","^00.*|^107n.*|^929n.*")
       prepend("$i.value", "http://rpb.lobid.org/sw/")
     elsif all_match("$i.value","^\\d.*")
-      replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
+      replace_all("$i.value", "(^\\d*)n(\\d|X)", "$1-$2")
       prepend("$i.value", "https://d-nb.info/gnd/")
     end
+    replace_all("$i.value", ":?\\s.*", "")
   end
 end
 
@@ -73,6 +74,9 @@ do put_macro("add_item")
 end
 
 move_field("f00_", "rpbId")
+copy_field("rpbId", "hbzId")
+prepend("hbzId", "RPB")
+lookup("hbzId", "rpbId2hbzId", "delete": "true")
 move_field("f01_", "numbering")
 call_macro("to_bool", from: "f14_", to: "doNotIndex")
 move_field("f18_", "inCollection")
@@ -101,12 +105,25 @@ move_field("f70z", "bibliographicCitation[].1.alternativeNumbering")
 move_field("f71_", "edition")
 move_field("f74_", "publicationLocation")
 move_field("f75_", "publishedBy")
+unless exists("f76a")
+  copy_field("f76b", "f76a")
+end
 move_field("f76a", "publicationDate")
 move_field("f76b", "publicationYear")
 move_field("f77_", "extent")
 call_macro("move_all", from: "f81?", to: "note")
+replace_all("note[].*.value", "/\\. -$", "/")
 call_macro("move_all", from: "f85?", to: "isPartOf")
-call_macro("move", to: "isPartOf", from: "f20u", type: "")
+do list_as(partOf: "isPartOf[]")
+  if all_contain("partOf.value", " ; ")
+    move_field("partOf.value", "partOfTemp")
+    split_field("partOfTemp", " ; ")
+    move_field("partOfTemp.$first", "partOf.value")
+    move_field("partOfTemp.$last", "partOf.numbering")
+    remove_field("partOfTemp")
+  end
+end
+copy_field("f20u", "superordinate")
 move_field("f86_", "otherId")
 move_field("f95_", "created")
 
@@ -151,7 +168,7 @@ if all_equal("type", "sbd")
   call_macro("ref_volumeIn_unless_exists", field: "publicationYear")
 end
 
-if all_match("type", "s|sm")
+if all_match("type", "s|sm|sbd")
   move_field("isPartOf[]", "inSeries[]")
 end
 
@@ -274,14 +291,9 @@ if exists("numbering")
     move_field("numbering_temp", "numbering")
   end
   copy_field("numbering", "volumeIn.numbering") # Zählung (Vorlage)
-  copy_field("numbering", "volumeIn.sortBy") # Zählung (Sortierform)
-  replace_all("volumeIn.sortBy", "^.*((19|20)\\d\\d).*$", "$1")
-  unless all_match("volumeIn.sortBy", "\\d{4}")
-    remove_field("volumeIn.sortBy")
-  end
   copy_field("_id", "volumeIn.value") # Verknüpfung zur MtM (ÜO)
   replace_all("volumeIn.value","b\\d+","")
-  prepend("volumeIn.value","https://lobid.org/resources/")
+  prepend("volumeIn.value","http://rpb.lobid.org/")
 end
 
 # ISBNs (f87_, f871 ff.)

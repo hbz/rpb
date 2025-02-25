@@ -11,13 +11,6 @@
   "title" : "2000 Jahre Meilbrück : vom römischen Tempelbezirk zur modernen Raststätte; Von den Anfängen bis zum Ende der Römerherrschaft",
   "alternativeTitle" : [ "Zweitausend Jahre Meilbrück" ],
   "extent" : "Ill.",
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/121t0146618"
-    } ],
-    "numbering" : "1"
-  } ],
   "publication" : [ {
     "startDate" : "1990",
     "type" : [ "PublicationEvent" ]

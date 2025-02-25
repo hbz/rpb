@@ -1,6 +1,12 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "DuMont aktiv"
+    } ]
+  } ],
   "rpbId" : "929t160199",
   "id" : "https://lobid.org/resources/929t160199",
   "hbzId" : "HT018859168",

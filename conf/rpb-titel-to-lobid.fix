@@ -71,6 +71,8 @@ if any_equal("type", "Band")
   copy_field("inSeries[].*", "isPartOf[].$append") # Strapi: inSeries[] (Gesamttitel) -> isPartOf
   copy_field("volumeIn", "isPartOf[].$append") #  Strapi volumeIn (Bandangaben) -> isPartOf
   copy_field("f20u", "isPartOf[].$last.label") # label is in f20u
+else
+  move_field("inSeries[]", "isPartOf[]")
 end
 
 # For all types: lobid structure

@@ -1,6 +1,13 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Bad Emser Hefte"
+    } ],
+    "numbering" : "..."
+  } ],
   "rpbId" : "929t163432",
   "id" : "https://lobid.org/resources/929t163432",
   "hbzId" : "HT003729454",

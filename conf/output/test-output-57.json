@@ -1,6 +1,13 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Salto"
+    } ],
+    "numbering" : "[13]"
+  } ],
   "rpbId" : "929t112198",
   "id" : "https://lobid.org/resources/929t112198",
   "hbzId" : "HT015954631",

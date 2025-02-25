@@ -1,6 +1,12 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Beiträge zur Geschichte und Kultur der Stadt Wittlich"
+    } ]
+  } ],
   "rpbId" : "121t970621",
   "id" : "https://lobid.org/resources/121t970621",
   "isbn" : [ "3-9802913-8-3" ],

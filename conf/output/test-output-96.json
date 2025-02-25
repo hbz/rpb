@@ -1,6 +1,13 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Serie Musik"
+    } ],
+    "numbering" : "8309"
+  } ],
   "rpbId" : "107t110017",
   "id" : "https://lobid.org/resources/107t110017",
   "isbn" : [ "978-3-254-08309-8" ],

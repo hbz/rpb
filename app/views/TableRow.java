@@ -18,6 +18,10 @@ import controllers.nwbib.Application;
 import controllers.nwbib.Classification;
 import controllers.nwbib.Lobid;
 import play.Logger;
+import play.libs.F.Promise;
+import play.libs.ws.WS;
+import play.libs.ws.WSRequest;
+import play.libs.ws.WSResponse;
 
 /**
  * Different ways of serializing a table row
@@ -107,19 +111,21 @@ public enum TableRow {
 		private String label(JsonNode doc, String value, List<String> properties) {
 			List<String> results = new ArrayList<>();
 			List<String> resultValues = labelsFor(doc, value, properties);
-			JsonNode labelNode = doc.get(properties.get(0)).iterator().next().get("label");
-			for (int i = 0; i < resultValues.size(); i++) {
-				String currentValue = resultValues.get(i);
-				String[] refAndLabel =
-						refAndLabel(properties.get(i), currentValue, Optional.empty());
-				String label = labelNode != null ? labelNode.textValue() : refAndLabel[1];
-				String result =
-						properties.get(i).equals("numbering") || value.equals("--")
-								? currentValue
-								: !value.startsWith("http") ? label : String.format(
-										"<a title=\"Titeldetails anzeigen\" href=\"%s\">%s</a>",
-										refAndLabel[0], label);
-				results.add(result.replace("Band", "").trim());
+			if (doc.get(properties.get(0)) != null) {
+				JsonNode labelNode = doc.get(properties.get(0)).iterator().next().get("label");
+				for (int i = 0; i < resultValues.size(); i++) {
+					String currentValue = resultValues.get(i);
+					String[] refAndLabel =
+							refAndLabel(properties.get(i), currentValue, Optional.empty());
+					String label = labelNode != null ? labelNode.textValue() : refAndLabel[1];
+					String result =
+							properties.get(i).equals("numbering") || value.equals("--")
+							? currentValue
+									: !value.startsWith("http") ? label : String.format(
+											"<a title=\"Titeldetails anzeigen\" href=\"%s\">%s</a>",
+											refAndLabel[0], label);
+					results.add(result.replace("Band", "").trim());
+				}
 			}
 			return results.stream().collect(Collectors.joining(", Band "));
 		}
@@ -127,7 +133,7 @@ public enum TableRow {
 		private List<String> labelsFor(JsonNode doc, String value,
 				List<String> keys) {
 			List<String> result = new ArrayList<>();
-			if (doc != null) {
+			if (doc != null && doc.get(keys.get(0)) != null) {
 				JsonNode node = doc.get(keys.get(0)).iterator().next();
 				JsonNode id = node.get("id");
 				JsonNode label = node.get("label");
@@ -214,6 +220,9 @@ public enum TableRow {
 
 	String[] refAndLabel(String property, String value,
 			Optional<List<String>> labels) {
+		if (value.contains("lobid.org/resources/")) {
+			value = rpbUrlIfInRpb(value);
+		}
 		if ((property.equals("containedIn") || property.equals("hasPart")
 				|| property.equals("isPartOf") || property.equals("hasSuperordinate")
 				|| property.equals("bibliographicCitation")) && value.contains("lobid.org")) {
@@ -225,6 +234,12 @@ public enum TableRow {
 				labels.isPresent() && labels.get().size() > 0 ? labels.get().get(0)
 						: value.startsWith("http") ? URI.create(value).getHost() : value;
 		return new String[] { value, label };
+	}
+
+	String rpbUrlIfInRpb(String value) {
+		WSRequest lobidRequest = WS.url(value).setHeader("Content-Type", "application/json");
+		JsonNode lobidJson = lobidRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
+		return lobidJson.has("rpbId") ? "https://rpb.lobid.org/" + lobidJson.get("rpbId").textValue() : value;
 	}
 
 	public abstract String process(JsonNode doc, String property, String param,

@@ -142,10 +142,8 @@ copy_field("parallelTitle[].*.value", "otherTitleInformation[].$append")
 
 # ------- "alternativeTitle" -------
 move_field("alternativeTitle[]", "alternativeTitleObjects[]")
-copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[]")
-unless exists("alternativeTitle[]")
-  set_array("alternativeTitle[]")
-end
+set_array("alternativeTitle[]")
+copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[].$append")
 do list_as("inSeries": "inSeries[]")
   if exists("inSeries.numbering")
     paste("alternativeTitle[].$append", "inSeries.value", "~;", "inSeries.numbering")

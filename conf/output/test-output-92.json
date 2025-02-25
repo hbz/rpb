@@ -5,7 +5,7 @@
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
       "id" : "http://rpb.lobid.org/929t163432",
-      "label" : "Bad Emser Hefte ; 76"
+      "label" : "Adressbuch der Stadt Ems : in 3 Heften"
     } ],
     "numbering" : "1 (1989)"
   } ],
@@ -17,6 +17,7 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Adressbuch der Stadt Ems : in 3 Heften : 1 (1989)",
+  "alternativeTitle" : [ "Bad Emser Hefte ; 76" ],
   "extent" : "40 S.",
   "publication" : [ {
     "startDate" : "1989",

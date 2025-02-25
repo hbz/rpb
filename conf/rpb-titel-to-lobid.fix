@@ -63,12 +63,6 @@ if any_equal("type", "Mehrt. Mono (ÜO)")
   set_field("type[].$append", "MultiVolumeBook")
 end
 
-if exists("inSeries[]")
-  unless exists("isPartOf[]")
-    set_array("isPartOf[]")
-  end
-  move_field("inSeries[].*", "isPartOf[].$append")
-end
 if any_equal("type", "Band")
   set_field("type[].$append", "Book")
   call_macro("move_here", field: "isPartOf[]")
@@ -149,6 +143,16 @@ copy_field("parallelTitle[].*.value", "otherTitleInformation[].$append")
 # ------- "alternativeTitle" -------
 move_field("alternativeTitle[]", "alternativeTitleObjects[]")
 copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[]")
+unless exists("alternativeTitle[]")
+  set_array("alternativeTitle[]")
+end
+do list_as("inSeries": "inSeries[]")
+  if exists("inSeries.numbering")
+    paste("alternativeTitle[].$append", "inSeries.value", "~;", "inSeries.numbering")
+  else
+    copy_field("inSeries.value", "alternativeTitle[].$append")
+  end
+end
 
 # ------- "titleKeyword" -------
 set_array("titleKeyword[]")

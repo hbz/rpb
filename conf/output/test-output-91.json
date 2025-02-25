@@ -10,13 +10,7 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Adressbuch der Stadt Ems : in 3 Heften",
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "label" : "Bad Emser Hefte"
-    } ],
-    "numbering" : "..."
-  } ],
+  "alternativeTitle" : [ "Bad Emser Hefte ; ..." ],
   "responsibilityStatement" : [ "Verein für Geschichte, Denkmal- u. Landschaftspflege e.V. Bad Ems" ],
   "publication" : [ {
     "location" : [ "Bad Ems" ],

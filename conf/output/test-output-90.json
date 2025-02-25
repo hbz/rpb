@@ -10,14 +10,9 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Der Krieg war aus! : Nachkriegsalltag in Wittlich",
+  "alternativeTitle" : [ "Beiträge zur Geschichte und Kultur der Stadt Wittlich" ],
   "extent" : "254 S. : Ill.",
   "note" : [ "Darin u.a. S. 7-20: Schreier, Susanne: \"Der Krieg war aus, aber er war auch nicht aus\". - S. 21-52: Schindelka, Martina: Das Leben unter und mit der Besatzung. - S. 53-76: Fritzsche, Wolfgang: Maggeln, Hamstern und Kompensieren bestimmten die Versorgung. - S. 77-93: Fritzsche, Wolfgang: \"Von 700 Litern Schnaps ein Haus gebaut\". - S. 227-233: Schreier, Susanne: \"Das ging leise, nicht wie eine Explosion\". - S. 235-241: Schreier, Susanne: Nachkriegszeit in Wittlich." ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "label" : "Beiträge zur Geschichte und Kultur der Stadt Wittlich"
-    } ]
-  } ],
   "responsibilityStatement" : [ "hrsg. von Susanne Schreier im Auftr. der Stiftung Stadt Wittlich" ],
   "publication" : [ {
     "location" : [ "Wittlich" ],

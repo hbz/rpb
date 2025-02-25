@@ -11,15 +11,9 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Das Leben der Bilder oder die Kunst des Sehens",
+  "alternativeTitle" : [ "Salto ; [13]" ],
   "extent" : "141 S. : Ill.",
   "note" : [ "Aus dem Engl. übers." ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "label" : "Salto"
-    } ],
-    "numbering" : "[13]"
-  } ],
   "responsibilityStatement" : [ "John Berger" ],
   "publication" : [ {
     "location" : [ "Berlin" ],

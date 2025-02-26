@@ -15,50 +15,6 @@
     "location" : [ "Ingelheim am Rhein" ],
     "publishedBy" : [ "Stadtverwaltung Ingelheim am Rhein" ]
   } ],
-  "describedBy" : {
-    "id" : "http://lobid.org/resources/514226781",
-    "label" : "Webseite der hbz-Ressource 514226781",
-    "type" : [ "BibliographicDescription" ],
-    "inDataset" : {
-      "id" : "http://lobid.org/resources/dataset#!",
-      "label" : "lobid-resources – Der hbz-Verbundkatalog als Linked Open Data"
-    },
-    "resultOf" : {
-      "type" : [ "CreateAction" ],
-      "endTime" : "0000-00-00T00:00:00",
-      "instrument" : {
-        "id" : "https://github.com/hbz/lobid-resources",
-        "type" : [ "SoftwareApplication" ],
-        "label" : "Software lobid-resources"
-      },
-      "object" : {
-        "id" : "https://lobid.org/marcxml/514226781",
-        "dateCreated" : "2023-12-21",
-        "type" : [ "DataFeedItem" ],
-        "label" : "hbz-Ressource 514226781 im Exportformat MARC21 XML",
-        "inDataset" : {
-          "id" : "http://sru.hebis.de/sru/DB=2.1?version=1.1",
-          "label" : "hbz_unioncatalog"
-        },
-        "sourceOrganization" : {
-          "id" : "http://lobid.org/organisations/DE-603#!",
-          "label" : "Hessisches BibliotheksInformationsSystem hebis"
-        },
-        "provider" : {
-          "id" : "http://lobid.org/organisations/DE-603#!",
-          "label" : "Hessisches BibliotheksInformationsSystem hebis"
-        },
-        "modifiedBy" : [ {
-          "id" : "http://lobid.org/organisations/DE-603#!",
-          "label" : "Hessisches BibliotheksInformationsSystem hebis"
-        } ]
-      }
-    },
-    "license" : [ {
-      "id" : "http://creativecommons.org/publicdomain/zero/1.0",
-      "label" : "Creative Commons-Lizenz CC0 1.0 Universal"
-    } ]
-  },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1415743560",
     "label" : "OCLC Ressource"

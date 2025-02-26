@@ -39,7 +39,7 @@
         "type" : [ "DataFeedItem" ],
         "label" : "hbz-Ressource 512013683 im Exportformat MARC21 XML",
         "inDataset" : {
-          "id" : "https://datahub.io/dataset/hbz_unioncatalog",
+          "id" : "http://sru.hebis.de/sru/DB=2.1?version=1.1",
           "label" : "hbz_unioncatalog"
         },
         "sourceOrganization" : {

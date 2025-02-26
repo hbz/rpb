@@ -73,7 +73,7 @@ copy_field("almaMmsId","describedBy.resultOf.object.label")
 prepend("describedBy.resultOf.object.label","hbz-Ressource ")
 append("describedBy.resultOf.object.label"," im Exportformat MARC21 XML")
 
-add_field("describedBy.resultOf.object.inDataset.id", "https://datahub.io/dataset/hbz_unioncatalog")
+add_field("describedBy.resultOf.object.inDataset.id", "http://sru.hebis.de/sru/DB=2.1?version=1.1")
 
 add_field("describedBy.resultOf.object.inDataset.label", "hbz_unioncatalog")
 

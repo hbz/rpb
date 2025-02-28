@@ -41,9 +41,9 @@ nothing() # currently no transformation for describedBy is needed.
 #   substring("@initialCataloguingDate","0","6")
 # end
 # 
-# if any_match("@initialCataloguingDate","^[0-4]\\d*") # Complete dates after 2000
+# if any_match("@initialCataloguingDate","^[0-4]\\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])") # Assume dates from 2000-01-01 to  2049-12-31 ( e.g. matching 491231)
 #   prepend("@initialCataloguingDate","20")
-# elsif any_match("@initialCataloguingDate","\\d*") # Complete dates before 2000
+# elsif any_match("@initialCataloguingDate","\\d{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])") # Assume dates from 1900-01-01 to  1999-12-31 ( e.g. matching 991231)
 #   prepend("@initialCataloguingDate","19")
 # else
 #   copy_field("MNG  .b","@initialCataloguingDate")
@@ -67,6 +67,8 @@ nothing() # currently no transformation for describedBy is needed.
 # replace_all("describedBy.resultOf.object.dateModified","^(\\d{4})(\\d{2})(\\d{2})$","$1-$2-$3")
 # replace_all("describedBy.resultOf.object.dateCreated","^(\\d{4})$","$1-01-01")
 # replace_all("describedBy.resultOf.object.dateModified","^(\\d{4})$","$1-01-01")
+# call_macro("leapYearChecker",date:"describedBy.resultOf.object.dateCreated")
+# call_macro("leapYearChecker",date:"describedBy.resultOf.object.dateModified")
 # 
 # add_array("describedBy.resultOf.object.type[]", "DataFeedItem")
 # 
@@ -74,9 +76,9 @@ nothing() # currently no transformation for describedBy is needed.
 # prepend("describedBy.resultOf.object.label","hbz-Ressource ")
 # append("describedBy.resultOf.object.label"," im Exportformat MARC21 XML")
 # 
-# add_field("describedBy.resultOf.object.inDataset.id", "http://sru.hebis.de/sru/DB=2.1?version=1.1")
+# add_field("describedBy.resultOf.object.inDataset.id", "https://datahub.io/dataset/hbz_unioncatalog")
 # 
-# add_field("describedBy.resultOf.object.inDataset.label", "Hebis SRU")
+# add_field("describedBy.resultOf.object.inDataset.label", "hbz_unioncatalog")
 # 
 # add_array("describedBy.license[]")
 # add_field("describedBy.license[].$append.id","http://creativecommons.org/publicdomain/zero/1.0" )
@@ -115,4 +117,3 @@ nothing() # currently no transformation for describedBy is needed.
 # end
 # 
 # uniq("describedBy.resultOf.object.modifiedBy[]")
-# 

@@ -21,11 +21,11 @@
     "label" : "OCLC Ressource"
   } ],
   "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
       "label" : "Beiträge zur Geschichte des Gau-Algesheimer Raumes"
     } ],
-    "numbering" : "42"
+    "numbering" : "42",
+    "type" : [ "IsPartOfRelation" ]
   } ],
   "language" : [ {
     "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",

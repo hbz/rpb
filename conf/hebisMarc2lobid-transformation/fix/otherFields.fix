@@ -112,7 +112,9 @@ replace_all("extent", "  ", " ")
 # 500 - General Note (R) Subfield: $a (NR)
 add_array("note[]")
 do list(path:"500  ", "var": "$i")
-  copy_field("$i.a", "note[].$append")
+  unless any_contain("$i.a","In:")
+    copy_field("$i.a", "note[].$append")
+  end
 end
 uniq("note[]")
 
@@ -129,6 +131,9 @@ add_array("abstract[]")
 do list(path:"520[ 23] ", "var": "$i")
   copy_field("$i.[ab]", "abstract[].$append")
 end
+
+replace_all("abstract[].*","^<!\\[CDATA\\[(.*)\\]\\]>$","$1")
+replace_all("abstract[].*","<[\\/]?.{1,2}>","")
 
 # 502 - Dissertation Note (R) Subfield: $a (R)
 add_array("thesisInformation[]")

@@ -29,8 +29,9 @@ nothing() # currently no transformation for describedBy is needed.
 # 
 # add_field("describedBy.resultOf.instrument.label","Software lobid-resources")
 # 
-# copy_field("almaMmsId","describedBy.resultOf.object.id")
-# prepend("describedBy.resultOf.object.id","https://lobid.org/marcxml/")
+
+paste("describedBy.resultOf.object.id","~http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22", "001","~%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C", join_char:"")
+
 # 
 # # 008/00-05 has the initial cataloguing date. We test strictly if 008 only has 6 digits, sometimes records have 8 digits that are not valid.
 # # We use MNG info as fallback.

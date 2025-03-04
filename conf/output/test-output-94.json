@@ -1,0 +1,31 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Bad Emser Hefte"
+    } ],
+    "numbering" : "78"
+  }, {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "http://rpb.lobid.org/929t163432",
+      "label" : "Adressbuch der Stadt Ems : in 3 Heften"
+    } ],
+    "numbering" : "3 ([1989])"
+  } ],
+  "rpbId" : "929t163432b3",
+  "id" : "https://lobid.org/resources/929t163432b3",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Adressbuch der Stadt Ems : in 3 Heften : 3 ([1989])",
+  "extent" : "S. 86 - 128",
+  "publication" : [ {
+    "startDate" : "1989",
+    "type" : [ "PublicationEvent" ]
+  } ]
+}

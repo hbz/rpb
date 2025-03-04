@@ -33,8 +33,6 @@ cat conf/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und
 rm conf/output/bulk/bulk-*.ndjson
 # Transform:
 sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
-sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$RPB_INPUT url=$RPB_URL secret=$RPB_SECRET"
-sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$VINO_INPUT url=$VINO_URL secret=$RPB_SECRET"
 
 # Index to Elasticsearch:
 unset http_proxy # for posting to weywot3
@@ -62,3 +60,7 @@ curl -X POST "weywot3:9200/_aliases?pretty" -H 'Content-Type: application/json' 
 	]
 }
 '
+
+# Transform and index external records (after index switch, they use the RPB and BiblioVino instances):
+sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$RPB_INPUT url=$RPB_URL secret=$RPB_SECRET"
+sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$VINO_INPUT url=$VINO_URL secret=$RPB_SECRET"

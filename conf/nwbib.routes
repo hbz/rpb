@@ -36,3 +36,5 @@ GET    /o:id                  controllers.nwbib.Application.searchSpatial(id, fr
 GET    /:id                   controllers.nwbib.Application.show(id, format ?= "")
 PUT    /:id                   controllers.nwbib.Application.put(id, secret ?= "")
 DELETE /:id                   controllers.nwbib.Application.delete(id, secret ?= "")
+PUT    /                      controllers.nwbib.Application.putIdFromData(secret ?= "")
+DELETE /                      controllers.nwbib.Application.deleteIdFromData(secret ?= "")

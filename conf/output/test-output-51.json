@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/929t112193",
+      "id" : "http://rpb.lobid.org/929t112193",
       "label" : "Aktuell : das Krankenhaus in Ihrer Region"
     } ],
     "numbering" : "Nachgewiesen 2010 - 2012,1"

@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/107t982373",
+      "id" : "http://rpb.lobid.org/107t982373",
       "label" : "SWR-3-Clubmagazin"
     } ],
     "numbering" : "1998,1(Sept.) -"

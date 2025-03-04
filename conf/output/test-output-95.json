@@ -1,0 +1,34 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t01034846",
+  "id" : "https://lobid.org/resources/929t01034846",
+  "hbzId" : "TT002234691",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Herzlich willkommen auf der Homepage der Ortsgemeinde Bonefeld [Elektronische Ressource]",
+  "note" : [ "edoweb - Rheinland-pfälzischer Archivserver für elektronische Dokumente und Websites", "http://www.bonefeld.de/" ],
+  "publication" : [ {
+    "startDate" : "0000",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/4487276-8",
+      "label" : "Bonefeld",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "fulltextOnline" : [ {
+    "id" : "https://www.edoweb-rlp.de/resource/edoweb:1312",
+    "label" : "https://www.edoweb-rlp.de/resource/edoweb:1312"
+  } ]
+}

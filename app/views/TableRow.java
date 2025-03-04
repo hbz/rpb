@@ -121,7 +121,7 @@ public enum TableRow {
 					String result =
 							properties.get(i).equals("numbering") || value.equals("--")
 							? currentValue
-									: String.format(
+									: !value.startsWith("http") ? label : String.format(
 											"<a title=\"Titeldetails anzeigen\" href=\"%s\">%s</a>",
 											refAndLabel[0], label);
 					results.add(result.replace("Band", "").trim());

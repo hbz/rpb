@@ -26,9 +26,9 @@ sbt "runMain rpb.ETL conf/rpb-sw.flux" # creates TSV lookup file for to-lobid tr
 cat conf/articles.ndjson | grep '"data"' | jq -c .data > conf/output/output-strapi.ndjson
 cat conf/independent_works.ndjson | grep '"data"' | jq -c .data >> conf/output/output-strapi.ndjson
 # External records:
-cat conf/external_records.ndjson | grep '"data"' | jq -c .data >> conf/output/output-strapi-external.ndjson
-cat conf/output/output-strapi-external.ndjson | grep '"nur RPB"\|"RPB und BiblioVino"' >> conf/output/output-strapi-external-rpb.ndjson
-cat conf/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und BiblioVino"' >> conf/output/output-strapi-external-vino.ndjson
+cat conf/external_records.ndjson | grep '"data"' | jq -c .data > conf/output/output-strapi-external.ndjson
+cat conf/output/output-strapi-external.ndjson | grep '"nur RPB"\|"RPB und BiblioVino"' > conf/output/output-strapi-external-rpb.ndjson
+cat conf/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und BiblioVino"' > conf/output/output-strapi-external-vino.ndjson
 # Remove old index data:
 rm conf/output/bulk/bulk-*.ndjson
 # Transform:

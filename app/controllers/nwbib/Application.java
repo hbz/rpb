@@ -977,6 +977,14 @@ public class Application extends Controller {
 		}
 	}
 
+	public static Promise<Result> putIdFromData(String secret) throws FileNotFoundException, RecognitionException, IOException {
+		return put(request().body().asJson().get("rpbId").textValue(), secret);
+	}
+
+	public static Promise<Result> deleteIdFromData(String secret) throws FileNotFoundException, RecognitionException, IOException {
+		return delete(request().body().asJson().get("rpbId").textValue(), secret);
+	}
+
 	private static Promise<Result> deleteFromIndex(String id) throws UnsupportedEncodingException {
 		Cache.remove(String.format("/%s", id));
 		WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
@@ -1008,7 +1016,7 @@ public class Application extends Controller {
 
 	private static Promise<JsonNode> addToLobidData(JsonNode transformedJson) {
 		String lobidUrl = transformedJson.get("hbzId").textValue();
-		WSRequest lobidRequest = WS.url(lobidUrl).setHeader("Content-Type", "application/json");
+		WSRequest lobidRequest = WS.url(lobidUrl).setQueryParameter("format", "json");
 		Promise<JsonNode> lobidPromise = lobidRequest.get().map(WSResponse::asJson);
 		Promise<JsonNode> merged = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
 		return merged;

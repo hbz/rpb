@@ -1,0 +1,93 @@
+{
+  "extent" : "62 Seiten : Illustrationen",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Gn24m0017186a",
+      "label" : "Caltapanides, Anke",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/123750354X",
+      "label" : "Ingelheim am Rhein / Stadtverwaltung",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "rpbId" : "036t240017",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n520100",
+    "label" : "Sozialwesen allgemein",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n843020",
+    "label" : "Öffentliches Gebäude",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4026954-1",
+      "label" : "Ingelheim am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/7607842-5",
+      "label" : "Mehrgenerationenhaus",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Gn18k3167156a",
+      "label" : "Geschichte 2009-2019",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ],
+    "label" : "Ingelheim am Rhein | Mehrgenerationenhaus | Geschichte 2009-2019",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Stadtverwaltung Ingelheim am Rhein" ],
+    "location" : [ "Ingelheim am Rhein" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "responsibilityStatement" : [ "Redaktionsteam: Anke Caltapanides [und 3 weitere] ; Herausgeber: Stadtverwaltung Ingelheim am Rhein" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t240017",
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Wie wir wurden was wir sind - 10-jähriges Jubiläum des Mehrgenerationenhauses Ingelheim",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33900030",
+    "label" : "Ingelheim am Rhein, große kreisangeh. Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ],
+  "@context" : "http://lobid.org/resources/context.jsonld"
+}

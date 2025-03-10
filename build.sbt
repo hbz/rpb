@@ -1,6 +1,6 @@
 name := "rpb"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.1-SNAPSHOT"
 
 scalaVersion := "2.11.11"
 
@@ -10,17 +10,17 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "com.typesafe.play" % "play-test_2.11" % "2.4.11",
-  "org.metafacture" % "metafacture-elasticsearch" % "5.7.0",
-  "org.metafacture" % "metafacture-io" % "5.7.0",
-  "org.metafacture" % "metafacture-strings" % "5.7.0",
-  "org.metafacture" % "metafacture-json" % "5.7.0",
-  "org.metafacture" % "metafacture-flux" % "5.7.0",
-  "org.metafacture" % "metafacture-triples" % "5.7.0",
-  "org.metafacture" % "metafacture-formatting" % "5.7.0",
-  "org.metafacture" % "metafacture-monitoring" % "5.7.0",
-  "org.metafacture" % "metafacture-csv" % "5.7.0",
-  "org.metafacture" % "metafacture-linkeddata" % "5.7.0",
-  "org.metafacture" % "metafix" % "0.7.0",
+  "org.metafacture" % "metafacture-elasticsearch" % "5.7.1",
+  "org.metafacture" % "metafacture-io" % "5.7.1",
+  "org.metafacture" % "metafacture-strings" % "5.7.1",
+  "org.metafacture" % "metafacture-json" % "5.7.1",
+  "org.metafacture" % "metafacture-flux" % "5.7.1",
+  "org.metafacture" % "metafacture-triples" % "5.7.1",
+  "org.metafacture" % "metafacture-formatting" % "5.7.1",
+  "org.metafacture" % "metafacture-monitoring" % "5.7.1",
+  "org.metafacture" % "metafacture-csv" % "5.7.1",
+  "org.metafacture" % "metafix" % "0.7.1",
+  "org.metafacture" % "metafacture-linkeddata" % "5.7.1",
   "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
   "org.apache.commons" % "commons-rdf-jena" % "0.5.0",

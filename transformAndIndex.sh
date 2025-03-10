@@ -25,7 +25,7 @@ sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
 unset http_proxy # for posting to weywot3
 curl -XPUT -H "Content-Type: application/json" weywot3:9200/$INDEX?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
 rm conf/output/es-curl-post.log
-for filename in conf/output/bulk/bulk-*.ndjson
+for filename in `ls -v conf/output/bulk/bulk-*.ndjson`
 do
 	echo "$filename"
 	curl -XPOST --silent --show-error --fail --header 'Content-Type: application/x-ndjson' --data-binary @"$filename" 'weywot3:9200/_bulk' >> conf/output/es-curl-post.log

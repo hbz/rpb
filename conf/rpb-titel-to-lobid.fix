@@ -190,10 +190,14 @@ end
 # replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")
 set_array("pub.publishedBy[]")
 copy_field("publishedBy", "pub.publishedBy[].$append")
-set_array("pub.type[]")
-add_field("pub.type[].$append", "PublicationEvent")
 set_array("publication[]")
 move_field("pub", "publication[]")
+
+# Type nur bei tatsächlich befüllten Einträgen setzen:
+vacuum()
+do list_as("pub": "publication[]")
+  set_array("pub.type[]", "PublicationEvent")
+end
 
 # ------- "zdbId" -------
 

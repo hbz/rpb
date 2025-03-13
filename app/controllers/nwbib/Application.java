@@ -1028,6 +1028,8 @@ public class Application extends Controller {
 		MapType mapType = TypeFactory.defaultInstance().constructMapType(Map.class, String.class, Object.class);
 		Map<String, Object> transformedMap = objectMapper.readValue(transformedJson.toString(), mapType);
 		Map<String, Object> lobidMap = objectMapper.readValue(lobidJson.toString(), mapType);
+		lobidMap.remove("describedBy");
+		transformedMap.put("hbzId", lobidMap.get("hbzId"));
 		transformedMap.remove("type");
 		transformedMap.keySet().forEach(key -> {
 			Object transformedObject = transformedMap.get(key);

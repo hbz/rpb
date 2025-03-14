@@ -36,7 +36,7 @@
     "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
     "label" : "Deutsch"
   } ],
-  "extent" : "127 S. : zahlr. Ill., Kt.",
+  "extent" : "127 Seiten : Illustrationen, Karten",
   "natureOfContent" : [ {
     "label" : "Führer",
     "id" : "https://d-nb.info/gnd/4155569-7"
@@ -57,9 +57,6 @@
       "label" : "Systematik der DNB (bis 2003)",
       "id" : "https://bartoc.org/en/node/18497"
     }
-  }, {
-    "notation" : "19.1d",
-    "type" : [ "Concept" ]
   } ],
   "subjectslabels" : [ "Mainz" ],
   "hasItem" : [ {

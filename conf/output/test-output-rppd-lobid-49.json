@@ -1,0 +1,31 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051158516",
+  "rppdId" : "pk02445",
+  "gndIdentifier" : "1051158516",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Unger, Bodo",
+  "professionOrOccupation" : [ {
+    "label" : "Bürgermeister",
+    "id" : "https://d-nb.info/gnd/4136676-1"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Plaidt",
+    "id" : "https://rpb.lobid.org/spatial#n13701088"
+  } ],
+  "dateOfBirth" : [ "1937-06-19 " ],
+  "dateOfDeath" : [ "2025-02-08" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2025-03-17",
+    "source" : [ "Rhein-Zeitung, Ausg. CA. - (2007), 153 vom 05.07., S. 19", "http://rpb.lobid.org/929t111801", "http://rpb.lobid.org/929t111801" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "1969 bis 1994 Ortsbürgermeister von Plaidt und 1969 bis 2004 Mitglied des Rates der Verbandsgemeinde Pellenz; in seine Amtszeit fielen u.a.   der Erwerb und die Gestaltung der Parkanlage “Noldensmühle” sowie die Ausweisung der Baugebiete “Auf der Esch” und “Am Kürchen”; zudem geht die Umbenennung der ehemaligen Verbandsgemeinde Andernach-Land in VG Pellenz auf ihn zurück." ]
+}

@@ -344,7 +344,9 @@ move_field("_temp", "biographicalOrHistoricalInformation[]")
 # #1nx	(Quelle (m)) ->	describedBy.source	
 # Kommentar Doku:  getrennt mit @; Beispiel: Westerwälder Zeitung. - (2002), 224 vom 26.9., S. 20 (evtl. Todesanzeige)@Eigene Angaben (Datum); Genaue Adresse bei Websites: http://www...  (Stand: Datum). Alle Quellen zu einer Person, werden hier zusammengeführt, auch wenn sie aus verschiedenen, eingespielten Werken stammen 
 set_array("_temp")
-copy_field("source[].*.value", "_temp.$append")
+do list_as("source": "source[]")
+  paste("_temp.$append", "source.value", "source.note")
+end
 move_field("_temp", "describedBy.source[]")
 
 vacuum()

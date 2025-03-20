@@ -38,7 +38,6 @@
 
 @publication(pub: JsValue) = {
   @defining(((pub\"startDate"),(pub\"endDate"))) { case (start,end) =>
-    @if(start.asOpt[String].isDefined || end.asOpt[String].isDefined){
     <tr>
       <td>
         @if((pub \ "type").toString.contains("SecondaryPublicationEvent")){
@@ -53,11 +52,12 @@
             (doc\"type").toString.contains("Series") || (doc\"type").toString.contains("Periodical"))) {
           @* Show range if either both start and end are given, or if we want open ranges like "- 2015" *@
           @start.asOpt[String].getOrElse("") &ndash; @end.asOpt[String].getOrElse("")
-        } else {
+          <br/>
+        } else { @if(start.asOpt[String].isDefined || end.asOpt[String].isDefined) {
           @* Otherwise show only one date, no range (no periodical or series, and just one date given) *@
           @start.asOpt[String].getOrElse(end.asOpt[String].getOrElse(""))
-        }
-        <br/>
+          <br/>
+        }}
         @optional("Erscheinungsort", "location", pub)
         @optional("Verlag", "publishedBy", pub)
         @((pub\"frequency").asOpt[Seq[JsValue]].map { freq =>
@@ -66,7 +66,6 @@
         @optional("Erscheinungsverlauf", "publicationHistory", pub)
       </td>
     </tr>
-    }
   }
 }
 

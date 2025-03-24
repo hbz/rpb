@@ -2,7 +2,7 @@ name := "rpb"
 
 version := "0.1.0-SNAPSHOT"
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.11.12"
 
 resolvers += Resolver.mavenLocal
 
@@ -21,7 +21,9 @@ libraryDependencies ++= Seq(
   "org.metafacture" % "metafacture-csv" % "6.2.0",
   "org.metafacture" % "metafacture-linkeddata" % "6.2.0",
   "org.metafacture" % "metafix" % "1.2.0",
-  "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
+  "org.elasticsearch" % "elasticsearch" % "5.6.16" withSources(),
+  "org.elasticsearch.plugin" % "transport-netty4-client" % "5.6.16" withSources(),
+  "com.sun.xml.bind" % "jaxb-impl" % "2.3.3" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
   "org.apache.commons" % "commons-rdf-jena" % "0.5.0",
   "org.apache.commons" % "commons-csv" % "1.6",
@@ -43,7 +45,7 @@ dependencyOverrides ++= Set(
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
-javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
+javacOptions ++= Seq("-source", "11", "-target", "11")
 
 import com.typesafe.sbteclipse.core.EclipsePlugin.EclipseKeys
 

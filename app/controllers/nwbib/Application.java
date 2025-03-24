@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.Collator;
@@ -32,10 +33,9 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 import org.antlr.runtime.RecognitionException;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.tuple.Pair;
-import org.elasticsearch.common.base.Charsets;
 import org.elasticsearch.common.geo.GeoPoint;
-import org.elasticsearch.common.io.Streams;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -75,6 +75,8 @@ import views.html.stars;
  * @author Fabian Steeg (fsteeg)
  */
 public class Application extends Controller {
+
+	private static final String UTF_8 = "UTF-8";
 
 	static final int MAX_FACETS = 150;
 
@@ -150,7 +152,7 @@ public class Application extends Controller {
 	 */
 	public static String currentUri() {
 		try {
-			return URLEncoder.encode(request().host() + request().uri(), "UTF-8");
+			return URLEncoder.encode(request().host() + request().uri(), UTF_8);
 		} catch (UnsupportedEncodingException e) {
 			Logger.error("Could not get current URI", e);
 		}
@@ -349,7 +351,7 @@ public class Application extends Controller {
 	public static Result journals() throws IOException {
 		try (InputStream stream = Play.application().classloader()
 				.getResourceAsStream("nwbib-journals.csv")) {
-			String csv = new String(Streams.copyToByteArray(stream), Charsets.UTF_8);
+			String csv = IOUtils.toString(stream, UTF_8);
 			List<String> lines = Arrays.asList(csv.split("\n"));
 			List<HashMap<String, String>> maps = lines.stream()
 					.filter(line -> line.split("\",\"").length == 2).map(line -> {
@@ -978,7 +980,7 @@ public class Application extends Controller {
 			throws IOException, FileNotFoundException, RecognitionException, UnsupportedEncodingException {
 		File input = new File("conf/output/test-output-strapi.json");
 		File output = new File("conf/output/test-output-0.json");
-		Files.write(Paths.get(input.getAbsolutePath()), jsonBody.toString().getBytes(Charsets.UTF_8));
+		Files.write(Paths.get(input.getAbsolutePath()), jsonBody.toString().getBytes(Charset.forName(UTF_8)));
 		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
 		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
 		Cache.remove(String.format("/%s", id));
@@ -988,6 +990,6 @@ public class Application extends Controller {
 	
 	private static String elasticsearchUrl(String id) throws UnsupportedEncodingException {
 		return "http://weywot3:9200/resources-rpb-test/resource/"
-				+ URLEncoder.encode("https://lobid.org/resources/" + id, "UTF-8");
+				+ URLEncoder.encode("https://lobid.org/resources/" + id, UTF_8);
 	}
 }

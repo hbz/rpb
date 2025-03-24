@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/929t112194",
+      "id" : "http://rpb.lobid.org/929t112194",
       "label" : "Clubzeitung"
     } ],
     "numbering" : "Nachgewiesen 2006,2 -"
@@ -16,8 +16,5 @@
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Clubzeitung : Nachgewiesen 2006,2 -",
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ]
-  } ]
+  "title" : "Clubzeitung : Nachgewiesen 2006,2 -"
 }

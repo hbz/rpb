@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/107t982375",
+      "id" : "http://rpb.lobid.org/107t982375",
       "label" : "Die Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz"
     } ],
     "numbering" : "1998,1(Sept.) - 2001,9(Sept.)"
@@ -17,8 +17,5 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Die Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz : 1998,1(Sept.) - 2001,9(Sept.)",
-  "note" : [ "Forts. u.d.T.: Doppelpfeil" ],
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ]
-  } ]
+  "note" : [ "Forts. u.d.T.: Doppelpfeil" ]
 }

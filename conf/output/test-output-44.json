@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/107t982378",
+      "id" : "http://rpb.lobid.org/107t982378",
       "label" : "'s Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen"
     } ],
     "numbering" : "1998,Apr."
@@ -17,8 +17,5 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "'s Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen : 1998,Apr.",
-  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ],
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ]
-  } ]
+  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ]
 }

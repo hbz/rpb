@@ -12,9 +12,6 @@
   "title" : "Geheimnisvolle Tierwelten : am Flüsschen Wied gesehen und photographiert ; [Kalender] 2011",
   "extent" : "[14] Bl. : überw. Ill. ; 210 x 297 mm",
   "responsibilityStatement" : [ "von Erich Oetz" ],
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ]
-  } ],
   "subject" : [ {
     "id" : "http://purl.org/lobid/rpb#n848000",
     "label" : "Fotografie",

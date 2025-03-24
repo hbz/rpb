@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/036t160240",
+      "id" : "http://rpb.lobid.org/036t160240",
       "label" : "Piffche-Bahnfahrt durch Rheinhessen"
     } ],
     "numbering" : "2"
@@ -17,8 +17,5 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Piffche-Bahnfahrt durch Rheinhessen : 2",
-  "extent" : "256 Seiten : Illustrationen",
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ]
-  } ]
+  "extent" : "256 Seiten : Illustrationen"
 }

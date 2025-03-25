@@ -226,7 +226,7 @@ public enum TableRow {
 		if ((property.equals("containedIn") || property.equals("hasPart")
 				|| property.equals("isPartOf") || property.equals("hasSuperordinate")
 				|| property.equals("bibliographicCitation")) && value.contains("lobid.org")) {
-			return new String[] { value.matches(".*?[asf]\\d+.*|.*?\\d{3}[a-z]\\d+.*") // rpbId
+			return new String[] { value.contains("rpb") // replaced via rpbUrlIfInRpb()
 					? value.replaceAll("http.+/", "/") // full URL -> relative link
 					: value, Lobid.resourceLabel(value) };
 		}
@@ -237,6 +237,13 @@ public enum TableRow {
 	}
 
 	String rpbUrlIfInRpb(String value) {
+		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", "https://rpb.lobid.org/$1");
+		WSRequest rpbRequest = WS.url(rpbUrl).setQueryParameter("format", "json");
+		JsonNode rpbJson = rpbRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
+		return rpbJson.get("member").elements().hasNext() ? rpbUrl : rpbUrlIfhasRpbId(value);
+	}
+
+	String rpbUrlIfhasRpbId(String value) {
 		WSRequest lobidRequest = WS.url(value).setHeader("Content-Type", "application/json");
 		JsonNode lobidJson = lobidRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
 		return lobidJson.has("rpbId") ? "https://rpb.lobid.org/" + lobidJson.get("rpbId").textValue() : value;

@@ -2,7 +2,7 @@ name := "rpb"
 
 version := "0.1.1-SNAPSHOT"
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.11.12"
 
 resolvers += Resolver.mavenLocal
 
@@ -10,18 +10,20 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "com.typesafe.play" % "play-test_2.11" % "2.4.11",
-  "org.metafacture" % "metafacture-elasticsearch" % "5.7.1",
-  "org.metafacture" % "metafacture-io" % "5.7.1",
-  "org.metafacture" % "metafacture-strings" % "5.7.1",
-  "org.metafacture" % "metafacture-json" % "5.7.1",
-  "org.metafacture" % "metafacture-flux" % "5.7.1",
-  "org.metafacture" % "metafacture-triples" % "5.7.1",
-  "org.metafacture" % "metafacture-formatting" % "5.7.1",
-  "org.metafacture" % "metafacture-monitoring" % "5.7.1",
-  "org.metafacture" % "metafacture-csv" % "5.7.1",
-  "org.metafacture" % "metafix" % "0.7.1",
-  "org.metafacture" % "metafacture-linkeddata" % "5.7.1",
-  "org.elasticsearch" % "elasticsearch" % "1.7.5" withSources(),
+  "org.metafacture" % "metafacture-elasticsearch" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-io" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-strings" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-json" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-flux" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-triples" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-formatting" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-monitoring" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-csv" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-linkeddata" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafix" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.elasticsearch" % "elasticsearch" % "5.6.16" withSources(),
+  "org.elasticsearch.plugin" % "transport-netty4-client" % "5.6.16" withSources(),
+  "com.sun.xml.bind" % "jaxb-impl" % "2.3.3" withSources(),
   "com.github.jsonld-java" % "jsonld-java" % "0.5.0",
   "org.apache.commons" % "commons-rdf-jena" % "0.5.0",
   "org.apache.commons" % "commons-csv" % "1.6",
@@ -43,7 +45,7 @@ dependencyOverrides ++= Set(
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
-javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
+javacOptions ++= Seq("-source", "11", "-target", "11")
 
 import com.typesafe.sbteclipse.core.EclipsePlugin.EclipseKeys
 

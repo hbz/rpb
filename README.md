@@ -188,8 +188,17 @@ sh transformAndIndex.sh
 
 Start the web application:
 
+### Test mode
+
 ```
 sbt run
+```
+
+### Prod mode
+
+```
+sbt stage
+./target/universal/stage/bin/rpb -no-version-check
 ```
 
 http://localhost:9000

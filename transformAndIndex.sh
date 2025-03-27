@@ -14,11 +14,13 @@ VINO_URL="http://test.wein.lobid.org/"
 
 RPB_SECRET=""
 
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+
 # Transform the Strapi data
 
 # Get rpb-authority data from Strapi export:
 zgrep -a '"type":"api::rpb-authority.rpb-authority"' conf/strapi-export.tar.gz > conf/output/output-strapi-sw.ndjson
-sbt "runMain rpb.ETL conf/rpb-sw.flux" # creates TSV lookup file for to-lobid transformation
+sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rpb-sw.flux" # creates TSV lookup file for to-lobid transformation
 
 # Strapi title data export is incomplete, see https://jira.hbz-nrw.de/browse/RPB-202, so we don't use the approach above (rpb-authority, same for RPPD / person):
 ## zgrep -a -E '"type":"api::article.article"|"type":"api::independent-work.independent-work"' conf/strapi-export.tar.gz > conf/output/output-strapi.ndjson
@@ -32,7 +34,7 @@ cat conf/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und
 # Remove old index data:
 rm conf/output/bulk/bulk-*.ndjson
 # Transform:
-sbt "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
+sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rpb-titel-to-lobid.flux index=$INDEX"
 
 # Index to Elasticsearch:
 unset http_proxy # for posting to weywot3
@@ -62,5 +64,5 @@ curl -X POST "weywot3:9200/_aliases?pretty" -H 'Content-Type: application/json' 
 '
 
 # Transform and index external records (after index switch, they use the RPB and BiblioVino instances):
-sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$RPB_INPUT url=$RPB_URL secret=$RPB_SECRET"
-sbt "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$VINO_INPUT url=$VINO_URL secret=$RPB_SECRET"
+sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$RPB_INPUT url=$RPB_URL secret=$RPB_SECRET"
+sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rpb-titel-to-lobid-external.flux input=$VINO_INPUT url=$VINO_URL secret=$RPB_SECRET"

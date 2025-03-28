@@ -1,7 +1,5 @@
 # RPB
 
-https://service-wiki.hbz-nrw.de/pages/viewpage.action?pageId=712998955
-
 [![Build](https://github.com/hbz/rpb/workflows/Build/badge.svg)](https://github.com/hbz/rpb/actions?query=workflow%3ABuild)
 
 This repo contains the RPB data transformation and the RPB web application.
@@ -18,6 +16,12 @@ See `.github/workflows/build.yml`.
 git clone https://github.com/hbz/rpb.git
 cd rpb
 ```
+
+## Architectural overview
+
+version 2025-03-28
+
+![An architectural overview of RPB and RPPD components and third-party applications that deliver data](./rpb-rppd-architecture.jpg)
 
 ## Deployment overview
 

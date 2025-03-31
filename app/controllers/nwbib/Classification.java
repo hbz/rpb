@@ -492,6 +492,7 @@ public class Classification {
 				.put("path.home", new File(".").getAbsolutePath())//
 				.put("http.port", httpPort)//
 				.put("transport.tcp.port", tcpPort)//
+				.put("cluster.routing.allocation.disk.threshold_enabled", false)//
 				.build(), Arrays.asList(Netty4Plugin.class));
 		try {
 			node.start();

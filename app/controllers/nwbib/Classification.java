@@ -73,6 +73,7 @@ import play.libs.Json;
  */
 public class Classification {
 
+	private static final int MAX_RESULT_WINDOW = 15000;
 	private static final String RPB_SPATIAL = "https://rpb.lobid.org/spatial#";
 	private static final String INDEX = "rpb";
 
@@ -164,11 +165,10 @@ public class Classification {
 		}
 
 		private SearchResponse classificationData() {
-			int maxSize = 10000; // default max_result_window
 			MatchAllQueryBuilder matchAll = QueryBuilders.matchAllQuery();
 			SearchRequestBuilder requestBuilder = client.prepareSearch(INDEX)
 					.setSearchType(SearchType.DFS_QUERY_THEN_FETCH).setQuery(matchAll)
-					.setTypes(elasticsearchType).setFrom(0).setSize(maxSize);
+					.setTypes(elasticsearchType).setFrom(0).setSize(MAX_RESULT_WINDOW);
 			return requestBuilder.execute().actionGet();
 		}
 	}
@@ -507,6 +507,8 @@ public class Classification {
 			indexData(CONFIG.getString("index.data.rpbsubject"), Type.NWBIB);
 			indexData(CONFIG.getString("index.data.rpbspatial"), Type.SPATIAL);
 			client.admin().indices().refresh(new RefreshRequest()).actionGet();
+			Settings indexSettings = Settings.builder().put("max_result_window", MAX_RESULT_WINDOW).build();
+			client.admin().indices().prepareUpdateSettings().setSettings(indexSettings).setIndices(INDEX).get();
 		}
 	}
 

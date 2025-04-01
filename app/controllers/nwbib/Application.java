@@ -401,7 +401,7 @@ public class Application extends Controller {
 			}
 			result = classificationResult(t, placeholder);
 		}
-		Cache.set("classification." + t, result, ONE_DAY);
+		Cache.set("classification." + t, result);
 		return result;
 	}
 

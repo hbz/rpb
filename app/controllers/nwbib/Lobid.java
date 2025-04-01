@@ -222,15 +222,7 @@ public class Lobid {
 			initAggregation("spatial.id");
 			initAggregation("subject.id");
 		}
-		return AGGREGATION_COUNT.containsKey(value)
-				? AGGREGATION_COUNT.getOrDefault(value, 0L) : lobidRequest(value);
-	}
-
-	private static Long lobidRequest(String value) {
-		return request("", "", "", "", "", "", "", "", value, "", 0, 1, "", "", "",
-				"", "", "", "").get().map((WSResponse response) -> {
-					return getTotalResults(response.asJson());
-				}).get(Lobid.API_TIMEOUT);
+		return AGGREGATION_COUNT.getOrDefault(value, 0L);
 	}
 
 	private static void initAggregation(String field) {

@@ -4,7 +4,7 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/929t112193",
+      "id" : "http://rpb.lobid.org/929t112193",
       "label" : "Aktuell : das Krankenhaus in Ihrer Region"
     } ],
     "numbering" : "Nachgewiesen 2010 - 2012,1"
@@ -17,8 +17,5 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Aktuell : das Krankenhaus in Ihrer Region : Nachgewiesen 2010 - 2012,1",
-  "note" : [ "Nachfolger: Kaleidoskop. 2012 -" ],
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ]
-  } ]
+  "note" : [ "Nachfolger: Kaleidoskop. 2012 -" ]
 }

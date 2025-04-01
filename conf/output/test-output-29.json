@@ -1,4 +1,10 @@
 {
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "150 Jahre Hambacher Fest : Festausgabe"
+    } ]
+  } ],
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
   "rpbId" : "107t01147878",
@@ -10,12 +16,6 @@
   } ],
   "title" : "Um- und Ausbau des Hambacher Schlosses von 1979 bis 1982",
   "extent" : "Ill.",
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "label" : "150 Jahre Hambacher Fest : Festausgabe"
-    } ]
-  } ],
   "publication" : [ {
     "startDate" : "1982",
     "type" : [ "PublicationEvent" ]

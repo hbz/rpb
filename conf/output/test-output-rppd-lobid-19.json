@@ -14,7 +14,8 @@
   "variantName" : [ "Altgelt, Johann Philipp" ],
   "professionOrOccupation" : [ {
     "label" : "Pfarrer / Katholische Kirche",
-    "id" : "https://rpb.lobid.org/sw/929n170632"
+    "id" : "https://rpb.lobid.org/sw/929n170632",
+    "altLabel" : [ "Katholische Kirche / Pfarrer" ]
   }, {
     "label" : "Lehrer",
     "id" : "https://d-nb.info/gnd/4035088-5"

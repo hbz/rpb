@@ -1,6 +1,13 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Salto"
+    } ],
+    "numbering" : "[13]"
+  } ],
   "rpbId" : "929t112198",
   "id" : "https://lobid.org/resources/929t112198",
   "hbzId" : "HT015954631",
@@ -13,13 +20,6 @@
   "title" : "Das Leben der Bilder oder die Kunst des Sehens",
   "extent" : "141 S. : Ill.",
   "note" : [ "Aus dem Engl. übers." ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "label" : "Salto"
-    } ],
-    "numbering" : "[13]"
-  } ],
   "responsibilityStatement" : [ "John Berger" ],
   "publication" : [ {
     "location" : [ "Berlin" ],

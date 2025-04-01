@@ -1,0 +1,77 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Serie Musik"
+    } ],
+    "numbering" : "8309"
+  } ],
+  "rpbId" : "107t110017",
+  "id" : "https://lobid.org/resources/107t110017",
+  "isbn" : [ "978-3-254-08309-8" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Fritz Wunderlich : eine Biografie",
+  "extent" : "463 S. : Ill.",
+  "responsibilityStatement" : [ "Werner Pfister" ],
+  "publication" : [ {
+    "location" : [ "Mainz" ],
+    "startDate" : "2010",
+    "publishedBy" : [ "Schott" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n824080",
+    "label" : "Sängerin. Sänger",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Wunderlich, Fritz / 1930-1966 | Biografie",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/11893869X",
+      "label" : "Wunderlich, Fritz / 1930-1966",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4006804-3",
+      "label" : "Biografie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33610055",
+    "label" : "Kusel,Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn97m1186b",
+      "label" : "Pfister, Werner",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "edition" : [ "Überarb. Neuausg., aktualisierte Taschenbuchausg." ]
+}

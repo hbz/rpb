@@ -10,7 +10,7 @@
      	<file>${application.home}/logs/application.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- Weekly rollover with compression -->
-            <fileNamePattern>application-log-%d{yyyy-ww}.gz</fileNamePattern>
+            <fileNamePattern>${application.home}/logs/application-log-%d{yyyy-ww}.gz</fileNamePattern>
             <!-- keep 8 weeks worth of history -->
             <maxHistory>8</maxHistory>
         </rollingPolicy>

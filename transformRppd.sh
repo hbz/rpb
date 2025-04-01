@@ -1,16 +1,18 @@
 #!/bin/bash
 set -u
 
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+
 bash transformBeacons.sh
 rm conf/output/bulk/rppd/*
 # Here, we used to import Allegro data:
-# sbt "runMain rpb.ETL conf/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio.txt OUT_FILE=output-rppd-strapi.ndjson"
-# sbt "runMain rpb.ETL conf/rppd-to-lobid.flux"
+# sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio.txt OUT_FILE=output-rppd-strapi.ndjson"
+# sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rppd-to-lobid.flux"
 # But now we use the Strapi export:
 zgrep -a '"type":"api::person.person"' conf/strapi-export.tar.gz > conf/output/rppd-export.jsonl
 cp conf/output/rppd-export.jsonl ../rppd/conf/ # used in rppd for robots.txt
-sbt "runMain rpb.ETL conf/rppd-to-gnd-mapping.flux"
-sbt "runMain rpb.ETL conf/rppd-rppdId-with-label-map.flux"
-sbt "runMain rpb.ETL conf/rppd-to-lobid.flux IN_FILE=rppd-export.jsonl RECORD_PATH=data"
+sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rppd-to-gnd-mapping.flux"
+sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rppd-rppdId-with-label-map.flux"
+sbt --java-home $JAVA_HOME "runMain rpb.ETL conf/rppd-to-lobid.flux IN_FILE=rppd-export.jsonl RECORD_PATH=data"
 
 # Indexing happens in rppd/transformAndIndexRppd.sh (lobid-gnd repo, branch 'rppd'), which calls this script

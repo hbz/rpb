@@ -38,8 +38,7 @@
   "hasItem" : [ {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "K 2023 Q 152"
-  }, {
+    "callNumber" : "K 2023 Q 152",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"

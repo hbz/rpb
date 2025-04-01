@@ -166,8 +166,7 @@
   "hasItem" : [ {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "2023/589"
-  }, {
+    "callNumber" : "2023/589",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"

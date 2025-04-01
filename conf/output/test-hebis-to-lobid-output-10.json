@@ -62,8 +62,7 @@
   "hasItem" : [ {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "Mog 1974"
-  }, {
+    "callNumber" : "Mog 1974",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
@@ -71,8 +70,7 @@
   }, {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "Mog 1974, 2. Ex."
-  }, {
+    "callNumber" : "Mog 1974, 2. Ex.",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
@@ -80,8 +78,7 @@
   }, {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "Mog 3537"
-  }, {
+    "callNumber" : "Mog 3537",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"

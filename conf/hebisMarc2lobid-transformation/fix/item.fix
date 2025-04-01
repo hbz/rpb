@@ -5,7 +5,7 @@ do list(path:"924??", "var": "$i")
     add_field("hasItem[].$last.label", "lobid Bestandsressource")
     add_array("hasItem[].$last.type[]", "Item","PhysicalObject")
     copy_field("$i.g", "hasItem[].$last.callNumber")
-    add_field("hasItem[].$append.heldBy.id","http://lobid.org/organisations/DE-36#!")
+    add_field("hasItem[].$last.heldBy.id","http://lobid.org/organisations/DE-36#!")
     add_field("hasItem[].$last.heldBy.label","Wissenschaftliche Stadtbibliothek Mainz")
     paste("holding.id","~http://lobid.org/items/", "~WASMUSSHIERHIN:DE-36:","$i.g","~#!",join_char:"") # Checken ob 001 als Item Id genutzt werden soll.
   end

@@ -995,9 +995,15 @@ public class Application extends Controller {
 
 	private static Promise<Result> transformAndIndex(String id, JsonNode jsonBody)
 			throws IOException, FileNotFoundException, RecognitionException, UnsupportedEncodingException {
-		JsonNode transformedJson = transform(jsonBody);
-		Promise<JsonNode> dataPromise = id.startsWith("f") && transformedJson.has("hbzId") ? // hbz-Fremddaten
-				addToLobidData(transformedJson) : Promise.pure(transformedJson);
+		JsonNode transformedJson = transformStrapiToLobid(jsonBody);
+		Promise<JsonNode> dataPromise = Promise.pure(transformedJson);
+		if (id.startsWith("f")) { // Fremddaten
+			if (transformedJson.has("hbzId")) {
+				dataPromise = addToLobidData(transformedJson);
+			} else if (transformedJson.has("hebisId")) {
+				dataPromise = addToHebisData(transformedJson);
+			}
+		}
 		return dataPromise.flatMap(result -> {
 			Cache.remove(String.format("/%s", id));
 			WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
@@ -1005,7 +1011,7 @@ public class Application extends Controller {
 		});
 	}
 
-	private static JsonNode transform(JsonNode jsonBody)
+	private static JsonNode transformStrapiToLobid(JsonNode jsonBody)
 			throws IOException, FileNotFoundException, RecognitionException {
 		File input = new File("conf/output/test-output-strapi.json");
 		File output = new File("conf/output/test-output-0.json");
@@ -1021,6 +1027,33 @@ public class Application extends Controller {
 		Promise<JsonNode> lobidPromise = lobidRequest.get().map(WSResponse::asJson);
 		Promise<JsonNode> merged = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
 		return merged;
+	}
+
+	private static Promise<JsonNode> addToHebisData(JsonNode transformedJson) {
+		WSRequest hebisRequest = WS.url("http://sru.hebis.de/sru/DB=2.1").setHeader("Accept", "application/xml")
+				.setQueryParameter("query", "pica.ppn = \"" + transformedJson.get("hebisId").textValue() + "\"")//
+				.setQueryParameter("version", "1.1")//
+				.setQueryParameter("operation", "searchRetrieve")//
+				.setQueryParameter("stylesheet", "http://sru.hebis.de/sru/?xsl=searchRetrieveResponse")//
+				.setQueryParameter("recordSchema", "marc21")//
+				.setQueryParameter("maximumRecords", "1")//
+				.setQueryParameter("startRecord", "1")//
+				.setQueryParameter("recordPacking", "xml")//
+				.setQueryParameter("sortKeys", "LST_Y,pica,0,,");
+		Promise<String> hebisXmlPromise = hebisRequest.get().map(WSResponse::asByteArray).map(byteArray -> new String(byteArray, "UTF-8"));
+		Promise<JsonNode> hebisJsonPromise = hebisXmlPromise.map(hebisXml -> transformHebisToLobid(hebisXml));
+		Promise<JsonNode> merged = hebisJsonPromise.map(hebisJson -> mergeRecords(transformedJson, hebisJson));
+		return merged;
+	}
+
+	private static JsonNode transformHebisToLobid(String xmlBody)
+			throws IOException, FileNotFoundException, RecognitionException {
+		File input = new File("conf/output/test-output-hebis.xml");
+		File output = new File("conf/output/test-output-0.json");
+		Files.write(Paths.get(input.getAbsolutePath()), xmlBody.getBytes());
+		ETL.main(new String[] {"conf/rpb-test-titel-hebis-to-lobid.flux"});
+		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
+		return Json.parse(result);
 	}
 
 	private static JsonNode mergeRecords(JsonNode transformedJson, JsonNode lobidJson)
@@ -1039,6 +1072,9 @@ public class Application extends Controller {
 					: transformedObject;
 			lobidMap.put(key, values);
 		});
+		if(transformedJson.has("hebisId")) {
+			lobidMap.remove("hasItem"); // temp: https://github.com/hbz/rpb/pull/105#discussion_r2022907781
+		}
 		return Json.toJson(lobidMap);
 	}
 

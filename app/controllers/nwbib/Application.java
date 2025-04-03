@@ -1025,8 +1025,8 @@ public class Application extends Controller {
 		String lobidUrl = transformedJson.get("hbzId").textValue();
 		WSRequest lobidRequest = WS.url(lobidUrl).setQueryParameter("format", "json");
 		Promise<JsonNode> lobidPromise = lobidRequest.get().map(WSResponse::asJson);
-		Promise<JsonNode> merged = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
-		return merged;
+		Promise<Map<String, Object>> mergedPromise = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
+		return mergedPromise.map(merged -> Json.toJson(merged));
 	}
 
 	private static Promise<JsonNode> addToHebisData(JsonNode transformedJson) {
@@ -1042,8 +1042,11 @@ public class Application extends Controller {
 				.setQueryParameter("sortKeys", "LST_Y,pica,0,,");
 		Promise<String> hebisXmlPromise = hebisRequest.get().map(WSResponse::asByteArray).map(byteArray -> new String(byteArray, "UTF-8"));
 		Promise<JsonNode> hebisJsonPromise = hebisXmlPromise.map(hebisXml -> transformHebisToLobid(hebisXml));
-		Promise<JsonNode> merged = hebisJsonPromise.map(hebisJson -> mergeRecords(transformedJson, hebisJson));
-		return merged;
+		Promise<Map<String, Object>> mergedPromise = hebisJsonPromise.map(hebisJson -> mergeRecords(transformedJson, hebisJson));
+		return mergedPromise.map(merged -> {
+			merged.remove("almaMmsId"); // reusing Alma transformation
+			return Json.toJson(merged);
+		});
 	}
 
 	private static JsonNode transformHebisToLobid(String xmlBody)
@@ -1056,29 +1059,28 @@ public class Application extends Controller {
 		return Json.parse(result);
 	}
 
-	private static JsonNode mergeRecords(JsonNode transformedJson, JsonNode lobidJson)
+	private static Map<String, Object> mergeRecords(JsonNode internalData, JsonNode externalData)
 			throws JsonMappingException, JsonProcessingException {
 		ObjectMapper objectMapper = new ObjectMapper();
 		MapType mapType = TypeFactory.defaultInstance().constructMapType(Map.class, String.class, Object.class);
-		Map<String, Object> transformedMap = objectMapper.readValue(transformedJson.toString(), mapType);
-		Map<String, Object> lobidMap = objectMapper.readValue(lobidJson.toString(), mapType);
-		lobidMap.remove("describedBy");
-		transformedMap.put("hbzId", lobidMap.get("hbzId"));
-		transformedMap.remove("type");
-		transformedMap.keySet().forEach(key -> {
-			Object transformedObject = transformedMap.get(key);
-			Object lobidObject = lobidMap.getOrDefault(key, new ArrayList<Object>());
-			Object values = transformedObject instanceof List ? mergeValues(transformedObject, lobidObject)
-					: transformedObject;
-			lobidMap.put(key, values);
+		Map<String, Object> internalDataMap = objectMapper.readValue(internalData.toString(), mapType);
+		Map<String, Object> externalDataMap = objectMapper.readValue(externalData.toString(), mapType);
+		internalDataMap.put("hbzId", externalDataMap.get("hbzId"));
+		internalDataMap.remove("type");
+		internalDataMap.entrySet().stream().filter(e -> e.getValue() != null).forEach(internalDataEntry -> {
+			Object internalValue = internalDataEntry.getValue();
+			Object externalValue = externalDataMap.getOrDefault(internalDataEntry.getKey(), new ArrayList<Object>());
+			Object values = internalValue instanceof List ? mergeValues(internalValue, externalValue) : internalValue;
+			externalDataMap.put(internalDataEntry.getKey(), values);
 		});
-		return Json.toJson(lobidMap);
+		externalDataMap.remove("describedBy");
+		return externalDataMap;
 	}
 
-	private static Object mergeValues(Object transformedObject, Object lobidObject) {
-		List<Object> mergedValues = lobidObject instanceof List ? new ArrayList<>((List<?>) lobidObject)
-				: Arrays.asList(lobidObject);
-		mergedValues.addAll((List<?>) transformedObject);
+	private static Object mergeValues(Object internalObject, Object externalObject) {
+		List<Object> mergedValues = externalObject instanceof List ? new ArrayList<>((List<?>) externalObject)
+				: Arrays.asList(externalObject);
+		mergedValues.addAll((List<?>) internalObject);
 		return mergedValues;
 	}
 

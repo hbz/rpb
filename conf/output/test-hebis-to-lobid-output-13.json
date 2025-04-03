@@ -170,7 +170,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/487803779:DE-36:-+Dek+GOEB#!"
   }, {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
@@ -178,7 +179,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/487803779:DE-36:Mog+3175#!"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

@@ -61,7 +61,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/090680634:DE-36:2000%2F38#!"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

@@ -43,7 +43,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/512839662:DE-36:Mog+m+7188#!"
   }, {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
@@ -51,7 +52,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/512839662:DE-36:Mog+m+7188%2C+2.+Ex.#!"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

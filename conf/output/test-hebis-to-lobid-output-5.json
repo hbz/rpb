@@ -33,7 +33,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/475390555:DE-36:K+2021%2F46#!"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

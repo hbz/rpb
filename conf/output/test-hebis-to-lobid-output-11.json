@@ -66,7 +66,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/090363000:DE-36:Mog+1975#!"
   }, {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
@@ -74,7 +75,8 @@
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    }
+    },
+    "id" : "http://lobid.org/items/090363000:DE-36:Mog+2727#!"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

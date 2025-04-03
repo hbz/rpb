@@ -1,0 +1,117 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/090363000#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Mainz transparent",
+  "almaMmsId" : "090363000",
+  "isbn" : [ "3874395340", "9783874395342" ],
+  "oclcNumber" : [ "57680814" ],
+  "dnbId" : "958645337",
+  "otherTitleInformation" : [ "2000 years of a city ; [city guide]" ],
+  "publication" : [ {
+    "startDate" : "2000",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Mainz" ],
+    "publishedBy" : [ "Schmidt" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22090363000%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/57680814",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/958645337",
+    "label" : "DNB-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/eng",
+    "label" : "Englisch"
+  } ],
+  "extent" : "127 Seiten : Illustrationen, Diagramme, Karten",
+  "natureOfContent" : [ {
+    "label" : "Führer",
+    "id" : "https://d-nb.info/gnd/4155569-7"
+  } ],
+  "subject" : [ {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Mainz",
+    "id" : "https://d-nb.info/gnd/4037124-4",
+    "gndIdentifier" : "4037124-4"
+  }, {
+    "notation" : "61",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Systematik der DNB (bis 2003)",
+      "id" : "https://bartoc.org/en/node/18497"
+    }
+  } ],
+  "subjectslabels" : [ "Mainz" ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog 1975",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/090363000:DE-36:Mog+1975#!"
+  }, {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog 2727",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/090363000:DE-36:Mog+2727#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "by Georg Schuler, Ellen Vest and Frank Herda" ],
+  "contribution" : [ {
+    "agent" : {
+      "label" : "Schuler, Georg",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Vest, Ellen",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Herda, Frank",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

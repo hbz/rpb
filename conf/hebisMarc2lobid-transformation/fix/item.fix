@@ -1,0 +1,13 @@
+add_array("hasItem[]")
+do list(path:"924??", "var": "$i")
+  if any_equal("$i.b", "DE-36")
+    add_hash( "hasItem[].$append")
+    add_field("hasItem[].$last.label", "lobid Bestandsressource")
+    add_array("hasItem[].$last.type[]", "Item","PhysicalObject")
+    copy_field("$i.g", "hasItem[].$last.callNumber")
+    add_field("hasItem[].$last.heldBy.id","http://lobid.org/organisations/DE-36#!")
+    add_field("hasItem[].$last.heldBy.label","Wissenschaftliche Stadtbibliothek Mainz")
+    uri_encode("$i.g")
+    paste("hasItem[].$last.id","~http://lobid.org/items/","001","~:DE-36:","$i.g","~#!",join_char:"")
+  end
+end

@@ -1,0 +1,73 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/512013683#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Miteinander für Integration - Das Ehrenamtsbündnis für Flüchtlingsarbeit stellt sich vor",
+  "almaMmsId" : "512013683",
+  "oclcNumber" : [ "1404835958" ],
+  "alternativeTitle" : [ "Miteinander für Integration in Mainz - Ehrenamtsbündnis für Flüchtlingsarbeit" ],
+  "otherTitleInformation" : [ "eine Präsentation der vielfältigen und vielseitigen Angebotslandschaft ehrenamtlich engagierter Initiativen, Institutionen und Vereine in der Mainzer Flüchtlingsarbeit" ],
+  "publication" : [ {
+    "startDate" : "2020",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Mainz" ],
+    "publishedBy" : [ "Dezernat für Soziales, Kinder, Jugend, Schule und Gesundheit, Flüchtlingskoordination" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22512013683%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1404835958",
+    "label" : "OCLC Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "24 Seiten : Illustrationen",
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog m:4° /3602",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/512013683:DE-36:Mog+m%3A4%C2%B0+%2F3602#!"
+  }, {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog m:4° /3602, 2. Ex.",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/512013683:DE-36:Mog+m%3A4%C2%B0+%2F3602%2C+2.+Ex.#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Landeshauptstadt Mainz, Dezernat für Soziales, Kinder, Jugend, Schule und Gesundheit, Flüchtlingskoordination" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "1304715574",
+      "id" : "https://d-nb.info/gnd/1304715574",
+      "label" : "Mainz. Dezernat für Soziales, Kinder, Jugend, Schule und Gesundheit. Flüchtlingskoordination",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

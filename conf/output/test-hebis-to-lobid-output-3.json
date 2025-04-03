@@ -1,0 +1,104 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/512849919#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Findet Hadi - Lernorte in der Ausstellung Der charismatische Ort - Stationen der reisenden Könige im Mittelalter",
+  "almaMmsId" : "512849919",
+  "oclcNumber" : [ "1407112396" ],
+  "otherTitleInformation" : [ "Rätselheft für Kinder und Erwachsene" ],
+  "publication" : [ {
+    "startDate" : "2019",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Ingelheim am Rhein" ],
+    "publishedBy" : [ "Stadt Ingelheim am Rhein" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22512849919%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1407112396",
+    "label" : "OCLC Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "12 Seiten : Illustrationen",
+  "natureOfContent" : [ {
+    "label" : "Kindersachbuch",
+    "id" : "https://d-nb.info/gnd/4163854-2"
+  }, {
+    "label" : "Ausstellungskatalog",
+    "id" : "https://d-nb.info/gnd/4135467-9"
+  } ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "K 2023 Q 140",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/512849919:DE-36:K+2023+Q+140#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Herausgeber: Stadt Ingelheim am Rhein ; Konzept und Inhalte: Dr. Barbara Gaertner ; Veranstalter der Ausstellung: Stadtverwaltung Ingelheim am Rhein, Forschungsstelle Kaiserpfalz" ],
+  "contribution" : [ {
+    "agent" : {
+      "label" : "Gaertner, Barbara",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "16162519-8",
+      "id" : "https://d-nb.info/gnd/16162519-8",
+      "label" : "Forschungsstelle Kaiserpfalz",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/orm",
+      "label" : "Veranstalter/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "16162519-8",
+      "id" : "https://d-nb.info/gnd/16162519-8",
+      "label" : "Forschungsstelle Kaiserpfalz",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/sng",
+      "label" : "Gesang"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "1175257540",
+      "id" : "https://d-nb.info/gnd/1175257540",
+      "label" : "Kunstforum Ingelheim - Altes Rathaus",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/his",
+      "label" : "Gastgebende Institution"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

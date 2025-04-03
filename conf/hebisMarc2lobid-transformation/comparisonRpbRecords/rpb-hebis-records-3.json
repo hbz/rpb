@@ -1,0 +1,104 @@
+{
+  "extent" : "12 Seiten : Illustrationen",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Gn19s0063112a",
+      "label" : "Gaertner, Barbara",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/16162519-8",
+      "label" : "Forschungsstelle Kaiserpfalz",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1175257540",
+      "label" : "Kunstforum Ingelheim - Altes Rathaus",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "rpbId" : "036t240114",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n242744",
+    "label" : "Königspfalz",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n724020",
+    "label" : "Kind",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4809327-0",
+      "label" : "Kaiserpfalz Ingelheim / Ingelheim am Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4030550-8",
+      "label" : "Kind",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4176997-1",
+      "label" : "Ratespiel",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Kaiserpfalz Ingelheim / Ingelheim am Rhein | Kind | Ratespiel",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Stadt Ingelheim am Rhein" ],
+    "location" : [ "Ingelheim am Rhein" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "responsibilityStatement" : [ "Herausgeber: Stadt Ingelheim am Rhein ; Konzept und Inhalte: Dr. Barbara Gaertner ; Veranstalter der Ausstellung: Stadtverwaltung Ingelheim am Rhein, Forschungsstelle Kaiserpfalz" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t240114",
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Findet Hadi - Lernorte in der Ausstellung Der charismatische Ort - Stationen der reisenden Könige im Mittelalter : Rätselheft für Kinder und Erwachsene",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33900030",
+    "label" : "Ingelheim am Rhein, große kreisangeh. Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ],
+  "@context" : "http://lobid.org/resources/context.jsonld"
+}

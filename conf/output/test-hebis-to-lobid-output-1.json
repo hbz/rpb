@@ -1,0 +1,76 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/512839662#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Alter Dom St. Johannis",
+  "almaMmsId" : "512839662",
+  "oclcNumber" : [ "1407066536" ],
+  "otherTitleInformation" : [ "1500 Jahre Geschichte im Herzen von Mainz" ],
+  "publication" : [ {
+    "startDate" : "2023",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Mainz" ],
+    "publishedBy" : [ "Evangelisches Dekanat Mainz" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22512839662%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1407066536",
+    "label" : "OCLC Ressource"
+  } ],
+  "related" : [ {
+    "note" : [ "Parallele Sprachausgabe englisch" ],
+    "label" : "The ancient cathedral St. John"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "1 gefaltetes Blatt ( 16 Seiten) : Illustrationen",
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog m 7188",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/512839662:DE-36:Mog+m+7188#!"
+  }, {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog m 7188, 2. Ex.",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/512839662:DE-36:Mog+m+7188%2C+2.+Ex.#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Evangelisches Dekanat Mainz" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "1123222142",
+      "id" : "https://d-nb.info/gnd/1123222142",
+      "label" : "Evangelische Kirche in Hessen und Nassau. Evangelisches Dekanat Mainz",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

@@ -1,0 +1,79 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/516707701#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Sportwoche Ingelheim am Rhein vom 10.-18. September 1977",
+  "almaMmsId" : "516707701",
+  "oclcNumber" : [ "1428135055" ],
+  "otherTitleInformation" : [ "Programm und Vereinsspiegel der teilnehmenden Vereine :" ],
+  "publication" : [ {
+    "startDate" : "1977",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Ingelheim am Rhein" ],
+    "publishedBy" : [ "Stadtverwaltung" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22516707701%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1428135055",
+    "label" : "OCLC Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "28 Seiten : Illustrationen",
+  "natureOfContent" : [ {
+    "label" : "Programmheft",
+    "id" : "https://d-nb.info/gnd/4373950-7"
+  } ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "K 2024/20",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/516707701:DE-36:K+2024%2F20#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Herausgeber: Stadtverwaltung Ingelheim am Rhein" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "4026954-1",
+      "id" : "https://d-nb.info/gnd/4026954-1",
+      "label" : "Ingelheim am Rhein",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "1324708093",
+      "id" : "https://d-nb.info/gnd/1324708093",
+      "label" : "Sportwoche (1977 : Ingelheim am Rhein)",
+      "type" : [ "ConferenceOrEvent" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

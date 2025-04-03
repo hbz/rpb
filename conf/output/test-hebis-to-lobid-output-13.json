@@ -1,0 +1,204 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/487803779#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Der Stahlberg in Mainz",
+  "almaMmsId" : "487803779",
+  "isbn" : [ "9783943915532", "3943915530" ],
+  "oclcNumber" : [ "1282186376" ],
+  "dnbId" : "1244538620",
+  "otherTitleInformation" : [ "Festung - Spielplatz - Jugendhaus" ],
+  "publication" : [ {
+    "startDate" : "2021",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "München" ],
+    "publishedBy" : [ "morisel Verlag" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22487803779%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1282186376",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/1244538620",
+    "label" : "DNB-Ressource"
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "https://d-nb.info/1244538620/04"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "175 Seiten : Illustrationen ; 23.5 cm x 13.5 cm",
+  "note" : [ "Quellen- und Literaturverzeichnis Seite 172-175" ],
+  "subject" : [ {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Katholische Kirche",
+    "id" : "https://d-nb.info/gnd/2009545-4",
+    "gndIdentifier" : "2009545-4"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Jugendarbeit",
+    "id" : "https://d-nb.info/gnd/4028863-8",
+    "gndIdentifier" : "4028863-8"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Lehrling",
+    "id" : "https://d-nb.info/gnd/4035114-2",
+    "gndIdentifier" : "4035114-2"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Kirchliche Sozialarbeit",
+    "id" : "https://d-nb.info/gnd/4137002-8",
+    "gndIdentifier" : "4137002-8"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Mainz",
+    "id" : "https://d-nb.info/gnd/4037124-4",
+    "gndIdentifier" : "4037124-4"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Bundesfestung Mainz (Mainz)",
+    "id" : "https://d-nb.info/gnd/4298330-7",
+    "gndIdentifier" : "4298330-7"
+  }, {
+    "notation" : "230",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Theologie, Christentum"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Christentum",
+    "notation" : "230",
+    "version" : "sdnb"
+  }, {
+    "notation" : "943",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Geschichte Deutschlands"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Deutschland und benachbarte mitteleuropäische Länder",
+    "notation" : "943",
+    "version" : "sdnb"
+  }, {
+    "notation" : "360",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Soziale Probleme, Sozialdienste, Versicherungen"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Soziale Probleme und Sozialdienste; Verbände",
+    "notation" : "360",
+    "version" : "sdnb"
+  }, {
+    "notation" : "NR 2290",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "RVK (Regensburger Verbundklassifikation)",
+      "id" : "https://d-nb.info/gnd/4449787-8"
+    }
+  }, {
+    "notation" : "NZ 64850",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "RVK (Regensburger Verbundklassifikation)",
+      "id" : "https://d-nb.info/gnd/4449787-8"
+    }
+  } ],
+  "subjectslabels" : [ "Katholische Kirche", "Jugendarbeit", "Lehrling", "Kirchliche Sozialarbeit", "Mainz", "Bundesfestung Mainz (Mainz)" ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "- Dek GOEB",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/487803779:DE-36:-+Dek+GOEB#!"
+  }, {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog 3175",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/487803779:DE-36:Mog+3175#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Manfred Göbel" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "114667449X",
+      "id" : "https://d-nb.info/gnd/114667449X",
+      "label" : "Göbel, Manfred",
+      "type" : [ "Person" ],
+      "dateOfBirth" : "1954"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

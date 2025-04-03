@@ -1072,9 +1072,6 @@ public class Application extends Controller {
 					: transformedObject;
 			lobidMap.put(key, values);
 		});
-		if(transformedJson.has("hebisId")) {
-			lobidMap.remove("hasItem"); // temp: https://github.com/hbz/rpb/pull/105#discussion_r2022907781
-		}
 		return Json.toJson(lobidMap);
 	}
 

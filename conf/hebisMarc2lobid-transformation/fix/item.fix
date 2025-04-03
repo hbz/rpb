@@ -7,6 +7,7 @@ do list(path:"924??", "var": "$i")
     copy_field("$i.g", "hasItem[].$last.callNumber")
     add_field("hasItem[].$last.heldBy.id","http://lobid.org/organisations/DE-36#!")
     add_field("hasItem[].$last.heldBy.label","Wissenschaftliche Stadtbibliothek Mainz")
-    paste("holding.id","~http://lobid.org/items/", "~WASMUSSHIERHIN:DE-36:","$i.g","~#!",join_char:"") # Checken ob 001 als Item Id genutzt werden soll.
+    uri_encode("$i.g")
+    paste("hasItem[].$last.id","~http://lobid.org/items/","001","~:DE-36:","$i.g","~#!",join_char:"")
   end
 end

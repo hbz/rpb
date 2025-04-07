@@ -1,31 +1,23 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112191",
-  "id" : "https://lobid.org/resources/RPB929t112191",
-  "hbzId" : "HT016831992",
+  "rpbId" : "929t112190",
+  "id" : "https://lobid.org/resources/929t112190",
+  "hbzId" : "HT016832268",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Geheimnisvolle Tierwelten : am Flüsschen Wied gesehen und photographiert ; [Kalender] 2011",
-  "extent" : "[14] Bl. : überw. Ill. ; 210 x 297 mm",
-  "responsibilityStatement" : [ "von Erich Oetz" ],
+  "title" : "[Kalender] 2011",
+  "extent" : "[13] Bl. : überw. Ill. ; 292 x 420 mm",
   "publication" : [ {
+    "location" : [ "[Boppard]" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n848000",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n163000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n102045",
+    "label" : "Regionenbeschreibung",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -33,17 +25,28 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Wied / Fluss | Tiere / Motiv | Kalender",
+    "label" : "Mittelrheintal / Süd | Kalender",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4108127-4",
-      "label" : "Wied / Fluss",
+      "id" : "https://d-nb.info/gnd/4221819-6",
+      "label" : "Mittelrheintal / Süd",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4185464-0",
-      "label" : "Tiere / Motiv",
+      "id" : "https://d-nb.info/gnd/4029290-3",
+      "label" : "Kalender",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Briefmarkenserie | Kalender",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4335389-7",
+      "label" : "Briefmarkenserie",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -58,8 +61,8 @@
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://d-nb.info/gnd/4119314-3",
-    "label" : "Unterwesterwald",
+    "id" : "https://d-nb.info/gnd/4221819-6",
+    "label" : "Mittelrheintal / Süd",
     "type" : [ "PlaceOrGeographicName" ],
     "source" : {
       "id" : "https://d-nb.info/gnd/7749153-1",
@@ -68,12 +71,13 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2191236a",
-      "label" : "Oetz, Erich"
+      "id" : "https://d-nb.info/gnd/10366667-9",
+      "label" : "Sebapharma GmbH & Co. KG / Boppard",
+      "type" : [ "CorporateBody" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
   } ]

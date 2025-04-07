@@ -2,49 +2,97 @@
 
 vacuum()
 
+#-------- maps --------
+do once("map")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
+
+  put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"1")
+  put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb-variants_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"2")
+  put_filemap("./RPB-Export_HBZ_SW_GND.tsv", "sw-gnd_map", "sep_char": "\t")
+end
+
+do put_macro("move_here")
+  move_field("$[field]", "_temp")
+  move_field("_temp", "$[field]")
+end
+
+do put_macro("normalize")
+  replace_all("$[field]","^http.+[/#](.+)$","$1")
+  replace_all("$[field]","^(\\d+)-(\\d+|X)$","$1n$2")
+end
+
+do put_macro("add_labels")
+  unless exists("$[field].label")
+    copy_field("$[field].id", "$[field].label")
+    call_macro("normalize", field: "$[field].label")
+    lookup("$[field].label", "sw-rpb_map")
+    lookup("$[field].label", "sw-gnd_map")
+  end
+  copy_field("$[field].id", "$[field].altLabel[]")
+  call_macro("normalize", field: "$[field].altLabel[]")
+  lookup("$[field].altLabel[]", "sw-rpb-variants_map", delete: "true")
+  split_field("$[field].altLabel[]", "; ")
+end
+
+if all_equal("doNotIndex", "true")
+  reject()
+end
+
 # ------- Set JSON-LD context -------
 
 set_field("@context","http://lobid.org/resources/context.jsonld")
 
 # ------- Set internal _id -------
 
-copy_field("f00_", "_id")
+copy_field("rpbId", "_id")
 
 # ------- Set "type" -------
 
 set_array("type[]", "BibliographicResource")
-if all_equal("f36_", "u")
+unless exists("type")
   set_field("type[].$append", "Article")
 end
-if all_equal("f36_", "s")
+if all_equal("type", "u")
+  set_field("type[].$append", "Article")
+end
+if all_equal("type", "Monografie")
   set_field("type[].$append", "Book")
 end
-if any_equal("f36_", "sm")
-  if exists("f36t")
-    copy_field("f36t", "type[].$append")
-  else
-    set_field("type[].$append", "Periodical")
-  end
+if any_equal("type", "Mehrt. Mono (ÜO)")
+  set_field("type[].$append", "MultiVolumeBook")
 end
-if any_equal("f36_", "sbd")
+
+# ------- isPartOf -------
+
+if any_equal("type", "Band")
   set_field("type[].$append", "Book")
   set_array("isPartOf[]")
-  set_array("isPartOf[].$append.type[]", "IsPartOfRelation")
-  set_array("isPartOf[].$last.hasSuperordinate[]")
-  # Set up superordinate ID: use the volume ID, remove the numbering part:
-  copy_field("_id", "isPartOf[].$last.hasSuperordinate[].$append.id")
-  prepend("isPartOf[].$last.hasSuperordinate[].$last.id","https://lobid.org/resources/RPB")
-  replace_all("isPartOf[].$last.hasSuperordinate[].$last.id","b\\d+","")
-  # Set up superordinate label, output by decoder as f20ü
-  copy_field("f20ü", "isPartOf[].$last.hasSuperordinate[].$last.label")
-  # Take volume numbering from `f01_`
-  copy_field("f01_", "isPartOf[].$last.numbering")
+  copy_field("inSeries[].*", "isPartOf[].$append") # Strapi: inSeries[] (Gesamttitel) -> isPartOf
+  copy_field("volumeIn", "isPartOf[].$append") #  Strapi volumeIn (Bandangaben) -> isPartOf
+  copy_field("f20u", "isPartOf[].$last.label") # label is in f20u
+else
+  move_field("inSeries[]", "isPartOf[]")
+end
+
+# For all types: lobid structure
+do list_as("ipo": "isPartOf[]")
+  set_array("ipo.type[]", "IsPartOfRelation")
+  if all_match("ipo.value", "^http.+")
+    move_field("ipo.value", "ipo.id")
+  else
+    move_field("ipo.value", "ipo.label")
+  end
+  set_array("ipo.hasSuperordinate[]")
+  set_hash("ipo.hasSuperordinate[].$append")
+  move_field("ipo.id", "ipo.hasSuperordinate[].$last.id")
+  move_field("ipo.label", "ipo.hasSuperordinate[].$last.label")
+  call_macro("move_here", field: "ipo.numbering")
 end
 
 # ------- rpbId -------
 
-copy_field("_id", "rpbId")
-prepend("rpbId","RPB") 
+call_macro("move_here", field: "rpbId")
 
 # ------- "id", using https URIs -------
 
@@ -53,45 +101,68 @@ prepend("id","https://lobid.org/resources/")
 
 # ------- hbzId -------
 
-copy_field("f983", "hbzId")
+call_macro("move_here", field: "hbzId")
 
-# ------- biblioVinoId -------
+# ------- schoeneNummer -------
 
-copy_field("f84_", "biblioVinoId")
-replace_all("biblioVinoId", "\\.", "")
+copy_field("f84_", "schoeneNummer")
+replace_all("schoeneNummer", "\\.", "")
+
+# ------- isbn -------
+
+move_field("isbn[]", "isbn_objects") # with `value` & `valid` subfields
+set_array("isbn[]") # plain string array
+copy_field("isbn_objects.*.value", "isbn[].$append")
 
 # ------- "inCollection" -------
 
-set_hash("coll")
-set_field("coll.id", "http://lobid.org/resources/HT013494180#!")
-set_array("coll.type[]")
-add_field("coll.type[].$append", "Collection")
-add_field("coll.label", "Rheinland-Pfälzische Bibliographie")
 set_array("inCollection[]")
-move_field("coll", "inCollection[]")
-
-# ------- "title" field -------
-
-if any_equal("f36_", "sbd")
-  paste("title", "f20ü", "f01_", "f20_", "join_char": " | ")
-else
-  copy_field("f20_", "title")
+unless all_equal("inCollection", "nur BiblioVino")
+  set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013494180#!")
+  set_array("inCollection[].$last.type[]")
+  add_field("inCollection[].$last.type[].$append", "Collection")
+  add_field("inCollection[].$last.label", "Rheinland-Pfälzische Bibliographie")
+end
+unless all_equal("inCollection", "nur RPB")
+  set_field("inCollection[].$append.id", "http://lobid.org/resources/HT013678171#!")
+  set_array("inCollection[].$last.type[]")
+  add_field("inCollection[].$last.type[].$append", "Collection")
+  add_field("inCollection[].$last.label", "BiblioVino")
 end
 
-# Mit Folgendem warten, bis RPB-28 erledigt ist:
-# replace_all("title","¬","")
-# replace_all("title", "\\s\\+", "")
+# ------- "title" field -------
+call_macro("move_here", field: "title")
+if is_array("title")
+  copy_field("title.$last", "title")
+end
+replace_all("title", "\\s\\+", "")
+
+# ------- "otherTitleInformation" -------
+set_array("otherTitleInformation[]")
+copy_field("otherTitleInformation", "otherTitleInformation[].$append")
+prepend("parallelTitle[].*.value", "= ")
+copy_field("parallelTitle[].*.value", "otherTitleInformation[].$append")
+
+# ------- "alternativeTitle" -------
+move_field("alternativeTitle[]", "alternativeTitleObjects[]")
+set_array("alternativeTitle[]")
+copy_field("alternativeTitleObjects[].*.value", "alternativeTitle[].$append")
+
+# ------- "titleKeyword" -------
+set_array("titleKeyword[]")
+copy_field("alternativeSpelling", "titleKeyword[].$append")
 
 # ------- "extent" -------
 
-move_field("f77_", "extent")
+call_macro("move_here", field: "extent")
 
 # ------- "note" -------
 
-set_array("note[]")
-do list(path:"f81[].*.f81_", "var": "$i")
-  copy_field("$i", "note[].$append")
+set_array("temp")
+do list(path:"note[].*.value", "var": "$i")
+  copy_field("$i", "temp.$append")
 end
+move_field("temp", "note[]")
 uniq("note[]")
 
 # ------- "medium" -------
@@ -101,8 +172,7 @@ uniq("note[]")
 # -------- "responsibilityStatement" --------
 # f39_ ist nach Quelldatendoku die "Verfasserangabe (Vorlageform)"
 
-set_array("responsibilityStatement")
-move_field("f39_", "responsibilityStatement[]")
+move_field("responsibilityStatement", "responsibilityStatement[]")
 
 # ------- "language" -------
 # Dafür scheint es keine explizite Angabe zu geben.
@@ -111,42 +181,93 @@ move_field("f39_", "responsibilityStatement[]")
 
 set_hash("pub")
 set_array("pub.location[]")
-copy_field("f74_", "pub.location[].$append")
-if all_match("f76a", "\\d{4}")
-  copy_field("f76a", "pub.startDate")
+copy_field("publicationLocation", "pub.location[].$append")
+if all_match("publicationDate", "\\d{4}")
+  copy_field("publicationDate", "pub.startDate")
 end
 
-# Folgendes rausgenommen wegen 929t130101, in dem sich f76a wiederholt
+# Folgendes rausgenommen wegen 929t130101, in dem sich publicationDate wiederholt
 # replace_all("pub.startDate","^\\[(\\d{4})\\]","$1")
 set_array("pub.publishedBy[]")
-copy_field("f75_", "pub.publishedBy[].$append")
-set_array("pub.type[]")
-add_field("pub.type[].$append", "PublicationEvent")
+copy_field("publishedBy", "pub.publishedBy[].$append")
 set_array("publication[]")
 move_field("pub", "publication[]")
 
+# Type nur bei tatsächlich befüllten Einträgen setzen:
+vacuum()
+do list_as("pub": "publication[]")
+  set_array("pub.type[]", "PublicationEvent")
+end
+
 # ------- "zdbId" -------
 
-if any_equal("f36_", "sm")
+if any_equal("type", "Mehrt. Mono (ÜO)")
   move_field("f88_", "zdbId")
 end
 
 # -------RPB-Sachnotationen --------
 
-set_array("subject[]")
+set_array("temp_subject")
 
-if exists ("f30[]")
-  move_field("f30[].*.f30_", "subject[].$append.id")
-  replace_all("subject[].*.id","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
-  uniq("subject[]")
-  do list(path: "subject[]")
-    add_field("label", "Platzhalter Schlagwortlabel")
+if exists ("subject[]")
+  move_field("subject[].*.value", "temp_subject.$append.id")
+  uniq("temp_subject")
+  copy_field("temp_subject.*.id", "temp_subject.$last.label")
+  lookup("temp_subject.*.label", "subject_map")
+  do list(path: "temp_subject")
+    # add_field("label", "Platzhalter Schlagwortlabel")
     set_array("type[]")
     add_field("type[].$append", "Concept")
     add_field("source.id", "http://purl.org/lobid/rpb")
     add_field("source.label", "Systematik der Rheinland-Pfälzischen Bibliographie")
   end
 end
+
+# ------- GND-Schlagwörter -------
+# To Do:
+# 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
+# subjectComponentList _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
+# 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
+# 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
+# "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
+# To Do: Die Transformation behandelt bisher GND-Ids (hier und in `spatial`) so, als würden sie allesamt einen Bindestrich enthalten, was ja nicht der Fall ist.
+
+set_array("@temp_subject")
+
+copy_field("subjectComponentList[].*", "@temp_subject.$append")
+
+do list (path:"@temp_subject", "var": "$i")
+  set_array("temp_subject.$append.type[]","ComplexSubject")
+  set_array("temp_subject.$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
+  set_array("temp_subject.$last.componentList[]")
+  do list_as (component: "$i.subjectComponent[]")
+    if exists("component.value")
+      copy_field("component", "temp_subject.$last.componentList[].$append")
+    end
+  end
+end
+
+do
+ list (path:"temp_subject.*.componentList[]", "var": "$i")
+  move_field("$i.value", "$i.id")
+  call_macro("add_labels", field: "$i")
+  if all_match("$i.id","^http://rpb.lobid.org/sw/.*$")
+    add_field("$i.source.id", "http://rpb.lobid.org/sw")
+    add_field("$i.source.label", "RPB-Sachsystematik")
+  else
+    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
+    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
+  end
+end
+
+# Generierung des pipe-separaierten Labels für eine gesamte Schlagwortfolge ("subject.label").
+
+do list (path:"temp_subject", "var": "$i")
+  copy_field("$i.*.componentList[].label", "$i.label.$append")
+  join_field("$i.label"," | ")
+end
+
+move_field("temp_subject", "subject[]")
 
 # ------- Ortsnotation -------
 
@@ -156,121 +277,65 @@ end
 # 1. Sich wiederholende Werte werden momentan doppelt im JSON abgelegt, siehe test-output-27.json
 # 2. Lookup der RPB-Raumsystematik-Labels
 
-set_array("spatial[]")
-
-do list (path:"f31[].*.f31_", "var": "$i")
-  copy_field("$i", "spatial[].$append.id")
-end
-
+call_macro("move_here", field: "spatial[]")
 uniq("spatial[]")
 
 do list (path:"spatial[]", "var": "$i")
+  move_field("$i.value", "$i.id")
   copy_field("$i.id", "$i.label")
-  replace_all("$i.label","^_r\\d{2}_\\s_(.*?)_$","$1")
-  if any_match("$i.id", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
-    replace_all("$i.id","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
-    lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
+  replace_all("$i.label","^http.+[/#](.+)$","$1")
+  if any_match("$i.id", "^https://d-nb.info/gnd/.+")
+    replace_all("$i.label","-","n")                             # IDs in lookup-map have the original syntax with an "n" instead of "-"
+    lookup("$i.label", "sw-rpb_map")
+    lookup("$i.label", "sw-gnd_map")
     set_array("$i.type[]","PlaceOrGeographicName")
     add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
     add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
-  elsif any_contain("$i.id", "_r99_")
-    replace_all("$i.id","^_r99_\\s_o(\\d+)_$","https://rpb.lobid.org/spatial#n$1")
-    set_array("$i.type[]","Concept")
-    add_field("$i.source.id", "https://rpb.lobid.org/spatial")
-    add_field("$i.source.label", "RPB-Raumsystematik")
   else
-    replace_all("$i.id","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
+    prepend("$i.label", "https://rpb.lobid.org/spatial#")
+    lookup("$i.label", "spatial_map", delete: "true")
     set_array("$i.type[]","Concept")
     add_field("$i.source.id", "https://rpb.lobid.org/spatial")
     add_field("$i.source.label", "RPB-Raumsystematik")
   end
-end
-
-# ------- GND-Schlagwörter -------
-# To Do:
-# 1. Schlagwortketten stehen getrennt mit Semikola in einem Feld, z.B.
-# f32_ _4252261n4_ ; _4053474n1_ ; _00Sn09k3368351a_
-# 2. Eine Schlagworfolge kann sowohl Nicht-GND als auch GND-Werte enthalten
-# 3. Jede Schlagwortfolge muss in als Objekt im "subject"-Array mit
-# "componentList" landen. Der Source-Wert jeweils an die Quelle angepasst.
-# To Do: Die Transformation behandelt bisher GND-Ids (hier und in `spatial`) so, als würden sie allesamt einen Bindestrich enthalten, was ja nicht der Fall ist.
-
-set_array("@subject[]")
-
-do list (path:"f32[].*.f32_", "var": "$i")
-  copy_field("$i", "@subject[].$append.@swf[]")
-end
-
-do list (path:"@subject[]", "var": "$i")
-  set_array("subject[].$append.type[]","ComplexSubject")
-  set_array("subject[].$last.label") # Muss Array sein, damit Labels in einem zweiten Schritt zusammengeführt werden können.
-  set_array("subject[].$last.componentList[]")
-  split_field("$i.@swf[]", " ; ")
-  copy_field("$i.@swf[]", "subject[].$last.componentList[].$append.id")
-end
-
-do list (path:"subject[].*.componentList[]", "var": "$i")
-  replace_all("$i.id","_(.*)_","$1")
-  copy_field("$i.id", "$i.label")
-  lookup("$i.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-  if all_match("$i.id","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
-    prepend("$i.id", "https://rpb.lobid.org/sw/")
-    add_field("$i.source.id", "http://rpb.lobid.org/sw")
-    add_field("$i.source.label", "RPB-Sachsystematik")
-  else
-    replace_all("$i.id", "(^\\d*)n(\\d)", "$1-$2")
-    prepend("$i.id", "https://d-nb.info/gnd/")
-    add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")
-    add_field("$i.source.label", "Gemeinsame Normdatei (GND)")
-  end
-end
-
-# Generierung des pipe-separaierten Labels für eine gesamte Schlagwortfolge ("subject.label").
-
-do list (path:"subject[]", "var": "$i")
-  copy_field("$i.*.componentList[].label", "$i.label.$append")
-  join_field("$i.label"," | ")
 end
 
 # ------- Contribution -------
 
 put_map("role-to-uri",
-  "Verfasser": "http://id.loc.gov/vocabulary/relators/aut",
-  "Herausgeber": "http://id.loc.gov/vocabulary/relators/pbl",
-  "Mitwirkender": "http://id.loc.gov/vocabulary/relators/ctb",
-  "Bearb.": "http://id.loc.gov/vocabulary/relators/edt",
-  "Begr.": "http://id.loc.gov/vocabulary/relators/org",
-  "Sammler": "http://id.loc.gov/vocabulary/relators/col",
-  "Librettist": "http://id.loc.gov/vocabulary/relators/lbt",
-  "Übersetzer": "http://id.loc.gov/vocabulary/relators/trl",
-  "Illustrator": "http://id.loc.gov/vocabulary/relators/ill",
-  "Verfasser von ergänzendem Text": "http://id.loc.gov/vocabulary/relators/wst",
-  "Komponist": "http://id.loc.gov/vocabulary/relators/cmp",
-  "Red.": "http://id.loc.gov/vocabulary/relators/red",
-  "Sonstige": "http://id.loc.gov/vocabulary/relators/oth",
-  "Ausführender": "http://id.loc.gov/vocabulary/relators/act",
-  "Gefeierter": "http://id.loc.gov/vocabulary/relators/hnr",
-  "HE Urheber": "http://id.loc.gov/vocabulary/relators/isb",
-  "NE hrsg. Körperschaft": "http://id.loc.gov/vocabulary/relators/isb",
-  "Gefeierte Körperschaft": "http://id.loc.gov/vocabulary/relators/hnr")
+  "Verfasser/in" : "http://id.loc.gov/vocabulary/relators/aut",
+  "Herausgeber/in" : "http://id.loc.gov/vocabulary/relators/edt",
+  "Mitwirkung" : "http://id.loc.gov/vocabulary/relators/ctb",
+  "Begründer/in eines Werks" : "http://id.loc.gov/vocabulary/relators/ccp",
+  "Sammler/in" : "http://id.loc.gov/vocabulary/relators/col",
+  "Libretto" : "http://id.loc.gov/vocabulary/relators/lbt",
+  "Übersetzer/in" : "http://id.loc.gov/vocabulary/relators/trl",
+  "Illustrator/in" : "http://id.loc.gov/vocabulary/relators/ill",
+  "Verfasser/in von ergänzendem Text" : "http://id.loc.gov/vocabulary/relators/wst",
+  "Komponist/in" : "http://id.loc.gov/vocabulary/relators/cmp",
+  "Performer/in" : "http://id.loc.gov/vocabulary/relators/pfr",
+  "Gefeierte Person" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Fotograf/in" : "http://id.loc.gov/vocabulary/relators/pht",
+  "Geistiger Schöpfer" : "http://id.loc.gov/vocabulary/relators/cre",
+  "Herausgebendes Organ" : "http://id.loc.gov/vocabulary/relators/isb",
+  "Gefeierte Körperschaft" : "http://id.loc.gov/vocabulary/relators/hnr",
+  "Veranstalter" : "http://id.loc.gov/vocabulary/relators/orm",
+  "Auftraggeber" : "http://id.loc.gov/vocabulary/relators/pat",
+  "Sonstige" : "http://id.loc.gov/vocabulary/relators/oth")
 
 do put_macro("contributions")
   set_array("_temp")
-  copy_field("f$[from][].*.f$[from]_", "_temp.$append.agent.id")
-  do list_as(f: "f$[from][]", c: "_temp")
-    replace_all("c.agent.id","_(.*)_","$1")
-    copy_field("c.agent.id", "c.agent.label")
-    lookup("c.agent.label", "./RPB-Export_HBZ_SW.tsv","sep_char":"\t")
-    if all_match("c.agent.id","^00.*|^107n.*|^929n.*")
-      prepend("c.agent.id", "https://rpb.lobid.org/agent/")
-    else
-      replace_all("c.agent.id", "(^\\d*)n(\\d)", "$1-$2")
-      prepend("c.agent.id", "https://d-nb.info/gnd/")
-    end
-    copy_field("f.n$[from]a", "c.role.id")
-    copy_field("f.n$[from]a", "c.role.label")
+  copy_field("$[from][].*.value", "_temp.$append.agent.id")
+  do list_as(f: "$[from][]", c: "_temp")
+    copy_field("f.label", "c.agent.label")
+    call_macro("add_labels", field: "c.agent")
+    set_array("c.agent.type[]", "Person")
+    copy_field("f.type", "c.role.id")
+    copy_field("f.type", "c.role.label")
     lookup("c.role.id", "role-to-uri")
-    lookup("c.role.label", "Verfasser": "Autor/in") # TODO: weitere dt. relator labels
+    if all_match("c.role.label","Geistiger Schöpfer|Herausgebendes Organ|Gefeierte Körperschaft|Veranstalter|Auftraggeber")
+      set_field("c.agent.type[]", "CorporateBody")
+    end
     set_array("c.type[]", "Contribution")
   end
   move_field("_temp.*", "contribution[].$append")
@@ -278,43 +343,51 @@ end
 
 set_array("contribution[]")
 
-call_macro("contributions", from: "40")
-call_macro("contributions", from: "60")
+call_macro("contributions", from: "person")
+call_macro("contributions", from: "corporateBody")
 
-# ------- bibliographicCitation -------
-# Siehe https://jira.hbz-nrw.de/browse/RPB-26
+set_array("containedIn[]")
+set_array("bibliographicCitation")
 
-if exists ("f70t")
-  do list(path:"f70*", "var": "$i")
-    paste("bibliographicCitation", "~In: ", "f70k", "~: ", "f70t", "~. - ", "f70b", "~ (", "f70j", "~), ", "f70h", " ", "f70z", "~, Seite ", "f70s", "~. -" join_char: "")
-    replace_all("bibliographicCitation", "In: : ", "In: ")
-    replace_all("bibliographicCitation", ", Seite . -$", "")
-    replace_all("bibliographicCitation", "  ", " ")
-    replace_all("bibliographicCitation", ", , ", ", ")
+do list_as(citation: "bibliographicCitation[]")
+  copy_field("citation.value", "fullLabel")
+  if all_match("citation.value", "^http.*")
+    copy_field("citation.value", "containedIn[].$append.id")
+    copy_field("citation.label", "containedIn[].$last.label")
+    paste("fullLabel", "citation.label", "~ ",
+      "citation.volume", "~ (", "citation.year", "~) ",
+      "citation.issue", "~ ", "citation.alternativeNumbering",
+      "~ Seite ", "citation.pages", join_char: "")
+    replace_all("fullLabel", "\\(\\)", "") # empty year
   end
-elsif exists ("f70_")
-  paste("bibliographicCitation", "f70_")
-elsif exists ("f701")
-  paste("bibliographicCitation", "f701")
-elsif exists ("f702")
-  paste("bibliographicCitation", "f702")
-elsif exists ("f703")
-  paste("bibliographicCitation", "f703")
-elsif exists ("f704")
-  paste("bibliographicCitation", "f704")
-elsif exists ("f705")
-  paste("bibliographicCitation", "f705")
-elsif exists ("f706")
-  paste("bibliographicCitation", "f706")
-elsif exists ("f707")
-  paste("bibliographicCitation", "f707")
-elsif exists ("f708")
-  paste("bibliographicCitation", "f708")
-elsif exists ("f709")
-  paste("bibliographicCitation", "f709")
+  move_field("fullLabel", "bibliographicCitation.$append")
 end
-replace_all("bibliographicCitation","¬","")
 
-retain( "type[]", "contribution[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "biblioVinoId", "bibliographicCitation", "isPartOf[]", "note[]")
+uniq("containedIn[]")
+join_field("bibliographicCitation", "; ")
+
+# fulltextOnline and link to external description/ToC
+
+if any_match("url[].*.type", "Andere URL")
+  set_array("description[]")
+end
+
+do list(path:"url[]", "var": "$i")
+  if all_equal("$i.type", "Volltext")
+    set_array("fulltextOnline[]")
+    copy_field("$i.value", "fulltextOnline[].$append.id")
+    copy_field("$i.value", "fulltextOnline[].$last.label")
+    replace_all("fulltextOnline[].$last.label", "https://nbn-resolving.org/", "")
+  
+  elsif all_equal("$i.type", "Andere URL")
+    copy_field("$i.value", "description[].$append.id")
+    copy_field("$i.value", "description[].$last.label") 
+
+  end
+end
+
+move_field("edition", "edition[]")
+
+retain( "type[]", "contribution[]", "edition[]", "extent", "hasItem[]", "responsibilityStatement[]", "language[]", "medium[]", "subject[]", "title", "hbzId", "oclcNumber[]", "otherTitleInformation[]", "alternativeTitle[]", "titleKeyword[]", "natureOfContent[]", "publication[]", "sameAs[]", "describedBy", "@context", "id", "zdbId", "spatial[]", "inCollection[]", "rpbId", "schoeneNummer", "bibliographicCitation", "isPartOf[]", "note[]", "fulltextOnline[]", "description[]", "isbn[]", "containedIn[]")
 
 vacuum()

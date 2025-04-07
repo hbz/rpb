@@ -1,30 +1,27 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112206",
-  "id" : "https://lobid.org/resources/RPB929t112206",
+  "rpbId" : "929t112202",
+  "id" : "https://lobid.org/resources/929t112202",
+  "hbzId" : "CT003010542",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Funkeln aus dem Sonnenberg : Winzer Oliver Krupp aus Bruchhausen bearbeitet die Lage \"Unkeler Sonnenberg\"",
-  "extent" : "Ill.",
+  "title" : "Provincia Trevirensis [Elektronische Ressource] : [Ca. 1:1 500 000]",
+  "extent" : "1 Kt. : Kupferstich ; 13 x 9 cm",
+  "note" : [ "Maßstab in graph. Form (Miliaria Germanica), Titelkartusche und Maßstabsleiste unten rechts - rückseitig lateinischer Text" ],
+  "responsibilityStatement" : [ "[Hondius, Jodocus]" ],
   "publication" : [ {
-    "startDate" : "2011",
+    "location" : [ "Amstelodami" ],
+    "startDate" : "1618",
+    "publishedBy" : [ "Judocus Hondius" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n544322",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n544325",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n126000",
+    "label" : "Karte",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -32,34 +29,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Unkeler Sonnenberg | Weingut Krupp",
+    "label" : "Erzstift Trier | Altkarte | Online-Ressource",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n110302",
-      "label" : "Unkeler Sonnenberg",
+      "id" : "https://d-nb.info/gnd/4060882-7",
+      "label" : "Erzstift Trier",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/929n110303",
-      "label" : "Weingut Krupp",
+      "id" : "https://d-nb.info/gnd/4611904-8",
+      "label" : "Altkarte",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13807073",
-    "label" : "o13807073",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  }, {
-    "id" : "https://rpb.lobid.org/spatial#n13807008",
-    "label" : "o13807008",
+    "id" : "https://rpb.lobid.org/spatial#n41",
+    "label" : "Erzstift Trier",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -68,14 +64,19 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
-      "label" : "Ruland, Wolfgang"
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2200547a",
+      "label" : "Hondius, Jodocus (Kartograph, 1563-1612)",
+      "type" : [ "Person" ]
     },
     "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 32-33"
+  "bibliographicCitation" : "Bertius, Petrus : P. Bertii Tabularum geographicarum contractarum libri septem; 378",
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:1-70495",
+    "label" : "urn:nbn:de:hbz:061:1-70495"
+  } ]
 }

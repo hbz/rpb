@@ -1,24 +1,47 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "isPartOf" : [ {
-    "type" : [ "IsPartOfRelation" ],
-    "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982375",
-      "label" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz"
-    } ],
-    "numbering" : "1998,1(Sept.) - 2001,9(Sept.)"
-  } ],
-  "rpbId" : "RPB107t982375b1",
-  "id" : "https://lobid.org/resources/RPB107t982375b1",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "107t01147877",
+  "id" : "https://lobid.org/resources/107t01147877",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz | 1998,1(Sept.) - 2001,9(Sept.)",
-  "note" : [ "Forts. u.d.T.: Doppelpfeil" ],
+  "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
   "publication" : [ {
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
-  } ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Ortsgeschichte",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "Hambach (Ortsbezirk)",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1123984425",
+      "label" : "Trautmann, Herbert / 1948-2006",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "Die Rheinpfalz <Ludwigshafen> / Mittelhaardter Rundschau v. 17.5.1982"
 }

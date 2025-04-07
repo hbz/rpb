@@ -1,30 +1,28 @@
 {
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "Kunst und Geschichte in Rheinland-Pfalz"
+    } ],
+    "numbering" : "82"
+  } ],
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t982371",
-  "id" : "https://lobid.org/resources/RPB107t982371",
+  "rpbId" : "107t01147873",
+  "id" : "https://lobid.org/resources/107t01147873",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Ältere Menschen machen Fernsehen : aktivierende Medienarbeit in Offenen Kanälen",
-  "note" : [ "Videoprojekt zwischen Volkshochschule u. Offener Kanal" ],
+  "title" : "Das Hambacher Schloß.",
   "publication" : [ {
-    "startDate" : "1997",
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n786000",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n882060",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n844040",
+    "label" : "Burg. Schloss",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -32,83 +30,19 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Volkshochschule | Geschichte 1945-",
+    "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
+      "id" : "https://d-nb.info/gnd/4094596-0",
+      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4136151-9",
-      "label" : "Volkshochschule",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Offener Kanal | Geschichte 1945-",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4172489-6",
-      "label" : "Offener Kanal",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Alter | Geschichte 1945-",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4001446-0",
-      "label" : "Alter",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/z64",
-      "label" : "Geschichte 1945-",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n31400000",
-    "label" : "o31400000",
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "Hambach (Ortsbezirk)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -117,14 +51,15 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn02s0022a",
-      "label" : "Baum, Herbert"
+      "id" : "https://d-nb.info/gnd/119277425",
+      "label" : "Böcher, Otto / 1935-2020",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 119-123"
+  "bibliographicCitation" : "Ärzteblatt Rheinland-Pfalz. 35. 1982, 560, 563-65"
 }

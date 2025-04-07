@@ -3,11 +3,15 @@
 package controllers.nwbib;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,13 +32,17 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import org.antlr.runtime.RecognitionException;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.tuple.Pair;
-import org.elasticsearch.common.base.Charsets;
 import org.elasticsearch.common.geo.GeoPoint;
-import org.elasticsearch.common.io.Streams;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.MapType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
@@ -53,6 +61,8 @@ import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
+import play.twirl.api.HtmlFormat;
+import rpb.ETL;
 import views.html.browse_classification;
 import views.html.browse_register;
 import views.html.classification;
@@ -69,6 +79,8 @@ import views.html.stars;
  * @author Fabian Steeg (fsteeg)
  */
 public class Application extends Controller {
+
+	private static final String UTF_8 = "UTF-8";
 
 	static final int MAX_FACETS = 150;
 
@@ -144,7 +156,7 @@ public class Application extends Controller {
 	 */
 	public static String currentUri() {
 		try {
-			return URLEncoder.encode(request().host() + request().uri(), "UTF-8");
+			return URLEncoder.encode(request().host() + request().uri(), UTF_8);
 		} catch (UnsupportedEncodingException e) {
 			Logger.error("Could not get current URI", e);
 		}
@@ -220,8 +232,8 @@ public class Application extends Controller {
 	 * @param publisher Query for the resource publisher
 	 * @param issued Query for the resource issued year
 	 * @param medium Query for the resource medium
-	 * @param nwbibspatial Query for the resource nwbibspatial classification
-	 * @param nwbibsubject Query for the resource nwbibsubject classification
+	 * @param rpbspatial Query for the resource rpbspatial classification
+	 * @param rpbsubject Query for the resource rpbsubject classification
 	 * @param from The page start (offset of page of resource to return)
 	 * @param size The page size (size of page of resource to return)
 	 * @param owner Owner filter for resource queries
@@ -238,10 +250,11 @@ public class Application extends Controller {
 	public static Promise<Result> search(final String q, final String person,
 			final String name, final String subject, final String id,
 			final String publisher, final String issued, final String medium,
-			final String nwbibspatial, final String nwbibsubject, final int from,
+			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, final String owner, String t, String sort,
 			boolean details, String location, String word, String corporation,
 			String raw, String format) {
+		response().setHeader("Access-Control-Allow-Origin", "*");
 		String uuid = session("uuid");
 		if (uuid == null)
 			session("uuid", UUID.randomUUID().toString());
@@ -252,7 +265,8 @@ public class Application extends Controller {
 			response().setHeader("Pragma", "no-cache");
 			response().setHeader("Expires", "0");
 		}
-		String cacheId = String.format("%s-%s", uuid, request().uri());
+		String cacheId = request().queryString().isEmpty() ? request().uri()
+				: String.format("%s-%s", uuid, request().uri());
 		@SuppressWarnings("unchecked")
 		Promise<Result> cachedResult = (Promise<Result>) Cache.get(cacheId);
 		if (cachedResult != null)
@@ -262,15 +276,29 @@ public class Application extends Controller {
 		if (form.hasErrors())
 			return Promise.promise(
 					() -> badRequest(search.render(null, q, person, name, subject, id,
-							publisher, issued, medium, nwbibspatial, nwbibsubject, from, size,
+							publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 							0L, owner, t, sort, location, word, corporation, raw)));
 		String query = form.data().get("q");
 		Promise<Result> result = okPromise(query != null ? query : q, person, name,
-				subject, id, publisher, issued, medium, nwbibspatial, nwbibsubject,
+				subject, id, publisher, issued, medium, rpbspatial, rpbsubject,
 				from, size, owner, t, sort, details, location, word, corporation, raw,
 				format.isEmpty() ? "html" : format);
 		cacheOnRedeem(cacheId, result, ONE_HOUR);
 		return result;
+	}
+
+	public static Promise<Result> searchSpatial(final String id, final int from, final int size,
+			final String format) {
+		return Promise.pure(found(routes.Application.search("", "", "", "", "", "", "", "",
+				"https://rpb.lobid.org/spatial#n" + id, "", from, size, "", "", "", false, "", "",
+				"", "", format)));
+	}
+
+	public static Promise<Result> showPl(String name, String db, int index, int zeilen, String s1) {
+		String url = db.equals("rpb") ? "https://rpb.lbz-rlp.de/" : "https://rppd.lobid.org/";
+		return Promise
+				.pure(ok("<head><meta http-equiv='Refresh' content='0; URL=" + url
+						+ HtmlFormat.escape(s1) + "'/></head>").as("text/html"));
 	}
 
 	/**
@@ -327,7 +355,7 @@ public class Application extends Controller {
 	public static Result journals() throws IOException {
 		try (InputStream stream = Play.application().classloader()
 				.getResourceAsStream("nwbib-journals.csv")) {
-			String csv = new String(Streams.copyToByteArray(stream), Charsets.UTF_8);
+			String csv = IOUtils.toString(stream, UTF_8);
 			List<String> lines = Arrays.asList(csv.split("\n"));
 			List<HashMap<String, String>> maps = lines.stream()
 					.filter(line -> line.split("\",\"").length == 2).map(line -> {
@@ -373,7 +401,7 @@ public class Application extends Controller {
 			}
 			result = classificationResult(t, placeholder);
 		}
-		Cache.set("classification." + t, result, ONE_DAY);
+		Cache.set("classification." + t, result);
 		return result;
 	}
 
@@ -401,8 +429,8 @@ public class Application extends Controller {
 					"attachment; filename=" + filename);
 			try {
 				return ok(new URL(CONFIG
-						.getString(t.equals("Raumsystematik") ? "index.data.nwbibspatial"
-								: "index.data.nwbibsubject")).openStream());
+						.getString(t.equals("Raumsystematik") ? "index.data.rpbspatial"
+								: "index.data.rpbsubject")).openStream());
 			} catch (IOException e) {
 				e.printStackTrace();
 				return internalServerError(e.getMessage());
@@ -476,18 +504,23 @@ public class Application extends Controller {
 	private static Promise<Result> okPromise(final String q, final String person,
 			final String name, final String subject, final String id,
 			final String publisher, final String issued, final String medium,
-			final String nwbibspatial, final String nwbibsubject, final int from,
+			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, final String owner, String t, String sort,
 			boolean details, String location, String word, String corporation,
 			String raw, String format) {
 		final Promise<Result> result = call(q, person, name, subject, id, publisher,
-				issued, medium, nwbibspatial, nwbibsubject, from, size, owner, t, sort,
+				issued, medium, rpbspatial, rpbsubject, from, size, owner, t, sort,
 				details, location, word, corporation, raw, format);
 		return result.recover((Throwable throwable) -> {
+			Logger.error("Error on Lobid call with q={}, person={}, name={}, subject={}, id={}, publisher={},\n"
+					+ "issued={}, medium={}, rpbspatial={}, rpbsubject={}, from={}, size={}, owner={}, t={}, sort={},\n"
+					+ "details={}, location={}, word={}, corporation={}, raw={}, format={}", //
+					q, person, name, subject, id, publisher, issued, medium, rpbspatial, rpbsubject, from, size, owner,
+					t, sort, details, location, word, corporation, raw, format);
 			Logger.error("Could not call Lobid", throwable);
 			flashError();
 			return internalServerError(search.render("[]", q, person, name, subject,
-					id, publisher, issued, medium, nwbibspatial, nwbibsubject, from, size,
+					id, publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 					0L, owner, t, sort, location, word, corporation, raw));
 		});
 	}
@@ -511,12 +544,12 @@ public class Application extends Controller {
 	static Promise<Result> call(final String q, final String person,
 			final String name, final String subject, final String id,
 			final String publisher, final String issued, final String medium,
-			final String nwbibspatial, final String nwbibsubject, final int from,
+			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, String owner, String t, String sort, boolean showDetails,
 			String location, String word, String corporation, String raw,
 			String format) {
 		final WSRequest requestHolder = Lobid.request(q, person, name, subject, id,
-				publisher, issued, medium, nwbibspatial, nwbibsubject, from, size,
+				publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 				owner, t, sort, location, word, corporation, raw);
 		return requestHolder.get().map((WSResponse response) -> {
 			Long hits = 0L;
@@ -549,7 +582,7 @@ public class Application extends Controller {
 
 			return format.equals("html")
 					? ok(search.render(s, q, person, name, subject, id, publisher, issued,
-							medium, nwbibspatial, nwbibsubject, from, size, hits, owner, t,
+							medium, rpbspatial, rpbsubject, from, size, hits, owner, t,
 							sort, location, word, corporation, raw))
 					: ok(new ObjectMapper().writerWithDefaultPrettyPrinter()
 							.writeValueAsString(Json.parse(s)))
@@ -572,8 +605,8 @@ public class Application extends Controller {
 	 * @param publisher Query for the resource publisher
 	 * @param issued Query for the resource issued year
 	 * @param medium Query for the resource medium
-	 * @param nwbibspatial Query for the resource nwbibspatial classification
-	 * @param nwbibsubject Query for the resource nwbibsubject classification
+	 * @param rpbspatial Query for the resource rpbspatial classification
+	 * @param rpbsubject Query for the resource rpbsubject classification
 	 * @param from The page start (offset of page of resource to return)
 	 * @param size The page size (size of page of resource to return)
 	 * @param owner Owner filter for resource queries
@@ -588,14 +621,14 @@ public class Application extends Controller {
 	 */
 	public static Promise<Result> facets(String q, String person, String name,
 			String subject, String id, String publisher, String issued, String medium,
-			String nwbibspatial, String nwbibsubject, int from, int size,
+			String rpbspatial, String rpbsubject, int from, int size,
 			String owner, String t, String field, String sort, String location,
 			String word, String corporation, String raw) {
 
 		String key = String.format(
 				"facets.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s", field, q,
 				person, name, id, publisher, location, word, corporation, raw, subject,
-				issued, medium, nwbibspatial, nwbibsubject, owner, t);
+				issued, medium, rpbspatial, rpbsubject, owner, t);
 		Result cachedResult = (Result) Cache.get(key);
 		if (cachedResult != null) {
 			return Promise.promise(() -> cachedResult);
@@ -624,9 +657,9 @@ public class Application extends Controller {
 		Comparator<Pair<JsonNode, String>> sorter = (p1, p2) -> {
 			String t1 = p1.getLeft().get("key").asText();
 			String t2 = p2.getLeft().get("key").asText();
-			boolean t1Current = current(subject, medium, nwbibspatial, nwbibsubject,
+			boolean t1Current = current(subject, medium, rpbspatial, rpbsubject,
 					owner, t, field, t1, raw);
-			boolean t2Current = current(subject, medium, nwbibspatial, nwbibsubject,
+			boolean t2Current = current(subject, medium, rpbspatial, rpbsubject,
 					owner, t, field, t2, raw);
 			if (t1Current == t2Current) {
 				if (!field.equals(ISSUED_FIELD)) {
@@ -655,12 +688,12 @@ public class Application extends Controller {
 					: queryParam(t, term);
 			String ownerQuery = !field.equals(ITEM_FIELD) ? owner //
 					: withoutAndOperator(queryParam(owner, term));
-			String nwbibsubjectQuery =
-					!field.equals(RPB_SUBJECT_FIELD) ? nwbibsubject //
-							: queryParam(nwbibsubject, term);
-			String nwbibspatialQuery =
-					!field.equals(NWBIB_SPATIAL_FIELD) ? nwbibspatial //
-							: queryParam(nwbibspatial, term);
+			String rpbsubjectQuery =
+					!field.equals(RPB_SUBJECT_FIELD) ? rpbsubject //
+							: queryParam(rpbsubject, term);
+			String rpbspatialQuery =
+					!field.equals(NWBIB_SPATIAL_FIELD) ? rpbspatial //
+							: queryParam(rpbspatial, term);
 			String rawQuery = !field.equals(COVERAGE_FIELD) ? raw //
 					: rawQueryParam(raw, term);
 			String locationQuery = !field.equals(SUBJECT_LOCATION_FIELD) ? location //
@@ -670,12 +703,12 @@ public class Application extends Controller {
 			String issuedQuery = !field.equals(ISSUED_FIELD) ? issued //
 					: queryParam(issued, term);
 
-			boolean current = current(subject, medium, nwbibspatial, nwbibsubject,
+			boolean current = current(subject, medium, rpbspatial, rpbsubject,
 					owner, t, field, term, raw);
 			String routeUrl = routes.Application.search(q, person, name, subjectQuery,
-					id, publisher, issuedQuery, mediumQuery, nwbibspatialQuery,
-					nwbibsubjectQuery, from, size, ownerQuery, typeQuery,
-					sort(sort, nwbibspatialQuery, nwbibsubjectQuery, subjectQuery), false,
+					id, publisher, issuedQuery, mediumQuery, rpbspatialQuery,
+					rpbsubjectQuery, from, size, ownerQuery, typeQuery,
+					sort(sort, rpbspatialQuery, rpbsubjectQuery, subjectQuery), false,
 					locationQuery, word, corporation, rawQuery, "").url();
 
 			String result = String.format(
@@ -690,7 +723,7 @@ public class Application extends Controller {
 		};
 
 		Promise<Result> promise = Lobid.getFacets(q, person, name, subject, id,
-				publisher, issued, medium, nwbibspatial, nwbibsubject, owner, field, t,
+				publisher, issued, medium, rpbspatial, rpbsubject, owner, field, t,
 				location, word, corporation, raw).map(json -> {
 					Stream<JsonNode> stream = StreamSupport.stream(
 							Spliterators.spliteratorUnknownSize(json.findValue("aggregation")
@@ -705,7 +738,7 @@ public class Application extends Controller {
 					String labelKey = String.format(
 							"facets-labels.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s.%s",
 							field, raw, q, person, name, id, publisher, word, corporation,
-							subject, issued, medium, nwbibspatial, nwbibsubject, raw,
+							subject, issued, medium, rpbspatial, rpbsubject, raw,
 							field.equals(ITEM_FIELD) ? "" : owner, t, location);
 
 					@SuppressWarnings("unchecked")
@@ -723,22 +756,22 @@ public class Application extends Controller {
 		return promise;
 	}
 
-	private static String sort(String sort, String nwbibspatialQuery,
-			String nwbibsubjectQuery, String subjectQuery) {
-		return (nwbibspatialQuery + nwbibsubjectQuery + subjectQuery).contains(",")
+	private static String sort(String sort, String rpbspatialQuery,
+			String rpbsubjectQuery, String subjectQuery) {
+		return (rpbspatialQuery + rpbsubjectQuery + subjectQuery).contains(",")
 				? ""
 				/* relevance */ : sort;
 	}
 
 	private static boolean current(String subject, String medium,
-			String nwbibspatial, String nwbibsubject, String owner, String t,
+			String rpbspatial, String rpbsubject, String owner, String t,
 			String field, String term, String raw) {
 		return field.equals(MEDIUM_FIELD) && contains(medium, term)
 				|| field.equals(TYPE_FIELD) && contains(t, term)
 				|| field.equals(ITEM_FIELD) && contains(owner, term)
-				|| field.equals(NWBIB_SPATIAL_FIELD) && contains(nwbibspatial, term)
+				|| field.equals(NWBIB_SPATIAL_FIELD) && contains(rpbspatial, term)
 				|| field.equals(COVERAGE_FIELD) && rawContains(raw, quotedEscaped(term))
-				|| field.equals(RPB_SUBJECT_FIELD) && contains(nwbibsubject, term)
+				|| field.equals(RPB_SUBJECT_FIELD) && contains(rpbsubject, term)
 				|| field.equals(SUBJECT_FIELD) && contains(subject, term);
 	}
 
@@ -868,7 +901,7 @@ public class Application extends Controller {
 		Stream<Promise<JsonNode>> promises = starredIds.stream()
 				.map(id -> WS
 						.url(String
-								.format(String.format("http://" + request().host() + "/" + CONFIG.getString("indexUrlFormat"), id)))
+								.format(String.format(CONFIG.getString("indexUrlFormat"), id)))
 						.setContentType("application/json").get()
 						.map(response -> response.asJson().get("member").get(0)));
 		return Promise.sequence(promises.collect(Collectors.toList()))
@@ -883,6 +916,12 @@ public class Application extends Controller {
 					Cache.set(cacheKey, vals, ONE_DAY);
 					return ok(stars.render(starredIds, vals, format));
 				});
+	}
+
+	public static Promise<Result> showSw(String rpbId) {
+		String strapiUrl = "https://rpb-cms.lobid.org/admin/content-manager/collection-types/"
+				+ "api::rpb-authority.rpb-authority?filters[$and][0][rpbId][$eq]=";
+		return Promise.pure(seeOther(strapiUrl + rpbId));
 	}
 
 	/**
@@ -920,5 +959,98 @@ public class Application extends Controller {
 	private static List<String> starredIds() {
 		return new ArrayList<>(Arrays.asList(currentlyStarred().split(" ")).stream()
 				.filter(s -> !s.trim().isEmpty()).collect(Collectors.toList()));
+	}
+
+	public static Promise<Result> put(String id, String secret) throws FileNotFoundException, RecognitionException, IOException {
+		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
+		if (authorized) {
+			return transformAndIndex(id, request().body().asJson());
+		} else {
+			return Promise.pure(unauthorized(secret));
+		}
+	}
+
+	public static Promise<Result> delete(String id, String secret) throws FileNotFoundException, RecognitionException, IOException {
+		boolean authorized = !secret.trim().isEmpty() && secret.equals(CONFIG.getString("secret"));
+		if (authorized) {
+			return deleteFromIndex(id);
+		} else {
+			return Promise.pure(unauthorized(secret));
+		}
+	}
+
+	public static Promise<Result> putIdFromData(String secret) throws FileNotFoundException, RecognitionException, IOException {
+		return put(request().body().asJson().get("rpbId").textValue(), secret);
+	}
+
+	public static Promise<Result> deleteIdFromData(String secret) throws FileNotFoundException, RecognitionException, IOException {
+		return delete(request().body().asJson().get("rpbId").textValue(), secret);
+	}
+
+	private static Promise<Result> deleteFromIndex(String id) throws UnsupportedEncodingException {
+		Cache.remove(String.format("/%s", id));
+		WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
+		return request.delete().map(response -> status(response.getStatus(), response.getBody()));
+	}
+
+	private static Promise<Result> transformAndIndex(String id, JsonNode jsonBody)
+			throws IOException, FileNotFoundException, RecognitionException, UnsupportedEncodingException {
+		JsonNode transformedJson = transform(jsonBody);
+		Promise<JsonNode> dataPromise = id.startsWith("f") && transformedJson.has("hbzId") ? // hbz-Fremddaten
+				addToLobidData(transformedJson) : Promise.pure(transformedJson);
+		return dataPromise.flatMap(result -> {
+			Cache.remove(String.format("/%s", id));
+			WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
+			return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
+		});
+	}
+
+	private static JsonNode transform(JsonNode jsonBody)
+			throws IOException, FileNotFoundException, RecognitionException {
+		File input = new File("conf/output/test-output-strapi.json");
+		File output = new File("conf/output/test-output-0.json");
+		Files.write(Paths.get(input.getAbsolutePath()), jsonBody.toString().getBytes(Charset.forName(UTF_8)));
+		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
+		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
+		return Json.parse(result);
+	}
+
+	private static Promise<JsonNode> addToLobidData(JsonNode transformedJson) {
+		String lobidUrl = transformedJson.get("hbzId").textValue();
+		WSRequest lobidRequest = WS.url(lobidUrl).setQueryParameter("format", "json");
+		Promise<JsonNode> lobidPromise = lobidRequest.get().map(WSResponse::asJson);
+		Promise<JsonNode> merged = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
+		return merged;
+	}
+
+	private static JsonNode mergeRecords(JsonNode transformedJson, JsonNode lobidJson)
+			throws JsonMappingException, JsonProcessingException {
+		ObjectMapper objectMapper = new ObjectMapper();
+		MapType mapType = TypeFactory.defaultInstance().constructMapType(Map.class, String.class, Object.class);
+		Map<String, Object> transformedMap = objectMapper.readValue(transformedJson.toString(), mapType);
+		Map<String, Object> lobidMap = objectMapper.readValue(lobidJson.toString(), mapType);
+		lobidMap.remove("describedBy");
+		transformedMap.put("hbzId", lobidMap.get("hbzId"));
+		transformedMap.remove("type");
+		transformedMap.keySet().forEach(key -> {
+			Object transformedObject = transformedMap.get(key);
+			Object lobidObject = lobidMap.getOrDefault(key, new ArrayList<Object>());
+			Object values = transformedObject instanceof List ? mergeValues(transformedObject, lobidObject)
+					: transformedObject;
+			lobidMap.put(key, values);
+		});
+		return Json.toJson(lobidMap);
+	}
+
+	private static Object mergeValues(Object transformedObject, Object lobidObject) {
+		List<Object> mergedValues = lobidObject instanceof List ? new ArrayList<>((List<?>) lobidObject)
+				: Arrays.asList(lobidObject);
+		mergedValues.addAll((List<?>) transformedObject);
+		return mergedValues;
+	}
+
+	private static String elasticsearchUrl(String id) throws UnsupportedEncodingException {
+		return "http://weywot3:9200/resources-rpb-test/resource/"
+				+ URLEncoder.encode("https://lobid.org/resources/" + id, UTF_8);
 	}
 }

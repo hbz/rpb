@@ -1,0 +1,89 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "label" : "DuMont aktiv"
+    } ]
+  } ],
+  "rpbId" : "929t160199",
+  "id" : "https://lobid.org/resources/929t160199",
+  "hbzId" : "HT018859168",
+  "isbn" : [ "978-3-7701-8016-5" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Wandern auf Rheinsteig und Rheinburgenweg",
+  "extent" : "180 Seiten : Illustrationen, Diagramme, Karten",
+  "note" : [ "Enthält Index" ],
+  "responsibilityStatement" : [ "Manfred Böckling" ],
+  "publication" : [ {
+    "location" : [ "Ostfildern" ],
+    "startDate" : "2012",
+    "publishedBy" : [ "DuMont Reiseverlag" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102070",
+    "label" : "Wandern / Führer",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Rheinsteig | Rhein-Burgen-Wanderweg | Wandern",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/7501137-2",
+      "label" : "Rheinsteig",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/7500776-9",
+      "label" : "Rhein-Burgen-Wanderweg",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4064532-0",
+      "label" : "Wandern",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://d-nb.info/gnd/4126432-0",
+    "label" : "Mittelrheintal",
+    "type" : [ "PlaceOrGeographicName" ],
+    "source" : {
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/124591736",
+      "label" : "Böckling, Manfred / 1970-",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "description" : [ {
+    "id" : "http://d-nb.info/1069609889/04",
+    "label" : "http://d-nb.info/1069609889/04"
+  } ],
+  "edition" : [ "4., aktualisierte Auflage" ]
+}

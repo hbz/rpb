@@ -1,32 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t982372",
-  "id" : "https://lobid.org/resources/RPB107t982372",
+  "rpbId" : "107t01147874",
+  "id" : "https://lobid.org/resources/107t01147874",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Zur politischen Tragweite schulischer Medienarbeit : was \"lernen\" Gymnasiasten, wenn sie \"im Auftrag\" eines Berufsinformationszentrums Live-Sendungen für Schüler anderer Schularten produzieren?",
-  "extent" : "Graph. Darst.",
-  "note" : [ "Medien-AG d. Wilhelm-von-Humboldt-Gymnasiums" ],
-  "responsibilityStatement" : [ "Karl-Ludwig Kemen ; Gerhard Laubscher" ],
+  "title" : "Das Hambacher Schloß als Hochzeitsgeschenk der Pfälzer an Kronprinz Maximilian von Bayern (1842)",
   "publication" : [ {
-    "startDate" : "1997",
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n784080",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n882060",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n844040",
+    "label" : "Burg. Schloss",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -34,37 +23,26 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ludwigshafen am Rhein | Offener Kanal",
+    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Maximilian / II. / Bayern, König / 1811-1864",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4036472-0",
-      "label" : "Ludwigshafen am Rhein",
+      "id" : "https://d-nb.info/gnd/4094596-0",
+      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4172489-6",
-      "label" : "Offener Kanal",
+      "id" : "https://d-nb.info/gnd/118579347",
+      "label" : "Maximilian / II. / Bayern, König / 1811-1864",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/107n220353",
-      "label" : "Wilhelm-von-Humboldt-Gymnasium / Ludwigshafen am Rhein / Medien-AG",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n31400000",
-    "label" : "o31400000",
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "Hambach (Ortsbezirk)",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -73,24 +51,15 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372a",
-      "label" : "Kemen, Karl-Ludwig"
+      "id" : "https://d-nb.info/gnd/107939061",
+      "label" : "Kermann, Joachim / 1942-",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  }, {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn98s2372b",
-      "label" : "Laubscher, Gerhard"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 124-144"
+  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 80 (1982), S. 199-240"
 }

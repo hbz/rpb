@@ -1,0 +1,40 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/115839909",
+  "rppdId" : "pk00015",
+  "gndIdentifier" : "115839909",
+  "sameAs" : [ {
+    "id" : "http://swb.bsz-bw.de/DB=2.114/CMD?ACT=SRCHA&IKT=2011&TRM=gnd:115839909&REC=2",
+    "collection" : {
+      "name" : "Bibliotheksservice-Zentrum Baden-Wuerttemberg"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Anhäuser, Uwe",
+  "professionOrOccupation" : [ {
+    "label" : "Schriftsteller",
+    "id" : "https://d-nb.info/gnd/4053309-8"
+  }, {
+    "label" : "Journalist",
+    "id" : "https://d-nb.info/gnd/4028781-6"
+  } ],
+  "dateOfBirth" : [ "1943-11-01" ],
+  "placeOfBirth" : [ {
+    "label" : "Rengsdorf",
+    "id" : "https://rpb.lobid.org/spatial#n13809061"
+  } ],
+  "publication" : [ "Hunsrück und Naheland, 1987", "Lothringen, 1989", "Sagenhafter Hunsrück, 1994-95", "Schinderhannes und seine Bande, 2003", "Teufelchen im Paradies, 2002", "Wanderführer Hunsrück, 1988" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Presse",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2004-08-02",
+    "source" : [ "Literarisches Rheinland-Pfalz. 1988." ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Seit 1980 freier Schriftsteller; lebt im Hunsrück; Zenta-Maurina-Preis für Literatur 1977" ]
+}

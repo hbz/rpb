@@ -5,6 +5,7 @@ package rpb;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +48,9 @@ public class ETL {
                 }
                 vars.put(matcher.group(1), matcher.group(2));
             }
-            FluxCompiler.compile(ResourceUtil.getStream(fluxFile), vars).start();
+            try (InputStream stream = ResourceUtil.getStream(fluxFile)) {
+                FluxCompiler.compile(stream, vars).start();
+            }
         }
     }
 }

@@ -1,0 +1,63 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051147433",
+  "rppdId" : "pk00032",
+  "gndIdentifier" : "1051147433",
+  "sameAs" : [ {
+    "id" : "https://www.lagis-hessen.de/pnd/1051147433",
+    "collection" : {
+      "name" : "Hessische Biografie"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Altgeld, Johann Philipp",
+  "variantName" : [ "Altgelt, Johann Philipp" ],
+  "professionOrOccupation" : [ {
+    "label" : "Pfarrer / Katholische Kirche",
+    "id" : "https://rpb.lobid.org/sw/929n170632",
+    "altLabel" : [ "Katholische Kirche / Pfarrer" ]
+  }, {
+    "label" : "Lehrer",
+    "id" : "https://d-nb.info/gnd/4035088-5"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Hachenburg, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14302229"
+  }, {
+    "label" : "Bendorf, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13700203"
+  }, {
+    "label" : "Roßbach",
+    "id" : "https://rpb.lobid.org/spatial#n14302287"
+  }, {
+    "label" : "Altenkirchen (Westerwald), Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13210501"
+  } ],
+  "dateOfBirth" : [ "1603" ],
+  "placeOfBirth" : [ {
+    "label" : "Siegen",
+    "id" : "Siegen"
+  } ],
+  "dateOfDeath" : [ "1658-12-12" ],
+  "placeOfDeath" : [ {
+    "label" : "Altenkirchen (Westerwald), Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13210501"
+  } ],
+  "publication" : [ "Arzneibuch" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  }, {
+    "label" : "Kirche",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#3.6p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-03-20",
+    "source" : [ "Renkhoff, Otto: Nassauische Biographie, 1985" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "1625 Oberschulmeister zu Hachenburg; 1627 Kaplan zu Bendorf; ab 1632 Pfarrer zu Roßbach, ab 1637 zu Altenkirchen" ]
+}

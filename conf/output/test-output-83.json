@@ -1,0 +1,62 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "121t231109",
+  "id" : "https://lobid.org/resources/121t231109",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Der Wiedweg - blaues Wasser, grüne Pfade : Etappenwandern von der Quelle bis zur Mündung",
+  "extent" : "Illustrationen",
+  "publication" : [ {
+    "startDate" : "2023",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102070",
+    "label" : "Wandern / Führer",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Wiedweg | Führer",
+    "componentList" : [ {
+      "id" : "http://rpb.lobid.org/sw/929n110124",
+      "label" : "Wiedweg",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4155569-7",
+      "label" : "Führer",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n22",
+    "label" : "Mittelrhein-Gebiet",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  }, {
+    "id" : "https://rpb.lobid.org/spatial#n10",
+    "label" : "Westerwald",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "bibliographicCitation" : "In: Die Eifel. - 118 (2023), 3, Seite 48-52. -"
+}

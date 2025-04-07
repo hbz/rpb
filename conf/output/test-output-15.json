@@ -1,47 +1,29 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147871",
-  "id" : "https://lobid.org/resources/RPB107t01147871",
+  "rpbId" : "036t0121517",
+  "id" : "https://lobid.org/resources/036t0121517",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Juden in Hainfeld : ein Beitrag zur Geschichte der Dorfjuden im Hochstift Speyer",
-  "extent" : "Ill.",
+  "title" : "Sprendlingens Einwohnerzahl",
   "publication" : [ {
-    "startDate" : "1983",
+    "startDate" : "1959",
     "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n632000",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "o33703036",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "id" : "http://rpb.lobid.org/sw/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 4 (1959), Nr. 1"
 }

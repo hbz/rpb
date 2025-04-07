@@ -1,28 +1,29 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121519",
-  "id" : "https://lobid.org/resources/RPB036t0121519",
+  "rpbId" : "036t0121512",
+  "id" : "https://lobid.org/resources/036t0121512",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlinger kämpften unter Napoleon",
+  "title" : "Serenissimus befehlen zu prügeln",
   "publication" : [ {
     "startDate" : "1963",
     "type" : [ "PublicationEvent" ]
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "http://rpb.lobid.org/sw/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 12"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 6"
 }

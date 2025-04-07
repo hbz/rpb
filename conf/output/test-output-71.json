@@ -1,0 +1,91 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "929t112440",
+  "id" : "https://lobid.org/resources/929t112440",
+  "schoeneNummer" : "Nr27922",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  }, {
+    "id" : "http://lobid.org/resources/HT013678171#!",
+    "type" : [ "Collection" ],
+    "label" : "BiblioVino"
+  } ],
+  "title" : "Weinkulturlandschaft Mosel : Dornen statt Reben",
+  "alternativeTitle" : [ "Dornen statt Reben" ],
+  "extent" : "Ill.",
+  "responsibilityStatement" : [ "Rolfjosef Hamacher und Ulrich Stein" ],
+  "publication" : [ {
+    "startDate" : "2011",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n544360",
+    "label" : "Weinhandel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Moseltal | Weinbau | Preisentwicklung",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4102224-5",
+      "label" : "Moseltal",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4065136-8",
+      "label" : "Weinbau",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4125931-2",
+      "label" : "Preisentwicklung",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n24",
+    "label" : "Moseltal",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2440560a",
+      "label" : "Hamacher, Rolfjosef",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/105115975X",
+      "label" : "Stein, Ulrich / 1951-",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "In: Rheinische Heimatpflege. - N.F. 48 (2011), 2, Seite 150-152. -"
+}

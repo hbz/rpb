@@ -1,28 +1,85 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121515",
-  "id" : "https://lobid.org/resources/RPB036t0121515",
+  "rpbId" : "929t112206",
+  "id" : "https://lobid.org/resources/929t112206",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Souvenir ...",
+  "title" : "Funkeln aus dem Sonnenberg : Winzer Oliver Krupp aus Bruchhausen bearbeitet die Lage \"Unkeler Sonnenberg\"",
+  "extent" : "Ill.",
   "publication" : [ {
-    "startDate" : "1963",
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n544322",
+    "label" : "Großlage",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n544325",
+    "label" : "Weingut",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Unkeler Sonnenberg | Weingut Krupp",
+    "componentList" : [ {
+      "id" : "http://rpb.lobid.org/sw/929n110302",
+      "label" : "Unkeler Sonnenberg",
+      "altLabel" : [ "Unkeler Sonneberg", "Sonnenberg / Unkel", "Sonneberg / Unkel", "Unkel / Sonneberg" ],
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/929n110303",
+      "label" : "Weingut Krupp",
+      "altLabel" : [ "Krupp, Oliver / Firma" ],
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n13807073",
+    "label" : "Unkel, Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  }, {
+    "id" : "https://rpb.lobid.org/spatial#n13807008",
+    "label" : "Bruchhausen",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "http://rpb.lobid.org/sw/00Pn08k0685884a",
+      "label" : "Ruland, Wolfgang",
+      "altLabel" : [ "WR" ],
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 1"
+  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 32-33"
 }

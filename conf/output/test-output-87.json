@@ -1,0 +1,49 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "121t0146618",
+  "id" : "https://lobid.org/resources/121t0146618",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "2000 Jahre Meilbrück : vom römischen Tempelbezirk zur modernen Raststätte; Von den Anfängen bis zum Ende der Römerherrschaft",
+  "alternativeTitle" : [ "Zweitausend Jahre Meilbrück" ],
+  "extent" : "Ill.",
+  "publication" : [ {
+    "startDate" : "1990",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n240400",
+    "label" : "Ortsgeschichte",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n232080600101",
+    "label" : "Meilbrück",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn02t0375a",
+      "label" : "Schmitt, Heinz",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "Heimatkalender Landkreis Bitburg-Prüm. - 1990, S. 74 - 78"
+}

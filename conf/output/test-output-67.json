@@ -1,0 +1,73 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t084667",
+  "id" : "https://lobid.org/resources/929t084667",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "100 Jahre Kirner Volksbank : Chronik 1908 - 2008",
+  "alternativeTitle" : [ "Hundert Jahre Kirner Volksbank" ],
+  "extent" : "[12] S. : zahlr. Ill.",
+  "publication" : [ {
+    "location" : [ "Kirn" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n548400",
+    "label" : "Bank",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Volksbank Kirn-Sobernheim | Geschichte 1908-2008 | Chronik",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/10360357-8",
+      "label" : "Volksbank Kirn-Sobernheim",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn08s0514595a",
+      "label" : "Geschichte 1908-2008",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4127914-1",
+      "label" : "Chronik",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n13309052",
+    "label" : "Kirn, Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/10360357-8",
+      "label" : "Volksbank Kirn-Sobernheim",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

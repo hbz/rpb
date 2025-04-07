@@ -1,0 +1,42 @@
+if exists("f82b") # GND-ID
+  reject()
+end
+
+do put_macro("move")
+  if exists("$[from]")
+    set_array("_temp")
+    move_field("$[from]", "_temp.$append.value")
+    move_field("_temp.*", "$[to][].$append")
+  end
+end
+
+do put_macro("move_all")
+  set_array("$[to][]")
+  call_macro("move", to: "$[to]", from: "f$[from]")
+end
+
+move_field("f00_", "rpbId")
+move_field("f3na", "preferredName")
+move_field("f3nz", "otherInformation")
+
+call_macro("move_all", to: "variantName", from: "3n[bcdefghijklmnopqrstuvwxy]")
+call_macro("move_all", to: "relatedEntity", from: "3r?")
+
+move_field("f99z", "type")
+
+if exists("type")
+  substring("type", "0", "1")
+  lookup("type", 
+    G: "Geografikum",
+    K: "Körperschaft",
+    P: "Person",
+    S: "Sachschlagwort",
+    V: "Veranstaltung",
+    W: "Werk",
+    X: "N/A", # ?
+    __default: "N/A")
+else
+  add_field("type", "N/A")
+end
+
+vacuum()

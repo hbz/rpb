@@ -1,0 +1,85 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t084656",
+  "id" : "https://lobid.org/resources/929t084656",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Weinteufel [Elektronische Ressource]",
+  "responsibilityStatement" : [ "nach der Operette von Michael Thelen, Text. Musik Hans Wolf. Regie u. Bearb.: Gisbert Stenz" ],
+  "publication" : [ {
+    "location" : [ "[Ahrweiler]" ],
+    "startDate" : "2006",
+    "publishedBy" : [ "Ahrtal-Video Faupel" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n802040",
+    "label" : "Laienspiel",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Ahrtal | Komödie | DVD-ROM",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4084812-7",
+      "label" : "Ahrtal",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4031952-0",
+      "label" : "Komödie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4585131-1",
+      "label" : "DVD-ROM",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n28",
+    "label" : "Ahrtal",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn08k4656727a",
+      "label" : "Thelen, Michael",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn95s0673b",
+      "label" : "Wolf, Hans",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

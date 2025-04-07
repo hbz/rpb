@@ -1,0 +1,59 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/123205670",
+  "rppdId" : "pk00020",
+  "gndIdentifier" : "123205670",
+  "sameAs" : [ {
+    "id" : "https://persondata.toolforge.org/redirect/gnd/commons/123205670",
+    "collection" : {
+      "name" : "Wikimedia Commons"
+    }
+  }, {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/123205670",
+    "collection" : {
+      "name" : "Wikipedia-Personenartikel"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Bücker, Carl Clemens",
+  "variantName" : [ "Bücker, Carl Clemens" ],
+  "depiction" : [ {
+    "id" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg",
+    "url" : "https://commons.wikimedia.org/wiki/File:Carl-Clemens%20B%C3%BCcker.jpg?uselang=de",
+    "thumbnail" : "https://commons.wikimedia.org/wiki/Special:FilePath/Carl-Clemens%20B%C3%BCcker.jpg?width=270"
+  } ],
+  "professionOrOccupation" : [ {
+    "label" : "Flugzeugkonstrukteur",
+    "id" : "https://rpb.lobid.org/sw/00Sn02x0286a"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Schweden",
+    "id" : "Schweden"
+  }, {
+    "label" : "Berlin",
+    "id" : "Berlin"
+  } ],
+  "dateOfBirth" : [ "1895-02-11" ],
+  "placeOfBirth" : [ {
+    "label" : "Ehrenbreitstein",
+    "id" : "https://rpb.lobid.org/spatial#n111000000500"
+  } ],
+  "dateOfDeath" : [ "1976-03-03" ],
+  "placeOfDeath" : [ {
+    "label" : "Mölln",
+    "id" : "Mölln"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Technik allgemein",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2010-10-28",
+    "source" : [ "Rhein-Zeitung, Ausg.N, Nr. 36 vom 11./12.02.1995", "Koblenzer Köpfe, 2002", "http://www.ehrenbreitstein.de/buecker.html (Stand: 28.10.2010)" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Geburtshaus in Ehrenbreitstein (Hofstr. 277 in Ehrenbreitstein, ehemaliger \"Gasthof zum weißen Ross\"); 1912 Abschluss am Kaiserin-Augusta-Gymnasium in Koblenz; Seekadett bei der kaiserlichen Marine in Kiel; 1914 als Leutnant zur See; Ausbildung als Marineflieger und Einsatz auf Seefliegerstationen an der Nordsee; 1918 scheidet er aus der Marine aus; Tätigkeit als Berater und Einflieger bei der schwedischen Marine; Gründung der \"Svensko Aero AB\" 1922; 1932 verkaufte er seinen Betrieb und kehrte nach Deutschland zurück; 1935 gründete er die \"Bücker Flugzeugbau GmbH\" in Berlin zur Produktion von Schul- und Sportflugzeugen; 1945 stellt das Werk seine Arbeit ein; danach lässt er sich zunächst in Hamburg, später in Bonn nieder; Grabstätte auf dem Koblenzer Hauptfriedhof; verschiedene Modelle von Bücker-Flugzeugen im Landesmuseum Koblenz; die Stadt Koblenz ehrte ihn mit der Benennung eines Platzes." ]
+}

@@ -1,0 +1,66 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/118649558",
+  "rppdId" : "pk00022",
+  "gndIdentifier" : "118649558",
+  "sameAs" : [ {
+    "id" : "https://www.deutsche-biographie.de/pnd118649558.html#adbcontent",
+    "collection" : {
+      "name" : "Biographien der ADB"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Anschuez, Joseph Andreas",
+  "variantName" : [ "Anschütz, Josef Andreas", "Anschuez, Johann Andreas", "Anschuez, Josef Andreas", "Anschütz, Joseph Andreas", "Anschuetz, Johann Andreas", "Anschuez, J. A.", "Anschütz, J. A.", "Anschütz, Johann Andreas", "Anschuez, Joseph Andreas" ],
+  "professionOrOccupation" : [ {
+    "label" : "Jurist",
+    "id" : "https://d-nb.info/gnd/4029050-5"
+  }, {
+    "label" : "Musikdirektor",
+    "id" : "https://d-nb.info/gnd/7628980-1"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
+  "dateOfBirth" : [ "1772-03-19" ],
+  "placeOfBirth" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
+  "dateOfDeath" : [ "1855-12-26" ],
+  "placeOfDeath" : [ {
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n11100000"
+  } ],
+  "relatedPerson" : [ {
+    "label" : "Anschuez, Carl",
+    "id" : "https://d-nb.info/gnd/1051147395"
+  }, {
+    "label" : "Anschuez, Franz Caspar",
+    "id" : "https://d-nb.info/gnd/1051177324"
+  }, {
+    "label" : "Anschuez, Heinrich Franz",
+    "id" : "https://d-nb.info/gnd/1051177332"
+  }, {
+    "label" : "Anschütz, Hermann",
+    "id" : "https://d-nb.info/gnd/116312351"
+  } ],
+  "publication" : [ "¬Das¬ Blümlein Wunderschön", "Trois chansons allemandes", "Rhapsodische Gesänge", "2 Tantum ergo und 1 Ecce panis", "Wer kauft Liebesgötter!" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Recht",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.14p"
+  }, {
+    "label" : "Musik. Musikwissenschaft",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#14.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2020-12-01",
+    "source" : [ "Rhein-Zeitung, Ausgabe B, Nr. 301 vom 29.12.1995", "Katharina Thielen: Notabelnpolitik in Koblenz, Trier 2020" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Studium der Rechtswissenschaft an der Universität Mainz; Anhänger der cisrhenanischen Bewegung; erhielt 1797 am Kriminalgericht in Koblenz eine Anstellung als Gerichtsschreiber; heiratete 1799 Maria Anna Kröll, der Ehe entstammten u.a. die Söhne Karl Friedrich und Hermann Franz; 1806 bis 1814 Richter; 1808 Gründungsmitglied der Koblenzer Casino-Gesellschaft und Mitglied der Koblenzer Freimaurerloge \"L'Union désirée\"; gründete ebenfalls 1808 das Koblenzer Musik-Institut, welches er bis 1842 leitete; errichtete eine Lehranstalt für Instrumentalmusik und eine Gesangsschule; komponierte auch selbst; ab 1815 Richter am ersten Instanzgericht; im Anschluß bis nach 1848 Staatsprokurator am Landgericht" ]
+}

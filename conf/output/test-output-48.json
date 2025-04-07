@@ -1,22 +1,28 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112192",
-  "id" : "https://lobid.org/resources/RPB929t112192",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t112191",
+  "id" : "https://lobid.org/resources/929t112191",
+  "hbzId" : "HT016831992",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Aus der Vereinsgeschichte der KKG \"Kowelenzer Schängelcher\" 1922 e.V.",
-  "extent" : "Ill.",
-  "publication" : [ {
-    "startDate" : "2011",
-    "type" : [ "PublicationEvent" ]
-  } ],
+  "title" : "Geheimnisvolle Tierwelten : am Flüsschen Wied gesehen und photographiert ; [Kalender] 2011",
+  "extent" : "[14] Bl. : überw. Ill. ; 210 x 297 mm",
+  "responsibilityStatement" : [ "von Erich Oetz" ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n704043",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n848000",
+    "label" : "Fotografie",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n163000",
+    "label" : "Tiere",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,31 +30,49 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher | Geschichte 1922-2011",
+    "label" : "Wied / Fluss | Tiere / Motiv | Kalender",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/5114232-6",
-      "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher",
+      "id" : "https://d-nb.info/gnd/4108127-4",
+      "label" : "Wied / Fluss",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn11k2192145a",
-      "label" : "Geschichte 1922-2011",
+      "id" : "https://d-nb.info/gnd/4185464-0",
+      "label" : "Tiere / Motiv",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4029290-3",
+      "label" : "Kalender",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n11100000",
-    "label" : "o11100000",
-    "type" : [ "Concept" ],
+    "id" : "https://d-nb.info/gnd/4119314-3",
+    "label" : "Unterwesterwald",
+    "type" : [ "PlaceOrGeographicName" ],
     "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
+      "id" : "https://d-nb.info/gnd/7749153-1",
+      "label" : "Gemeinsame Normdatei (GND)"
     }
   } ],
-  "bibliographicCitation" : "In: KKG Rot-Weiss-Gruen Kowelenzer Schaengelcher: Sessionsheft. - (2011), Seite 23-33. -"
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn11k2191236a",
+      "label" : "Oetz, Erich",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

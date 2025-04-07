@@ -42,9 +42,14 @@
                       <li @if(title=="RPB - Ergebnisliste"){class="active"}>
                         <a href="@nwbib.routes.Application.search()">Suche</a>
                       </li>
-                      <li @if(title=="NWBib - Themensuche"){class="active"}>
+                      <li @if(title=="RPB - Erweiterte Suche"){class="active"}>
+                        <a href="@nwbib.routes.Application.advanced()">Erweiterte Suche</a>
+                      </li>
+                      @*
+                      <li @if(title=="RPB - Themensuche"){class="active"}>
                         <a href="@nwbib.routes.Application.topics()">Themensuche</a>
                       </li>
+                      *@
                       <li @if(title.contains("Raumsystematik")){class="active"}>
                         <a href="@nwbib.routes.Application.spatial()">Regionen</a>
                       </li>
@@ -52,9 +57,6 @@
                         <a href="@nwbib.routes.Application.subjects()">Sachgebiete</a>
                       </li>
                       @*
-                      <li @if(title=="NWBib - Erweiterte Suche"){class="active"}>
-                        <a href="@nwbib.routes.Application.advanced()">Erweiterte Suche</a>
-                      </li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ergänzende Suche<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -72,30 +74,24 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                       <li @if(title=="RPB - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
+                      <li><a href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/rheinland-pfaelzische-bibliographie-infotext" target="_blank">Über die RPB</a></li>
+                      <li><a href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/rheinland-pfaelzische-bibliographie-weitere-links-mit-landeskundlichem-bezug" target="_blank">Weitere Bibliographien</a></li>
                       <li class="divider"></li>
-                      <li @if(title=="NWBib: Kontakt"){class="active"} class="dropdown">
+                      <li @if(title=="RPB: Kontakt"){class="active"} class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                          @*
-                          <li><a href="http://www.landesbibliothek-nrw.de/aufgaben/nrw_bibliographie/">Über die NWBib</a></li>
-                          <li><a href="@nwbib.routes.Application.journals()">Ausgewertete Zeitschriften</a></li>
-                          *@
-                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zum%20RPB-Prototyp,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback</a></li>
-                          @*
+                          <li class="dropdown-header">Feedback</li>
+                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20RPB,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback zur aktuellen Seite</a></li>
                           <li class="divider"></li>
-                          <li class="dropdown-header">Fachliche Kontakte</li>
-                          <li><a href="https://www.ulb.uni-bonn.de/die-ulb/organisation-ansprechpartner/ansprechpartner-von-a-z/albrink">ULB Bonn</a></li>
-                          <li><a href="http://www.ulb.uni-muenster.de/landesbibliothek/profil/ansprechpartner/index.html">ULB Münster</a></li>
-                          <li><a href="https://www.ulb.hhu.de/sammlungen/landesbibliothek/nordrhein-westfaelische-bibliographie">ULB Düsseldorf</a></li>
+                          <li class="dropdown-header">Fachlicher Kontakt</li>
+                          <li><a href="mailto:pl.rlb@@lbz-rlp.de?Subject=Anfrage%20Zentralredaktion%20RPB">Zentralredaktion (Tel.: 0261/91500-450)</a></li>
                           <li class="divider"></li>
-                          <li class="dropdown-header">Technische Informationen</li>
-                          <li><a href="https://www.hbz-nrw.de/produkte/linked-open-data">Kontakt</a></li>
-                          <li><a href="@nwbib.routes.Application.info()">Daten und Software</a></li>
+                          <li class="dropdown-header">Technischer Kontakt</li>
+                          <li><a href="https://www.hbz-nrw.de/produkte/linked-open-data" target="_blank">Hochschulbibliothekszentrum NRW</a></li>
                           <li class="divider"></li>
                           <li class="dropdown-header">Rechtliche Informationen</li>
-                          <li><a href="http://www.hbz-nrw.de/impressum/">Impressum</a></li>
-                          <li><a href="https://github.com/hbz/nwbib/blob/master/conf/Datenschutzerklaerung_NWBib.textile">Datenschutz</a></li>
-                          *@
+                          <li><a href="https://lbz.rlp.de/de/ueber-das-lbz/impressum/" target="_blank">Impressum</a></li>
+                          <li><a href="https://lbz.rlp.de/ueber-das-lbz/datenschutz" target="_blank">Datenschutz</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -104,15 +100,15 @@
             </div>
             <div class="page-header">
                 <img class="media-object nrw-logo pull-right" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW">
-                <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Ein Entwicklungsprojekt von lbz &amp; hbz <span class="label label-default">Prototyp</span></small></h1>
+                <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Ein Entwicklungsprojekt von lbz &amp; hbz <span class="badge">beta</span></small></h1>
             </div>
             @content
             <div class="panel panel-default nwbib-footer">
               <div class="panel-body">
                 @defining(controllers.nwbib.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
-                <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW-Wappen"> 
+                <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen"> 
                 <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo">
-                Dieser RPB-Prototyp enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
+                Die RPB enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
                 }
               </div>
             </div>

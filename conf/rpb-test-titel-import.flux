@@ -1,4 +1,7 @@
-API_URL = "http://test-metadaten-nrw.hbz-nrw.de:1339/api/" + PATH;
+default HOST = "localhost"; // pass e.g. test-metadaten-nrw.hbz-nrw.de
+default API_TOKEN = ""; // pass e.g. API_TOKEN=e8d...
+API_URL = "http://" + HOST + ":1337/api/" + PATH;
+
 FIX = "
 unless " + PICK + "
   reject()
@@ -14,7 +17,8 @@ FLUX_DIR + "output/test-output-strapi.json"
 | regex-decode("(?<data>.+)")
 | stream-to-triples
 | template("{\"${p}\":${o}}") // wrap into 'data' object for strapi
-| open-http(url=API_URL, method="POST", contentType="application/json")
+| log-object("Will POST: ")
+| open-http(url=API_URL, method="POST", contentType="application/json", header="Authorization: Bearer " + API_TOKEN)
 | as-lines
-| print
+| log-object("POST Response: ")
 ;

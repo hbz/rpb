@@ -1,74 +1,308 @@
-# Remove titles that are already in lobid-resources
-# (see https://jira.hbz-nrw.de/browse/RPB-28)
-if exists ("f983")
-  if all_match("f36_","s|sm")
-    reject()
-  end
-end
+# Remove titles that are already in lobid-resources, currently disabled
+# (see https://jira.hbz-nrw.de/browse/RPB-28, https://jira.hbz-nrw.de/browse/RPB-100)
+
+# if exists ("f983")
+#   if all_match("f36_","s|sm")
+#     reject()
+#   end
+# end
 do once()
   put_filemap("https://github.com/hbz/lookup-tables/raw/master/data/almaMmsId2rpbId.tsv",
-    "rpbId2almaMmsId", "key_column": "1", "value_column": "0", "sep_char": "\t")
+    "rpbId2hbzId", "expected_columns": "4", "key_column": "1", "value_column": "2", "sep_char": "\t")
 end
-paste("inLobid", "~RPB", "f00_", "join_char": "")
-lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
-if exists("inLobid")
-  reject()
-end
+# paste("inLobid", "rpbId", "join_char": "")
+# lookup("inLobid", "rpbId2almaMmsId", "delete": "true")
+# if exists("inLobid")
+#   reject()
+# end
 
-do put_macro("add")
+do put_macro("move")
   if exists("$[from]")
     set_array("_temp")
-    copy_field("$[from]", "_temp.$append.f$[to]_")
-    add_field("_temp.*.n$[to]a", "$[type]")
-    move_field("_temp.*", "f$[to][].$append")
+    copy_field("$[from]", "_temp.$append.value")
+    add_field("_temp.*.type", "$[type]")
+    move_field("_temp.*", "$[to][].$append")
+    remove_field("$[from]")
   end
 end
 
-do put_macro("add_all")
-  set_array("f$[to][]")
-  call_macro("add", to: "$[to]", from: "f$[to]?", type: "")
+do put_macro("move_all")
+  set_array("$[to][]")
+  call_macro("move", to: "$[to]", from: "$[from]", type: "")
 end
 
-call_macro("add_all", to: "24") # Paralleltitel
-call_macro("add_all", to: "27") # Abweichende Titel
+do put_macro("add_url")
+  if exists("$[from]")
+    if all_match("$[from]", "(https?|ftp):\\/\\/(\\S+\\.)+\\S+(\\/\\S*)?|")
+      move_field("$[from]", "url[].$append.value")
+      set_field("url[].$last.type", "$[type]")
+    end
+  end
+end
 
-call_macro("add_all", to: "30") # Sachnotation
-call_macro("add_all", to: "31") # Ortsnotation
-call_macro("add_all", to: "32") # Schlagwortkette
+do put_macro("ref_volumeIn_unless_exists")
+  unless exists("$[field]")
+    add_field("$[field]", "s. Zählung in numbering")
+  end
+end
 
-call_macro("add_all", to: "81") # Anmerkungen
-call_macro("add_all", to: "85") # Gesamttitel
+do put_macro("contribution_to_uri")
+  do list (path:"$[field][]", "var": "$i")
+    replace_all("$i.value","_(.*)_","$1")
+    if all_match("$i.value","^00.*|^107n.*|^929n.*")
+      prepend("$i.value", "http://rpb.lobid.org/sw/")
+    elsif all_match("$i.value","^\\d.*")
+      replace_all("$i.value", "(^\\d*)n(\\d|X)", "$1-$2")
+      prepend("$i.value", "https://d-nb.info/gnd/")
+    end
+    replace_all("$i.value", ":?\\s.*", "")
+  end
+end
 
-# URL
-set_array("f90[]")
+do put_macro("to_bool")
+  if exists("$[from]")
+    move_field("$[from]","$[to]~")
+    set_field("$[to]~", "true")
+  end
+end
 
-call_macro("add", to: "90", from: "f90e", type: "Volltext")
-call_macro("add", to: "90", from: "f90f", type: "Auszug")
+do put_macro("add_item")
+  if exists("$[from]")
+    move_field("$[from]", "item[].$append.value")
+    add_field("item[].$last.type", "$[type]")
+  end
+end
+
+move_field("f00_", "rpbId")
+copy_field("rpbId", "hbzId")
+prepend("hbzId", "RPB")
+lookup("hbzId", "rpbId2hbzId", "delete": "true")
+move_field("f01_", "numbering")
+call_macro("to_bool", from: "f14_", to: "doNotIndex")
+move_field("f18_", "inCollection")
+move_field("f20_", "title")
+join_field("title", "; ")
+move_field("f21_", "preferredTitle")
+call_macro("move_all", from: "f24?", to: "parallelTitle")
+call_macro("move_all", from: "f2[37]?", to: "alternativeTitle")
+move_field("f28_", "alternativeSpelling")
+move_field("f36_", "type")
+if is_array("type")
+  move_field("type.$first", "_temp")
+  move_field("_temp", "type") # e.g. ["um","sbd"] -> "um"
+end
+lookup("type", "um": "u") # https://jira.hbz-nrw.de/browse/RPB-205
+
+set_array("bibliographicCitation[]")
+set_array("bibliographicCitation[].$append.value")
+move_field("f70[_123456789]", "bibliographicCitation[].1.value")
+join_field("bibliographicCitation[].1.value", "; ")
+move_field("f70b", "bibliographicCitation[].1.volume")
+move_field("f70h", "bibliographicCitation[].1.issue")
+move_field("f70j", "bibliographicCitation[].1.year")
+move_field("f70s", "bibliographicCitation[].1.pages")
+move_field("f70z", "bibliographicCitation[].1.alternativeNumbering")
+move_field("f71_", "edition")
+move_field("f74_", "publicationLocation")
+move_field("f75_", "publishedBy")
+unless exists("f76a")
+  copy_field("f76b", "f76a")
+end
+move_field("f76a", "publicationDate")
+move_field("f76b", "publicationYear")
+move_field("f77_", "extent")
+call_macro("move_all", from: "f81?", to: "note")
+replace_all("note[].*.value", "/\\. -$", "/")
+call_macro("move_all", from: "f85?", to: "isPartOf")
+do list_as(partOf: "isPartOf[]")
+  if all_contain("partOf.value", " ; ")
+    move_field("partOf.value", "partOfTemp")
+    split_field("partOfTemp", " ; ")
+    move_field("partOfTemp.$first", "partOf.value")
+    move_field("partOfTemp.$last", "partOf.numbering")
+    remove_field("partOfTemp")
+  end
+end
+copy_field("f20u", "superordinate")
+move_field("f86_", "otherId")
+move_field("f95_", "created")
+
+unless all_match("f983", "\\d{4,5}") # https://jira.hbz-nrw.de/browse/RPB-222
+  move_field("f983", "hbzId")
+end
+
+call_macro("move_all", from: "f30?", to: "subject") # Sachnotation
+replace_all("subject[].*.value","_s(n\\d+)_","http://purl.org/lobid/rpb#$1")
+
+call_macro("move_all", to: "spatial", from: "f31?") # Ortsnotation
+do list (path:"spatial[]", "var": "$i")
+  if any_match("$i.value", "^_r\\d{2}_\\s_(\\d*)n(\\d)_$")
+    replace_all("$i.value","^_r\\d{2}_\\s_(\\d*)n(\\d)_$","https://d-nb.info/gnd/$1-$2")
+  elsif any_contain("$i.value", "_r99_")
+    replace_all("$i.value","^_r99_\\s_o(\\d+)_$","https://rpb.lobid.org/spatial#n$1")
+  else
+    replace_all("$i.value","^_r(\\d{2})_$","https://rpb.lobid.org/spatial#n$1")
+  end
+end
+uniq("spatial[]")
+
+call_macro("move_all", to: "subjectComponentList", from: "f32?") # Schlagwortkette
+do list (path:"subjectComponentList[]", "var": "$i")
+  split_field("$i.value", " ; ")
+  set_array("$i.subjectComponent[]")
+  move_field("$i.value", "$i.subjectComponent[].$append.value")
+end
+do list (path:"subjectComponentList[].*.subjectComponent[]", "var": "$i")
+  replace_all("$i.value","_(.*)_","$1")
+  if all_match("$i.value","^00.*|^036n.*|^107n.*|^121n.*|^929n.*|z.*")
+    prepend("$i.value", "http://rpb.lobid.org/sw/")
+  else
+    replace_all("$i.value", "(^\\d*)n(\\d)", "$1-$2")
+    prepend("$i.value", "https://d-nb.info/gnd/")
+  end
+end
+
+# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht, bei Bänden aber oft nur numbering (Zählung) vorhanden:
+if all_equal("type", "sbd")
+  call_macro("ref_volumeIn_unless_exists", field: "publicationDate")
+  call_macro("ref_volumeIn_unless_exists", field: "publicationYear")
+end
+
+if all_match("type", "s|sm|sbd")
+  move_field("isPartOf[]", "inSeries[]")
+end
+
+# Erscheinungsdatum (76a) und Erscheinungsjahr (76b) sind Pflicht bei allen selbständigen Werken (Einheitsmaske):
+if all_match("type", "s|sbd|sm")
+  unless exists("publicationDate")
+    add_field("publicationDate", "N/A")
+  end
+  unless exists("publicationYear")
+    add_field("publicationYear", "N/A")
+  end
+end
+
+unless exists("f39_")
+  move_field("f39x", "f39_") # 39x ist nicht Teil der Planung Eingabeformulare, verschwindet sonst
+  prepend("f39_", "Aus f39x: ")
+end
+move_field("f39_", "responsibilityStatement")
+
+# Quelle, s. https://jira.hbz-nrw.de/browse/RPB-26, https://jira.hbz-nrw.de/browse/RPB-177
+# 70 ist Pflicht für Aufsätze, ist aber häufig nicht gesetzt, nur spezifische Einzelfelder:
+if all_equal("type", "u")
+  if is_empty("bibliographicCitation[].1.value")
+    if exists ("f70t")
+      paste("bibliographicCitation[].1.value", "~In: ", "f70k", "~: ", "f70t", "~. - ", 
+        "bibliographicCitation[].1.volume", "~ (", "bibliographicCitation[].1.year", "~), ", 
+        "bibliographicCitation[].1.issue", " ", "bibliographicCitation[].1.alternativeNumbering", 
+        "~, Seite ", "bibliographicCitation[].1.pages", "~. -" join_char: "")
+      replace_all("bibliographicCitation[].1.value", "In: : ", "In: ")
+      replace_all("bibliographicCitation[].1.value", ", Seite . -$", "")
+      replace_all("bibliographicCitation[].1.value", "  ", " ")
+      replace_all("bibliographicCitation[].1.value", ", , ", ", ")
+    else
+      add_field("bibliographicCitation[].1.value", "s. spez. Felder (volume, issue, etc.)")
+    end
+  end
+end
+
+# Seitenzahl in pages ist Pflichtfeld für Artikel (type=u)
+unless exists("bibliographicCitation[].1.pages")
+ if all_equal("type", "u")
+  if exists("bibliographicCitation[].1")
+    copy_field("bibliographicCitation[].1.value", "bibliographicCitation[].1.pages")
+    prepend("bibliographicCitation[].1.pages", "Kopiert aus #70~, #701 ff.: ")
+    put_var("pages", ".*(S(\\.|eiten?)\\s+\\d+(\\s*-\\s*\\d+)?).*")
+    if all_match("bibliographicCitation[].1.value", "$[pages]")
+      if is_string("bibliographicCitation[].1.value")
+        replace_all("bibliographicCitation[].1.pages", "$[pages]", "Aus #70~, #701 ff.: $1")
+      end
+    end
+  else
+    add_field("bibliographicCitation[].1.pages", "N/A")
+  end
+ end
+end
+
+# Menschenlesbare Werte nutzen (für die Erfassung in Strapi)
+lookup("type", s: "Monografie", sm: "Mehrt. Mono (ÜO)", sbd: "Band")
+
+
+set_array("url[]")
+
+call_macro("add_url", from: "f90e", type: "Volltext")
+call_macro("add_url", from: "f90f", type: "Andere URL")
+call_macro("add_url", from: "f90g", type: "Andere URL")
+
+set_array("item[]")
+
+call_macro("add_item", from: "f90a", type: "MZ") # Mainz
+call_macro("add_item", from: "f90b", type: "SP") # Speyer
+call_macro("add_item", from: "f90c", type: "TR") # Trier
+call_macro("add_item", from: "f90d", type: "KO") # Koblenz
 
 # Person
-set_array("f40[]")
+set_array("person[]")
 
-call_macro("add", to: "40", from: "f40?", type: "Verfasser")
-call_macro("add", to: "40", from: "f41?", type: "Herausgeber")
-call_macro("add", to: "40", from: "f42?", type: "Mitwirkender")
-call_macro("add", to: "40", from: "f43?", type: "Bearb.")
-call_macro("add", to: "40", from: "f44?", type: "Begr.")
-call_macro("add", to: "40", from: "f45?", type: "Sammler")
-call_macro("add", to: "40", from: "f46?", type: "Librettist")
-call_macro("add", to: "40", from: "f47?", type: "Übersetzer")
-call_macro("add", to: "40", from: "f50?", type: "Illustrator")
-call_macro("add", to: "40", from: "f51?", type: "Verfasser von ergänzendem Text")
-call_macro("add", to: "40", from: "f52?", type: "Komponist")
-call_macro("add", to: "40", from: "f56?", type: "Red.")
-call_macro("add", to: "40", from: "f57?", type: "Sonstige")
-call_macro("add", to: "40", from: "f58?", type: "Ausführender")
-call_macro("add", to: "40", from: "f59?", type: "Gefeierter")
+call_macro("move", to: "person", from: "f40?", type: "Verfasser/in")
+call_macro("move", to: "person", from: "f41?", type: "Herausgeber/in")
+call_macro("move", to: "person", from: "f42?", type: "Mitwirkung")
+call_macro("move", to: "person", from: "f43?", type: "Herausgeber/in")
+call_macro("move", to: "person", from: "f44?", type: "Begründer/in eines Werks")
+call_macro("move", to: "person", from: "f45?", type: "Sammler/in")
+call_macro("move", to: "person", from: "f46?", type: "Libretto")
+call_macro("move", to: "person", from: "f47?", type: "Übersetzer/in")
+call_macro("move", to: "person", from: "f50?", type: "Illustrator/in")
+call_macro("move", to: "person", from: "f51?", type: "Verfasser/in von ergänzendem Text")
+call_macro("move", to: "person", from: "f52?", type: "Komponist/in")
+call_macro("move", to: "person", from: "f56?", type: "Herausgeber/in")
+call_macro("move", to: "person", from: "f57?", type: "Sonstige")
+call_macro("move", to: "person", from: "f58?", type: "Performer/in")
+call_macro("move", to: "person", from: "f59?", type: "Gefeierte Person")
+
+call_macro("contribution_to_uri", field: "person")
 
 # Körperschaft
-set_array("f60[]")
+set_array("corporateBody[]")
 
-call_macro("add", to: "60", from: "f60?", type: "HE Urheber")
-call_macro("add", to: "60", from: "f61?", type: "NE hrsg. Körperschaft")
-call_macro("add", to: "60", from: "f69?", type: "Gefeierte Körperschaft")
+remove_field("f60e") # redundante alte RAK-Angabe (s. RPB-79)
+call_macro("move", to: "corporateBody", from: "f60?", type: "Geistiger Schöpfer")
+call_macro("move", to: "corporateBody", from: "f61?", type: "Herausgebendes Organ")
+call_macro("move", to: "corporateBody", from: "f69?", type: "Gefeierte Körperschaft")
+
+call_macro("contribution_to_uri", field: "corporateBody")
+
+if exists("inCollection")
+  set_field("inCollection", "RPB und BiblioVino")
+else
+  if all_contain("rpbId", "w")
+    set_field("inCollection", "nur BiblioVino")
+  else
+    set_field("inCollection", "nur RPB")
+  end
+end
+
+if exists("numbering")
+  set_hash("volumeIn")
+  if is_array("numbering") # Nicht wiederholbar, 1. Wert nehmen
+    move_field("numbering.1", "numbering_temp")
+    remove_field("numbering")
+    move_field("numbering_temp", "numbering")
+  end
+  copy_field("numbering", "volumeIn.numbering") # Zählung (Vorlage)
+  copy_field("_id", "volumeIn.value") # Verknüpfung zur MtM (ÜO)
+  replace_all("volumeIn.value","b\\d+","")
+  prepend("volumeIn.value","http://rpb.lobid.org/")
+end
+
+# ISBNs (f87_, f871 ff.)
+set_array("isbn[]")
+if exists("f87?")
+  set_array("_temp")
+  copy_field("f87?", "_temp.$append.value")
+  add_field("_temp.*.valid~", "true")
+  move_field("_temp.*", "isbn[].$append")
+end
 
 vacuum()

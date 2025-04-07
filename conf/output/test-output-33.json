@@ -1,22 +1,26 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112192",
-  "id" : "https://lobid.org/resources/RPB929t112192",
+  "type" : [ "BibliographicResource", "MultiVolumeBook" ],
+  "rpbId" : "107t982373",
+  "id" : "https://lobid.org/resources/107t982373",
+  "hbzId" : "HT012717208",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Aus der Vereinsgeschichte der KKG \"Kowelenzer Schängelcher\" 1922 e.V.",
-  "extent" : "Ill.",
+  "title" : "SWR-3-Clubmagazin",
+  "alternativeTitle" : [ "SWR-Drei-Clubmagazin", "SWR-3-Clubmagazin" ],
+  "note" : [ "Vorgänger u.d.T.: On" ],
   "publication" : [ {
-    "startDate" : "2011",
+    "location" : [ "Baden-Baden" ],
+    "startDate" : "1998",
+    "publishedBy" : [ "Südwestrundfunk-Media-GmbH" ],
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n704043",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n882040",
+    "label" : "Hörfunk",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -24,31 +28,49 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher | Geschichte 1922-2011",
+    "label" : "Südwestrundfunk | Geschichte 1945- | Zeitschrift",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/5114232-6",
-      "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher",
+      "id" : "https://d-nb.info/gnd/5295938-7",
+      "label" : "Südwestrundfunk",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn11k2192145a",
-      "label" : "Geschichte 1922-2011",
+      "id" : "http://rpb.lobid.org/sw/z64",
+      "label" : "Geschichte 1945-",
       "source" : {
         "id" : "http://rpb.lobid.org/sw",
         "label" : "RPB-Sachsystematik"
       }
+    }, {
+      "id" : "https://d-nb.info/gnd/4067488-5",
+      "label" : "Zeitschrift",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n11100000",
-    "label" : "o11100000",
+    "id" : "https://rpb.lobid.org/spatial#n01",
+    "label" : "Rheinland-Pfalz",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "bibliographicCitation" : "In: KKG Rot-Weiss-Gruen Kowelenzer Schaengelcher: Sessionsheft. - (2011), Seite 23-33. -"
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/5331496-7",
+      "label" : "SWR-3-Club",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
+    },
+    "type" : [ "Contribution" ]
+  } ]
 }

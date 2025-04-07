@@ -1,0 +1,73 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t084698",
+  "id" : "https://lobid.org/resources/929t084698",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Pfarr- und Wallfahrtskirche Pfarrer-Kraus-Anlagen Arenberg [Elektronische Ressource]",
+  "responsibilityStatement" : [ "[Gerd Moos]" ],
+  "publication" : [ {
+    "location" : [ "Koblenz" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n844030",
+    "label" : "Sakralbau",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "id" : "http://purl.org/lobid/rpb#n704634",
+    "label" : "Gegenstände der Volksfrömmigkeit",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Sankt Nikolaus / Koblenz | DVD-ROM",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4515647-5",
+      "label" : "Sankt Nikolaus / Koblenz",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4585131-1",
+      "label" : "DVD-ROM",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n111000000100",
+    "label" : "Arenberg (T.a.Ortsbezirk 1)",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn08k0717486a",
+      "label" : "Moos, Gerd",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

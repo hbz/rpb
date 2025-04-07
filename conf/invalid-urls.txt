@@ -1,0 +1,85 @@
+{"f00_":"121t0111012","f90e":"http://r zeitung%22"}
+{"f00_":"929w18032130","f90f":"http://s dem Privatbesitz von Manfred Rauscher, Wuppertal. In dilibri bereitgestellt mit Unterstützung der Gesellschaft für Geschichte des Weines e.V."}
+{"f00_":"929w18032429","f90f":"http://978-3-423-21537-4"}
+{"f00_":"929w22000334b2","f90f":"http://bvbr.bib-bvb.de:8991/F?func=service&doc_library=BVB01&local_base=BVB01&doc_number=03375149 ..."}
+{"f00_":"036t080368","f90f":"http://deposit.d-nb.de/cgi-bin/dokserv?id=2907068&prov=M&dok var=1&dok ext=htm"}
+{"f00_":"036t080406","f90f":"http://deposit.d-nb.de/cgi-bin/dokserv?id=3042847&prov=M&dok var=1&dok ext=htm="}
+{"f00_":"036t080428","f90f":"http://deposit.d-nb.de/cgi-bin/dokserv?id=2991127&prov=M&dok var=1&dok ext=h l"}
+{"f00_":"036t080446","f90f":"http://deposit.d-nb.de/cgi-bin/dokserv?id=2991881&prov=M&dok var=1&dok ext=htm="}
+{"f00_":"036t081666","f90f":"http://deposit.d-nb.de/cgi-bin/dokserv?id=2971845&prov=M&dok var=1&dok ext=htm=3"}
+{"f00_":"036t082250","f90f":"http://k var=1&dok ext=htm="}
+{"f00_":"036t110936","f90f":"http://d-nb.info/1011162989/04 (Stand: 27.10.2011)"}
+{"f00_":"036t111108","f90f":"http://deposit.d-nb.de/cgi-bin/dokserv?id=3848310&prov=M&dok var=1&dok ext=htm=3"}
+{"f00_":"036t111180","f90f":"http://k var=1&dok ext=htm"}
+{"f00_":"036t120055","f90f":"http://3 Inhaltsverzeichnis"}
+{"f00_":"036t120370","f90f":"http://9 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t120554","f90f":"http://k var=1&dok ext=htm=3"}
+{"f00_":"036t120823","f90f":"http://1 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t121154","f90f":"http://k var=1&dok ext=htm="}
+{"f00_":"036t121160","f90f":"http://4 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t121410","f90f":"http://6 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t121778","f90f":"http://k var=1&dok ext=htm="}
+{"f00_":"036t130108","f90f":"http://2 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t131958","f90f":"http://6 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t140255","f90f":"http://3 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t141283","f90f":"http://7 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t150468","f90f":"http://3 toc.pdf=3 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t160201","f90f":"http://1 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t160242","f90f":"http://7 toc.pdf=3 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t160649","f90f":"http://2 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t160882","f90f":"http://k var=1&dok ext=htm="}
+{"f00_":"036t170442","f90f":"http://5 toc.pdf"}
+{"f00_":"036t170633","f90f":"http://7 toc.pdf"}
+{"f00_":"036t171628","f90f":"http://5 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t171941","f90f":"http://7 toc.pdf"}
+{"f00_":"036t180296","f90f":"http://e 24/4611081.pdf"}
+{"f00_":"036t180495","f90f":"http://6 toc.pdf=3 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t181231","f90f":"http://4 toc.pdf"}
+{"f00_":"036t181297","f90f":"http://4 toc.pdf"}
+{"f00_":"036t181428","f90f":"http://7 toc.pdf"}
+{"f00_":"036t181524","f90f":"http://5 toc.pdf"}
+{"f00_":"036t181665","f90f":"http://7 toc.pdf"}
+{"f00_":"036t181674","f90f":"http://5 toc.pdf"}
+{"f00_":"036t181830","f90f":"http://4 toc.pdf"}
+{"f00_":"036t190154","f90f":"http://4 toc.pdf"}
+{"f00_":"036t190374","f90f":"http://6 toc.pdf"}
+{"f00_":"036t190427","f90f":"http://f 0=isbnissn&q 0=9783110414707&searchTitles=true"}
+{"f00_":"036t191087","f90f":"http://3 toc.pdf"}
+{"f00_":"036t191342","f90f":"http://7 toc.pdf=3 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t191887","f90f":"http://3 toc.pdf"}
+{"f00_":"036t200232","f90f":"http://6 toc.pdf=3 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t200274","f90f":"http://4 toc.pdf"}
+{"f00_":"036t200492","f90f":"http://2 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t200546","f90f":"http://1 toc.pdf"}
+{"f00_":"036t201439","f90f":"http://8 toc.pdf"}
+{"f00_":"036t201556","f90f":"http://2 toc.pdf"}
+{"f00_":"036t201558","f90f":"http://4 toc.pdf"}
+{"f00_":"036t201560","f90f":"http://7 toc.pdf"}
+{"f00_":"036t201632","f90f":"http://1 toc.pdf"}
+{"f00_":"036t210763","f90f":"http://e 12/8903513.pdf"}
+{"f00_":"036t210804","f90f":"http://c library=BVB01&doc number=0157005"}
+{"f00_":"036t210960","f90f":"http://u http://deposit.dnb.de/cgi-bin/dokserv?id=93729129dc9f477fbeb933f922cf64b8&prov=M&dok_var=1&dok_ext"}
+{"f00_":"036t210963","f90f":"http://7 toc.pdf"}
+{"f00_":"036t211351","f90f":"http://1 toc.pdf"}
+{"f00_":"036t211386","f90f":"http://2 toc.pdf"}
+{"f00_":"036t211631","f90f":"http://2 toc.pdf"}
+{"f00_":"036t211888","f90f":"http://9 toc.pdf"}
+{"f00_":"036t211889","f90f":"http://7 toc.pdf"}
+{"f00_":"036t212581","f90f":"http://1 toc.pdf"}
+{"f00_":"036t212582","f90f":"http://2 Inhaltsverzeichnis=A 2"}
+{"f00_":"036t220311","f90f":"http://9 toc.pdf"}
+{"f00_":"036t220814","f90f":"http://6 toc.pdf"}
+{"f00_":"036t220926","f90f":"http://3 toc.pdf"}
+{"f00_":"036t221101","f90f":"http://0 toc.pdf"}
+{"f00_":"036t221269","f90f":"http://8 toc.pdf"}
+{"f00_":"036t221270","f90f":"http://1 toc.pdf"}
+{"f00_":"036t230572","f90f":"http://2 toc.pdf"}
+{"f00_":"036t230672","f90f":"http://1 toc.pdf"}
+{"f00_":"107t01127427","f90f":"http://: http://lbz.rlp.de/Inhaltsverzeichnis/HT010120929.pdf ; Hinw.: Inhaltsverzeichnis"}
+{"f00_":"121t090192","f90f":"http://z Idzior"}
+{"f00_":"121t090795","f90f":"http://digitool.hbz-nrw.de:1801/webclient/DeliveryManager?pid=2743706&custom_att_2=simple_viewer,y&quot;Partei, Partei, wer sollte sie nicht nehmen ... &quot"}
+{"f00_":"121t100552","f90f":"http://digitool.hbz-nrw.de:1801/webclient/DeliveryManager?pid=3757740&custom_att_2=simple_viewer,yDie Söhne des heiligen Benedikt in Trier,xInhaltsverzeichnis"}
+{"f00_":"121t100641","f90f":"http://digitool.hbz-nrw.de:1801/webclient/DeliveryManager?pid=1866310&custom_att_2=simple_viewer,yGrenzgänger - Exkursionen in Trier"}
+{"f00_":"121t100752","f90f":"http://digitool.hbz-nrw.de:1801/webclient/DeliveryManager?pid=3612232&custom_att_2=simple_viewer,yEifelsteig Aachen - Trier plus Partnerwege in NRW"}
+{"f00_":"121t100753","f90f":"http://digitool.hbz-nrw.de:1801/webclient/DeliveryManager?pid=2358426&custom_att_2=simple_viewer,yDas Programm der frühkonstantinischen Decke in Trier"}
+{"f00_":"121t111270","f90f":"http://d-nb.info/1010593102/about/html (Stand: 08.11.2011)"}

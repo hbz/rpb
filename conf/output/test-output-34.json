@@ -4,21 +4,17 @@
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB929t112193",
-      "label" : "Aktuell : das Krankenhaus in Ihrer Region"
+      "id" : "http://rpb.lobid.org/107t982373",
+      "label" : "SWR-3-Clubmagazin"
     } ],
-    "numbering" : "Nachgewiesen 2010 - 2012,1"
+    "numbering" : "1998,1(Sept.) -"
   } ],
-  "rpbId" : "RPB929t112193b1",
-  "id" : "https://lobid.org/resources/RPB929t112193b1",
+  "rpbId" : "107t982373b1",
+  "id" : "https://lobid.org/resources/107t982373b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Aktuell : das Krankenhaus in Ihrer Region | Nachgewiesen 2010 - 2012,1",
-  "note" : [ "Nachfolger: Kaleidoskop. 2012 -" ],
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ]
-  } ]
+  "title" : "SWR-3-Clubmagazin : 1998,1(Sept.) -"
 }

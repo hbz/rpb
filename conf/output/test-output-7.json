@@ -1,21 +1,95 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121516",
-  "id" : "https://lobid.org/resources/RPB036t0121516",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t112207",
+  "id" : "https://lobid.org/resources/929t112207",
+  "hbzId" : "CT003001222",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlingen und das Kloster Lorsch",
+  "title" : "Vom deutschen Rhein [Elektronische Ressource] : Mit landschaftlichen u. architektonischen Ansichten nebst Illustrationen zu rheinischen Dichtungen, in 25 Blättern",
+  "extent" : "[1], [24] Bl. : überw. Ill. ; quer 4-o",
+  "note" : [ "Um die Hälfte reduzierte Fassung der Ansichtenfolge \"Vom deutschen Rhein\" (vgl. Schmitt 210). Das Werk erschien gleichzeitig auch bei Neubner in Köln (vgl. Schmitt 212) und 1880 abermals bei Baumann & Co. ; In Fraktur" ],
+  "responsibilityStatement" : [ "von Caspar Scheuren" ],
   "publication" : [ {
-    "startDate" : "1967",
+    "location" : [ "Düsseldorf" ],
+    "publishedBy" : [ "Baumann" ],
     "type" : [ "PublicationEvent" ]
   } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n102045",
+    "label" : "Regionenbeschreibung",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Scheuren, Caspar / 1810-1887 | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4123412-1",
+      "label" : "Illustration",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4279198-4",
+      "label" : "Farblithografie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4049739-2",
+      "label" : "Rhein",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4036774-5",
+      "label" : "Lyrik",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4002214-6",
+      "label" : "Anthologie",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4159043-0",
+      "label" : "Pressendruck",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4511937-5",
+      "label" : "Online-Ressource",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ]
+  } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n339",
-    "label" : "o339",
+    "id" : "https://rpb.lobid.org/spatial#n03",
+    "label" : "Rheinland",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -24,14 +98,18 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "https://d-nb.info/gnd/118607359",
+      "label" : "Scheuren, Caspar / 1810-1887",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Landkreis Bingen: Heimat-Jahrbuch. - 1967, S. 23-26"
+  "fulltextOnline" : [ {
+    "id" : "https://nbn-resolving.org/urn:nbn:de:hbz:061:2-536",
+    "label" : "urn:nbn:de:hbz:061:2-536"
+  } ]
 }

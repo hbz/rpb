@@ -1,0 +1,39 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051147425",
+  "rppdId" : "pk00028",
+  "gndIdentifier" : "1051147425",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Lehnen, Ewald",
+  "professionOrOccupation" : [ {
+    "label" : "Tiefbauingenieur",
+    "id" : "https://rpb.lobid.org/sw/00Sn02x8761a"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  } ],
+  "dateOfBirth" : [ "1894-01-02" ],
+  "placeOfBirth" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  } ],
+  "dateOfDeath" : [ "Oktober 1989" ],
+  "placeOfDeath" : [ {
+    "label" : "Kirn, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13309052"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Technik allgemein",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#31.16p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2005-11-16",
+    "source" : [ "Rhein-Zeitung, Ausg. M (Allgemeiner Anzeiger), Nr. 24 vom 29./30.1.1994" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "1936 - 1957 Stadtbaumeister" ]
+}

@@ -1,0 +1,39 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "036t0115179",
+  "id" : "https://lobid.org/resources/036t0115179",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Beiträge zur Wormser Stadtbeschreibung des Hochmittelalters",
+  "note" : [ "[Wichtige Arbeit für die historische Topographie der Stadt Worms im Früh- und Hochmittelalter Umsichtige Quelleninterpretation und Anwendung der patrozinienkundlichen Methode führen weit über die Ergebnisse der seitherigen Forschung hinaus So wird das Datum der Pfarreinteilung des Kernes der Stadt um mindestens 2 Jahrhunderte zurückverlegt Aufhellung der ältesten Geschichte der Kirchen in der Stadt (St Rupert St Lambert St Magnus St Johann Dom) sowie der Vorstädte (Liebfrauen Amandus Remigius im Norden Andreas im Westen St Michael und St Caecilia im Süden) - Besiedlung der Vorstädte sowie Besiedlung der Stadt im 11-13 Jh]" ],
+  "publication" : [ {
+    "startDate" : "1952",
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n560100",
+    "label" : "Siedlung allgemein",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/132394235",
+      "label" : "Gensicke, Hellmuth / 1917-2006",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "Der Wormsgau. Bd 3, H. 2 (Okt. 1952), 49-63"
+}

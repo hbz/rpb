@@ -1,0 +1,36 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051215544",
+  "rppdId" : "pta1491",
+  "gndIdentifier" : "1051215544",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zimmer, Franz Nikolaus",
+  "professionOrOccupation" : [ {
+    "label" : "Lehrer",
+    "id" : "https://d-nb.info/gnd/4035088-5"
+  } ],
+  "dateOfBirth" : [ "1883-07-28" ],
+  "placeOfBirth" : [ {
+    "label" : "Weiten <Dillingen, Saar>",
+    "id" : "Weiten <Dillingen, Saar>"
+  } ],
+  "dateOfDeath" : [ "1955-05-16" ],
+  "placeOfDeath" : [ {
+    "label" : "Trier, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n21100000"
+  } ],
+  "publication" : [ "Albero v. Montreuil, Erzbischof v. Trier - in: Trierische Chronik 3 (1907) 113-123 und 145-154", "¬Ein¬ altes trierisches Stadttor (.. Castelport) - in: Trierisches Archiv, 11 (1907) 86 f.", "Des hl. Bernard v. Clairvaux Beziehungen zu Trier - in: Pastor Bonus, 1951, 41-52 und 87-93", "Wissenschaftl. Bearbeitungr v. 2 Landkarten: Archiepiscopatus Trevirensis", "¬Das¬ Erzbistum Trier bis um 1800, 1952", "Bistum Trier Stand 1.4.1954", "Geschichte der Trierer Bürger-Sodalität, Trier 1912", "¬Das¬ Tugendleben der Dienerin Gottes Schwester Blandine Merten, Ahrweiler 1955", "Urkunden zur Verfassungsgeschichte Triers im 14. Jh - in: TA 11 (1907) 83-83", "Peter v. Wederath, ein trierischer Bildhauer der Spätgotik - in: Trierische Chronik 6 (1910) 153 ff" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Bildung. Erziehung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.4p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11",
+    "source" : [ "Nikolaus Irsch: Nachruf, in: Nachrichtenblatt des Vereins der ehemal Schüler und Lehrer des Friedrich-Wilhelms-Gymnasiums in Trier, Nr.6/ 1955, 13 f.", "Personalakten im: Landeshauptarchiv Koblenz Best.910 Nr.587", "Heinz Monz: Der vergessene Fachbereich, in: Neues Trierisches Jahrbuch, 1961 ff, 1988, 59-68 (besonders 66 f)." ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Oberstudiendirektor. - Nach Schulbesuch und Studium in Trier 1908 zum Priester geweiht, bis 1912 vier Jahre Kaplan an Trier-St. Gangolf und gleichzeitig Religionslehrer. 1912-1915 Studium romanischer Philologie, Geschichte und Kirchenrecht in Straßburg, Münster und Bonn, dort 1920 Lehramtsprüfung für Religion, Hebräisch und Französ. Während des Ersten Weltkrieges Krankenpfleger und Seelsorger, zuletzt als Divisionspfarrer tätig - Im Schuldienst in Bad Kreuznach 1921-1933. Dort Mitglied der Zentrumspartei (v. wahlfähigen Alter bis zur Auflösung 1933), ebenso Mitglied der Stadtverordnetenversammlung und Leiter der Zentrumsfraktion. Nach einer nächtl. Belästigung durch NSDAP-Mitglieder Versetzung als Religionslehrer nach Trier. Hier seit 1937 gleichzeitig Militärseelsorger. Auch während der NS-Zeit erteilte Z Religionsunterricht an weiteren höheren Schulen in Trier, wobei er sich stets gegen Benachteiligung religiös gebundener Schüler und Lehrer einsetzte. Während des Zweiten Weltkrieges war Z (neben dem Schulunterricht) Militärpfarrer für Trier und Luxemburg. Dabei hatte er auch die Aufgabe, die zum Tode verurteilten Soldaten ( = vor allem zum Dienst in der deutschen Armee gezwungene sogenannte \"Fahnenflüchtige\" Elsässer und Lothringer) zur Hinrichtung zu begleiten. Das war nach seiner Aussage die schwerste Pflicht seines Berufes, die ihn Jahre seines Lebens gekostet habe. - Nach dem Kriege wurde Z zu Schulbeginn im Oktober 1945 die Leitung des Kaiser-Wilhelm-Gymnasiums übertragen. Aus besatzungspolit. Gründen wurde er erst 1946 zum Direktor ernannt, obwohl er kein Mitglied der NSDAP gewesen war. 1947 folgte die Ernennung zum Oberstudienrat und 1948 zum Oberstudiendirektor. 1949 Ruhestand.\n\nUnmittelbar nach dem Krieg setzte er sich für die Gründung einer landwirtschaftl. Fakultät und eines Instituts für Ökologie ein. - Seit etwa 1950 war er mit der Seelsorge für Polizei in den Regierungsbezirken Trier und Koblenz betraut. - Sein Interesse neben dem Schuldienst galt schon früh der Kirchen- und der Trierer Geschichte. So erarbeitete er eine historische Karte des alten Erzbistums und der neuen Diözese Trier und sammelte historische Unterlagen über die Ursuline Blandine Merten. - Nach dem Zweiten Weltkrieg wurde Z zum päpstl. Geheimkämmerer ernannt. Seine Vorbildhaftigkeit lag wohl darin, daß er als Bruder, als Freund, als Seelsorger und als Pädagoge nach seinem Gewissen und mit viel Güte handelte. - Im Ersten Weltkrieg war er mit dem Eisernen Kreuz II. Klasse, dem Albrechtsorden 1. Klasse mit Schwertern und dem Rote-Kreuz-Orden 3. Klasse ausgezeichnet worden. - ---[Daten übernommen aus: Theresia Zimmer, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+}

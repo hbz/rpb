@@ -13,6 +13,7 @@ import java.net.URL;
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -41,14 +43,17 @@ import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.client.Client;
-import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.MatchAllQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.node.InternalSettingsPreparer;
 import org.elasticsearch.node.Node;
-import org.elasticsearch.node.NodeBuilder;
+import org.elasticsearch.node.NodeValidationException;
+import org.elasticsearch.plugins.Plugin;
 import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.transport.Netty4Plugin;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.github.jsonldjava.core.JsonLdError;
@@ -68,6 +73,7 @@ import play.libs.Json;
  */
 public class Classification {
 
+	private static final int MAX_RESULT_WINDOW = 15000;
 	private static final String RPB_SPATIAL = "https://rpb.lobid.org/spatial#";
 	private static final String INDEX = "rpb";
 
@@ -113,11 +119,11 @@ public class Classification {
 				} else
 					addAsSubClass(subClasses, hit, json, broader.findValue("@id").asText());
 			}
-			if (this == SPATIAL && (CONFIG.getBoolean("index.nwbibspatial.enrich")
+			if (this == SPATIAL && (CONFIG.getBoolean("index.rpbspatial.enrich")
 					|| Play.isTest())) { /* SpatialToSkos uses Play test server */
 				addFromCsv(subClasses);
 			}
-			Collections.sort(topClasses, comparator);
+			Collections.sort(topClasses, comparator(Classification::idText));
 			return Pair.of(topClasses, subClasses);
 		}
 
@@ -154,16 +160,15 @@ public class Classification {
 		 */
 		public JsonNode buildRegister() {
 			final List<JsonNode> result = ids(classificationData()).stream()
-					.sorted(comparator).collect(Collectors.toList());
+					.sorted(comparator(Classification::labelText)).collect(Collectors.toList());
 			return Json.toJson(result);
 		}
 
 		private SearchResponse classificationData() {
-			int maxSize = 10000; // default max_result_window
 			MatchAllQueryBuilder matchAll = QueryBuilders.matchAllQuery();
 			SearchRequestBuilder requestBuilder = client.prepareSearch(INDEX)
 					.setSearchType(SearchType.DFS_QUERY_THEN_FETCH).setQuery(matchAll)
-					.setTypes(elasticsearchType).setFrom(0).setSize(maxSize);
+					.setTypes(elasticsearchType).setFrom(0).setSize(MAX_RESULT_WINDOW);
 			return requestBuilder.execute().actionGet();
 		}
 	}
@@ -188,12 +193,24 @@ public class Classification {
 	private static Node node;
 
 	/** Compare German strings */
-	public static Comparator<JsonNode> comparator =
-			(JsonNode o1, JsonNode o2) -> Collator.getInstance(Locale.GERMAN)
-					.compare(labelText(o1), labelText(o2));
+	public static Comparator<JsonNode> comparator(Function<JsonNode, String> fun) {
+		return (JsonNode o1, JsonNode o2) -> Collator.getInstance(Locale.GERMAN)
+				.compare(fun.apply(o1), fun.apply(o2));
+	}
+
+	private static class EmbeddedNode extends Node {
+		public EmbeddedNode(Settings preparedSettings, Collection<Class<? extends Plugin>> classpathPlugins) {
+			super(InternalSettingsPreparer.prepareEnvironment(preparedSettings, null), classpathPlugins);
+		}
+	}
 
 	private Classification() {
 		/* Use via static functions, no instantiation. */
+	}
+
+	private static String idText(JsonNode node) {
+		String[] segments = node.get("value").asText().split("#");
+		return segments[segments.length-1].replaceAll("^n6$", "n0");
 	}
 
 	/**
@@ -229,11 +246,8 @@ public class Classification {
 	 */
 	public static JsonNode ids(String q, String t) {
 		QueryBuilder queryBuilder = QueryBuilders.boolQuery()
-				.should(QueryBuilders.matchQuery(//
-						"@graph." + Property.LABEL.value + ".@value", q))
-				.should(QueryBuilders.idsQuery(Type.NWBIB.elasticsearchType,
-						Type.SPATIAL.elasticsearchType).ids(q))
-				.minimumNumberShouldMatch(1);
+				.must(QueryBuilders.idsQuery(Type.NWBIB.elasticsearchType,
+						Type.SPATIAL.elasticsearchType).addIds(q));
 		SearchRequestBuilder requestBuilder = client.prepareSearch(INDEX)
 				.setSearchType(SearchType.DFS_QUERY_THEN_FETCH).setQuery(queryBuilder);
 		if (t.isEmpty()) {
@@ -296,7 +310,7 @@ public class Classification {
 		return result;
 	}
 
-	private static String labelText(JsonNode json) {
+	public static String labelText(JsonNode json) {
 		String label = json.get("label").asText();
 		if (label.contains("Stadtbezirk")) {
 			List<Pair<String, String>> roman = Arrays.asList(Pair.of("I", "a"),
@@ -349,26 +363,26 @@ public class Classification {
 							subClasses.put(broaderId, new ArrayList<JsonNode>());
 						List<JsonNode> sub = subClasses.get(broaderId);
 						sub.add(Json.toJson(ImmutableMap.of("value", thisId, "label", vg + ", Verbandsgemeinde", "notation", thisNotation, "hits", hits)));
-						Collections.sort(sub, comparator);
+						Collections.sort(sub, comparator(Classification::labelText));
 						broader = thisNotation;
 					}
 				} 
 				if(broader == null || broader.trim().isEmpty()) {
 					// directly under n6
 					topClasses.add(Json.toJson(ImmutableMap.of("value", id, "label", label)));
-				} else if (hits > 0) {
+				} else if (hits > 0 || Play.isTest()) { /* SpatialToSkos uses Play test server */
 					String broaderId = RPB_SPATIAL + "n" + broader;
 					if (!subClasses.containsKey(broaderId))
 						subClasses.put(broaderId, new ArrayList<JsonNode>());
 					List<JsonNode> sub = subClasses.get(broaderId);
 					sub.add(Json.toJson(ImmutableMap.of("value", id, "label", label, "notation", notation, "hits", hits)));
-					Collections.sort(sub, comparator);
+					Collections.sort(sub, comparator(Classification::labelText));
 				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Collections.sort(topClasses, comparator);
+		Collections.sort(topClasses, comparator(Classification::labelText));
 		return Pair.of(topClasses, removeDuplicates(subClasses));
 	}
 
@@ -419,7 +433,9 @@ public class Classification {
 			subClasses.put(broader, new ArrayList<JsonNode>());
 		List<JsonNode> list = subClasses.get(broader);
 		list.addAll(valueAndLabelWithNotation(hit, json));
-		Collections.sort(list, comparator);
+		// non-n6 entries have 2-digit IDs or a second `n` -> sort by ID (RPB-47)
+		boolean sortById = idText(list.get(0)).matches("^n\\d{2}$|^n\\d+n\\d+$");
+		Collections.sort(list, comparator(sortById ? Classification::idText : Classification::labelText));
 	}
 
 	private static String focus(JsonNode json) {
@@ -467,24 +483,32 @@ public class Classification {
 
 	/** Start up the embedded Elasticsearch classification index. */
 	public static void indexStartup() {
-		Settings clientSettings = ImmutableSettings.settingsBuilder()
-				.put("path.home", new File(".").getAbsolutePath())
-				.put("http.port",
-						play.Play.application().isTest() ? "8855"
-								: CONFIG.getString("index.es.port.http"))
-				.put("transport.tcp.port", play.Play.application().isTest() ? "8856"
-						: CONFIG.getString("index.es.port.tcp"))
-				.build();
-		node =
-				NodeBuilder.nodeBuilder().settings(clientSettings).local(true).node();
+		boolean isTest = play.Play.application().isTest();
+		String httpPort = isTest ? "8855" : CONFIG.getString("index.es.port.http");
+		String tcpPort = isTest ? "8856" : CONFIG.getString("index.es.port.tcp");
+		node = new EmbeddedNode(Settings.builder().put("transport.type", "netty4")//
+				.put("http.type", "netty4")//
+				.put("http.enabled", "true")//
+				.put("path.home", new File(".").getAbsolutePath())//
+				.put("http.port", httpPort)//
+				.put("transport.tcp.port", tcpPort)//
+				.put("cluster.routing.allocation.disk.threshold_enabled", false)//
+				.build(), Arrays.asList(Netty4Plugin.class));
+		try {
+			node.start();
+		} catch (NodeValidationException e) {
+			e.printStackTrace();
+		}
 		client = node.client();
 		client.admin().cluster().prepareHealth().setWaitForYellowStatus().execute()
 				.actionGet();
 		if (!client.admin().indices().prepareExists(INDEX).execute().actionGet()
 				.isExists()) {
-			indexData(CONFIG.getString("index.data.nwbibsubject"), Type.NWBIB);
-			indexData(CONFIG.getString("index.data.nwbibspatial"), Type.SPATIAL);
+			indexData(CONFIG.getString("index.data.rpbsubject"), Type.NWBIB);
+			indexData(CONFIG.getString("index.data.rpbspatial"), Type.SPATIAL);
 			client.admin().indices().refresh(new RefreshRequest()).actionGet();
+			Settings indexSettings = Settings.builder().put("max_result_window", MAX_RESULT_WINDOW).build();
+			client.admin().indices().prepareUpdateSettings().setSettings(indexSettings).setIndices(INDEX).get();
 		}
 	}
 
@@ -496,8 +520,8 @@ public class Classification {
 			List<String> jsonLd = toJsonLd(new URL(dataUrl));
 			for (String concept : jsonLd) {
 				String id = Json.parse(concept).findValue("@id").textValue();
-				IndexRequestBuilder indexRequest = client
-						.prepareIndex(INDEX, type.elasticsearchType, id).setSource(concept);
+				IndexRequestBuilder indexRequest = client.prepareIndex(INDEX, type.elasticsearchType, id)
+						.setSource(concept.getBytes(), XContentType.JSON);
 				bulkRequest.add(indexRequest);
 			}
 		} catch (MalformedURLException e) {
@@ -511,11 +535,15 @@ public class Classification {
 
 	/** Shut down the embedded Elasticsearch classification index. */
 	public static void indexShutdown() {
-		node.close();
+		try {
+			node.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
-	 * @param uri The nwbib or nwbibspatial URI
+	 * @param uri The nwbib or rpbspatial URI
 	 * @return The list of path segments to the given URI in its classification,
 	 *         e.g. for URI https://nwbib.de/subjects#N582060:
 	 *         [https://nwbib.de/subjects#N5, https://nwbib.de/subjects#N580000,

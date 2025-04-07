@@ -1,30 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112196",
-  "id" : "https://lobid.org/resources/RPB929t112196",
+  "rpbId" : "929t112195",
+  "id" : "https://lobid.org/resources/929t112195",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Coming home mit Commende",
+  "title" : "Der BAP kam aus Unkel",
   "extent" : "Ill.",
   "publication" : [ {
     "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844200",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n844000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n824000",
+    "label" : "Musikerin. Musiker",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -32,47 +24,33 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Deutscher Orden / Kommende Waldbreitbach | Denkmalschutz | Schicker, Viktor | Private Investition | Geschichte 2009-2011",
+    "label" : "Unkel | Niedecken, Wolfgang / 1951- | Biografie",
     "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n090287",
-      "label" : "Deutscher Orden / Kommende Waldbreitbach",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4011457-0",
-      "label" : "Denkmalschutz",
+      "id" : "https://d-nb.info/gnd/4061836-5",
+      "label" : "Unkel",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09k1362487a",
-      "label" : "Schicker, Viktor",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4454409-1",
-      "label" : "Private Investition",
+      "id" : "https://d-nb.info/gnd/118942247",
+      "label" : "Niedecken, Wolfgang / 1951-",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09m0508511a",
-      "label" : "Geschichte 2009-2011",
+      "id" : "https://d-nb.info/gnd/4006804-3",
+      "label" : "Biografie",
       "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13809076",
-    "label" : "o13809076",
+    "id" : "https://rpb.lobid.org/spatial#n13807073",
+    "label" : "Unkel, Stadt",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -81,14 +59,16 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
-      "label" : "Ruland, Wolfgang"
+      "id" : "http://rpb.lobid.org/sw/00Pn08k0685884a",
+      "label" : "Ruland, Wolfgang",
+      "altLabel" : [ "WR" ],
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 26-27"
+  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 16-18"
 }

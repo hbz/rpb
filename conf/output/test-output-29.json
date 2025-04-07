@@ -1,23 +1,72 @@
 {
-  "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
   "isPartOf" : [ {
     "type" : [ "IsPartOfRelation" ],
     "hasSuperordinate" : [ {
-      "id" : "https://lobid.org/resources/RPB107t982376",
-      "label" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte"
-    } ],
-    "numbering" : "Ausg. 1.1997(Dez.) -"
+      "label" : "150 Jahre Hambacher Fest : Festausgabe"
+    } ]
   } ],
-  "rpbId" : "RPB107t982376b1",
-  "id" : "https://lobid.org/resources/RPB107t982376b1",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "107t01147878",
+  "id" : "https://lobid.org/resources/107t01147878",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte | Ausg. 1.1997(Dez.) -",
+  "title" : "Um- und Ausbau des Hambacher Schlosses von 1979 bis 1982",
+  "extent" : "Ill.",
   "publication" : [ {
+    "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
-  } ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n844040",
+    "label" : "Burg. Schloss",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Geschichte 1979-1982",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4094596-0",
+      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn01s147878357a",
+      "label" : "Geschichte 1979-1982",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n316000000700",
+    "label" : "Hambach (Ortsbezirk)",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/1123984425",
+      "label" : "Trautmann, Herbert / 1948-2006",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Verfasser/in"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "bibliographicCitation" : "Die Pfalz am Rhein <Neustadt, Weinstraße>. - 55 (1982), S. 175-180"
 }

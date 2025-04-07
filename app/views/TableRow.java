@@ -18,6 +18,10 @@ import controllers.nwbib.Application;
 import controllers.nwbib.Classification;
 import controllers.nwbib.Lobid;
 import play.Logger;
+import play.libs.F.Promise;
+import play.libs.ws.WS;
+import play.libs.ws.WSRequest;
+import play.libs.ws.WSResponse;
 
 /**
  * Different ways of serializing a table row
@@ -38,6 +42,7 @@ public enum TableRow {
 			return filtered.isEmpty() ? ""
 					: String.format("<tr><td>%s</td><td>%s</td></tr>", label,
 							filtered.stream()
+									.flatMap(s -> Arrays.asList(s.split("; ")).stream())
 									.map(val -> label(doc, property, param, val, keys))
 									.collect(Collectors.joining(
 											property.equals("subjectChain") ? " <br/> " : " | ")));
@@ -48,7 +53,9 @@ public enum TableRow {
 			String value = property.equals("subjectChain")
 					? val.replaceAll("\\([\\d,]+\\)$", "").trim() : val;
 			if (!labels.isPresent()) {
-				return refAndLabel(property, value, labels)[0];
+				String[] refAndLabel = refAndLabel(property, value, labels);
+				return value.startsWith("http") ? String.format("<a title='%s' href='%s'>%s</a>",
+						refAndLabel[0], refAndLabel[0], refAndLabel[1]) : refAndLabel[0];
 			}
 			String term = value;
 			if (param.equals("q")) {
@@ -104,17 +111,21 @@ public enum TableRow {
 		private String label(JsonNode doc, String value, List<String> properties) {
 			List<String> results = new ArrayList<>();
 			List<String> resultValues = labelsFor(doc, value, properties);
-			for (int i = 0; i < resultValues.size(); i++) {
-				String currentValue = resultValues.get(i);
-				String[] refAndLabel =
-						refAndLabel(properties.get(i), currentValue, Optional.empty());
-				String result =
-						properties.get(i).equals("numbering") || value.equals("--")
-								? currentValue
-								: String.format(
-										"<a title=\"Titeldetails anzeigen\" href=\"%s\">%s</a>",
-										refAndLabel[0], refAndLabel[1]);
-				results.add(result.replace("Band", "").trim());
+			if (doc.get(properties.get(0)) != null) {
+				JsonNode labelNode = doc.get(properties.get(0)).iterator().next().get("label");
+				for (int i = 0; i < resultValues.size(); i++) {
+					String currentValue = resultValues.get(i);
+					String[] refAndLabel =
+							refAndLabel(properties.get(i), currentValue, Optional.empty());
+					String label = labelNode != null ? labelNode.textValue() : refAndLabel[1];
+					String result =
+							properties.get(i).equals("numbering") || value.equals("--")
+							? currentValue
+									: !value.startsWith("http") ? label : String.format(
+											"<a title=\"Titeldetails anzeigen\" href=\"%s\">%s</a>",
+											refAndLabel[0], label);
+					results.add(result.replace("Band", "").trim());
+				}
 			}
 			return results.stream().collect(Collectors.joining(", Band "));
 		}
@@ -122,7 +133,7 @@ public enum TableRow {
 		private List<String> labelsFor(JsonNode doc, String value,
 				List<String> keys) {
 			List<String> result = new ArrayList<>();
-			if (doc != null) {
+			if (doc != null && doc.get(keys.get(0)) != null) {
 				JsonNode node = doc.get(keys.get(0)).iterator().next();
 				JsonNode id = node.get("id");
 				JsonNode label = node.get("label");
@@ -181,8 +192,7 @@ public enum TableRow {
 			return id;
 		}
 
-		List<JsonNode> graphs = doc.findValues("@graph");
-		for (JsonNode node : graphs.isEmpty() ? doc : graphs.get(0)) {
+		for (JsonNode node :  doc ) {
 			for (String key : labelKeys.get()) {
 				String idField = node.has("id") ? "id" : "@id";
 				if (node.has(key) && node.has(idField)
@@ -210,17 +220,33 @@ public enum TableRow {
 
 	String[] refAndLabel(String property, String value,
 			Optional<List<String>> labels) {
+		if (value.contains("lobid.org/resources/")) {
+			value = rpbUrlIfInRpb(value);
+		}
 		if ((property.equals("containedIn") || property.equals("hasPart")
-				|| property.equals("isPartOf") || property.equals("hasSuperordinate"))
-				&& value.contains("lobid.org")) {
-			return new String[] {
-					value.replaceAll("https://lobid.org/resources?/", "http://rpb.lobid.org/"),
-					Lobid.resourceLabel(value) };
+				|| property.equals("isPartOf") || property.equals("hasSuperordinate")
+				|| property.equals("bibliographicCitation")) && value.contains("lobid.org")) {
+			return new String[] { value.contains("rpb") // replaced via rpbUrlIfInRpb()
+					? value.replaceAll("http.+/", "/") // full URL -> relative link
+					: value, Lobid.resourceLabel(value) };
 		}
 		String label =
 				labels.isPresent() && labels.get().size() > 0 ? labels.get().get(0)
 						: value.startsWith("http") ? URI.create(value).getHost() : value;
 		return new String[] { value, label };
+	}
+
+	String rpbUrlIfInRpb(String value) {
+		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", "https://rpb.lobid.org/$1");
+		WSRequest rpbRequest = WS.url(rpbUrl).setQueryParameter("format", "json");
+		JsonNode rpbJson = rpbRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
+		return rpbJson.get("member").elements().hasNext() ? rpbUrl : rpbUrlIfhasRpbId(value);
+	}
+
+	String rpbUrlIfhasRpbId(String value) {
+		WSRequest lobidRequest = WS.url(value).setHeader("Content-Type", "application/json");
+		JsonNode lobidJson = lobidRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
+		return lobidJson.has("rpbId") ? "https://rpb.lobid.org/" + lobidJson.get("rpbId").textValue() : value;
 	}
 
 	public abstract String process(JsonNode doc, String property, String param,

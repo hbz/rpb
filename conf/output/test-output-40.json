@@ -1,0 +1,20 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "http://rpb.lobid.org/107t982376",
+      "label" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte"
+    } ],
+    "numbering" : "Ausg. 1.1997(Dez.) -"
+  } ],
+  "rpbId" : "107t982376b1",
+  "id" : "https://lobid.org/resources/107t982376b1",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte : Ausg. 1.1997(Dez.) -"
+}

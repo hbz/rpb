@@ -1,0 +1,78 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "type" : [ "BibliographicResource", "Book" ],
+  "rpbId" : "929t084664",
+  "id" : "https://lobid.org/resources/929t084664",
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "type" : [ "Collection" ],
+    "label" : "Rheinland-Pfälzische Bibliographie"
+  } ],
+  "title" : "100 Jahre St. Barbara in Koblenz : 1908 - 2008",
+  "alternativeTitle" : [ "Hundert Jahre St. Barbara in Koblenz" ],
+  "extent" : "99 S. : zahlr. Ill.",
+  "responsibilityStatement" : [ "Alten- und Pflegeheim St. Barbara Koblenz. [Autoren: Ulrich Keller ... ]" ],
+  "publication" : [ {
+    "location" : [ "Koblenz" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n523090",
+    "label" : "Altenhilfe",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    }
+  }, {
+    "type" : [ "ComplexSubject" ],
+    "label" : "Alten- und Pflegeheim St. Barbara / Koblenz | Geschichte 1908-2008",
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/10360311-6",
+      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Sn08s0514595a",
+      "label" : "Geschichte 1908-2008",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    } ]
+  } ],
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n11100000",
+    "label" : "Koblenz, Kreisfreie Stadt",
+    "type" : [ "Concept" ],
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    }
+  } ],
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Pn04k3045137a",
+      "label" : "Keller, Ulrich",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/10360311-6",
+      "label" : "Alten- und Pflegeheim St. Barbara / Koblenz",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/cre",
+      "label" : "Geistiger Schöpfer"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

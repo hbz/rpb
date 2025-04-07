@@ -1,0 +1,47 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/126790086",
+  "rppdId" : "pta1486",
+  "gndIdentifier" : "126790086",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/126790086",
+    "collection" : {
+      "name" : "Wikipedia-Personenartikel"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zill, Egon",
+  "professionOrOccupation" : [ {
+    "label" : "Bäcker",
+    "id" : "https://d-nb.info/gnd/4120966-7"
+  }, {
+    "label" : "Lagerkommandant",
+    "id" : "https://d-nb.info/gnd/4276356-3"
+  } ],
+  "dateOfBirth" : [ "1906-03-26" ],
+  "placeOfBirth" : [ {
+    "label" : "Plauen",
+    "id" : "Plauen"
+  } ],
+  "dateOfDeath" : [ "1974-10-23" ],
+  "placeOfDeath" : [ {
+    "label" : "München",
+    "id" : "München"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Industrie. Handwerk",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#10.12p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11",
+    "source" : [ "Akte Egon Zill BDC", "Marcel Engel/André Hohengarten: Hinzert. Das SS-Sonderlager im Hunsrück 1939-1945, Luxemburg 1983", "Matthias Gerstlauer: Das SS-Sonderlager Hinzert im Organisations- und Machtgefüge der SS. Wissenschaftl. Arbeit zur Erlangung des Hochschulgrades Magister Artium an der Universität Trier, Trier 1996", "Eberhard Klopp: Hinzert", "kein richtiges KZ? Ein Beispiel unter 2000, Trier 1983" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Bäckergeselle, KZ-Kommandant. - 1912-1920 Besuch der Bürgerschule in Plauen, 1920-1923 Bäckerlehre, 1923 Gesellenprüfung, bis 1927 verschiedene Tätigkeiten als Bäckergehilfe und danach Pförtner einer Textilfabrik bis 1934 - Z war Mitglied der NSDAP und der SA seit September 1923, im August 1926 Beitritt zur SS (Mitgliedsnr.535), am 22.03.1934 \"Einberufung\" als Truppführer zur \"polit. Bereitschaft\" im SS-Sonderkommando \"Sachsen\" zum Einsatz im \"Schutzhäftlingslager\" Hohenstein (Sachsen), im August 1934 als SS-Untersturmführer im Schutzhaftlager Sachsenburg eingesetzt; am 12.10.1934 Versetzung zur SS-Wachtruppe des Konzentrationslager Lichtenburg; im September 1935 Beförderung zum SS-Obersturmführer; am 1.11.1936 Schutzhaftlagerführer des Konzentrationslager Lichtenburg. Nach Beförderung zum SS-Hauptsturmführer wurde Z zum 1.08.1937 Schutzhaftlagerführer im Konzentrationslager Dachau. Ab 1.11.1937 war er nacheinander \"Führer für die Sicherheit\" im Konzentrationslager Buchenwald und in den Frauenkonzentrationslagern Lichtenburg und Ravensbrück. Am 1.02.1938 wurde Z zum \"Führer im Stab des Frauenkonzentrationslagers\" Lichtenburg ernannt. Zum 1.12.1939 kehrte er als 1. Schutzhaftlagerführer zur Kommandantur des Konzentrationslager Dachau zurück. Ab 21.12.1941 tauchte er als Kommandant des SS-Sonderlagers/KZ Hinzert auf. Den Dienst versah er hier wohl nur kommissarisch, weil im Winter 1941/42 Überlegungen bestanden, das Lager Hinzert aufzulösen. Er war nicht ständig in Hinzert präsent und trat für die Häftlinge in Hinzert nur selten in Erscheinung. Nachdem Z Ende Januar 1942 zum SS-Sturmbannführer der Waffen-SS befördert worden war, übergab er am 23.04.1942 das SS-Sonderlager/KZ Hinzert an Paul Sporrenberg. Z selbst wurde zum 1.05.1942 Lagerkommandant des Konzentrationslager Natzweiler-Struthof (Elsaß) und zum 15.09.1942 als Lagerkommandant zum Konzentrationslager Flossenbürg versetzt\n\nAm 1.08.1943 beendete er seine \"Karriere\" in den KZs und wechselte zur 7. SS-Freiwilligen-Gebirgsdivision \"Prinz Eugen\", im September 1944 Versetzung zur 23. Waffen-SS-Gebirgsdivision \"Kama\" und im Januar 1945 als Verbindungsführer zum Lettischen SS-Feld-Ersatzdepot Danzig - Erst 10 Jahre nach Kriegsende wurde Egon Zill 1955 v. Schwurgericht München zu zweimal lebenslängl. Zuchthaus verurteilt. Er wurde für schuldig befunden, am 18.11.1940 im Konzentrationslager Dachau einem Oberkapo den Befehl zur Ermordung zweier kranker Häftlinge gegeben zu haben. Außerdem wurde er wegen weiterer Straftaten im Konzentrationslager zu 15 Jahren Zuchthaus verurteilt. Im Revisionsverfahren wurde das Urteil in eine lebenslängl. Zuchthausstrafe umgewandelt. Ein Wiederaufnahmeverfahren 1961 endete mit der Verurteilung zu 15 Jahren Zuchthaus. Z starb 1974 als freier Mann. - ---[Daten übernommen aus: Barbara Weiter-Matysiak, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+}

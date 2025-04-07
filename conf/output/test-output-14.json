@@ -1,56 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB107t01147870",
-  "id" : "https://lobid.org/resources/RPB107t01147870",
+  "rpbId" : "036t0121516",
+  "id" : "https://lobid.org/resources/036t0121516",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Die¬ Herren von Hainfeld - zur Geschichte e. vorderpfälzischen Adelssitzes im Mittelalter",
+  "title" : "Sprendlingen und das Kloster Lorsch",
   "publication" : [ {
-    "startDate" : "1983",
+    "startDate" : "1967",
     "type" : [ "PublicationEvent" ]
   } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n240400",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n207020",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Hainfeld / Familie | Geschichte 1100-1300",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/00Sn01s147870528a",
-      "label" : "Hainfeld / Familie",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn06k1444137a",
-      "label" : "Geschichte 1100-1300",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n33703036",
-    "label" : "o33703036",
+    "id" : "https://rpb.lobid.org/spatial#n339",
+    "label" : "Mainz-Bingen, Landkreis",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -59,14 +24,15 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner / 1931-2018"
+      "id" : "http://rpb.lobid.org/sw/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Historischer Verein der Pfalz: Mitteilungen des Historischen Vereins der Pfalz. - 81 (1983), S. 229-271"
+  "bibliographicCitation" : "Landkreis Bingen: Heimat-Jahrbuch. - 1967, S. 23-26"
 }

@@ -1,28 +1,29 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
   "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB036t0121520",
-  "id" : "https://lobid.org/resources/RPB036t0121520",
+  "rpbId" : "036t0121513",
+  "id" : "https://lobid.org/resources/036t0121513",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Sprendlinger Stifter und ihre Familien",
+  "title" : "Soldaten für Holland",
   "publication" : [ {
-    "startDate" : "1983",
+    "startDate" : "1957",
     "type" : [ "PublicationEvent" ]
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn01m21445842a",
-      "label" : "Wagner, Hermann Josef"
+      "id" : "http://rpb.lobid.org/sw/00Pn01m21445842a",
+      "label" : "Wagner, Hermann Josef",
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 1983, H. 2"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 6"
 }

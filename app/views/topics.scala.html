@@ -7,7 +7,7 @@
 @import play.api.libs.json.JsValue
 @import controllers.nwbib.Lobid
 
-@main("NWBib - Themensuche") {
+@main("RPB - Themensuche") {
     @helper.form(action = controllers.nwbib.routes.Application.topics(q), 'id -> "nwbib-form") {
      <div class="input-group">
       <input type="text" name="q" title="Suchtext" id="nwbibQuery" value="@q" class="form-control" autocomplete="off"/>

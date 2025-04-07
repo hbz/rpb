@@ -4,6 +4,7 @@ bin
 .project
 .classpath
 .settings
+/conf/maps/beacons/*.tsv
 /conf/output/*
 !/conf/output/test-output-*.json
 !/conf/output/rpb-50*
@@ -14,3 +15,14 @@ application-log-*.gz
 RPB-Export_HBZ_SW.txt
 RPB-Export_HBZ_Tit.txt
 RPB-Export_HBZ_Tit_hbzIds.txt
+RPB-Export_HBZ_Bio.txt
+RPB-Export_HBZ_Ort.txt
+RPB-Export_HBZ_Raum.txt
+RPB-Export_HBZ_SWN.txt
+RPB-Export_HBZ_Syst.txt
+RPB-Export_HBZ_ZSS.txt
+conf/RPBEXP/*.ZIP
+conf/strapi-export.tar.gz
+nohup.out*
+conf/*.ndjson
+conf/*.zip

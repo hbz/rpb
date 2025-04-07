@@ -1,94 +1,21 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Article" ],
-  "rpbId" : "RPB929t112196",
-  "id" : "https://lobid.org/resources/RPB929t112196",
+  "type" : [ "BibliographicResource", "Book" ],
+  "isPartOf" : [ {
+    "type" : [ "IsPartOfRelation" ],
+    "hasSuperordinate" : [ {
+      "id" : "http://rpb.lobid.org/107t982378",
+      "label" : "'s Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen"
+    } ],
+    "numbering" : "1998,Apr."
+  } ],
+  "rpbId" : "107t982378b1",
+  "id" : "https://lobid.org/resources/107t982378b1",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Coming home mit Commende",
-  "extent" : "Ill.",
-  "publication" : [ {
-    "startDate" : "2011",
-    "type" : [ "PublicationEvent" ]
-  } ],
-  "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n844200",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "id" : "http://purl.org/lobid/rpb#n844000",
-    "label" : "Platzhalter Schlagwortlabel",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "http://purl.org/lobid/rpb",
-      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
-    }
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Deutscher Orden / Kommende Waldbreitbach | Denkmalschutz | Schicker, Viktor | Private Investition | Geschichte 2009-2011",
-    "componentList" : [ {
-      "id" : "https://rpb.lobid.org/sw/929n090287",
-      "label" : "Deutscher Orden / Kommende Waldbreitbach",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4011457-0",
-      "label" : "Denkmalschutz",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09k1362487a",
-      "label" : "Schicker, Viktor",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    }, {
-      "id" : "https://d-nb.info/gnd/4454409-1",
-      "label" : "Private Investition",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    }, {
-      "id" : "https://rpb.lobid.org/sw/00Sn09m0508511a",
-      "label" : "Geschichte 2009-2011",
-      "source" : {
-        "id" : "http://rpb.lobid.org/sw",
-        "label" : "RPB-Sachsystematik"
-      }
-    } ]
-  } ],
-  "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13809076",
-    "label" : "o13809076",
-    "type" : [ "Concept" ],
-    "source" : {
-      "id" : "https://rpb.lobid.org/spatial",
-      "label" : "RPB-Raumsystematik"
-    }
-  } ],
-  "contribution" : [ {
-    "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn08k0685884a",
-      "label" : "Ruland, Wolfgang"
-    },
-    "role" : {
-      "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
-    },
-    "type" : [ "Contribution" ]
-  } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 26-27"
+  "title" : "'s Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen : 1998,Apr.",
+  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ]
 }

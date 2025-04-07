@@ -1,27 +1,22 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "type" : [ "BibliographicResource", "Book" ],
-  "rpbId" : "RPB929t112198",
-  "id" : "https://lobid.org/resources/RPB929t112198",
-  "hbzId" : "HT015954631",
+  "type" : [ "BibliographicResource", "Article" ],
+  "rpbId" : "929t112197",
+  "id" : "https://lobid.org/resources/929t112197",
   "inCollection" : [ {
     "id" : "http://lobid.org/resources/HT013494180#!",
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "¬Das¬ Leben der Bilder oder die Kunst des Sehens",
-  "extent" : "141 S. : Ill.",
-  "note" : [ "Aus dem Engl. übers." ],
-  "responsibilityStatement" : [ "John Berger" ],
+  "title" : "Seit 1911 weht im Vinzenzhaus der Geist der Nächstenliebe : 100-Jahr-Feier in Gebhardshain ; vom Konvent zum Seniorenheim",
+  "extent" : "Ill.",
   "publication" : [ {
-    "location" : [ "Berlin" ],
-    "startDate" : "2009",
-    "publishedBy" : [ "Wagenbach" ],
+    "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {
-    "id" : "http://purl.org/lobid/rpb#n848000",
-    "label" : "Platzhalter Schlagwortlabel",
+    "id" : "http://purl.org/lobid/rpb#n611070",
+    "label" : "Orden",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "http://purl.org/lobid/rpb",
@@ -29,37 +24,26 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kunst | Aufsatzsammlung",
+    "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain | Geschichte 1911-2011",
     "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/4114333-4",
-      "label" : "Kunst",
+      "id" : "https://d-nb.info/gnd/16326855-1",
+      "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
-      "id" : "https://d-nb.info/gnd/4143413-4",
-      "label" : "Aufsatzsammlung",
+      "id" : "http://rpb.lobid.org/sw/00Sn10s3817103a",
+      "label" : "Geschichte 1911-2011",
       "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
-      }
-    } ]
-  }, {
-    "type" : [ "ComplexSubject" ],
-    "label" : "Sander, August / 1876-1964",
-    "componentList" : [ {
-      "id" : "https://d-nb.info/gnd/118605364",
-      "label" : "Sander, August / 1876-1964",
-      "source" : {
-        "id" : "https://d-nb.info/gnd/7749153-1",
-        "label" : "Gemeinsame Normdatei (GND)"
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
       }
     } ]
   } ],
   "spatial" : [ {
-    "id" : "https://rpb.lobid.org/spatial#n13203050",
-    "label" : "o13203050",
+    "id" : "https://rpb.lobid.org/spatial#n13209039",
+    "label" : "Gebhardshain",
     "type" : [ "Concept" ],
     "source" : {
       "id" : "https://rpb.lobid.org/spatial",
@@ -68,13 +52,16 @@
   } ],
   "contribution" : [ {
     "agent" : {
-      "id" : "https://rpb.lobid.org/agent/00Pn11k2198999a",
-      "label" : "Berger, John"
+      "id" : "http://rpb.lobid.org/sw/929n991002",
+      "label" : "Weger, Joachim",
+      "altLabel" : [ "jw" ],
+      "type" : [ "Person" ]
     },
     "role" : {
       "id" : "http://id.loc.gov/vocabulary/relators/aut",
-      "label" : "Autor/in"
+      "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
-  } ]
+  } ],
+  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. H. - 66 (2011), 126 vom 31.05., Seite 24. -"
 }

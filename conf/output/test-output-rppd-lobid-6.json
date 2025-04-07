@@ -1,0 +1,42 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051147360",
+  "rppdId" : "pk00012",
+  "gndIdentifier" : "1051147360",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Marquard, Udo",
+  "professionOrOccupation" : [ {
+    "label" : "Philosoph",
+    "id" : "https://d-nb.info/gnd/4045790-4"
+  }, {
+    "label" : "Schriftsteller",
+    "id" : "https://d-nb.info/gnd/4053309-8"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Unkel, Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n13807073"
+  } ],
+  "dateOfBirth" : [ "1959" ],
+  "placeOfBirth" : [ {
+    "label" : "Werdohl",
+    "id" : "Werdohl"
+  } ],
+  "relatedPerson" : [ {
+    "label" : "Heyberger, Renate",
+    "id" : "Heyberger, Renate"
+  } ],
+  "publication" : [ "Katzenkiller.1995", "Münstermörder. 1996", "Theaterblut. 1997", "¬Die¬ Breisgau-Boheme. 2000" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Philosophie",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#4.7p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2004-08-04",
+    "source" : [ "Internet" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Studium der Philosophie, Germanistik und Religionswissenschaft in Heidelberg, Luzern und Freiburg; Promotion in Philosophie; schreibt seit 1994 zusammen mit Renate Heyberger Krimis; seit 1995 freier Schriftsteller und Fachjournalist für den Bereich Philosophie; Mitarbeit beim ARD-Hörfunk" ]
+}

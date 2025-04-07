@@ -1,0 +1,35 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051215528",
+  "rppdId" : "pta1487",
+  "gndIdentifier" : "1051215528",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Zillgen, Friedrich Josef",
+  "professionOrOccupation" : [ {
+    "label" : "Polizeibeamter",
+    "id" : "https://d-nb.info/gnd/4135253-1"
+  } ],
+  "dateOfBirth" : [ "1806-08-29" ],
+  "placeOfBirth" : [ {
+    "label" : "Gillenfeld",
+    "id" : "https://rpb.lobid.org/spatial#n23301027"
+  } ],
+  "dateOfDeath" : [ "1870-06-10" ],
+  "placeOfDeath" : [ {
+    "label" : "Gillenfeld",
+    "id" : "https://rpb.lobid.org/spatial#n23301027"
+  } ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Öffentliche Verwaltung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#7.15p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2006-07-11",
+    "source" : [ "Horst Romeyk: Die leitenden staatlichen und kommunalen Verwaltungsbeamten der Rheinprovinz 1816-1945, Düsseldorf 1994, 830" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Polizeidirektor. - Gymnasium in Trier, bis 1848 (?) Bürgermeister v. Gillenfeld, 1851 Polizeidirektor in Trier, 1863 wegen Auflösung der Dienststelle zur Disposition gestellt. - *Heirat: 1836 mit Apollonia Reiff. - ---[Daten übernommen aus: Horst Romeyk, in: Monz, Heinz / 1929-2012 (Hrsg.): Trierer Biographisches Lexikon. - Trier : Wissenschaftlicher Verlag, 2000. - ISBN 3-88476-400-4]" ]
+}

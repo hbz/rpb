@@ -1,0 +1,58 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1051147387",
+  "rppdId" : "pk00019",
+  "gndIdentifier" : "1051147387",
+  "sameAs" : [ {
+    "id" : "http://persondata.toolforge.org/redirect/gnd/de/1051147387",
+    "collection" : {
+      "name" : "Wikipedia-Personenartikel"
+    }
+  } ],
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Oppermann, Julius",
+  "professionOrOccupation" : [ {
+    "label" : "Journalist",
+    "id" : "https://d-nb.info/gnd/4028781-6"
+  }, {
+    "label" : "Politiker",
+    "id" : "https://d-nb.info/gnd/4046517-2"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
+  }, {
+    "label" : "Wiesbaden",
+    "id" : "Wiesbaden"
+  }, {
+    "label" : "Berlin",
+    "id" : "Berlin"
+  } ],
+  "dateOfBirth" : [ "1825-06-09" ],
+  "placeOfBirth" : [ {
+    "label" : "Diez,Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n14103029"
+  } ],
+  "dateOfDeath" : [ "1880-01-01" ],
+  "placeOfDeath" : [ {
+    "label" : "Wiesbaden",
+    "id" : "Wiesbaden"
+  } ],
+  "publication" : [ "Freiherr Carl vom Stein und das Kleinstaatentum, 1866." ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Presse",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#2.3p"
+  }, {
+    "label" : "Politiker und historische Persönlichkeiten",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#16.5p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2010-08-02",
+    "source" : [ "Stuck, Wolf-Heino: Julius Oppermann aus Diez (1825-1880), in: Nassauische Annalen. - 78 (1967), S. 216-227", "Rhein-Lahn-Zeitung. - (1996), 104 vom 4./5.5." ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Besuch des Landesgymnasiums in Weilburg; Studium der Rechts- und Staatswissenschaften in Marburg, Bonn, Heidelberg; seit 7. Oktober 1847 Amtsakzessist im Justizamt in Diez; vom 18. August 1848 bis zum 20. Juli 1850 Schriftleiter der in Wiesbaden erscheinenden \"Freien Zeitung\" und damit einer der führenden demokratischen Oppositionellen im Herzogtum Nassau; in zwei gegen ihn angestrengten Hochverratsprozessen 1849 und 1850 wurde Oppermann freigesprochen; nach 1850 Anwaltsgehilfe in Limburg und Diez; Mitarbeiter bei der 1859 begründeten \"Rhein-Lahn-Zeitung\" aus Wiesbaden; 1863 für einige Monate Übernahme der Redaktion der \"Elberfelder Zeitung\"; Übersiedlung nach Berlin; in einem Brief an den Zivilkommissar von Nassau und späteren Regierungspräsidenten von Wiesbaden, Gustav von Diest, begrüßte Oppermann die Annexion Nassaus durch Preußen; 1870 Rückkehr nach Wiesbaden; seit 1871 Sekretär der Industrie- und Handelskammer Wiesbaden." ]
+}

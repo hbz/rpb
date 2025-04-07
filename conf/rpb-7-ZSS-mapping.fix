@@ -1,5 +1,6 @@
 do once("maps")
   put_filemap("./lobidOrganisationsMapping.tsv","sigel2idMap", sep_char:"\t",key_column:"2",value_column:"0",expected_columns:"-1")
+  put_filemap("./lobidOrganisationsMapping.tsv","sigel2idsilMap", sep_char:"\t",key_column:"2",value_column:"1",expected_columns:"-1")
 end
 
 # Remove empty fields
@@ -18,7 +19,13 @@ lookup("organisationId","sigel2idMap")
 copy_field("f7ns","callNumber")
 replace_all("callNumber",".*? / (.*)","$1")
 
-retain( "id", "title", "organisationId","callNumber")
+copy_field("f7ns","@isil")
+replace_all("@isil","(.*?) / .*","$1")
+replace_all("@isil","036*","36")
+lookup("@isil","sigel2idsilMap")
+paste("lobidQuery", "~https://lobid.org/resources/search?nested=hasItem%3AhasItem.callNumber%3A%22", "callNumber", "~%22+AND+hasItem.heldBy.isil%3A%22", "@isil", "~%22", join_char:"")
+
+retain( "id", "title", "organisationId","callNumber","lobidQuery")
 
 vacuum()
 

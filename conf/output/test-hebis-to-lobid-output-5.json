@@ -1,0 +1,57 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/475390555#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Liederheft",
+  "almaMmsId" : "475390555",
+  "publication" : [ {
+    "startDate" : "2002",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Ober-Olm" ],
+    "publishedBy" : [ "Carneval Club 1948 Ober-Olm e.V." ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22475390555%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "40 Seiten : Illustrationen",
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "K 2021/46",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/475390555:DE-36:K+2021%2F46#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Carneval Club 1948 Ober-Olm e.V." ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "3042322-3",
+      "id" : "https://d-nb.info/gnd/3042322-3",
+      "label" : "Carneval-Club 1948 Ober-Olm",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

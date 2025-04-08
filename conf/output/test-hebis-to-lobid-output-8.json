@@ -1,0 +1,129 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/478607776#!",
+  "type" : [ "BibliographicResource", "Festschrift", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Die Alzeyer Nikolaikirche",
+  "almaMmsId" : "478607776",
+  "oclcNumber" : [ "1196889751" ],
+  "dnbId" : "121992976X",
+  "alternativeTitle" : [ "Festschrift zur Wiederindienststellung zweitausendzwanzig" ],
+  "otherTitleInformation" : [ "Festschrift zur Wiederindienststellung 2020" ],
+  "publication" : [ {
+    "startDate" : "2020",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Alzey" ],
+    "publishedBy" : [ "Evangelische Kirchengemeinde" ]
+  } ],
+  "manufacture" : [ {
+    "type" : [ "Event" ],
+    "location" : [ "Radebeul" ],
+    "manufacturedBy" : [ "Unitedprint.com" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22478607776%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1196889751",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/121992976X",
+    "label" : "DNB-Ressource"
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "https://d-nb.info/121992976X/04"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "172 Seiten : Illustrationen ; 30 cm",
+  "natureOfContent" : [ {
+    "label" : "Festschrift",
+    "id" : "https://d-nb.info/gnd/4016928-5"
+  } ],
+  "subject" : [ {
+    "notation" : "720",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Architektur"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "720",
+    "notation" : "720",
+    "version" : "sdnb"
+  }, {
+    "notation" : "230",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Theologie, Christentum"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Christentum",
+    "notation" : "230",
+    "version" : "sdnb"
+  } ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "2021 Q 511",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/478607776:DE-36:2021+Q+511#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Herausgeberin Evangelische Kirchengemeinde Alzey ; verantwortlich, Redaktion: Hartmut Müller" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "1175120235",
+      "id" : "https://d-nb.info/gnd/1175120235",
+      "label" : "Müller, Hartmut",
+      "type" : [ "Person" ],
+      "dateOfBirth" : "1974"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "2038312-5",
+      "id" : "https://d-nb.info/gnd/2038312-5",
+      "label" : "Evangelische Kirchengemeinde Alzey",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

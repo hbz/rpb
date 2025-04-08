@@ -1,0 +1,80 @@
+{
+  "extent" : "172 Seiten : Illustrationen",
+  "rpbId" : "036t220066",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n844030",
+    "label" : "Sakralbau",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/1238047971",
+      "label" : "Nikolaikirche / Alzey",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    }, {
+      "id" : "http://rpb.lobid.org/sw/00Gn20k2843112a",
+      "label" : "Geschichte 1350-2020",
+      "source" : {
+        "id" : "http://rpb.lobid.org/sw",
+        "label" : "RPB-Sachsystematik"
+      }
+    }, {
+      "id" : "https://d-nb.info/gnd/4016928-5",
+      "label" : "Festschrift",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Nikolaikirche / Alzey | Geschichte 1350-2020 | Festschrift",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "responsibilityStatement" : [ "Herausgeberin Evangelische Kirchengemeinde Alzey ; verantwortlich, Redaktion: Hartmut Müller" ],
+  "alternativeTitle" : [ "Festschrift zur Wiederindienststellung zweitausendzwanzig" ],
+  "description" : [ {
+    "id" : "https://d-nb.info/121992976X/04",
+    "label" : "https://d-nb.info/121992976X/04"
+  } ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Die Alzeyer Nikolaikirche : Festschrift zur Wiederindienststellung 2020",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "http://rpb.lobid.org/sw/00Gn14m0054304b",
+      "label" : "Müller, Hartmut",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/oth",
+      "label" : "Sonstige"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Evangelische Kirchengemeinde" ],
+    "location" : [ "Alzey" ],
+    "type" : [ "PublicationEvent" ],
+    "startDate" : "2020"
+  } ],
+  "id" : "https://lobid.org/resources/036t220066",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n33100003",
+    "label" : "Alzey, Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

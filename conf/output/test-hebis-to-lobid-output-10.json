@@ -1,0 +1,126 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/090358163#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Mainz transparent",
+  "almaMmsId" : "090358163",
+  "isbn" : [ "3874394883", "9783874394888" ],
+  "oclcNumber" : [ "76115483" ],
+  "dnbId" : "958853371",
+  "otherTitleInformation" : [ "2000 Jahre einer Stadt ; [Stadtbegleiter]" ],
+  "publication" : [ {
+    "startDate" : "2000",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Mainz" ],
+    "publishedBy" : [ "Schmidt" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22090358163%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/76115483",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/958853371",
+    "label" : "DNB-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "127 Seiten : Illustrationen, Karten",
+  "natureOfContent" : [ {
+    "label" : "Führer",
+    "id" : "https://d-nb.info/gnd/4155569-7"
+  } ],
+  "subject" : [ {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Mainz",
+    "id" : "https://d-nb.info/gnd/4037124-4",
+    "gndIdentifier" : "4037124-4"
+  }, {
+    "notation" : "61",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Systematik der DNB (bis 2003)",
+      "id" : "https://bartoc.org/en/node/18497"
+    }
+  } ],
+  "subjectslabels" : [ "Mainz" ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog 1974",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/090358163:DE-36:Mog+1974#!"
+  }, {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog 1974, 2. Ex.",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/090358163:DE-36:Mog+1974%2C+2.+Ex.#!"
+  }, {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog 3537",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/090358163:DE-36:Mog+3537#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "hrsg. von Georg Schuler ... [Konzept und Texte: Frank Herda ... Fotos: Philippa Pfahler ...]" ],
+  "contribution" : [ {
+    "agent" : {
+      "label" : "Schuler, Georg",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/edt",
+      "label" : "Herausgeber/in"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Herda, Frank",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "label" : "Pfahler, Philippa",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

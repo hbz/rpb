@@ -12,6 +12,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" % "play-test_2.11" % "2.4.11",
   "org.metafacture" % "metafacture-elasticsearch" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
   "org.metafacture" % "metafacture-io" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-xml" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
+  "org.metafacture" % "metafacture-biblio" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
   "org.metafacture" % "metafacture-strings" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
   "org.metafacture" % "metafacture-json" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",
   "org.metafacture" % "metafacture-flux" % "commit-b9eebb41b26bac5b1083b90112c0eefdc17ad25e-SNAPSHOT",

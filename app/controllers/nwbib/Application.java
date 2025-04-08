@@ -401,7 +401,7 @@ public class Application extends Controller {
 			}
 			result = classificationResult(t, placeholder);
 		}
-		Cache.set("classification." + t, result, ONE_DAY);
+		Cache.set("classification." + t, result);
 		return result;
 	}
 
@@ -995,9 +995,15 @@ public class Application extends Controller {
 
 	private static Promise<Result> transformAndIndex(String id, JsonNode jsonBody)
 			throws IOException, FileNotFoundException, RecognitionException, UnsupportedEncodingException {
-		JsonNode transformedJson = transform(jsonBody);
-		Promise<JsonNode> dataPromise = id.startsWith("f") && transformedJson.has("hbzId") ? // hbz-Fremddaten
-				addToLobidData(transformedJson) : Promise.pure(transformedJson);
+		JsonNode transformedJson = transformStrapiToLobid(jsonBody);
+		Promise<JsonNode> dataPromise = Promise.pure(transformedJson);
+		if (id.startsWith("f")) { // Fremddaten
+			if (transformedJson.has("hbzId")) {
+				dataPromise = addToLobidData(transformedJson);
+			} else if (transformedJson.has("hebisId")) {
+				dataPromise = addToHebisData(transformedJson);
+			}
+		}
 		return dataPromise.flatMap(result -> {
 			Cache.remove(String.format("/%s", id));
 			WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
@@ -1005,12 +1011,12 @@ public class Application extends Controller {
 		});
 	}
 
-	private static JsonNode transform(JsonNode jsonBody)
+	private static JsonNode transformStrapiToLobid(JsonNode jsonBody)
 			throws IOException, FileNotFoundException, RecognitionException {
-		File input = new File("conf/output/test-output-strapi.json");
-		File output = new File("conf/output/test-output-0.json");
+		File input = new File("conf/output/single-strapi-to-lobid-input.json");
+		File output = new File("conf/output/single-strapi-to-lobid-output.json");
 		Files.write(Paths.get(input.getAbsolutePath()), jsonBody.toString().getBytes(Charset.forName(UTF_8)));
-		ETL.main(new String[] {"conf/rpb-test-titel-to-lobid.flux"});
+		ETL.main(new String[] {"conf/rpb-titel-single-strapi-to-lobid.flux"});
 		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
 		return Json.parse(result);
 	}
@@ -1019,33 +1025,62 @@ public class Application extends Controller {
 		String lobidUrl = transformedJson.get("hbzId").textValue();
 		WSRequest lobidRequest = WS.url(lobidUrl).setQueryParameter("format", "json");
 		Promise<JsonNode> lobidPromise = lobidRequest.get().map(WSResponse::asJson);
-		Promise<JsonNode> merged = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
-		return merged;
+		Promise<Map<String, Object>> mergedPromise = lobidPromise.map(lobidJson -> mergeRecords(transformedJson, lobidJson));
+		return mergedPromise.map(merged -> Json.toJson(merged));
 	}
 
-	private static JsonNode mergeRecords(JsonNode transformedJson, JsonNode lobidJson)
+	private static Promise<JsonNode> addToHebisData(JsonNode transformedJson) {
+		WSRequest hebisRequest = WS.url("http://sru.hebis.de/sru/DB=2.1").setHeader("Accept", "application/xml")
+				.setQueryParameter("query", "pica.ppn = \"" + transformedJson.get("hebisId").textValue() + "\"")//
+				.setQueryParameter("version", "1.1")//
+				.setQueryParameter("operation", "searchRetrieve")//
+				.setQueryParameter("stylesheet", "http://sru.hebis.de/sru/?xsl=searchRetrieveResponse")//
+				.setQueryParameter("recordSchema", "marc21")//
+				.setQueryParameter("maximumRecords", "1")//
+				.setQueryParameter("startRecord", "1")//
+				.setQueryParameter("recordPacking", "xml")//
+				.setQueryParameter("sortKeys", "LST_Y,pica,0,,");
+		Promise<String> hebisXmlPromise = hebisRequest.get().map(WSResponse::asByteArray).map(byteArray -> new String(byteArray, "UTF-8"));
+		Promise<JsonNode> hebisJsonPromise = hebisXmlPromise.map(hebisXml -> transformHebisToLobid(hebisXml));
+		Promise<Map<String, Object>> mergedPromise = hebisJsonPromise.map(hebisJson -> mergeRecords(transformedJson, hebisJson));
+		return mergedPromise.map(merged -> {
+			merged.remove("almaMmsId"); // reusing Alma transformation
+			return Json.toJson(merged);
+		});
+	}
+
+	private static JsonNode transformHebisToLobid(String xmlBody)
+			throws IOException, FileNotFoundException, RecognitionException {
+		File input = new File("conf/output/single-hebis-to-lobid-input.xml");
+		File output = new File("conf/output/single-hebis-to-lobid-output.json");
+		Files.write(Paths.get(input.getAbsolutePath()), xmlBody.getBytes());
+		ETL.main(new String[] {"conf/rpb-titel-single-hebis-to-lobid.flux"});
+		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
+		return Json.parse(result);
+	}
+
+	private static Map<String, Object> mergeRecords(JsonNode internalData, JsonNode externalData)
 			throws JsonMappingException, JsonProcessingException {
 		ObjectMapper objectMapper = new ObjectMapper();
 		MapType mapType = TypeFactory.defaultInstance().constructMapType(Map.class, String.class, Object.class);
-		Map<String, Object> transformedMap = objectMapper.readValue(transformedJson.toString(), mapType);
-		Map<String, Object> lobidMap = objectMapper.readValue(lobidJson.toString(), mapType);
-		lobidMap.remove("describedBy");
-		transformedMap.put("hbzId", lobidMap.get("hbzId"));
-		transformedMap.remove("type");
-		transformedMap.keySet().forEach(key -> {
-			Object transformedObject = transformedMap.get(key);
-			Object lobidObject = lobidMap.getOrDefault(key, new ArrayList<Object>());
-			Object values = transformedObject instanceof List ? mergeValues(transformedObject, lobidObject)
-					: transformedObject;
-			lobidMap.put(key, values);
+		Map<String, Object> internalDataMap = objectMapper.readValue(internalData.toString(), mapType);
+		Map<String, Object> externalDataMap = objectMapper.readValue(externalData.toString(), mapType);
+		internalDataMap.put("hbzId", externalDataMap.get("hbzId"));
+		internalDataMap.remove("type");
+		internalDataMap.entrySet().stream().filter(e -> e.getValue() != null).forEach(internalDataEntry -> {
+			Object internalValue = internalDataEntry.getValue();
+			Object externalValue = externalDataMap.getOrDefault(internalDataEntry.getKey(), new ArrayList<Object>());
+			Object values = internalValue instanceof List ? mergeValues(internalValue, externalValue) : internalValue;
+			externalDataMap.put(internalDataEntry.getKey(), values);
 		});
-		return Json.toJson(lobidMap);
+		externalDataMap.remove("describedBy");
+		return externalDataMap;
 	}
 
-	private static Object mergeValues(Object transformedObject, Object lobidObject) {
-		List<Object> mergedValues = lobidObject instanceof List ? new ArrayList<>((List<?>) lobidObject)
-				: Arrays.asList(lobidObject);
-		mergedValues.addAll((List<?>) transformedObject);
+	private static Object mergeValues(Object internalObject, Object externalObject) {
+		List<Object> mergedValues = externalObject instanceof List ? new ArrayList<>((List<?>) externalObject)
+				: Arrays.asList(externalObject);
+		mergedValues.addAll((List<?>) internalObject);
 		return mergedValues;
 	}
 

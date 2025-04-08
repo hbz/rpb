@@ -1,0 +1,65 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/488844266#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Jack the Ripper - Verdächtigter vom Rhein",
+  "almaMmsId" : "488844266",
+  "isbn" : [ "9783739271699", "3739271698" ],
+  "oclcNumber" : [ "1288418997" ],
+  "otherTitleInformation" : [ "Mörder in USA aus Region Bingen, Alzey" ],
+  "publication" : [ {
+    "startDate" : "2015",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Norderstedt" ],
+    "publishedBy" : [ "Bod - Books on Demand" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22488844266%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1288418997",
+    "label" : "OCLC Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "271 Seiten : Illustrationen",
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "2021/1406",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/488844266:DE-36:2021%2F1406#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Thomas Hattemer" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "1340838648",
+      "id" : "https://d-nb.info/gnd/1340838648",
+      "label" : "Hattemer, Thomas",
+      "type" : [ "Person" ],
+      "dateOfBirth" : "1967"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

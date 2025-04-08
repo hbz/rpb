@@ -1,0 +1,62 @@
+{
+  "extent" : "1 gefaltetes Blatt (16 Seiten) : Illustrationen",
+  "note" : [ "Parallele Sprachausgabe: The ancient cathedral St. John" ],
+  "rpbId" : "036t240110",
+  "subject" : [ {
+    "id" : "http://purl.org/lobid/rpb#n844030",
+    "label" : "Sakralbau",
+    "source" : {
+      "id" : "http://purl.org/lobid/rpb",
+      "label" : "Systematik der Rheinland-Pfälzischen Bibliographie"
+    },
+    "type" : [ "Concept" ]
+  }, {
+    "componentList" : [ {
+      "id" : "https://d-nb.info/gnd/4369072-5",
+      "label" : "Sankt Johannis / Mainz",
+      "source" : {
+        "id" : "https://d-nb.info/gnd/7749153-1",
+        "label" : "Gemeinsame Normdatei (GND)"
+      }
+    } ],
+    "label" : "Sankt Johannis / Mainz",
+    "type" : [ "ComplexSubject" ]
+  } ],
+  "responsibilityStatement" : [ "Evangelisches Dekanat Mainz" ],
+  "alternativeTitle" : [ "The ancient cathedral St. John" ],
+  "inCollection" : [ {
+    "id" : "http://lobid.org/resources/HT013494180#!",
+    "label" : "Rheinland-Pfälzische Bibliographie",
+    "type" : [ "Collection" ]
+  } ],
+  "type" : [ "BibliographicResource", "Book" ],
+  "title" : "Alter Dom St. Johannis : 1500 Jahre Geschichte im Herzen von Mainz",
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "contribution" : [ {
+    "agent" : {
+      "id" : "https://d-nb.info/gnd/2009806-6",
+      "label" : "Evangelische Kirche in Hessen und Nassau",
+      "type" : [ "CorporateBody" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/isb",
+      "label" : "Herausgebendes Organ"
+    },
+    "type" : [ "Contribution" ]
+  } ],
+  "publication" : [ {
+    "publishedBy" : [ "Evangelisches Dekanat Mainz" ],
+    "location" : [ "Mainz" ],
+    "type" : [ "PublicationEvent" ]
+  } ],
+  "id" : "https://lobid.org/resources/036t240110",
+  "spatial" : [ {
+    "id" : "https://rpb.lobid.org/spatial#n31500000",
+    "label" : "Mainz, Kreisfreie Stadt",
+    "source" : {
+      "id" : "https://rpb.lobid.org/spatial",
+      "label" : "RPB-Raumsystematik"
+    },
+    "type" : [ "Concept" ]
+  } ]
+}

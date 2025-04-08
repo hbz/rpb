@@ -1,0 +1,97 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/090680634#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Gau-Algesheim",
+  "almaMmsId" : "090680634",
+  "oclcNumber" : [ "45021318" ],
+  "otherTitleInformation" : [ "mit Kamera und Herz eines Winzers gesehen" ],
+  "publication" : [ {
+    "startDate" : "2000",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Gau-Algesheim" ],
+    "publishedBy" : [ "Carl-Brilmayer-Ges." ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22090680634%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/45021318",
+    "label" : "OCLC Ressource"
+  } ],
+  "isPartOf" : [ {
+    "hasSuperordinate" : [ {
+      "label" : "Beiträge zur Geschichte des Gau-Algesheimer Raumes"
+    } ],
+    "numbering" : "42",
+    "type" : [ "IsPartOfRelation" ]
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "72 S. : zahlr. Ill.",
+  "natureOfContent" : [ {
+    "label" : "Bildband",
+    "id" : "https://d-nb.info/gnd/4145395-5"
+  } ],
+  "subject" : [ {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Gau-Algesheim",
+    "id" : "https://d-nb.info/gnd/4019445-0",
+    "gndIdentifier" : "4019445-0"
+  } ],
+  "subjectslabels" : [ "Gau-Algesheim" ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "2000/38",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/090680634:DE-36:2000%2F38#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Fotos: Philipp Eckert. [Texte: Ludwig Hellriegel]" ],
+  "contribution" : [ {
+    "agent" : {
+      "label" : "Eckert, Philipp",
+      "type" : [ "Person" ]
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
+    },
+    "type" : [ "Contribution" ]
+  }, {
+    "agent" : {
+      "gndIdentifier" : "118183575",
+      "id" : "https://d-nb.info/gnd/118183575",
+      "label" : "Hellriegel, Ludwig",
+      "type" : [ "Person" ],
+      "dateOfBirth" : "1932",
+      "dateOfDeath" : "2011"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/ctb",
+      "label" : "Beitragende/r"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

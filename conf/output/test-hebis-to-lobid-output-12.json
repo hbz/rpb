@@ -1,0 +1,195 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/508037980#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Auszeiten für die Seele - 33 Orte im Rhein-Main-Gebiet",
+  "almaMmsId" : "508037980",
+  "isbn" : [ "9783846409626", "3846409626" ],
+  "oclcNumber" : [ "1403376624" ],
+  "dnbId" : "1271796821",
+  "stockNumber" : [ "978-3-8464-0962-6", "0640962", "52182" ],
+  "alternativeTitle" : [ "Auszeiten für die Seele Rhein-Main-Gebiet" ],
+  "otherTitleInformation" : [ "innehalten, lauschen, aufblühen" ],
+  "edition" : [ "1. Auflage" ],
+  "publication" : [ {
+    "startDate" : "2023",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "München" ],
+    "publishedBy" : [ "Polyglott" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22508037980%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1403376624",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/1271796821",
+    "label" : "DNB-Ressource"
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "https://d-nb.info/1271796821/04"
+  } ],
+  "related" : [ {
+    "note" : [ "Online-Ausgabe" ],
+    "label" : "Auszeiten für die Seele im Rhein-Main-Gebiet"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "191 Seiten : Illustrationen, Karten ; 20 cm, 520 g",
+  "natureOfContent" : [ {
+    "label" : "Führer",
+    "id" : "https://d-nb.info/gnd/4155569-7"
+  } ],
+  "subject" : [ {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Tourismus",
+    "id" : "https://d-nb.info/gnd/4018406-7",
+    "gndIdentifier" : "4018406-7"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Freizeitplanung",
+    "id" : "https://d-nb.info/gnd/4130372-6",
+    "gndIdentifier" : "4130372-6"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Wanderweg",
+    "id" : "https://d-nb.info/gnd/4140582-1",
+    "gndIdentifier" : "4140582-1"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Freizeit",
+    "id" : "https://d-nb.info/gnd/4018382-8",
+    "gndIdentifier" : "4018382-8"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Hessen",
+    "id" : "https://d-nb.info/gnd/4024729-6",
+    "gndIdentifier" : "4024729-6"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Gemeinsame Normdatei (GND)",
+      "id" : "https://d-nb.info/gnd/7749153-1"
+    },
+    "label" : "Rhein-Main-Gebiet",
+    "id" : "https://d-nb.info/gnd/4049799-9",
+    "gndIdentifier" : "4049799-9"
+  }, {
+    "notation" : "914.3",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Geografie, Reisen (Deutschland)"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Geografie Mitteleuropas und Reisen in Mitteleuropa",
+    "notation" : "914.3",
+    "version" : "sdnb"
+  }, {
+    "notation" : "610",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Medizin, Gesundheit"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Medizin und Gesundheit",
+    "notation" : "610",
+    "version" : "sdnb"
+  }, {
+    "notation" : "RD 50029",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "RVK (Regensburger Verbundklassifikation)",
+      "id" : "https://d-nb.info/gnd/4449787-8"
+    }
+  }, {
+    "notation" : "RD 65012",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "RVK (Regensburger Verbundklassifikation)",
+      "id" : "https://d-nb.info/gnd/4449787-8"
+    }
+  }, {
+    "notation" : "NZ 64350",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "RVK (Regensburger Verbundklassifikation)",
+      "id" : "https://d-nb.info/gnd/4449787-8"
+    }
+  } ],
+  "subjectslabels" : [ "Tourismus", "Freizeitplanung", "Wanderweg", "Freizeit", "Hessen", "Rhein-Main-Gebiet" ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "2023/589",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/508037980:DE-36:2023%2F589#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Annette Bernjus" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "1156186978",
+      "id" : "https://d-nb.info/gnd/1156186978",
+      "label" : "Bernjus, Annette",
+      "type" : [ "Person" ],
+      "dateOfBirth" : "1961"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

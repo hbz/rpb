@@ -41,8 +41,8 @@ For details on our setup see https://dienst-wiki.hbz-nrw.de/display/SEM/RPB (int
 ### Source code
 
 - RPB: https://github.com/hbz/rpb
-- BiblioVino: https://github.com/hbz/rpb/tree/biblioVino (https://github.com/hbz/rpb/pull/52)
-- RPPD: https://github.com/hbz/lobid-gnd/tree/rppd (https://github.com/hbz/lobid-gnd/pull/361)
+- BiblioVino: https://github.com/hbz/rpb/tree/biblioVino
+- RPPD: https://github.com/hbz/rppd
 - Strapi-RPB: https://github.com/hbz/strapi-rpb
 
 ## Transformation development

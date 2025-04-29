@@ -3,7 +3,8 @@ logs
 bin
 .project
 .classpath
-.settings
+.settings/org.eclipse.core.resources.prefs
+.settings/org.scala-ide.sdt.core.prefs
 /conf/maps/beacons/*.tsv
 /conf/output/*
 !/conf/output/test*.json

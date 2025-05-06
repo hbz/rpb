@@ -35,7 +35,6 @@ import play.test.Helpers;
  * 
  * See http://www.playframework.com/documentation/2.3.x/JavaTest
  */
-@SuppressWarnings("javadoc")
 @RunWith(value = Parameterized.class)
 public class InputStringsTest {
 

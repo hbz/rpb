@@ -32,7 +32,6 @@ import views.ReverseGeoLookup;
 /**
  * See http://www.playframework.com/documentation/2.3.x/JavaFunctionalTest
  */
-@SuppressWarnings("javadoc")
 public class ExternalIntegrationTest {
 
 	@Before

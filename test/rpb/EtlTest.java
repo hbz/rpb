@@ -19,7 +19,6 @@ import org.mockito.Mock;
  * @author Fabian Steeg
  * 
  */
-@SuppressWarnings("javadoc")
 public class EtlTest {
 
     @Mock

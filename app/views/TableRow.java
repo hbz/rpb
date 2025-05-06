@@ -18,7 +18,6 @@ import controllers.nwbib.Application;
 import controllers.nwbib.Classification;
 import controllers.nwbib.Lobid;
 import play.Logger;
-import play.libs.F.Promise;
 import play.libs.ws.WS;
 import play.libs.ws.WSRequest;
 import play.libs.ws.WSResponse;
@@ -28,8 +27,6 @@ import play.libs.ws.WSResponse;
  * 
  * @author Fabian Steeg (fsteeg)
  */
-@SuppressWarnings("javadoc")
-/* no javadoc for elements. */
 public enum TableRow {
 
 	VALUES {

@@ -24,7 +24,6 @@ import play.libs.Json;
 /**
  * See http://www.playframework.com/documentation/2.3.x/JavaTest
  */
-@SuppressWarnings("javadoc")
 public class ApplicationTest {
 
 	@Test

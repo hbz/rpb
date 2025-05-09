@@ -334,7 +334,7 @@ public class Classification {
 		Map<String, List<JsonNode>> subClasses = new HashMap<>();
 		try {
 			CSVParser parser = CSVFormat.DEFAULT.withFirstRecordAsHeader()
-					.parse(new FileReader("conf/rpb-gemeinden.csv"));
+					.parse(new FileReader("etl/rpb-gemeinden.csv"));
 			for (CSVRecord record : parser) {
 				String wpNr = record.get("WpNr");
 				String gs = record.get("GemSchlNr");

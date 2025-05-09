@@ -1013,10 +1013,10 @@ public class Application extends Controller {
 
 	private static JsonNode transformStrapiToLobid(JsonNode jsonBody)
 			throws IOException, FileNotFoundException, RecognitionException {
-		File input = new File("conf/output/single-strapi-to-lobid-input.json");
-		File output = new File("conf/output/single-strapi-to-lobid-output.json");
+		File input = new File("etl/output/single-strapi-to-lobid-input.json");
+		File output = new File("etl/output/single-strapi-to-lobid-output.json");
 		Files.write(Paths.get(input.getAbsolutePath()), jsonBody.toString().getBytes(Charset.forName(UTF_8)));
-		ETL.main(new String[] {"conf/rpb-titel-single-strapi-to-lobid.flux"});
+		ETL.main(new String[] {"etl/rpb-titel-single-strapi-to-lobid.flux"});
 		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
 		return Json.parse(result);
 	}
@@ -1051,10 +1051,10 @@ public class Application extends Controller {
 
 	private static JsonNode transformHebisToLobid(String xmlBody)
 			throws IOException, FileNotFoundException, RecognitionException {
-		File input = new File("conf/output/single-hebis-to-lobid-input.xml");
-		File output = new File("conf/output/single-hebis-to-lobid-output.json");
+		File input = new File("etl/output/single-hebis-to-lobid-input.xml");
+		File output = new File("etl/output/single-hebis-to-lobid-output.json");
 		Files.write(Paths.get(input.getAbsolutePath()), xmlBody.getBytes());
-		ETL.main(new String[] {"conf/rpb-titel-single-hebis-to-lobid.flux"});
+		ETL.main(new String[] {"etl/rpb-titel-single-hebis-to-lobid.flux"});
 		String result = Files.readAllLines(Paths.get(output.getAbsolutePath())).stream().collect(Collectors.joining("\n"));
 		return Json.parse(result);
 	}

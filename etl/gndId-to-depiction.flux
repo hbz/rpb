@@ -1,6 +1,6 @@
 default IN_FILE = "gndId-to-rppdId.tsv";
 default OUT_FILE = "gndId-to-depiction.tsv";
-MAPS_DIR = "conf/maps/";
+MAPS_DIR = "etl/maps/";
 
 MAPS_DIR + IN_FILE
 | open-file

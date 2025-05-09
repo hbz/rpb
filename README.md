@@ -50,7 +50,7 @@ For details on our setup see https://dienst-wiki.hbz-nrw.de/display/SEM/RPB (int
 ### Create lookup table
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test-sw.flux"
+sbt "runMain rpb.ETL etl/rpb-test-sw.flux"
 ```
 
 This writes a `.tsv` file to `output/`, to be used for lookups in the transformation.
@@ -58,7 +58,7 @@ This writes a `.tsv` file to `output/`, to be used for lookups in the transforma
 ### Run transformation to strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test-titel-to-strapi.flux"
+sbt "runMain rpb.ETL etl/rpb-test-titel-to-strapi.flux"
 ```
 
 This writes a single `.json` file to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
@@ -66,10 +66,10 @@ This writes a single `.json` file to `output/` (it's actually JSON lines, but th
 ### Import strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','u') PATH=articles"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works"
-sbt "runMain rpb.ETL conf/rpb-test-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works"
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
 ```
 
 This attempts to import all data selected with the `PICK` variable to the API endpoint in `PATH`, and prints the server response.
@@ -93,14 +93,14 @@ Actual transformation of SKOS TTL files to JSON happens in https://github.com/ac
 To import the resulting JSON data into strapi, run:
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb.ndjson PATH=rpb-notations"
-sbt "runMain rpb.ETL conf/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PATH=rpb-spatials"
+sbt "runMain rpb.ETL etl/rpb-systematik-import.flux INPUT=rpb.ndjson PATH=rpb-notations"
+sbt "runMain rpb.ETL etl/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PATH=rpb-spatials"
 ```
 
 ### Run RPPD transformation to strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/rppd-to-strapi.flux"
+sbt "runMain rpb.ETL etl/rppd-to-strapi.flux"
 ```
 
 Writes output to `output/output-rppd-strapi.ndjson`.
@@ -108,7 +108,7 @@ Writes output to `output/output-rppd-strapi.ndjson`.
 ### Import RPPD strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/rppd-import.flux"
+sbt "runMain rpb.ETL etl/rppd-import.flux"
 ```
 
 This attempts to import RPPD data to strapi, and prints the server responses.
@@ -120,7 +120,7 @@ See also `transformAndImportTest.sh` (test data) and `transformAndImportFull.sh`
 ### Run transformation to lobid data
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-test-titel-to-lobid.flux"
+sbt "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
 ```
 
 This writes individual `.json` files for each record in the input data to `output/`.
@@ -128,7 +128,7 @@ This writes individual `.json` files for each record in the input data to `outpu
 ### Export strapi data
 
 ```bash
-sbt "runMain rpb.ETL conf/test-export-strapi-to-lobid.flux"
+sbt "runMain rpb.ETL etl/test-export-strapi-to-lobid.flux"
 ```
 
 This writes individual `.json` files for Strapi records to `output/`.
@@ -136,10 +136,10 @@ This writes individual `.json` files for Strapi records to `output/`.
 ### Compare export data
 
 ```bash
-sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','u') PATH=articles"
-sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','Monografie') PATH=independent-works"
-sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('type','Band') PATH=independent-works"
-sbt "runMain rpb.ETL conf/test-export-compare-strapi.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','Band') PATH=independent-works"
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
 ```
 
 This selects parts of the test data and write two files:
@@ -163,10 +163,10 @@ This validates the resulting files against the JSON schemas in `test/rpb/schemas
 
 During development, you'll sometimes want to add a record with specific fields or values to the test data, e.g. when handling new fields or fixing edge cases in the transformation. Due to the unusual encoding of the input data (`IBM437`), editing the files in a text editor may result in a faulty encoding. Instead, we can use the command line and append to the test data directly with `>>`.
 
-E.g. to add the last record in `conf/RPB-Export_HBZ_Bio.txt` that contains `#82b` to `conf/RPB-Export_HBZ_Bio_Test.txt`:
+E.g. to add the last record in `etl/RPB-Export_HBZ_Bio.txt` that contains `#82b` to `etl/RPB-Export_HBZ_Bio_Test.txt`:
 
 ```bash
-cat conf/RPB-Export_HBZ_Bio.txt | grep -a '#82b' | tail -n 1 >> conf/RPB-Export_HBZ_Bio_Test.txt
+cat etl/RPB-Export_HBZ_Bio.txt | grep -a '#82b' | tail -n 1 >> etl/RPB-Export_HBZ_Bio_Test.txt
 ```
 
 The `-a` is required to return all results since grep views parts of the files as binary data.
@@ -232,10 +232,10 @@ Goal: for all RPB entries with an hbz ID in `#983`, create a mapping from the hb
 Create the subset we want to reconcile (all entries with `#983`):
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-983.flux"
+sbt "runMain rpb.ETL etl/rpb-983.flux"
 ```
 
-Create an OpenRefine project from the output file `conf/output/rpb-983.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
+Create an OpenRefine project from the output file `etl/output/rpb-983.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
 
 In the "Undo / Redo" tab, click "Apply...", paste the content below, then click "Perform Operations".
 
@@ -319,17 +319,17 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
 
 This reconciles the hbz IDs from `#983` with lobid-resources to add a column `almaMmsId`, as well as a column `rpbId` from `#00 `. We can now filter on the matched entries, remove the original data column and the hbz ID column, and export the remaining `almaMmsId` and `rpbId` columns as tab-separated values to be used for lookups in the lobid-resources transformation.
 
-We currently have two output files for this workflow (in `conf/maps/`): `almaMmsId-to-rpbId.tsv`, the actual goal mapping, and `hbzIds-missing-in-alma.tsv`, a mapping of values in `#983` that were not reconciled (some look like proper hbz IDs that seem to be missing in Alma, some look like cataloging errors) to `rpbId` from `#00 `.
+We currently have two output files for this workflow (in `etl/maps/`): `almaMmsId-to-rpbId.tsv`, the actual goal mapping, and `hbzIds-missing-in-alma.tsv`, a mapping of values in `#983` that were not reconciled (some look like proper hbz IDs that seem to be missing in Alma, some look like cataloging errors) to `rpbId` from `#00 `.
 
 ### RPB `#36 =sm` data w/o hbz IDs
 
 Create the subset we want to reconcile (entries with `#36 =sm` and no hbz ID in `#983`):
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-36sm.flux"
+sbt "runMain rpb.ETL etl/rpb-36sm.flux"
 ```
 
-Create an OpenRefine project from the output file `conf/output/rpb-36sm.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
+Create an OpenRefine project from the output file `etl/output/rpb-36sm.json`, selecting "Line-based text files" under "Parse data as". Optionally, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
 
 In the "Undo / Redo" tab, click "Apply...", paste the content below, then click "Perform Operations".
 
@@ -629,10 +629,10 @@ NOTE: This section is work in progress, see [RPB-51](https://jira.hbz-nrw.de/bro
 Create the subset we want to reconcile (entries with `#36 =s` and no hbz ID in `#983`):
 
 ```bash
-sbt "runMain rpb.ETL conf/rpb-36s.flux"
+sbt "runMain rpb.ETL etl/rpb-36s.flux"
 ```
 
-Create an OpenRefine project from the output file `conf/output/rpb-36s.json`, selecting "Line-based text files" under "Parse data as". Since the full data is relatively large, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
+Create an OpenRefine project from the output file `etl/output/rpb-36s.json`, selecting "Line-based text files" under "Parse data as". Since the full data is relatively large, limit the number of rows to import ("Load at most [ ] row(s) of data") for faster experimentation with reconciliation results.
 
 In the "Undo / Redo" tab, click "Apply...", paste the content below, then click "Perform Operations".
 

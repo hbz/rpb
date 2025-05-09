@@ -1,5 +1,5 @@
 // call e.g. (see transformBeacons.sh for all)
-// sbt "runMain rpb.ETL conf/rppd-beacon-to-lookup.flux IN=https://persondata.toolforge.org/beacon/dewiki.txt OUT=conf/maps/gndId-to-dewiki.tsv"
+// sbt "runMain rpb.ETL etl/rppd-beacon-to-lookup.flux IN=https://persondata.toolforge.org/beacon/dewiki.txt OUT=etl/maps/gndId-to-dewiki.tsv"
 default ENCODING = "UTF-8";
 IN
 | open-http(encoding=ENCODING)

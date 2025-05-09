@@ -1,4 +1,4 @@
-default outfile = "conf/output/bulk/bulk-${i}.ndjson";
+default outfile = "etl/output/bulk/bulk-${i}.ndjson";
 default url = "http://localhost:9000/";
 default secret = "";
 input

@@ -354,7 +354,7 @@ public class Application extends Controller {
 	@Cached(key = "journals", duration = ONE_DAY)
 	public static Result journals() throws IOException {
 		try (InputStream stream = Play.application().classloader()
-				.getResourceAsStream("nwbib-journals.csv")) {
+				.getResourceAsStream("rpb-journals.csv")) {
 			String csv = IOUtils.toString(stream, UTF_8);
 			List<String> lines = Arrays.asList(csv.split("\n"));
 			List<HashMap<String, String>> maps = lines.stream()
@@ -365,10 +365,20 @@ public class Application extends Controller {
 						map.put("value", strings[1].replace("\"", ""));
 						return map;
 					}).collect(Collectors.toList());
+			final String label = "label";
+			Collections.sort(maps, (map1, map2) -> {
+				return Collator.getInstance(Locale.GERMANY).compare(//
+						sortValue(map1, label), sortValue(map2, label));
+			});
 			String journals = Json.toJson(maps).toString();
 			return ok(browse_register.render(journals, "Zeitschriften",
 					"Zeitschriftenliste filtern"));
 		}
+	}
+
+	private static String sortValue(Map<String, String> map, final String key) {
+		String value = map.get(key).replaceAll("^(Der|Die|Das|De|Dä)\\s", "");
+		return Arrays.asList(value.split("\\s")).toString();
 	}
 
 	/**

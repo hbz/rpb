@@ -1,6 +1,6 @@
 // Import / restore from Strapi export data:
-// zgrep -a '"type":"api::person.person"' conf/strapi-export.tar.gz > conf/output/rppd-export-restore.jsonl
-// sbt "runMain rpb.ETL conf/rppd-import-from-strapi.flux IN_FILE=rppd-export-restore.jsonl HOST=$HOST API_TOKEN=$API_TOKEN"
+// zgrep -a '"type":"api::person.person"' etl/strapi-export.tar.gz > etl/output/rppd-export-restore.jsonl
+// sbt "runMain rpb.ETL etl/rppd-import-from-strapi.flux IN_FILE=rppd-export-restore.jsonl HOST=$HOST API_TOKEN=$API_TOKEN"
 
 default HOST = "localhost"; // pass e.g. HOST=test-metadaten-nrw.hbz-nrw.de
 default IN_FILE = "rppd-export.jsonl"; // pass e.g. IN_FILE=rppd-export-restore.jsonl

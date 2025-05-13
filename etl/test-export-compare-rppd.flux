@@ -1,8 +1,8 @@
 // Get test data for the specified type; for each record,
 // fetch the entry from Strapi, convert that to lobid, write.
 
-// sbt "runMain rpb.ETL conf/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio_Test.txt OUT_FILE=test-output-rppd.json"
-// sbt -mem 2048 "runMain rpb.ETL conf/test-export-compare-rppd.flux"
+// sbt "runMain rpb.ETL etl/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio_Test.txt OUT_FILE=test-output-rppd.json"
+// sbt -mem 2048 "runMain rpb.ETL etl/test-export-compare-rppd.flux"
 FLUX_DIR + "output/test-output-rppd.json"
 | open-file
 | as-lines

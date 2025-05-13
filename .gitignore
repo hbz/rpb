@@ -5,10 +5,10 @@ bin
 .classpath
 .settings/org.eclipse.core.resources.prefs
 .settings/org.scala-ide.sdt.core.prefs
-/conf/maps/beacons/*.tsv
-/conf/output/*
-!/conf/output/test*.json
-!/conf/output/rpb-50*
+/etl/maps/beacons/*.tsv
+/etl/output/*
+!/etl/output/test*.json
+!/etl/output/rpb-50*
 /data/*
 !/data/.empty
 bulk.ndjson
@@ -22,8 +22,8 @@ RPB-Export_HBZ_Raum.txt
 RPB-Export_HBZ_SWN.txt
 RPB-Export_HBZ_Syst.txt
 RPB-Export_HBZ_ZSS.txt
-conf/RPBEXP/*.ZIP
-conf/strapi-export.tar.gz
+etl/RPBEXP/*.ZIP
+etl/strapi-export.tar.gz
 nohup.out*
-conf/*.ndjson
-conf/*.zip
+etl/*.ndjson
+etl/*.zip

@@ -1,8 +1,8 @@
 /* Copyright 2014, 2022 Fabian Steeg, hbz. Licensed under the GPLv2 */
 
-package controllers.nwbib;
+package controllers.rpb;
 
-import static controllers.nwbib.Application.CONFIG;
+import static controllers.rpb.Application.CONFIG;
 
 import java.io.File;
 import java.io.FileReader;

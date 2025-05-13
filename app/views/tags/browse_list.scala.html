@@ -5,7 +5,7 @@
 @import play.api.libs.json.Json
 @import play.api.libs.json.JsValue
 @import com.fasterxml.jackson.databind.JsonNode
-@import controllers.nwbib.Lobid
+@import controllers.rpb.Lobid
 
 @label(json: JsValue) = @{
     (json\"label").as[String]
@@ -83,9 +83,9 @@
                     case _ => value
                  }}">@Html(entryLabel)</a> @if(hits>0){
                  (<a href="@{t match {
-                    case "Wikidata" => nwbib.routes.Application.search(rpbspatial=value)
-                    case "Raumsystematik" => nwbib.routes.Application.search(rpbspatial=Lobid.rpbSpatialGndToRealGnd(value))
-                    case "Sachsystematik" => nwbib.routes.Application.search(rpbsubject=value)
+                    case "Wikidata" => rpb.routes.Application.search(rpbspatial=value)
+                    case "Raumsystematik" => rpb.routes.Application.search(rpbspatial=Lobid.rpbSpatialGndToRealGnd(value))
+                    case "Sachsystematik" => rpb.routes.Application.search(rpbsubject=value)
                     case _ => value
                  }}">@hits</a>)
                  }

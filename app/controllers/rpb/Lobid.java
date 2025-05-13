@@ -1,6 +1,6 @@
 /* Copyright 2014 Fabian Steeg, hbz. Licensed under the GPLv2 */
 
-package controllers.nwbib;
+package controllers.rpb;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +26,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.html.HtmlEscapers;
 
-import controllers.nwbib.Classification.Type;
+import controllers.rpb.Classification.Type;
 import play.Logger;
 import play.Play;
 import play.cache.Cache;

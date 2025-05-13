@@ -5,10 +5,10 @@
 @import helper._
 @import play.api.libs.json.Json
 @import play.api.libs.json.JsValue
-@import controllers.nwbib.Lobid
+@import controllers.rpb.Lobid
 
 @main("RPB - Themensuche") {
-    @helper.form(action = controllers.nwbib.routes.Application.topics(q), 'id -> "nwbib-form") {
+    @helper.form(action = controllers.rpb.routes.Application.topics(q), 'id -> "nwbib-form") {
      <div class="input-group">
       <input type="text" name="q" title="Suchtext" id="nwbibQuery" value="@q" class="form-control" autocomplete="off"/>
       <span class="input-group-btn"><button class="btn btn-default" type="submit" title="Suchen">
@@ -20,7 +20,7 @@
         @if(!mainHeadings.isEmpty) {
           <p/><b>@if(mainHeadings.size > 1){Suchvorschläge} else {Suchvorschlag}:</b>
           @for(heading <- mainHeadings) {
-              <a href="@nwbib.routes.Application.topics(q=heading)">@heading</a>@if(mainHeadings.last!=heading){ | }
+              <a href="@rpb.routes.Application.topics(q=heading)">@heading</a>@if(mainHeadings.last!=heading){ | }
           }
         }
       }
@@ -32,7 +32,7 @@
     }
     <ul id="root" style="display:block;">
        @for(topic <- topics; key = topic.getLeft; count = topic.getRight.toInt) {
-         <li class="treeItem"><a title="@count Treffer zum diesem Thema anzeigen" href="@nwbib.routes.Application.search(subject=q, word="subject.label.raw:\""+key+"\"")">
+         <li class="treeItem"><a title="@count Treffer zum diesem Thema anzeigen" href="@rpb.routes.Application.search(subject=q, word="subject.label.raw:\""+key+"\"")">
            @key@if(count>1){&nbsp;<span class='badge progress-bar-success'>@count</span>}
          </a></li>
        }

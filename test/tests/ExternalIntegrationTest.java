@@ -20,9 +20,9 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import controllers.nwbib.Application;
-import controllers.nwbib.Classification;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Application;
+import controllers.rpb.Classification;
+import controllers.rpb.Lobid;
 import play.libs.F.Promise;
 import play.mvc.Http;
 import play.test.Helpers;

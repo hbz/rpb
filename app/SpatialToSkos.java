@@ -25,8 +25,8 @@ import org.apache.jena.vocabulary.SKOS;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import controllers.nwbib.Classification;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Classification;
+import controllers.rpb.Lobid;
 
 /**
  * Generate a SKOS representation from the internal spatial classification data

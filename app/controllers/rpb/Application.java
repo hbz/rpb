@@ -1,6 +1,6 @@
 /* Copyright 2014 Fabian Steeg, hbz. Licensed under the GPLv2 */
 
-package controllers.nwbib;
+package controllers.rpb;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,7 +46,7 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
-import controllers.nwbib.Classification.Type;
+import controllers.rpb.Classification.Type;
 import play.Logger;
 import play.Play;
 import play.cache.Cache;

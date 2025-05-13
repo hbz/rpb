@@ -2,7 +2,7 @@
 
 package tests;
 
-import static controllers.nwbib.Application.CONFIG;
+import static controllers.rpb.Application.CONFIG;
 import static org.fest.assertions.Assertions.assertThat;
 
 import java.io.IOException;
@@ -16,9 +16,9 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import controllers.nwbib.Classification;
-import controllers.nwbib.Classification.Type;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Classification;
+import controllers.rpb.Lobid;
+import controllers.rpb.Classification.Type;
 import play.libs.Json;
 
 /**

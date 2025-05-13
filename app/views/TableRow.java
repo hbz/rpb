@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.html.HtmlEscapers;
 
-import controllers.nwbib.Application;
-import controllers.nwbib.Classification;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Application;
+import controllers.rpb.Classification;
+import controllers.rpb.Lobid;
 import play.Logger;
 import play.libs.ws.WS;
 import play.libs.ws.WSRequest;

@@ -2,7 +2,7 @@
 
 @(title: String, docJson: Option[String] = None)(content: Html)
 
-@import controllers.nwbib.Lobid
+@import controllers.rpb.Lobid
 @import play.api.libs.json._
 
 <!DOCTYPE html>
@@ -35,26 +35,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="@nwbib.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> RPB</a>
+                    <a class="navbar-brand" href="@rpb.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> RPB</a>
                   </div>
                   <div class="navbar-collapse collapse" id="nwbib-nav">
                     <ul class="nav navbar-nav">
                       <li @if(title=="RPB - Ergebnisliste"){class="active"}>
-                        <a href="@nwbib.routes.Application.search()">Suche</a>
+                        <a href="@rpb.routes.Application.search()">Suche</a>
                       </li>
                       <li @if(title=="RPB - Erweiterte Suche"){class="active"}>
-                        <a href="@nwbib.routes.Application.advanced()">Erweiterte Suche</a>
+                        <a href="@rpb.routes.Application.advanced()">Erweiterte Suche</a>
                       </li>
                       @*
                       <li @if(title=="RPB - Themensuche"){class="active"}>
-                        <a href="@nwbib.routes.Application.topics()">Themensuche</a>
+                        <a href="@rpb.routes.Application.topics()">Themensuche</a>
                       </li>
                       *@
                       <li @if(title.contains("Raumsystematik")){class="active"}>
-                        <a href="@nwbib.routes.Application.spatial()">Regionen</a>
+                        <a href="@rpb.routes.Application.spatial()">Regionen</a>
                       </li>
                       <li @if(title.contains("Sachsystematik")){class="active"}>
-                        <a href="@nwbib.routes.Application.subjects()">Sachgebiete</a>
+                        <a href="@rpb.routes.Application.subjects()">Sachgebiete</a>
                       </li>
                       @*
                       <li class="dropdown">
@@ -73,7 +73,7 @@
                       *@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                      <li @if(title=="RPB - Merkliste"){class="active"}><a href="@nwbib.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
+                      <li @if(title=="RPB - Merkliste"){class="active"}><a href="@rpb.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
                       <li><a href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/rheinland-pfaelzische-bibliographie-infotext" target="_blank">Über die RPB</a></li>
                       <li><a href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/rheinland-pfaelzische-bibliographie-weitere-links-mit-landeskundlichem-bezug" target="_blank">Weitere Bibliographien</a></li>
                       <li class="divider"></li>
@@ -81,7 +81,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                           <li class="dropdown-header">Feedback</li>
-                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20RPB,%20aktuelle%20URL%20@controllers.nwbib.Application.currentUri()">Feedback zur aktuellen Seite</a></li>
+                          <li><a href="mailto:lobid-admin@@hbz-nrw.de?subject=Feedback%20zur%20RPB,%20aktuelle%20URL%20@controllers.rpb.Application.currentUri()">Feedback zur aktuellen Seite</a></li>
                           <li class="divider"></li>
                           <li class="dropdown-header">Fachlicher Kontakt</li>
                           <li><a href="mailto:pl.rlb@@lbz-rlp.de?Subject=Anfrage%20Zentralredaktion%20RPB">Zentralredaktion (Tel.: 0261/91500-450)</a></li>
@@ -105,7 +105,7 @@
             @content
             <div class="panel panel-default nwbib-footer">
               <div class="panel-body">
-                @defining(controllers.nwbib.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
+                @defining(controllers.rpb.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
                 <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen"> 
                 <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo">
                 Die RPB enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>

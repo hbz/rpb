@@ -21,11 +21,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -395,10 +393,7 @@ public class Classification {
 		if (notationFromSkos != null) {
 			return notationFromSkos.findValue("@value").asText().replace("rpb", "");
 		}
-		Optional<String> notationKeyWikidata =
-				Stream.of("ks", "ags", "rs").filter(k -> item.has(k)).findFirst();
-		return notationKeyWikidata.map(k -> item.get(k).get("value").asText())
-				.orElse("");
+		return "";
 	}
 
 	private static Map<String, List<JsonNode>> removeDuplicates(
@@ -551,8 +546,7 @@ public class Classification {
 	 *         https://nwbib.de/subjects#N582060]
 	 */
 	public static List<String> pathTo(String uri) {
-		Type type = uri.contains("spatial") || uri.contains("wikidata")
-				? Type.SPATIAL : Type.NWBIB;
+		Type type = uri.contains("spatial") ? Type.SPATIAL : Type.NWBIB;
 		Map<String, List<String>> candidates = Cache.getOrElse(type.toString(),
 				() -> generateAllPaths(type.buildHierarchy()), Application.ONE_DAY);
 		return candidates.containsKey(uri) ? candidates.get(uri)

@@ -376,20 +376,11 @@ public class Application extends Controller {
 	 * @return Classification data for the given type
 	 */
 	public static Result classification(final String t) {
-		if (t.equals("WikidataImport")) {
-			File data = WikidataLocations.wikidataFile();
-			boolean deleteSuccess = data.delete();
-			Logger.debug("Deleting local data: {}, success: {}", data, deleteSuccess);
-			return redirect(routes.Application.classification("Wikidata"));
-		}
 		Result cachedResult = (Result) Cache.get("classification." + t);
 		if (cachedResult != null)
 			return cachedResult;
 		Result result = null;
 		String placeholder = t + " filtern";
-		if (t.equals("Wikidata")) {
-			return classificationResultWikidata(t, placeholder);
-		}
 		if (t.isEmpty()) {
 			result = ok(classification.render());
 		} else {
@@ -481,16 +472,6 @@ public class Application extends Controller {
 		default:
 			return Results.badRequest("Bad request: t=" + t + " unsupported");
 		}
-	}
-
-	// Admin UI for reloading classification from Wikidata
-	private static Result classificationResultWikidata(String t,
-			String placeholder) {
-		Pair<List<JsonNode>, Map<String, List<JsonNode>>> topAndSub =
-				Classification.Type.SPATIAL.buildHierarchy();
-		String topClassesJson = Json.toJson(topAndSub.getLeft()).toString();
-		return ok(browse_classification.render(topClassesJson, topAndSub.getRight(),
-				t, placeholder));
 	}
 
 	private static Result classificationResult(String t, String placeholder) {

@@ -68,7 +68,6 @@ public class SpatialToSkos {
 		model.setNsPrefix("dct", DCTerms.NAMESPACE.toString());
 		model.setNsPrefix("vann", "http://purl.org/vocab/vann/");
 		model.setNsPrefix("", RPB_SPATIAL_NAMESPACE);
-		model.setNsPrefix("wd", "http://www.wikidata.org/entity/");
 	}
 
 	private static Resource addConceptScheme(Model model) {

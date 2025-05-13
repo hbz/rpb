@@ -65,7 +65,7 @@ import play.cache.Cache;
 import play.libs.Json;
 
 /**
- * NWBib classification and spatial classification data access via Elasticsearch
+ * RPB classification and spatial classification data access via Elasticsearch
  *
  * @author Fabian Steeg (fsteeg)
  */
@@ -76,12 +76,12 @@ public class Classification {
 	private static final String INDEX = "rpb";
 
 	/**
-	 * NWBib classification types.
+	 * RPB classification types.
 	 */
 	public enum Type {
-		/** NWBib subject type */
-		NWBIB("json-ld-rpb", "Sachsystematik"), //
-		/** NWBib spatial type */
+		/** RPB subject type */
+		SUBJECT("json-ld-rpb", "Sachsystematik"), //
+		/** RPB spatial type */
 		SPATIAL("json-ld-rpb-spatial", "Raumsystematik");
 
 		String elasticsearchType;
@@ -244,12 +244,12 @@ public class Classification {
 	 */
 	public static JsonNode ids(String q, String t) {
 		QueryBuilder queryBuilder = QueryBuilders.boolQuery()
-				.must(QueryBuilders.idsQuery(Type.NWBIB.elasticsearchType,
+				.must(QueryBuilders.idsQuery(Type.SUBJECT.elasticsearchType,
 						Type.SPATIAL.elasticsearchType).addIds(q));
 		SearchRequestBuilder requestBuilder = client.prepareSearch(INDEX)
 				.setSearchType(SearchType.DFS_QUERY_THEN_FETCH).setQuery(queryBuilder);
 		if (t.isEmpty()) {
-			requestBuilder = requestBuilder.setTypes(Type.NWBIB.elasticsearchType,
+			requestBuilder = requestBuilder.setTypes(Type.SUBJECT.elasticsearchType,
 					Type.SPATIAL.elasticsearchType);
 		} else {
 			for (Type indexType : Type.values())
@@ -262,7 +262,7 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The NWBib classification URI
+	 * @param uri The RPB classification URI
 	 * @param type The ES classification type (see {@link Classification.Type})
 	 * @return The label for the given classification URI
 	 */
@@ -272,7 +272,7 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The NWBib classification URI
+	 * @param uri The RPB classification URI
 	 * @param type The ES classification type (see {@link Classification.Type})
 	 * @return The notation for the given classification URI
 	 */
@@ -499,7 +499,7 @@ public class Classification {
 				.actionGet();
 		if (!client.admin().indices().prepareExists(INDEX).execute().actionGet()
 				.isExists()) {
-			indexData(CONFIG.getString("index.data.rpbsubject"), Type.NWBIB);
+			indexData(CONFIG.getString("index.data.rpbsubject"), Type.SUBJECT);
 			indexData(CONFIG.getString("index.data.rpbspatial"), Type.SPATIAL);
 			client.admin().indices().refresh(new RefreshRequest()).actionGet();
 			Settings indexSettings = Settings.builder().put("max_result_window", MAX_RESULT_WINDOW).build();
@@ -546,7 +546,7 @@ public class Classification {
 	 *         https://nwbib.de/subjects#N582060]
 	 */
 	public static List<String> pathTo(String uri) {
-		Type type = uri.contains("spatial") ? Type.SPATIAL : Type.NWBIB;
+		Type type = uri.contains("spatial") ? Type.SPATIAL : Type.SUBJECT;
 		Map<String, List<String>> candidates = Cache.getOrElse(type.toString(),
 				() -> generateAllPaths(type.buildHierarchy()), Application.ONE_DAY);
 		return candidates.containsKey(uri) ? candidates.get(uri)

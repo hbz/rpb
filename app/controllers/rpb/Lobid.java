@@ -398,7 +398,7 @@ public class Lobid {
 			return cachedResult;
 		}
 		Type type = uri.contains("spatial") ? Classification.Type.SPATIAL
-				: Classification.Type.NWBIB;
+				: Classification.Type.SUBJECT;
 		String label = Classification.label(uri, type);
 		label = HtmlEscapers.htmlEscaper().escape(label);
 		label = label.trim().isEmpty() ? uri : label;
@@ -597,7 +597,7 @@ public class Lobid {
 				|| field.equals(Application.RPB_SUBJECT_FIELD))
 			return "octicon octicon-list-unordered";
 		else if ((uris.size() == 1 && isRpbSpatial(uris.get(0)))
-				|| field.equals(Application.NWBIB_SPATIAL_FIELD)
+				|| field.equals(Application.RPB_SPATIAL_FIELD)
 				|| field.equals(Application.COVERAGE_FIELD))
 			return "octicon octicon-milestone";
 		else if ((uris.size() == 1 && isGnd(uris.get(0)))

@@ -95,8 +95,8 @@ public class Application extends Controller {
 
 	/** The internal ES field for the RPB subject facet. */
 	public static final String RPB_SUBJECT_FIELD = "subject.id<rpb#";
-	/** The internal ES field for the NWBib spatial facet. */
-	public static final String NWBIB_SPATIAL_FIELD = "spatial.id<spatial#";
+	/** The internal ES field for the RPB spatial facet. */
+	public static final String RPB_SPATIAL_FIELD = "spatial.id<spatial#";
 	/** The internal ES field for the coverage facet. */
 	public static final String COVERAGE_FIELD = "spatial.label.raw";
 	/** The internal ES field for subject locations. */
@@ -126,7 +126,7 @@ public class Application extends Controller {
 
 	/**
 	 * @param map The scope for the NRW map ("kreise" or "gemeinden")
-	 * @return The NWBib index page.
+	 * @return The RPB index page.
 	 */
 	public static Result index(String map) {
 		final Form<String> form = queryForm.bindFromRequest();
@@ -136,7 +136,7 @@ public class Application extends Controller {
 	}
 
 	/**
-	 * @return The NWBib info page.
+	 * @return The RPB info page.
 	 */
 	@Cached(key = "rpb.info", duration = ONE_HOUR)
 	public static Result info() {
@@ -144,7 +144,7 @@ public class Application extends Controller {
 	}
 
 	/**
-	 * @return The NWBib advanced search page.
+	 * @return The RPB advanced search page.
 	 */
 	@Cached(key = "rpb.advanced", duration = ONE_HOUR)
 	public static Result advanced() {
@@ -165,7 +165,7 @@ public class Application extends Controller {
 
 	/**
 	 * @param q The topics query.
-	 * @return The NWBib topics search page.
+	 * @return The RPB topics search page.
 	 */
 	public static Promise<Result> topics(String q) {
 		if (q.isEmpty())
@@ -683,7 +683,7 @@ public class Application extends Controller {
 					!field.equals(RPB_SUBJECT_FIELD) ? rpbsubject //
 							: queryParam(rpbsubject, term);
 			String rpbspatialQuery =
-					!field.equals(NWBIB_SPATIAL_FIELD) ? rpbspatial //
+					!field.equals(RPB_SPATIAL_FIELD) ? rpbspatial //
 							: queryParam(rpbspatial, term);
 			String rawQuery = !field.equals(COVERAGE_FIELD) ? raw //
 					: rawQueryParam(raw, term);
@@ -721,7 +721,7 @@ public class Application extends Controller {
 									.get(field.split("<")[0]).elements(), 0),
 							false);
 					if (field.equals(RPB_SUBJECT_FIELD)
-							|| field.equals(NWBIB_SPATIAL_FIELD)) {
+							|| field.equals(RPB_SPATIAL_FIELD)) {
 						String source = field.split("<")[1];
 						stream = stream
 								.filter(aggr -> aggr.get("key").textValue().contains(source));
@@ -760,7 +760,7 @@ public class Application extends Controller {
 		return field.equals(MEDIUM_FIELD) && contains(medium, term)
 				|| field.equals(TYPE_FIELD) && contains(t, term)
 				|| field.equals(ITEM_FIELD) && contains(owner, term)
-				|| field.equals(NWBIB_SPATIAL_FIELD) && contains(rpbspatial, term)
+				|| field.equals(RPB_SPATIAL_FIELD) && contains(rpbspatial, term)
 				|| field.equals(COVERAGE_FIELD) && rawContains(raw, quotedEscaped(term))
 				|| field.equals(RPB_SUBJECT_FIELD) && contains(rpbsubject, term)
 				|| field.equals(SUBJECT_FIELD) && contains(subject, term);

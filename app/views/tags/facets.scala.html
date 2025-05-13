@@ -132,7 +132,7 @@
   <div id="issued-div"> <a id="issued-link" style="display:none" href="@rpb.routes.Application.search(q,person,name,subject,id,publisher,issued,medium,rpbspatial,rpbsubject,from,size,owner,t,sortParam,location=location,word=word,corporation=corporation,raw=raw)">Anwenden</a> </div>
   </div>
   <br/>
-  <div class="row facet"><div class="col-md-12">@facets("Regionen", Application.NWBIB_SPATIAL_FIELD, rpbspatial)</div></div>
+  <div class="row facet"><div class="col-md-12">@facets("Regionen", Application.RPB_SPATIAL_FIELD, rpbspatial)</div></div>
   <div class="row facet"><div class="col-md-12">@facets("Sachgebiete", Application.RPB_SUBJECT_FIELD, rpbsubject)</div></div>
   <div class="row facet"><div class="col-md-12">@facets("Schlagwörter", Application.SUBJECT_FIELD, if(!urisOnly(subject).isEmpty) urisOnly(subject) else "", "dropup")</div></div>
   <div class="row facet"><div class="col-md-12">@facets("Publikationstypen", Application.TYPE_FIELD, t, "dropup")</div></div>

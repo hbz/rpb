@@ -543,7 +543,7 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The nwbib or rpbspatial URI
+	 * @param uri The rpb or rpbspatial URI
 	 * @return The list of path segments to the given URI in its classification,
 	 *         e.g. for URI https://nwbib.de/subjects#N582060:
 	 *         [https://nwbib.de/subjects#N5, https://nwbib.de/subjects#N580000,

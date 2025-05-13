@@ -8,9 +8,9 @@
 @import controllers.rpb.Lobid
 
 @main("RPB - Themensuche") {
-    @helper.form(action = controllers.rpb.routes.Application.topics(q), 'id -> "nwbib-form") {
+    @helper.form(action = controllers.rpb.routes.Application.topics(q), 'id -> "rpb-form") {
      <div class="input-group">
-      <input type="text" name="q" title="Suchtext" id="nwbibQuery" value="@q" class="form-control" autocomplete="off"/>
+      <input type="text" name="q" title="Suchtext" id="rpbQuery" value="@q" class="form-control" autocomplete="off"/>
       <span class="input-group-btn"><button class="btn btn-default" type="submit" title="Suchen">
         <span class="glyphicon glyphicon-search"></span></button></span>
      </div>

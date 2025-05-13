@@ -108,11 +108,11 @@ public class Application extends Controller {
 	/** The internal ES field for issued years. */
 	public static final String ISSUED_FIELD = "publication.startDate";
 
-	private static final File FILE = new File("conf/nwbib.conf");
-	/** Access to the nwbib.conf config file. */
+	private static final File FILE = new File("conf/rpb.conf");
+	/** Access to the rpb.conf config file. */
 	public final static Config CONFIG = ConfigFactory
 			.parseFile(
-					FILE.exists() ? FILE : new File("modules/nwbib/conf/nwbib.conf"))
+					FILE.exists() ? FILE : new File("modules/rpb/conf/rpb.conf"))
 			.resolve();
 
 	static Form<String> queryForm = Form.form(String.class);
@@ -138,7 +138,7 @@ public class Application extends Controller {
 	/**
 	 * @return The NWBib info page.
 	 */
-	@Cached(key = "nwbib.info", duration = ONE_HOUR)
+	@Cached(key = "rpb.info", duration = ONE_HOUR)
 	public static Result info() {
 		return ok(info.render());
 	}
@@ -146,7 +146,7 @@ public class Application extends Controller {
 	/**
 	 * @return The NWBib advanced search page.
 	 */
-	@Cached(key = "nwbib.advanced", duration = ONE_HOUR)
+	@Cached(key = "rpb.advanced", duration = ONE_HOUR)
 	public static Result advanced() {
 		return ok(views.html.advanced.render());
 	}
@@ -178,11 +178,11 @@ public class Application extends Controller {
 			return cachedResult;
 		String aggregationField = "subject.label.raw";
 		WSRequest request = // @formatter:off
-				WS.url(Application.CONFIG.getString("nwbib.api"))
+				WS.url(Application.CONFIG.getString("rpb.api"))
 						.setHeader("Accept", "application/json")
 						.setQueryParameter("subject", q)
 						.setQueryParameter("aggregations", aggregationField)
-						.setQueryParameter("filter", Application.CONFIG.getString("nwbib.filter"))
+						.setQueryParameter("filter", Application.CONFIG.getString("rpb.filter"))
 						.setQueryParameter("from", "0")
 						.setQueryParameter("size", "1"); // @formatter:on
 		Promise<Result> result = request.get().map((WSResponse response) -> {
@@ -592,7 +592,7 @@ public class Application extends Controller {
 
 	private static void uncache(List<String> ids) {
 		for (String id : ids) {
-			Cache.remove(String.format("%s-/nwbib/%s", session("uuid"), id));
+			Cache.remove(String.format("%s-/rpb/%s", session("uuid"), id));
 		}
 	}
 

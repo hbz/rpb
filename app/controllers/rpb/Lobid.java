@@ -94,14 +94,14 @@ public class Lobid {
 			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, String owner, String t, String sort, String location,
 			String word, String corporation, String raw) {
-		WSRequest requestHolder = WS.url(Application.CONFIG.getString("nwbib.api"))
+		WSRequest requestHolder = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setHeader("Accept", "application/json")
 				.setQueryParameter("format", "json")
 				.setQueryParameter("from", from + "")
 				.setQueryParameter("size", size + "")//
 				.setQueryParameter("sort", sort)//
 				.setQueryParameter("filter",
-						Application.CONFIG.getString("nwbib.filter"))
+						Application.CONFIG.getString("rpb.filter"))
 				.setQueryParameter("location", locationPolygon(location));
 
 		if (!raw.trim().isEmpty())
@@ -176,14 +176,14 @@ public class Lobid {
 
 	static WSRequest topicRequest(final String q, int from, int size) {
 		WSRequest request = // @formatter:off
-				WS.url(Application.CONFIG.getString("nwbib.api"))
+				WS.url(Application.CONFIG.getString("rpb.api"))
 						.setHeader("Accept", "application/json")
 						.setQueryParameter("format", "json")
 						.setQueryParameter("from", "" + from)
 						.setQueryParameter("size", "" + size)
 						.setQueryParameter("subject", q)
 						.setQueryParameter("filter",
-								Application.CONFIG.getString("nwbib.filter"))
+								Application.CONFIG.getString("rpb.filter"))
 						.setQueryParameter("aggregations", "topic");
 		//@formatter:on
 		Logger.debug("Request URL {}, query params {} ", request.getUrl(),
@@ -214,8 +214,8 @@ public class Lobid {
 	}
 
 	/**
-	 * @param value The nwbib classification URI
-	 * @return The number of hits for the given value in an nwbib query
+	 * @param value The rpb classification URI
+	 * @return The number of hits for the given value in an rpb query
 	 */
 	public static long getTotalHitsNwbibClassification(String value) {
 		if (AGGREGATION_COUNT.isEmpty()) {
@@ -252,10 +252,10 @@ public class Lobid {
 			});
 		}
 		String qVal = f + ":\"" + v + "\"";
-		WSRequest request = WS.url(Application.CONFIG.getString("nwbib.api"))
+		WSRequest request = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setQueryParameter("format", "json").setQueryParameter("q", qVal)
 				.setQueryParameter("filter",
-						set.isEmpty() ? Application.CONFIG.getString("nwbib.filter") : set);
+						set.isEmpty() ? Application.CONFIG.getString("rpb.filter") : set);
 		return request.get().map((WSResponse response) -> {
 			Long total = getTotalResults(response.asJson());
 			Cache.set(cacheKey, total, Application.ONE_HOUR);
@@ -367,7 +367,7 @@ public class Lobid {
 		if (cachedResult != null) {
 			return cachedResult;
 		}
-		WSRequest requestHolder = WS.url(Application.CONFIG.getString("nwbib.api"))
+		WSRequest requestHolder = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setHeader("Accept", "application/json")
 				.setQueryParameter("q", "subject.componentList.id:" + escapeUri(uri))
 				.setQueryParameter("format", "json").setQueryParameter("size", "1");
@@ -392,7 +392,7 @@ public class Lobid {
 	}
 
 	private static String nwBibLabel(String uri) {
-		String cacheKey = "nwbib.label." + uri;
+		String cacheKey = "rpb.label." + uri;
 		final String cachedResult = (String) Cache.get(cacheKey);
 		if (cachedResult != null) {
 			return cachedResult;
@@ -431,7 +431,7 @@ public class Lobid {
 			String medium, String rpbspatial, String rpbsubject, String owner,
 			String field, String t, String location, String word, String corporation,
 			String raw) {
-		WSRequest request = WS.url(Application.CONFIG.getString("nwbib.api"))
+		WSRequest request = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setHeader("Accept", "application/json").setQueryParameter("name", name)
 				.setQueryParameter("publisher", publisher)//
 				.setQueryParameter("id", id)//
@@ -444,7 +444,7 @@ public class Lobid {
 				.setQueryParameter("location", locationPolygon(location))//
 				.setQueryParameter("issued", issued)//
 				.setQueryParameter("filter",
-						Application.CONFIG.getString("nwbib.filter"))//
+						Application.CONFIG.getString("rpb.filter"))//
 				.setQueryParameter("t", t);
 
 		if (!person.isEmpty())

@@ -14,7 +14,7 @@
         <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/octicons.css")">
         <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/jquery-ui.min.css")">
         <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/font-awesome.min.css")">
-        <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/nwbib.css")">
+        <link rel="stylesheet" media="all" href="@controllers.routes.Assets.at("stylesheets/rpb.css")">
         <link rel="shortcut icon" type="image/png" href="@controllers.routes.Assets.at("images/favicon.png")">
         <script src="@controllers.routes.Assets.at("javascripts/jquery-1.10.2.min.js")"></script>
         <script src="@controllers.routes.Assets.at("javascripts/jquery-ui.min.js")"></script>
@@ -23,13 +23,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
     </head>
-    <body onload="var q = document.getElementById('nwbibQuery'); if(q!=null){ q.focus(); };">
+    <body onload="var q = document.getElementById('rpbQuery'); if(q!=null){ q.focus(); };">
         <div class="container">
             <p/>
             <div class="navbar navbar-default" role="navigation">
                 <div class="container-fluid">
                   <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nwbib-nav">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rpb-nav">
                         <span class="sr-only">Navigation ein/ausblenden</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -37,7 +37,7 @@
                     </button>
                     <a class="navbar-brand" href="@rpb.routes.Application.index()"><span class="glyphicon glyphicon-home"></span> RPB</a>
                   </div>
-                  <div class="navbar-collapse collapse" id="nwbib-nav">
+                  <div class="navbar-collapse collapse" id="rpb-nav">
                     <ul class="nav navbar-nav">
                       <li @if(title=="RPB - Ergebnisliste"){class="active"}>
                         <a href="@rpb.routes.Application.search()">Suche</a>
@@ -103,7 +103,7 @@
                 <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Ein Entwicklungsprojekt von lbz &amp; hbz <span class="badge">beta</span></small></h1>
             </div>
             @content
-            <div class="panel panel-default nwbib-footer">
+            <div class="panel panel-default rpb-footer">
               <div class="panel-body">
                 @defining(controllers.rpb.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
                 <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen"> 

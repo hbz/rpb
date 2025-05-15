@@ -343,7 +343,7 @@ public class Classification {
 				String lk = record.get("Landkreis");
 				String broader = wpNr != null && !wpNr.trim().isEmpty() ? gs : null;
 				System.out.printf("ID %s, label %s, broader %s\n", id, label, broader);
-				long hits = Lobid.getTotalHitsNwbibClassification(id);
+				long hits = Lobid.getTotalHitsRpbClassification(id);
 				if (broader == null && !isNullOrEmpty(lk)) {
 					String broaderNotation = notation.substring(0, 3);
 					if (!isNullOrEmpty(lk)) {
@@ -461,7 +461,7 @@ public class Classification {
 							: "<span class='notation'>" + notation + "</span>" + " ")
 							+ label.findValue("@value").asText(), //
 					"hits",
-					Lobid.getTotalHitsNwbibClassification(Lobid.rpbSpatialGndToRealGnd(id)), //
+					Lobid.getTotalHitsRpbClassification(Lobid.rpbSpatialGndToRealGnd(id)), //
 					"notation", notation, //
 					"focus", focus(json));
 			result.add(Json.toJson(map));
@@ -540,10 +540,11 @@ public class Classification {
 	/**
 	 * @param uri The rpb or rpbspatial URI
 	 * @return The list of path segments to the given URI in its classification,
-	 *         e.g. for URI https://nwbib.de/subjects#N582060:
-	 *         [https://nwbib.de/subjects#N5, https://nwbib.de/subjects#N580000,
-	 *         https://nwbib.de/subjects#N582000,
-	 *         https://nwbib.de/subjects#N582060]
+	 *         e.g. for URI http://purl.org/lobid/rpb#n865052: [
+	 *         http://purl.org/lobid/rpb#n860000,
+	 *         http://purl.org/lobid/rpb#n865000,
+	 *         http://purl.org/lobid/rpb#n865050,
+	 *         http://purl.org/lobid/rpb#n865052]
 	 */
 	public static List<String> pathTo(String uri) {
 		Type type = uri.contains("spatial") ? Type.SPATIAL : Type.SUBJECT;

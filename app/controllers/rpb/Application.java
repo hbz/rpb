@@ -348,7 +348,7 @@ public class Application extends Controller {
 	}
 
 	/**
-	 * @return A list of nwbib journals
+	 * @return A list of rpb journals
 	 * @throws IOException If reading the journals list data fails
 	 */
 	@Cached(key = "journals", duration = ONE_DAY)

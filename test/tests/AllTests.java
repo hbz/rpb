@@ -4,6 +4,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import rpb.DecodeTest;
+import rpb.EtlTest;
+
 /**
  * All tests, including long running tests and integration tests with
  * dependencies on external services. For quick, self-contained tests see
@@ -13,8 +16,7 @@ import org.junit.runners.Suite.SuiteClasses;
  *
  */
 @RunWith(Suite.class)
-@SuiteClasses({ ApplicationTest.class, InternalIntegrationTest.class,
-		ExternalIntegrationTest.class, InputStringsTest.class })
+@SuiteClasses({ ApplicationTest.class, DecodeTest.class, EtlTest.class, InternalIntegrationTest.class, InputStringsTest.class })
 public class AllTests {
 	//
 }

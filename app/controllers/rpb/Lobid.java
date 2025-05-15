@@ -217,7 +217,7 @@ public class Lobid {
 	 * @param value The rpb classification URI
 	 * @return The number of hits for the given value in an rpb query
 	 */
-	public static long getTotalHitsNwbibClassification(String value) {
+	public static long getTotalHitsRpbClassification(String value) {
 		if (AGGREGATION_COUNT.isEmpty()) {
 			initAggregation("spatial.id");
 			initAggregation("subject.id");
@@ -251,7 +251,7 @@ public class Lobid {
 				return cachedResult;
 			});
 		}
-		String qVal = f + ":\"" + v + "\"";
+		String qVal = f + (v.startsWith("http") ? v : (":\"" + v + "\""));
 		WSRequest request = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setQueryParameter("format", "json").setQueryParameter("q", qVal)
 				.setQueryParameter("filter",
@@ -347,7 +347,7 @@ public class Lobid {
 						.map(node -> node.get("id")).collect(Collectors.toList()))
 				.get(Lobid.API_TIMEOUT);
 		return gndUris.stream()//
-				.map(gndUri -> Pair.of(gndUri.textValue(), hitsInNwbib(gndUri)))
+				.map(gndUri -> Pair.of(gndUri.textValue(), hitsInRpb(gndUri)))
 				.filter(uriAndHits -> uriAndHits.getRight() > 5)
 				.sorted(
 						Collections.reverseOrder(Comparator.comparingLong(Pair::getRight)))
@@ -356,7 +356,7 @@ public class Lobid {
 				.limit(3).collect(Collectors.toList());
 	}
 
-	private static Long hitsInNwbib(JsonNode r) {
+	private static Long hitsInRpb(JsonNode r) {
 		return getTotalHits("subject.componentList.id", r.textValue(), "")
 				.get(API_TIMEOUT);
 	}
@@ -391,7 +391,7 @@ public class Lobid {
 		return label;
 	}
 
-	private static String nwBibLabel(String uri) {
+	private static String rpbLabel(String uri) {
 		String cacheKey = "rpb.label." + uri;
 		final String cachedResult = (String) Cache.get(cacheKey);
 		if (cachedResult != null) {
@@ -566,7 +566,7 @@ public class Lobid {
 			return Lobid.organisationLabel(uris.get(0));
 		} else if (uris.size() == 1
 				&& (isRpbSubject(uris.get(0)) || isRpbSpatial(uris.get(0))))
-			return Lobid.nwBibLabel(uris.get(0));
+			return Lobid.rpbLabel(uris.get(0));
 		else if (uris.size() == 1 && isGnd(uris.get(0)))
 			return Lobid.gndLabel(uris.get(0));
 		String configKey = keys.getOrDefault(field, "");

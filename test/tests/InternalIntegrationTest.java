@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -54,20 +53,17 @@ public class InternalIntegrationTest {
 	}
 
 	@Test
-	@Ignore // TODO: enable with stage
 	public void testFacets() {
 		running(testServer(3333), () -> {
 			String field = Application.TYPE_FIELD;
-			Promise<JsonNode> jsonPromise = Lobid.getFacets("köln", "", "", "", "",
+			Promise<JsonNode> jsonPromise = Lobid.getFacets("*", "", "", "", "",
 					"", "", "", "", "", "", field, "", "", "", "", "");
 			JsonNode facets = jsonPromise.get(Lobid.API_TIMEOUT);
 			assertThat(facets.findValue("aggregation").findValues("key").stream()
 					.map(e -> e.asText()).collect(Collectors.toList())).contains(
-							"BibliographicResource", "Article", "Book", "MultiVolumeBook",
-							"Thesis", "Miscellaneous", "Proceedings", "EditedVolume",
-							"Biography", "Festschrift", "Newspaper", "Bibliography", "Series",
-							"OfficialPublication", "ReferenceSource", "PublishedScore",
-							"Legislation", "Game");
+							"BibliographicResource", "Article", "Book", "MultiVolumeBook", "Map", "Festschrift",
+							"Biography", "Miscellaneous", "Periodical", "Proceedings", "EditedVolume",
+							"PublicationIssue");
 			assertThat(facets.findValues("count").stream().map(e -> e.intValue())
 					.collect(Collectors.toList())).excludes(0);
 		});
@@ -77,35 +73,35 @@ public class InternalIntegrationTest {
 	public void spatialClassificationLabel() {
 		running(testServer(3333), () -> {
 			assertThat(
-					Classification.label("https://rpb.lobid.org/spatial#n01", Type.SPATIAL))
+					Classification.label("https://rpb.lobid.org/spatial#n1", Type.SPATIAL))
 							.as("rpb spatial label").isEqualTo("Rheinland-Pfalz insgesamt. Landesteile");
 		});
 	}
 
-	@Test // See https://github.com/hbz/nwbib/issues/557
-	public void testSubjectLabelAndNwbibQuery() {
+	@Test
+	public void testSubjectLabelAndRpbQuery() {
 		running(testServer(3333), () -> {
-			assertThat(hitsFor("subject=bocholt")).as("less-filtered result count")
+			assertThat(hitsFor("subject=cochem")).as("less-filtered result count")
 					.isGreaterThan(
-							hitsFor("subject=bocholt&rpbsubject=" + nwbib("N240000")));
+							hitsFor("subject=cochem&rpbsubject=" + rpb("n102070")));
 		});
 	}
 
-	@Test // See https://github.com/hbz/nwbib/issues/573
-	public void testSubjectUriAndNwbibQuery() {
+	@Test
+	public void testSubjectUriAndRpbQuery() {
 		running(testServer(3333), () -> {
 			assertThat(hitsFor("subject=" + gnd("4001307-8")))
 					.as("less-filtered result count").isGreaterThan(hitsFor("subject="
-							+ gnd("4001307-8") + "&rpbsubject=" + nwbib("N702000")));
+							+ gnd("4001307-8") + "&rpbsubject=" + rpb("n882060")));
 		});
 	}
 
-	@Test // See https://github.com/hbz/nwbib/issues/603
+	@Test
 	public void testLeadingBlanksInSearchQ() {
 		searchLeadingBlankWith("q=");
 	}
 
-	@Test // See https://github.com/hbz/nwbib/issues/603
+	@Test
 	public void testLeadingBlanksInSearchWord() {
 		searchLeadingBlankWith("word=");
 	}
@@ -114,7 +110,7 @@ public class InternalIntegrationTest {
 		running(testServer(3333), () -> {
 			try {
 				assertThat(hitsFor(param + URLEncoder.encode(
-						" Stimmungsvolle Erinnerungen an die Eisenbahn in Bocholt",
+						" Die Kölner Wurzeln der Cochemer Apothekerfamilie Pliester",
 						StandardCharsets.UTF_8.name()))).as("less-filtered result count")
 								.isGreaterThan(0);
 			} catch (UnsupportedEncodingException e) {
@@ -123,8 +119,8 @@ public class InternalIntegrationTest {
 		});
 	}
 
-	private static String nwbib(String string) {
-		return "https%3A%2F%2Fnwbib.de%2Fsubjects%23" + string;
+	private static String rpb(String string) {
+		return "http%3A%2F%2Fpurl.org%2Flobid%2Frpb%23" + string;
 	}
 
 	private static String gnd(String string) {
@@ -148,102 +144,95 @@ public class InternalIntegrationTest {
 					"", "", "", "", from, size, 0L, "", "", "", "", "", "", "");
 			assertThat(html.contentType()).isEqualTo("text/html");
 			String text = Helpers.contentAsString(html);
-			assertThat(text).contains("NWBib").contains("buch");
+			assertThat(text).contains("RPB").contains("buch");
 		});
 	}
 
 	@Test
-	@Ignore // TODO: enable with stage
 	public void sizeRequest() {
 		running(testServer(3333), () -> {
 			Long hits = Lobid
 					.getTotalHits("isPartOf.hasSuperordinate.id",
-							"http://lobid.org/resources/HT018486420#!", "")
+							"http://lobid.org/resources/HT030703238#!", "")
 					.get(Lobid.API_TIMEOUT);
 			assertThat(hits).as("1").isGreaterThan(0);
 			hits = Lobid
-					.getTotalHits("isPartOf.hasSuperordinate.id",
-							"http://lobid.org/resources/HT002091108#!", "")
+					.getTotalHits("containedIn.id",
+							"http://lobid.org/resources/990054367970206441#!", "")
 					.get(Lobid.API_TIMEOUT);
 			assertThat(hits).as("2").isGreaterThan(0);
-			hits = Lobid
-					.getTotalHits("containedIn.id",
-							"http://lobid.org/resources/HT001387709#!", "")
-					.get(Lobid.API_TIMEOUT);
-			assertThat(hits).as("3").isGreaterThan(0);
 		});
 	}
 
 	@Test
-	public void sizeRequestrpbspatial() {
+	public void sizeRequestClassifications() {
 		running(testServer(3333), () -> {
-			Long hits =
-					Lobid.getTotalHitsNwbibClassification("https://nwbib.de/spatial#N20");
-			assertThat(hits).as("hits for n20").isGreaterThan(0);
-			hits = Lobid.getTotalHitsNwbibClassification(
-					"https://nwbib.de/spatial#Q365");
-			assertThat(hits).as("hits for Q365").isGreaterThan(0);
+			Long hits = Lobid.getTotalHitsRpbClassification("https://rpb.lobid.org/spatial#n05");
+			assertThat(hits).as("hits for spatial#n05").isGreaterThan(0);
+			hits = Lobid.getTotalHitsRpbClassification("http://purl.org/lobid/rpb#n102060");
+			assertThat(hits).as("hits for rpb#n102060").isGreaterThan(0);
 		});
 	}
 
 	@Test
 	public void pathToClassificationId_leaf() {
 		running(testServer(3333), () -> {
-			assertThat(Classification.pathTo("https://nwbib.de/subjects#N582060"))
+			assertThat(Classification.pathTo("http://purl.org/lobid/rpb#n865052"))
 					.as("path in classification")
 					.isEqualTo(Arrays.asList(//
-							"https://nwbib.de/subjects#N5",
-							"https://nwbib.de/subjects#N580000",
-							"https://nwbib.de/subjects#N582000",
-							"https://nwbib.de/subjects#N582060"));
+							"http://purl.org/lobid/rpb#n860000",
+							"http://purl.org/lobid/rpb#n865000",
+							"http://purl.org/lobid/rpb#n865050",
+							"http://purl.org/lobid/rpb#n865052"));
 		});
 	}
 
 	@Test
 	public void pathToClassificationId_inner() {
 		running(testServer(3333), () -> {
-			assertThat(Classification.pathTo("https://nwbib.de/subjects#N582050"))
+			assertThat(Classification.pathTo("http://purl.org/lobid/rpb#n865050"))
 					.as("path in classification")
 					.isEqualTo(Arrays.asList(//
-							"https://nwbib.de/subjects#N5",
-							"https://nwbib.de/subjects#N580000",
-							"https://nwbib.de/subjects#N582000",
-							"https://nwbib.de/subjects#N582050"));
+							"http://purl.org/lobid/rpb#n860000",
+							"http://purl.org/lobid/rpb#n865000",
+							"http://purl.org/lobid/rpb#n865050"));
 		});
 	}
 
 	@Test
 	public void pathToClassificationId_last() {
 		running(testServer(3333), () -> {
-			assertThat(Classification.pathTo("https://nwbib.de/subjects#N582070"))
+			assertThat(Classification.pathTo("http://purl.org/lobid/rpb#n865090"))
 					.as("path in classification")
 					.isEqualTo(Arrays.asList(//
-							"https://nwbib.de/subjects#N5",
-							"https://nwbib.de/subjects#N580000",
-							"https://nwbib.de/subjects#N582000",
-							"https://nwbib.de/subjects#N582070"));
+							"http://purl.org/lobid/rpb#n860000",
+							"http://purl.org/lobid/rpb#n865000",
+							"http://purl.org/lobid/rpb#n865090"));
 		});
 	}
 
 	@Test
 	public void pathToSpatialClassificationId() {
 		running(testServer(3333), () -> {
-			assertThat(Classification.pathTo("https://nwbib.de/spatial#N54"))
+			assertThat(Classification.pathTo("https://rpb.lobid.org/spatial#n135010200102"))
 					.as("path in spatial classification").isEqualTo(Arrays.asList(//
-							"https://nwbib.de/spatial#N4-7", "https://nwbib.de/spatial#N54"));
+							"https://rpb.lobid.org/spatial#n6",
+							"https://rpb.lobid.org/spatial#n135",
+							"https://rpb.lobid.org/spatial#n13501",
+							"https://rpb.lobid.org/spatial#n13501020",
+							"https://rpb.lobid.org/spatial#n135010200102"));
 		});
 	}
 
 	@Test
-	public void pathToSpatialClassificationQId() {
+	public void pathToSpatialClassificationGndId() {
 		running(testServer(3333), () -> {
-			assertThat(Classification.pathTo("https://nwbib.de/spatial#Q365"))
+			assertThat(Classification.pathTo("https://rpb.lobid.org/spatial#n4288874n8"))
 					.as("path in spatial classification")
 					.isEqualTo(Arrays.asList(//
-							"https://nwbib.de/spatial#N0", //
-							"https://nwbib.de/spatial#N05", //
-							"https://nwbib.de/spatial#Q7927", //
-							"https://nwbib.de/spatial#Q365"));
+							"https://rpb.lobid.org/spatial#n4",
+							"https://rpb.lobid.org/spatial#n50",
+							"https://rpb.lobid.org/spatial#n4288874n8"));
 		});
 	}
 
@@ -261,11 +250,22 @@ public class InternalIntegrationTest {
 		running(testServer(3333), () -> {
 			Pair<List<JsonNode>, Map<String, List<JsonNode>>> pair =
 					Classification.Type.SPATIAL.buildHierarchy();
-			assertThat(pair.getLeft().size()).isEqualTo(4);
-			assertThat(pair.getRight().get("https://nwbib.de/spatial#N10").size())
+			assertThat(pair.getLeft().size()).isEqualTo(6);
+			assertThat(pair.getRight().get("https://rpb.lobid.org/spatial#n5").size())
 					.isGreaterThan(0);
-			assertThat(pair.getRight().get("https://nwbib.de/spatial#N36").size())
+			assertThat(pair.getRight().get("https://rpb.lobid.org/spatial#n6").size())
 					.isGreaterThan(0);
+		});
+	}
+
+	@Test
+	public void classificationSubjectRegister() {
+		running(testServer(3333), () -> {
+			JsonNode register =
+					Classification.Type.from("Sachsystematik").buildRegister();
+			assertThat(register.toString()).contains("Audiovisuelle Medien")
+					.contains("Publizistik").contains("Bibliotheksrecht")
+					.contains("Schulbibliothek");
 		});
 	}
 

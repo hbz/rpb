@@ -39,7 +39,7 @@ import play.twirl.api.Content;
 /**
  * See http://www.playframework.com/documentation/2.3.x/JavaFunctionalTest
  */
-public class InternalIntegrationTest {
+public class IntegrationTest {
 
 	@Before
 	public void setUp() throws Exception {

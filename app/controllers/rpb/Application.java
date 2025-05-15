@@ -1,6 +1,6 @@
 /* Copyright 2014 Fabian Steeg, hbz. Licensed under the GPLv2 */
 
-package controllers.nwbib;
+package controllers.rpb;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,7 +46,7 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
-import controllers.nwbib.Classification.Type;
+import controllers.rpb.Classification.Type;
 import play.Logger;
 import play.Play;
 import play.cache.Cache;
@@ -95,8 +95,8 @@ public class Application extends Controller {
 
 	/** The internal ES field for the RPB subject facet. */
 	public static final String RPB_SUBJECT_FIELD = "subject.id<rpb#";
-	/** The internal ES field for the NWBib spatial facet. */
-	public static final String NWBIB_SPATIAL_FIELD = "spatial.id<spatial#";
+	/** The internal ES field for the RPB spatial facet. */
+	public static final String RPB_SPATIAL_FIELD = "spatial.id<spatial#";
 	/** The internal ES field for the coverage facet. */
 	public static final String COVERAGE_FIELD = "spatial.label.raw";
 	/** The internal ES field for subject locations. */
@@ -108,11 +108,11 @@ public class Application extends Controller {
 	/** The internal ES field for issued years. */
 	public static final String ISSUED_FIELD = "publication.startDate";
 
-	private static final File FILE = new File("conf/nwbib.conf");
-	/** Access to the nwbib.conf config file. */
+	private static final File FILE = new File("conf/rpb.conf");
+	/** Access to the rpb.conf config file. */
 	public final static Config CONFIG = ConfigFactory
 			.parseFile(
-					FILE.exists() ? FILE : new File("modules/nwbib/conf/nwbib.conf"))
+					FILE.exists() ? FILE : new File("modules/rpb/conf/rpb.conf"))
 			.resolve();
 
 	static Form<String> queryForm = Form.form(String.class);
@@ -126,7 +126,7 @@ public class Application extends Controller {
 
 	/**
 	 * @param map The scope for the NRW map ("kreise" or "gemeinden")
-	 * @return The NWBib index page.
+	 * @return The RPB index page.
 	 */
 	public static Result index(String map) {
 		final Form<String> form = queryForm.bindFromRequest();
@@ -136,17 +136,17 @@ public class Application extends Controller {
 	}
 
 	/**
-	 * @return The NWBib info page.
+	 * @return The RPB info page.
 	 */
-	@Cached(key = "nwbib.info", duration = ONE_HOUR)
+	@Cached(key = "rpb.info", duration = ONE_HOUR)
 	public static Result info() {
 		return ok(info.render());
 	}
 
 	/**
-	 * @return The NWBib advanced search page.
+	 * @return The RPB advanced search page.
 	 */
-	@Cached(key = "nwbib.advanced", duration = ONE_HOUR)
+	@Cached(key = "rpb.advanced", duration = ONE_HOUR)
 	public static Result advanced() {
 		return ok(views.html.advanced.render());
 	}
@@ -165,7 +165,7 @@ public class Application extends Controller {
 
 	/**
 	 * @param q The topics query.
-	 * @return The NWBib topics search page.
+	 * @return The RPB topics search page.
 	 */
 	public static Promise<Result> topics(String q) {
 		if (q.isEmpty())
@@ -178,11 +178,11 @@ public class Application extends Controller {
 			return cachedResult;
 		String aggregationField = "subject.label.raw";
 		WSRequest request = // @formatter:off
-				WS.url(Application.CONFIG.getString("nwbib.api"))
+				WS.url(Application.CONFIG.getString("rpb.api"))
 						.setHeader("Accept", "application/json")
 						.setQueryParameter("subject", q)
 						.setQueryParameter("aggregations", aggregationField)
-						.setQueryParameter("filter", Application.CONFIG.getString("nwbib.filter"))
+						.setQueryParameter("filter", Application.CONFIG.getString("rpb.filter"))
 						.setQueryParameter("from", "0")
 						.setQueryParameter("size", "1"); // @formatter:on
 		Promise<Result> result = request.get().map((WSResponse response) -> {
@@ -348,13 +348,13 @@ public class Application extends Controller {
 	}
 
 	/**
-	 * @return A list of nwbib journals
+	 * @return A list of rpb journals
 	 * @throws IOException If reading the journals list data fails
 	 */
 	@Cached(key = "journals", duration = ONE_DAY)
 	public static Result journals() throws IOException {
 		try (InputStream stream = Play.application().classloader()
-				.getResourceAsStream("nwbib-journals.csv")) {
+				.getResourceAsStream("rpb-journals.csv")) {
 			String csv = IOUtils.toString(stream, UTF_8);
 			List<String> lines = Arrays.asList(csv.split("\n"));
 			List<HashMap<String, String>> maps = lines.stream()
@@ -365,10 +365,20 @@ public class Application extends Controller {
 						map.put("value", strings[1].replace("\"", ""));
 						return map;
 					}).collect(Collectors.toList());
+			final String label = "label";
+			Collections.sort(maps, (map1, map2) -> {
+				return Collator.getInstance(Locale.GERMANY).compare(//
+						sortValue(map1, label), sortValue(map2, label));
+			});
 			String journals = Json.toJson(maps).toString();
 			return ok(browse_register.render(journals, "Zeitschriften",
 					"Zeitschriftenliste filtern"));
 		}
+	}
+
+	private static String sortValue(Map<String, String> map, final String key) {
+		String value = map.get(key).replaceAll("^(Der|Die|Das|De|Dä)\\s", "");
+		return Arrays.asList(value.split("\\s")).toString();
 	}
 
 	/**
@@ -376,20 +386,11 @@ public class Application extends Controller {
 	 * @return Classification data for the given type
 	 */
 	public static Result classification(final String t) {
-		if (t.equals("WikidataImport")) {
-			File data = WikidataLocations.wikidataFile();
-			boolean deleteSuccess = data.delete();
-			Logger.debug("Deleting local data: {}, success: {}", data, deleteSuccess);
-			return redirect(routes.Application.classification("Wikidata"));
-		}
 		Result cachedResult = (Result) Cache.get("classification." + t);
 		if (cachedResult != null)
 			return cachedResult;
 		Result result = null;
 		String placeholder = t + " filtern";
-		if (t.equals("Wikidata")) {
-			return classificationResultWikidata(t, placeholder);
-		}
 		if (t.isEmpty()) {
 			result = ok(classification.render());
 		} else {
@@ -481,16 +482,6 @@ public class Application extends Controller {
 		default:
 			return Results.badRequest("Bad request: t=" + t + " unsupported");
 		}
-	}
-
-	// Admin UI for reloading classification from Wikidata
-	private static Result classificationResultWikidata(String t,
-			String placeholder) {
-		Pair<List<JsonNode>, Map<String, List<JsonNode>>> topAndSub =
-				Classification.Type.SPATIAL.buildHierarchy();
-		String topClassesJson = Json.toJson(topAndSub.getLeft()).toString();
-		return ok(browse_classification.render(topClassesJson, topAndSub.getRight(),
-				t, placeholder));
 	}
 
 	private static Result classificationResult(String t, String placeholder) {
@@ -592,7 +583,7 @@ public class Application extends Controller {
 
 	private static void uncache(List<String> ids) {
 		for (String id : ids) {
-			Cache.remove(String.format("%s-/nwbib/%s", session("uuid"), id));
+			Cache.remove(String.format("%s-/rpb/%s", session("uuid"), id));
 		}
 	}
 
@@ -692,7 +683,7 @@ public class Application extends Controller {
 					!field.equals(RPB_SUBJECT_FIELD) ? rpbsubject //
 							: queryParam(rpbsubject, term);
 			String rpbspatialQuery =
-					!field.equals(NWBIB_SPATIAL_FIELD) ? rpbspatial //
+					!field.equals(RPB_SPATIAL_FIELD) ? rpbspatial //
 							: queryParam(rpbspatial, term);
 			String rawQuery = !field.equals(COVERAGE_FIELD) ? raw //
 					: rawQueryParam(raw, term);
@@ -730,7 +721,7 @@ public class Application extends Controller {
 									.get(field.split("<")[0]).elements(), 0),
 							false);
 					if (field.equals(RPB_SUBJECT_FIELD)
-							|| field.equals(NWBIB_SPATIAL_FIELD)) {
+							|| field.equals(RPB_SPATIAL_FIELD)) {
 						String source = field.split("<")[1];
 						stream = stream
 								.filter(aggr -> aggr.get("key").textValue().contains(source));
@@ -769,7 +760,7 @@ public class Application extends Controller {
 		return field.equals(MEDIUM_FIELD) && contains(medium, term)
 				|| field.equals(TYPE_FIELD) && contains(t, term)
 				|| field.equals(ITEM_FIELD) && contains(owner, term)
-				|| field.equals(NWBIB_SPATIAL_FIELD) && contains(rpbspatial, term)
+				|| field.equals(RPB_SPATIAL_FIELD) && contains(rpbspatial, term)
 				|| field.equals(COVERAGE_FIELD) && rawContains(raw, quotedEscaped(term))
 				|| field.equals(RPB_SUBJECT_FIELD) && contains(rpbsubject, term)
 				|| field.equals(SUBJECT_FIELD) && contains(subject, term);

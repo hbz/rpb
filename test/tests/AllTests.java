@@ -13,8 +13,7 @@ import org.junit.runners.Suite.SuiteClasses;
  *
  */
 @RunWith(Suite.class)
-@SuiteClasses({ ApplicationTest.class, InternalIntegrationTest.class,
-		ExternalIntegrationTest.class, InputStringsTest.class })
+@SuiteClasses({ CITests.class, IntegrationTest.class, InputStringsTest.class })
 public class AllTests {
 	//
 }

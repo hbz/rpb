@@ -5,7 +5,7 @@
 @import play.api.libs.json.Json
 @import play.api.libs.json.JsValue
 @import com.fasterxml.jackson.databind.JsonNode
-@import controllers.nwbib.Lobid
+@import controllers.rpb.Lobid
 
 @label(json: JsValue) = @{
     (json\"label").as[String]
@@ -72,37 +72,23 @@
              hits = (json\"hits").asOpt[scala.Long].getOrElse(0L);
              anchor = value.split("[/#]").last;
              textToCopy = (if(entryLabel.contains("</span> ")){entryLabel.split("</span> ")(1)}else{entryLabel}) + "$$0" + value) {
-              <li id='@anchor'>@if(id=="root" && !placeholder.contains("Register") && t!="Wikidata" && t!="Zeitschriften") { <b>@Html(entryLabel)</b> } else {
+              <li id='@anchor'>@if(id=="root" && !placeholder.contains("Register") && t!="Zeitschriften") { <b>@Html(entryLabel)</b> } else {
                   @if(t!="Zeitschriften"){
                   }
-                  <a class="notation-link" onclick="$('#nwbibQueryHidden').val(''); $('#nwbibQueryHidden').change(); $('#collapseAll').click(); expand($('#@anchor'));" href="@{t match {
+                  <a class="notation-link" onclick="$('#rpbQueryHidden').val(''); $('#rpbQueryHidden').change(); $('#collapseAll').click(); expand($('#@anchor'));" href="@{t match {
                     case "Zeitschriften" => value
-                    case "Wikidata" => value
                     case "Raumsystematik" => "#"+anchor
                     case "Sachsystematik" => "#"+anchor
                     case _ => value
                  }}">@Html(entryLabel)</a> @if(hits>0){
                  (<a href="@{t match {
-                    case "Wikidata" => nwbib.routes.Application.search(rpbspatial=value)
-                    case "Raumsystematik" => nwbib.routes.Application.search(rpbspatial=Lobid.rpbSpatialGndToRealGnd(value))
-                    case "Sachsystematik" => nwbib.routes.Application.search(rpbsubject=value)
+                    case "Raumsystematik" => rpb.routes.Application.search(rpbspatial=Lobid.rpbSpatialGndToRealGnd(value))
+                    case "Sachsystematik" => rpb.routes.Application.search(rpbsubject=value)
                     case _ => value
                  }}">@hits</a>)
                  }
-                 <span @if(t!="Wikidata"){class='copy-link'}><a data-toggle="tooltip" data-placement="right" title="Identifikator und Bezeichnung in die Zwischenablage kopieren" href="#" onclick="copyToClipboard('@textToCopy', $(this));return false;"><span class="octicon octicon-clippy"></span></a></span>
+                 <span class='copy-link'><a data-toggle="tooltip" data-placement="right" title="Identifikator und Bezeichnung in die Zwischenablage kopieren" href="#" onclick="copyToClipboard('@textToCopy', $(this));return false;"><span class="octicon octicon-clippy"></span></a></span>
                 <div style="display: none">@normalized</div>
-              }
-              @if(t=="Wikidata"){
-                    @if(anchor.startsWith("Q")) {
-                        <a title='Eintrag in Wikidata anzeigen' href='https://www.wikidata.org/wiki/@anchor'>
-                          <small><span class="label label-primary">wd</span></small>
-                        </a>
-                    }
-                    @for(gnd <- (json\"gnd").asOpt[String]; if !gnd.isEmpty){
-                        <a title='Verknüpften GND-Eintrag anzeigen' href='http://lobid.org/gnd/@gnd'>
-                          <small><span class="label label-info">gnd</span></small>
-                        </a>
-                    }
               }
               @if(subs != null && subs.get(value) != null){
                   @ul(Some(subs.get(value).map((node: JsonNode) => Json.parse(node.toString)).toSeq),"")
@@ -115,14 +101,14 @@
 
 <dl>
     <dt></dt><dd>
-      <input placeholder="@placeholder" title="@placeholder" type="text" id="nwbibQuery" class="form-control" onchange="if(this.value!=''){$('#expandAll').click()}else{$('#collapseAll').click()};"/>
-      <input type="hidden" id="nwbibQueryHidden" onchange="$('#expandAll').click();"/>
+      <input placeholder="@placeholder" title="@placeholder" type="text" id="rpbQuery" class="form-control" onchange="if(this.value!=''){$('#expandAll').click()}else{$('#collapseAll').click()};"/>
+      <input type="hidden" id="rpbQueryHidden" onchange="$('#expandAll').click();"/>
     </dd>
     @if(subs!=null && !subs.values.isEmpty){
     <dt></dt><dd><a href="#" id="collapseAll">alle einklappen</a> | <a href="#" id="expandAll">alle ausklappen</a></dd>
     }
     @if(t=="Zeitschriften"){
-    <p style="margin-top:10px">@Json.parse(tops).asOpt[Seq[JsValue]].getOrElse(Seq()).size in der Nordrhein-Westfälischen Bibliographie laufend ausgewertete Zeitschriften:</p>
+    <p style="margin-top:10px">@Json.parse(tops).asOpt[Seq[JsValue]].getOrElse(Seq()).size in der Rheinland-Pfälzischen Bibliographie laufend ausgewertete Zeitschriften:</p>
     }
 </dl>
 @if(flash.get("error")!=null){
@@ -134,8 +120,8 @@
     <link rel="stylesheet" href="@controllers.routes.Assets.at("stylesheets/FileTreeView.css")" />
     <script type="text/javascript">
         $(function() {
-            $('#nwbibQuery').treeListFilter('#root', 200);
-            $('#nwbibQueryHidden').treeListFilter('#root', 200);
+            $('#rpbQuery').treeListFilter('#root', 200);
+            $('#rpbQueryHidden').treeListFilter('#root', 200);
             $('#root').fileTreeView('#expandAll', '#collapseAll', 'folder', @if(subs==null||subs.size()==0){false}else{true});
             $('#collapseAll').click();
             $('#root').show();

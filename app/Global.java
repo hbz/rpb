@@ -1,4 +1,4 @@
-import controllers.nwbib.Classification;
+import controllers.rpb.Classification;
 import play.Application;
 import play.GlobalSettings;
 

@@ -80,7 +80,7 @@ public class InputStringsTest {
 	@Test
 	public void test() {
 		running(testServer(3333), () -> {
-			String uri = controllers.nwbib.routes.Application
+			String uri = controllers.rpb.routes.Application
 					.search(input, "", "", "", "", "", "", "", "", "", 0, 10, "", "", "",
 							false, "", "", "", "", "")
 					.toString().replace("%", "");

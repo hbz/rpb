@@ -5,36 +5,11 @@
 @import helper._
 @import play.api.libs.json.Json
 @import play.api.libs.json.JsValue
-@import controllers.nwbib.Lobid
+@import controllers.rpb.Lobid
 
 @main("RPB") {
     @tags.search_form("")
     <div class="row">
-	    @*<div class="col-md-7 intro">
-	        @defining(controllers.nwbib.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
-	       <p class="lead">
-           Die Nordrhein-Westfälische Bibliographie (NWBib) verzeichnet die Literatur über das Land Nordrhein-Westfalen, seine Regionen, 
-           Orte und Persönlichkeiten, Literatur aus allen Lebens- und Wissensbereichen in Geschichte und Gegenwart.
-           </p>
-           <p>
-           Die NWBib ist eine der umfangreichsten Regionalbibliographien Deutschlands. Sie erschließt nicht nur Bücher und Zeitschriften, 
-           sondern auch Aufsätze und andere Medien wie etwa Karten, DVDs, Hörbücher und elektronische Publikationen. Zum raschen Einstieg 
-           nutzen Sie die Eingabezeile oder die Karte mit 
-           @if(map == "kreise") {Kreisen (oder <a href='@nwbib.routes.Application.index(map="gemeinden")'>Gemeinden</a>)} else {Gemeinden (oder <a href='@nwbib.routes.Application.index(map="kreise")'>Kreisen</a>)}.
-	       </p>
-	       <p>
-	       Für die präzise Recherche steht Ihnen die 
-	       Erweiterte Suche zur Verfügung sowie die Themensuche mit Hilfe inhaltserschließender Schlagwortfolgen. Mit den beiden Sucheinstiegen 
-	       zu Regionen/Orten und Sachgebieten können Sie sich einen systematischen Überblick über den Inhalt der NWBib verschaffen und sich zu 
-	       Titeln Ihres Interesses führen lassen. Bei allen Recherchen haben Sie die Möglichkeit, die Treffer nach räumlichen und sachlichen 
-	       Gesichtspunkten, nach Dokumentengruppen und Bibliotheksbestand einzugrenzen.
-	       </p>
-	       }
-	    </div>
-	    <div class="col-md-5">
-	       @tags.nrw_map(map)
-	    </div>
-	    *@
 	    <div class="col-md-12 intro">
 	       <p class="lead">
            Die Rheinland-Pfälzische Bibliographie (RPB) ist eine regionale Literaturdokumentation des Landes Rheinland-Pfalz, die seit 1991 im Auftrag des damaligen 
@@ -54,18 +29,16 @@
           </p>
 	    </div>
     </div>
-    @*
     <script type="application/ld+json">
     {
       "@@context": "http://schema.org",
       "@@type": "WebSite",
-      "url": "https://nwbib.de",
+      "url": "https://rpb.lbz-rlp.de",
       "potentialAction": {
         "@@type": "SearchAction",
-        "target": "https://nwbib.de/search?q={search_term_string}",
+        "target": "https://rpb.lbz-rlp.de/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
     </script>
-    *@
 }

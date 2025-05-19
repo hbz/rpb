@@ -557,7 +557,7 @@ public class Application extends Controller {
 			if (response.getStatus() == Http.Status.OK) {
 				JsonNode json = response.asJson();
 				hits = Lobid.getTotalResults(json);
-				s = json.toString();
+				s = json.toString().replaceAll("[\\p{Cc}&&[^\r\n\t]]", "");
 				if (!q.contains("hbzId:")) {
 					List<JsonNode> ids = json.findValues("hbzId");
 					uncache(

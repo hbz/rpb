@@ -16,6 +16,7 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
+import controllers.nwbib.Application;
 import controllers.nwbib.Classification;
 import controllers.nwbib.Classification.Type;
 import controllers.nwbib.Lobid;
@@ -144,6 +145,21 @@ public class ApplicationTest {
 				Json.newObject().put("label", "Stadtbezirk X") };
 		Arrays.sort(in, Classification.comparator(Classification::labelText));
 		Assert.assertArrayEquals(correct, in);
+	}
+
+	@Test
+	public void removeNonFormattingControlCharacters() {
+		assertThat(Application
+				.removeNonFormattingControlCharacters("\u0098Der\u009c Gau-Algesheimer Weihnachtsmarkt"))
+				.as("Non-formatting control characters should be removed")
+				.doesNotContain("\u0098")
+				.doesNotContain("\u009c");
+		assertThat(Application
+				.removeNonFormattingControlCharacters("Line1\r\nLine2\n\tIndented"))
+				.as("Tabs and newlines should be retained")
+				.contains("\r")
+				.contains("\n")
+				.contains("\t");
 	}
 
 }

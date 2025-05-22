@@ -251,7 +251,7 @@ public class Lobid {
 				return cachedResult;
 			});
 		}
-		String qVal = f + (v.startsWith("http") ? v : (":\"" + v + "\""));
+		String qVal = f + ":" + (v.startsWith("http") ? v : ("\"" + v + "\""));
 		WSRequest request = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setQueryParameter("format", "json").setQueryParameter("q", qVal)
 				.setQueryParameter("filter",

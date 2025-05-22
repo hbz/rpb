@@ -548,7 +548,7 @@ public class Application extends Controller {
 			if (response.getStatus() == Http.Status.OK) {
 				JsonNode json = response.asJson();
 				hits = Lobid.getTotalResults(json);
-				s = json.toString();
+				s = removeNonFormattingControlCharacters(json.toString());
 				if (!q.contains("hbzId:")) {
 					List<JsonNode> ids = json.findValues("hbzId");
 					uncache(
@@ -579,6 +579,10 @@ public class Application extends Controller {
 							.writeValueAsString(Json.parse(s)))
 									.as("application/json; charset=utf-8");
 		});
+	}
+
+	public static String removeNonFormattingControlCharacters(String string) {
+		return string.replaceAll("[\\p{Cc}&&[^\r\n\t]]", "");
 	}
 
 	private static void uncache(List<String> ids) {

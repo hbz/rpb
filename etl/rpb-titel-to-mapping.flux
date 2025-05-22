@@ -1,4 +1,4 @@
-// cat conf/RPB-Export_HBZ_Tit.txt | grep '#983' > RPB-Export_HBZ_Tit_hbzIds.txt
+// cat etl/RPB-Export_HBZ_Tit.txt | grep '#983' > RPB-Export_HBZ_Tit_hbzIds.txt
 // (but remove last line; grep with -a yields over 40k lines, some binary newline?)
 FLUX_DIR + "RPB-Export_HBZ_Tit_hbzIds.txt"
 | open-file(encoding="IBM437")

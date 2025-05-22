@@ -3,9 +3,9 @@
 @(doc: play.api.libs.json.JsValue)
 @import play.api.libs.json._
 @import views.TableRow
-@import controllers.nwbib.Lobid
-@import controllers.nwbib.Application.CONFIG
-@import controllers.nwbib.Application.ZDB_PREFIX
+@import controllers.rpb.Lobid
+@import controllers.rpb.Application.CONFIG
+@import controllers.rpb.Application.ZDB_PREFIX
 
 @idAndLabelLink(e: JsValue) = {
   <a href='@((e\"id").asOpt[String].getOrElse("--"))'>@((e\"label").asOpt[String].getOrElse("--"))</a>
@@ -96,9 +96,9 @@
 }
 
 @subordinate(field:String, ids:Seq[String], label:String, values:(String,String)) = {
-  @defining(ids.map((id) => Lobid.getTotalHits(field, id, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT)).reduce((a, b) => a + b)){ hits => @if(hits > 0) {
+  @defining(ids.map((id) => Lobid.getTotalHits(field, id, CONFIG.getString("rpb.filter")).get(Lobid.API_TIMEOUT)).reduce((a, b) => a + b)){ hits => @if(hits > 0) {
     @defining(if(hits==1){values._1} else {values._2}){ value =>
-    <tr><td>@label</td><td><a title="@value" href="@nwbib.routes.Application.search(raw=ids.map((id)=>field+":\""+Lobid.escapeUri(id)+"\"").mkString(" OR "))">@hits @value</a></td></tr>
+    <tr><td>@label</td><td><a title="@value" href="@rpb.routes.Application.search(raw=ids.map((id)=>field+":\""+Lobid.escapeUri(id)+"\"").mkString(" OR "))">@hits @value</a></td></tr>
   }}}
 }
 
@@ -129,7 +129,7 @@
               id = (agents(0) \ "id").asOpt[String];
               types = (agents(0) \ "type").asOpt[Seq[String]].getOrElse(Seq())) {
         <a title="Nach weiteren Titeln von '@label' suchen" 
-          href='@if(types.contains("CorporateBody")){ @nwbib.routes.Application.search(corporation=id.getOrElse(label)) }else{ @nwbib.routes.Application.search(person=id.getOrElse(label)) }'/>@label</a>
+          href='@if(types.contains("CorporateBody")){ @rpb.routes.Application.search(corporation=id.getOrElse(label)) }else{ @rpb.routes.Application.search(person=id.getOrElse(label)) }'/>@label</a>
         @if(id.isDefined && id.get.startsWith("http") && !id.get.contains("/sw/")){<a title="Linked-Data-Quelle zu '@label' abrufen" href='@id'><span class='glyphicon glyphicon-link'></span></a>}
         @if(c!=cs.last){ | }
       }</td>
@@ -148,12 +148,12 @@
          label <- (component \ "label").asOpt[String];
          id = (component \ "id").asOpt[String].getOrElse("")) {
       <span style="white-space: nowrap;">
-        <a title="Nach weiteren Titeln zu '@label' suchen" href='@nwbib.routes.Application.search(subject=if(id.contains("/gnd/")) {id} else {"\""+label+"\""})'/>@label</a>
+        <a title="Nach weiteren Titeln zu '@label' suchen" href='@rpb.routes.Application.search(subject=if(id.contains("/gnd/")) {id} else {"\""+label+"\""})'/>@label</a>
         @if(id.startsWith("http") && !id.contains("/sw/")){<a title="Linked-Data-Quelle zu '@label' abrufen" href='@id'><span class='glyphicon glyphicon-link'></span></a>}
       </span>
       @if(components.last == component) {
-        @for(topic <- (subject\"label").asOpt[String]; hits = Lobid.getTotalHits("subject.label.raw", topic.trim, CONFIG.getString("nwbib.filter")).get(Lobid.API_TIMEOUT); if hits > 1){
-          | <a href='@nwbib.routes.Application.search(q="subject.label.raw:\""+topic.trim+"\"")' title="Alle @hits Titel zum Thema '@topic.trim' anzeigen"><span class='badge progress-bar-success'>@hits</span></a>
+        @for(topic <- (subject\"label").asOpt[String]; hits = Lobid.getTotalHits("subject.label.raw", topic.trim, CONFIG.getString("rpb.filter")).get(Lobid.API_TIMEOUT); if hits > 1){
+          | <a href='@rpb.routes.Application.search(q="subject.label.raw:\""+topic.trim+"\"")' title="Alle @hits Titel zum Thema '@topic.trim' anzeigen"><span class='badge progress-bar-success'>@hits</span></a>
         }<br/>
       } else { | }
     }</td>
@@ -181,7 +181,7 @@
         subjectLabel <- (subject \ "label").asOpt[String];
         notation = subjectId.split("#").last.substring(1)) {
       @breadcrumb(if(searchParam == "rpbsubject"){subjectId}else{""},if(searchParam == "rpbspatial"){subjectId}else{""})
-      | <a href='@nwbib.routes.Application.search()?@searchParam=@subjectId.replace("#", "%23")' title='Nach weiteren Titeln zu @subjectLabel (@notation) suchen'><span class='glyphicon glyphicon-search'></span></a><br/>
+      | <a href='@rpb.routes.Application.search()?@searchParam=@subjectId.replace("#", "%23")' title='Nach weiteren Titeln zu @subjectLabel (@notation) suchen'><span class='glyphicon glyphicon-search'></span></a><br/>
     }
 }
 
@@ -194,11 +194,11 @@
           @for(v <- vs; if v.toString.contains(source); id = (v\"id").asOpt[String].getOrElse("--"); if(!Seq(35, 37, 96, 97).find((i: Int) => id.endsWith("#N"+i)))) {
               @breadcrumb("",id) 
               @if(spatial.isDefined){
-                   | <a href='@nwbib.routes.Application.search()?rpbspatial=@((v\"id").asOpt[String].getOrElse("--").replace("#", "%23"))' title='Nach weiteren Titeln zu @((v\"label").asOpt[String].getOrElse("--")) (@(id.split("#").last)) suchen'>
+                   | <a href='@rpb.routes.Application.search()?rpbspatial=@((v\"id").asOpt[String].getOrElse("--").replace("#", "%23"))' title='Nach weiteren Titeln zu @((v\"label").asOpt[String].getOrElse("--")) (@(id.split("#").last)) suchen'>
                   <span class='glyphicon glyphicon-search'></span>
                   </a>
               } else {
-                   | <a href='@nwbib.routes.Application.search()?q=coverage:"@(v.as[String])"' title='Nach weiteren Titeln zu @(v.as[String]) suchen'> | <span class='glyphicon glyphicon-search'></span></a>
+                   | <a href='@rpb.routes.Application.search()?q=coverage:"@(v.as[String])"' title='Nach weiteren Titeln zu @(v.as[String]) suchen'> | <span class='glyphicon glyphicon-search'></span></a>
               }
               <br/>
           }
@@ -248,8 +248,8 @@
   @result_field("Unterreihe", "titleOfSubSeries", doc, TableRow.VALUES)
   @result_field("Verantwortlich", "responsibilityStatement", doc, TableRow.VALUES)
   @contributions((doc \ "contribution").asOpt[Seq[JsValue]].getOrElse(Seq()))
-  @with_icon("Medientyp", "medium", controllers.nwbib.Application.MEDIUM_FIELD)
-  @with_icon("Publikationstyp", "type", controllers.nwbib.Application.TYPE_FIELD)
+  @with_icon("Medientyp", "medium", controllers.rpb.Application.MEDIUM_FIELD)
+  @with_icon("Publikationstyp", "type", controllers.rpb.Application.TYPE_FIELD)
   @result_field("", "thesisInformation", doc, TableRow.VALUES)
 
   @for(pub <- sortedPublications((doc\"publication").asOpt[Seq[JsValue]].getOrElse(Seq()))){ @publication(pub) }

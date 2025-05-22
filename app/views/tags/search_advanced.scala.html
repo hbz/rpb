@@ -3,23 +3,23 @@
 @(label:String, q:String = "", person: String = "", name: String = "", subject: String = "", rpbspatial: String = "", rpbsubject: String = "", id: String = "", publisher: String = "", issued: String = "", sortParam: String = "", word: String = "", corporation: String = "")
 
 @import scala.collection.immutable.TreeMap
-@import controllers.nwbib.Lobid
+@import controllers.rpb.Lobid
 
 <script>
 function addSearchWidget(c){
-    var form = $("#nwbib-form");
+    var form = $("#rpb-form");
     var last = $(".search-field").last();
     last.find(".rem").removeClass("disabled");
     var add = last.clone().attr("id","search-field-" + c);
     add.find(".rem").attr("onclick", "remSearchWidget("+(c)+")");
-    add.find("#nwbib-query-advanced").val("");
+    add.find("#rpb-query-advanced").val("");
     last.find("#and-search-field-"+(c-1)).show();
     add.find("#and-search-field-"+(c-1)).attr("id", "and-search-field-"+c).hide();
     add.find("#add-search-field-"+(c-1)).attr("id", "add-search-field-"+c)
     last.find("#add-search-field-"+(c-1)).hide();
     form.append(add);
     $("#add-search-field-"+c).attr("onclick", "addSearchWidget("+(c+1)+")");
-    form.append($("#nwbib-form > #search-button"));
+    form.append($("#rpb-form > #search-button"));
     setAutosuggest();
 }
 
@@ -39,11 +39,11 @@ function addParameters(){
     var ps = {};
     $(".search-field").each(function( index ) {
          var param = $(this).find("#query-select").val();
-         var value = $(this).find("#nwbib-query-advanced").val();
+         var value = $(this).find("#rpb-query-advanced").val();
          ps[param] = (ps[param] ? ps[param] + " " : "") + value;
     });
     for (var key in ps) {
-        $("#nwbib-form").append("<input type='hidden' name='"+key+"' value='"+ps[key]+"'/>");
+        $("#rpb-form").append("<input type='hidden' name='"+key+"' value='"+ps[key]+"'/>");
     }
 }
 
@@ -80,8 +80,8 @@ function suggests(term){
 }
 </script>
 
-@helper.form(action = controllers.nwbib.routes.Application.search(), 
-    'id -> "nwbib-form", 'role -> "form", 'class -> "form-inline") {
+@helper.form(action = controllers.rpb.routes.Application.search(), 
+    'id -> "rpb-form", 'role -> "form", 'class -> "form-inline") {
   @defining(TreeMap("name"->name,"person"->person,"corporation"->corporation,"subject"->Lobid.withoutUris(subject), "id"->id,"publisher"->publisher,"word"->word).filter({case (k,v) => !v.isEmpty && (k != "subject" || (k == "subject" && !v.startsWith("http")))})) { fields =>
   @for(((k,v),i)<- (if(fields.isEmpty) TreeMap("q" -> "") else fields).zipWithIndex){
   <div class="search-field row" id="search-field-@i">
@@ -99,7 +99,7 @@ function suggests(term){
       </div>
       <div class="form-group col col-md-9">
         <div class="input-group">
-            <input type="text" id="nwbib-query-advanced" title="Suchtext" class="form-control" placeholder='@if(v.startsWith("_")){@v.drop(1)}else{Suchanfrage}' value="@if(v.startsWith("_")){}else{@v}" onFocus="$('#search-button').show();"/>
+            <input type="text" id="rpb-query-advanced" title="Suchtext" class="form-control" placeholder='@if(v.startsWith("_")){@v.drop(1)}else{Suchanfrage}' value="@if(v.startsWith("_")){}else{@v}" onFocus="$('#search-button').show();"/>
             <span class="input-group-btn">
                 <a href="#" title="Kriterium entfernen" class="btn btn-default rem @if(fields.isEmpty||fields.size==1){disabled}" onclick="remSearchWidget(@i)">
                 <span class="octicon octicon-x"></span>

@@ -1,0 +1,40 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Handle trailing slashes
+GET    /*path/                controllers.rpb.Application.redirect(path: String)
+
+# Home page
+GET    /                      controllers.rpb.Application.index(map?="kreise")
+GET    /info                  controllers.rpb.Application.info()
+GET    /advanced              controllers.rpb.Application.advanced()
+GET    /topics                controllers.rpb.Application.topics(q?="")
+GET    /search                controllers.rpb.Application.search(q?="", person?="", name?="", subject?="", id?="", publisher?="", issued?="", medium ?= "", rpbspatial ?= "", rpbsubject ?= "", from:Int?=0, size:Int?=25, owner?="", t?="", sort ?= "newest", details:Boolean?=false, location ?= "", word?="", corporation?="", raw?="", format?="html")
+GET    /register              controllers.rpb.Application.register(t?="")
+GET    /classification        controllers.rpb.Application.classification(t?="")
+GET    /subjects              controllers.rpb.Application.subjects(t?="classification")
+GET    /subjects.ttl          controllers.rpb.Application.subjectsTtl()
+GET    /spatial               controllers.rpb.Application.spatial(t?="classification")
+GET    /spatial.ttl           controllers.rpb.Application.spatialTtl()
+GET    /journals              controllers.rpb.Application.journals()
+GET    /facets                controllers.rpb.Application.facets(q,person?="", name?="", subject?="", id?="", publisher?="", issued?="", medium ?= "", rpbspatial ?= "", rpbsubject ?= "", from:Int,size:Int,owner,t,field,sort, location?="", word?="", corporation?="", raw?="")
+
+GET    /stars                 controllers.rpb.Application.showStars(format?="", ids?="")
+GET    /stars/clear           controllers.rpb.Application.clearStars(ids ?= "")
+GET    /stars/all             controllers.rpb.Application.starAll(ids)
+POST   /stars/:id             controllers.rpb.Application.star(id)
+DELETE /stars/:id             controllers.rpb.Application.unstar(id)
+
+# Map static resources from the /public folder to the /assets URL path
+GET    /assets/*file          controllers.Assets.at(path="/public", file)
+GET    /robots.txt            controllers.Assets.at(path="/public",file="robots.txt")
+
+GET    /cgi-bin/wwwalleg/:name.pl   controllers.rpb.Application.showPl(name, db ?= "rnam", index: Int ?= 1, zeilen: Int ?= 1, s1)
+GET    /sw/:rpbId             controllers.rpb.Application.showSw(rpbId)
+GET    /o:id                  controllers.rpb.Application.searchSpatial(id, from:Int?=0, size:Int?=25, format?="html")
+GET    /:id                   controllers.rpb.Application.show(id, format ?= "")
+PUT    /:id                   controllers.rpb.Application.put(id, secret ?= "")
+DELETE /:id                   controllers.rpb.Application.delete(id, secret ?= "")
+PUT    /                      controllers.rpb.Application.putIdFromData(secret ?= "")
+DELETE /                      controllers.rpb.Application.deleteIdFromData(secret ?= "")

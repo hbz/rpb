@@ -2,7 +2,7 @@
 
 package tests;
 
-import static controllers.nwbib.Application.CONFIG;
+import static controllers.rpb.Application.CONFIG;
 import static org.fest.assertions.Assertions.assertThat;
 
 import java.io.IOException;
@@ -16,9 +16,9 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import controllers.nwbib.Classification;
-import controllers.nwbib.Classification.Type;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Classification;
+import controllers.rpb.Lobid;
+import controllers.rpb.Classification.Type;
 import play.libs.Json;
 
 /**
@@ -28,20 +28,20 @@ public class ApplicationTest {
 
 	@Test
 	public void shortClassificationId() {
-		assertThat(Classification.shortId("https://nwbib.de/subjects#N58206"))
-				.as("short classification").isEqualTo("58206");
+		assertThat(Classification.shortId("http://purl.org/lobid/rpb#n141020"))
+				.as("short classification").isEqualTo("141020");
 	}
 
 	@Test
 	public void shortSpatialClassificationId() {
-		assertThat(Classification.shortId("https://nwbib.de/spatial#N58"))
-				.as("short spatial classification").isEqualTo("58");
+		assertThat(Classification.shortId("https://rpb.lobid.org/spatial#n131015010200"))
+				.as("short spatial classification").isEqualTo("131015010200");
 	}
 
 	@Test
 	public void classificationLabelNotAvailable() {
 		assertThat(
-				Classification.label("https://nwbib.de/spatial#N58", Type.SPATIAL))
+				Classification.label("https://rpb.lobid.org/spatial#n9", Type.SPATIAL))
 						.as("empty label").isEqualTo("");
 	}
 

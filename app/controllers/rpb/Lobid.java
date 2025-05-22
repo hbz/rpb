@@ -1,6 +1,6 @@
 /* Copyright 2014 Fabian Steeg, hbz. Licensed under the GPLv2 */
 
-package controllers.nwbib;
+package controllers.rpb;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +26,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.html.HtmlEscapers;
 
-import controllers.nwbib.Classification.Type;
+import controllers.rpb.Classification.Type;
 import play.Logger;
 import play.Play;
 import play.cache.Cache;
@@ -94,14 +94,14 @@ public class Lobid {
 			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, String owner, String t, String sort, String location,
 			String word, String corporation, String raw) {
-		WSRequest requestHolder = WS.url(Application.CONFIG.getString("nwbib.api"))
+		WSRequest requestHolder = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setHeader("Accept", "application/json")
 				.setQueryParameter("format", "json")
 				.setQueryParameter("from", from + "")
 				.setQueryParameter("size", size + "")//
 				.setQueryParameter("sort", sort)//
 				.setQueryParameter("filter",
-						Application.CONFIG.getString("nwbib.filter"))
+						Application.CONFIG.getString("rpb.filter"))
 				.setQueryParameter("location", locationPolygon(location));
 
 		if (!raw.trim().isEmpty())
@@ -176,14 +176,14 @@ public class Lobid {
 
 	static WSRequest topicRequest(final String q, int from, int size) {
 		WSRequest request = // @formatter:off
-				WS.url(Application.CONFIG.getString("nwbib.api"))
+				WS.url(Application.CONFIG.getString("rpb.api"))
 						.setHeader("Accept", "application/json")
 						.setQueryParameter("format", "json")
 						.setQueryParameter("from", "" + from)
 						.setQueryParameter("size", "" + size)
 						.setQueryParameter("subject", q)
 						.setQueryParameter("filter",
-								Application.CONFIG.getString("nwbib.filter"))
+								Application.CONFIG.getString("rpb.filter"))
 						.setQueryParameter("aggregations", "topic");
 		//@formatter:on
 		Logger.debug("Request URL {}, query params {} ", request.getUrl(),
@@ -214,10 +214,10 @@ public class Lobid {
 	}
 
 	/**
-	 * @param value The nwbib classification URI
-	 * @return The number of hits for the given value in an nwbib query
+	 * @param value The rpb classification URI
+	 * @return The number of hits for the given value in an rpb query
 	 */
-	public static long getTotalHitsNwbibClassification(String value) {
+	public static long getTotalHitsRpbClassification(String value) {
 		if (AGGREGATION_COUNT.isEmpty()) {
 			initAggregation("spatial.id");
 			initAggregation("subject.id");
@@ -251,11 +251,11 @@ public class Lobid {
 				return cachedResult;
 			});
 		}
-		String qVal = f + ":\"" + v + "\"";
-		WSRequest request = WS.url(Application.CONFIG.getString("nwbib.api"))
+		String qVal = f + (v.startsWith("http") ? v : (":\"" + v + "\""));
+		WSRequest request = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setQueryParameter("format", "json").setQueryParameter("q", qVal)
 				.setQueryParameter("filter",
-						set.isEmpty() ? Application.CONFIG.getString("nwbib.filter") : set);
+						set.isEmpty() ? Application.CONFIG.getString("rpb.filter") : set);
 		return request.get().map((WSResponse response) -> {
 			Long total = getTotalResults(response.asJson());
 			Cache.set(cacheKey, total, Application.ONE_HOUR);
@@ -347,7 +347,7 @@ public class Lobid {
 						.map(node -> node.get("id")).collect(Collectors.toList()))
 				.get(Lobid.API_TIMEOUT);
 		return gndUris.stream()//
-				.map(gndUri -> Pair.of(gndUri.textValue(), hitsInNwbib(gndUri)))
+				.map(gndUri -> Pair.of(gndUri.textValue(), hitsInRpb(gndUri)))
 				.filter(uriAndHits -> uriAndHits.getRight() > 5)
 				.sorted(
 						Collections.reverseOrder(Comparator.comparingLong(Pair::getRight)))
@@ -356,7 +356,7 @@ public class Lobid {
 				.limit(3).collect(Collectors.toList());
 	}
 
-	private static Long hitsInNwbib(JsonNode r) {
+	private static Long hitsInRpb(JsonNode r) {
 		return getTotalHits("subject.componentList.id", r.textValue(), "")
 				.get(API_TIMEOUT);
 	}
@@ -367,7 +367,7 @@ public class Lobid {
 		if (cachedResult != null) {
 			return cachedResult;
 		}
-		WSRequest requestHolder = WS.url(Application.CONFIG.getString("nwbib.api"))
+		WSRequest requestHolder = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setHeader("Accept", "application/json")
 				.setQueryParameter("q", "subject.componentList.id:" + escapeUri(uri))
 				.setQueryParameter("format", "json").setQueryParameter("size", "1");
@@ -391,14 +391,14 @@ public class Lobid {
 		return label;
 	}
 
-	private static String nwBibLabel(String uri) {
-		String cacheKey = "nwbib.label." + uri;
+	private static String rpbLabel(String uri) {
+		String cacheKey = "rpb.label." + uri;
 		final String cachedResult = (String) Cache.get(cacheKey);
 		if (cachedResult != null) {
 			return cachedResult;
 		}
 		Type type = uri.contains("spatial") ? Classification.Type.SPATIAL
-				: Classification.Type.NWBIB;
+				: Classification.Type.SUBJECT;
 		String label = Classification.label(uri, type);
 		label = HtmlEscapers.htmlEscaper().escape(label);
 		label = label.trim().isEmpty() ? uri : label;
@@ -431,7 +431,7 @@ public class Lobid {
 			String medium, String rpbspatial, String rpbsubject, String owner,
 			String field, String t, String location, String word, String corporation,
 			String raw) {
-		WSRequest request = WS.url(Application.CONFIG.getString("nwbib.api"))
+		WSRequest request = WS.url(Application.CONFIG.getString("rpb.api"))
 				.setHeader("Accept", "application/json").setQueryParameter("name", name)
 				.setQueryParameter("publisher", publisher)//
 				.setQueryParameter("id", id)//
@@ -444,7 +444,7 @@ public class Lobid {
 				.setQueryParameter("location", locationPolygon(location))//
 				.setQueryParameter("issued", issued)//
 				.setQueryParameter("filter",
-						Application.CONFIG.getString("nwbib.filter"))//
+						Application.CONFIG.getString("rpb.filter"))//
 				.setQueryParameter("t", t);
 
 		if (!person.isEmpty())
@@ -566,7 +566,7 @@ public class Lobid {
 			return Lobid.organisationLabel(uris.get(0));
 		} else if (uris.size() == 1
 				&& (isRpbSubject(uris.get(0)) || isRpbSpatial(uris.get(0))))
-			return Lobid.nwBibLabel(uris.get(0));
+			return Lobid.rpbLabel(uris.get(0));
 		else if (uris.size() == 1 && isGnd(uris.get(0)))
 			return Lobid.gndLabel(uris.get(0));
 		String configKey = keys.getOrDefault(field, "");
@@ -597,7 +597,7 @@ public class Lobid {
 				|| field.equals(Application.RPB_SUBJECT_FIELD))
 			return "octicon octicon-list-unordered";
 		else if ((uris.size() == 1 && isRpbSpatial(uris.get(0)))
-				|| field.equals(Application.NWBIB_SPATIAL_FIELD)
+				|| field.equals(Application.RPB_SPATIAL_FIELD)
 				|| field.equals(Application.COVERAGE_FIELD))
 			return "octicon octicon-milestone";
 		else if ((uris.size() == 1 && isGnd(uris.get(0)))

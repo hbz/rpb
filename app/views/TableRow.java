@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.html.HtmlEscapers;
 
-import controllers.nwbib.Application;
-import controllers.nwbib.Classification;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Application;
+import controllers.rpb.Classification;
+import controllers.rpb.Lobid;
 import play.Logger;
 import play.libs.ws.WS;
 import play.libs.ws.WSRequest;
@@ -148,7 +148,6 @@ public enum TableRow {
 		public String process(JsonNode doc, String property, String param,
 				String label, List<String> values, Optional<List<String>> labels) {
 			return values.stream()
-					.filter(value -> !value.contains("lobid.org/resource/NWBib"))
 					.map(value -> String.format("<tr><td>%s</td><td>%s</td></tr>", label,
 							link(property, value, labels)))
 					.collect(Collectors.joining("\n"));
@@ -173,7 +172,7 @@ public enum TableRow {
 	public static String labelForId(String id, JsonNode doc,
 			Optional<List<String>> labelKeys) {
 		String label = "";
-		if (id.startsWith("http://purl.org/lobid/nwbib") || id.startsWith("https://nwbib.de/s")) {
+		if (id.startsWith("http://purl.org/lobid/rpb") || id.startsWith("https://rpb.lobid.org/spatial")) {
 			label = String.format("%s (%s)", //
 					Lobid.facetLabel(Arrays.asList(id), null, null),
 					Classification.shortId(id));

@@ -1,7 +1,7 @@
 /* Copyright 2015-2017 Fabian Steeg, hbz. Licensed under the GPLv2 */
 package views;
 
-import controllers.nwbib.Application;
+import controllers.rpb.Application;
 import play.Logger;
 import play.cache.Cache;
 import play.libs.F.Promise;

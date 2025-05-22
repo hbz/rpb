@@ -1,8 +1,8 @@
 /* Copyright 2014, 2022 Fabian Steeg, hbz. Licensed under the GPLv2 */
 
-package controllers.nwbib;
+package controllers.rpb;
 
-import static controllers.nwbib.Application.CONFIG;
+import static controllers.rpb.Application.CONFIG;
 
 import java.io.File;
 import java.io.FileReader;
@@ -21,11 +21,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -67,7 +65,7 @@ import play.cache.Cache;
 import play.libs.Json;
 
 /**
- * NWBib classification and spatial classification data access via Elasticsearch
+ * RPB classification and spatial classification data access via Elasticsearch
  *
  * @author Fabian Steeg (fsteeg)
  */
@@ -78,12 +76,12 @@ public class Classification {
 	private static final String INDEX = "rpb";
 
 	/**
-	 * NWBib classification types.
+	 * RPB classification types.
 	 */
 	public enum Type {
-		/** NWBib subject type */
-		NWBIB("json-ld-rpb", "Sachsystematik"), //
-		/** NWBib spatial type */
+		/** RPB subject type */
+		SUBJECT("json-ld-rpb", "Sachsystematik"), //
+		/** RPB spatial type */
 		SPATIAL("json-ld-rpb-spatial", "Raumsystematik");
 
 		String elasticsearchType;
@@ -246,12 +244,12 @@ public class Classification {
 	 */
 	public static JsonNode ids(String q, String t) {
 		QueryBuilder queryBuilder = QueryBuilders.boolQuery()
-				.must(QueryBuilders.idsQuery(Type.NWBIB.elasticsearchType,
+				.must(QueryBuilders.idsQuery(Type.SUBJECT.elasticsearchType,
 						Type.SPATIAL.elasticsearchType).addIds(q));
 		SearchRequestBuilder requestBuilder = client.prepareSearch(INDEX)
 				.setSearchType(SearchType.DFS_QUERY_THEN_FETCH).setQuery(queryBuilder);
 		if (t.isEmpty()) {
-			requestBuilder = requestBuilder.setTypes(Type.NWBIB.elasticsearchType,
+			requestBuilder = requestBuilder.setTypes(Type.SUBJECT.elasticsearchType,
 					Type.SPATIAL.elasticsearchType);
 		} else {
 			for (Type indexType : Type.values())
@@ -264,7 +262,7 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The NWBib classification URI
+	 * @param uri The RPB classification URI
 	 * @param type The ES classification type (see {@link Classification.Type})
 	 * @return The label for the given classification URI
 	 */
@@ -274,7 +272,7 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The NWBib classification URI
+	 * @param uri The RPB classification URI
 	 * @param type The ES classification type (see {@link Classification.Type})
 	 * @return The notation for the given classification URI
 	 */
@@ -345,7 +343,7 @@ public class Classification {
 				String lk = record.get("Landkreis");
 				String broader = wpNr != null && !wpNr.trim().isEmpty() ? gs : null;
 				System.out.printf("ID %s, label %s, broader %s\n", id, label, broader);
-				long hits = Lobid.getTotalHitsNwbibClassification(id);
+				long hits = Lobid.getTotalHitsRpbClassification(id);
 				if (broader == null && !isNullOrEmpty(lk)) {
 					String broaderNotation = notation.substring(0, 3);
 					if (!isNullOrEmpty(lk)) {
@@ -395,10 +393,7 @@ public class Classification {
 		if (notationFromSkos != null) {
 			return notationFromSkos.findValue("@value").asText().replace("rpb", "");
 		}
-		Optional<String> notationKeyWikidata =
-				Stream.of("ks", "ags", "rs").filter(k -> item.has(k)).findFirst();
-		return notationKeyWikidata.map(k -> item.get(k).get("value").asText())
-				.orElse("");
+		return "";
 	}
 
 	private static Map<String, List<JsonNode>> removeDuplicates(
@@ -466,7 +461,7 @@ public class Classification {
 							: "<span class='notation'>" + notation + "</span>" + " ")
 							+ label.findValue("@value").asText(), //
 					"hits",
-					Lobid.getTotalHitsNwbibClassification(Lobid.rpbSpatialGndToRealGnd(id)), //
+					Lobid.getTotalHitsRpbClassification(Lobid.rpbSpatialGndToRealGnd(id)), //
 					"notation", notation, //
 					"focus", focus(json));
 			result.add(Json.toJson(map));
@@ -504,7 +499,7 @@ public class Classification {
 				.actionGet();
 		if (!client.admin().indices().prepareExists(INDEX).execute().actionGet()
 				.isExists()) {
-			indexData(CONFIG.getString("index.data.rpbsubject"), Type.NWBIB);
+			indexData(CONFIG.getString("index.data.rpbsubject"), Type.SUBJECT);
 			indexData(CONFIG.getString("index.data.rpbspatial"), Type.SPATIAL);
 			client.admin().indices().refresh(new RefreshRequest()).actionGet();
 			Settings indexSettings = Settings.builder().put("max_result_window", MAX_RESULT_WINDOW).build();
@@ -543,16 +538,16 @@ public class Classification {
 	}
 
 	/**
-	 * @param uri The nwbib or rpbspatial URI
+	 * @param uri The rpb or rpbspatial URI
 	 * @return The list of path segments to the given URI in its classification,
-	 *         e.g. for URI https://nwbib.de/subjects#N582060:
-	 *         [https://nwbib.de/subjects#N5, https://nwbib.de/subjects#N580000,
-	 *         https://nwbib.de/subjects#N582000,
-	 *         https://nwbib.de/subjects#N582060]
+	 *         e.g. for URI http://purl.org/lobid/rpb#n865052: [
+	 *         http://purl.org/lobid/rpb#n860000,
+	 *         http://purl.org/lobid/rpb#n865000,
+	 *         http://purl.org/lobid/rpb#n865050,
+	 *         http://purl.org/lobid/rpb#n865052]
 	 */
 	public static List<String> pathTo(String uri) {
-		Type type = uri.contains("spatial") || uri.contains("wikidata")
-				? Type.SPATIAL : Type.NWBIB;
+		Type type = uri.contains("spatial") ? Type.SPATIAL : Type.SUBJECT;
 		Map<String, List<String>> candidates = Cache.getOrElse(type.toString(),
 				() -> generateAllPaths(type.buildHierarchy()), Application.ONE_DAY);
 		return candidates.containsKey(uri) ? candidates.get(uri)

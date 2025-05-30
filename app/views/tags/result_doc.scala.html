@@ -63,9 +63,11 @@
         @((pub\"frequency").asOpt[Seq[JsValue]].map { freq =>
           optional("Erscheinungsweise", "label", freq.head)
         })
-        @optional("Erscheinungsverlauf", "publicationHistory", pub)
       </td>
     </tr>
+    @if((pub\"publicationHistory").asOpt[JsValue].isDefined) {
+      @result_field("Erscheinungsverlauf", "publicationHistory", pub, TableRow.VALUES)
+    }
   }
 }
 

@@ -8,15 +8,19 @@
 @import controllers.rpb.Application.ZDB_PREFIX
 
 @idAndLabelLink(e: JsValue) = {
-  <a href='@((e\"id").asOpt[String].getOrElse("--"))'>@((e\"label").asOpt[String].getOrElse("--"))</a>
+  @defining(TableRow.LINKS.rpbUrlIfInRpb((e\"id").asOpt[String].getOrElse(""))) { link =>
+    <a href='@link'>@((e\"label").asOpt[String].getOrElse("--"))</a>
+  }
 }
 
-@labelled(label: String, key: String) = {
+@labelled(label: String, key: String, prefixKey: String = "") = {
   @if((doc\key).asOpt[Seq[JsValue]].isDefined) {
-    @defining((doc\key).asOpt[Seq[JsValue]].getOrElse(Seq(doc\key))) { elems =>
+    @defining(
+      (doc\key).asOpt[Seq[JsValue]].getOrElse(Seq(doc\key)),
+      (doc\key\\prefixKey).flatMap(_.as[Seq[JsValue]].map(_.as[String])).mkString) { case (elems, prefix) =>
     <tr>
       <td>@label</td>
-      <td>@idAndLabelLink(elems.head.asOpt[JsValue].get)</td>
+      <td>@prefix@idAndLabelLink(elems.head.asOpt[JsValue].get)</td>
     </tr>
       @for(elem <- elems.tail; e <- elem.asOpt[JsValue]) {
         <tr>
@@ -253,6 +257,8 @@
   @result_field("", "thesisInformation", doc, TableRow.VALUES)
 
   @for(pub <- sortedPublications((doc\"publication").asOpt[Seq[JsValue]].getOrElse(Seq()))){ @publication(pub) }
+  @labelled("Vorgänger", "predecessor", "note")
+  @labelled("Nachfolger", "successor", "note")
   @result_field("Auflage", "edition", doc, TableRow.VALUES)
   @result_field("Schoene-Nummer", "schoeneNummer", doc, TableRow.VALUES)
   @result_field("Inhalt", "abstract", doc, TableRow.VALUES)

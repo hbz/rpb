@@ -232,7 +232,7 @@ public enum TableRow {
 		return new String[] { value, label };
 	}
 
-	String rpbUrlIfInRpb(String value) {
+	public String rpbUrlIfInRpb(String value) {
 		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", "https://rpb.lobid.org/$1");
 		WSRequest rpbRequest = WS.url(rpbUrl).setQueryParameter("format", "json");
 		JsonNode rpbJson = rpbRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);

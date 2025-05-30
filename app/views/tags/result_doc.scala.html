@@ -100,7 +100,7 @@
 @subordinate(field:String, ids:Seq[String], label:String, values:(String,String)) = {
   @defining(ids.map((id) => Lobid.getTotalHits(field, id, CONFIG.getString("rpb.filter")).get(Lobid.API_TIMEOUT)).reduce((a, b) => a + b)){ hits => @if(hits > 0) {
     @defining(if(hits==1){values._1} else {values._2}){ value =>
-    <tr><td>@label</td><td><a title="@value" href="@rpb.routes.Application.search(raw=ids.map((id)=>field+":\""+Lobid.escapeUri(id)+"\"").mkString(" OR "))">@hits @value</a></td></tr>
+    <tr><td>@label</td><td><a title="@value" href="@rpb.routes.Application.search(raw=ids.map((id)=>field+":\""+Lobid.escapeUri(id)+"\"").mkString(" OR "))"><b>@hits @value</b></a></td></tr>
   }}}
 }
 

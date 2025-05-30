@@ -3,14 +3,14 @@
 // https://docs.strapi.io/dev-docs/api/rest#update-an-entry
 
 // Use Strapi export data, then run with host and API token to be used:
-// zgrep -a '"type":"api::person.person"' conf/strapi-export.tar.gz > conf/output/rppd-export.jsonl
-// sbt "runMain rpb.ETL conf/rppd-strapi-to-strapi.flux HOST=test-metadaten-nrw:1339 API_TOKEN=bb0..."
-// bash conf/output/rppd-strapi-update.sh
+// zgrep -a '"type":"api::person.person"' etl/strapi-export.tar.gz > etl/output/rppd-export.jsonl
+// sbt "runMain rpb.ETL etl/rppd-strapi-to-strapi.flux HOST=test-metadaten-nrw:1339 API_TOKEN=bb0..."
+// bash etl/output/rppd-strapi-update.sh
 
 default HOST = "localhost:1337"; // pass e.g. HOST=test-metadaten-nrw:1339
 default API_TOKEN = ""; // pass e.g. API_TOKEN=bb0...
 
-"conf/output/rppd-export.jsonl"
+"etl/output/rppd-export.jsonl"
 | open-file
 | as-lines
 | decode-json
@@ -19,7 +19,7 @@ if is_empty('data.relatedPerson[]')
     reject()
 end
 do once('map')
-  put_filemap('conf/maps/gndId-to-label.tsv', 'label_to_gnd', key_column:'1', value_column:'0', sep_char: '\t', expected_columns:'-1')
+  put_filemap('etl/maps/gndId-to-label.tsv', 'label_to_gnd', key_column:'1', value_column:'0', sep_char: '\t', expected_columns:'-1')
 end
 do list_as(person: 'data.relatedPerson[].*')
     copy_field('person.value', _temp)

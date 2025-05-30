@@ -1,6 +1,6 @@
-default outfile = "conf/output/bulk/bulk-${i}.ndjson";
+default outfile = "etl/output/bulk/bulk-${i}.ndjson";
 default index = "resources-rpb-test";
-"conf/output/output-strapi.ndjson"
+"etl/output/output-strapi.ndjson"
 | open-file
 | as-lines
 | decode-json

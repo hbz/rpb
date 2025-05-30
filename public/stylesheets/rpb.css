@@ -11,7 +11,7 @@ dd {
 	padding-bottom: 0.5em;
 }
 
-#nwbib-form {
+#rpb-form {
 	padding-bottom: 1em;
 }
 
@@ -47,7 +47,7 @@ input#owner {
 	width: 100%;
 }
 
-#nwbib-query-advanced {
+#rpb-query-advanced {
 	width: 100%;
 }
 
@@ -143,7 +143,7 @@ table {
 	padding-top: 5px;
 }
 
-.nwbib-footer {
+.rpb-footer {
 	margin-top: 15px;
 	text-align: center;
 }
@@ -194,7 +194,7 @@ table {
     overflow-x: hidden;
 }
 
-#nwbibQuery {
+#rpbQuery {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }

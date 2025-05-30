@@ -3,15 +3,15 @@
 // https://docs.strapi.io/dev-docs/api/rest#update-an-entry
 
 // Use export data from Allegro (for `f95_` values) and Strapi (for record `id`), merged via `rppdId`:
-// sbt "runMain rpb.ETL conf/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio.txt OUT_FILE=output-rppd-strapi.ndjson"
-// zgrep -a '"type":"api::person.person"' conf/strapi-export.tar.gz > conf/output/rppd-export.jsonl
-// sbt "runMain rpb.ETL conf/rppd-strapi-to-strapi-created.flux HOST=test-metadaten-nrw:1339 API_TOKEN=bb0..."
-// bash conf/output/rppd-strapi-update.sh
+// sbt "runMain rpb.ETL etl/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio.txt OUT_FILE=output-rppd-strapi.ndjson"
+// zgrep -a '"type":"api::person.person"' etl/strapi-export.tar.gz > etl/output/rppd-export.jsonl
+// sbt "runMain rpb.ETL etl/rppd-strapi-to-strapi-created.flux HOST=test-metadaten-nrw:1339 API_TOKEN=bb0..."
+// bash etl/output/rppd-strapi-update.sh
 
 default HOST = "localhost:1337"; // pass e.g. HOST=test-metadaten-nrw:1339
 default API_TOKEN = ""; // pass e.g. API_TOKEN=bb0...
 
-"conf/output/rppd-export.jsonl"
+"etl/output/rppd-export.jsonl"
 | open-file
 | as-lines
 | decode-json
@@ -25,7 +25,7 @@ retain('id', '_id')
 | stream-to-triples(redirect="true")
 | @X;
 
-"conf/output/output-rppd-strapi.ndjson"
+"etl/output/output-rppd-strapi.ndjson"
 | open-file
 | as-lines
 | decode-json

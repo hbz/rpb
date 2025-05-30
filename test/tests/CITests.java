@@ -16,7 +16,7 @@ import rpb.EtlTest;
  *
  */
 @RunWith(Suite.class)
-@SuiteClasses({ ApplicationTest.class, /*InternalIntegrationTest.class,*/ DecodeTest.class, EtlTest.class})
+@SuiteClasses({ ApplicationTest.class, DecodeTest.class, EtlTest.class })
 public class CITests {
 	//
 }

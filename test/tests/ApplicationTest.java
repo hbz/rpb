@@ -2,7 +2,7 @@
 
 package tests;
 
-import static controllers.nwbib.Application.CONFIG;
+import static controllers.rpb.Application.CONFIG;
 import static org.fest.assertions.Assertions.assertThat;
 
 import java.io.IOException;
@@ -16,33 +16,34 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import controllers.nwbib.Classification;
-import controllers.nwbib.Classification.Type;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Application;
+import controllers.rpb.Classification;
+import controllers.rpb.Classification.Type;
+import controllers.rpb.Lobid;
+
 import play.libs.Json;
 
 /**
  * See http://www.playframework.com/documentation/2.3.x/JavaTest
  */
-@SuppressWarnings("javadoc")
 public class ApplicationTest {
 
 	@Test
 	public void shortClassificationId() {
-		assertThat(Classification.shortId("https://nwbib.de/subjects#N58206"))
-				.as("short classification").isEqualTo("58206");
+		assertThat(Classification.shortId("http://purl.org/lobid/rpb#n141020"))
+				.as("short classification").isEqualTo("141020");
 	}
 
 	@Test
 	public void shortSpatialClassificationId() {
-		assertThat(Classification.shortId("https://nwbib.de/spatial#N58"))
-				.as("short spatial classification").isEqualTo("58");
+		assertThat(Classification.shortId("https://rpb.lobid.org/spatial#n131015010200"))
+				.as("short spatial classification").isEqualTo("131015010200");
 	}
 
 	@Test
 	public void classificationLabelNotAvailable() {
 		assertThat(
-				Classification.label("https://nwbib.de/spatial#N58", Type.SPATIAL))
+				Classification.label("https://rpb.lobid.org/spatial#n9", Type.SPATIAL))
 						.as("empty label").isEqualTo("");
 	}
 
@@ -145,6 +146,21 @@ public class ApplicationTest {
 				Json.newObject().put("label", "Stadtbezirk X") };
 		Arrays.sort(in, Classification.comparator(Classification::labelText));
 		Assert.assertArrayEquals(correct, in);
+	}
+
+	@Test
+	public void removeNonFormattingControlCharacters() {
+		assertThat(Application
+				.removeNonFormattingControlCharacters("\u0098Der\u009c Gau-Algesheimer Weihnachtsmarkt"))
+				.as("Non-formatting control characters should be removed")
+				.doesNotContain("\u0098")
+				.doesNotContain("\u009c");
+		assertThat(Application
+				.removeNonFormattingControlCharacters("Line1\r\nLine2\n\tIndented"))
+				.as("Tabs and newlines should be retained")
+				.contains("\r")
+				.contains("\n")
+				.contains("\t");
 	}
 
 }

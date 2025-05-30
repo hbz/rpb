@@ -25,8 +25,8 @@ import org.apache.jena.vocabulary.SKOS;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import controllers.nwbib.Classification;
-import controllers.nwbib.Lobid;
+import controllers.rpb.Classification;
+import controllers.rpb.Lobid;
 
 /**
  * Generate a SKOS representation from the internal spatial classification data
@@ -68,7 +68,6 @@ public class SpatialToSkos {
 		model.setNsPrefix("dct", DCTerms.NAMESPACE.toString());
 		model.setNsPrefix("vann", "http://purl.org/vocab/vann/");
 		model.setNsPrefix("", RPB_SPATIAL_NAMESPACE);
-		model.setNsPrefix("wd", "http://www.wikidata.org/entity/");
 	}
 
 	private static Resource addConceptScheme(Model model) {

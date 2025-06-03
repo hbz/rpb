@@ -8,8 +8,8 @@
 @import controllers.rpb.Application.ZDB_PREFIX
 
 @idAndLabelLink(e: JsValue) = {
-  @defining(TableRow.LINKS.rpbUrlIfInRpb((e\"id").asOpt[String].getOrElse(""))) { link =>
-    <a href='@link'>@((e\"label").asOpt[String].getOrElse("--"))</a>
+  @for(id <- (e\"id").asOpt[String]; label = (e\"label").asOpt[String].getOrElse(id)) {
+    <a href='@(if(id.contains("lobid.org/resources")) {TableRow.LINKS.rpbUrlIfInRpb(id)} else {id})'>@label</a>
   }
 }
 

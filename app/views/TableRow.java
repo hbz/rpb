@@ -21,6 +21,7 @@ import play.Logger;
 import play.libs.ws.WS;
 import play.libs.ws.WSRequest;
 import play.libs.ws.WSResponse;
+import play.mvc.Http;
 
 /**
  * Different ways of serializing a table row
@@ -231,6 +232,12 @@ public enum TableRow {
 						: value.startsWith("http") ? URI.create(value).getHost() : value;
 		return new String[] { value, label };
 	}
+
+	public String rppdUrlIfInRppd(String value) {
+                String rppdUrl = value.replaceAll("https://d-nb.info/gnd/([^#]+)", "https://rppd.lobid.org/$1");
+                int status = WS.url(rppdUrl).get().map(WSResponse::getStatus).get(Lobid.API_TIMEOUT);
+                return status == Http.Status.OK ? rppdUrl : value;
+        }
 
 	public String rpbUrlIfInRpb(String value) {
 		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", "https://rpb.lbz-rlp.de/$1");

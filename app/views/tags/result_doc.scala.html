@@ -286,7 +286,8 @@
     String.format("http://lobid.org/resources/"+ZDB_PREFIX+"%s#!", (doc \ "zdbId").asOpt[String].getOrElse("")),
     String.format("http://lobid.org/resources/%s#!", (doc \ "hbzId").asOpt[String].getOrElse("")),
     String.format("https://lobid.org/resources/%s", (doc \ "rpbId").asOpt[String].getOrElse("")),
-    String.format("http://rpb.lobid.org/%s", (doc \ "rpbId").asOpt[String].getOrElse(""))
+    String.format("http://rpb.lobid.org/%s", (doc \ "rpbId").asOpt[String].getOrElse("")),
+    String.format("http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=%s#!", (doc \ "hebisId").asOpt[String].getOrElse(""))
   ))
   @parallelausgabe()
   @raumsystematik("https://rpb.lobid.org/spatial")

@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.html.HtmlEscapers;
 
 import controllers.rpb.Application;
+import static controllers.rpb.Application.CONFIG;
 import controllers.rpb.Classification;
 import controllers.rpb.Lobid;
 import play.Logger;
@@ -217,7 +218,7 @@ public enum TableRow {
 
 	String[] refAndLabel(String property, String value,
 			Optional<List<String>> labels) {
-		if (value.contains("lobid.org/resources/")) {
+		if (value.contains("lobid.org/resources/") || value.contains("cbsopac.rz.uni-frankfurt.de")) {
 			value = rpbUrlIfInRpb(value);
 		}
 		if ((property.equals("containedIn") || property.equals("hasPart")
@@ -240,7 +241,8 @@ public enum TableRow {
         }
 
 	public String rpbUrlIfInRpb(String value) {
-		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", "https://rpb.lbz-rlp.de/$1");
+		value = value.replace("http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=", "https://lobid.org/resources/");
+		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", CONFIG.getString("host") + "/$1");
 		WSRequest rpbRequest = WS.url(rpbUrl).setQueryParameter("format", "json");
 		JsonNode rpbJson = rpbRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
 		return rpbJson.get("member").elements().hasNext() ? rpbUrl : rpbUrlIfhasRpbId(value);
@@ -249,7 +251,7 @@ public enum TableRow {
 	String rpbUrlIfhasRpbId(String value) {
 		WSRequest lobidRequest = WS.url(value).setHeader("Content-Type", "application/json");
 		JsonNode lobidJson = lobidRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
-		return lobidJson.has("rpbId") ? "https://rpb.lbz-rlp.de/" + lobidJson.get("rpbId").textValue() : value;
+		return lobidJson.has("rpbId") ? CONFIG.getString("host") + "/" + lobidJson.get("rpbId").textValue() : value;
 	}
 
 	public abstract String process(JsonNode doc, String property, String param,

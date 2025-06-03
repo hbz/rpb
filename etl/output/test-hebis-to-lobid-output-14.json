@@ -30,6 +30,9 @@
   }, {
     "id" : "https://d-nb.info/1361254696",
     "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=528269186#!",
+    "label" : "HEBIS-Ressource"
   } ],
   "isPartOf" : [ {
     "hasSuperordinate" : [ {

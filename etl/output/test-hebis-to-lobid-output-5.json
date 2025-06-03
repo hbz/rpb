@@ -21,6 +21,10 @@
       }
     }
   },
+  "sameAs" : [ {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=475390555#!",
+    "label" : "HEBIS-Ressource"
+  } ],
   "language" : [ {
     "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
     "label" : "Deutsch"

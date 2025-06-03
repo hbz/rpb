@@ -8,14 +8,14 @@
 @import controllers.rpb.Application.ZDB_PREFIX
 
 @rppdLinkIfInRppd(gndUri: String, label: String) = {
-  @defining(if(gndUri.contains("d-nb.info/gnd")) {TableRow.LINKS.rppdUrlIfInRppd(gndUri)} else {gndUri}) { link => @if(link!=gndUri) {
+  @defining(TableRow.LINKS.rppdUrlIfInRppd(gndUri)) { link => @if(link!=gndUri) {
     <a title="Biografische Informationen zu '@label'" href="@link" target="_blank"><span class="glyphicon glyphicon-user"></span></a>
   }}
 }
 
 @idAndLabelLink(e: JsValue) = {
   @for(id <- (e\"id").asOpt[String]; label = (e\"label").asOpt[String].getOrElse(id)) {
-    <a href='@(if(id.contains("lobid.org/resources")) {TableRow.LINKS.rpbUrlIfInRpb(id)} else {id})'>@label</a>
+    <a href='@TableRow.LINKS.rpbUrlIfInRpb(id)'>@label</a>
   }
 }
 

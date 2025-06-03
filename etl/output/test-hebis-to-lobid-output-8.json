@@ -36,6 +36,9 @@
   }, {
     "id" : "https://d-nb.info/121992976X",
     "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=478607776#!",
+    "label" : "HEBIS-Ressource"
   } ],
   "tableOfContents" : [ {
     "label" : "Inhaltsverzeichnis",

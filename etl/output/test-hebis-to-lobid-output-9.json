@@ -26,6 +26,9 @@
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/45021318",
     "label" : "OCLC Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=090680634#!",
+    "label" : "HEBIS-Ressource"
   } ],
   "isPartOf" : [ {
     "hasSuperordinate" : [ {

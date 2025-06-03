@@ -315,8 +315,8 @@ public class Application extends Controller {
 			Logger.warn("No pagination session data for {}", id);
 		}
 		String cleanId = id.replace("#!", "").replace(ZDB_PREFIX, "");
-		String q = String.format("rpbId:%s OR hbzId:%s OR almaMmsId:%s OR zdbId:%s OR id:\"https://lobid.org/resources/%s\"",
-				cleanId, cleanId, cleanId, cleanId, cleanId);
+		String q = String.format("rpbId:%s OR hbzId:%s OR almaMmsId:%s OR zdbId:%s OR hebisId:%s OR id:\"https://lobid.org/resources/%s\"",
+				cleanId, cleanId, cleanId, cleanId, cleanId, cleanId);
 		return search(q,"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format),
 				"", "", "", "", format);
 	}

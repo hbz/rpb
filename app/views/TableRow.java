@@ -21,6 +21,7 @@ import play.Logger;
 import play.libs.ws.WS;
 import play.libs.ws.WSRequest;
 import play.libs.ws.WSResponse;
+import play.mvc.Http;
 
 /**
  * Different ways of serializing a table row
@@ -232,8 +233,14 @@ public enum TableRow {
 		return new String[] { value, label };
 	}
 
-	String rpbUrlIfInRpb(String value) {
-		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", "https://rpb.lobid.org/$1");
+	public String rppdUrlIfInRppd(String value) {
+                String rppdUrl = value.replaceAll("https://d-nb.info/gnd/([^#]+)", "https://rppd.lobid.org/$1");
+                int status = WS.url(rppdUrl).get().map(WSResponse::getStatus).get(Lobid.API_TIMEOUT);
+                return status == Http.Status.OK ? rppdUrl : value;
+        }
+
+	public String rpbUrlIfInRpb(String value) {
+		String rpbUrl = value.replaceAll("https?://lobid.org/resources/([^#]+)(#!)", "https://rpb.lbz-rlp.de/$1");
 		WSRequest rpbRequest = WS.url(rpbUrl).setQueryParameter("format", "json");
 		JsonNode rpbJson = rpbRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
 		return rpbJson.get("member").elements().hasNext() ? rpbUrl : rpbUrlIfhasRpbId(value);
@@ -242,7 +249,7 @@ public enum TableRow {
 	String rpbUrlIfhasRpbId(String value) {
 		WSRequest lobidRequest = WS.url(value).setHeader("Content-Type", "application/json");
 		JsonNode lobidJson = lobidRequest.get().map(WSResponse::asJson).get(Lobid.API_TIMEOUT);
-		return lobidJson.has("rpbId") ? "https://rpb.lobid.org/" + lobidJson.get("rpbId").textValue() : value;
+		return lobidJson.has("rpbId") ? "https://rpb.lbz-rlp.de/" + lobidJson.get("rpbId").textValue() : value;
 	}
 
 	public abstract String process(JsonNode doc, String property, String param,

@@ -8,7 +8,7 @@
 @import controllers.rpb.Application.ZDB_PREFIX
 
 @rppdLinkIfInRppd(gndUri: String, label: String) = {
-  @defining(TableRow.LINKS.rppdUrlIfInRppd(gndUri)) { link => @if(link!=gndUri) {
+  @defining(if(gndUri.contains("d-nb.info/gnd")) {TableRow.LINKS.rppdUrlIfInRppd(gndUri)} else {gndUri}) { link => @if(link!=gndUri) {
     <a title="Biografische Informationen zu '@label'" href="@link" target="_blank"><span class="glyphicon glyphicon-user"></span></a>
   }}
 }

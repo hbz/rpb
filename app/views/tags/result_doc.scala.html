@@ -139,7 +139,7 @@
               agents = agent.asOpt[Seq[JsValue]].getOrElse(Seq(agent));
               id = (agents(0) \ "id").asOpt[String];
               labelLookup = Lobid.facetLabel(Seq(id.getOrElse("")), "", "");
-              label = if (labelLookup == id) (agents(0) \ "label").asOpt[String].getOrElse(id.getOrElse("")) else labelLookup;
+              label = if (labelLookup == id.getOrElse("")) (agents(0) \ "label").asOpt[String].getOrElse(id.getOrElse("")) else labelLookup;
               types = (agents(0) \ "type").asOpt[Seq[String]].getOrElse(Seq())) {
         <a title="Nach weiteren Titeln von '@label' suchen" 
           href='@if(types.contains("CorporateBody")){ @rpb.routes.Application.search(corporation=id.getOrElse(label)) }else{ @rpb.routes.Application.search(person=id.getOrElse(label)) }'/>@label</a>

@@ -365,14 +365,13 @@ public class Lobid {
 		if (cachedResult != null) {
 			return cachedResult;
 		}
-		WSRequest requestHolder = WS.url(Application.CONFIG.getString("gnd.api") + "/search")
-				.setHeader("Accept", "application/json")
-				.setQueryParameter("q", "id:" + "\"" + uri + "\"")
-				.setQueryParameter("format", "json").setQueryParameter("size", "1");
-		return requestHolder.get().map((WSResponse response) -> response.asJson())
-				.filter((JsonNode json) -> json.get("totalItems").asInt() > 0)
-				.map((JsonNode json) -> {
-					String label = json.get("member").elements().next().get("preferredName").textValue();
+		WSRequest requestHolder = WS
+				.url(Application.CONFIG.getString("gnd.api") + "/" + uri.replace(GND_PREFIX, ""))
+				.setHeader("Accept", "application/json");
+		return requestHolder.get()
+				.filter((WSResponse response) -> response.getStatus() == Http.Status.OK)
+				.map((WSResponse response) -> {
+					String label = response.asJson().get("preferredName").textValue();
 					Cache.set(cacheKey, label, Application.ONE_DAY);
 					return label;
 				}).get(Lobid.API_TIMEOUT);

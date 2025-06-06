@@ -29,7 +29,6 @@ public class EtlTest {
         File output = new File("etl/output/test-output-0.json");
         output.delete();
         assertThat(output).as("test output").doesNotExist();
-        ETL.main(new String[] { "etl/rpb-test-titel-to-strapi.flux" });
         ETL.main(new String[] { "etl/rpb-test-titel-to-lobid.flux" });
         assertThat(output).as("test output").exists();
     }

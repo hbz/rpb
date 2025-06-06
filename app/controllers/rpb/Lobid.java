@@ -14,10 +14,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Spliterators;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -367,28 +365,17 @@ public class Lobid {
 		if (cachedResult != null) {
 			return cachedResult;
 		}
-		WSRequest requestHolder = WS.url(Application.CONFIG.getString("rpb.api"))
+		WSRequest requestHolder = WS.url(Application.CONFIG.getString("gnd.api") + "/search")
 				.setHeader("Accept", "application/json")
-				.setQueryParameter("q", "subject.componentList.id:" + escapeUri(uri))
+				.setQueryParameter("q", "id:" + "\"" + uri + "\"")
 				.setQueryParameter("format", "json").setQueryParameter("size", "1");
-		return requestHolder.get().map((WSResponse response) -> {
-			JsonNode value = response.asJson();
-			String label = findSubjectLabelForUriInResponse(uri, value);
-			Cache.set(cacheKey, label, Application.ONE_DAY);
-			return label;
-		}).get(Lobid.API_TIMEOUT);
-	}
-
-	private static String findSubjectLabelForUriInResponse(String uri,
-			JsonNode json) {
-		List<JsonNode> complexSubjects = json.findValues("componentList");
-		String label =
-				complexSubjects.stream()
-						.flatMap((complexSubject) -> StreamSupport.stream(Spliterators
-								.spliteratorUnknownSize(complexSubject.elements(), 0), false))
-						.filter((s) -> s.has("id") && s.get("id").textValue().equals(uri))
-						.findFirst().map((s) -> s.get("label").textValue()).orElse(uri);
-		return label;
+		return requestHolder.get().map((WSResponse response) -> response.asJson())
+				.filter((JsonNode json) -> json.get("totalItems").asInt() > 0)
+				.map((JsonNode json) -> {
+					String label = json.get("member").elements().next().get("preferredName").textValue();
+					Cache.set(cacheKey, label, Application.ONE_DAY);
+					return label;
+				}).get(Lobid.API_TIMEOUT);
 	}
 
 	private static String rpbLabel(String uri) {

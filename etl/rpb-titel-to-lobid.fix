@@ -23,12 +23,10 @@ do put_macro("normalize")
 end
 
 do put_macro("add_labels")
-  unless exists("$[field].label")
-    copy_field("$[field].id", "$[field].label")
-    call_macro("normalize", field: "$[field].label")
-    lookup("$[field].label", "sw-rpb_map")
-    lookup("$[field].label", "sw-gnd_map")
-  end
+  copy_field("$[field].id", "$[field].label")
+  call_macro("normalize", field: "$[field].label")
+  lookup("$[field].label", "sw-rpb_map")
+  lookup("$[field].label", "sw-gnd_map")
   copy_field("$[field].id", "$[field].altLabel[]")
   call_macro("normalize", field: "$[field].altLabel[]")
   lookup("$[field].altLabel[]", "sw-rpb-variants_map", delete: "true")

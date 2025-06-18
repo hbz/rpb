@@ -1,60 +1,43 @@
 {
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "id" : "http://lobid.org/resources/528269186#!",
-  "type" : [ "BibliographicResource", "Book" ],
+  "id" : "http://lobid.org/resources/457093552#!",
+  "type" : [ "BibliographicResource", "MultiVolumeBook", "Book" ],
   "medium" : [ {
     "label" : "Print",
     "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
   } ],
-  "title" : "Mainzer Stadtspaziergänge, Band 12: Bretzenheim, Berliner Siedlung, Hechtsheim, Laubenheim, Ebersheim / Michael Bermeitinger",
-  "almaMmsId" : "528269186",
-  "isbn" : [ "9783960310723", "3960310722" ],
-  "oclcNumber" : [ "1512396052" ],
-  "dnbId" : "1361254696",
+  "title" : "Mainzer Stadtspaziergänge",
+  "almaMmsId" : "457093552",
+  "dnbId" : "1203676662",
   "publication" : [ {
-    "startDate" : "2025",
+    "startDate" : "2019",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Roßdorf" ],
-    "publishedBy" : [ "TZ-Verlag & Print GmbH" ]
+    "publishedBy" : [ "Edition-TZ.de, Leinpfad Verlag" ]
+  }, {
+    "startDate" : "2019",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Ingelheim" ],
+    "publishedBy" : [ "Leinpfad Verlag" ]
   } ],
   "describedBy" : {
     "resultOf" : {
       "object" : {
-        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22528269186%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22457093552%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
       }
     }
   },
   "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1512396052",
-    "label" : "OCLC Ressource"
-  }, {
-    "id" : "https://d-nb.info/1361254696",
+    "id" : "https://d-nb.info/1203676662",
     "label" : "DNB-Ressource"
   }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=528269186#!",
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=457093552#!",
     "label" : "HEBIS-Ressource"
-  } ],
-  "isPartOf" : [ {
-    "hasSuperordinate" : [ {
-      "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=457093552#!",
-      "label" : "Mainzer Stadtspaziergänge"
-    } ],
-    "numbering" : "12",
-    "type" : [ "IsPartOfRelation" ]
-  } ],
-  "tableOfContents" : [ {
-    "label" : "Inhaltsverzeichnis",
-    "id" : "http://scans.hebis.de/HEBCGI/show.pl?52826918_toc.pdf"
-  } ],
-  "description" : [ {
-    "label" : "Inhaltstext",
-    "id" : "https://deposit.dnb.de/cgi-bin/dokserv?id=c5a29e7bbe3f4bd19f58cc452828594f"
   } ],
   "language" : [ {
     "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
     "label" : "Deutsch"
   } ],
-  "extent" : "160 Seiten : Illustrationen ; 27 cm",
   "subject" : [ {
     "notation" : "943",
     "type" : [ "Concept" ],
@@ -73,6 +56,13 @@
     "notation" : "943",
     "version" : "sdnb"
   }, {
+    "notation" : "LK 47953",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "RVK (Regensburger Verbundklassifikation)",
+      "id" : "https://d-nb.info/gnd/4449787-8"
+    }
+  }, {
     "notation" : "NR 2290",
     "type" : [ "Concept" ],
     "source" : {
@@ -83,21 +73,12 @@
   "hasItem" : [ {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "- Dck BER",
+    "callNumber" : "Zur Fortsetzung bestellt",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-36#!",
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
     },
-    "id" : "http://lobid.org/items/528269186:DE-36:-+Dck+BER#!"
-  }, {
-    "label" : "lobid Bestandsressource",
-    "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "Mog:4° /1776",
-    "heldBy" : {
-      "id" : "http://lobid.org/organisations/DE-36#!",
-      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    },
-    "id" : "http://lobid.org/items/528269186:DE-36:Mog%3A4%C2%B0+%2F1776#!"
+    "id" : "http://lobid.org/items/457093552:DE-36:Zur+Fortsetzung+bestellt#!"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

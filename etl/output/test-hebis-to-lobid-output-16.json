@@ -1,0 +1,118 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/522434258#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Mainzer Stadtspaziergänge, Band 11: Finthen, Drais, Lerchenberg, Marienborn / Michael Bermeitinger",
+  "almaMmsId" : "522434258",
+  "isbn" : [ "3960310609", "9783960310600" ],
+  "oclcNumber" : [ "1463358932" ],
+  "dnbId" : "1343856876",
+  "publication" : [ {
+    "startDate" : "2024",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Roßdorf" ],
+    "publishedBy" : [ "TZ-Verlag & Print GmbH" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22522434258%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1463358932",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "https://d-nb.info/1343856876",
+    "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=522434258#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "isPartOf" : [ {
+    "hasSuperordinate" : [ {
+      "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=457093552#!",
+      "label" : "Mainzer Stadtspaziergänge"
+    } ],
+    "numbering" : "211",
+    "type" : [ "IsPartOfRelation" ]
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "http://scans.hebis.de/HEBCGI/show.pl?52243425_toc.pdf"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "152 Seiten : Illustrationen ; 27 cm x 20.5 cm, 440 g",
+  "note" : [ "Literaturverzeichnis Seite 152" ],
+  "subject" : [ {
+    "notation" : "943",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Sachgruppen der DNB",
+      "id" : "https://bartoc.org/en/node/20049"
+    },
+    "label" : "Geschichte Deutschlands"
+  }, {
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "Dewey-Dezimalklassifikation",
+      "id" : "https://d-nb.info/gnd/4149423-4"
+    },
+    "label" : "Deutschland und benachbarte mitteleuropäische Länder",
+    "notation" : "943",
+    "version" : "sdnb"
+  }, {
+    "notation" : "NR 2290",
+    "type" : [ "Concept" ],
+    "source" : {
+      "label" : "RVK (Regensburger Verbundklassifikation)",
+      "id" : "https://d-nb.info/gnd/4449787-8"
+    }
+  } ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "- Dck BER",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/522434258:DE-36:-+Dck+BER#!"
+  }, {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "Mog:4° /1752",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/522434258:DE-36:Mog%3A4%C2%B0+%2F1752#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Michael Bermeitinger" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "1144980437",
+      "id" : "https://d-nb.info/gnd/1144980437",
+      "label" : "Bermeitinger, Michael",
+      "type" : [ "Person" ],
+      "dateOfBirth" : "1960"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

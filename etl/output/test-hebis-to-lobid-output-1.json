@@ -26,6 +26,9 @@
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1407066536",
     "label" : "OCLC Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=512839662#!",
+    "label" : "HEBIS-Ressource"
   } ],
   "related" : [ {
     "note" : [ "Parallele Sprachausgabe englisch" ],

@@ -63,6 +63,7 @@ sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rpb-titel-to-lobid-external.flux
 # Delete in Elasticsearch:
 cat etl/articles.ndjson | grep '"delete"' | jq --raw-output .delete.rpbId > etl/delete.ndjson
 cat etl/independent_works.ndjson | grep '"delete"' | jq --raw-output .delete.rpbId >> etl/delete.ndjson
+cat etl/external_records.ndjson | grep '"delete"' | jq --raw-output .delete.rpbId >> etl/delete.ndjson
 while read rpbId; do
    curl -X DELETE "weywot3:9200/$INDEX/resource/https%3A%2F%2Flobid.org%2Fresources%2F$rpbId"
 done < etl/delete.ndjson

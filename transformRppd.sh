@@ -3,7 +3,6 @@ set -u
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
-bash transformBeacons.sh
 rm etl/output/bulk/rppd/*
 # Here, we used to import Allegro data:
 # sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rppd-to-strapi.flux IN_FILE=RPB-Export_HBZ_Bio.txt OUT_FILE=output-rppd-strapi.ndjson"

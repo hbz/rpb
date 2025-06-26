@@ -13,6 +13,6 @@ zgrep -a '"type":"api::person.person"' etl/strapi-export.tar.gz > etl/output/rpp
 cp etl/output/rppd-export.jsonl ../rppd/conf/ # used in rppd for robots.txt
 sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rppd-to-gnd-mapping.flux"
 sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rppd-rppdId-with-label-map.flux"
-sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rppd-to-lobid.flux IN_FILE=rppd-export.jsonl RECORD_PATH=data"
+sbt --java-home $JAVA_HOME -mem 3000 "runMain rpb.ETL etl/rppd-to-lobid.flux IN_FILE=rppd-export.jsonl RECORD_PATH=data"
 
 # Indexing happens in rppd/transformAndIndexRppd.sh (lobid-gnd repo, branch 'rppd'), which calls this script

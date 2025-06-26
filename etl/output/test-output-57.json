@@ -55,10 +55,10 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sander, August / 1876-1964",
+    "label" : "Sander, August",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118605364",
-      "label" : "Sander, August / 1876-1964",
+      "label" : "Sander, August",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

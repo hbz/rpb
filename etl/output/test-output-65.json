@@ -23,10 +23,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sport-Club 1957 / Wassenach | Geschichte 1957-2007 | Chronik",
+    "label" : "Sport-Club 1957 (Wassenach) | Geschichte 1957-2007 | Chronik",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10179791-6",
-      "label" : "Sport-Club 1957 / Wassenach",
+      "label" : "Sport-Club 1957 (Wassenach)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -59,7 +59,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10179791-6",
-      "label" : "Sport-Club 1957 / Wassenach",
+      "label" : "Sport-Club 1957 (Wassenach)",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

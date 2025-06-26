@@ -120,7 +120,7 @@ See also `transformAndImportTest.sh` (test data) and `transformAndImportFull.sh`
 ### Run transformation to lobid data
 
 ```bash
-sbt "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
+sbt -mem 3000 "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
 ```
 
 This writes individual `.json` files for each record in the input data to `output/`.
@@ -128,7 +128,7 @@ This writes individual `.json` files for each record in the input data to `outpu
 ### Export strapi data
 
 ```bash
-sbt "runMain rpb.ETL etl/test-export-strapi-to-lobid.flux"
+sbt -mem 3000 "runMain rpb.ETL etl/test-export-strapi-to-lobid.flux"
 ```
 
 This writes individual `.json` files for Strapi records to `output/`.

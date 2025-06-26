@@ -25,17 +25,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kussmaul, Heiner / 1943- | Mozart, Wolfgang Amadeus / 1756-1791 | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
+    "label" : "Kussmaul, Heiner | Mozart, Wolfgang Amadeus | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner / 1943-",
+      "label" : "Kussmaul, Heiner",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/118584596",
-      "label" : "Mozart, Wolfgang Amadeus / 1756-1791",
+      "label" : "Mozart, Wolfgang Amadeus",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -78,17 +78,17 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kussmaul, Yvonne / 1972- | Mozart, Wolfgang Amadeus / 1756-1791 | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
+    "label" : "Kussmaul, Yvonne | Mozart, Wolfgang Amadeus | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136596061",
-      "label" : "Kussmaul, Yvonne / 1972-",
+      "label" : "Kussmaul, Yvonne",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/118584596",
-      "label" : "Mozart, Wolfgang Amadeus / 1756-1791",
+      "label" : "Mozart, Wolfgang Amadeus",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -142,7 +142,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner / 1943-",
+      "label" : "Kussmaul, Heiner",
       "type" : [ "Person" ]
     },
     "role" : {

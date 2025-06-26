@@ -30,10 +30,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Geschichte 1979-1982",
+    "label" : "Hambacher Schloss (Neustadt an der Weinstraße) | Geschichte 1979-1982",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "label" : "Hambacher Schloss (Neustadt an der Weinstraße)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -59,7 +59,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/1123984425",
-      "label" : "Trautmann, Herbert / 1948-2006",
+      "label" : "Trautmann, Herbert",
       "type" : [ "Person" ]
     },
     "role" : {

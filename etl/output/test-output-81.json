@@ -29,10 +29,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Magdalena / Mutter / 1787-1858 | Geschichte 1800-",
+    "label" : "Magdalena, Mutter | Geschichte 1800-",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/119067552",
-      "label" : "Magdalena / Mutter / 1787-1858",
+      "label" : "Magdalena, Mutter",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

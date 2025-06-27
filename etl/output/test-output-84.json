@@ -28,10 +28,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Laukhard, Friedrich Christian / 1757-1822 | Biografie",
+    "label" : "Laukhard, Friedrich Christian | Biografie",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118726692",
-      "label" : "Laukhard, Friedrich Christian / 1757-1822",
+      "label" : "Laukhard, Friedrich Christian",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

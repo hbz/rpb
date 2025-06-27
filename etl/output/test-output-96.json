@@ -35,10 +35,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Wunderlich, Fritz / 1930-1966 | Biografie",
+    "label" : "Wunderlich, Fritz | Biografie",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/11893869X",
-      "label" : "Wunderlich, Fritz / 1930-1966",
+      "label" : "Wunderlich, Fritz",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

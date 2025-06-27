@@ -25,10 +25,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kussmaul, Heiner / 1943- | Wied-Gebiet | Malerei | Ausstellung | Neuwied / 2007 | CD-ROM",
+    "label" : "Kussmaul, Heiner | Wied-Gebiet | Malerei | Ausstellung | Neuwied / 2007 | CD-ROM",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner / 1943-",
+      "label" : "Kussmaul, Heiner",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -71,10 +71,10 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kussmaul, Yvonne / 1972- | Wied-Gebiet | Malerei | Ausstellung | Neuwied / 2007 | CD-ROM",
+    "label" : "Kussmaul, Yvonne | Wied-Gebiet | Malerei | Ausstellung | Neuwied / 2007 | CD-ROM",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136596061",
-      "label" : "Kussmaul, Yvonne / 1972-",
+      "label" : "Kussmaul, Yvonne",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -128,7 +128,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner / 1943-",
+      "label" : "Kussmaul, Heiner",
       "type" : [ "Person" ]
     },
     "role" : {
@@ -139,7 +139,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/136596061",
-      "label" : "Kussmaul, Yvonne / 1972-",
+      "label" : "Kussmaul, Yvonne",
       "type" : [ "Person" ]
     },
     "role" : {
@@ -150,7 +150,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10344831-7",
-      "label" : "Bilderausstellung Von der Wied an den Rhein / 2007 / Neuwied",
+      "label" : "Bilderausstellung Von der Wied an den Rhein (2007 : Neuwied)",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

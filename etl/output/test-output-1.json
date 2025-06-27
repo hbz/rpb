@@ -29,10 +29,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Katholische Kirche / Erzdiözese Köln | Altkarte | Online-Ressource",
+    "label" : "Katholische Kirche. Erzdiözese Köln | Altkarte | Online-Ressource",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/2029646-0",
-      "label" : "Katholische Kirche / Erzdiözese Köln",
+      "label" : "Katholische Kirche. Erzdiözese Köln",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

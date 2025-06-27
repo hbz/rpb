@@ -117,10 +117,18 @@ Same for RPB-Normdaten (`rpb-sw-to-strapi.flux` / `rpb-sw-import.flux`).
 
 See also `transformAndImportTest.sh` (test data) and `transformAndImportFull.sh` (full data).
 
+### Build GND label lookup file
+
+```bash
+sbt "runMain rpb.ETL etl/map-gnd-to-label.flux"
+```
+
+This creates a TSV lookup file for GND labels used in the transformation.
+
 ### Run transformation to lobid data
 
 ```bash
-sbt "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
+sbt -mem 3000 "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
 ```
 
 This writes individual `.json` files for each record in the input data to `output/`.
@@ -128,7 +136,7 @@ This writes individual `.json` files for each record in the input data to `outpu
 ### Export strapi data
 
 ```bash
-sbt "runMain rpb.ETL etl/test-export-strapi-to-lobid.flux"
+sbt -mem 3000 "runMain rpb.ETL etl/test-export-strapi-to-lobid.flux"
 ```
 
 This writes individual `.json` files for Strapi records to `output/`.
@@ -184,7 +192,7 @@ For testing, the real index name (e.g. `resources-rpb-20231130-1045`) is aliased
 ### Run full transformation and indexing
 
 ```bash
-
+sh transformExternalData.sh
 sh transformAndIndex.sh
 ```
 

@@ -32,7 +32,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Fest | Hambacher Schloss / Neustadt an der Weinstraße",
+    "label" : "Hambacher Fest | Hambacher Schloss (Neustadt an der Weinstraße)",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4127289-4",
       "label" : "Hambacher Fest",
@@ -42,7 +42,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "label" : "Hambacher Schloss (Neustadt an der Weinstraße)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

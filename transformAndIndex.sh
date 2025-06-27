@@ -34,7 +34,7 @@ cat etl/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und 
 # Remove old index data:
 rm etl/output/bulk/bulk-*.ndjson
 # Transform:
-sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rpb-titel-to-lobid.flux index=$INDEX"
+sbt --java-home $JAVA_HOME -mem 3000 "runMain rpb.ETL etl/rpb-titel-to-lobid.flux index=$INDEX"
 
 # Index to Elasticsearch:
 unset http_proxy # for posting to weywot3

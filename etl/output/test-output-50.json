@@ -57,7 +57,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5280327-2",
-      "label" : "Krankenhaus der Barmherzigen Brüder / Montabaur",
+      "label" : "Krankenhaus der Barmherzigen Brüder (Montabaur)",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

@@ -19,5 +19,7 @@ jobs:
         ./gradlew publishToMavenLocal
         cd ..
     - name: Run tests
-      run: sbt "test-only tests.CITests"
+      run: |
+        touch etl/maps/gndId-to-label.tsv
+        sbt "test-only tests.CITests"
 

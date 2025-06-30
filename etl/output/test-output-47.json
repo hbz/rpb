@@ -25,10 +25,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Mittelrheintal / Süd | Kalender",
+    "label" : "Mittelrheintal (Süd) | Kalender",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4221819-6",
-      "label" : "Mittelrheintal / Süd",
+      "label" : "Mittelrheintal (Süd)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -62,7 +62,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://d-nb.info/gnd/4221819-6",
-    "label" : "Mittelrheintal / Süd",
+    "label" : "Mittelrheintal (Süd)",
     "type" : [ "PlaceOrGeographicName" ],
     "source" : {
       "id" : "https://d-nb.info/gnd/7749153-1",
@@ -72,7 +72,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10366667-9",
-      "label" : "Sebapharma GmbH & Co. KG / Boppard",
+      "label" : "Sebapharma GmbH & Co. KG (Boppard)",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

@@ -24,10 +24,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain | Geschichte 1911-2011",
+    "label" : "Alten- und Pflegeheim St.-Vinzenzhaus (Gebhardshain) | Geschichte 1911-2011",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/16326855-1",
-      "label" : "Alten- und Pflegeheim St.-Vinzenzhaus / Gebhardshain",
+      "label" : "Alten- und Pflegeheim St.-Vinzenzhaus (Gebhardshain)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

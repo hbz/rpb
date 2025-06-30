@@ -9,7 +9,7 @@ do once("map")
 
   put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"1")
   put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb-variants_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"2")
-  put_filemap("./RPB-Export_HBZ_SW_GND.tsv", "sw-gnd_map", "sep_char": "\t")
+  put_filemap("./maps/gndId-to-label.tsv", "sw-gnd_map", "sep_char": "\t")
 end
 
 do put_macro("move_here")
@@ -19,16 +19,17 @@ end
 
 do put_macro("normalize")
   replace_all("$[field]","^http.+[/#](.+)$","$1")
-  replace_all("$[field]","^(\\d+)-(\\d+|X)$","$1n$2")
+  replace_all("$[field]","^(\\d+)$[from](\\d+|X)$","$1$[to]$2")
 end
 
 do put_macro("add_labels")
   copy_field("$[field].id", "$[field].label")
-  call_macro("normalize", field: "$[field].label")
+  call_macro("normalize", field: "$[field].label", from: "-", to: "n")
   lookup("$[field].label", "sw-rpb_map")
+  call_macro("normalize", field: "$[field].label", from: "n", to: "-")
   lookup("$[field].label", "sw-gnd_map")
   copy_field("$[field].id", "$[field].altLabel[]")
-  call_macro("normalize", field: "$[field].altLabel[]")
+  call_macro("normalize", field: "$[field].altLabel[]", from: "-", to: "n")
   lookup("$[field].altLabel[]", "sw-rpb-variants_map", delete: "true")
   split_field("$[field].altLabel[]", "; ")
 end
@@ -283,8 +284,9 @@ do list (path:"spatial[]", "var": "$i")
   copy_field("$i.id", "$i.label")
   replace_all("$i.label","^http.+[/#](.+)$","$1")
   if any_match("$i.id", "^https://d-nb.info/gnd/.+")
-    replace_all("$i.label","-","n")                             # IDs in lookup-map have the original syntax with an "n" instead of "-"
+    call_macro("normalize", field: "$i.label", from: "-", to: "n") # IDs in lookup-map have the original syntax with an "n" instead of "-"
     lookup("$i.label", "sw-rpb_map")
+    call_macro("normalize", field: "$i.label", from: "n", to: "-")
     lookup("$i.label", "sw-gnd_map")
     set_array("$i.type[]","PlaceOrGeographicName")
     add_field("$i.source.id", "https://d-nb.info/gnd/7749153-1")

@@ -24,7 +24,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Unkel | Niedecken, Wolfgang / 1951- | Biografie",
+    "label" : "Unkel | Niedecken, Wolfgang | Biografie",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4061836-5",
       "label" : "Unkel",
@@ -34,7 +34,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/118942247",
-      "label" : "Niedecken, Wolfgang / 1951-",
+      "label" : "Niedecken, Wolfgang",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -32,10 +32,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau | Geschichte 1883-2008",
+    "label" : "Deutsches Rotes Kreuz. Ortsverein Adenau | Geschichte 1883-2008",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10361782-6",
-      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau",
+      "label" : "Deutsches Rotes Kreuz. Ortsverein Adenau",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -61,7 +61,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10361782-6",
-      "label" : "Deutsches Rotes Kreuz / Ortsverein Adenau",
+      "label" : "Deutsches Rotes Kreuz. Ortsverein Adenau",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

@@ -32,10 +32,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sankt Nikolaus / Koblenz | DVD-ROM",
+    "label" : "Sankt Nikolaus (Koblenz) | DVD-ROM",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4515647-5",
-      "label" : "Sankt Nikolaus / Koblenz",
+      "label" : "Sankt Nikolaus (Koblenz)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

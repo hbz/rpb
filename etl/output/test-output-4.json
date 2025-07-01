@@ -29,10 +29,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rethel, Alfred / 1816-1859 | Illustration | Lithografie | Stolterfoth, Adelheid von / 1800-1875 / Rheinischer Sagenkreis",
+    "label" : "Rethel, Alfred | Illustration | Lithografie | Rheinischer Sagenkreis",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118744615",
-      "label" : "Rethel, Alfred / 1816-1859",
+      "label" : "Rethel, Alfred",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -53,7 +53,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/7743324-5",
-      "label" : "Stolterfoth, Adelheid von / 1800-1875 / Rheinischer Sagenkreis",
+      "label" : "Rheinischer Sagenkreis",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -72,7 +72,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/116002468",
-      "label" : "Stolterfoth, Adelheid von / 1800-1875",
+      "label" : "Stolterfoth, Adelheid von",
       "type" : [ "Person" ]
     },
     "role" : {
@@ -94,7 +94,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/118702424",
-      "label" : "Dielmann, Jakob Fürchtegott / 1809-1885",
+      "label" : "Dielmann, Jakob Fürchtegott",
       "type" : [ "Person" ]
     },
     "role" : {

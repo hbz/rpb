@@ -30,17 +30,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Wied / Fluss | Tiere / Motiv | Kalender",
+    "label" : "Wied (Fluss) | Tiere <Motiv> | Kalender",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4108127-4",
-      "label" : "Wied / Fluss",
+      "label" : "Wied (Fluss)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4185464-0",
-      "label" : "Tiere / Motiv",
+      "label" : "Tiere <Motiv>",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

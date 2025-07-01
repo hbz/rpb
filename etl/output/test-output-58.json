@@ -127,7 +127,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/178964131",
-      "label" : "Güssefeld, Franz Ludwig",
+      "label" : "178964131",
       "type" : [ "Person" ]
     },
     "role" : {

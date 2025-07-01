@@ -23,17 +23,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss / Neustadt an der Weinstraße | Maximilian / II. / Bayern, König / 1811-1864",
+    "label" : "Hambacher Schloss (Neustadt an der Weinstraße) | Maximilian II., Bayern, König",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss / Neustadt an der Weinstraße",
+      "label" : "Hambacher Schloss (Neustadt an der Weinstraße)",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/118579347",
-      "label" : "Maximilian / II. / Bayern, König / 1811-1864",
+      "label" : "Maximilian II., Bayern, König",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -52,7 +52,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/107939061",
-      "label" : "Kermann, Joachim / 1942-",
+      "label" : "Kermann, Joachim",
       "type" : [ "Person" ]
     },
     "role" : {

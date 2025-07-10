@@ -26,17 +26,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Freiwillige Feuerwehr Neuwied | Innenstadt | Geschichte 1867-2008",
+    "label" : "5094678-X | 4072821-3 | Geschichte 1867-2008",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5094678nX",
-      "label" : "Freiwillige Feuerwehr Neuwied",
+      "label" : "5094678-X",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4072821-3",
-      "label" : "Innenstadt",
+      "label" : "4072821-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -51,17 +51,17 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Freiwillige Feuerwehr Neuwied | Stadtviertel | Geschichte 1600-2008",
+    "label" : "5094678-X | 4077814-9 | Geschichte 1600-2008",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5094678nX",
-      "label" : "Freiwillige Feuerwehr Neuwied",
+      "label" : "5094678-X",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4077814-9",
-      "label" : "Stadtviertel",
+      "label" : "4077814-9",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -87,7 +87,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/132532336",
-      "label" : "Dietz, Wolfgang",
+      "label" : "132532336",
       "type" : [ "Person" ]
     },
     "role" : {

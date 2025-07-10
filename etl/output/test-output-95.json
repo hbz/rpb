@@ -18,7 +18,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/4487276-8",
-      "label" : "Bonefeld",
+      "label" : "4487276-8",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

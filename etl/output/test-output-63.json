@@ -25,38 +25,38 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kussmaul, Heiner | Mozart, Wolfgang Amadeus | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
+    "label" : "136595545 | 118584596 | 4049275-8 | 4037220-0 | 4129601-1 | Reichenhall / 2007 | 4139307-7",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner",
+      "label" : "136595545",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/118584596",
-      "label" : "Mozart, Wolfgang Amadeus",
+      "label" : "118584596",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4049275-8",
-      "label" : "Reise",
+      "label" : "4049275-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4037220-0",
-      "label" : "Malerei",
+      "label" : "4037220-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4129601-1",
-      "label" : "Ausstellung",
+      "label" : "4129601-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -70,7 +70,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4139307-7",
-      "label" : "CD-ROM",
+      "label" : "4139307-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -78,38 +78,38 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kussmaul, Yvonne | Mozart, Wolfgang Amadeus | Reise | Malerei | Ausstellung | Reichenhall / 2007 | CD-ROM",
+    "label" : "136596061 | 118584596 | 4049275-8 | 4037220-0 | 4129601-1 | Reichenhall / 2007 | 4139307-7",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136596061",
-      "label" : "Kussmaul, Yvonne",
+      "label" : "136596061",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/118584596",
-      "label" : "Mozart, Wolfgang Amadeus",
+      "label" : "118584596",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4049275-8",
-      "label" : "Reise",
+      "label" : "4049275-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4037220-0",
-      "label" : "Malerei",
+      "label" : "4037220-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4129601-1",
-      "label" : "Ausstellung",
+      "label" : "4129601-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -123,7 +123,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4139307-7",
-      "label" : "CD-ROM",
+      "label" : "4139307-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -142,7 +142,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/136595545",
-      "label" : "Kussmaul, Heiner",
+      "label" : "136595545",
       "type" : [ "Person" ]
     },
     "role" : {

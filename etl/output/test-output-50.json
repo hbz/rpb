@@ -28,17 +28,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Krankenhaus der Barmherzigen Brüder Montabaur | Zeitschrift",
+    "label" : "7741811-6 | 4067488-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/7741811-6",
-      "label" : "Krankenhaus der Barmherzigen Brüder Montabaur",
+      "label" : "7741811-6",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "label" : "4067488-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -57,7 +57,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5280327-2",
-      "label" : "Krankenhaus der Barmherzigen Brüder (Montabaur)",
+      "label" : "5280327-2",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

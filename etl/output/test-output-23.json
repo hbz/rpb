@@ -24,17 +24,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Burgruine Neuscharfeneck | Brunnen",
+    "label" : "4595996-1 | 4008491-7",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4595996-1",
-      "label" : "Burgruine Neuscharfeneck",
+      "label" : "4595996-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4008491-7",
-      "label" : "Brunnen",
+      "label" : "4008491-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -61,7 +61,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner",
+      "label" : "11944027X",
       "type" : [ "Person" ]
     },
     "role" : {

@@ -26,24 +26,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ahrtal | Komödie | DVD-ROM",
+    "label" : "4084812-7 | 4031952-0 | 4585131-1",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4084812-7",
-      "label" : "Ahrtal",
+      "label" : "4084812-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4031952-0",
-      "label" : "Komödie",
+      "label" : "4031952-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4585131-1",
-      "label" : "DVD-ROM",
+      "label" : "4585131-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

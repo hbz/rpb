@@ -29,10 +29,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Magdalena, Mutter | Geschichte 1800-",
+    "label" : "119067552 | Geschichte 1800-",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/119067552",
-      "label" : "Magdalena, Mutter",
+      "label" : "119067552",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

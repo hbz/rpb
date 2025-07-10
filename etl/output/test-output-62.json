@@ -25,24 +25,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sankt-Johannes-Grundschule Erpel | Bewegte Schule | DVD-ROM",
+    "label" : "4839067-7 | 4510321-5 | 4585131-1",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4839067-7",
-      "label" : "Sankt-Johannes-Grundschule Erpel",
+      "label" : "4839067-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4510321-5",
-      "label" : "Bewegte Schule",
+      "label" : "4510321-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4585131-1",
-      "label" : "DVD-ROM",
+      "label" : "4585131-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -61,7 +61,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10120647-1",
-      "label" : "St.-Johannes-Grundschule (Erpel)",
+      "label" : "10120647-1",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

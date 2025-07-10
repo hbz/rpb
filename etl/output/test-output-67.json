@@ -25,10 +25,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Volksbank Kirn-Sobernheim | Geschichte 1908-2008 | Chronik",
+    "label" : "10360357-8 | Geschichte 1908-2008 | 4127914-1",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10360357-8",
-      "label" : "Volksbank Kirn-Sobernheim",
+      "label" : "10360357-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -42,7 +42,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4127914-1",
-      "label" : "Chronik",
+      "label" : "4127914-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -61,7 +61,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/10360357-8",
-      "label" : "Volksbank Kirn-Sobernheim",
+      "label" : "10360357-8",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

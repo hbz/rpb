@@ -24,24 +24,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sankt Barbara (Hainfeld, Südliche Weinstraße) | Grabplatte | Taufbecken",
+    "label" : "7746576-3 | 4113778-4 | 4135651-2",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/7746576-3",
-      "label" : "Sankt Barbara (Hainfeld, Südliche Weinstraße)",
+      "label" : "7746576-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4113778-4",
-      "label" : "Grabplatte",
+      "label" : "4113778-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4135651-2",
-      "label" : "Taufbecken",
+      "label" : "4135651-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -60,7 +60,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner",
+      "label" : "11944027X",
       "type" : [ "Person" ]
     },
     "role" : {

@@ -28,59 +28,59 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Scheuren, Caspar | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
+    "label" : "118607359 | 4123412-1 | 4279198-4 | 4049739-2 | 4036774-5 | 4002214-6 | 4159043-0 | 4511937-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118607359",
-      "label" : "Scheuren, Caspar",
+      "label" : "118607359",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4123412-1",
-      "label" : "Illustration",
+      "label" : "4123412-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4279198-4",
-      "label" : "Farblithografie",
+      "label" : "4279198-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4049739-2",
-      "label" : "Rhein",
+      "label" : "4049739-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4036774-5",
-      "label" : "Lyrik",
+      "label" : "4036774-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4002214-6",
-      "label" : "Anthologie",
+      "label" : "4002214-6",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4159043-0",
-      "label" : "Pressendruck",
+      "label" : "4159043-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
+      "label" : "4511937-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -99,7 +99,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/118607359",
-      "label" : "Scheuren, Caspar",
+      "label" : "118607359",
       "type" : [ "Person" ]
     },
     "role" : {

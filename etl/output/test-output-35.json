@@ -28,10 +28,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "SWF 3 | Geschichte 1945- | Zeitschrift",
+    "label" : "4264102-0 | Geschichte 1945- | 4067488-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4264102-0",
-      "label" : "SWF 3",
+      "label" : "4264102-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -45,7 +45,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "label" : "4067488-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -64,7 +64,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5166552-9",
-      "label" : "SWF 3, Der Club",
+      "label" : "5166552-9",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

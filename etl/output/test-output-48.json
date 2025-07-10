@@ -30,24 +30,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Wied (Fluss) | Tiere <Motiv> | Kalender",
+    "label" : "4108127-4 | 4185464-0 | 4029290-3",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4108127-4",
-      "label" : "Wied (Fluss)",
+      "label" : "4108127-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4185464-0",
-      "label" : "Tiere <Motiv>",
+      "label" : "4185464-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4029290-3",
-      "label" : "Kalender",
+      "label" : "4029290-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -56,7 +56,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://d-nb.info/gnd/4119314-3",
-    "label" : "Unterwesterwald",
+    "label" : "4119314-3",
     "type" : [ "PlaceOrGeographicName" ],
     "source" : {
       "id" : "https://d-nb.info/gnd/7749153-1",

@@ -32,7 +32,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Deutscher Orden / Kommende Waldbreitbach | Denkmalschutz | Schicker, Viktor | Private Investition | Geschichte 2009-2011",
+    "label" : "Deutscher Orden / Kommende Waldbreitbach | 4011457-0 | Schicker, Viktor | 4454409-1 | Geschichte 2009-2011",
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/929n090287",
       "label" : "Deutscher Orden / Kommende Waldbreitbach",
@@ -43,7 +43,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4011457-0",
-      "label" : "Denkmalschutz",
+      "label" : "4011457-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -57,7 +57,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4454409-1",
-      "label" : "Private Investition",
+      "label" : "4454409-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -28,17 +28,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Laukhard, Friedrich Christian | Biografie",
+    "label" : "118726692 | 4006804-3",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118726692",
-      "label" : "Laukhard, Friedrich Christian",
+      "label" : "118726692",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4006804-3",
-      "label" : "Biografie",
+      "label" : "4006804-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

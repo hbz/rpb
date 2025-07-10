@@ -29,38 +29,38 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rethel, Alfred | Illustration | Lithografie | Rheinischer Sagenkreis | Pressendruck",
+    "label" : "118744615 | 4123412-1 | 4036042-8 | 7743324-5 | 4159043-0",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118744615",
-      "label" : "Rethel, Alfred",
+      "label" : "118744615",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4123412-1",
-      "label" : "Illustration",
+      "label" : "4123412-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4036042-8",
-      "label" : "Lithografie",
+      "label" : "4036042-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/7743324-5",
-      "label" : "Rheinischer Sagenkreis",
+      "label" : "7743324-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4159043-0",
-      "label" : "Pressendruck",
+      "label" : "4159043-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -79,7 +79,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/116002468",
-      "label" : "Stolterfoth, Adelheid von",
+      "label" : "116002468",
       "type" : [ "Person" ]
     },
     "role" : {
@@ -101,7 +101,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/118702424",
-      "label" : "Dielmann, Jakob Fürchtegott",
+      "label" : "118702424",
       "type" : [ "Person" ]
     },
     "role" : {

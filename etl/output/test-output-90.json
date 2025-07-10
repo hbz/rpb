@@ -135,7 +135,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5270920-6",
-      "label" : "Stiftung Stadt Wittlich",
+      "label" : "5270920-6",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

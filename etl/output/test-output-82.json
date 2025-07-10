@@ -27,7 +27,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Geschichte 1945- | Bericht",
+    "label" : "Geschichte 1945- | 4128022-2",
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
@@ -37,7 +37,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4128022-2",
-      "label" : "Bericht",
+      "label" : "4128022-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

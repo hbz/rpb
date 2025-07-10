@@ -34,10 +34,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Verein für Rasenspiele Speyer 1950 | Geschichte 1945- | Zeitschrift",
+    "label" : "5325261-5 | Geschichte 1945- | 4067488-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5325261-5",
-      "label" : "Verein für Rasenspiele Speyer 1950",
+      "label" : "5325261-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -51,7 +51,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "label" : "4067488-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -70,7 +70,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/5325261-5",
-      "label" : "Verein für Rasenspiele Speyer 1950",
+      "label" : "5325261-5",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

@@ -29,17 +29,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Landkreis Mayen-Koblenz | Zeitung",
+    "label" : "4038117-1 | 4067510-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4038117-1",
-      "label" : "Landkreis Mayen-Koblenz",
+      "label" : "4038117-1",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4067510-5",
-      "label" : "Zeitung",
+      "label" : "4067510-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -27,10 +27,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Technische Universität Kaiserslautern | Geschichte 1945- | Führer",
+    "label" : "10066624-3 | Geschichte 1945- | 4155569-7",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10066624-3",
-      "label" : "Technische Universität Kaiserslautern",
+      "label" : "10066624-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -44,7 +44,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4155569-7",
-      "label" : "Führer",
+      "label" : "4155569-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -63,7 +63,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/26332-1",
-      "label" : "Universität Kaiserslautern",
+      "label" : "26332-1",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

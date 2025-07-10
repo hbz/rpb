@@ -13,52 +13,52 @@
   "responsibilityStatement" : [ "Aus f39x: Geisenheim: Ges. zur Förderung der Forschungsanst. Geisenheim 2013." ],
   "subject" : [ {
     "type" : [ "ComplexSubject" ],
-    "label" : "Most | Lebensmittelverarbeitung | Riesling | Chemie | Wein | Weinlese | Lebensmittelqualität",
+    "label" : "4040354-3 | 4167045-0 | 4138434-9 | 4009816-3 | 4065133-2 | 4432509-5 | 4343361-3",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4040354-3",
-      "label" : "Most",
+      "label" : "4040354-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4167045-0",
-      "label" : "Lebensmittelverarbeitung",
+      "label" : "4167045-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4138434-9",
-      "label" : "Riesling",
+      "label" : "4138434-9",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4009816-3",
-      "label" : "Chemie",
+      "label" : "4009816-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4065133-2",
-      "label" : "Wein",
+      "label" : "4065133-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4432509-5",
-      "label" : "Weinlese",
+      "label" : "4432509-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4343361-3",
-      "label" : "Lebensmittelqualität",
+      "label" : "4343361-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

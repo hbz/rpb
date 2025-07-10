@@ -37,17 +37,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Kunst | Aufsatzsammlung",
+    "label" : "4114333-4 | 4143413-4",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4114333-4",
-      "label" : "Kunst",
+      "label" : "4114333-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4143413-4",
-      "label" : "Aufsatzsammlung",
+      "label" : "4143413-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -55,10 +55,10 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Sander, August",
+    "label" : "118605364",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118605364",
-      "label" : "Sander, August",
+      "label" : "118605364",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

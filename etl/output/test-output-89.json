@@ -28,31 +28,31 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Mayen (Region) | Mühlstein | Steinbruch | Laacher See (Region) | Geschichte 1828",
+    "label" : "4038114-6 | 4327809-7 | 4057145-2 | 4033914-2 | Geschichte 1828",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4038114-6",
-      "label" : "Mayen (Region)",
+      "label" : "4038114-6",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4327809-7",
-      "label" : "Mühlstein",
+      "label" : "4327809-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4057145-2",
-      "label" : "Steinbruch",
+      "label" : "4057145-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4033914-2",
-      "label" : "Laacher See (Region)",
+      "label" : "4033914-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -68,7 +68,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://d-nb.info/gnd/4038114-6",
-    "label" : "Mayen (Region)",
+    "label" : "4038114-6",
     "type" : [ "PlaceOrGeographicName" ],
     "source" : {
       "id" : "https://d-nb.info/gnd/7749153-1",

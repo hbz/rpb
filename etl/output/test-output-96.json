@@ -35,17 +35,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Wunderlich, Fritz | Biografie",
+    "label" : "11893869X | 4006804-3",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/11893869X",
-      "label" : "Wunderlich, Fritz",
+      "label" : "11893869X",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4006804-3",
-      "label" : "Biografie",
+      "label" : "4006804-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

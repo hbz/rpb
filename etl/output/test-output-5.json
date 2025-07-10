@@ -29,31 +29,31 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rheinland | Literatur | Anthologie | Online-Ressource",
+    "label" : "4049788-4 | 4035964-5 | 4002214-6 | 4511937-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4049788-4",
-      "label" : "Rheinland",
+      "label" : "4049788-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4035964-5",
-      "label" : "Literatur",
+      "label" : "4035964-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4002214-6",
-      "label" : "Anthologie",
+      "label" : "4002214-6",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
+      "label" : "4511937-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

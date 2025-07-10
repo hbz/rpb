@@ -4,8 +4,8 @@ vacuum()
 
 #-------- maps --------
 do once("map")
-  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
-  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("$[dynamicMapPath]rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("$[dynamicMapPath]rpb.ttl", "subject_map", target:"skos:prefLabel", select_language:"de")
 
   put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"1")
   put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb-variants_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"2")

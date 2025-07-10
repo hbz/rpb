@@ -34,10 +34,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Bad Ems | Geschichte 1896 | Adressbuch",
+    "label" : "4014614-5 | Geschichte 1896 | 4141451-2",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4014614-5",
-      "label" : "Bad Ems",
+      "label" : "4014614-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -51,7 +51,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4141451-2",
-      "label" : "Adressbuch",
+      "label" : "4141451-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -24,7 +24,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Wiedweg | Führer",
+    "label" : "Wiedweg | 4155569-7",
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/929n110124",
       "label" : "Wiedweg",
@@ -34,7 +34,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4155569-7",
-      "label" : "Führer",
+      "label" : "4155569-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

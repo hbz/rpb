@@ -36,24 +36,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Rheinsteig | Rhein-Burgen-Wanderweg | Wandern",
+    "label" : "7501137-2 | 7500776-9 | 4064532-0",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/7501137-2",
-      "label" : "Rheinsteig",
+      "label" : "7501137-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/7500776-9",
-      "label" : "Rhein-Burgen-Wanderweg",
+      "label" : "7500776-9",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4064532-0",
-      "label" : "Wandern",
+      "label" : "4064532-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -62,7 +62,7 @@
   } ],
   "spatial" : [ {
     "id" : "https://d-nb.info/gnd/4126432-0",
-    "label" : "Mittelrheintal",
+    "label" : "4126432-0",
     "type" : [ "PlaceOrGeographicName" ],
     "source" : {
       "id" : "https://d-nb.info/gnd/7749153-1",
@@ -72,7 +72,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/124591736",
-      "label" : "Böckling, Manfred",
+      "label" : "124591736",
       "type" : [ "Person" ]
     },
     "role" : {

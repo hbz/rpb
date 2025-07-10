@@ -35,7 +35,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
-      "label" : "Müller, Carl Werner",
+      "label" : "11944027X",
       "type" : [ "Person" ]
     },
     "role" : {

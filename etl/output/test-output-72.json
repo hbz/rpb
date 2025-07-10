@@ -37,17 +37,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Ferdinand Pieroth, Weingut - Weinkellerei | Vermarktung",
+    "label" : "2075606-9 | 4121857-7",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/2075606-9",
-      "label" : "Ferdinand Pieroth, Weingut - Weinkellerei",
+      "label" : "2075606-9",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4121857-7",
-      "label" : "Vermarktung",
+      "label" : "4121857-7",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

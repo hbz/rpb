@@ -27,10 +27,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Hambacher Schloss (Neustadt an der Weinstraße)",
+    "label" : "4094596-0",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4094596-0",
-      "label" : "Hambacher Schloss (Neustadt an der Weinstraße)",
+      "label" : "4094596-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -49,7 +49,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/116436425",
-      "label" : "Remling, Franz Xaver",
+      "label" : "116436425",
       "type" : [ "Person" ]
     },
     "role" : {

@@ -24,10 +24,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher | Geschichte 1922-2011",
+    "label" : "5114232-6 | Geschichte 1922-2011",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5114232-6",
-      "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher",
+      "label" : "5114232-6",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

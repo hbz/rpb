@@ -31,24 +31,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Moseltal | Weinbau | Preisentwicklung",
+    "label" : "4102224-5 | 4065136-8 | 4125931-2",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4102224-5",
-      "label" : "Moseltal",
+      "label" : "4102224-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4065136-8",
-      "label" : "Weinbau",
+      "label" : "4065136-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4125931-2",
-      "label" : "Preisentwicklung",
+      "label" : "4125931-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -78,7 +78,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/105115975X",
-      "label" : "Stein, Ulrich",
+      "label" : "105115975X",
       "type" : [ "Person" ]
     },
     "role" : {

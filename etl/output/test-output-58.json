@@ -30,24 +30,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Mittelrhein-Gebiet | Altkarte | Online-Ressource",
+    "label" : "4074902-2 | 4611904-8 | 4511937-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4074902-2",
-      "label" : "Mittelrhein-Gebiet",
+      "label" : "4074902-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4611904-8",
-      "label" : "Altkarte",
+      "label" : "4611904-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
+      "label" : "4511937-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -55,24 +55,24 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Niederrheinisches Tiefland | Altkarte | Online-Ressource",
+    "label" : "4042224-0 | 4611904-8 | 4511937-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4042224-0",
-      "label" : "Niederrheinisches Tiefland",
+      "label" : "4042224-0",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4611904-8",
-      "label" : "Altkarte",
+      "label" : "4611904-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
+      "label" : "4511937-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -80,24 +80,24 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Bergisches Land | Altkarte | Online-Ressource",
+    "label" : "4005659-4 | 4611904-8 | 4511937-5",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4005659-4",
-      "label" : "Bergisches Land",
+      "label" : "4005659-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4611904-8",
-      "label" : "Altkarte",
+      "label" : "4611904-8",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
-      "label" : "Online-Ressource",
+      "label" : "4511937-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

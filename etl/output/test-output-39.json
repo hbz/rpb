@@ -34,7 +34,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Geschichte 1945- | Zeitschrift",
+    "label" : "Geschichte 1945- | 4067488-5",
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/z64",
       "label" : "Geschichte 1945-",
@@ -44,7 +44,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "label" : "4067488-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -63,7 +63,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/1033772-6",
-      "label" : "Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland",
+      "label" : "1033772-6",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

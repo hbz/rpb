@@ -26,7 +26,7 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Volleyballclub Neuwied 77 / Neuwied | Zeitschrift",
+    "label" : "Volleyballclub Neuwied 77 / Neuwied | 4067488-5",
     "componentList" : [ {
       "id" : "http://rpb.lobid.org/sw/929n110300",
       "label" : "Volleyballclub Neuwied 77 / Neuwied",
@@ -37,7 +37,7 @@
       }
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
-      "label" : "Zeitschrift",
+      "label" : "4067488-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -56,7 +56,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/16107604-X",
-      "label" : "Volleyballclub Neuwied 77",
+      "label" : "16107604-X",
       "type" : [ "CorporateBody" ]
     },
     "role" : {

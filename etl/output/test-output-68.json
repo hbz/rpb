@@ -37,17 +37,17 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Römisches Reich | Staatsgrenze",
+    "label" : "4076778-4 | 4077781-9",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4076778-4",
-      "label" : "Römisches Reich",
+      "label" : "4076778-4",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4077781-9",
-      "label" : "Staatsgrenze",
+      "label" : "4077781-9",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -55,10 +55,10 @@
     } ]
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Limes",
+    "label" : "4035758-2",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4035758-2",
-      "label" : "Limes",
+      "label" : "4035758-2",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -99,7 +99,7 @@
   }, {
     "agent" : {
       "id" : "https://d-nb.info/gnd/122161289",
-      "label" : "Thiel, Andreas",
+      "label" : "122161289",
       "type" : [ "Person" ]
     },
     "role" : {

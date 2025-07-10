@@ -24,24 +24,24 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Unkel | Niedecken, Wolfgang | Biografie",
+    "label" : "4061836-5 | 118942247 | 4006804-3",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4061836-5",
-      "label" : "Unkel",
+      "label" : "4061836-5",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/118942247",
-      "label" : "Niedecken, Wolfgang",
+      "label" : "118942247",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       }
     }, {
       "id" : "https://d-nb.info/gnd/4006804-3",
-      "label" : "Biografie",
+      "label" : "4006804-3",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -6,7 +6,7 @@ bin
 .settings/org.eclipse.core.resources.prefs
 .settings/org.scala-ide.sdt.core.prefs
 /etl/maps/beacons/*.tsv
-/etl/maps/gndId-to-label.tsv
+/etl/maps/gndId-to-label.tsv*
 /etl/output/*
 !/etl/output/test*.json
 !/etl/output/rpb-50*

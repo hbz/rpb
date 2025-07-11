@@ -5,6 +5,7 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
 # Full GND via lobid-gnd bulk API, used for labels in RPB and RPPD:
 sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/map-gnd-to-label.flux"
+bash filterGndMapping.sh # Filter GND mapping to only include IDs used in RPB and RPPD
 
 # Individual beacon files, used for sameAs links in RPPD:
 sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rppd-beacon-to-tsv.flux IN=https://persondata.toolforge.org/beacon/dewiki.txt OUT=etl/maps/beacons/gndId-to-dewiki.tsv"

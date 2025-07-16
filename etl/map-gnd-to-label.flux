@@ -4,5 +4,5 @@
 | decode-json
 | fix("retain(gndIdentifier, preferredName)")
 | encode-csv(includeHeader="true", noQuotes="true", separator="\t")
-| write(FLUX_DIR + "maps/gndId-to-label.tsv")
+| write(FLUX_DIR + "maps/gndId-to-label.tsv.all")
 ;

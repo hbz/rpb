@@ -1,0 +1,75 @@
+{
+  "@context" : "http://lobid.org/resources/context.jsonld",
+  "id" : "http://lobid.org/resources/527546313#!",
+  "type" : [ "BibliographicResource", "Book" ],
+  "medium" : [ {
+    "label" : "Print",
+    "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "title" : "Die Alzeyer Kleinknechts, Band 2: Die @Alzeyer Kleinknechts ab der 5. Generation sowie ihre Verwandten und Vorfahren Schlink, Zollitsch und Becker",
+  "almaMmsId" : "527546313",
+  "oclcNumber" : [ "1501056568" ],
+  "otherTitleInformation" : [ "von 1795 bis 1969" ],
+  "edition" : [ "Erweiterte Fassung" ],
+  "publication" : [ {
+    "startDate" : "2024",
+    "type" : [ "PublicationEvent" ],
+    "location" : [ "Alzey" ],
+    "publishedBy" : [ "Wulf Kleinknecht" ]
+  } ],
+  "describedBy" : {
+    "resultOf" : {
+      "object" : {
+        "id" : "http://sru.hebis.de/sru/DB=2.1?query=pica.ppn+%3D+%22527546313%22&version=1.1&operation=searchRetrieve&stylesheet=http%3A%2F%2Fsru.hebis.de%2Fsru%2F%3Fxsl%3DsearchRetrieveResponse&recordSchema=marc21&maximumRecords=10&startRecord=1&recordPacking=xml&sortKeys=LST_Y%2Cpica%2C0%2C%2C"
+      }
+    }
+  },
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1501056568",
+    "label" : "OCLC Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=527546313#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "isPartOf" : [ {
+    "hasSuperordinate" : [ {
+      "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=518030385#!",
+      "label" : "Die Alzeyer Kleinknechts"
+    } ],
+    "numbering" : "2",
+    "type" : [ "IsPartOfRelation" ]
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "2025 Q 27",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/527546313:DE-36:2025+Q+27#!"
+  } ],
+  "bibliographicLevel" : {
+    "label" : "Monograph/Item",
+    "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"
+  },
+  "responsibilityStatement" : [ "Wulf Kleinknecht" ],
+  "contribution" : [ {
+    "agent" : {
+      "gndIdentifier" : "124108761X",
+      "id" : "https://d-nb.info/gnd/124108761X",
+      "label" : "Kleinknecht, Wulf",
+      "type" : [ "Person" ],
+      "dateOfBirth" : "1942"
+    },
+    "role" : {
+      "id" : "http://id.loc.gov/vocabulary/relators/aut",
+      "label" : "Autor/in"
+    },
+    "type" : [ "Contribution" ]
+  } ]
+}

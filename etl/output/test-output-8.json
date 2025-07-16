@@ -28,10 +28,10 @@
     }
   }, {
     "type" : [ "ComplexSubject" ],
-    "label" : "Scheuren, Caspar / 1810-1887 | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
+    "label" : "Scheuren, Caspar | Illustration | Farblithografie | Rhein | Lyrik | Anthologie | Pressendruck | Online-Ressource",
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118607359",
-      "label" : "Scheuren, Caspar / 1810-1887",
+      "label" : "Scheuren, Caspar",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -99,7 +99,7 @@
   "contribution" : [ {
     "agent" : {
       "id" : "https://d-nb.info/gnd/118607359",
-      "label" : "Scheuren, Caspar / 1810-1887",
+      "label" : "Scheuren, Caspar",
       "type" : [ "Person" ]
     },
     "role" : {

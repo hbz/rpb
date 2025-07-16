@@ -27,6 +27,9 @@
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1288418997",
     "label" : "OCLC Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=488844266#!",
+    "label" : "HEBIS-Ressource"
   } ],
   "language" : [ {
     "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",

@@ -31,6 +31,9 @@
   }, {
     "id" : "https://d-nb.info/958645337",
     "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=090363000#!",
+    "label" : "HEBIS-Ressource"
   } ],
   "language" : [ {
     "id" : "http://id.loc.gov/vocabulary/iso639-2/eng",

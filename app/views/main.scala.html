@@ -85,15 +85,19 @@
             </div>
             <div class="page-header">
                 <img class="media-object nrw-logo pull-right" src="@controllers.routes.Assets.at("images/wappen.png")" alt="NRW">
-                <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Ein Entwicklungsprojekt von lbz &amp; hbz <span class="badge">beta</span></small></h1>
+                <h1>Die Rheinland-Pfälzische Bibliographie<br/><small>Publikationen über Rheinland-Pfalz seit 1991 <span class="badge">beta</span></small></h1>
             </div>
             @content
             <div class="panel panel-default rpb-footer">
               <div class="panel-body">
                 @defining(controllers.rpb.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
-                <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen"> 
-                <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo">
-                Die RPB enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
+                <a href="https://lbz.rlp.de/" target="_blank">
+                  <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen" title="Landesbibliothekszentrum Rheinland-Pfalz (LBZ)">
+                </a>
+                <a href="http://www.hbz-nrw.de/" target="_blank">
+                  <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo" title="Hochschulbibliothekszentrum Nordrhein-Westfalen (hbz)">
+                </a>
+                Die RPB enthält aktuell @hits Literaturnachweise
                 }
               </div>
             </div>

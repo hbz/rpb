@@ -181,6 +181,7 @@ move_field("responsibilityStatement", "responsibilityStatement[]")
 set_hash("pub")
 set_array("pub.location[]")
 copy_field("publicationLocation", "pub.location[].$append")
+trim("publicationDate")
 if all_match("publicationDate", "\\d{4}")
   copy_field("publicationDate", "pub.startDate")
 end

@@ -5,8 +5,8 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
 # Get classification TTL files for lookups:
 cd etl/maps
-wget https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl
-wget https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl
+curl -O https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl
+curl -O https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl
 cd ../..
 
 # Full GND via lobid-gnd bulk API, used for labels in RPB and RPPD:

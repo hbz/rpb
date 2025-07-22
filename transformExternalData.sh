@@ -3,6 +3,12 @@ set -u
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
+# Get classification TTL files for lookups:
+cd etl/maps
+wget https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl
+wget https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl
+cd ../..
+
 # Full GND via lobid-gnd bulk API, used for labels in RPB and RPPD:
 sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/map-gnd-to-label.flux"
 bash filterGndMapping.sh # Filter GND mapping to only include IDs used in RPB and RPPD

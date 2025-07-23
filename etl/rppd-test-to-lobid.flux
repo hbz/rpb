@@ -8,12 +8,13 @@
 
 default IN_FILE = "test-output-rppd.json"; // pass e.g. IN_FILE=test-rppd-export.json
 default RECORD_PATH = ""; // pass e.g. RECORD_PATH=data
+default dynamicMapPath ="./maps/test/";
 
 FLUX_DIR + "output/" + IN_FILE
 | open-file
 | as-lines
 | decode-json(recordPath=RECORD_PATH)
-| fix(FLUX_DIR + "rppd-to-lobid.fix")
+| fix(FLUX_DIR + "rppd-to-lobid.fix",*)
 | batch-reset(batchsize="1")
 | encode-json(prettyPrinting="true")
 | write(FLUX_DIR + "output/test-output-rppd-lobid-${i}.json")

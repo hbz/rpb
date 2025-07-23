@@ -28,3 +28,4 @@ etl/strapi-export.tar.gz
 nohup.out*
 etl/*.ndjson
 etl/*.zip
+etl/maps/*.ttl

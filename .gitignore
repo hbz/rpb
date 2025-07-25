@@ -29,3 +29,4 @@ nohup.out*
 etl/*.ndjson
 etl/*.zip
 etl/maps/*.ttl
+beacon*.txt

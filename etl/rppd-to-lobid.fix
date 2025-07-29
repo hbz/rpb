@@ -11,6 +11,10 @@ do put_macro("beacon_lookup")
     copy_field("gndIdentifier", "_temp")
     lookup("_temp", "beacon_$[id]_name", delete: "true")
     replace_all('_temp', '\\"+', '\\"')
+    # Beacon at https://www.tripota.uni-trier.de/beacon_tripota.txt
+    # doesn't consider Accept-Encoding in request and does not include
+    # its actual encoding (windows-1252) in the response, workaround:
+    replace_all('_temp', 'Portr�tdatenbank', 'Porträtdatenbank')
     move_field("_temp", "sameAs[].$last.collection.name")
   end
 end
@@ -39,8 +43,8 @@ do once("map")
 
   # maps aus beacons
   call_macro("beacon_put", id: "adb")
-  call_macro("beacon_put", id: "archinform")
-  call_macro("beacon_put", id: "babi")
+  # call_macro("beacon_put", id: "archinform")
+  # call_macro("beacon_put", id: "babi")
   call_macro("beacon_put", id: "blkoe")
   call_macro("beacon_put", id: "bsb")
   call_macro("beacon_put", id: "commons")
@@ -54,12 +58,12 @@ do once("map")
   call_macro("beacon_put", id: "ndb")
   call_macro("beacon_put", id: "oebl")
   call_macro("beacon_put", id: "portraitindex")
-  call_macro("beacon_put", id: "radb")
+  # call_macro("beacon_put", id: "radb")
   call_macro("beacon_put", id: "regionalgeschichte")
   call_macro("beacon_put", id: "ri")
   call_macro("beacon_put", id: "sbub")
   call_macro("beacon_put", id: "tripota")
-  call_macro("beacon_put", id: "usbk")
+  # call_macro("beacon_put", id: "usbk")
   call_macro("beacon_put", id: "vd16")
 end
 

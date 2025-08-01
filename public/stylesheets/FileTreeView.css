@@ -21,7 +21,7 @@
 .treeFolder {
 	cursor: pointer;
 	margin-bottom: -2px;
-	color: rgba(233, 48, 28, 0.75);
+	color: rgba(134, 26, 34, 0.75);
 }
 
 .treeFolder:before {

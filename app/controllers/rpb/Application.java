@@ -13,6 +13,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.Collator;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -980,6 +982,14 @@ public class Application extends Controller {
 
 	public static Promise<Result> deleteIdFromData(String secret) throws FileNotFoundException, RecognitionException, IOException {
 		return delete(request().body().asJson().get("rpbId").textValue(), secret);
+	}
+
+	public static String formatCount(long count) {
+		DecimalFormat df = (DecimalFormat) (DecimalFormat.getInstance(Locale.GERMAN));
+		DecimalFormatSymbols symbols = df.getDecimalFormatSymbols();
+		symbols.setGroupingSeparator('.');
+		df.setDecimalFormatSymbols(symbols);
+		return df.format(count);
 	}
 
 	private static Promise<Result> deleteFromIndex(String id) throws UnsupportedEncodingException {

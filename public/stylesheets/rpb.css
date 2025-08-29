@@ -135,12 +135,14 @@ table {
 	height: 200px;
 }
 
-.nrw-wappen {
-	height: 20px;
+.footer-logos {
+	display: flex;
+	justify-content: center;
 }
 
-.hbz-logo {
-	height: 20px;
+.footer-logo {
+	height: 60px;
+	padding: 10px;
 }
 
 .intro {
@@ -350,4 +352,22 @@ h1 small .label {
 
 body {
 	background-color: #FFFFF3;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #861a22;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+	color: #BF2313;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li>a {
+	color: #861a22;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li>a:hover,
+.navbar-default .navbar-nav .dropdown-menu>li>a:focus {
+	color: #BF2313;
 }

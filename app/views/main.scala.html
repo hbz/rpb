@@ -3,6 +3,7 @@
 @(title: String, docJson: Option[String] = None)(content: Html)
 
 @import controllers.rpb.Lobid
+@import controllers.rpb.Application.formatCount
 @import play.api.libs.json._
 
 <!DOCTYPE html>
@@ -86,21 +87,29 @@
             </div>
             <div class="page-header">
                 <img class="media-object rpb-logo pull-right" src="@controllers.routes.Assets.at("images/wappen.png")" alt="Wappen von Rheinland-Pfalz">
-                <h1>Die Rheinland-Pfälzische Bibliographie</h1><br/>
+                <h1>Rheinland-Pfälzische Bibliographie<br/><small>Literatur zu Rheinland-Pfalz recherchieren</small></h1>
             </div>
             @content
             <div class="panel panel-default rpb-footer">
               <div class="panel-body">
                 @defining(controllers.rpb.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
-                <a href="https://lbz.rlp.de/" target="_blank">
-                  <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen" title="Landesbibliothekszentrum Rheinland-Pfalz (LBZ)">
-                </a>
-                <a href="http://www.hbz-nrw.de/" target="_blank">
-                  <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo" title="Hochschulbibliothekszentrum Nordrhein-Westfalen (hbz)">
-                </a>
-                Die RPB enthält aktuell @hits Literaturnachweise
+                Die RPB enthält aktuell @formatCount(hits) Literaturnachweise
                 }
               </div>
+            </div>
+            <div class="footer-logos">
+              <a href="https://lbz.rlp.de/" target="_blank">
+                <img class="media-object footer-logo" src="@controllers.routes.Assets.at("images/logo-lbz.png")" alt="LBZ" title="Landesbibliothekszentrum Rheinland-Pfalz (LBZ)">
+              </a>
+              <a href="https://www.bibliothek.mainz.de/wissenschaftliche-stadtbibliothek.php" target="_blank">
+                <img class="media-object footer-logo" src="@controllers.routes.Assets.at("images/logo-mainz.png")" alt="Mainz" title="Bibliotheken der Stadt Mainz &ndash; Wissenschaftliche Stadtbibliothek">
+              </a>
+              <a href="https://www.stadtbibliothek-weberbach.de" target="_blank">
+                <img class="media-object footer-logo" src="@controllers.routes.Assets.at("images/logo-trier.png")" alt="Trier" title="Wissenschaftliche Bibliothek der Stadt Trier">
+              </a>
+              <a href="http://www.hbz-nrw.de/" target="_blank">
+                <img class="media-object footer-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo" title="Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen (hbz)">
+              </a>
             </div>
         </div>
     </body>

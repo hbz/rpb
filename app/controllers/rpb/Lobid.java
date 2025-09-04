@@ -2,6 +2,7 @@
 
 package controllers.rpb;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -23,8 +24,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.html.HtmlEscapers;
+import com.opencsv.CSVParserBuilder;
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.exceptions.CsvException;
 
-import controllers.rpb.Classification.Type;
 import play.Logger;
 import play.Play;
 import play.cache.Cache;
@@ -43,8 +47,11 @@ import play.mvc.Http;
  */
 public class Lobid {
 
+	
 	private static final String GND_PREFIX = "https://d-nb.info/gnd/";
-
+	
+	private static final String RPB_SW_PREFIX = "http://rpb.lobid.org/sw/";
+	
 	/** Timeout for API calls in milliseconds. */
 	public static final int API_TIMEOUT = 50000;
 
@@ -365,12 +372,13 @@ public class Lobid {
 		if (cachedResult != null) {
 			return cachedResult;
 		}
+		String shortId = uri.replace(GND_PREFIX, "").replaceAll("n([\\dX])$", "-$1");
 		WSRequest requestHolder = WS
-				.url(Application.CONFIG.getString("gnd.api") + "/" + uri.replace(GND_PREFIX, ""))
+				.url(Application.CONFIG.getString("gnd.api") + "/" + shortId)
 				.setHeader("Accept", "application/json");
 		return requestHolder.get()
 				.map((WSResponse response) -> {
-					String result = uri;
+					String result = shortId;
 					if (response != null && response.getStatus() == Http.Status.OK) {
 						result = response.asJson().get("preferredName").textValue();
 					} else {
@@ -383,18 +391,45 @@ public class Lobid {
 	}
 
 	private static String rpbLabel(String uri) {
-		String cacheKey = "rpb.label." + uri;
-		final String cachedResult = (String) Cache.get(cacheKey);
-		if (cachedResult != null) {
-			return cachedResult;
-		}
-		Type type = uri.contains("spatial") ? Classification.Type.SPATIAL
-				: Classification.Type.SUBJECT;
-		String label = Classification.label(uri, type);
-		label = HtmlEscapers.htmlEscaper().escape(label);
-		label = label.trim().isEmpty() ? uri : label;
-		Cache.set(cacheKey, label, Application.ONE_DAY);
-		return label;
+		return getCachedResult("rpb.label." + uri, uri,
+				() -> Classification.label(uri, uri.contains("spatial") ? Classification.Type.SPATIAL
+						: Classification.Type.SUBJECT));
+	}
+
+	private static String rpbSwLabel(String uri) {
+		String shortId = uri.replace(RPB_SW_PREFIX, "");
+		return getCachedResult("rpb.sw.label." + uri, uri,
+				() -> rpbSwLabels().getOrDefault(shortId, "RPB-SW: " + shortId));
+	}
+
+	private static String getCachedResult(String cacheKey, String uri, Callable<String> label) {
+		return Cache.getOrElse(cacheKey, () -> {
+			String result = "";
+			try {
+				result = HtmlEscapers.htmlEscaper().escape(label.call());
+				result = result.trim().isEmpty() ? uri : result;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return result;
+		}, Application.ONE_DAY);
+	}
+
+	private static Map<String, String> rpbSwLabels() {
+		return Cache.getOrElse("rpb.sw.map", () -> {
+			Map<String, String> rpbSwLabels = new HashMap<>();
+			String root = Application.CONFIG.getString("project.root");
+			try (CSVReader csvReader = new CSVReaderBuilder(new FileReader(root + "/etl/RPB-Export_HBZ_SW.tsv"))
+					.withCSVParser(new CSVParserBuilder().withSeparator('\t').build()).build()) {
+				String[] nextLine;
+				while ((nextLine = csvReader.readNext()) != null) {
+					rpbSwLabels.put(nextLine[0], nextLine[1]);
+				}
+			} catch (IOException | CsvException e) {
+				Logger.error("Error reading TSV file: {}", e.getMessage());
+			}
+			return rpbSwLabels;
+		}, Application.ONE_DAY);
 	}
 
 	/**
@@ -558,6 +593,8 @@ public class Lobid {
 		} else if (uris.size() == 1
 				&& (isRpbSubject(uris.get(0)) || isRpbSpatial(uris.get(0))))
 			return Lobid.rpbLabel(uris.get(0));
+		else if (uris.size() == 1 && (isRpbSw(uris.get(0))))
+			return Lobid.rpbSwLabel(uris.get(0));
 		else if (uris.size() == 1 && isGnd(uris.get(0)))
 			return Lobid.gndLabel(uris.get(0));
 		String configKey = keys.getOrDefault(field, "");
@@ -651,6 +688,10 @@ public class Lobid {
 
 	private static boolean isRpbSpatial(String term) {
 		return term.startsWith("https://rpb.lobid.org/spatial#");
+	}
+
+	private static boolean isRpbSw(String term) {
+		return term.startsWith(RPB_SW_PREFIX);
 	}
 
 	public static boolean isGnd(String term) {

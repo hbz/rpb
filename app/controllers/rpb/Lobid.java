@@ -369,11 +369,16 @@ public class Lobid {
 				.url(Application.CONFIG.getString("gnd.api") + "/" + uri.replace(GND_PREFIX, ""))
 				.setHeader("Accept", "application/json");
 		return requestHolder.get()
-				.filter((WSResponse response) -> response.getStatus() == Http.Status.OK)
 				.map((WSResponse response) -> {
-					String label = response.asJson().get("preferredName").textValue();
-					Cache.set(cacheKey, label, Application.ONE_DAY);
-					return label;
+					String result = uri;
+					if (response != null && response.getStatus() == Http.Status.OK) {
+						result = response.asJson().get("preferredName").textValue();
+					} else {
+						Logger.error("Get GND label: non-OK or null response (status: {}) for URI {}",
+								response == null ? "null" : response.getStatus(), uri);
+					}
+					Cache.set(cacheKey, result, Application.ONE_DAY);
+					return result;
 				}).get(Lobid.API_TIMEOUT);
 	}
 

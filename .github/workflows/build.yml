@@ -12,4 +12,7 @@ jobs:
       with:
         java-version: 11
     - name: Run tests
-      run: sbt "test-only tests.CITests"
+      uses: sbt/setup-sbt@v1
+      with:
+        sbt-runner-version: 1.11.5
+    - run: sbt "test-only tests.CITests"

@@ -10,8 +10,9 @@ curl -O https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb.ttl
 cd ../..
 
 # Full GND via lobid-gnd bulk API, used for labels in RPB and RPPD:
-sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/map-gnd-to-label.flux"
-bash filterGndMapping.sh # Filter GND mapping to only include IDs used in RPB and RPPD
+# (lookup file is checked in, enable in production to get GND updates)
+# sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/map-gnd-to-label.flux"
+# bash filterGndMapping.sh # Filter GND mapping to only include IDs used in RPB and RPPD
 
 # Individual beacon files, used for sameAs links in RPPD:
 sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rppd-beacon-to-tsv.flux IN=https://persondata.toolforge.org/beacon/dewiki.txt OUT=etl/maps/beacons/gndId-to-dewiki.tsv"

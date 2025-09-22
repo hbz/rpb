@@ -423,7 +423,11 @@ public class Lobid {
 					.withCSVParser(new CSVParserBuilder().withSeparator('\t').build()).build()) {
 				String[] nextLine;
 				while ((nextLine = csvReader.readNext()) != null) {
-					rpbSwLabels.put(nextLine[0], nextLine[1]);
+					if (nextLine.length < 2) {
+						Logger.warn("No key-value pair in TSV line: {}", Arrays.asList(nextLine));
+					} else {
+						rpbSwLabels.put(nextLine[0], nextLine[1]);
+					}
 				}
 			} catch (IOException | CsvException e) {
 				Logger.error("Error reading TSV file: {}", e.getMessage());

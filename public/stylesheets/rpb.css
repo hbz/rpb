@@ -11,6 +11,10 @@ dd {
 	padding-bottom: 0.5em;
 }
 
+.row div dl {
+	margin-bottom: 0px;
+}
+
 #rpb-form {
 	padding-bottom: 1em;
 }

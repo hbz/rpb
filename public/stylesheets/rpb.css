@@ -133,16 +133,8 @@ table {
 
 .rpb-map {
 	height: 200px;
-}
-
-.footer-logos {
-	display: flex;
-	justify-content: center;
-}
-
-.footer-logo {
-	height: 60px;
-	padding: 10px;
+	margin-right: 25px;
+	margin-bottom: 15px;
 }
 
 .intro {

@@ -3,6 +3,7 @@
 @(title: String, docJson: Option[String] = None)(content: Html)
 
 @import controllers.rpb.Lobid
+@import controllers.rpb.Application.formatCount
 @import play.api.libs.json._
 
 <!DOCTYPE html>
@@ -104,13 +105,11 @@
             <div class="panel panel-default rpb-footer">
               <div class="panel-body">
                 @defining(controllers.rpb.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
-                <a href="https://lbz.rlp.de/" target="_blank">
-                  <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen" title="Landesbibliothekszentrum Rheinland-Pfalz (LBZ)">
-                </a>
-                <a href="http://www.hbz-nrw.de/" target="_blank">
-                  <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo" title="Hochschulbibliothekszentrum Nordrhein-Westfalen (hbz)">
-                </a>
-                BiblioVino enthält aktuell @hits Literaturnachweise
+                BiblioVino enthält aktuell @formatCount(hits) Literaturnachweise und wird vom <a href="https://lbz.rlp.de/" target="_blank">LBZ</a> und den Wissenschaftlichen Stadtbibliotheken
+                <a href="https://www.bibliothek.mainz.de/wissenschaftliche-stadtbibliothek.php" target="_blank">Mainz</a> und
+                <a href="https://www.stadtbibliothek-weberbach.de" target="_blank">Trier</a> in Zusammenarbeit mit dem
+                <a href="http://www.hbz-nrw.de/" target="_blank">hbz</a> herausgegeben mit Unterstützung der
+                <a href="https://www.geschichte-des-weines.de/" target="_blank">Gesellschaft für Geschichte des Weines e.V.</a>
                 }
               </div>
             </div>

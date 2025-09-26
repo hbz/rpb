@@ -162,7 +162,7 @@
          id = (component \ "id").asOpt[String].getOrElse("");
          label <- (component \ "label").asOpt[String]) {
       <span style="white-space: nowrap;">
-        <a title="Nach weiteren Titeln zu '@label' suchen" href='@rpb.routes.Application.search(subject=if(id.contains("/gnd/")) {id} else {"\""+label+"\""})'/>@label</a>
+        <a title="Nach weiteren Titeln zu '@label' suchen" href='@rpb.routes.Application.search(subject=id)'/>@label</a>
         @if(id.startsWith("http") && !id.contains("/sw/")){<a title="Linked-Data-Quelle zu '@label'" href='@id'><span class='glyphicon glyphicon-link'></span></a>}
         @rppdLinkIfInRppd(id, label)
       </span>

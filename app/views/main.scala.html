@@ -3,6 +3,7 @@
 @(title: String, docJson: Option[String] = None)(content: Html)
 
 @import controllers.rpb.Lobid
+@import controllers.rpb.Application.formatCount
 @import play.api.libs.json._
 
 <!DOCTYPE html>
@@ -72,6 +73,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                       <li @if(title=="BiblioVino - Merkliste"){class="active"}><a href="@rpb.routes.Application.showStars()"><span class="glyphicon glyphicon-star-empty"></span> Merkliste</a></li>
+                      <li><a target="_blank" href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/bibliovino-infotext">Über BiblioVino</a></li>
                       <li class="divider"></li>
                       <li @if(title=="RPB: Kontakt"){class="active"} class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info"><span class="glyphicon glyphicon-info-sign"></span><b class="caret"></b></a>
@@ -88,6 +90,7 @@
                           <li class="dropdown-header">Rechtliche Informationen</li>
                           <li><a href="https://lbz.rlp.de/ueber-das-lbz/impressum/" target="_blank">Impressum</a></li>
                           <li><a href="https://lbz.rlp.de/ueber-das-lbz/datenschutz" target="_blank">Datenschutz</a></li>
+                          <li><a href="https://lbz.rlp.de/ueber-das-lbz/erklaerung-zur-barrierefreiheit" target="_blank">Barrierefreiheit</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -95,16 +98,18 @@
                 </div><!--/.container-fluid -->
             </div>
             <div class="page-header">
-                <img class="media-object nrw-logo pull-right" src="@controllers.routes.Assets.at("images/bibliovino.png")" alt="BiblioVino">
-                <h1>BiblioVino<br/><small>Bibliographie zur Geschichte und Kultur des Weines <span class="badge">beta</span></small></h1>
+                <img class="media-object rpb-logo pull-right" src="@controllers.routes.Assets.at("images/bibliovino.jpg")" alt="BiblioVino">
+                <h1>BiblioVino<br/><small>Bibliographie zur Geschichte und Kultur des Weines (Schoene 4)</small></h1>
             </div>
             @content
             <div class="panel panel-default rpb-footer">
               <div class="panel-body">
                 @defining(controllers.rpb.Lobid.getTotalHits("").get(Lobid.API_TIMEOUT)){ hits =>
-                <img class="media-object pull-left nrw-wappen" src="@controllers.routes.Assets.at("images/wappen.png")" alt="RLP-Wappen"> 
-                <img class="media-object pull-right hbz-logo" src="@controllers.routes.Assets.at("images/hbz.png")" alt="hbz-Logo">
-                BiblioVino enthält aktuell @hits Literaturnachweise | Ein Entwicklungsprojekt von <a href="https://lbz.rlp.de/">lbz</a> &amp; <a href="http://www.hbz-nrw.de/">hbz</a>
+                BiblioVino enthält aktuell @formatCount(hits) Literaturnachweise und wird vom <a href="https://lbz.rlp.de/" target="_blank">LBZ</a> und den Wissenschaftlichen Stadtbibliotheken
+                <a href="https://www.bibliothek.mainz.de/wissenschaftliche-stadtbibliothek.php" target="_blank">Mainz</a> und
+                <a href="https://www.stadtbibliothek-weberbach.de" target="_blank">Trier</a> in Zusammenarbeit mit dem
+                <a href="http://www.hbz-nrw.de/" target="_blank">hbz</a> herausgegeben mit Unterstützung der
+                <a href="https://www.geschichte-des-weines.de/" target="_blank">Gesellschaft für Geschichte des Weines e.V.</a>
                 }
               </div>
             </div>

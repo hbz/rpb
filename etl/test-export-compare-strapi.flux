@@ -1,3 +1,5 @@
+default dynamicMapPath ="./maps/test/";
+
 // Get test data for the specified type; for each record,
 // fetch the entry from Strapi, convert that to lobid, write.
 FLUX_DIR + "output/test-output-strapi.json"
@@ -16,7 +18,7 @@ retain(f00_)
 | open-http
 | as-records
 | decode-json(recordPath="data.[*].attributes")
-| fix(FLUX_DIR + "rpb-titel-to-lobid.fix")
+| fix(FLUX_DIR + "rpb-titel-to-lobid.fix",*)
 | encode-json
 | write(FLUX_DIR + "output/test-lobid-output-from-strapi.json")
 ;
@@ -31,7 +33,7 @@ unless " + PICK + "
   reject()
 end
 ")
-| fix(FLUX_DIR + "rpb-titel-to-lobid.fix")
+| fix(FLUX_DIR + "rpb-titel-to-lobid.fix",*)
 | encode-json
 | write(FLUX_DIR + "output/test-lobid-output-from-file.json")
 ;

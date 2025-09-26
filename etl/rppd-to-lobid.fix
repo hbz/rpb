@@ -25,7 +25,7 @@ do once("map")
   put_filemap("./RPB-Export_HBZ_SW.tsv", "SW_variants-map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"2")
   put_filemap("etl/maps/gndId-to-label.tsv", "SW_GND_map", sep_char: "\t")
   put_filemap("etl/RPB-Export_HBZ_SWN.tsv", "SWN_map", sep_char: "\t")
-  put_rdfmap("https://raw.githubusercontent.com/hbz/lbz-vocabs/main/rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
+  put_rdfmap("$[dynamicMapPath]rpb-spatial.ttl", "spatial_map", target:"skos:prefLabel", select_language:"de")
   put_filemap("etl/maps/gndGeographicName.tsv", "gnd_spatial_map", key_column:"0", value_column:"1", sep_char: "\t", expected_columns:"2")
 
   # maps für lookup relatedPerson

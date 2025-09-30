@@ -6,6 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 import rpb.DecodeTest;
 import rpb.EtlTest;
+import rpb.StripDiacriticsTest;
 
 /**
  * All quick, self-contained tests for running as CI. For running all
@@ -16,7 +17,7 @@ import rpb.EtlTest;
  *
  */
 @RunWith(Suite.class)
-@SuiteClasses({ ApplicationTest.class, DecodeTest.class, EtlTest.class })
+@SuiteClasses({ ApplicationTest.class, DecodeTest.class, EtlTest.class, StripDiacriticsTest.class })
 public class CITests {
 	//
 }

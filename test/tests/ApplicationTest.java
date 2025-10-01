@@ -4,6 +4,8 @@ package tests;
 
 import static controllers.rpb.Application.CONFIG;
 import static org.fest.assertions.Assertions.assertThat;
+import static play.test.Helpers.running;
+import static play.test.Helpers.testServer;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -42,9 +44,11 @@ public class ApplicationTest {
 
 	@Test
 	public void classificationLabelNotAvailable() {
-		assertThat(
-				Classification.label("https://rpb.lobid.org/spatial#n9", Type.SPATIAL))
-						.as("empty label").isEqualTo("");
+		running(testServer(3333), () -> {
+			assertThat(
+					Classification.label("https://rpb.lobid.org/spatial#n9", Type.SPATIAL))
+					.as("empty label").isEqualTo("");
+		});
 	}
 
 	@Test

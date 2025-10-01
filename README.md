@@ -2,19 +2,77 @@
 
 [![Build](https://github.com/hbz/rpb/workflows/Build/badge.svg)](https://github.com/hbz/rpb/actions?query=workflow%3ABuild)
 
-This repo contains the RPB data transformation and the RPB web application.
+This repo contains the RPB and RPPD data transformations and the RPB web application.
 
-## Setup
+For the RPPD web application see https://github.com/hbz/rppd.
 
-### Install metafacture dependencies
+## Development setup
 
-See `.github/workflows/build.yml`.
-
-### Clone RPB project repo
+### Clone project repo
 
 ```bash
 git clone https://github.com/hbz/rpb.git
 cd rpb
+```
+
+### Transformation development
+
+First, transform external data used for lookups (needs to run only once for initial setup):
+
+```bash
+bash transformExternalData.sh
+```
+
+Transform RPB test data:
+
+```bash
+sbt "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
+```
+
+Transform RPPB test data:
+
+```bash
+sbt "runMain rpb.ETL etl/rppd-test-to-lobid.flux"
+```
+
+### Java development
+
+Run the unit tests (see also `.github/workflows/build.yml`):
+
+```bash
+sbt "test-only tests.CITests"
+```
+
+Generate project settings for Eclipse or VS Code (with 'Extension Pack for Java'):
+
+```bash
+sbt "eclipse with-source=true"
+```
+
+### RPB web application
+
+Start the RPB web application in test mode:
+
+```bash
+sbt run
+```
+
+Open http://localhost:9000.
+
+## Production setup
+
+Run full transformation and indexing:
+
+```bash
+bash transformExternalData.sh
+bash transformAndIndex.sh
+```
+
+Start the web application in prod mode:
+
+```bash
+sbt stage
+./target/universal/stage/bin/rpb -no-version-check
 ```
 
 ## Architectural overview
@@ -45,50 +103,9 @@ For details on our setup see https://dienst-wiki.hbz-nrw.de/display/SEM/RPB (int
 - RPPD: https://github.com/hbz/rppd
 - Strapi-RPB: https://github.com/hbz/strapi-rpb
 
-## Transformation development
-
-### Create lookup table
-
-```bash
-sbt "runMain rpb.ETL etl/rpb-test-sw.flux"
-```
-
-This writes a `.tsv` file to `output/`, to be used for lookups in the transformation.
-
-### Run transformation to strapi data
-
-```bash
-sbt "runMain rpb.ETL etl/rpb-test-titel-to-strapi.flux"
-```
-
-This writes a single `.json` file to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
-
-### Import strapi data
-
-```bash
-sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','u') PATH=articles"
-sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works"
-sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works"
-sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
-```
-
-This attempts to import all data selected with the `PICK` variable to the API endpoint in `PATH`, and prints the server response.
-
-To reimport existing entries, these may need to be deleted first, e.g. for `articles/1` to `articles/5`:
-
-```
-curl --request DELETE http://localhost:1337/api/articles/[1-5]
-```
-
-After import they are available at e.g. https://rpb-cms-test.lobid.org/api/articles?populate=*
-
-Entries using the same path can be filtered, e.g. to get only volumes (`type=Band`):
-
-https://rpb-cms-test.lobid.org/api/independent-works?filters[type][$eq]=Band&populate=*
-
 ### Import SKOS data into strapi
 
-Actual transformation of SKOS TTL files to JSON happens in https://github.com/acka47/scripts/tree/master/skos2json.
+Actual transformation of SKOS TTL files to JSON happens in https://github.com/hbz/lbz-vocabs/blob/main/scripts/skos2json.py.
 
 To import the resulting JSON data into strapi, run:
 
@@ -96,88 +113,6 @@ To import the resulting JSON data into strapi, run:
 sbt "runMain rpb.ETL etl/rpb-systematik-import.flux INPUT=rpb.ndjson PATH=rpb-notations"
 sbt "runMain rpb.ETL etl/rpb-systematik-import.flux INPUT=rpb-spatial.ndjson PATH=rpb-spatials"
 ```
-
-### Run RPPD transformation to strapi data
-
-```bash
-sbt "runMain rpb.ETL etl/rppd-to-strapi.flux"
-```
-
-Writes output to `output/output-rppd-strapi.ndjson`.
-
-### Import RPPD strapi data
-
-```bash
-sbt "runMain rpb.ETL etl/rppd-import.flux"
-```
-
-This attempts to import RPPD data to strapi, and prints the server responses.
-
-Same for RPB-Normdaten (`rpb-sw-to-strapi.flux` / `rpb-sw-import.flux`).
-
-See also `transformAndImportTest.sh` (test data) and `transformAndImportFull.sh` (full data).
-
-### Build GND label lookup file
-
-```bash
-sbt "runMain rpb.ETL etl/map-gnd-to-label.flux"
-```
-
-This creates a TSV lookup file for GND labels used in the transformation.
-
-### Run transformation to lobid data
-
-```bash
-sbt -mem 3000 "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
-```
-
-This writes individual `.json` files for each record in the input data to `output/`.
-
-### Export strapi data
-
-```bash
-sbt -mem 3000 "runMain rpb.ETL etl/test-export-strapi-to-lobid.flux"
-```
-
-This writes individual `.json` files for Strapi records to `output/`.
-
-### Compare export data
-
-```bash
-sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','u') PATH=articles"
-sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','Monografie') PATH=independent-works"
-sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','Band') PATH=independent-works"
-sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
-```
-
-This selects parts of the test data and write two files:
-
-1) for each test record, get the data from the Strapi HTTP API, convert the result to the lobid format, write to `test-lobid-output-from-strapi.json`
-2) convert each record directly to lobid, write to `test-lobid-output-from-file.json`
-
-We can then compare the two files (e.g. in VSC: Select for Compare, Format Document) to see differences. Since fields that are not defined in the Strapi content types are omitted upon import, missing data here points to missing fields in the Strapi content types.
-
-### Validate output
-
-Prerequisites: `npm install -g ajv-cli ajv-formats`
-
-```bash
-sh validateJsonOutput.sh
-```
-
-This validates the resulting files against the JSON schemas in `test/rpb/schemas/`.
-
-### Adding test data
-
-During development, you'll sometimes want to add a record with specific fields or values to the test data, e.g. when handling new fields or fixing edge cases in the transformation. Due to the unusual encoding of the input data (`IBM437`), editing the files in a text editor may result in a faulty encoding. Instead, we can use the command line and append to the test data directly with `>>`.
-
-E.g. to add the last record in `etl/RPB-Export_HBZ_Bio.txt` that contains `#82b` to `etl/RPB-Export_HBZ_Bio_Test.txt`:
-
-```bash
-cat etl/RPB-Export_HBZ_Bio.txt | grep -a '#82b' | tail -n 1 >> etl/RPB-Export_HBZ_Bio_Test.txt
-```
-
-The `-a` is required to return all results since grep views parts of the files as binary data.
 
 ### Index creation
 
@@ -189,47 +124,9 @@ If you're not indexing into an existing lobid-resources index, make sure to crea
 
 For testing, the real index name (e.g. `resources-rpb-20231130-1045`) is aliased by `resources-rpb-test`, which is used by http://test.rpb.lobid.org and in the transformation.
 
-### Run full transformation and indexing
+## Non-productive
 
-```bash
-sh transformExternalData.sh
-sh transformAndIndex.sh
-```
-
-## Web application
-
-Start the web application:
-
-### Test mode
-
-```
-sbt run
-```
-
-### Prod mode
-
-```
-sbt stage
-./target/universal/stage/bin/rpb -no-version-check
-```
-
-http://localhost:9000
-
-## Java development
-
-## Run tests
-
-```bash
-sbt "test-only tests.CITests"
-```
-
-## Generate Eclipse project for import
-
-```bash
-sbt "eclipse with-source=true"
-```
-
-## Reconciliation
+## Reconciliation (experimental)
 
 NOTE: This section is based on the work-in-progress reconciliation service in [lobid-resources](https://github.com/hbz/lobid-resources/pull/1777).
 
@@ -914,3 +811,116 @@ In the "Undo / Redo" tab, click "Apply...", paste the content below, then click 
 ```
 
 The resulting matches can be exported (for comparing reconciliation with different settings etc.): Export -> Templating..., Row template: `{{cells["almaMmsId"].value}}`.
+
+## To-Strapi transformation and import (legacy)
+
+NOTE: This section is legacy work. It was used for the transformation of Allegro data and the initial Strapi import. Since the Strapi import was final and the data is since maintained in Strapi, this is no longer used.
+
+### Create SW lookup table
+
+```bash
+sbt "runMain rpb.ETL etl/rpb-test-sw.flux"
+```
+
+This writes a `.tsv` file to `output/`, to be used for lookups in the transformation.
+
+### RPB
+
+#### Run RPB transformation to strapi data
+
+```bash
+sbt "runMain rpb.ETL etl/rpb-test-titel-to-strapi.flux"
+```
+
+This writes a single `.json` file to `output/` (it's actually JSON lines, but the suffix makes it work with JSON tools, e.g. for syntax coloring and formatting).
+
+#### Import RPB strapi data
+
+```bash
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('type','Band') PATH=independent-works"
+sbt "runMain rpb.ETL etl/rpb-test-titel-import.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
+```
+
+This attempts to import all data selected with the `PICK` variable to the API endpoint in `PATH`, and prints the server response.
+
+To reimport existing entries, these may need to be deleted first, e.g. for `articles/1` to `articles/5`:
+
+```
+curl --request DELETE http://localhost:1337/api/articles/[1-5]
+```
+
+After import they are available at e.g. https://rpb-cms-test.lobid.org/api/articles?populate=*
+
+Entries using the same path can be filtered, e.g. to get only volumes (`type=Band`):
+
+https://rpb-cms-test.lobid.org/api/independent-works?filters[type][$eq]=Band&populate=*
+
+### RPPD
+
+#### Run RPPD transformation to strapi data
+
+```bash
+sbt "runMain rpb.ETL etl/rppd-to-strapi.flux"
+```
+
+Writes output to `output/output-rppd-strapi.ndjson`.
+
+#### Import RPPD strapi data
+
+```bash
+sbt "runMain rpb.ETL etl/rppd-import.flux"
+```
+
+This attempts to import RPPD data to strapi, and prints the server responses.
+
+Same for RPB-Normdaten (`rpb-sw-to-strapi.flux` / `rpb-sw-import.flux`).
+
+See also `transformAndImportTest.sh` (test data) and `transformAndImportFull.sh` (full data).
+
+### Export strapi data
+
+```bash
+sbt -mem 3000 "runMain rpb.ETL etl/test-export-strapi-to-lobid.flux"
+```
+
+This writes individual `.json` files for Strapi records to `output/`.
+
+### Compare export data
+
+```bash
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','u') PATH=articles"
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','Monografie') PATH=independent-works"
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('type','Band') PATH=independent-works"
+sbt "runMain rpb.ETL etl/test-export-compare-strapi.flux PICK=all_equal('f36t','MultiVolumeBook') PATH=independent-works"
+```
+
+This selects parts of the test data and write two files:
+
+1) for each test record, get the data from the Strapi HTTP API, convert the result to the lobid format, write to `test-lobid-output-from-strapi.json`
+2) convert each record directly to lobid, write to `test-lobid-output-from-file.json`
+
+We can then compare the two files (e.g. in VSC: Select for Compare, Format Document) to see differences. Since fields that are not defined in the Strapi content types are omitted upon import, missing data here points to missing fields in the Strapi content types.
+
+### Validate output
+
+Prerequisites: `npm install -g ajv-cli ajv-formats`
+
+```bash
+sh validateJsonOutput.sh
+```
+
+This validates the resulting files against the JSON schemas in `test/rpb/schemas/`.
+
+### Adding test data
+
+During development, you'll sometimes want to add a record with specific fields or values to the test data, e.g. when handling new fields or fixing edge cases in the transformation. Due to the unusual encoding of the input data (`IBM437`), editing the files in a text editor may result in a faulty encoding. Instead, we can use the command line and append to the test data directly with `>>`.
+
+E.g. to add the last record in `etl/RPB-Export_HBZ_Bio.txt` that contains `#82b` to `etl/RPB-Export_HBZ_Bio_Test.txt`:
+
+```bash
+cat etl/RPB-Export_HBZ_Bio.txt | grep -a '#82b' | tail -n 1 >> etl/RPB-Export_HBZ_Bio_Test.txt
+```
+
+The `-a` is required to return all results since grep views parts of the files as binary data.

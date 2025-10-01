@@ -11,17 +11,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Install metafacture-core 7.0.0-rc1
-      run: |
-        git clone https://github.com/metafacture/metafacture-core.git -b metafacture-core-7.0.0-rc1
-        cd metafacture-core
-        touch .temp # don't build release, which requires signing
-        ./gradlew publishToMavenLocal
-        cd ..
     - name: Run tests
       uses: sbt/setup-sbt@v1
       with:
         sbt-runner-version: 1.11.5
-    - run: |
-        touch etl/maps/gndId-to-label.tsv
-        sbt "test-only tests.CITests"
+    - run: sbt "test-only tests.CITests"

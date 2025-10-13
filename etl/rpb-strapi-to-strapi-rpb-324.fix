@@ -1,0 +1,33 @@
+do list_as(spatial: 'data.spatial[].*')
+    if all_match('spatial.value', '^_r.+?_ _.+_$')
+        set_field(_changed, 'true')
+        copy_field('spatial.value', '_spatial.value')
+        # Task 1: '_r30_ _2071807nX_' -> set spatial: 'https://rpb.lobid.org/spatial#n30'
+        replace_all('spatial.value', '_r(.+?)_ _.+_$', 'https://rpb.lobid.org/spatial#n$1')
+        # Task 2: '_r30_ _2071807nX_' -> add subject: 'https://d-nb.info/gnd/2071807-X'
+        if all_match('_spatial.value', '^_.+?_ _\\d+(n(\\d|X))?_$')
+            replace_all('_spatial.value', '^_r.+?_ _(.+)n(.+)_$', 'https://d-nb.info/gnd/$1-$2')
+            replace_all('_spatial.value', '^_r.+?_ _(.+)_$', 'https://d-nb.info/gnd/$1')
+            if is_empty('data.subjectComponentList[]')
+                add_array('data.subjectComponentList[].$append.subjectComponent[]')
+            end
+            copy_field('_spatial', 'data.subjectComponentList[].$first.subjectComponent[].$prepend')
+        end
+    end
+    # ID and label are managed by Strapi, we only update 'spatial.value':
+    remove_field('spatial.id')
+    remove_field('spatial.label')
+end
+unless exists(_changed)
+    reject()
+end
+uniq('data.spatial[]')
+do list_as(subjectComponentList: 'data.subjectComponentList[].*')
+    do list_as(subjectComponent: 'subjectComponentList.subjectComponent[].*')
+        remove_field('subjectComponent.id')
+        remove_field('subjectComponent.label')
+    end
+end
+uniq('data.subjectComponentList[].*.subjectComponent[]')
+copy_field('data.id', 'id')
+retain('data.spatial[]', 'data.subjectComponentList[]', 'id')

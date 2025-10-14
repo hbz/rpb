@@ -4,13 +4,20 @@ do list_as(spatial: 'data.spatial[].*')
         copy_field('spatial.value', '_spatial.value')
         # Task 1: '_r30_ _2071807nX_' -> set spatial: 'https://rpb.lobid.org/spatial#n30'
         replace_all('spatial.value', '_r(.+?)_ _.+_$', 'https://rpb.lobid.org/spatial#n$1')
-        # Task 2: '_r30_ _2071807nX_' -> add subject: 'https://d-nb.info/gnd/2071807-X'
+        # Task 2: add subjectComponentList or subjectComponent
         if all_match('_spatial.value', '^_.+?_ _\\d+(n(\\d|X))?_$')
+            # Case 1: '_r30_ _2071807nX_' -> add subject: 'https://d-nb.info/gnd/2071807-X'
             replace_all('_spatial.value', '^_r.+?_ _(.+)n(.+)_$', 'https://d-nb.info/gnd/$1-$2')
             replace_all('_spatial.value', '^_r.+?_ _(.+)_$', 'https://d-nb.info/gnd/$1')
-            if is_empty('data.subjectComponentList[]')
-                add_array('data.subjectComponentList[].$append.subjectComponent[]')
-            end
+        else
+            # Case 2: '_r32_ _00Sn98s0866a_' -> add subject http://rpb.lobid.org/sw/00Sn98s0866a
+            replace_all('_spatial.value', '^_r.+?_ _(.+)_$', 'http://rpb.lobid.org/sw/$1')
+        end
+        if is_empty('data.subjectComponentList[]')
+            add_array('data.subjectComponentList[].$append.subjectComponent[]')
+        end
+        to_var('_spatial.value', 'newSubjectUri')
+        unless any_match('data.subjectComponentList[].*.subjectComponent[].*.value', '^$[newSubjectUri]$')
             copy_field('_spatial', 'data.subjectComponentList[].$first.subjectComponent[].$prepend')
         end
     end
@@ -30,7 +37,5 @@ do list_as(subjectComponentList: 'data.subjectComponentList[].*')
         remove_field('subjectComponent.label')
     end
 end
-uniq('data.subjectComponentList[].*.subjectComponent[]')
-uniq('data.subjectComponentList[]')
 copy_field('data.id', 'id')
 retain('data.spatial[]', 'data.subjectComponentList[]', 'id')

@@ -6,7 +6,10 @@ do put_macro("update")
         if is_empty('data.subjectComponentList[]')
             add_array('data.subjectComponentList[].$append.subjectComponent[]')
         end
-        copy_field('_spatial', 'data.subjectComponentList[].$first.subjectComponent[].$prepend')
+        to_var('_spatial.value', 'newSubjectUri')
+        unless any_match('data.subjectComponentList[].*.subjectComponent[].*.value', '^$[newSubjectUri]$')
+            copy_field('_spatial', 'data.subjectComponentList[].$first.subjectComponent[].$prepend')
+        end
     end
     # ID and label are managed by Strapi, we only update 'spatial.value':
     remove_field('spatial.id')
@@ -30,7 +33,5 @@ do list_as(subjectComponentList: 'data.subjectComponentList[].*')
         remove_field('subjectComponent.label')
     end
 end
-uniq('data.subjectComponentList[].*.subjectComponent[]')
-uniq('data.subjectComponentList[]')
 copy_field('data.id', 'id')
 retain('data.spatial[]', 'data.subjectComponentList[]', 'id')

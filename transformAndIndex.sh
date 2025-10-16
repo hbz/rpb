@@ -38,16 +38,16 @@ sbt --java-home $JAVA_HOME -mem 3000 "runMain rpb.ETL etl/rpb-titel-to-lobid.flu
 
 # Index to Elasticsearch:
 unset http_proxy # for posting to ES-cluster
-curl -XPUT -H "Content-Type: application/json" indexcluster.lobid.org:9200/$INDEX?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
+curl -XPUT -H "Content-Type: application/json" weywot12:9200/$INDEX?pretty -d @../lobid-resources-rpb/src/main/resources/alma/index-config.json
 rm etl/output/es-curl-post.log
 for filename in `ls -v etl/output/bulk/bulk-*.ndjson`
 do
 	echo "$filename"
-	curl -XPOST --silent --show-error --fail --header 'Content-Type: application/x-ndjson' --data-binary @"$filename" 'indexcluster.lobid.org:9200/_bulk' >> etl/output/es-curl-post.log
+	curl -XPOST --silent --show-error --fail --header 'Content-Type: application/x-ndjson' --data-binary @"$filename" 'weywot12:9200/_bulk' >> etl/output/es-curl-post.log
 done
 
 # Move alias to new index:
-curl -X POST "indexcluster.lobid.org:9200/_aliases?pretty" -H 'Content-Type: appliction/json' -d'
+curl -X POST "weywot12:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'
 {
 	"actions" : [
 		{ "remove" : { "index" : "*", "alias" : "'"$ALIAS"'" } },
@@ -65,5 +65,5 @@ cat etl/articles.ndjson | grep '"delete"' | jq --raw-output .delete.rpbId > etl/
 cat etl/independent_works.ndjson | grep '"delete"' | jq --raw-output .delete.rpbId >> etl/delete.ndjson
 cat etl/external_records.ndjson | grep '"delete"' | jq --raw-output .delete.rpbId >> etl/delete.ndjson
 while read rpbId; do
-   curl -X DELETE "indexcluster.lobid.org:9200/$INDEX/resource/https%3A%2F%2Flobid.org%2Fresources%2F$rpbId"
+   curl -X DELETE "weywot12:9200/$INDEX/resource/https%3A%2F%2Flobid.org%2Fresources%2F$rpbId"
 done < etl/delete.ndjson

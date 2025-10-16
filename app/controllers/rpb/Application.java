@@ -1092,7 +1092,7 @@ public class Application extends Controller {
 	}
 
 	private static String elasticsearchUrl(String id) throws UnsupportedEncodingException {
-		return "http://indexcluster.lobid.org:9200/resources-rpb-test/resource/"
+		return "http://weywot12.hbz-nrw.de:9200/resources-rpb-test/resource/"
 				+ URLEncoder.encode("https://lobid.org/resources/" + id, UTF_8);
 	}
 }

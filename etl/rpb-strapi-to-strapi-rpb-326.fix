@@ -1,0 +1,63 @@
+do once()
+    put_filemap("./maps/gndUri-to-broaderSpatial.tsv", "spatial_map", "sep_char": "\t")
+end
+
+do put_macro('add_subjectComponentList')
+    if is_empty('data.subjectComponentList[]')
+        add_array('data.subjectComponentList[].$append.subjectComponent[]')
+    end
+    unless any_match('data.subjectComponentList[].*.subjectComponent[].*.value', '^$[gndUri]$')
+        set_field('data.subjectComponentList[].$first.subjectComponent[].$prepend.value', '$[gndUri]')
+    end
+end
+
+do list_as(spatial: 'data.spatial[].*')
+    if all_match('spatial.value', '^https://d-nb.info/gnd/.+')
+        if any_equal('_spatial.value', 'https://d-nb.info/gnd/4108132-8')
+            print_record("GND-ID found: ")
+        end
+        to_var('spatial.value', 'gndUri')
+        copy_field('spatial.value', '_spatial.value')
+        copy_field('spatial.value', '_orig_spatial.value')
+        set_array('data.spatial[]')
+        
+        # Task 1: 'https://d-nb.info/gnd/4246584-9' -> set spatial: 'https://rpb.lobid.org/spatial#n30' (121t0144970)
+        lookup('_spatial.value', 'spatial_map', delete: 'true')
+        if exists('_spatial.value')
+            set_field(_changed, 'true')
+
+            split_field('_spatial.value', ' ; ')
+            do list_as(v: '_spatial.value')
+                copy_field('v', 'data.spatial[].$append.value')
+
+                # Task 2: add subjectComponentList or subjectComponent for r30, r31, r32, r34, r35, r36, r37, r38 
+                if any_match('v', 'https://rpb.lobid.org/spatial#n3[01245678]')
+                    call_macro("add_subjectComponentList", gndUri: "$[gndUri]")
+                end
+
+            end
+
+            # Task 3: add subjectComponentList or subjectComponent for 4116352-7, 4766893-3, 4028836-5
+            if any_match('_orig_spatial.value', 'https://d-nb.info/gnd/(4116352-7|4766893-3|4028836-5)')
+                call_macro("add_subjectComponentList", gndUri: "$[gndUri]")
+            end
+        end
+    end
+    # ID and label are managed by Strapi, we only update 'spatial.value':
+    remove_field('spatial.id')
+    remove_field('spatial.label')
+end
+unless exists(_changed)
+    reject()
+end
+uniq('data.spatial[]')
+do list_as(subjectComponentList: 'data.subjectComponentList[].*')
+    remove_field('subjectComponentList.id')
+    remove_field('subjectComponentList.label')
+    do list_as(subjectComponent: 'subjectComponentList.subjectComponent[].*')
+        remove_field('subjectComponent.id')
+        remove_field('subjectComponent.label')
+    end
+end
+copy_field('data.id', 'id')
+retain('data.spatial[]', 'data.subjectComponentList[]', 'id')

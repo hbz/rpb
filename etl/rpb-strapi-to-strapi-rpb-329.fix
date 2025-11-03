@@ -1,0 +1,27 @@
+put_var('uriPattern', '^https://d-nb.info/gnd/(\\d+?)-(\\d{2,})$')
+
+do put_macro('process_contribution')
+    do list_as(contribution: '$[field]')
+        # Task: e.g. 'https://d-nb.info/gnd/121-931350' -> 'http://rpb.lobid.org/sw/121n931350'
+        if all_match('contribution.value', '$[uriPattern]')
+            replace_all('contribution.value', '$[uriPattern]', 'http://rpb.lobid.org/sw/$1n$2')
+            set_field(_changed, 'true')
+        end
+        # ID and label are managed by Strapi, we only update 'contribution.value':
+        remove_field('contribution.id')
+        remove_field('contribution.label')
+    end
+end
+
+call_macro('process_contribution', field: 'data.person[]')
+call_macro('process_contribution', field: 'data.corporateBody[]')
+
+unless exists(_changed)
+    reject()
+end
+
+uniq('data.person[]')
+uniq('data.corporateBody[]')
+
+copy_field('data.id', 'id')
+retain('data.person[]', 'data.corporateBody[]', 'id')

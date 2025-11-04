@@ -1,4 +1,4 @@
-put_var('uriPattern', '^https://d-nb.info/gnd/(\\d+?)-(\\d{2,})$')
+put_var('uriPattern', '^https://d-nb.info/gnd/(\\d+?)-(\\w{2,})$')
 
 do put_macro('process_contribution')
     do list_as(contribution: '$[field]')

@@ -33,6 +33,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/2029646-0",
       "label" : "Katholische Kirche. Erzdiözese Köln",
+      "altLabel" : [ "Katholische Kirche. Archidioecesis Coloniensis", "Archidioecesis Coloniensis", "Erzbistum Köln", "Katholische Kirche. Erzbistum Köln", "Katholische Kirche. Erzdiözese Köln. Referat Spiritualität", "Diözese Köln", "Katholische Kirche. Erzdiözese Köln. Erzbischöfliches Ordinariat", "Katholische Kirche. Erzdiözese Köln. Diözesankonferenz", "Katholische Kirche. Dioecesis Coloniensis", "Dhomstifft zu Colln", "Katholische Kirche. Erzdiözese Köln. Referat Privater Rundfunk", "Katholische Kirche. Diözese Köln", "Katholische Kirche. Erzdiözese Köln. Erzbischof", "Katholische Kirche. Erzdiözese Köln. Referat Katholische Öffentliche Büchereien", "Erzdiözese von Köln", "Erzbischof von Köln", "Katholische Kirche. Dhomstifft zu Colln", "Katholische Kirche. Erzdiözese Köln. Diözesanpastoralrat" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -40,6 +41,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4611904-8",
       "label" : "Altkarte",
+      "altLabel" : [ "Alte Karte", "Historische Karte <Formangabe>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -47,6 +49,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
       "label" : "Online-Ressource",
+      "altLabel" : [ "Computerdatei im Fernzugriff <Formschlagwort>", "Online-Publikation", "Netzpublikation", "On-line-Publikation", "On-line-Dokument", "Online-Dokument" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

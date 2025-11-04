@@ -41,6 +41,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4185464-0",
       "label" : "Tiere <Motiv>",
+      "altLabel" : [ "Tier <Motiv>", "Tierdarstellung / Musik", "Tierdarstellung / Literatur" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -48,6 +49,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4029290-3",
       "label" : "Kalender",
+      "altLabel" : [ "Hauskalender", "Volkskalender" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

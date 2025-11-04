@@ -36,6 +36,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4515647-5",
       "label" : "Sankt Nikolaus (Koblenz)",
+      "altLabel" : [ "Sankt Nikolaus (Koblenz-Arenberg)", "Katholische Pfarr- und Wallfahrtskirche Sankt Nikolaus (Koblenz)", "St. Nikolaus (Koblenz)", "Wallfahrtskirche St. Nikolaus Arenberg (Koblenz)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -32,6 +32,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118726692",
       "label" : "Laukhard, Friedrich Christian",
+      "altLabel" : [ "Laukhard, Fridericus Christianus Henricus", "Laukhard, Friederich Christian von", "Raukuharuto, Furīdorihi Kurisutian", "Laukhard, F. C.", "Laukhard, Friederich Christian", "Laukhard, Friedrich Christian Heinrich", "Laukhard, Frédérick-Christian", "Laukhard, Frédéric-Christian", "Lauckhard, Friedrich Christian", "Lauckhardt, Friedrich Christian Heinrich", "Lauckhardt, Fridericus Christianus Henricus", "Lavckhardt, Fridericvs Christianvs Henricvs", "Laukhard, Friderich Christian", "Laukhard, F. Ch.", "Laukhard, ...", "Laukhard" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -39,6 +40,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4006804-3",
       "label" : "Biografie",
+      "altLabel" : [ "Berühmte Persönlichkeit / Biografie", "Biographisches Nachschlagewerk", "Biographie", "Biografisches Nachschlagewerk", "Lebensbeschreibung" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -41,6 +41,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4114333-4",
       "label" : "Kunst",
+      "altLabel" : [ "Kunstdenkmal <Kunst>", "Bildende Kunst" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -48,6 +49,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4143413-4",
       "label" : "Aufsatzsammlung",
+      "altLabel" : [ "Beiträge <Formschlagwort>", "Einzelbeiträge", "Sammelwerk <Formschlagwort>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -59,6 +61,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118605364",
       "label" : "Sander, August",
+      "altLabel" : [ "Zander, August", "Zander, Avgust" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

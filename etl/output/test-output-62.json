@@ -29,6 +29,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4839067-7",
       "label" : "Sankt-Johannes-Grundschule Erpel",
+      "altLabel" : [ "GS Erpel", "Johannes-Schule Erpel", "Grundschule Erpel", "St.-Johannes-Grundschule Erpel", "St.-Johannes-Schule" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -62,6 +63,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/10120647-1",
       "label" : "St.-Johannes-Grundschule (Erpel)",
+      "altLabel" : [ "Grundschule St. Johannes (Erpel)", "Johannes-Grundschule (Erpel)", "Sankt-Johannes-Grundschule (Erpel)" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

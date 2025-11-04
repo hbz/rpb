@@ -28,6 +28,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4061836-5",
       "label" : "Unkel",
+      "altLabel" : [ "Unkel am Rhein", "Unkel (Rhein)", "Unkel, Rhein" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -35,6 +36,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/118942247",
       "label" : "Niedecken, Wolfgang",
+      "altLabel" : [ "Niedecken, W.", "Niedecken" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -42,6 +44,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4006804-3",
       "label" : "Biografie",
+      "altLabel" : [ "Berühmte Persönlichkeit / Biografie", "Biographisches Nachschlagewerk", "Biographie", "Biografisches Nachschlagewerk", "Lebensbeschreibung" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

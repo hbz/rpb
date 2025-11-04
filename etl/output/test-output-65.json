@@ -27,6 +27,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10179791-6",
       "label" : "Sport-Club 1957 (Wassenach)",
+      "altLabel" : [ "SC Wassenach 1957", "SC (Wassenach)", "Sport-Club (Wassenach)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -60,6 +61,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/10179791-6",
       "label" : "Sport-Club 1957 (Wassenach)",
+      "altLabel" : [ "SC Wassenach 1957", "SC (Wassenach)", "Sport-Club (Wassenach)" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

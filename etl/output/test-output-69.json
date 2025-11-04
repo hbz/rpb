@@ -36,6 +36,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10361782-6",
       "label" : "Deutsches Rotes Kreuz. Ortsverein Adenau",
+      "altLabel" : [ "DRK-Ortsverein (Adenau)", "Deutsches Rotes Kreuz (Adenau)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -62,6 +63,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/10361782-6",
       "label" : "Deutsches Rotes Kreuz. Ortsverein Adenau",
+      "altLabel" : [ "DRK-Ortsverein (Adenau)", "Deutsches Rotes Kreuz (Adenau)" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

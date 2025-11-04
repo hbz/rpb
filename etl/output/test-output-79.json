@@ -17,6 +17,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4040354-3",
       "label" : "Most",
+      "altLabel" : [ "Traubenmost" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -24,6 +25,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4167045-0",
       "label" : "Lebensmittelverarbeitung",
+      "altLabel" : [ "Lebensmittel / Verarbeitung" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -38,6 +40,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4009816-3",
       "label" : "Chemie",
+      "altLabel" : [ "Allgemeine Chemie" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -45,6 +48,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4065133-2",
       "label" : "Wein",
+      "altLabel" : [ "Weine" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -52,6 +56,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4432509-5",
       "label" : "Weinlese",
+      "altLabel" : [ "Traubenernte", "Traubenlese", "Weintraube / Ernte" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -59,6 +64,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4343361-3",
       "label" : "Lebensmittelqualität",
+      "altLabel" : [ "Nahrungsmittelqualität", "Lebensmittel / Qualität" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

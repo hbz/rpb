@@ -9,7 +9,8 @@ do once("map")
 
   put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"1")
   put_filemap("./RPB-Export_HBZ_SW.tsv", "sw-rpb-variants_map", sep_char: "\t", allow_empty_values: "true", expected_columns:"3", key_column:"0", value_column:"2")
-  put_filemap("./maps/gndId-to-label.tsv", "sw-gnd_map", "sep_char": "\t")
+  put_filemap("./maps/gndId-to-label.tsv", "sw-gnd_map", "sep_char": "\t", expected_columns:"-1", key_column:"0", value_column:"1")
+  put_filemap("./maps/gndId-to-label.tsv", "sw-gnd-variants_map", "sep_char": "\t", expected_columns:"-1", key_column:"0", value_column:"2")
 end
 
 do put_macro("move_here")
@@ -31,6 +32,11 @@ do put_macro("add_labels")
   copy_field("$[field].id", "$[field].altLabel[]")
   call_macro("normalize", field: "$[field].altLabel[]", from: "-", to: "n")
   lookup("$[field].altLabel[]", "sw-rpb-variants_map", delete: "true")
+  unless exists("$[field].altLabel[]")
+    copy_field("$[field].id", "$[field].altLabel[]")
+    call_macro("normalize", field: "$[field].altLabel[]", from: "-", to: "-")
+    lookup("$[field].altLabel[]", "sw-gnd-variants_map", delete: "true")
+  end
   split_field("$[field].altLabel[]", "; ")
 end
 

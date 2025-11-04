@@ -28,6 +28,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/7746576-3",
       "label" : "Sankt Barbara (Hainfeld, Südliche Weinstraße)",
+      "altLabel" : [ "Barbarakirche Hainfeld (Südliche Weinstraße)", "Kath. Pfarrkirche St. Barbara (Hainfeld, Südliche Weinstraße)", "Katholische Pfarrkirche Sankt Barbara (Hainfeld, Südliche Weinstraße)", "St. Barbara (Hainfeld, Südliche Weinstraße)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -42,6 +43,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4135651-2",
       "label" : "Taufbecken",
+      "altLabel" : [ "Taufbrunnen", "Taufstein" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -61,6 +63,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
       "label" : "Müller, Carl Werner",
+      "altLabel" : [ "Müller, Carl W.", "Müller, C. W." ],
       "type" : [ "Person" ]
     },
     "role" : {

@@ -61,6 +61,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
       "label" : "Müller, Carl Werner",
+      "altLabel" : [ "Müller, Carl W.", "Müller, C. W." ],
       "type" : [ "Person" ]
     },
     "role" : {

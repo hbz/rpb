@@ -29,6 +29,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136595545",
       "label" : "Kussmaul, Heiner",
+      "altLabel" : [ "Kußmaul, Heiner W." ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -36,6 +37,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4491668-1",
       "label" : "Wied-Gebiet",
+      "altLabel" : [ "Wied (Fluss, Region)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -43,6 +45,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4037220-0",
       "label" : "Malerei",
+      "altLabel" : [ "Tafelbild <Malerei>", "Holztafelmalerei", "Tafelmalerei" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -50,6 +53,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4129601-1",
       "label" : "Ausstellung",
+      "altLabel" : [ "Sonderausstellung", "Ausstellungen" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -64,6 +68,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4139307-7",
       "label" : "CD-ROM",
+      "altLabel" : [ "Optical disc <Formschlagwort>", "Optischer Plattenspeicher <Formschlagwort>", "Optische Speicherplatte <Formschlagwort>", "Laser optical disc <Formschlagwort>", "Daten-CD", "Bildplatte <Optische Speicherplatte, Formschlagwort>", "Compact Disc / ROM", "Compact Disc / Nur-Lese-Speicher", "Optische Platte <Formschlagwort>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -75,6 +80,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/136596061",
       "label" : "Kussmaul, Yvonne",
+      "altLabel" : [ "Kußmaul, Yvonne" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -82,6 +88,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4491668-1",
       "label" : "Wied-Gebiet",
+      "altLabel" : [ "Wied (Fluss, Region)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -89,6 +96,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4037220-0",
       "label" : "Malerei",
+      "altLabel" : [ "Tafelbild <Malerei>", "Holztafelmalerei", "Tafelmalerei" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -96,6 +104,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4129601-1",
       "label" : "Ausstellung",
+      "altLabel" : [ "Sonderausstellung", "Ausstellungen" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -110,6 +119,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4139307-7",
       "label" : "CD-ROM",
+      "altLabel" : [ "Optical disc <Formschlagwort>", "Optischer Plattenspeicher <Formschlagwort>", "Optische Speicherplatte <Formschlagwort>", "Laser optical disc <Formschlagwort>", "Daten-CD", "Bildplatte <Optische Speicherplatte, Formschlagwort>", "Compact Disc / ROM", "Compact Disc / Nur-Lese-Speicher", "Optische Platte <Formschlagwort>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -129,6 +139,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/136595545",
       "label" : "Kussmaul, Heiner",
+      "altLabel" : [ "Kußmaul, Heiner W." ],
       "type" : [ "Person" ]
     },
     "role" : {
@@ -140,6 +151,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/136596061",
       "label" : "Kussmaul, Yvonne",
+      "altLabel" : [ "Kußmaul, Yvonne" ],
       "type" : [ "Person" ]
     },
     "role" : {

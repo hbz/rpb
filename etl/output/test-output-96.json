@@ -39,6 +39,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/11893869X",
       "label" : "Wunderlich, Fritz",
+      "altLabel" : [ "Wunderlich, Friedrich Karl Otto" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -46,6 +47,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4006804-3",
       "label" : "Biografie",
+      "altLabel" : [ "Berühmte Persönlichkeit / Biografie", "Biographisches Nachschlagewerk", "Biographie", "Biografisches Nachschlagewerk", "Lebensbeschreibung" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -27,6 +27,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/132394235",
       "label" : "Gensicke, Hellmuth",
+      "altLabel" : [ "Gensicke, Helmuth", "Gensicke, Hellmut", "Gensicke, Helmut", "Gensicke, Hermann Heinrich Hellmuth" ],
       "type" : [ "Person" ]
     },
     "role" : {

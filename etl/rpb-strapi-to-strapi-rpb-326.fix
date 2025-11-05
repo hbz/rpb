@@ -1,5 +1,6 @@
 do once()
     put_filemap("./maps/gndUri-to-broaderSpatial.tsv", "spatial_map", "sep_char": "\t")
+    put_filemap("./maps/gndUri-to-broaderSpatial-additional.tsv", "spatial_map_additional", "sep_char": "\t")
 end
 
 do put_macro('add_subjectComponentList')
@@ -41,6 +42,11 @@ do list_as(spatial: 'data.spatial[].*')
             if any_match('_orig_spatial.value', 'https://d-nb.info/gnd/(4116352-7|4766893-3|4028836-5)')
                 call_macro("add_subjectComponentList", gndUri: "$[gndUri]")
             end
+        end
+        # Task 4: add subjectComponentList or subjectComponent for additional entries
+        lookup('_orig_spatial.value', 'spatial_map_additional', delete: 'true')
+        if exists('_orig_spatial.value')
+            call_macro("add_subjectComponentList", gndUri: "$[gndUri]")
         end
     end
     # ID and label are managed by Strapi, we only update 'spatial.value':

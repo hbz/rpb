@@ -28,6 +28,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5114232-6",
       "label" : "KKG Rot-Weiß-Grün Kowelenzer Schängelcher",
+      "altLabel" : [ "Kowelenzer Schängelcher", "KG Kowelenzer Schängelcher", "KKG Kowelenzer Schängelcher (KKG Rot-Weiß-Grün Kowelenzer Schängelcher)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -33,6 +33,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118744615",
       "label" : "Rethel, Alfred",
+      "altLabel" : [ "Rethel, A.", "Rethel, ..." ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -40,6 +41,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4123412-1",
       "label" : "Illustration",
+      "altLabel" : [ "Bildmaterial <Buchkunst>", "Illustrationen", "Abbildung <Buchkunst>", "Bebilderung", "Buch / Illustration", "Buchillustrationen", "Wissenschaftliche Illustration", "Buchillustration" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -47,6 +49,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4036042-8",
       "label" : "Lithografie",
+      "altLabel" : [ "Lithographie", "Steindruck" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -54,6 +57,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/7743324-5",
       "label" : "Rheinischer Sagenkreis",
+      "altLabel" : [ "Rheinischer Sagenkreis : ein Zyklus von Romanzen, Balladen und Legenden des Rheins", "Rheinischer Sagenkreis : ein Ciclus von Romanzen, Balladen und Legenden des Rheins" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -61,6 +65,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4159043-0",
       "label" : "Pressendruck",
+      "altLabel" : [ "Malerbuch <Formschlagwort>", "Handpressendruck" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -80,6 +85,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/116002468",
       "label" : "Stolterfoth, Adelheid von",
+      "altLabel" : [ "Zwierlein, Adelheid Wilhelmine Julie von", "Stolterfoth, Wilhelmine Julie Adelheid von", "Zwierlein, Adelheid von" ],
       "type" : [ "Person" ]
     },
     "role" : {
@@ -102,6 +108,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/118702424",
       "label" : "Dielmann, Jakob Fürchtegott",
+      "altLabel" : [ "Dielmann, J.", "Dielmann, Jakob F.", "Dielmann, ...", "Dielmann, J. F.", "Dielmann, Jacob Fürchtegott" ],
       "type" : [ "Person" ]
     },
     "role" : {

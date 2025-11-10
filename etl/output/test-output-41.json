@@ -38,6 +38,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/5325261-5",
       "label" : "Verein für Rasenspiele Speyer 1950",
+      "altLabel" : [ "VfR (Speyer)", "VfR Speyer 1950", "Verein für Rasenspiele (Speyer)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -52,6 +53,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
       "label" : "Zeitschrift",
+      "altLabel" : [ "Zeitschriften", "Periodikum" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -71,6 +73,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/5325261-5",
       "label" : "Verein für Rasenspiele Speyer 1950",
+      "altLabel" : [ "VfR (Speyer)", "VfR Speyer 1950", "Verein für Rasenspiele (Speyer)" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

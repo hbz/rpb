@@ -46,6 +46,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/2038546-8",
       "label" : "Landkreis Daun",
+      "altLabel" : [ "Kreis Daun" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

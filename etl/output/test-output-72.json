@@ -41,6 +41,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/2075606-9",
       "label" : "Ferdinand Pieroth, Weingut - Weinkellerei",
+      "altLabel" : [ "Pieroth, Weingut - Weinkellerei", "F. Pieroth Weingut - Weinkellerei", "Ferdinand-Pieroth-Weingut, Weinkellerei", "Weingut - Weinkellerei Ferdinand Pieroth", "Pieroth, The Wine Company" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

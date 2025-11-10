@@ -31,6 +31,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/10066624-3",
       "label" : "Technische Universität Kaiserslautern",
+      "altLabel" : [ "Kaiserslautern University of Technology", "TU Kaiserslautern", "University of Technology (Kaiserslautern)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -45,6 +46,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4155569-7",
       "label" : "Führer",
+      "altLabel" : [ "Reiseführer <Formschlagwort>", "Stadtführer" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -64,6 +66,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/26332-1",
       "label" : "Universität Kaiserslautern",
+      "altLabel" : [ "University of Kaiserslautern", "Friedrich-Engels-Universität Kaiserslautern" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

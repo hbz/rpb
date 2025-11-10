@@ -47,6 +47,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/7500776-9",
       "label" : "Rhein-Burgen-Wanderweg",
+      "altLabel" : [ "Rheinburgenweg", "Rheinburgenwanderweg" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -54,6 +55,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4064532-0",
       "label" : "Wandern",
+      "altLabel" : [ "Wanderung", "Fernwandern" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

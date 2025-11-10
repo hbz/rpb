@@ -35,6 +35,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4102224-5",
       "label" : "Moseltal",
+      "altLabel" : [ "Mosel / Tal" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -42,6 +43,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4065136-8",
       "label" : "Weinbau",
+      "altLabel" : [ "Rebbau", "Weinanbau" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

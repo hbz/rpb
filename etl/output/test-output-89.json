@@ -39,6 +39,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4327809-7",
       "label" : "Mühlstein",
+      "altLabel" : [ "Mahlstein" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -53,6 +54,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4033914-2",
       "label" : "Laacher See (Region)",
+      "altLabel" : [ "Laacher-See-Gebiet" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -36,6 +36,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
       "label" : "Online-Ressource",
+      "altLabel" : [ "Computerdatei im Fernzugriff <Formschlagwort>", "Online-Publikation", "Netzpublikation", "On-line-Publikation", "On-line-Dokument", "Online-Dokument" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

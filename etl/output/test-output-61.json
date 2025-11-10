@@ -30,6 +30,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4084812-7",
       "label" : "Ahrtal",
+      "altLabel" : [ "Ahr / Tal" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -37,6 +38,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4031952-0",
       "label" : "Komödie",
+      "altLabel" : [ "Lustspiel", "Komödien" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

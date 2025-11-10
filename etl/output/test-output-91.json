@@ -38,6 +38,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4014614-5",
       "label" : "Bad Ems",
+      "altLabel" : [ "Ems", "Stadt Bad Ems" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -52,6 +53,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4141451-2",
       "label" : "Adressbuch",
+      "altLabel" : [ "Einwohnerbuch", "Adressbücher", "Adressverzeichnis", "Anschrift / Verzeichnis", "Adressenverzeichnis" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

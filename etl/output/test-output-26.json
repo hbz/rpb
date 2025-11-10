@@ -36,6 +36,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4127289-4",
       "label" : "Hambacher Fest",
+      "altLabel" : [ "Hambacher Nationalfest" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -43,6 +44,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4094596-0",
       "label" : "Hambacher Schloss (Neustadt an der Weinstraße)",
+      "altLabel" : [ "Kestenburg (Neustadt an der Weinstraße)", "Schloss Hambach (Neustadt an der Weinstraße)", "Maxburg (Neustadt an der Weinstraße)", "Kästenburg (Neustadt an der Weinstraße)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

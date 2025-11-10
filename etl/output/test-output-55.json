@@ -44,6 +44,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4011457-0",
       "label" : "Denkmalschutz",
+      "altLabel" : [ "Denkmalrecht", "Denkmalschutzrecht" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -58,6 +59,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4454409-1",
       "label" : "Private Investition",
+      "altLabel" : [ "Privater / Investition", "Privatinvestition" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

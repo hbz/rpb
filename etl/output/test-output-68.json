@@ -41,6 +41,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4076778-4",
       "label" : "Römisches Reich",
+      "altLabel" : [ "Reich Rom", "Imperium Romanum", "Römisches Reich / Antike", "Italien / Geschichte 753 v. Chr.-500" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -48,6 +49,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4077781-9",
       "label" : "Staatsgrenze",
+      "altLabel" : [ "Staatsgrenzen" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -59,6 +61,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4035758-2",
       "label" : "Limes",
+      "altLabel" : [ "Grenzbefestigung Römisches Reich", "Limes Römisches Reich" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

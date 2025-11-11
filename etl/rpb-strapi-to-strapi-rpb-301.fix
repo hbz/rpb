@@ -1,0 +1,21 @@
+put_var('gndPattern', 'https://d-nb.info/gnd/([0-9]+)nX')
+
+do list_as('subjectComponentList': 'data.subjectComponentList[].*')
+    do list_as('subject': 'subjectComponentList.subjectComponent[].*')
+        if all_match('subject.value', '$[gndPattern]')
+            replace_all('subject.value', '$[gndPattern]', 'https://d-nb.info/gnd/$1-X')
+            set_field('_changed', 'true')
+        end
+        # ID and label are managed by Strapi, we only update 'subject.value':
+        remove_field('subject.id')
+        remove_field('subject.label')
+    end
+    remove_field('subjectComponentList.id')
+    remove_field('subjectComponentList.label')
+end
+unless exists('_changed')
+    reject()
+end
+uniq('data.subjectComponentList[]')
+copy_field('data.id', 'id')
+retain('data.subjectComponentList[]', 'id')

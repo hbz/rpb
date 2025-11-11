@@ -1,30 +1,30 @@
 do once()
-    put_rdfmap('etl/maps/rpb-spatial.ttl', 'spatial_map', target:'skos:prefLabel', select_language:'de')
+    put_rdfmap('etl/maps/rpb-spatial.ttl', 'spatial_map', 'target': 'skos:prefLabel', 'select_language': 'de')
 end
 
-do put_macro("update_if_spatial_value_in_spatial_map")
-    copy_field('spatial.value', _label)
-    lookup(_label, 'spatial_map', delete: 'true')
-    if exists(_label)
-        set_field(_changed, 'true')
+do put_macro('update_if_spatial_value_in_spatial_map')
+    copy_field('spatial.value', '_label')
+    lookup('_label', 'spatial_map', 'delete': 'true')
+    if exists('_label')
+        set_field('_changed', 'true')
     end
 end
 
-do list_as(spatial: 'data.spatial[].*')
+do list_as('spatial': 'data.spatial[].*')
     if all_match('spatial.value', '^_.+?_ _.+_$')
         # Case 1: '_r19_ _00Sn02m0557a_' -> 'https://rpb.lobid.org/spatial#n00Sn02m0557a'
         replace_all('spatial.value', '_.+?_ _(.+)_$', 'https://rpb.lobid.org/spatial#n$1')
-        call_macro("update_if_spatial_value_in_spatial_map")
+        call_macro('update_if_spatial_value_in_spatial_map')
     elsif all_match('spatial.value', '^https://d-nb.info/gnd/.+')
         # Case 2: 'https://d-nb.info/gnd/4076027-3' -> 'https://rpb.lobid.org/spatial#n4076027n3'
         replace_all('spatial.value', 'https://d-nb.info/gnd/([0-9]+)-([0-9]+|X)', 'https://rpb.lobid.org/spatial#n$1n$2')
-        call_macro("update_if_spatial_value_in_spatial_map")
+        call_macro('update_if_spatial_value_in_spatial_map')
     end
     # ID and label are managed by Strapi, we only update 'spatial.value':
     remove_field('spatial.id')
     remove_field('spatial.label')
 end
-unless exists(_changed)
+unless exists('_changed')
     reject()
 end
 uniq('data.spatial[]')

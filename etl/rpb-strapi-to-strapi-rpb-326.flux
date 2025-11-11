@@ -19,27 +19,27 @@ end
 do put_macro('filter_spatial')
     set_array('$[to]')
     copy_field('f31?', '$[to].$append')
-    filter('$[to]', '^_r(..)_$', invert: 'true')
+    filter('$[to]', '^_r(..)_$', 'invert': 'true')
 end
 
-call_macro('filter_spatial', to: 'spatial')
+call_macro('filter_spatial', 'to': 'spatial')
 replace_all('spatial.*','^_r[0-9]{2}_ _([0-9]*)n([0-9]|X)_$','https://d-nb.info/gnd/$1-$2')
 replace_all('spatial.*','^_r[0-9]{2}_ _([0-9]*)_$','https://d-nb.info/gnd/$1')
 lookup('spatial.*',
     'https://d-nb.info/gnd/4680138-8': 'https://d-nb.info/gnd/4116352-7',
     'https://d-nb.info/gnd/4108134-1': 'https://d-nb.info/gnd/4766893-3',
     'https://d-nb.info/gnd/4028839-0': 'https://d-nb.info/gnd/4028836-5')
-filter(spatial, '^http')
+filter('spatial', '^http')
 
-if is_empty(spatial)
+if is_empty('spatial')
     reject()
 end
 
-call_macro('filter_spatial', to: 'broader')
+call_macro('filter_spatial', 'to': 'broader')
 replace_all('broader.*','^_r(96|99)_ _([0-9]*(n([0-9]|X)?))_$','https://rpb.lobid.org/spatial#n$2')
-filter('broader', '^_r(96|99)_.*', invert: 'true') # non-GND 96/99
+filter('broader', '^_r(96|99)_.*', 'invert': 'true') # non-GND 96/99
 replace_all('broader.*','^_r([0-9]{2})_ _.+_$','https://rpb.lobid.org/spatial#n$1')
-filter(broader, '^http')
+filter('broader', '^http')
 
 retain('spatial.1', 'broader.1')
 

@@ -1,6 +1,6 @@
-do put_macro("update")
+do put_macro('update')
     if all_match('spatial.value', '^$[from]$')
-        set_field(_changed, 'true')
+        set_field('_changed', 'true')
         copy_field('spatial.value', '_spatial.value')
         set_field('spatial.value', '$[to]')
         if is_empty('data.subjectComponentList[]')
@@ -17,18 +17,18 @@ do put_macro("update")
 end
 
 do list_as(spatial: 'data.spatial[].*')
-    call_macro("update", from: "https://d-nb.info/gnd/4680138-8", to: "https://rpb.lobid.org/spatial#n4116352n7")
-    call_macro("update", from: "https://d-nb.info/gnd/4108134-1", to: "https://rpb.lobid.org/spatial#n4766893n3")
-    call_macro("update", from: "https://d-nb.info/gnd/4028839-0", to: "https://rpb.lobid.org/spatial#n4028836n5")
+    call_macro('update', 'from': 'https://d-nb.info/gnd/4680138-8', 'to': 'https://rpb.lobid.org/spatial#n4116352n7')
+    call_macro('update', 'from': 'https://d-nb.info/gnd/4108134-1', 'to': 'https://rpb.lobid.org/spatial#n4766893n3')
+    call_macro('update', 'from': 'https://d-nb.info/gnd/4028839-0', 'to': 'https://rpb.lobid.org/spatial#n4028836n5')
 end
-unless exists(_changed)
+unless exists('_changed')
     reject()
 end
 uniq('data.spatial[]')
-do list_as(subjectComponentList: 'data.subjectComponentList[].*')
+do list_as('subjectComponentList': 'data.subjectComponentList[].*')
     remove_field('subjectComponentList.id')
     remove_field('subjectComponentList.label')
-    do list_as(subjectComponent: 'subjectComponentList.subjectComponent[].*')
+    do list_as('subjectComponent': 'subjectComponentList.subjectComponent[].*')
         remove_field('subjectComponent.id')
         remove_field('subjectComponent.label')
     end

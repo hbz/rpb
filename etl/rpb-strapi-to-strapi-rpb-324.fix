@@ -1,6 +1,6 @@
-do list_as(spatial: 'data.spatial[].*')
+do list_as('spatial': 'data.spatial[].*')
     if all_match('spatial.value', '^_r.+?_ _.+_$')
-        set_field(_changed, 'true')
+        set_field('_changed', 'true')
         copy_field('spatial.value', '_spatial.value')
         # Task 1: '_r30_ _2071807nX_' -> set spatial: 'https://rpb.lobid.org/spatial#n30'
         replace_all('spatial.value', '_r(.+?)_ _.+_$', 'https://rpb.lobid.org/spatial#n$1')
@@ -25,14 +25,14 @@ do list_as(spatial: 'data.spatial[].*')
     remove_field('spatial.id')
     remove_field('spatial.label')
 end
-unless exists(_changed)
+unless exists('_changed')
     reject()
 end
 uniq('data.spatial[]')
-do list_as(subjectComponentList: 'data.subjectComponentList[].*')
+do list_as('subjectComponentList': 'data.subjectComponentList[].*')
     remove_field('subjectComponentList.id')
     remove_field('subjectComponentList.label')
-    do list_as(subjectComponent: 'subjectComponentList.subjectComponent[].*')
+    do list_as('subjectComponent': 'subjectComponentList.subjectComponent[].*')
         remove_field('subjectComponent.id')
         remove_field('subjectComponent.label')
     end

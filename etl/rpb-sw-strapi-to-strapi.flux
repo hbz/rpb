@@ -22,7 +22,7 @@ end
 unless exists('data.variantName[]')
     set_array('data.variantName[]')
 end
-do list_as(variantName: 'data.variantName[]')
+do list_as('variantName': 'data.variantName[]')
   remove_field('variantName.id')
 end
 move_field('_temp', 'data.variantName[].$append.value')

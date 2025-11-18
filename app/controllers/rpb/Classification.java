@@ -461,7 +461,7 @@ public class Classification {
 							: "<span class='notation'>" + notation + "</span>" + " ")
 							+ label.findValue("@value").asText(), //
 					"hits",
-					Lobid.getTotalHitsRpbClassification(Lobid.rpbSpatialGndToRealGnd(id)), //
+					Lobid.getTotalHitsRpbClassification(id), //
 					"notation", notation, //
 					"focus", focus(json));
 			result.add(Json.toJson(map));

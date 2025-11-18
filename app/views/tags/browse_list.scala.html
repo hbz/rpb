@@ -82,7 +82,7 @@
                     case _ => value
                  }}">@Html(entryLabel)</a> @if(hits>0){
                  (<a href="@{t match {
-                    case "Raumsystematik" => rpb.routes.Application.search(rpbspatial=Lobid.rpbSpatialGndToRealGnd(value))
+                    case "Raumsystematik" => rpb.routes.Application.search(rpbspatial=value)
                     case "Sachsystematik" => rpb.routes.Application.search(rpbsubject=value)
                     case _ => value
                  }}">@hits</a>)

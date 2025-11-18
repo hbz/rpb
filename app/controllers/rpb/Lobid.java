@@ -804,7 +804,4 @@ public class Lobid {
 		return Integer.parseInt(s.replaceAll("\\D", "9"));
 	}
 
-	public static String rpbSpatialGndToRealGnd(String id) {
-		return id.replaceAll("https://rpb.lobid.org/spatial#n(\\d+)n(\\d)", "https://d-nb.info/gnd/$1-$2");
-	}
 }

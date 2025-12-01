@@ -296,7 +296,7 @@
 
   @subjects(
     ((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()) ++ (doc \ "natureOfContent").asOpt[Seq[JsValue]].getOrElse(Seq()))
-    .filter(v => !(v \ "source").toString.matches(".*(Systematik|Notationen|Sachgruppen|klassifikation).*")))
+    .filter(v => !(v \ "source").toString.matches(".*([Ss]ystematik|Notationen|Sachgruppen|klassifikation).*")))
 
   @result_field("Schlagwortfolge", "subjectChain", doc, TableRow.VALUES, valueLabel = Option(Seq()))
 

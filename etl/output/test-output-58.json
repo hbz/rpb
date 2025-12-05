@@ -34,6 +34,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4074902-2",
       "label" : "Mittelrhein-Gebiet",
+      "altLabel" : [ "Mittelrheinlande", "Mittleres Rheinland", "Mittelrhein (Region)", "Mittelrheinland" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -41,6 +42,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4611904-8",
       "label" : "Altkarte",
+      "altLabel" : [ "Alte Karte", "Historische Karte <Formangabe>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -48,6 +50,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
       "label" : "Online-Ressource",
+      "altLabel" : [ "Computerdatei im Fernzugriff <Formschlagwort>", "Online-Publikation", "Netzpublikation", "On-line-Publikation", "On-line-Dokument", "Online-Dokument" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -66,6 +69,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4611904-8",
       "label" : "Altkarte",
+      "altLabel" : [ "Alte Karte", "Historische Karte <Formangabe>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -73,6 +77,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
       "label" : "Online-Ressource",
+      "altLabel" : [ "Computerdatei im Fernzugriff <Formschlagwort>", "Online-Publikation", "Netzpublikation", "On-line-Publikation", "On-line-Dokument", "Online-Dokument" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -91,6 +96,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4611904-8",
       "label" : "Altkarte",
+      "altLabel" : [ "Alte Karte", "Historische Karte <Formangabe>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -98,6 +104,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
       "label" : "Online-Ressource",
+      "altLabel" : [ "Computerdatei im Fernzugriff <Formschlagwort>", "Online-Publikation", "Netzpublikation", "On-line-Publikation", "On-line-Dokument", "Online-Dokument" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

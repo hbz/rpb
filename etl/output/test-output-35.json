@@ -46,6 +46,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
       "label" : "Zeitschrift",
+      "altLabel" : [ "Zeitschriften", "Periodikum" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -65,6 +66,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/5166552-9",
       "label" : "SWF 3, Der Club",
+      "altLabel" : [ "SWF-Drei-Club", "SWF-3-Club", "SWF Drei, Der Club", "SWF-Drei, Der Club", "SWF3, Der Club" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

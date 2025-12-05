@@ -345,7 +345,7 @@ public class Application extends Controller {
 			String placeholder = "Register zur " + t + " filtern";
 			result = ok(browse_register.render(sorted.toString(), t, placeholder));
 		}
-		Cache.set("result." + t, result);
+		Cache.set("result." + t, result, ONE_DAY);
 		return result;
 	}
 
@@ -404,7 +404,7 @@ public class Application extends Controller {
 			}
 			result = classificationResult(t, placeholder);
 		}
-		Cache.set("classification." + t, result);
+		Cache.set("classification." + t, result, ONE_DAY);
 		return result;
 	}
 
@@ -439,7 +439,7 @@ public class Application extends Controller {
 				return internalServerError(e.getMessage());
 			}
 		}
-		Cache.set("download." + t, result);
+		Cache.set("download." + t, result, ONE_DAY);
 		return result;
 	}
 

@@ -32,6 +32,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4049788-4",
       "label" : "Rheinland",
+      "altLabel" : [ "Rheinlande (im engeren Sinn)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -39,6 +40,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4035964-5",
       "label" : "Literatur",
+      "altLabel" : [ "Sprachkunst", "Dichtung <Literatur>", "Belletristik", "Schöne Literatur", "Wortkunst" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -46,6 +48,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4002214-6",
       "label" : "Anthologie",
+      "altLabel" : [ "Lesebuch <Anthologie>", "Sammlung <Anthologie>", "Texte", "Chrestomathie" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -53,6 +56,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
       "label" : "Online-Ressource",
+      "altLabel" : [ "Computerdatei im Fernzugriff <Formschlagwort>", "Online-Publikation", "Netzpublikation", "On-line-Publikation", "On-line-Dokument", "Online-Dokument" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

@@ -32,6 +32,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/118607359",
       "label" : "Scheuren, Caspar",
+      "altLabel" : [ "Scheuren, Caspar J.", "Scheuren, Johann Caspar Nepomuk", "Scheuren, Johann Kaspar", "Scheuren, Caspar Johann Nepomuk", "Scheuren, Kaspar" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -39,6 +40,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4123412-1",
       "label" : "Illustration",
+      "altLabel" : [ "Bildmaterial <Buchkunst>", "Illustrationen", "Abbildung <Buchkunst>", "Bebilderung", "Buch / Illustration", "Buchillustrationen", "Wissenschaftliche Illustration", "Buchillustration" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -46,6 +48,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4279198-4",
       "label" : "Farblithografie",
+      "altLabel" : [ "Farbenlithographie", "Farblithographie", "Chromolithographie", "Chromolithografie", "Farbenlithografie" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -60,6 +63,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4036774-5",
       "label" : "Lyrik",
+      "altLabel" : [ "Poesie", "Gedichtwerk", "Gedicht <Lyrik>", "Lyrisches Werk", "Poem <Lyrik>", "Dichtung <Lyrik>", "Lyrikwerk" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -67,6 +71,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4002214-6",
       "label" : "Anthologie",
+      "altLabel" : [ "Lesebuch <Anthologie>", "Sammlung <Anthologie>", "Texte", "Chrestomathie" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -74,6 +79,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4159043-0",
       "label" : "Pressendruck",
+      "altLabel" : [ "Malerbuch <Formschlagwort>", "Handpressendruck" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -81,6 +87,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4511937-5",
       "label" : "Online-Ressource",
+      "altLabel" : [ "Computerdatei im Fernzugriff <Formschlagwort>", "Online-Publikation", "Netzpublikation", "On-line-Publikation", "On-line-Dokument", "Online-Dokument" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -100,6 +107,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/118607359",
       "label" : "Scheuren, Caspar",
+      "altLabel" : [ "Scheuren, Caspar J.", "Scheuren, Johann Caspar Nepomuk", "Scheuren, Johann Kaspar", "Scheuren, Caspar Johann Nepomuk", "Scheuren, Kaspar" ],
       "type" : [ "Person" ]
     },
     "role" : {

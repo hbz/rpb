@@ -38,6 +38,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4128022-2",
       "label" : "Bericht",
+      "altLabel" : [ "Berichte", "Jahresbericht <Formschlagwort>", "Berichtswesen", "Tätigkeitsbericht <Formschlagwort>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

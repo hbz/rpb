@@ -45,6 +45,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
       "label" : "Zeitschrift",
+      "altLabel" : [ "Zeitschriften", "Periodikum" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -64,6 +65,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/1033772-6",
       "label" : "Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland",
+      "altLabel" : [ "Hessische Landesanstalt für Umwelt (Wiesbaden). Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland", "Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland (Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland)", "Institut für Angewandte Vogelkunde (Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland)", "Hessische Landesanstalt für Umwelt (Wiesbaden). Institut für Angewandte Vogelkunde" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

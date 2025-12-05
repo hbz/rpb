@@ -29,6 +29,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4221819-6",
       "label" : "Mittelrheintal (Süd)",
+      "altLabel" : [ "Südliches Mittelrheintal", "Oberes Mittelrheintal", "Oberer-Mittelrhein-Tal", "Südliches mittleres Rheintal" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -36,6 +37,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4029290-3",
       "label" : "Kalender",
+      "altLabel" : [ "Hauskalender", "Volkskalender" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -47,6 +49,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4335389-7",
       "label" : "Briefmarkenserie",
+      "altLabel" : [ "Briefmarke / Serie" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -54,6 +57,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4029290-3",
       "label" : "Kalender",
+      "altLabel" : [ "Hauskalender", "Volkskalender" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

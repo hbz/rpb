@@ -27,6 +27,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4094596-0",
       "label" : "Hambacher Schloss (Neustadt an der Weinstraße)",
+      "altLabel" : [ "Kestenburg (Neustadt an der Weinstraße)", "Schloss Hambach (Neustadt an der Weinstraße)", "Maxburg (Neustadt an der Weinstraße)", "Kästenburg (Neustadt an der Weinstraße)" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -34,6 +35,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/118579347",
       "label" : "Maximilian II., Bayern, König",
+      "altLabel" : [ "Max II, King of Bavaria", "Maximilian Joseph II, König von Bayern", "Maximilian Joseph II, King of Bavaria", "Maximilian II., Bavière, Roi", "Maximilian II., Bavaria, King", "Max II, König von Bayern", "Max II., Bayern, König", "Maximilian, Bayern, Kronprinz", "Maximilian Joseph II, Roi de Bavière", "Maximilian Joseph II., Bayern, König", "Maximilian II, König von Bayern", "Maximilian II, King of Bavaria", "Max II, Roi de Bavière" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

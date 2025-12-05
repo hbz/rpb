@@ -62,6 +62,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4077814-9",
       "label" : "Stadtviertel",
+      "altLabel" : [ "Kiez", "Grätzl", "Wohnquartier", "Wohnviertel", "Ortsteil <Quartier>", "Stadtquartier", "Veedel", "Quartier <Städtebau>", "Stadtteil <Quartier>" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

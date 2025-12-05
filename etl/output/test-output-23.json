@@ -28,6 +28,7 @@
     "componentList" : [ {
       "id" : "https://d-nb.info/gnd/4595996-1",
       "label" : "Burgruine Neuscharfeneck",
+      "altLabel" : [ "Neu-Scharfeneck", "Neuscharfeneck", "Burgruine Neu-Scharfeneck", "Burg Neuscharfeneck" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -62,6 +63,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/11944027X",
       "label" : "Müller, Carl Werner",
+      "altLabel" : [ "Müller, Carl W.", "Müller, C. W." ],
       "type" : [ "Person" ]
     },
     "role" : {

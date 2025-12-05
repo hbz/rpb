@@ -46,6 +46,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4067488-5",
       "label" : "Zeitschrift",
+      "altLabel" : [ "Zeitschriften", "Periodikum" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
@@ -65,6 +66,7 @@
     "agent" : {
       "id" : "https://d-nb.info/gnd/5331496-7",
       "label" : "SWR-3-Club",
+      "altLabel" : [ "SWR-Drei-Club" ],
       "type" : [ "CorporateBody" ]
     },
     "role" : {

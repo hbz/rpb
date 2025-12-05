@@ -35,6 +35,7 @@
     }, {
       "id" : "https://d-nb.info/gnd/4155569-7",
       "label" : "Führer",
+      "altLabel" : [ "Reiseführer <Formschlagwort>", "Stadtführer" ],
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"

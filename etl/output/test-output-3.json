@@ -15,6 +15,7 @@
   "responsibilityStatement" : [ "by Adelheid von Stolterfoth. Embellished with twenty-one lithographic sketches, by Dielmann, from the designs of A. Rethel" ],
   "publication" : [ {
     "location" : [ "Frankfort o/M." ],
+    "dateStatement" : "1835",
     "startDate" : "1835",
     "publishedBy" : [ "Jugel" ],
     "type" : [ "PublicationEvent" ]

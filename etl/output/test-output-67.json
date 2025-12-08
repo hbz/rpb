@@ -13,6 +13,8 @@
   "extent" : "[12] S. : zahlr. Ill.",
   "publication" : [ {
     "location" : [ "Kirn" ],
+    "dateStatement" : "[2008]",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

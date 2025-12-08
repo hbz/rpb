@@ -16,6 +16,8 @@
   "responsibilityStatement" : [ "[Alfred von Reumont]. D'après les dessins des peintres de l' Ecole de Dusseldorf [Kretschmer del. ; Plüddemann del. ; Alfred Rethel del. ; Sonderland del.]" ],
   "publication" : [ {
     "location" : [ "Aix-la-Chapelle [u.a.]; Paris; Janet" ],
+    "dateStatement" : "[1838]",
+    "startDate" : "1838",
     "publishedBy" : [ "Kohnen [u.a.]" ],
     "type" : [ "PublicationEvent" ]
   } ],

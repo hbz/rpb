@@ -21,6 +21,7 @@
   "responsibilityStatement" : [ "Werner Pfister" ],
   "publication" : [ {
     "location" : [ "Mainz" ],
+    "dateStatement" : "2010",
     "startDate" : "2010",
     "publishedBy" : [ "Schott" ],
     "type" : [ "PublicationEvent" ]

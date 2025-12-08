@@ -12,6 +12,7 @@
   "responsibilityStatement" : [ "nach der Operette von Michael Thelen, Text. Musik Hans Wolf. Regie u. Bearb.: Gisbert Stenz" ],
   "publication" : [ {
     "location" : [ "[Ahrweiler]" ],
+    "dateStatement" : "2006",
     "startDate" : "2006",
     "publishedBy" : [ "Ahrtal-Video Faupel" ],
     "type" : [ "PublicationEvent" ]

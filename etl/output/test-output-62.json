@@ -12,6 +12,7 @@
   "responsibilityStatement" : [ "Grundschule St. Johannes" ],
   "publication" : [ {
     "location" : [ "Erpel" ],
+    "dateStatement" : "2006",
     "startDate" : "2006",
     "type" : [ "PublicationEvent" ]
   } ],

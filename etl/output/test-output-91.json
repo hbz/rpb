@@ -20,6 +20,7 @@
   "responsibilityStatement" : [ "Verein für Geschichte, Denkmal- u. Landschaftspflege e.V. Bad Ems" ],
   "publication" : [ {
     "location" : [ "Bad Ems" ],
+    "dateStatement" : "1989",
     "startDate" : "1989",
     "publishedBy" : [ "VGDL" ],
     "type" : [ "PublicationEvent" ]

@@ -14,6 +14,7 @@
   "responsibilityStatement" : [ "[Alfred von Reumont]. Ed. by Charles White. Eight engravings after original desings by painters of the Dusseldorf School. [Herrm Kretschmer inv. ; Alfred Rethel del. ; Sonderland del. ; Plüddemann del.]" ],
   "publication" : [ {
     "location" : [ "Aix-La Chapelle [u.a.]" ],
+    "dateStatement" : "1838",
     "startDate" : "1838",
     "publishedBy" : [ "Kohnen [u.a.]" ],
     "type" : [ "PublicationEvent" ]

@@ -11,6 +11,7 @@
   "title" : "Bericht über die erste ordentliche Hauptversammlung",
   "responsibilityStatement" : [ "[H. Heilmann]" ],
   "publication" : [ {
+    "dateStatement" : "1925",
     "startDate" : "1925",
     "type" : [ "PublicationEvent" ]
   } ],

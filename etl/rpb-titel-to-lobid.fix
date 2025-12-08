@@ -188,8 +188,10 @@ set_hash("pub")
 set_array("pub.location[]")
 copy_field("publicationLocation", "pub.location[].$append")
 trim("publicationDate")
-if all_match("publicationDate", "\\d{4}")
+if all_match("publicationDate", ".*\\d{3,4}.*")
+  copy_field("publicationDate", "pub.dateStatement")
   copy_field("publicationDate", "pub.startDate")
+  replace_all("pub.startDate", ".*?(\\d{3,4}).*", "$1")
 end
 
 # Folgendes rausgenommen wegen 929t130101, in dem sich publicationDate wiederholt

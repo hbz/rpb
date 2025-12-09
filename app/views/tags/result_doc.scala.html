@@ -38,7 +38,7 @@
   }
 }
 
-@optional(label: String, key: String, v: JsValue) = {
+@optional(key: String, v: JsValue) = {
   @defining((v\key).asOpt[Seq[JsValue]].getOrElse(Seq(v\key))) { elems =>
     @for(elem <- elems; elemString <- elem.asOpt[String]) {
       @(elemString)@if(elem!=elems.last){ | } else {<br/>}
@@ -47,37 +47,25 @@
 }
 
 @publication(pub: JsValue) = {
-  @defining(((pub\"startDate"),(pub\"endDate"))) { case (start,end) =>
-    <tr>
-      <td>
-        @if((pub \ "type").toString.contains("SecondaryPublicationEvent")){
-          Sekundärpublikation
-        } else {
-          Erschienen
-        }
-      </td>
-      <td>
-        @if(start != end && !(pub \ "type").toString.contains("SecondaryPublicationEvent") &&
-            ((start.asOpt[String].isDefined && end.asOpt[String].isDefined) ||
-            (doc\"type").toString.contains("Series") || (doc\"type").toString.contains("Periodical"))) {
-          @* Show range if either both start and end are given, or if we want open ranges like "- 2015" *@
-          @start.asOpt[String].getOrElse("") &ndash; @end.asOpt[String].getOrElse("")
-          <br/>
-        } else { @if(start.asOpt[String].isDefined || end.asOpt[String].isDefined) {
-          @* Otherwise show only one date, no range (no periodical or series, and just one date given) *@
-          @start.asOpt[String].getOrElse(end.asOpt[String].getOrElse(""))
-          <br/>
-        }}
-        @optional("Erscheinungsort", "location", pub)
-        @optional("Verlag", "publishedBy", pub)
-        @((pub\"frequency").asOpt[Seq[JsValue]].map { freq =>
-          optional("Erscheinungsweise", "label", freq.head)
-        })
-      </td>
-    </tr>
-    @if((pub\"publicationHistory").asOpt[JsValue].isDefined) {
-      @result_field("Erscheinungsverlauf", "publicationHistory", pub, TableRow.VALUES)
-    }
+  <tr>
+    <td>
+      @if((pub \ "type").toString.contains("SecondaryPublicationEvent")){
+        Sekundärpublikation
+      } else {
+        Erschienen
+      }
+    </td>
+    <td>
+      @optional("dateStatement", pub)
+      @optional("location", pub)
+      @optional("publishedBy", pub)
+      @((pub\"frequency").asOpt[Seq[JsValue]].map { freq =>
+        optional("label", freq.head)
+      })
+    </td>
+  </tr>
+  @if((pub\"publicationHistory").asOpt[JsValue].isDefined) {
+    @result_field("Erscheinungsverlauf", "publicationHistory", pub, TableRow.VALUES)
   }
 }
 

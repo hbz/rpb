@@ -12,6 +12,7 @@
   "title" : "Herzlich willkommen auf der Homepage der Ortsgemeinde Bonefeld [Elektronische Ressource]",
   "note" : [ "edoweb - Rheinland-pfälzischer Archivserver für elektronische Dokumente und Websites", "http://www.bonefeld.de/" ],
   "publication" : [ {
+    "dateStatement" : "0000",
     "startDate" : "0000",
     "type" : [ "PublicationEvent" ]
   } ],

@@ -12,6 +12,7 @@
   "alternativeTitle" : [ "Zweitausend Jahre Meilbrück" ],
   "extent" : "Ill.",
   "publication" : [ {
+    "dateStatement" : "1990",
     "startDate" : "1990",
     "type" : [ "PublicationEvent" ]
   } ],

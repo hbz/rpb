@@ -22,6 +22,7 @@
   "responsibilityStatement" : [ "Manfred Böckling" ],
   "publication" : [ {
     "location" : [ "Ostfildern" ],
+    "dateStatement" : "2012",
     "startDate" : "2012",
     "publishedBy" : [ "DuMont Reiseverlag" ],
     "type" : [ "PublicationEvent" ]

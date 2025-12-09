@@ -25,6 +25,7 @@
   "title" : "Adressbuch der Stadt Ems : in 3 Heften : 3 ([1989])",
   "extent" : "S. 86 - 128",
   "publication" : [ {
+    "dateStatement" : "1989",
     "startDate" : "1989",
     "type" : [ "PublicationEvent" ]
   } ]

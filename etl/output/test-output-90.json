@@ -21,6 +21,7 @@
   "responsibilityStatement" : [ "hrsg. von Susanne Schreier im Auftr. der Stiftung Stadt Wittlich" ],
   "publication" : [ {
     "location" : [ "Wittlich" ],
+    "dateStatement" : "1997",
     "startDate" : "1997",
     "publishedBy" : [ "Stiftung Stadt Wittlich" ],
     "type" : [ "PublicationEvent" ]

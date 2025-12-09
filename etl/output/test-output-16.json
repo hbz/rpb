@@ -10,6 +10,7 @@
   } ],
   "title" : "Sprendlinger Chronik",
   "publication" : [ {
+    "dateStatement" : "1965",
     "startDate" : "1965",
     "type" : [ "PublicationEvent" ]
   } ],

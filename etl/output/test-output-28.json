@@ -10,6 +10,7 @@
   } ],
   "title" : "Hambacher Schloß. Wiedergeburt 1982 [Tagebuch der Renovierung]",
   "publication" : [ {
+    "dateStatement" : "1982",
     "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],

@@ -12,6 +12,7 @@
   "title" : "Clubzeitung",
   "publication" : [ {
     "location" : [ "Neuwied" ],
+    "dateStatement" : "2006",
     "startDate" : "2006",
     "type" : [ "PublicationEvent" ]
   } ],

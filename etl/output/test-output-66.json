@@ -14,6 +14,8 @@
   "responsibilityStatement" : [ "Alten- und Pflegeheim St. Barbara Koblenz. [Autoren: Ulrich Keller ... ]" ],
   "publication" : [ {
     "location" : [ "Koblenz" ],
+    "dateStatement" : "[2008]",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

@@ -29,7 +29,7 @@ Transform RPB test data:
 sbt "runMain rpb.ETL etl/rpb-test-titel-to-lobid.flux"
 ```
 
-Transform RPPB test data:
+Transform RPPD test data:
 
 ```bash
 sbt "runMain rpb.ETL etl/rppd-test-to-lobid.flux"

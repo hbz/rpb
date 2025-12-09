@@ -15,6 +15,8 @@
   "responsibilityStatement" : [ "Guido Naschert (Hg.)" ],
   "publication" : [ {
     "location" : [ "Paderborn" ],
+    "dateStatement" : "[2017]",
+    "startDate" : "2017",
     "publishedBy" : [ "Ferdinand Schöningh" ],
     "type" : [ "PublicationEvent" ]
   } ],

@@ -15,6 +15,7 @@
   "responsibilityStatement" : [ "David J. Breeze, Sonja Jilek and Andreas Thiel" ],
   "publication" : [ {
     "location" : [ "Edinburgh" ],
+    "dateStatement" : "2005",
     "startDate" : "2005",
     "publishedBy" : [ "Historic Scotland, UK [u.a.]" ],
     "type" : [ "PublicationEvent" ]

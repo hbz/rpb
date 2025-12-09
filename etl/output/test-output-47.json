@@ -13,6 +13,8 @@
   "extent" : "[13] Bl. : überw. Ill. ; 292 x 420 mm",
   "publication" : [ {
     "location" : [ "[Boppard]" ],
+    "dateStatement" : "[2010]",
+    "startDate" : "2010",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

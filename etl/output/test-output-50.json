@@ -13,6 +13,7 @@
   "responsibilityStatement" : [ "Krankenhaus der Barmherzigen Brüder Montabaur" ],
   "publication" : [ {
     "location" : [ "Montabaur" ],
+    "dateStatement" : "2010",
     "startDate" : "2010",
     "publishedBy" : [ "Krankenhaus der Barmherzigen Brüder" ],
     "type" : [ "PublicationEvent" ]

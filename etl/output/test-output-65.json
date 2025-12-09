@@ -11,6 +11,8 @@
   "title" : "Chronik [Elektronische Ressource]",
   "publication" : [ {
     "location" : [ "Wassenach" ],
+    "dateStatement" : "[2007]",
+    "startDate" : "2007",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

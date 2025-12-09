@@ -13,6 +13,7 @@
   "responsibilityStatement" : [ "Institut für Angewandte Vogelkunde, Staatliche Vogelschutzwarte für Hessen, Rheinland-Pfalz und Saarland" ],
   "publication" : [ {
     "location" : [ "Frankfurt/Main" ],
+    "dateStatement" : "1997",
     "startDate" : "1997",
     "type" : [ "PublicationEvent" ]
   } ],

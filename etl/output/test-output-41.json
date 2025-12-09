@@ -13,6 +13,7 @@
   "responsibilityStatement" : [ "VFR Speyer 1950 e.V." ],
   "publication" : [ {
     "location" : [ "Speyer" ],
+    "dateStatement" : "1998",
     "startDate" : "1998",
     "type" : [ "PublicationEvent" ]
   } ],

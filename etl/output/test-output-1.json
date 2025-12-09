@@ -15,6 +15,7 @@
   "responsibilityStatement" : [ "[Hondius, Jodocus]" ],
   "publication" : [ {
     "location" : [ "Amstelodami" ],
+    "dateStatement" : "1618",
     "startDate" : "1618",
     "publishedBy" : [ "Judocus Hondius" ],
     "type" : [ "PublicationEvent" ]

@@ -14,6 +14,7 @@
   "responsibilityStatement" : [ "hrsg. von: SWF 3, Der Club" ],
   "publication" : [ {
     "location" : [ "Rastatt" ],
+    "dateStatement" : "1992",
     "startDate" : "1992",
     "publishedBy" : [ "Pabel-Moewig" ],
     "type" : [ "PublicationEvent" ]

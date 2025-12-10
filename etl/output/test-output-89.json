@@ -14,6 +14,7 @@
   "responsibilityStatement" : [ "von dem Herrn Bergmeister Schulze zu Düren. Abschrift aus \"Archiv für Bergbau und Hüttenwesen\", hrsg. von C. J. B. Karsten, Bd. 17, Berlin 1828, von Klaus Schmidt" ],
   "publication" : [ {
     "location" : [ "Koblenz" ],
+    "dateStatement" : "2000",
     "startDate" : "2000",
     "publishedBy" : [ "Görres" ],
     "type" : [ "PublicationEvent" ]

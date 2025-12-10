@@ -14,6 +14,7 @@
   "responsibilityStatement" : [ "Universität Kaiserslautern" ],
   "publication" : [ {
     "location" : [ "Kaiserslautern" ],
+    "dateStatement" : "1995",
     "startDate" : "1995",
     "type" : [ "PublicationEvent" ]
   } ],

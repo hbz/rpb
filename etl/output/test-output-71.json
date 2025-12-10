@@ -18,6 +18,7 @@
   "extent" : "Ill.",
   "responsibilityStatement" : [ "Rolfjosef Hamacher und Ulrich Stein" ],
   "publication" : [ {
+    "dateStatement" : "2011",
     "startDate" : "2011",
     "type" : [ "PublicationEvent" ]
   } ],

@@ -13,6 +13,7 @@
   "extent" : "Ill.",
   "responsibilityStatement" : [ "Dr. Wolfgang Dietz" ],
   "publication" : [ {
+    "dateStatement" : "2008",
     "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],

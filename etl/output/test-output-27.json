@@ -13,6 +13,7 @@
   "note" : [ "[Hambacher Schloß]" ],
   "publication" : [ {
     "location" : [ "Mannheim" ],
+    "dateStatement" : "1844",
     "startDate" : "1844",
     "publishedBy" : [ "Meininger" ],
     "type" : [ "PublicationEvent" ]

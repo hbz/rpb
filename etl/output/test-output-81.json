@@ -15,6 +15,7 @@
   "responsibilityStatement" : [ "Angelita Cools ; Hildegard von de Wijnpersse. [Nach Bearb. durch Gian Ackermans ... ]" ],
   "publication" : [ {
     "location" : [ "Aachen" ],
+    "dateStatement" : "1992",
     "startDate" : "1992",
     "publishedBy" : [ "Einhard [u.a.]" ],
     "type" : [ "PublicationEvent" ]

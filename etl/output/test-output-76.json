@@ -17,5 +17,10 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Piffche-Bahnfahrt durch Rheinhessen : 2",
-  "extent" : "256 Seiten : Illustrationen"
+  "extent" : "256 Seiten : Illustrationen",
+  "publication" : [ {
+    "dateStatement" : "[Dezember 2017]",
+    "startDate" : "2017",
+    "type" : [ "PublicationEvent" ]
+  } ]
 }

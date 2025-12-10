@@ -12,6 +12,8 @@
   "alternativeTitle" : [ "\"Helfen, ohne zu fragen wem!\"" ],
   "publication" : [ {
     "location" : [ "Adenau" ],
+    "dateStatement" : "[2008]",
+    "startDate" : "2008",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

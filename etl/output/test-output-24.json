@@ -17,6 +17,7 @@
   } ],
   "title" : "Das Hambacher Schloß.",
   "publication" : [ {
+    "dateStatement" : "1982",
     "startDate" : "1982",
     "type" : [ "PublicationEvent" ]
   } ],

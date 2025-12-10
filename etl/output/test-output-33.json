@@ -14,6 +14,7 @@
   "note" : [ "Vorgänger u.d.T.: On" ],
   "publication" : [ {
     "location" : [ "Baden-Baden" ],
+    "dateStatement" : "1998",
     "startDate" : "1998",
     "publishedBy" : [ "Südwestrundfunk-Media-GmbH" ],
     "type" : [ "PublicationEvent" ]

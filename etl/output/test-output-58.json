@@ -16,6 +16,7 @@
   "responsibilityStatement" : [ "entworfen von F. L. Güssefeld ; [Stecher:] I. Rausch" ],
   "publication" : [ {
     "location" : [ "Nürnberg" ],
+    "dateStatement" : "1797",
     "startDate" : "1797",
     "publishedBy" : [ "Homännische Erben" ],
     "type" : [ "PublicationEvent" ]

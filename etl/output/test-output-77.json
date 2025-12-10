@@ -12,6 +12,8 @@
   "responsibilityStatement" : [ "Kreis Daun, Vulkaneifel. Hrsg.: Kreisverwaltung Daun" ],
   "publication" : [ {
     "location" : [ "Monschau" ],
+    "dateStatement" : "[1973]",
+    "startDate" : "1973",
     "publishedBy" : [ "Weiss-Dr." ],
     "type" : [ "PublicationEvent" ]
   } ],

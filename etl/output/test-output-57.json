@@ -23,6 +23,7 @@
   "responsibilityStatement" : [ "John Berger" ],
   "publication" : [ {
     "location" : [ "Berlin" ],
+    "dateStatement" : "2009",
     "startDate" : "2009",
     "publishedBy" : [ "Wagenbach" ],
     "type" : [ "PublicationEvent" ]

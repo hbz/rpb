@@ -13,6 +13,7 @@
   "responsibilityStatement" : [ "Hubert Hellmann" ],
   "publication" : [ {
     "location" : [ "Koblenz" ],
+    "dateStatement" : "1992",
     "startDate" : "1992",
     "publishedBy" : [ "Bundesanst. für Gewässerkunde" ],
     "type" : [ "PublicationEvent" ]

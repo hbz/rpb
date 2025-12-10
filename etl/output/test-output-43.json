@@ -12,6 +12,7 @@
   "title" : "'s Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen",
   "publication" : [ {
     "location" : [ "Ebertsheim-Rodenbach" ],
+    "dateStatement" : "1998",
     "startDate" : "1998",
     "type" : [ "PublicationEvent" ]
   } ],

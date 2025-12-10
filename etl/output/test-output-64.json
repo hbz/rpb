@@ -12,6 +12,7 @@
   "alternativeTitle" : [ "Von der Wied an den Rhein" ],
   "publication" : [ {
     "location" : [ "Waldbreitbach" ],
+    "dateStatement" : "2007",
     "startDate" : "2007",
     "type" : [ "PublicationEvent" ]
   } ],

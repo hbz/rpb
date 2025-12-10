@@ -12,6 +12,8 @@
   "responsibilityStatement" : [ "[Gerd Moos]" ],
   "publication" : [ {
     "location" : [ "Koblenz" ],
+    "dateStatement" : "[2003]",
+    "startDate" : "2003",
     "type" : [ "PublicationEvent" ]
   } ],
   "subject" : [ {

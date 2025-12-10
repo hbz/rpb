@@ -283,8 +283,9 @@
   @sachsystematik("http://purl.org/lobid/rpb")
 
   @subjects(
-    ((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()) ++ (doc \ "natureOfContent").asOpt[Seq[JsValue]].getOrElse(Seq()))
-    .filter(v => !(v \ "source").toString.matches(".*([Ss]ystematik|Notationen|Sachgruppen|klassifikation).*")))
+    ((doc \ "subject").asOpt[Seq[JsValue]].getOrElse(Seq()))
+    .filter(v => (v \ "source").toString.contains("componentList"))
+    ++ (doc \ "natureOfContent").asOpt[Seq[JsValue]].getOrElse(Seq()))
 
   @result_field("Schlagwortfolge", "subjectChain", doc, TableRow.VALUES, valueLabel = Option(Seq()))
 

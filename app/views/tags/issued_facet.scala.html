@@ -12,24 +12,26 @@ var years = [];
 var freqs = [];
 var yearsObject = {};
 var thisYear = new Date().getFullYear();
-
-for(i = 1991; i <= thisYear; i++) {
-	years.push(i);
-}
+const startDate = 1400;
 
 $(".@(Application.ISSUED_FIELD.hashCode.abs)-facet-link").each(function(index) {
 	var yearAndFreq = $(this).text().split(" ")
 	var year = yearAndFreq[0].trim();
 	var freq = parseInt(yearAndFreq[1].replace(/[()]/,""));
-	if(parseInt(year) >= 1991 && parseInt(year) <= thisYear){
+	if(parseInt(year) >= startDate && parseInt(year) <= thisYear) {
 		yearsObject[year]=freq;
 	}
 });
 
-if(years.length==0){
-	years.push(1983);
+const offset = Object.keys(yearsObject)[0];
+for (const [key, value] of Object.entries(yearsObject)) {
+	years[key-offset] = key;
+}
+
+if(years.length==1){
+	years.unshift(startDate);
 	years.push(thisYear);
-	yearsObject[1983]=0;
+	yearsObject[startDate]=0;
 	yearsObject[thisYear]=0;
 }
 

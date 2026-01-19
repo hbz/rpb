@@ -22,7 +22,11 @@
 
 @if(!rpbsubject.isEmpty && !rpbsubject.contains(",") && Seq(rpbspatial, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw).forall(_.isEmpty)){
 	@if(search){in <a href="@rpb.routes.Application.subjects()"> Sachgebiete</a> &gt;}
-	@labels(rpbsubject)
+	@defining(Classification.pathTo(rpbsubject)) { path => 
+		@for(segment <- path) {
+			@labels(segment) @if(segment != path.last) {&gt;}
+		}
+	}
 } else {
 	@if(!rpbspatial.isEmpty && !rpbspatial.contains(",") && Seq(rpbsubject, person, name, subject, id, publisher, issued, medium, owner, t, location, word, corporation, raw).forall(_.isEmpty)){
 		@if(search){in <a href="@rpb.routes.Application.spatial()"> Regionen</a> &gt;}

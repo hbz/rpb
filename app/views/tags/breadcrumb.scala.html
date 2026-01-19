@@ -11,11 +11,11 @@
 @labels(uri: String) = { @defining(Lobid.facetLabel(Seq(uri),"","")) { label =>
 	@if(Lobid.isGnd(uri)) {
 		<a title='@toInternalGndId(uri.split("#").last) @label' href='@if(label.startsWith("http")){@label}else{@rpb.routes.Application.spatial()#@toInternalGndId(uri.split("#").last)}'>
-			<span style='color: #777777'>@Classification.notation(uri, Type.SPATIAL)</span> @label
+			<span style='color: #777777'>@Classification.notation(uri, Type.SPATIAL)</span> @Html(label)
 		</a>
 	} else {
 		<a title='@Classification.shortId(uri) @Lobid.facetLabel(Seq(uri),"","")' href='@if(uri.contains("spatial")){@rpb.routes.Application.spatial()}else{@rpb.routes.Application.subjects()}#@(if(uri.contains("#")){"n"+uri.split("#")(1).substring(1)}else{uri})'>
-			@*<span style='color: #777777'>@Classification.shortId(uri)</span> *@@if(!uri.endsWith("#n9")){@label}
+			@*<span style='color: #777777'>@Classification.shortId(uri)</span> *@@if(!uri.endsWith("#n9")){@Html(label)}
 		</a>
 	}
 }}

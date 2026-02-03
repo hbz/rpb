@@ -96,8 +96,19 @@ put_rdfmap("./maps/gnd-sc.ttl", "gnd-sc-notationen", target: "skos:prefLabel", s
 
 # Formschlagwort/Formangaben-Mapping -> GND
 # static file: src/main/resources/alma/maps/formangabe.tsv
-# manually generated, based on: https://wiki.dnb.de/download/attachments/106042227/AH-007.pdf Version: 2017
-# TODO: Update to current version
+# manually generated and cleaned, based on: https://sta.dnb.de/query/
+# with:
+# PREFIX sta: <https://sta.dnb.de/entity/>
+# PREFIX staprop: <https://sta.dnb.de/prop/direct/>
+#
+# SELECT DISTINCT ?item ?itemLabel ?identifier WHERE {
+#   ?subject staprop:P8 ?item .
+#   ?item staprop:P295 ?identifier .
+#   VALUES ?subject { sta:Q2657 sta:Q9761 sta:Q2656 }
+#   SERVICE wikibase:label { bd:serviceParam wikibase:language "de". }
+# }
+# ----
+# Status: 2025, currently not able to generate this automatically since there are some errors in the data that needs to be cleaned
 put_filemap("./maps/formangabe.tsv","formschlagwort2Gnd", sep_char:"\t",key_column:"0",value_column:"2",expected_columns:"-1")
 put_filemap("./maps/formangabe.tsv","Gnd2formschlagwort", sep_char:"\t",key_column:"2",value_column:"0",expected_columns:"-1")
 
@@ -133,6 +144,18 @@ put_filemap("./maps/marcRel.tsv","marcRel", sep_char:"\t",key_column:"0",value_c
 # static map: src/main/resources/alma/maps/collectionLabels.tsv
 # based on manually created map of collections that are not part of the ZDB/ISIL
 put_filemap("./maps/collectionLabels.tsv","collectionLabels", sep_char:"\t",key_column:"0",value_column:"1",expected_columns:"-1")
+
+# Not needed for RPB
+# Map containing record ids to holdings of DE-Sol1. see: https://github.com/hbz/lobid-extra-holdings/
+# dynamic file from cronjob: src/main/resources/alma/maps/combinedDe-Sol1Holdings.tsv.gz
+# result of https://github.com/hbz/lobid-extra-holdings/blob/main/harvestHoldings_prod.sh
+# put_filemap("$[combinedDe-Sol1Holdings.tsv.gz]","sol1Holdings", sep_char:"\t",key_column:"0",value_column:"1",expected_columns:"-1")
+
+
+# TPRO T-PRO Thesaurus der Provenienzbegriffe
+# Static map containing tpro concepts to uri created from https://api.dante.gbv.de/search?voc=tpro
+
+put_filemap("./maps/tpro.tsv","tpro", sep_char:"\t",key_column:"0",value_column:"1",expected_columns:"-1")
 
 put_map("rswk-indicator",
   "p": "Person",

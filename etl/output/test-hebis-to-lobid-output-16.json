@@ -12,6 +12,7 @@
   "oclcNumber" : [ "1463358932" ],
   "dnbId" : "1343856876",
   "publication" : [ {
+    "dateStatement" : "[Herbst 2024]",
     "startDate" : "2024",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Roßdorf" ],
@@ -26,7 +27,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1463358932",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "https://d-nb.info/1343856876",
     "label" : "DNB-Ressource"

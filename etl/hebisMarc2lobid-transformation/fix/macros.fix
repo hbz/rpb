@@ -1,5 +1,5 @@
-# alternateGraphicRepresation
-do put_macro("alternateGraphicRepresationArrayOfObjects")
+# alternateGraphicRepresentation
+do put_macro("alternateGraphicRepresentationArrayOfObjects")
   if exists("$[variable].6")
     copy_field("$[variable].6","$[variable].linkageTest")
     do list(path:"880??","var":"$880")
@@ -24,7 +24,7 @@ do put_macro("alternateGraphicRepresationArrayOfObjects")
   end
 end
 
-do put_macro("alternateGraphicRepresationArrayOfStrings")
+do put_macro("alternateGraphicRepresentationArrayOfStrings")
   if exists("$[variable].6")
     copy_field("$[variable].6","$[variable].linkageTest")
     do list(path:"880??","var":"$880")
@@ -49,7 +49,7 @@ do put_macro("alternateGraphicRepresationArrayOfStrings")
   end
 end
 
-do put_macro("alternateGraphicRepresationIsPartOf")
+do put_macro("alternateGraphicRepresentationIsPartOf")
   if exists("$[variable].6")
     copy_field("$[variable].6","$[variable].linkageTest")
     do list(path:"880??","var":"$880")
@@ -266,8 +266,10 @@ do put_macro("provenanceLinks")
     replace_all("$[field]", "^.*$", "DE-604")
   elsif any_match("$[field]","^292$")
     replace_all("$[field]", "^292$", "DE-101b")
+  elsif any_match("$[field]","^USBKöln$")
+    replace_all("$[field]", "^USBKöln$", "DE-38")
   elsif any_match("$[field]","(.*)\\/NWBib$")
-    replace_all("describedBy.resultOf.object.sourceOrganization.id", "(.*)\\/NWBib$", "DE-$1")
+    replace_all("$[field]", "(.*)\\/NWBib$", "DE-$1")
   elsif any_match("$[field]",".*(dnb|DNB|GWDNB|GWDEB|GWDDB|DEDNM|DEDND).*")
     replace_all("$[field]", "^.*$", "DE-101")
   elsif any_match("$[field]","MiAaPQ")
@@ -350,6 +352,7 @@ do put_macro("holdingLibrary+opacLink")
   copy_field("hasItem[].$last.inCollection[].$last.id", "hasItem[].$last.inCollection[].$last.label")
   # item id is constructed "http://lobid.org/items/[almaMmsId of the record]:[isil of the Owner]:[almaMmsId of the holding]#!"
   paste("hasItem[].$last.id", "~http://lobid.org/items/","almaMmsId", "~:", "hasItem[].$last.heldBy.isil","~:", "$[mmsIdField]","~#!", join_char: "")
+  paste("hasItem[].$last.@ownerAndCallnumber","hasItem[].$last.heldBy.isil","hasItem[].$last.callNumber")
 end
 
 # opacLink
@@ -419,13 +422,14 @@ do put_macro("schlagwortfolge")
         copy_field("subject[].$last.componentList[].$last.label","subject[].$last.label.$append")
       end
       do list(path:"$i.0", "var": "$j")
-        if any_match("$j","^\\(DE-588\\)(.*)$")
+        if any_match("$j","^\\(DE-588\\)(.+)$")
+          upcase("$j") #gnd ids only have upper case X
           add_field("subject[].$last.componentList[].$last.source.label","Gemeinsame Normdatei (GND)")
           add_field("subject[].$last.componentList[].$last.source.id","https://d-nb.info/gnd/7749153-1")
           copy_field("$j", "subject[].$last.componentList[].$last.id")
-          replace_all("subject[].$last.componentList[].$last.id","^\\(DE-588\\)(.*)$","https://d-nb.info/gnd/$1")
+          replace_all("subject[].$last.componentList[].$last.id","^\\(DE-588\\)(.+)$","https://d-nb.info/gnd/$1")
           copy_field("$j", "subject[].$last.componentList[].$last.gndIdentifier")
-          replace_all("subject[].$last.componentList[].$last.gndIdentifier","^\\(DE-588\\)(.*)$","$1")
+          replace_all("subject[].$last.componentList[].$last.gndIdentifier","^\\(DE-588\\)(.+)$","$1")
         end
         # GND idn as variable
         if exists("$i.B")
@@ -437,12 +441,14 @@ do put_macro("schlagwortfolge")
         elsif any_match("$j","^.*DNB\\|(.*)$")
           copy_field("$j", "subject[].$last.componentList[].$last.@gndIdn")
           replace_all("subject[].$last.componentList[].$last.@gndIdn", "^.*DNB\\|(.*)$","GND-$1")
-        elsif any_match("$j","^\\(DE-101\\)(.*)$")
+        elsif any_match("$j","^\\(DE-101\\)(.+)$")
             copy_field("$j", "subject[].$last.componentList[].$last.@gndIdn")
-            replace_all("subject[].$last.componentList[].$last.@gndIdn", "^\\(DE-101\\)(.*)$","GND-$1")
+            replace_all("subject[].$last.componentList[].$last.@gndIdn", "^\\(DE-101\\)(.+)$","GND-$1")
         end
       end
+      unless exists("$i.t") # Work/Werktitel should not receive dateOfBirthAndDeath, datesOfBirth or dateOfDeath
       copy_field("$i.d","subject[].$last.componentList[].$last.dateOfBirthAndDeath") # dates will be differentiated later in the process
+    end
     end
     join_field("subject[].$last.label"," | ")
   end
@@ -469,15 +475,32 @@ do put_macro("publication")
   do list(path:"$[field]", "var":"$i")
     add_hash( "publication[].$append")
     do list(path: "$i.c", "var":"$j")
-      replace_all("$j", "\\[|\\]|ca. |c ", "")
+      unless exists("publication[].$last.dateStatement")
+        copy_field("$j","publication[].$last.dateStatement")
+      end
+      call_macro("publicationDateCleaner",date:"$j")
       unless exists("publication[].$last.startDate")
-        if any_match("$j",".*?([01]\\d{3}|20\\d{2}).*")
-          paste("publication[].$last.startDate", "$j")
-        end
+        call_macro("publicationStartDate",date:"$j",dateTarget:"publication[].$last.startDate")
       end
       unless exists("publication[].$last.endDate")
-        if any_match("$j",".*-[ ]?([01]\\d{3}|20\\d{2})$")
-          paste("publication[].$last.endDate", "$j")
+        if any_equal("@ContinuingResources","true")
+          call_macro("publicationEndDate",date:"$j",dateTarget:"publication[].$last.endDate")
+        end
+      end
+    end
+    # ZDB reported that with periodicals `$3` is used for specific publication dates
+    # while $c states the complete publication time.
+    do list(path: "$i.3", "var":"$j")
+      unless exists("publication[].$last.dateStatement")
+        copy_field("$j","publication[].$last.dateStatement")
+      end
+      call_macro("publicationDateCleaner",date:"$j")
+      unless exists("publication[].$last.startDate")
+        call_macro("publicationStartDate",date:"$j",dateTarget:"publication[].$last.startDate")
+      end
+      unless exists("publication[].$last.endDate")
+        if any_equal("@ContinuingResources","true")
+          call_macro("publicationEndDate",date:"$j",dateTarget:"publication[].$last.endDate")
         end
       end
     end
@@ -506,12 +529,12 @@ do put_macro("publication")
           else
             copy_field("$880.@script.id","alternateGraphicRepresentation[].$append.script.id")
             copy_field("$880.@script.label","alternateGraphicRepresentation[].$last.script.label")
-            add_array("alternateGraphicRepresentation[].$last.publication[]")
-            add_hash( "alternateGraphicRepresentation[].$last.publication[].$append")
-            add_array("alternateGraphicRepresentation[].$last.publication[].$last.location[]")
-            copy_field("$880.a", "alternateGraphicRepresentation[].$last.publication[].$last.location[].$append")
-            add_array("alternateGraphicRepresentation[].$last.publication[].$last.publishedBy[]")
-            copy_field("$880.b", "alternateGraphicRepresentation[].$last.publication[].$last.publishedBy[].$append")
+            add_array("alternateGraphicRepresentation[].$last.record.publication[]")
+            add_hash( "alternateGraphicRepresentation[].$last.record.publication[].$append")
+            add_array("alternateGraphicRepresentation[].$last.record.publication[].$last.location[]")
+            copy_field("$880.a", "alternateGraphicRepresentation[].$last.record.publication[].$last.location[].$append")
+            add_array("alternateGraphicRepresentation[].$last.record.publication[].$last.publishedBy[]")
+            copy_field("$880.b", "alternateGraphicRepresentation[].$last.record.publication[].$last.publishedBy[].$append")
           end
         end
       end
@@ -519,20 +542,88 @@ do put_macro("publication")
   end
 end
 
+do put_macro("publicationDateCleaner")
+  replace_all("$[date]", "\\[|\\]|ca.[ ]?|c[ ]?|um[ ]?", "")
+end
+
+do put_macro("publicationStartDate")
+  if any_match("$[date]","[^-]*?([01]\\d{3}|20\\d{2}).*")
+    paste("$[dateTarget]", "$[date]")
+  end
+end
+
+do put_macro("publicationEndDate")
+  if any_match("$[date]",".*-.*([01]\\d{3}|20\\d{2}).*$")
+    paste("$[dateTarget]", "$[date]")
+  end
+end
+
+do put_macro("dateOfBirthAndDeathTransformer")
+  if any_match("$[dateOfBirthAndDeath]", "^([012][0-9]{3})-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^([012][0-9]{3})-.*","$1")
+  elsif any_match("$[dateOfBirthAndDeath]", "^([1-9][0-9]{2})-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^([1-9][0-9]{2})-.*","0$1")
+  elsif any_match("$[dateOfBirthAndDeath]", "^([1-9][0-9])-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^([1-9][0-9])-.*","00$1")
+  elsif any_match("$[dateOfBirthAndDeath]", "^([0-9])-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^([0-9])-.*","000$1")
+  elsif any_match("$[dateOfBirthAndDeath]", "^v([012][0-9]{3})-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^v([012][0-9]{3})-.*","-$1")
+  elsif any_match("$[dateOfBirthAndDeath]", "^v([1-9][0-9]{2})-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^v([1-9][0-9]{2})-.*","-0$1")
+  elsif any_match("$[dateOfBirthAndDeath]", "^v([1-9][0-9])-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^v([1-9][0-9])-.*","-00$1")
+  elsif any_match("$[dateOfBirthAndDeath]", "^v([0-9])-.*")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfBirthTo]")
+    replace_all("$[dateOfBirthTo]", "^v([0-9])-.*","-000$1")
+  end
+  if any_match("$[dateOfBirthAndDeath]", ".*-([012][0-9]{3})$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-([012][0-9]{3})$","$1")
+  elsif any_match("$[dateOfBirthAndDeath]", ".*-([1-9][0-9]{2})$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-([1-9][0-9]{2})$","0$1")
+  elsif any_match("$[dateOfBirthAndDeath]", ".*-([1-9][0-9])$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-([1-9][0-9])$","00$1")
+  elsif any_match("$[dateOfBirthAndDeath]", ".*-([0-9])$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-([0-9])$","000$1")
+  elsif any_match("$[dateOfBirthAndDeath]", ".*-v([012][0-9]{3})$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-v([012][0-9]{3})$","-$1")
+  elsif any_match("$[dateOfBirthAndDeath]", ".*-v([1-9][0-9]{2})$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-v([1-9][0-9]{2})$","-0$1")
+  elsif any_match("$[dateOfBirthAndDeath]", ".*-v([1-9][0-9])$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-v([1-9][0-9])$","-00$1")
+  elsif any_match("$[dateOfBirthAndDeath]", ".*-v([0-9])$")
+    copy_field("$[dateOfBirthAndDeath]","$[dateOfDeathTo]")
+    replace_all("$[dateOfDeathTo]", ".*-v([0-9])$","-000$1")
+  end
+end
+
 do put_macro("manufacture")
   do list(path:"$[field]", "var":"$i")
     add_hash( "manufacture[].$append")
     do list(path: "$i.c", "var":"$j")
-      replace_all("$j", "\\[|\\]|ca. |c ", "")
+      unless exists("manufacture[].$last.dateStatement")
+        copy_field("$j","manufacture[].$last.dateStatement")
+      end
+      call_macro("publicationDateCleaner",date:"$j")
       unless exists("manufacture[].$last.startDate")
-        if any_match("$j",".*?([01]\\d{3}|20\\d{2}).*")
-          paste("manufacture[].$last.startDate", "$j")
-        end
+        call_macro("publicationStartDate",date:"$j",dateTarget:"manufacture[].$last.startDate")
       end
       unless exists("manufacture[].$last.endDate")
-        if any_match("$j",".*-[ ]?([01]\\d{3}|20\\d{2})$")
-          paste("manufacture[].$last.endDate", "$j")
-        end
+        call_macro("publicationEndDate",date:"$j",dateTarget:"manufacture[].$last.endDate")
       end
     end
     add_array("manufacture[].$last.type[]","Event")
@@ -600,13 +691,11 @@ do put_macro("leapYearAndMonthLenghtChecker")
   end
 end
 
-
+# Not needed for RPB
 # DE Sol1 Holding Tester excludes ZDB Records
-
-do put_macro("deSol1BridgeTester")
-  if any_match("$[holdingId]",".*7830$")
-    unless exists("zdbId")
-      add_field("$i.deSol1Bridge","true")
-    end
-  end
-end
+# 
+# do put_macro("deSol1BridgeTester")
+#   if any_match("$[holdingId]",".*7830$")
+#     add_field("$i.deSol1Bridge","true")
+#   end
+# end

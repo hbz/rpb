@@ -120,7 +120,7 @@ uniq("note[]")
 
 
 do list(path:"500  ","var":"$i")
-  call_macro("alternateGraphicRepresationArrayOfStrings",targetArray:"note[]",variable:"$i")
+  call_macro("alternateGraphicRepresentationArrayOfStrings",targetArray:"note[]",variable:"$i")
 end
 
 
@@ -193,6 +193,15 @@ end
 
 uniq("license[]")
 
+
+if exists("5060?")
+  add_field("accessRights.id","http://purl.org/coar/access_right/c_abf2")
+  add_field("accessRights.label","Open Access")
+elsif any_match("85640.7","0")
+  add_field("accessRights.id","http://purl.org/coar/access_right/c_abf2")
+  add_field("accessRights.label","Open Access")
+end
+
 add_array("langNote[]")
 do list(path: "546??", "var": "$i")
   add_array("$i.@langNote")
@@ -201,4 +210,29 @@ do list(path: "546??", "var": "$i")
   replace_all("$i.@langNote.*", "[.;]$", "")
   join_field("$i.@langNote", "; ")
   move_field("$i.@langNote", "langNote[].$append")
+end
+
+
+# Not needed for RPB
+# --- disambiguatingDescription ----
+# --- helper element for deduplication efforts ---
+# --- currently mapping duplicates from NWBib resources of DE-6, hbzId starting with BT, see https://github.com/hbz/nwbib/issues/658
+# 
+# add_array("disambiguatingDescription[]")
+# if any_equal("inCollection[].*.id","http://lobid.org/resources/HT014176012#!") # Filter only NWBib Ressources
+#   if any_match("hbzId","BT.*") # Filter only hbzId starting with BT, hinting to a specific old NWBib Subset.
+#     do list(path:"591??", "var":"$i")
+#       copy_field("$i.a","disambiguatingDescription[].$append")
+#     end
+#   end
+# end
+
+
+# ---conditionsOfAccess ---
+
+do list(path:"506??","var":"$i")
+  if any_match("$i.u","http://w3id.org/kim/conditionsOfAccess/.*")
+    copy_field("$i.f.2","conditionsOfAccess.label")
+    copy_field("$i.u","conditionsOfAccess.id")
+  end
 end

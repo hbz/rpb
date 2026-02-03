@@ -11,6 +11,7 @@
   "oclcNumber" : [ "1407112396" ],
   "otherTitleInformation" : [ "Rätselheft für Kinder und Erwachsene" ],
   "publication" : [ {
+    "dateStatement" : "[2019]",
     "startDate" : "2019",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Ingelheim am Rhein" ],
@@ -25,7 +26,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1407112396",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=512849919#!",
     "label" : "HEBIS-Ressource"

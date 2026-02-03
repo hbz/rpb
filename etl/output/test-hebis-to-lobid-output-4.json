@@ -11,6 +11,7 @@
   "oclcNumber" : [ "1428135055" ],
   "otherTitleInformation" : [ "Programm und Vereinsspiegel der teilnehmenden Vereine :" ],
   "publication" : [ {
+    "dateStatement" : "September 1977",
     "startDate" : "1977",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Ingelheim am Rhein" ],
@@ -25,7 +26,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1428135055",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=516707701#!",
     "label" : "HEBIS-Ressource"

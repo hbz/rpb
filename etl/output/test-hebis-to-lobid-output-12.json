@@ -16,6 +16,7 @@
   "otherTitleInformation" : [ "innehalten, lauschen, aufblühen" ],
   "edition" : [ "1. Auflage" ],
   "publication" : [ {
+    "dateStatement" : "2023",
     "startDate" : "2023",
     "type" : [ "PublicationEvent" ],
     "location" : [ "München" ],
@@ -30,7 +31,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1403376624",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "https://d-nb.info/1271796821",
     "label" : "DNB-Ressource"

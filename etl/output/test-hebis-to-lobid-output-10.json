@@ -13,6 +13,7 @@
   "dnbId" : "958853371",
   "otherTitleInformation" : [ "2000 Jahre einer Stadt ; [Stadtbegleiter]" ],
   "publication" : [ {
+    "dateStatement" : "[ca. 2000]",
     "startDate" : "2000",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Mainz" ],
@@ -27,7 +28,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/76115483",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "https://d-nb.info/958853371",
     "label" : "DNB-Ressource"

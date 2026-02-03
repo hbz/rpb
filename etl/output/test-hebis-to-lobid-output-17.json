@@ -12,6 +12,7 @@
   "otherTitleInformation" : [ "von 1795 bis 1969" ],
   "edition" : [ "Erweiterte Fassung" ],
   "publication" : [ {
+    "dateStatement" : "Dezember 2024",
     "startDate" : "2024",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Alzey" ],
@@ -26,7 +27,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1501056568",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=527546313#!",
     "label" : "HEBIS-Ressource"

@@ -12,6 +12,7 @@
   "oclcNumber" : [ "1288418997" ],
   "otherTitleInformation" : [ "Mörder in USA aus Region Bingen, Alzey" ],
   "publication" : [ {
+    "dateStatement" : "[2015]",
     "startDate" : "2015",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Norderstedt" ],
@@ -26,7 +27,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1288418997",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=488844266#!",
     "label" : "HEBIS-Ressource"

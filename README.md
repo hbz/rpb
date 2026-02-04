@@ -38,11 +38,10 @@ sbt "runMain rpb.ETL etl/rppd-test-to-lobid.flux"
 Transform Hebis to lobid-resources test data:
 
 ```bash
-sbt "runMain rpb.ETL etl/etl/fetchAndTransformHebisRecord.flux"
+sbt "runMain rpb.ETL etl/fetchAndTransformHebisRecord.flux"
 ```
 
-For updating the fixes in `etl/hebisMarc2lobid-transformation`:
-Check the current fixes in `https://github.com/hbz/lobid-resources/tree/master/src/main/resources/alma`, compare the diffs of the individual fixes to the current RPB hebis transformation in `etl/hebisMarc2lobid-transformation`. Keep in mind that some transformation differ due to specifics of the Hebis data, e.g. references to DE-603 and the hebis catalogue or the simpler version of the item.fix or paths to mapping files. After finishing the update, run the Hebis test above and checkout changes in the testfiles when commiting.
+For updating the fixes in `etl/hebisMarc2lobid-transformation`: Check the current fixes in `https://github.com/hbz/lobid-resources/tree/master/src/main/resources/alma`, compare the diffs of the individual fixes to the current RPB hebis transformation in `etl/hebisMarc2lobid-transformation`. Keep in mind that some transformations differ due to specifics of the Hebis data, e.g. references to DE-603 and the Hebis catalogue or the simpler version of the item.fix or paths to mapping files. After finishing the update, run the Hebis test above and check out changes in the test files when committing.
 
 ### Java development
 

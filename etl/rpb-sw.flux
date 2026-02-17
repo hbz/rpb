@@ -11,5 +11,6 @@ retain(row)
 ")
 | stream-to-triples
 | template("${o}")
+| match(pattern="\n", replacement=";")
 | write(FLUX_DIR + "RPB-Export_HBZ_SW.tsv")
 ;

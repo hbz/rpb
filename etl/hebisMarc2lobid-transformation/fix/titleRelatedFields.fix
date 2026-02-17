@@ -140,11 +140,10 @@ end
 
 # 246 - Varying Form of Title (R) - Subfields: $a (NR)
 
-add_array("alternativeTitle[]")
-copy_field("246?[ 345678].a","alternativeTitle[].$append")
-
 do list(path:"246?[ 345678]","var":"$i")
-  call_macro("alternateGraphicRepresationArrayOfStrings",targetArray:"alternativeTitle[]",variable:"$i")
+  prepend("$i.b",". ")
+  paste("alternativeTitle[].$append", "$i.a",  "$i.b", join_char: "")
+  call_macro("alternateGraphicRepresentationArrayOfStrings",targetArray:"alternativeTitle[]",variable:"$i")
 end
 
 
@@ -166,7 +165,7 @@ copy_field("245??.b","otherTitleInformation[].$append")
 # 249 beigefügtes Werk Subfield $a
 do list(path:"249  ","var":"$i")
   copy_field("$i.a","otherTitleInformation[].$append")
-  call_macro("alternateGraphicRepresationArrayOfStrings",targetArray:"otherTitleInformation[]",variable:"$i")
+  call_macro("alternateGraphicRepresentationArrayOfStrings",targetArray:"otherTitleInformation[]",variable:"$i")
 end
 unless any_match("otherTitleInformation[].*",".*\\.\\.\\.")
   replace_all("otherTitleInformation[].*","\\s?[./]\\s?$","")
@@ -179,7 +178,7 @@ copy_field("250  .a","edition[].$append")
 replace_all("edition[].*","\\s?[./]\\s?$","")
 
 do list(path:"250  ","var":"$i")
-  call_macro("alternateGraphicRepresationArrayOfStrings",targetArray:"edition[]",variable:"$i")
+  call_macro("alternateGraphicRepresentationArrayOfStrings",targetArray:"edition[]",variable:"$i")
 
 end
 
@@ -243,16 +242,12 @@ if exists("publication[].$first")
   # Add fallbacks for missing publication dates and other publication info.
   do list(path:"260[ 3][ 1]", "var":"$i")
     do list(path: "$i.c", "var":"$j")
-      replace_all("$j", "\\[|\\]|ca. |c ", "")
+      call_macro("publicationDateCleaner",date:"$j")
       unless exists("publication[].$first.startDate")
-        if any_match("$j",".*?([01]\\d{3}|20\\d{2}).*")
-          paste("publication[].$first.startDate", "$j")
-        end
+        call_macro("publicationStartDate",date:"$j",dateTarget:"publication[].$first.startDate")
       end
       unless exists("publication[].$first.endDate")
-        if any_match("$j",".*-[ ]?([01]\\d{3}|20\\d{2})$")
-          paste("publication[].$last.endDate", "$j")
-        end
+        call_macro("publicationEndDate",date:"$j",dateTarget:"publication[].$first.endDate")
       end
       unless exists("publication[].$first.location[].1")
         copy_field("$i.a", "publication[].$first.location[].$append")
@@ -263,19 +258,34 @@ if exists("publication[].$first")
     end
   end
   unless exists("publication[].$first.startDate")
-    if any_match("008","^.{6}[brestikm](\\d{4}).*$")
+    if any_match("008","^.{6}[\\|bresticdkmu](\\d{4}).*$")
       copy_field("008","@008startDate")
       replace_all("@008startDate","^.{7}(\\d{4}).*$","$1")
+      if any_match("@008startDate",".*?([01]\\d{3}|20\\d{2}).*")
       copy_field("@008startDate","publication[].$first.startDate")
     end
   end
+  end
   unless exists("publication[].$first.endDate")
-    if any_match("008","^.{6}[km]\\d{4}(\\d{4}).*$")
+    if any_match("008","^.{6}[cdkmu]\\d{4}(\\d{4}).*$")
       copy_field("008","@008endDate")
       replace_all("@008endDate","^.{11}(\\d{4}).*$","$1")
       unless any_equal("@008endDate","9999")
         copy_field("@008endDate","publication[].$first.endDate")
       end
+    end
+  end
+
+  if any_match("008","^.{6}[cdu].*$")
+    if any_match("008","^.{6}[c].*$",)
+      add_field("publication[].$first.status.id","http://id.loc.gov/vocabulary/mstatus/current")
+      add_field("publication[].$first.status.label","laufend")
+    elsif any_match("008","^.{6}[d].*$",)
+      add_field("publication[].$first.status.id","http://id.loc.gov/vocabulary/mstatus/ceased")
+      add_field("publication[].$first.status.label","eingestellt")
+    elsif any_match("008","^.{6}[u].*$",)
+      add_field("publication[].$first.status.id","http://id.loc.gov/vocabulary/mstatus/u")
+      add_field("publication[].$first.status.label","unbekannt")
     end
   end
 end
@@ -298,16 +308,12 @@ do list(path:"533  ", "var": "$i")
   add_array("publication[].$last.publishedBy[]")
   copy_field("$i.c", "publication[].$last.publishedBy[].$append")
   do list(path: "$i.d", "var":"$j")
-    replace_all("$j", "\\[|\\]|ca. |c ", "")
+    call_macro("publicationDateCleaner",date:"$j")
     unless exists("publication[].$last.startDate")
-      if any_match("$j",".*?([01]\\d{3}|20\\d{2}).*")
-        paste("publication[].$last.startDate", "$j")
-      end
+      call_macro("publicationStartDate",date:"$j",dateTarget:"publication[].$last.startDate")
     end
     unless exists("publication[].$last.endDate")
-      if any_match("$j",".*-[ ]?([01]\\d{3}|20\\d{2})$")
-        paste("publication[].$last.endDate", "$j")
-      end
+      call_macro("publicationEndDate",date:"$j",dateTarget:"publication[].$last.endDate")
     end
   end
 end
@@ -322,7 +328,7 @@ do list(path: "publication[]", "var": "$i")
       remove_field("$i.startDate")
     end
   end
-  replace_all("$i.endDate", ".*-[ ]?([01]\\d{3}|20\\d{2})$", "$1")
+  replace_all("$i.endDate", ".*-.*([01]\\d{3}|20\\d{2}).*$", "$1")
   replace_all("$i.location[].*", "^\\[(.*)\\]$", "$1")
   replace_all("$i.location[].*", "\\s?[,:;]$", "")
   replace_all("$i.publishedBy[].*", "^[©]|\\s?[,:;/=]?$", "")
@@ -331,6 +337,28 @@ do list(path: "publication[]", "var": "$i")
   uniq("$i.location[]")
 end
 
+# Clean up unrealistic publication dates if they provide a realistic one in 008/07-15
+
+timestamp("@todaysYear",format:"yyyy")
+to_var("@todaysYear","todaysYear")
+if greater_than("publication[].1.startDate","$[todaysYear]")
+    copy_field("008","@008startDateTest")
+    replace_all("@008startDateTest","^.{7}(\\d{4}).*$","$1")
+    if less_than("@008startDateTest","$[todaysYear]")
+      copy_field("@008startDateTest","publication[].1.startDate")
+    elsif any_equal("@008startDateTest","$[todaysYear]")
+      copy_field("@008startDateTest","publication[].1.startDate")
+    end
+end
+if greater_than("publication[].1.endDate","$[todaysYear]")
+    copy_field("008","@008endDateTest")
+    replace_all("@008endDateTest","^.{11}(\\d{4}).*$","$1")
+    if less_than("@008endDateTest","$[todaysYear]")
+      copy_field("@008endDateTest","publication[].1.endDate")
+    elsif any_equal("@008endDateTest","$[todaysYear]")
+      copy_field("@008endDateTest","publication[].1.endDate")
+    end
+end
 
 # 246 - Varying Form of Title (R) - $a - Title proper/short title (NR)
 

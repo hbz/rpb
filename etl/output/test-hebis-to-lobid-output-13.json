@@ -13,6 +13,7 @@
   "dnbId" : "1244538620",
   "otherTitleInformation" : [ "Festung - Spielplatz - Jugendhaus" ],
   "publication" : [ {
+    "dateStatement" : "[2021]",
     "startDate" : "2021",
     "type" : [ "PublicationEvent" ],
     "location" : [ "München" ],
@@ -27,7 +28,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1282186376",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "https://d-nb.info/1244538620",
     "label" : "DNB-Ressource"

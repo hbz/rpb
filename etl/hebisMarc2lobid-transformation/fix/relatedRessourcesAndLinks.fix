@@ -4,14 +4,14 @@ add_array("sameAs[]")
 # 035 - System Control Number (R) - Subfield: $a (NR)
 if any_match("almaMmsId","^.*6441$")
     paste("sameAs[].$append.id", "~https://hub.culturegraph.org/resource/(DE-605)","almaMmsId",join_char:"")
-    add_field("sameAs[].$last.label","Culturegraph Ressource")
+    add_field("sameAs[].$last.label","Culturegraph-Ressource")
 end
 
 # oclc
 
 do list(path: "oclcNumber[]", "var": "$i")
   paste("sameAs[].$append.id","~http://worldcat.org/oclc/", "$i", join_char:"")
-  add_field("sameAs[].$last.label","OCLC Ressource")
+  add_field("sameAs[].$last.label","OCLC-Ressource")
 end
 
 # zdb
@@ -46,6 +46,7 @@ do list(path: "856??", "var":"$i")
 end
 
 # Hebis
+## WICHTIG FÜR RPB!
 
 do list(path: "001", "var": "$i")
   paste("sameAs[].$append.id","~http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=", "$i","~#!",join_char:"")
@@ -68,16 +69,16 @@ do list(path:"77008", "var":"$i")
     end
     paste("supplement[].$last.label","$i.t","$i.b",join_char:". ")
     do list(path:"$i.w","var": "$j")
-      if all_match("$j","^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+      if all_match("$j","^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
         copy_field("$j","supplement[].$last.id")
       end
     end
   end
 end
 
-replace_all("supplement[].*.id","^\\(DE-605\\)(.*)$","http://lobid.org/resources/$1#!")
-replace_all("supplement[].*.id","^\\(DE-600\\)(.*)$","http://lobid.org/resources/ZDB-$1#!")
-replace_all("supplement[].*.id", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+replace_all("supplement[].*.id","^\\(DE-605\\)(.+)$","http://lobid.org/resources/$1#!")
+replace_all("supplement[].*.id","^\\(DE-600\\)(.+)$","http://lobid.org/resources/ZDB-$1#!")
+replace_all("supplement[].*.id", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
 
 replace_all("supplement[].*.label","<<|>>","")
 call_macro("lobidResourcesFallbackLabel",field:"supplement[]")
@@ -93,15 +94,15 @@ add_array("isPartOf[]")
 unless any_match("leader", "^.{7}[ad].*")
   do list(path: "773??", "var": "$i")
     unless any_equal("$i.9","LOCAL")
-      if any_match("$i.w","^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+      if any_match("$i.w","^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
         do list(path: "$i.w", "var": "$j")
-          if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+          if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
             add_hash("isPartOf[].$append")
             add_array("isPartOf[].$last.hasSuperordinate[]")
             add_hash( "isPartOf[].$last.hasSuperordinate[].$append")
             copy_field("$j", "isPartOf[].$last.hasSuperordinate[].$last.id")
             copy_field("$i.t", "isPartOf[].$last.hasSuperordinate[].$last.label")
-            call_macro("alternateGraphicRepresationIsPartOf",variable:"$i")
+            call_macro("alternateGraphicRepresentationIsPartOf",variable:"$i")
             copy_field("$i.q", "isPartOf[].$last.numbering")
             replace_all("isPartOf[].$last.numbering", "^\\d","")  # Hebis specific adjustment of Sortierform.
             add_array("isPartOf[].$last.note[]")
@@ -115,7 +116,7 @@ unless any_match("leader", "^.{7}[ad].*")
         add_array("isPartOf[].$last.hasSuperordinate[]")
         add_hash( "isPartOf[].$last.hasSuperordinate[].$append")
         copy_field("$i.t", "isPartOf[].$last.hasSuperordinate[].$last.label")
-        call_macro("alternateGraphicRepresationIsPartOf",variable:"$i")
+        call_macro("alternateGraphicRepresentationIsPartOf",variable:"$i")
         copy_field("$i.q", "isPartOf[].$last.numbering")
         replace_all("isPartOf[].$last.numbering", "^\\d","")  # Hebis specific adjustment of Sortierform.
         add_array("isPartOf[].$last.note[]")
@@ -139,7 +140,7 @@ do list(path: "4900?", "var": "$i")
     copy_field("$j", "isPartOf[].$last.hasSuperordinate[].$last.label.$append")
   end
   join_field("isPartOf[].$last.hasSuperordinate[].$last.label", " / ")
-  call_macro("alternateGraphicRepresationIsPartOf",variable:"$i")
+  call_macro("alternateGraphicRepresentationIsPartOf",variable:"$i")
 
   add_array("isPartOf[].$last.numbering")
   do list(path:"$i.v", "var":"$j")
@@ -156,7 +157,7 @@ do list(path: "830??", "var": "$i")
   add_hash("isPartOf[].$append")
   add_array("isPartOf[].$last.hasSuperordinate[]")
   add_hash( "isPartOf[].$last.hasSuperordinate[].$append")
-  if all_match("$i.w", "^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+  if all_match("$i.w", "^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
     copy_field("$i.w", "isPartOf[].$last.hasSuperordinate[].$last.id")
   end
   do list(path:"$i.a", "var":"$j")
@@ -169,7 +170,7 @@ do list(path: "830??", "var": "$i")
 end
 
 do list(path: "4901?", "var": "$j")
-  call_macro("alternateGraphicRepresationIsPartOf",variable:"$j")
+  call_macro("alternateGraphicRepresentationIsPartOf",variable:"$j")
 end
 
 replace_all("isPartOf[].*.hasSuperordinate[].*.label","<<|>>","")
@@ -187,15 +188,15 @@ if any_match("leader", "^.{7}[ad].*")
   if exists("@titleOfSubSeries")
     do list(path: "773??", "var": "$i")
       unless any_equal("$i.9","LOCAL")
-        if any_match("$i.w","^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+        if any_match("$i.w","^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
           do list(path: "$i.w", "var": "$j")
-            if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+            if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
               add_hash("isPartOf[].$append")
               add_array("isPartOf[].$last.hasSuperordinate[]")
               add_hash( "isPartOf[].$last.hasSuperordinate[].$append")
               copy_field("$j", "isPartOf[].$last.hasSuperordinate[].$last.id")
               copy_field("$i.t", "isPartOf[].$last.hasSuperordinate[].$last.label")
-              call_macro("alternateGraphicRepresationIsPartOf",variable:"$i")
+              call_macro("alternateGraphicRepresentationIsPartOf",variable:"$i")
               copy_field("$i.q", "isPartOf[].$last.numbering")
               replace_all("isPartOf[].$last.numbering", "^\\d","")  # Hebis specific adjustment of Sortierform.
               add_array("isPartOf[].$last.note[]")
@@ -209,7 +210,7 @@ if any_match("leader", "^.{7}[ad].*")
           add_array("isPartOf[].$last.hasSuperordinate[]")
           add_hash( "isPartOf[].$last.hasSuperordinate[].$append")
           copy_field("$i.t", "isPartOf[].$last.hasSuperordinate[].$last.label")
-          call_macro("alternateGraphicRepresationIsPartOf",variable:"$i")
+          call_macro("alternateGraphicRepresentationIsPartOf",variable:"$i")
           copy_field("$i.q", "isPartOf[].$last.numbering")
           replace_all("isPartOf[].$last.numbering", "^\\d","")  # Hebis specific adjustment of Sortierform.
           add_array("isPartOf[].$last.note[]")
@@ -222,7 +223,7 @@ if any_match("leader", "^.{7}[ad].*")
   else # exclude subseries and subvolumes
     do list(path:"773??", "var":"$i")
       do list(path:"$i.w", "var":"$j")
-        if any_match("$j","^\\(DE-(600|605)\\).*")
+        if any_match("$j","^\\(DE-(600|605|603)\\).+")
           add_hash( "containedIn[].$append")
           copy_field("$j","containedIn[].$last.id")
           copy_field("$i.t","containedIn[].$last.label")
@@ -243,9 +244,9 @@ do list(path: "isPartOf[]","var":"$i")
   end
 end
 
-replace_all("isPartOf[].*.hasSuperordinate[].*.id", "^\\(DE-605\\)(.*)$", "http://lobid.org/resources/$1#!")
-replace_all("isPartOf[].*.hasSuperordinate[].*.id", "^\\(DE-600\\)(.*)$", "http://lobid.org/resources/ZDB-$1#!")
-replace_all("isPartOf[].*.hasSuperordinate[].*.id", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+replace_all("isPartOf[].*.hasSuperordinate[].*.id", "^\\(DE-605\\)(.+)$", "http://lobid.org/resources/$1#!")
+replace_all("isPartOf[].*.hasSuperordinate[].*.id", "^\\(DE-600\\)(.+)$", "http://lobid.org/resources/ZDB-$1#!")
+replace_all("isPartOf[].*.hasSuperordinate[].*.id", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
 
 replace_all("isPartOf[].*.numbering", "^[©]|\\s?[,.:;/=]?$", "")
 
@@ -253,9 +254,9 @@ replace_all("isPartOf[].*.numbering", "^[©]|\\s?[,.:;/=]?$", "")
 uniq("isPartOf[]")
 
 
-replace_all("containedIn[].*.id", "^\\(DE-605\\)(.*)$", "http://lobid.org/resources/$1#!")
-replace_all("containedIn[].*.id", "^\\(DE-600\\)(.*)$", "http://lobid.org/resources/ZDB-$1#!")
-replace_all("containedIn[].*.id", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+replace_all("containedIn[].*.id", "^\\(DE-605\\)(.+)$", "http://lobid.org/resources/$1#!")
+replace_all("containedIn[].*.id", "^\\(DE-600\\)(.+)$", "http://lobid.org/resources/ZDB-$1#!")
+replace_all("containedIn[].*.id", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
 replace_all("containedIn[].*.label","<<|>>","")
 call_macro("lobidResourcesFallbackLabel",field:"containedIn[]")
 
@@ -270,7 +271,7 @@ add_array("primaryForm[]")
 do list(path: "77608", "var":"$i")
   if any_match ("$i.i", ".*eproduktion von.*")
     add_hash( "primaryForm[].$append")
-    if all_match("$i.w", "^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+    if all_match("$i.w", "^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
       copy_field("$i.w", "primaryForm[].$last.id")
     end
     paste("primaryForm[].$last.label", "$i.i", "$i.w")
@@ -282,9 +283,9 @@ do list(path: "77608", "var":"$i")
   end
 end
 
-replace_all("primaryForm[].*.id", "^\\(DE-605\\)(.*)$", "http://lobid.org/resources/$1#!")
-replace_all("primaryForm[].*.id", "^\\(DE-600\\)(.*)$", "http://lobid.org/resources/ZDB-$1#!")
-replace_all("primaryForm[].*.id", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+replace_all("primaryForm[].*.id", "^\\(DE-605\\)(.+)$", "http://lobid.org/resources/$1#!")
+replace_all("primaryForm[].*.id", "^\\(DE-600\\)(.+)$", "http://lobid.org/resources/ZDB-$1#!")
+replace_all("primaryForm[].*.id", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
 
 call_macro("lobidResourcesFallbackLabel",field:"primaryForm[]")
 
@@ -295,11 +296,11 @@ add_array("secondaryForm[]")
 do list(path: "77608", "var":"$i")
   if any_match ("$i.i", ".*eproduktion")
     add_hash( "secondaryForm[].$append")
-    if all_match("$i.w", "^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+    if all_match("$i.w", "^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
       do list(path:"$i.w", "var":"$j")
-        replace_all("$j", "^\\(DE-605\\)(.*)$", "http://lobid.org/resources/$1#!")
-        replace_all("$j", "^\\(DE-600\\)(.*)$", "http://lobid.org/resources/ZDB-$1#!")
-        replace_all("$j", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+        replace_all("$j", "^\\(DE-605\\)(.+)$", "http://lobid.org/resources/$1#!")
+        replace_all("$j", "^\\(DE-600\\)(.+)$", "http://lobid.org/resources/ZDB-$1#!")
+        replace_all("$j", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
         copy_field("$j", "secondaryForm[].$append.id")
         copy_field("$i.i", "secondaryForm[].$last.label")
       end
@@ -350,7 +351,15 @@ do list(path: "856??", "var":"$i")
           if all_match("$i.x", ".*(Verlag|Agentur|Digitalisierung).*")
             copy_field("$i.x", "fulltextOnline[].$append.label")
             copy_field("$i.u", "fulltextOnline[].$last.id")
+          else
+            unless exists("$i.x") # also map if kostenfrei and no specific link description
+              add_field("fulltextOnline[].$append.label","Online-Ressource")
+              copy_field("$i.u", "fulltextOnline[].$last.id")
+            end
           end
+      elsif any_equal("$i.7","0") # Open Access Marker
+        add_field("fulltextOnline[].$append.label","Online-Ressource")
+        copy_field("$i.u", "fulltextOnline[].$last.id")
       end
       if all_match("$i.x", ".*(Archivierte Online|EZB|Online-Ausg|Resolving-System|Volltext).*")
         copy_field("$i.x", "fulltextOnline[].$append.label")
@@ -359,6 +368,12 @@ do list(path: "856??", "var":"$i")
       if all_match("$i.3", "^[vV][oO][lL].*") # Volltext
         copy_field("$i.3", "fulltextOnline[].$append.label")
         copy_field("$i.u", "fulltextOnline[].$last.id")
+      end
+    end
+    if all_match("$i.x", ".*(Aggregator).*")
+      if any_contain("$i.u","oersi")
+        add_field("sameAs[].$append.label","OERSI-Ressource")
+        copy_field("$i.u", "sameAs[].$last.id")
       end
     end
   end
@@ -430,7 +445,7 @@ do list(path:"775??|776??", "var":"$i")
     do list_as("$hbzId":"$i.w", "$isbn":"$i.z", "$label":"$i.t", "$note":"$i.n", "$issn":"$i.x", "$info":"$i.i")
       unless in("$isbn", "related[].*.isbn[]") # Skip duplicates
         add_hash("related[].$append")
-        if all_match("$hbzId", "^\\((DE-600|DE-605|DE-603)\\).*$")
+        if all_match("$hbzId", "^\\((DE-600|DE-605|DE-603)\\).+$")
           copy_field("$hbzId", "related[].$last.id")
         end
         add_array("related[].$last.note[]")
@@ -466,9 +481,9 @@ do list(path: "50580", "var":"$i")
   end
 end
 
-replace_all("related[].*.id", "^\\(DE-605\\)(.*)$", "http://lobid.org/resources/$1#!")
-replace_all("related[].*.id", "^\\(DE-600\\)(.*)$", "http://lobid.org/resources/ZDB-$1#!")
-replace_all("related[].*.id", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+replace_all("related[].*.id", "^\\(DE-605\\)(.+)$", "http://lobid.org/resources/$1#!")
+replace_all("related[].*.id", "^\\(DE-600\\)(.+)$", "http://lobid.org/resources/ZDB-$1#!")
+replace_all("related[].*.id", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
 replace_all("related[].*.label","<<|>>","")
 call_macro("lobidResourcesFallbackLabel",field:"related[]")
 
@@ -483,7 +498,7 @@ if any_equal("MBD  .M", "49HBZ_NETWORK")
   if any_match("POR  .A", ".*")
     add_field("@inNZ", "true")
   else
-    unless any_match("035  .a", "^\\(EXLCZ\\).*")
+    unless any_match("035  .a", "^\\(EXLCZ\\).+$")
       add_field("@inNZ", "true")
     end
   end
@@ -558,19 +573,23 @@ if any_equal("inCollection[].*.id", "http://lobid.org/organisations/DE-655#!") #
         add_field("inCollection[].$last.label", "Nordrhein-Westfälische Bibliographie (NWBib)")
       end
     end
+
+  # nwbib Zeitschriften
+    if any_contain("$i.n","NWBib-Zeitschrift-6")
+      add_field("inCollection[].$append.id", "https://nwbib.de/journals")
+      add_field("inCollection[].$last.label", "Laufend ausgewertete NWBib-Zeitschriften")
+    end
+
+  # E-Pflicht NRW
+    if any_contain("$i.r","epfl-")
+      add_field("inCollection[].$append.id", "https://lobid.org/collections#epflichtnrw")
+      add_field("inCollection[].$last.label", "E-Pflicht NRW")
+    end
   end
 
   if any_equal("inCollection[].*.id", "http://lobid.org/resources/HT014176012#!")
     paste("sameAs[].$append.id","~http://nwbib.de/", "almaMmsId", "~#!",join_char:"")
     add_field("sameAs[].$last.label","NWBib-Ressource")
-  end
-
-  # nwbib Zeitschriften
-  do list(path:"960??", "var":"$i")
-    if any_contain("$i.n","NWBib-Zeitschrift-6")
-      add_field("inCollection[].$append.id", "https://nwbib.de/journals")
-      add_field("inCollection[].$last.label", "Laufend ausgewertete NWBib-Zeitschriften")
-    end
   end
 end
 
@@ -587,6 +606,25 @@ do list(path:"084??", "var":"$i")
     if any_match("$i.a","^rpb.*") # exclude LBZ Notations
       add_field("inCollection[].$append.id", "http://lobid.org/resources/HT013494180#!")
       add_field("inCollection[].$last.label", "Rheinland-Pfälzische Bibliographie")
+    end
+  end
+end
+
+if any_equal("inCollection[].*.id", "http://lobid.org/organisations/DE-655#!") # only assign hbz NZ records and filter out CZ oder IZ records
+  do list(path:"960??", "var":"$i")
+    if any_contain("$i.r","rpb")
+      unless any_equal("inCollection[].*.id","http://lobid.org/resources/HT013494180#!")
+        add_field("inCollection[].$append.id", "http://lobid.org/resources/HT013494180#!")
+        add_field("inCollection[].$last.label", "Rheinland-Pfälzische Bibliographie")
+      end
+    end
+  end
+
+  # bibliovino
+  do list(path:"960??", "var":"$i")
+    if any_contain("$i.r","bibliovino")
+      add_field("inCollection[].$append.id", "https://lobid.org/resources/990120000550206441#!")
+      add_field("inCollection[].$last.label", "BiblioVino")
     end
   end
 end
@@ -613,6 +651,17 @@ do list(path:"912  ", "var":"$i")
       add_field("$i.@label","lobid Organisation ZDB Collection")
     end
     move_field("$i.@label","inCollection[].$last.label")
+  elsif any_match("$i.a", "ZDB-OERSI")
+    add_field("inCollection[].$append.id", "https://oersi.org/")
+    add_field("inCollection[].$last.label", "OERSI")
+  elsif any_match("$i.a", "ZDB-(.*)")
+    copy_field("$i.a", "inCollection[].$append.id")
+    replace_all("inCollection[].$last.id", "^(.*)$", "https://lobid.org/collections#$1")
+    copy_field("inCollection[].$last.id","inCollection[].$last.label")
+    lookup("inCollection[].$last.label","collectionLabels")
+    if any_match("inCollection[].$last.label","https://lobid.org/collections.*") #Fallback label for hbz collections
+      replace_all("inCollection[].$last.label","https://lobid.org/collections#(.*)","$1 Collection")
+    end
   end
 end
 
@@ -632,6 +681,30 @@ do list(path:"962  ", "var":"$i")
         replace_all("inCollection[].$last.label","https://lobid.org/collections#(.*)","$1 Collection")
       end
     end
+  end
+end
+
+# 940 BVB specific field
+# DE-61 also assigns marker for Judaica
+
+do list(path:"940??","var":"$i")
+  if any_equal("$i.n","jfk")
+    add_field("inCollection[].$append.id","https://lobid.org/resources/990225637530206441#!")
+    add_field("inCollection[].$last.label","Judaica-Portal")
+  end
+end
+
+do list(path:"subject[]","var":"$i")
+  if any_match("$i.id","https:\\/\\/nwbib.de\\/subjects#N(630100|631000|632000|632050|635000|636000|637000|638000)")
+    add_field("inCollection[].$append.id","https://lobid.org/resources/990225637530206441#!")
+    add_field("inCollection[].$last.label","Judaica-Portal")
+  end
+end
+
+do list(path:"hasItem[]","var":"$i")
+  if any_equal("$i.heldBy.isil","DE-6-336")
+    add_field("inCollection[].$append.id","https://lobid.org/resources/990225637530206441#!")
+    add_field("inCollection[].$last.label","Judaica-Portal")
   end
 end
 
@@ -660,20 +733,22 @@ do list(path:"780??", "var":"$i")
   add_hash( "predecessor[].$append")
   copy_field("$i.t", "predecessor[].$last.label")
   do list(path:"$i.w", "var":"$j")
-    if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+    if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
       copy_field("$j", "predecessor[].$last.id")
     end
   end
   replace_all("predecessor[].$last.label", "\\((?:DE-600|DE-605|DE-603)\\)", "")
-  add_array("predecessor[].$last.note[]")
-  do list(path:"$i.i","var":"$j")
-    copy_field("$j","predecessor[].$last.note[].$append")
+  unless is_empty("predecessor[].$last")
+    add_array("predecessor[].$last.note[]")
+    do list(path:"$i.i","var":"$j")
+      copy_field("$j","predecessor[].$last.note[].$append")
+    end
   end
 end
 
-replace_all("predecessor[].*.id", "^\\(DE-605\\)(.*)$", "http://lobid.org/resources/$1#!")
-replace_all("predecessor[].*.id", "^\\(DE-600\\)(.*)$", "http://lobid.org/resources/ZDB-$1#!")
-replace_all("predecessor[].*.id", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+replace_all("predecessor[].*.id", "^\\(DE-605\\)(.+)$", "http://lobid.org/resources/$1#!")
+replace_all("predecessor[].*.id", "^\\(DE-600\\)(.+)$", "http://lobid.org/resources/ZDB-$1#!")
+replace_all("predecessor[].*.id", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
 
 call_macro("lobidResourcesFallbackLabel",field:"predecessor[]")
 
@@ -689,7 +764,7 @@ do list(path:"785??", "var":"$i")
   add_hash( "successor[].$append")
   copy_field("$i.t", "successor[].$last.label")
   do list(path:"$i.w", "var":"$j")
-    if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.*)$")
+    if all_match("$j", "^\\((?:DE-600|DE-605|DE-603)\\)(.+)$")
       copy_field("$j", "successor[].$last.id")
     end
   end
@@ -699,9 +774,9 @@ do list(path:"785??", "var":"$i")
   end
 end
 
-replace_all("successor[].*.id", "^\\(DE-605\\)(.*)$", "http://lobid.org/resources/$1#!")
-replace_all("successor[].*.id", "^\\(DE-600\\)(.*)$", "http://lobid.org/resources/ZDB-$1#!")
-replace_all("successor[].*.id", "^\\(DE-603\\)(.*)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
+replace_all("successor[].*.id", "^\\(DE-605\\)(.+)$", "http://lobid.org/resources/$1#!")
+replace_all("successor[].*.id", "^\\(DE-600\\)(.+)$", "http://lobid.org/resources/ZDB-$1#!")
+replace_all("successor[].*.id", "^\\(DE-603\\)(.+)$", "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=$1#!")
 
 
 # 130 - Main Entry-Uniform Title (NR)
@@ -710,18 +785,18 @@ add_array("exampleOfWork.label")
 copy_field("1300 .a", "exampleOfWork.label.$append")
 copy_field("1300 .g", "exampleOfWork.label.$append")
 do list(path: "1300 .0", "var":"$i")
-  if any_match("$i", "^\\(DE-588\\).*")
+  if any_match("$i", "^\\(DE-588\\).+$")
     copy_field("$i", "exampleOfWork.id")
-    replace_all("exampleOfWork.id","^\\(DE-588\\)(.*$)","https://d-nb.info/gnd/$1")
+    replace_all("exampleOfWork.id","^\\(DE-588\\)(.+$)","https://d-nb.info/gnd/$1")
   end
 end
 
 copy_field("24010.a", "exampleOfWork.label.$append")
 copy_field("24010.g", "exampleOfWork.label.$append")
 do list(path: "24010.0", "var":"$i")
-  if any_match("$i", "^\\(DE-588\\).*")
+  if any_match("$i", "^\\(DE-588\\).+$")
     copy_field("$i", "exampleOfWork.id")
-    replace_all("exampleOfWork.id","^\\(DE-588\\)(.*$)","https://d-nb.info/gnd/$1")
+    replace_all("exampleOfWork.id","^\\(DE-588\\)(.+$)","https://d-nb.info/gnd/$1")
   end
 end
 join_field("exampleOfWork.label", " ")
@@ -772,9 +847,9 @@ do list(path:"700?2|710?2|711?2|730?2", "var": "$i")
     copy_field("$j","containsExampleOfWork[].$last.instrumentation[].$append")
   end
   do list(path: "$i.0", "var":"$k")
-    if any_match("$k", "^\\(DE-588\\).*")
+    if any_match("$k", "^\\(DE-588\\).+$")
       copy_field("$k", "containsExampleOfWork[].$last.id")
-      replace_all("containsExampleOfWork[].$last.id","^\\(DE-588\\)(.*$)","https://d-nb.info/gnd/$1")
+      replace_all("containsExampleOfWork[].$last.id","^\\(DE-588\\)(.+$)","https://d-nb.info/gnd/$1")
     end
   end
 end

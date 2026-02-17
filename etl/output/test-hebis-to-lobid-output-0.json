@@ -10,6 +10,7 @@
   "almaMmsId" : "514226781",
   "oclcNumber" : [ "1415743560" ],
   "publication" : [ {
+    "dateStatement" : "[2019?]",
     "startDate" : "2019",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Ingelheim am Rhein" ],
@@ -24,7 +25,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1415743560",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=514226781#!",
     "label" : "HEBIS-Ressource"

@@ -12,6 +12,7 @@
   "alternativeTitle" : [ "Miteinander für Integration in Mainz - Ehrenamtsbündnis für Flüchtlingsarbeit" ],
   "otherTitleInformation" : [ "eine Präsentation der vielfältigen und vielseitigen Angebotslandschaft ehrenamtlich engagierter Initiativen, Institutionen und Vereine in der Mainzer Flüchtlingsarbeit" ],
   "publication" : [ {
+    "dateStatement" : "[2020?]",
     "startDate" : "2020",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Mainz" ],
@@ -26,7 +27,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1404835958",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=512013683#!",
     "label" : "HEBIS-Ressource"

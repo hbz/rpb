@@ -12,6 +12,7 @@
   "oclcNumber" : [ "1512396052" ],
   "dnbId" : "1361254696",
   "publication" : [ {
+    "dateStatement" : "Frühjahr 2025",
     "startDate" : "2025",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Roßdorf" ],
@@ -26,7 +27,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1512396052",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "https://d-nb.info/1361254696",
     "label" : "DNB-Ressource"

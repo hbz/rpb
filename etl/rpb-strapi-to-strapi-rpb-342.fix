@@ -1,0 +1,27 @@
+do once()
+    put_filemap('./maps/classification-no-broader-to-replacement.tsv', 'no_broader_map', 'sep_char': '\t')
+end
+
+do put_macro('replace')
+    do list_as(notation: 'data.$[field][].*')
+        copy_field('notation.value', '_notation.value')
+        lookup('_notation.value', 'no_broader_map', 'delete': 'true')
+        if exists('_notation.value')
+            lookup('notation.value', 'no_broader_map', 'delete': 'false')
+            set_field('_changed', 'true')
+        end
+        # ID and label are managed by Strapi, we only update 'spatial.value':
+        remove_field('notation.id')
+        remove_field('notation.label')
+    end
+end
+
+call_macro("replace", field: "spatial")
+call_macro("replace", field: "subject")
+
+unless exists('_changed')
+    reject()
+end
+
+copy_field('data.id', 'id')
+retain('data.spatial[]', 'data.subject[]', 'id')

@@ -13,6 +13,7 @@
   "dnbId" : "958645337",
   "otherTitleInformation" : [ "2000 years of a city ; [city guide]" ],
   "publication" : [ {
+    "dateStatement" : "[2000]",
     "startDate" : "2000",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Mainz" ],
@@ -27,7 +28,7 @@
   },
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/57680814",
-    "label" : "OCLC Ressource"
+    "label" : "OCLC-Ressource"
   }, {
     "id" : "https://d-nb.info/958645337",
     "label" : "DNB-Ressource"

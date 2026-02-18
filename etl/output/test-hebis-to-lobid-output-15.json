@@ -10,11 +10,13 @@
   "almaMmsId" : "457093552",
   "dnbId" : "1203676662",
   "publication" : [ {
+    "dateStatement" : "Dezember 2019-",
     "startDate" : "2019",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Roßdorf" ],
     "publishedBy" : [ "Edition-TZ.de, Leinpfad Verlag" ]
   }, {
+    "dateStatement" : "Dezember 2019-",
     "startDate" : "2019",
     "type" : [ "PublicationEvent" ],
     "location" : [ "Ingelheim" ],

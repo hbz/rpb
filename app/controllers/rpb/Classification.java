@@ -58,6 +58,7 @@ import com.github.jsonldjava.core.JsonLdError;
 import com.github.jsonldjava.core.JsonLdProcessor;
 import com.github.jsonldjava.utils.JsonUtils;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.html.HtmlEscapers;
 
 import play.Logger;
 import play.Play;
@@ -459,7 +460,7 @@ public class Classification {
 					"label",
 					(style == Label.PLAIN || notation.isEmpty() ? ""
 							: "<span class='notation'>" + notation + "</span>" + " ")
-							+ label.findValue("@value").asText(), //
+							+ HtmlEscapers.htmlEscaper().escape(label.findValue("@value").asText()), //
 					"hits",
 					Lobid.getTotalHitsRpbClassification(id), //
 					"notation", notation, //

@@ -43,7 +43,7 @@
 } else {
   @defining(Json.parse(docJson)) { doc =>
     @main(if( (doc\\"title").isEmpty) "RPB - Vollanzeige" else (doc\"title").asOpt[String].getOrElse(q), docJson = Some(docJson)) {
-      @*
+      @tags.search_form(q)
       @if(Cache.get(session("uuid") + "-" + shortId(doc)) != null) {
         @defining(Cache.get(session("uuid") + "-lastSearch")) { lastSearch =>
           @if(lastSearch != null) {
@@ -67,8 +67,6 @@
           }
         }
       }
-      *@
-      @tags.search_form(q)
       <div class="row" id="search-results">
       @defining((Lobid.items(doc.toString), Lobid.itemDetails(doc.toString))) { case (items, itemDetails) =>
         @defining(items.isEmpty && !(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>

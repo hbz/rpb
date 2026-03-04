@@ -3,7 +3,7 @@ a {
 	text-decoration-style: dotted;
 }
 
-a[href^="#"], a[href^="javascript"], a:hover {
+#pager a, a[href^="#"], a[href^="javascript"], a:hover {
 	text-decoration: none;
 }
 

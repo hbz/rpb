@@ -551,8 +551,8 @@ public class Application extends Controller {
 				JsonNode json = response.asJson();
 				hits = Lobid.getTotalResults(json);
 				s = removeNonFormattingControlCharacters(json.toString());
-				if (!q.contains("hbzId:")) {
-					List<JsonNode> ids = json.findValues("hbzId");
+				if (!q.contains("rpbId:")) {
+					List<JsonNode> ids = json.findValues("rpbId");
 					uncache(
 							ids.stream().map(j -> j.asText()).collect(Collectors.toList()));
 					Cache.set(session("uuid") + "-lastSearch", ids.toString(), ONE_DAY);

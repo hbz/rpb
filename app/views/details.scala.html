@@ -53,7 +53,7 @@
                 @pageLink(last, "prev", "&larr;", "Voriger Treffer")
                 @defining(session("lastSearchUrl")){ lastSearchUrl =>
                   <li><a href="@lastSearchUrl">Treffer @(last.indexOf((doc\\"rpbId")(0).as[String])+1) von @last.size in der 
-                  @if(lastSearchUrl==rpb.routes.Application.showStars().toString()) {Merkliste} else {letzten Trefferliste}</a></li>
+                  @if(lastSearchUrl contains rpb.routes.Application.showStars().toString()) {Merkliste} else {Trefferliste}</a></li>
                 }
                 @pageLink(last, "next", "&rarr;", "Nächster Treffer")
               </ul>

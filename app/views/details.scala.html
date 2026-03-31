@@ -11,6 +11,7 @@
 @import play.api.libs.json.JsValue
 @import play.api.libs.json.JsArray
 @import play.mvc.Controller.session
+@import play.api.libs.json.jackson.JacksonJson
 @import play.cache.Cache
 
 @idAndLabelLink(e: JsValue) = {
@@ -30,6 +31,37 @@
 
 @shortId(json: JsValue) = @{
 	(json\"rpbId").asOpt[String].getOrElse((json\"id").asOpt[String].map(_.replaceAll("https?://lobid.org/resources/","").replaceAll("#!","")).getOrElse(""))
+}
+
+@orderingPanel(kind: String, id: String, doc: JsValue) = {
+  <div class="panel panel-primary rpb-footer">
+    <div class="panel-body">
+      <a href='@mailtoOrdering(kind, id, doc)'>
+        Diesen Titel zu <b>@kind</b> Zwecken<br/>
+        <b>kostenpflichtig</b> (siehe Link oben) bestellen.</a>
+    </div>
+  </div>
+}
+
+@mailtoOrdering(kind: String, id: String, doc: JsValue) = @{
+  val Array(email, item) = Lobid.emailAndItem(id, doc.toString)
+  val itemJson = Json.parse(item)
+  val subject = urlEncode("Bestellung: " + id).replace('+', ' ')
+  val body = urlEncode(s"""Guten Tag,
+
+ich würde gerne zu $kind Zwecken folgenden Titel bestellen:
+
+${(doc \ "title").as[String]}
+Titel-ID: $id
+
+Signatur: ${(itemJson\"callNumber").asOpt[String].getOrElse("--")}
+Erscheinungsverlauf: ${(itemJson\"enumerationAndChronology").asOpt[String].getOrElse("--")}
+Bestands-ID: ${(itemJson\"id").as[String]}
+
+Mit freundlichen Grüßen
+
+""").replace('+', ' ')
+  s"mailto:$email?cc=lobid-admin@hbz-nrw.de&subject=$subject&body=$body"
 }
 
 @if(docJson.isEmpty){
@@ -119,25 +151,17 @@
              <dd>@tags.items_map(items, itemDetails)</dd>
             }
             </dl>
-            <div id="ordering">
-              <div>
-                <a href="">Kostentabelle für Titelbestellungen</a>
-              </div>
-              <div class="panel panel-primary rpb-footer">
-                <div class="panel-body">
-                  <a href="">
-                    Diesen Titel zu <b>kommerziellen</b> Zwecken<br/>
-                    <b>kostenpflichtig</b> (siehe Link oben) bestellen.</a>
+            @if(!doc.toString.contains("fulltextOnline")){
+              @defining(if(superordination){((doc\"containedIn").as[Seq[JsValue]].head\"id").as[String]} else {(doc\"rpbId").as[String]}) { id =>
+              <div id="ordering">
+                <div>
+                  <a target="_blank" href="https://lbz.rlp.de/suche?tx_solr%5Bq%5D=kostentabelle">Kostentabelle für Titelbestellungen</a>
                 </div>
+                @orderingPanel("kommerziellen", id, doc)
+                @orderingPanel("privaten", id, doc)
               </div>
-              <div class="panel panel-primary rpb-footer">
-                <div class="panel-body">
-                  <a href="">
-                    Diesen Titel zu <b>privaten</b> Zwecken<br/>
-                    <b>kostenpflichtig</b> (siehe Link oben) bestellen.</a>
-                </div>
-              </div>
-            </div>
+              }
+            }
           </div>
           }
         }

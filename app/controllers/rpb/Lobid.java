@@ -804,4 +804,13 @@ public class Lobid {
 		return Integer.parseInt(s.replaceAll("\\D", "9"));
 	}
 
+	public static String[] emailAndItem(String id, String doc) {
+		JsonNode resource = id.startsWith("http") ? cachedJsonCall(id) : Json.parse(doc);
+		String item = resource.get("hasItem").elements().next().toString();
+		String ownerId = Json.parse(item).get("heldBy").get("id").asText();
+		JsonNode organisation = cachedJsonCall(ownerId);
+		Optional<String> email = Optional.ofNullable(organisation.findValue("email")).map(JsonNode::asText);
+		return new String[] { email.orElse(ownerId), item };
+	}
+
 }

@@ -67,7 +67,7 @@
           }
         }
       }
-      <div class="row" id="search-results">
+      <div class="row" id="title-details">
       @defining((Lobid.items(doc.toString), Lobid.itemDetails(doc.toString))) { case (items, itemDetails) =>
         @defining(items.isEmpty && !(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>
           <div class="col-md-@if(items.isEmpty && !doc.toString.contains("fulltextOnline") && !superordination){12} else {8}">
@@ -119,6 +119,25 @@
              <dd>@tags.items_map(items, itemDetails)</dd>
             }
             </dl>
+            <div id="ordering">
+              <div>
+                <a href="">Kostentabelle für Titelbestellungen</a>
+              </div>
+              <div class="panel panel-primary rpb-footer">
+                <div class="panel-body">
+                  <a href="">
+                    Diesen Titel zu <b>kommerziellen</b> Zwecken<br/>
+                    <b>kostenpflichtig</b> (siehe Link oben) bestellen.</a>
+                </div>
+              </div>
+              <div class="panel panel-primary rpb-footer">
+                <div class="panel-body">
+                  <a href="">
+                    Diesen Titel zu <b>privaten</b> Zwecken<br/>
+                    <b>kostenpflichtig</b> (siehe Link oben) bestellen.</a>
+                </div>
+              </div>
+            </div>
           </div>
           }
         }

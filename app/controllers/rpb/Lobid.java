@@ -837,8 +837,9 @@ public class Lobid {
 	}
 
 	private static String titleDetails(JsonNode resourceToOrder) {
-		String titleDetails = String.format("%s (https://rpb.lbz-rlp.de/%s)", resourceToOrder.get("title").asText(),
-				resourceToOrder.get("rpbId").asText());
+		String baseUrl = Application.CONFIG.getString("host");
+		String fullUrl = String.format("%s/%s", baseUrl, resourceToOrder.get("rpbId").asText());
+		String titleDetails = String.format("%s (%s)", resourceToOrder.get("title").asText(), fullUrl);
 		return appendOptional(titleDetails, resourceToOrder, "Quelle", "bibliographicCitation");
 	}
 

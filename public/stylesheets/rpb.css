@@ -372,6 +372,10 @@ body, #issued-range {
 	display: flex; flex-direction: column;
 }
 
+#holdings>dl {
+	margin-bottom: 15px;
+}
+
 #ordering {
 	margin-top: auto;
 }

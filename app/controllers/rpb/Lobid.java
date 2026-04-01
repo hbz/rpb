@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.Callable;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -809,20 +810,30 @@ public class Lobid {
 	public static String[] emailAndDetails(String doc) {
 		JsonNode resourceToOrder = Json.parse(doc);
 		JsonNode containedIn = resourceToOrder.get("containedIn");
-		JsonNode resourceWithItem = containedIn != null
-				? cachedJsonCall(containedIn.elements().next().get("id").asText())
-				: resourceToOrder;
-		JsonNode item = findRpbItem(resourceWithItem);
-		String ownerId = item.get("heldBy").get("id").asText();
-		JsonNode organisation = cachedJsonCall(ownerId);
-		Optional<String> email = Optional.ofNullable(organisation.findValue("email")).map(JsonNode::asText);
-		return new String[] { email.orElse(ownerId), titleDetails(resourceToOrder), itemDetails(item) };
+		JsonNode resourceWithItem = containedIn == null ? resourceToOrder
+				: cachedJsonCall(containedIn.elements().next().get("id").asText());
+		JsonNode item = findRpbItem(resourceWithItem.get("hasItem"));
+		return new String[] { email(item), titleDetails(resourceToOrder), itemDetails(item) };
 	}
 
-	private static JsonNode findRpbItem(JsonNode resourceWithItem) {
+	private static JsonNode findRpbItem(JsonNode itemsNode) {
+		if (itemsNode == null) {
+			return null;
+		}
 		List<String> rpbIsils = Arrays.asList("DE-929", "DE-107", "DE-Zw1", "DE-121", "DE-36");
-		Stream<JsonNode> items = Streams.stream(resourceWithItem.get("hasItem").elements());
-		return items.filter(item -> rpbIsils.contains(item.get("heldBy").get("isil").asText())).findFirst().get();
+		Stream<JsonNode> items = Streams.stream(itemsNode.elements());
+		Function<String, String> isilFromUri = uri -> uri.replaceAll("https?://lobid.org/organisations/(.+)#!", "$1");
+		return items.filter(item -> rpbIsils.contains(isilFromUri.apply(item.get("heldBy").get("id").asText())))
+				.findFirst().orElse(null);
+	}
+
+	private static String email(JsonNode itemNode) {
+		if (itemNode == null) {
+			return null;
+		}
+		JsonNode organisation = cachedJsonCall(itemNode.get("heldBy").get("id").asText());
+		Optional<String> email = Optional.ofNullable(organisation.findValue("email")).map(JsonNode::asText);
+		return email.orElse(null);
 	}
 
 	private static String titleDetails(JsonNode resourceToOrder) {
@@ -832,6 +843,9 @@ public class Lobid {
 	}
 
 	private static String itemDetails(JsonNode item) {
+		if (item == null || !item.has("callNumber")) {
+			return null;
+		}
 		String itemDetails = String.format("Signatur: %s (%s)", item.get("callNumber").asText(),
 				item.get("id").asText());
 		return appendOptional(itemDetails, item, "Erscheinungsverlauf", "enumerationAndChronology");

@@ -17,12 +17,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.commons.lang3.tuple.Pair;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Streams;
 import com.google.common.html.HtmlEscapers;
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
@@ -810,11 +812,17 @@ public class Lobid {
 		JsonNode resourceWithItem = containedIn != null
 				? cachedJsonCall(containedIn.elements().next().get("id").asText())
 				: resourceToOrder;
-		JsonNode item = resourceWithItem.get("hasItem").elements().next();
+		JsonNode item = findRpbItem(resourceWithItem);
 		String ownerId = item.get("heldBy").get("id").asText();
 		JsonNode organisation = cachedJsonCall(ownerId);
 		Optional<String> email = Optional.ofNullable(organisation.findValue("email")).map(JsonNode::asText);
 		return new String[] { email.orElse(ownerId), titleDetails(resourceToOrder), itemDetails(item) };
+	}
+
+	private static JsonNode findRpbItem(JsonNode resourceWithItem) {
+		List<String> rpbIsils = Arrays.asList("DE-929", "DE-107", "DE-Zw1", "DE-121", "DE-36");
+		Stream<JsonNode> items = Streams.stream(resourceWithItem.get("hasItem").elements());
+		return items.filter(item -> rpbIsils.contains(item.get("heldBy").get("isil").asText())).findFirst().get();
 	}
 
 	private static String titleDetails(JsonNode resourceToOrder) {

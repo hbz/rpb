@@ -804,13 +804,34 @@ public class Lobid {
 		return Integer.parseInt(s.replaceAll("\\D", "9"));
 	}
 
-	public static String[] emailAndItem(String id, String doc) {
-		JsonNode resource = id.startsWith("http") ? cachedJsonCall(id) : Json.parse(doc);
-		String item = resource.get("hasItem").elements().next().toString();
-		String ownerId = Json.parse(item).get("heldBy").get("id").asText();
+	public static String[] emailAndDetails(String doc) {
+		JsonNode resourceToOrder = Json.parse(doc);
+		JsonNode containedIn = resourceToOrder.get("containedIn");
+		JsonNode resourceWithItem = containedIn != null
+				? cachedJsonCall(containedIn.elements().next().get("id").asText())
+				: resourceToOrder;
+		JsonNode item = resourceWithItem.get("hasItem").elements().next();
+		String ownerId = item.get("heldBy").get("id").asText();
 		JsonNode organisation = cachedJsonCall(ownerId);
 		Optional<String> email = Optional.ofNullable(organisation.findValue("email")).map(JsonNode::asText);
-		return new String[] { email.orElse(ownerId), item };
+		return new String[] { email.orElse(ownerId), titleDetails(resourceToOrder), itemDetails(item) };
+	}
+
+	private static String titleDetails(JsonNode resourceToOrder) {
+		String titleDetails = String.format("%s (https://rpb.lbz-rlp.de/%s)", resourceToOrder.get("title").asText(),
+				resourceToOrder.get("rpbId").asText());
+		return appendOptional(titleDetails, resourceToOrder, "Quelle", "bibliographicCitation");
+	}
+
+	private static String itemDetails(JsonNode item) {
+		String itemDetails = String.format("Signatur: %s (%s)", item.get("callNumber").asText(),
+				item.get("id").asText());
+		return appendOptional(itemDetails, item, "Erscheinungsverlauf", "enumerationAndChronology");
+	}
+
+	private static String appendOptional(String itemDetails, JsonNode item, String label, String field) {
+		return item.has(field) ? itemDetails += String.format("\n%s: %s", label, item.get(field).asText())
+				: itemDetails;
 	}
 
 }

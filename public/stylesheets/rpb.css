@@ -7,10 +7,6 @@ a {
 	text-decoration: none;
 }
 
-dd {
-	padding-bottom: 0.5em;
-}
-
 .row div dl {
 	margin-bottom: 0px;
 }
@@ -366,4 +362,20 @@ body, #issued-range {
 .navbar-default .navbar-nav .dropdown-menu>li>a:hover,
 .navbar-default .navbar-nav .dropdown-menu>li>a:focus {
 	color: #BF2313;
+}
+
+#title-details {
+	display: flex; flex-direction: row;
+}
+
+#holdings {
+	display: flex; flex-direction: column;
+}
+
+#holdings>dl {
+	margin-bottom: 15px;
+}
+
+#ordering {
+	margin-top: auto;
 }

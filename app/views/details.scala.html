@@ -11,6 +11,7 @@
 @import play.api.libs.json.JsValue
 @import play.api.libs.json.JsArray
 @import play.mvc.Controller.session
+@import play.api.libs.json.jackson.JacksonJson
 @import play.cache.Cache
 
 @idAndLabelLink(e: JsValue) = {
@@ -30,6 +31,33 @@
 
 @shortId(json: JsValue) = @{
 	(json\"rpbId").asOpt[String].getOrElse((json\"id").asOpt[String].map(_.replaceAll("https?://lobid.org/resources/","").replaceAll("#!","")).getOrElse(""))
+}
+
+@orderingPanel(kind: String, doc: JsValue, emailAndDetails: Array[String]) = {
+  <div class="panel panel-primary rpb-footer">
+    <div class="panel-body">
+      <a href='@mailtoOrdering(kind, doc, emailAndDetails)'>
+        Diesen Titel zu <b>@kind</b> Zwecken<br/>
+        <b>kostenpflichtig</b> (siehe Link oben) bestellen.</a>
+    </div>
+  </div>
+}
+
+@mailtoOrdering(kind: String, doc: JsValue, emailAndDetails: Array[String]) = @{
+  val Array(email, titleDetails, itemDetails) = emailAndDetails
+  val subject = urlEncode("Bestellung: " + (doc \ "rpbId").as[String]).replace('+', ' ')
+  val body = urlEncode(s"""Guten Tag,
+
+ich würde gerne zu $kind Zwecken folgenden Titel bestellen:
+
+$titleDetails
+
+$itemDetails
+
+Mit freundlichen Grüßen
+
+""").replace('+', ' ')
+  s"mailto:$email?cc=lobid-admin@hbz-nrw.de&subject=$subject&body=$body"
 }
 
 @if(docJson.isEmpty){
@@ -67,7 +95,7 @@
           }
         }
       }
-      <div class="row" id="search-results">
+      <div class="row" id="title-details">
       @defining((Lobid.items(doc.toString), Lobid.itemDetails(doc.toString))) { case (items, itemDetails) =>
         @defining(items.isEmpty && !(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>
           <div class="col-md-@if(items.isEmpty && !doc.toString.contains("fulltextOnline") && !superordination){12} else {8}">
@@ -119,6 +147,15 @@
              <dd>@tags.items_map(items, itemDetails)</dd>
             }
             </dl>
+            @for(emailAndDetails <- Seq(Lobid.emailAndDetails(doc.toString)) ; Array(_,_,itemDetails) = emailAndDetails ; if itemDetails) {
+            <div id="ordering">
+              <div>
+                <a target="_blank" href="https://lbz.rlp.de/suche?tx_solr%5Bq%5D=kostentabelle">Kostentabelle für Titelbestellungen</a>
+              </div>
+              @orderingPanel("kommerziellen", doc, emailAndDetails)
+              @orderingPanel("privaten", doc, emailAndDetails)
+            </div>
+            }
           </div>
           }
         }

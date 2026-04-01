@@ -23,7 +23,8 @@ public final class FirstRecordOnly extends DefaultObjectPipe<String, ObjectRecei
     @Override
     public void process(final String obj) {
         try {
-            JsonNode data = MAPPER.readTree(obj).get("data");
+            JsonNode tree = MAPPER.readTree(obj);
+            JsonNode data = tree.has("data") ? tree.get("data") : tree;
             if (data != null) {
                 JsonNode idNode = data.get("id");
                 String id;

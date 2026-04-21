@@ -82,7 +82,7 @@ public class Lobid {
 			return json;
 		}
 		Logger.debug("Not cached, GET: {}", url);
-		Promise<JsonNode> promise = WS.url(url).get()
+		Promise<JsonNode> promise = WS.url(url).setQueryParameter("format", "json").get()
 				.map(response -> response.getStatus() == Http.Status.OK
 						? response.asJson()
 						: Json.newObject());

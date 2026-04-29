@@ -28,7 +28,7 @@ sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rpb-sw.flux" # creates TSV looku
 cat etl/articles.ndjson | grep '"data"' | jq -c .data > etl/output/output-strapi.ndjson
 cat etl/independent_works.ndjson | grep '"data"' | jq -c .data >> etl/output/output-strapi.ndjson
 # External records:
-cat etl/external_records.ndjson | grep '"data"' | jq -c .data > etl/output/output-strapi-external.ndjson
+tac etl/external_records.ndjson | grep '"data"' | jq -c .data > etl/output/output-strapi-external.ndjson
 cat etl/output/output-strapi-external.ndjson | grep '"nur RPB"\|"RPB und BiblioVino"' > etl/output/output-strapi-external-rpb.ndjson
 cat etl/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und BiblioVino"' > etl/output/output-strapi-external-vino.ndjson
 # Remove old index data:

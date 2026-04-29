@@ -24,6 +24,7 @@ do put_macro("normalize")
 end
 
 do put_macro("add_labels")
+  replace_all("$[field].id", "(http.+):\\s.*$", "$1")
   copy_field("$[field].id", "$[field].label")
   call_macro("normalize", field: "$[field].label", from: "-", to: "n")
   lookup("$[field].label", "sw-rpb_map")

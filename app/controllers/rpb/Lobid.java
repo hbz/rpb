@@ -16,13 +16,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.Callable;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.commons.lang3.tuple.Pair;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Streams;
 import com.google.common.html.HtmlEscapers;
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
@@ -79,7 +82,7 @@ public class Lobid {
 			return json;
 		}
 		Logger.debug("Not cached, GET: {}", url);
-		Promise<JsonNode> promise = WS.url(url).get()
+		Promise<JsonNode> promise = WS.url(url).setQueryParameter("format", "json").get()
 				.map(response -> response.getStatus() == Http.Status.OK
 						? response.asJson()
 						: Json.newObject());
@@ -802,6 +805,56 @@ public class Lobid {
 	private static int numerical(String s) {
 		// replace non-digits with 9, e.g. for DE-5 before DE-Walb1
 		return Integer.parseInt(s.replaceAll("\\D", "9"));
+	}
+
+	public static String[] emailAndDetails(String doc) {
+		JsonNode resourceToOrder = Json.parse(doc);
+		JsonNode containedIn = resourceToOrder.get("containedIn");
+		JsonNode resourceWithItem = containedIn == null ? resourceToOrder
+				: cachedJsonCall(containedIn.elements().next().get("id").asText());
+		JsonNode item = findRpbItem(resourceWithItem.get("hasItem"));
+		return new String[] { email(item), titleDetails(resourceToOrder), itemDetails(item) };
+	}
+
+	private static JsonNode findRpbItem(JsonNode itemsNode) {
+		if (itemsNode == null) {
+			return null;
+		}
+		List<String> rpbIsils = Arrays.asList("DE-929", "DE-107", "DE-Zw1", "DE-121", "DE-36");
+		Stream<JsonNode> items = Streams.stream(itemsNode.elements());
+		Function<String, String> isilFromUri = uri -> uri.replaceAll("https?://lobid.org/organisations/(.+)#!", "$1");
+		return items.filter(item -> rpbIsils.contains(isilFromUri.apply(item.get("heldBy").get("id").asText())))
+				.findFirst().orElse(null);
+	}
+
+	private static String email(JsonNode itemNode) {
+		if (itemNode == null) {
+			return null;
+		}
+		JsonNode organisation = cachedJsonCall(itemNode.get("heldBy").get("id").asText());
+		Optional<String> email = Optional.ofNullable(organisation.findValue("email")).map(JsonNode::asText);
+		return email.orElse(null);
+	}
+
+	private static String titleDetails(JsonNode resourceToOrder) {
+		String baseUrl = Application.CONFIG.getString("host");
+		String fullUrl = String.format("%s/%s", baseUrl, resourceToOrder.get("rpbId").asText());
+		String titleDetails = String.format("%s (%s)", resourceToOrder.get("title").asText(), fullUrl);
+		return appendOptional(titleDetails, resourceToOrder, "Quelle", "bibliographicCitation");
+	}
+
+	private static String itemDetails(JsonNode item) {
+		if (item == null || !item.has("callNumber")) {
+			return null;
+		}
+		String itemDetails = String.format("Signatur: %s (%s)", item.get("callNumber").asText(),
+				item.get("id").asText());
+		return appendOptional(itemDetails, item, "Erscheinungsverlauf", "enumerationAndChronology");
+	}
+
+	private static String appendOptional(String itemDetails, JsonNode item, String label, String field) {
+		return item.has(field) ? itemDetails += String.format("\n%s: %s", label, item.get(field).asText())
+				: itemDetails;
 	}
 
 }

@@ -108,8 +108,8 @@ Mit freundlichen Grüßen
         }
       }
       <div class="row" id="title-details">
-      @defining((Lobid.items(doc.toString), Lobid.itemDetails(doc.toString))) { case (items, itemDetails) =>
-        @defining(items.isEmpty && !(doc\\"containedIn").isEmpty && (doc\"type").toString.contains("Article")){superordination =>
+      @defining((Lobid.items(doc.toString), Lobid.itemDetails(doc.toString), (doc\"type").toString.contains("Article"))) { case (items, itemDetails, isArticle) =>
+        @defining(items.isEmpty && !(doc\\"containedIn").isEmpty && isArticle){superordination =>
           <div class="col-md-@if(items.isEmpty && !doc.toString.contains("fulltextOnline") && !superordination){12} else {8}">
             <dl>
             @defining((doc\"rpbId").asOpt[String].getOrElse(q)){ id =>
@@ -159,7 +159,7 @@ Mit freundlichen Grüßen
              <dd>@tags.items_map(items, itemDetails)</dd>
             }
             </dl>
-            @for(emailAndDetails <- Seq(Lobid.emailAndDetails(doc.toString)) ; Array(_,_,itemDetails) = emailAndDetails ; if itemDetails) {
+            @for(emailAndDetails <- Seq(Lobid.emailAndDetails(doc.toString)) ; Array(_,_,itemDetails) = emailAndDetails ; if itemDetails && isArticle) {
             <div id="ordering">
               <div>
                 <a target="_blank" href="https://lbz.rlp.de/suche?tx_solr%5Bq%5D=kostentabelle">Kostentabelle für Titelbestellungen</a>

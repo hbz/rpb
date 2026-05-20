@@ -70,5 +70,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Die Pfalz am Rhein <Neustadt, Weinstraße>. - 55 (1982), S. 175-180"
+  "bibliographicCitation" : "Die Pfalz am Rhein <Neustadt, Weinstraße>. - 55 (1982), S. 175-180",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Palat. 24/55.1982;Palat. 25/55.1982/HBL",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t01147878:DE-107:#!"
+  } ]
 }

@@ -73,5 +73,15 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "T 3092",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t084695:DE-929:#!"
   } ]
 }

@@ -96,5 +96,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 26-27"
+  "bibliographicCitation" : "Der Rheinländer : das Heimatmagazin. - 4 (2011), Juni = H. 34, S. 26-27",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "ZA 5649:2011 MAG",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t112196:DE-929:#!"
+  } ]
 }

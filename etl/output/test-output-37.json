@@ -67,5 +67,15 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 15620",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t982375:DE-107:#!"
   } ]
 }

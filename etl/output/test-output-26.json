@@ -81,5 +81,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Stimme der Pfalz. - 32 (1981), 1, S. 9-11"
+  "bibliographicCitation" : "Stimme der Pfalz. - 32 (1981), 1, S. 9-11",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Palat. 1224/32.1981",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t01147875:DE-107:#!"
+  } ]
 }

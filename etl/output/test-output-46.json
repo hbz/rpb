@@ -22,5 +22,15 @@
     "dateStatement" : "1995",
     "startDate" : "1995",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 11060/ 1994/95",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t982379b1:DE-107:#!"
   } ]
 }

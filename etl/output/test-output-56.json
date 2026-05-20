@@ -65,5 +65,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. H. - 66 (2011), 126 vom 31.05., Seite 24. -"
+  "bibliographicCitation" : "In: Rhein-Zeitung, Ausg. H. - 66 (2011), 126 vom 31.05., Seite 24. -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "ZB 151:2011;MZ 52:2011",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t112197:DE-929:#!"
+  } ]
 }

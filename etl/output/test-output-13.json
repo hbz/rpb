@@ -26,5 +26,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 1"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 8 (1963), Nr. 1",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Vergleiche Bibliotheks-Katalog",
+    "heldBy" : {
+      "isil" : "DE-36",
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Mainz"
+    },
+    "id" : "http://rpb.lobid.org/items/036t0121515:DE-36:#!"
+  } ]
 }

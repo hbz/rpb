@@ -70,5 +70,15 @@
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "edition" : [ "Faks.-Ausg. [d. Ausg.] Ems, Sommer, 1896" ]
+  "edition" : [ "Faks.-Ausg. [d. Ausg.] Ems, Sommer, 1896" ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Vorhanden",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t163432:DE-929:#!"
+  } ]
 }

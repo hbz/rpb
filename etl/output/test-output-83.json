@@ -60,5 +60,15 @@
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "bibliographicCitation" : "In: Die Eifel. - 118 (2023), 3, Seite 48-52. -"
+  "bibliographicCitation" : "In: Die Eifel. - 118 (2023), 3, Seite 48-52. -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 1666-118(2023)",
+    "heldBy" : {
+      "isil" : "DE-121",
+      "id" : "http://lobid.org/organisations/DE-121#!",
+      "label" : "Trier"
+    },
+    "id" : "http://rpb.lobid.org/items/121t231109:DE-121:#!"
+  } ]
 }

@@ -46,5 +46,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimatkalender Landkreis Bitburg-Prüm. - 1990, S. 74 - 78"
+  "bibliographicCitation" : "Heimatkalender Landkreis Bitburg-Prüm. - 1990, S. 74 - 78",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 1184;Z 1184",
+    "heldBy" : {
+      "isil" : "DE-121",
+      "id" : "http://lobid.org/organisations/DE-121#!",
+      "label" : "Trier"
+    },
+    "id" : "http://rpb.lobid.org/items/121t0146618:DE-121:#!"
+  } ]
 }

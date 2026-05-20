@@ -135,5 +135,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 119-123"
+  "bibliographicCitation" : "Handbuch Medien: Offene Kanäle / Bundeszentrale für Politische Bildung. Hrsg.: Ulrich Kamp. - Bonn, 1997. - ISBN 3-89331-303-6. - S. 119-123",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "3a 5094",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t982371:DE-107:#!"
+  } ]
 }

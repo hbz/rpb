@@ -69,5 +69,15 @@
   "fulltextOnline" : [ {
     "id" : "https://www.dilibri.de/rlb/periodical/pageview/2495547",
     "label" : "https://www.dilibri.de/rlb/periodical/pageview/2495547"
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Palat. 101/1.1925;Palat. 102/1.1925;Palat. 100/1.1925 HBL",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t01167281:DE-107:#!"
   } ]
 }

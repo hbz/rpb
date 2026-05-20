@@ -98,5 +98,24 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Landkreis Neuwied: Heimatjahrbuch des Landkreises Neuwied. - 2009, S. 383-392 (1. Teil: Innenstadt); 2010, S. 287-305 (2. Teil: Stadtteile)"
+  "bibliographicCitation" : "Landkreis Neuwied: Heimatjahrbuch des Landkreises Neuwied. - 2009, S. 383-392 (1. Teil: Innenstadt); 2010, S. 287-305 (2. Teil: Stadtteile)",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 5998/2009-2010",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/929t091078:DE-107:#!"
+  }, {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 37",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t091078:DE-929:#!"
+  } ]
 }

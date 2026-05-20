@@ -57,5 +57,15 @@
       "id" : "https://rpb.lobid.org/spatial",
       "label" : "RPB-Raumsystematik"
     }
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "ZB 32 MAG",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t111801:DE-929:#!"
   } ]
 }

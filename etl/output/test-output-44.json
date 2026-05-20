@@ -17,5 +17,15 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "'s Derfsche : Ebertsheim-Rodenbach, das Dorf im Grünen : 1998,Apr.",
-  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ]
+  "note" : [ "Mit dieser Ausg. Erscheinen eingest." ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 15740/1998",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t982378b1:DE-107:#!"
+  } ]
 }

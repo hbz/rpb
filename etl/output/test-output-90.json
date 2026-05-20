@@ -144,5 +144,15 @@
       "label" : "Herausgebendes Organ"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "98 A 102",
+    "heldBy" : {
+      "isil" : "DE-121",
+      "id" : "http://lobid.org/organisations/DE-121#!",
+      "label" : "Trier"
+    },
+    "id" : "http://rpb.lobid.org/items/121t970621:DE-121:#!"
   } ]
 }

@@ -86,5 +86,15 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Kalender = K 2927",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t112190:DE-929:#!"
   } ]
 }

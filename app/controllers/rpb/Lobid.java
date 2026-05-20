@@ -809,10 +809,7 @@ public class Lobid {
 
 	public static String[] emailAndDetails(String doc) {
 		JsonNode resourceToOrder = Json.parse(doc);
-		JsonNode containedIn = resourceToOrder.get("containedIn");
-		JsonNode resourceWithItem = containedIn == null ? resourceToOrder
-				: cachedJsonCall(containedIn.elements().next().get("id").asText());
-		JsonNode item = findRpbItem(resourceWithItem.get("hasItem"));
+		JsonNode item = findRpbItem(resourceToOrder.get("hasItem"));
 		return new String[] { email(item), titleDetails(resourceToOrder), itemDetails(item) };
 	}
 

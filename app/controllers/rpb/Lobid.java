@@ -828,9 +828,12 @@ public class Lobid {
 		if (itemNode == null) {
 			return null;
 		}
-		JsonNode organisation = cachedJsonCall(itemNode.get("heldBy").get("id").asText());
-		Optional<String> email = Optional.ofNullable(organisation.findValue("email")).map(JsonNode::asText);
-		return email.orElse(null);
+		return ImmutableMap.of(//
+				"DE-929", "info.rlb@lbz-rlp.de", //
+				"DE-107", "fernleihe.plb@lbz.rlp.de", //
+				"DE-36", "stb.rpb@stadt.mainz.de", //
+				"DE-121", "fernleiheweba@trier.de") //
+				.get(itemNode.get("heldBy").get("isil").asText());
 	}
 
 	private static String titleDetails(JsonNode resourceToOrder) {

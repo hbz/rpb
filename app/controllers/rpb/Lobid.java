@@ -847,8 +847,8 @@ public class Lobid {
 		if (item == null || !item.has("callNumber")) {
 			return null;
 		}
-		String itemDetails = String.format("Signatur: %s (%s)", item.get("callNumber").asText(),
-				item.get("id").asText());
+		String itemDetails = String.format("Signatur: %s (interne ID: %s)", item.get("callNumber").asText(),
+				item.get("id").asText().replace("http://rpb.lobid.org/items/", "").replace("#!", ""));
 		return appendOptional(itemDetails, item, "Erscheinungsverlauf", "enumerationAndChronology");
 	}
 

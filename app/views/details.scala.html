@@ -162,7 +162,9 @@ Mit freundlichen Grüßen
             @for(emailAndDetails <- Seq(Lobid.emailAndDetails(doc.toString)) ; Array(_,_,itemDetails) = emailAndDetails ; if itemDetails && isArticle) {
             <div id="ordering">
               <div>
-                <a target="_blank" href="https://lbz.rlp.de/suche?tx_solr%5Bq%5D=kostentabelle">Kostentabelle für Titelbestellungen</a>
+                <a target="_blank" href="https://lbz.rlp.de/landeskunde-und-kulturgut/landeskunde/rheinland-pfaelzische-bibliographie-infotext#c131809">
+                  Kostenübersicht für Bestellungen
+                </a>
               </div>
               @orderingPanel("kommerziellen", doc, emailAndDetails)
               @orderingPanel("privaten", doc, emailAndDetails)

@@ -1,0 +1,19 @@
+move_field("rpbId","@rpbId")
+move_field("@rpbId","rpbId")
+prepend("rpbId","RPB")
+unless exists("rpbId")
+	add_field("rpbId","")
+end
+move_field("hbzId","@hbzId")
+move_field("@hbzId","hbzId")
+unless exists("hbzId")
+	add_field("hbzId","")
+end
+move_field("zdbId","@zdbId")
+move_field("@zdbId","zdbId")
+unless exists("zdbId")
+	add_field("zdbId","")
+end
+copy_field("inCollection[].*.label", "page.$append")
+join_field("page", "; ")
+retain("almaMmsId","rpbId","hbzId","zdbId","page")

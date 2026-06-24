@@ -1,0 +1,2 @@
+copy_field("hbzId","_id")
+retain("rpbId","_id","zdbId","hbzId","rpbId","almaMmsId","page")

@@ -1,0 +1,21 @@
+do once("maps")
+  put_filemap("$[lobidFile]", "lobidLookupHbzId2Alma", sep_char:"\t", key_column:"2", value_column:"0", expected_columns:"-1")
+end
+
+copy_field("hbzId","almaMmsId")
+
+lookup("almaMmsId","lobidLookupHbzId2Alma",delete:"true")
+
+if any_match("hbzId","[BCHT]T\\d+")
+  add_field("status","strukturell hbzId, aber nicht existent")
+elsif any_match("hbzId","\\d{8,9}[X\\d]?")
+  add_field("status","dnbId statt hbzId")
+else
+  add_field("status","andere ID, keine hbzId")
+end
+
+remove_field("zdbId")
+
+if exists("almaMmsId")
+    reject()
+end

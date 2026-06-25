@@ -1,0 +1,14 @@
+unless exists("hbzId.2")
+	reject()
+end
+uniq("zdbId")
+uniq("almaMmsId")
+uniq("rpbId")
+uniq("hbzId")
+
+join_field("almaMmsId", "; ")
+join_field("hbzId", "; ")
+join_field("zdbId", "; ")
+join_field("rpbId", "; ")
+
+retain("zdbId","almaMmsId","hbzId","rpbId")

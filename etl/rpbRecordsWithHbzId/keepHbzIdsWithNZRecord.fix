@@ -1,0 +1,11 @@
+do once("maps")
+  put_filemap("$[lobidFile]", "lobidLookupHbzId2Alma", sep_char:"\t", key_column:"2", value_column:"0", expected_columns:"-1")
+end
+
+copy_field("hbzId","almaMmsId")
+
+lookup("almaMmsId","lobidLookupHbzId2Alma",delete:"true")
+
+unless exists("almaMmsId")
+    reject()
+end

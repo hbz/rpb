@@ -26,5 +26,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 4 (1959), Nr. 1"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 4 (1959), Nr. 1",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 25:2°/2,1959",
+    "heldBy" : {
+      "isil" : "DE-36",
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Mainz"
+    },
+    "id" : "http://rpb.lobid.org/items/036t0121517:DE-36:#!"
+  } ]
 }

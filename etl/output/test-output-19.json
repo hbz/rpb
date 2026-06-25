@@ -26,5 +26,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 12"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 2 (1957), Nr. 12",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Vergleiche Bibliotheks-Katalog",
+    "heldBy" : {
+      "isil" : "DE-36",
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Mainz"
+    },
+    "id" : "http://rpb.lobid.org/items/036t0121521:DE-36:#!"
+  } ]
 }

@@ -90,5 +90,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Rheinische Heimatpflege. - N.F. 48 (2011), 2, Seite 150-152. -"
+  "bibliographicCitation" : "In: Rheinische Heimatpflege. - N.F. 48 (2011), 2, Seite 150-152. -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 720:2011",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t112440:DE-929:#!"
+  } ]
 }

@@ -37,5 +37,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Der Wormsgau. Bd 3, H. 2 (Okt. 1952), 49-63"
+  "bibliographicCitation" : "Der Wormsgau. Bd 3, H. 2 (Okt. 1952), 49-63",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Vergleiche Bibliotheks-Katalog",
+    "heldBy" : {
+      "isil" : "DE-36",
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Mainz"
+    },
+    "id" : "http://rpb.lobid.org/items/036t0115179:DE-36:#!"
+  } ]
 }

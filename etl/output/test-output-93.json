@@ -28,5 +28,15 @@
     "dateStatement" : "1989",
     "startDate" : "1989",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "89/449:2",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t163432b2:DE-929:#!"
   } ]
 }

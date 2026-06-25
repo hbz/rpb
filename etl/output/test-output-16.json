@@ -26,5 +26,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Heimat am Mittelrhein. - 10 (1965), Nr. 2 und Heimat am Mittelrhein 1965, S. 10"
+  "bibliographicCitation" : "Heimat am Mittelrhein. - 10 (1965), Nr. 2 und Heimat am Mittelrhein 1965, S. 10",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 25:2°/2,1965",
+    "heldBy" : {
+      "isil" : "DE-36",
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Mainz"
+    },
+    "id" : "http://rpb.lobid.org/items/036t0121518:DE-36:#!"
+  } ]
 }

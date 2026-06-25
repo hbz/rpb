@@ -73,5 +73,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Archiv für mittelrheinische Kirchengeschichte. - 36 (1984), S. 47-63"
+  "bibliographicCitation" : "Archiv für mittelrheinische Kirchengeschichte. - 36 (1984), S. 47-63",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 2823/36.1984;Per. 2792/36.1984 HBL",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t01147869:DE-107:#!"
+  } ]
 }

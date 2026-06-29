@@ -833,7 +833,12 @@ public class Lobid {
 				"DE-107", "fernleihe.plb@lbz.rlp.de", //
 				"DE-36", "stb.rpb@stadt.mainz.de", //
 				"DE-121", "fernleiheweba@trier.de") //
-				.get(itemNode.get("heldBy").get("isil").asText());
+				.get(getIsil(itemNode));
+	}
+
+	private static String getIsil(JsonNode itemNode) {
+		String[] segments = itemNode.get("heldBy").get("id").asText().split("/");
+		return segments[segments.length-1].replace("#!", "");
 	}
 
 	private static String titleDetails(JsonNode resourceToOrder) {

@@ -66,5 +66,15 @@
       "label" : "Verfasser/in"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "92A/173",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t920749:DE-929:#!"
   } ]
 }

@@ -76,5 +76,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "edition" : [ "Überarb. Neuausg., aktualisierte Taschenbuchausg." ]
+  "edition" : [ "Überarb. Neuausg., aktualisierte Taschenbuchausg." ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "110-5817",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t110017:DE-107:#!"
+  } ]
 }

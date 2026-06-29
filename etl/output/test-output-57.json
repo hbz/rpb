@@ -90,5 +90,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "edition" : [ "11. Aufl." ]
+  "edition" : [ "11. Aufl." ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "2011/1822",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t112198:DE-929:#!"
+  } ]
 }

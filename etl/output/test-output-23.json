@@ -73,5 +73,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Landkreis Südliche Weinstraße: Heimat-Jahrbuch .... - 5 (1983), Seite 29-36. -"
+  "bibliographicCitation" : "In: Landkreis Südliche Weinstraße: Heimat-Jahrbuch .... - 5 (1983), Seite 29-36. -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 9476/5.1983",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t01147872:DE-107:#!"
+  } ]
 }

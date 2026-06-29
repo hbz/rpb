@@ -16,5 +16,15 @@
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "SWR-3-Clubmagazin : 1998,1(Sept.) -"
+  "title" : "SWR-3-Clubmagazin : 1998,1(Sept.) -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 15621/1998-",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t982373b1:DE-107:#!"
+  } ]
 }

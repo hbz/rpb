@@ -16,5 +16,15 @@
     "type" : [ "Collection" ],
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
-  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte : Ausg. 1.1997(Dez.) -"
+  "title" : "Flieg und flatter : Aktuelles aus der Vogelschutzwarte : Ausg. 1.1997(Dez.) -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 15655/1.1997-",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t982376b1:DE-107:#!"
+  } ]
 }

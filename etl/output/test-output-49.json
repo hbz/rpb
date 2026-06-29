@@ -52,5 +52,15 @@
       "label" : "RPB-Raumsystematik"
     }
   } ],
-  "bibliographicCitation" : "In: KKG Rot-Weiss-Gruen Kowelenzer Schaengelcher: Sessionsheft. - (2011), Seite 23-33. -"
+  "bibliographicCitation" : "In: KKG Rot-Weiss-Gruen Kowelenzer Schaengelcher: Sessionsheft. - (2011), Seite 23-33. -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 2287:2011",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t112192:DE-929:#!"
+  } ]
 }

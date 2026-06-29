@@ -269,4 +269,29 @@ public class IntegrationTest {
 		});
 	}
 
+	@Test
+	public void orderingHoldingsWithDetails() {
+		running(testServer(3333), () -> {
+			assertThat(itemDetails("f1779")).as("Record `hasItem` itself").isNotNull();
+			assertThat(itemDetails("a4333486")).as("Superordinate `containedIn` record `hasItem`").isNotNull();
+			assertThat(itemDetails("f1570")).as("No `isil`, but using `id` instead").isNotNull();
+		});
+	}
+
+	@Test
+	public void orderingHoldingsNoDetails() {
+		running(testServer(3333), () -> {
+			assertThat(itemDetails("a4329816")).as("No items in superordinate resource").isNull();
+			assertThat(itemDetails("f1482")).as("No `callNumber` in any item").isNull();
+			assertThat(itemDetails("f1375")).as("No `callNumber` in selected item").isNull();
+			assertThat(itemDetails("a4334260")).as("No items `heldBy` RPB owners").isNull();
+		});
+	}
+
+	private String itemDetails(String id) {
+		Result result = route(fakeRequest(GET, String.format("/%s?format=json", id)));
+		String doc = Json.parse(Helpers.contentAsString(result)).get("member").elements().next().toString();
+		return Lobid.emailAndDetails(doc)[2];
+	}
+
 }

@@ -17,5 +17,15 @@
     "label" : "Rheinland-Pfälzische Bibliographie"
   } ],
   "title" : "Die Zeitschrift : der Südwestrundfunk und seine Programme. Rheinland-Pfalz : 1998,1(Sept.) - 2001,9(Sept.)",
-  "note" : [ "Forts. u.d.T.: Doppelpfeil" ]
+  "note" : [ "Forts. u.d.T.: Doppelpfeil" ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Per. 15620/1998,1-2001,9",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t982375b1:DE-107:#!"
+  } ]
 }

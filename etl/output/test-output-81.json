@@ -111,5 +111,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "edition" : [ "2. dt. Ausg." ]
+  "edition" : [ "2. dt. Ausg." ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "93/5378",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t930040:DE-929:#!"
+  } ]
 }

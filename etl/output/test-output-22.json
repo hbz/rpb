@@ -46,5 +46,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167"
+  "bibliographicCitation" : "Pfälzer Heimat. - 34 (1983), S. 156-167",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Palat. 1540/34.1983;Palat. 1229/34.1983 HBL;Palat. 1230/34.1983",
+    "heldBy" : {
+      "isil" : "DE-107",
+      "id" : "http://lobid.org/organisations/DE-107#!",
+      "label" : "Speyer"
+    },
+    "id" : "http://rpb.lobid.org/items/107t01147871:DE-107:#!"
+  } ]
 }

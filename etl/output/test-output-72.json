@@ -78,5 +78,15 @@
     },
     "type" : [ "Contribution" ]
   } ],
-  "bibliographicCitation" : "In: Initiativ. - (2018), 3, Seite 20-21. -"
+  "bibliographicCitation" : "In: Initiativ. - (2018), 3, Seite 20-21. -",
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "ZA 2245:2018 MAG",
+    "heldBy" : {
+      "isil" : "DE-929",
+      "id" : "http://lobid.org/organisations/DE-929#!",
+      "label" : "Koblenz"
+    },
+    "id" : "http://rpb.lobid.org/items/929t190565:DE-929:#!"
+  } ]
 }

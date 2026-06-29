@@ -56,5 +56,15 @@
       "label" : "Geistiger Schöpfer"
     },
     "type" : [ "Contribution" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "Z 1249",
+    "heldBy" : {
+      "isil" : "DE-121",
+      "id" : "http://lobid.org/organisations/DE-121#!",
+      "label" : "Trier"
+    },
+    "id" : "http://rpb.lobid.org/items/121t0144215:DE-121:#!"
   } ]
 }

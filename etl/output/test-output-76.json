@@ -22,5 +22,15 @@
     "dateStatement" : "[Dezember 2017]",
     "startDate" : "2017",
     "type" : [ "PublicationEvent" ]
+  } ],
+  "hasItem" : [ {
+    "label" : "RPB-Bestand",
+    "callNumber" : "2018/23",
+    "heldBy" : {
+      "isil" : "DE-36",
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Mainz"
+    },
+    "id" : "http://rpb.lobid.org/items/036t160240b2:DE-36:#!"
   } ]
 }

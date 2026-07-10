@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.apache.commons.validator.routines.UrlValidator;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.html.HtmlEscapers;
 
@@ -237,7 +239,8 @@ public enum TableRow {
 			return value;
 		}
 		String rppdUrl = value.replaceAll("https?://d-nb.info/gnd/([^#]+)", "https://rppd.lobid.org/$1");
-		int status = WS.url(rppdUrl).get().map(WSResponse::getStatus).get(Lobid.API_TIMEOUT);
+		int status = !new UrlValidator().isValid(rppdUrl) ? Http.Status.BAD_REQUEST
+				: WS.url(rppdUrl).get().map(WSResponse::getStatus).get(Lobid.API_TIMEOUT);
 		return status == Http.Status.OK ? rppdUrl : value;
 	}
 

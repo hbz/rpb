@@ -9,6 +9,7 @@
   "title" : "Findet Hadi - Lernorte in der Ausstellung Der charismatische Ort - Stationen der reisenden Könige im Mittelalter",
   "almaMmsId" : "512849919",
   "oclcNumber" : [ "1407112396" ],
+  "hebisId" : "512849919",
   "otherTitleInformation" : [ "Rätselheft für Kinder und Erwachsene" ],
   "publication" : [ {
     "dateStatement" : "[2019]",
@@ -24,18 +25,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1407112396",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=512849919#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "12 Seiten : Illustrationen",
   "natureOfContent" : [ {
     "label" : "Kindersachbuch",
     "id" : "https://d-nb.info/gnd/4163854-2"
@@ -53,6 +42,18 @@
     },
     "id" : "http://lobid.org/items/512849919:DE-36:K+2023+Q+140#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1407112396",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=512849919#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "12 Seiten : Illustrationen",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

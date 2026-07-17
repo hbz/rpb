@@ -14,8 +14,8 @@ add_field("@context","http://lobid.org/resources/context.jsonld")
 
 # Set empty elements to manipulate the order winthin the record.
 add_field("id","")
-set_array("type[]")
-set_array("medium[]")
+add_array("type[]")
+add_array("medium[]")
 add_field("title","")
 add_field("rpbId","")
 
@@ -28,31 +28,49 @@ do list(path:"880??","var":"$i")
   replace_all("$i.@script.label","(\\d{3}-\\d{2})/(.*)","$2")
   lookup("$i.@script.label","ISO15924-to-script")
 end
-set_array("alternateGraphicRepresentation[]")
+add_array("alternateGraphicRepresentation[]")
+
+if any_match("leader",".{6}(a[bis]|m[bis]).*")
+  add_field("@ContinuingResources","true")
+elsif any_match("006", "^[s]")
+  add_field("@ContinuingResources","true")
+end
 
 include ("./fix/identifiers.fix")
 include ("./fix/titleRelatedFields.fix")
 include ("./fix/describedBy.fix")
+include ("./fix/subjects.fix")
+include ("./fix/item.fix")
 # identifiers.fix and titleRelatedFields.fix are needed ahead of relatedRessourcesAndLinks.fix because of dependencies
 include ("./fix/relatedRessourcesAndLinks.fix")
 include ("./fix/otherFields.fix")
-include ("./fix/subjects.fix")
-include ("./fix/item.fix")
 include ("./fix/mediumAndType.fix")
 # mediumAndType.fix is needed ahead of contribution.fix because of dependencies
 include ("./fix/contribution.fix")
+
+do list(path:"alternateGraphicRepresentation[]","var":"$i")
+  unless any_match("$i.script.id","https://unicode.org/iso15924/iso15924.txt#.+")
+    add_field("$i.script.id","https://unicode.org/iso15924/iso15924.txt#Zzzz")
+    add_field("$i.script.label","Kein Schriftcode vergeben")
+  end
+end
 
 vacuum()
 retain(
   "@context",
   "abstract[]",
+  "accessRights",
   "almaMmsId",
   "alternateGraphicRepresentation[]",
   "alternativeTitle[]",
   "bibliographicCitation",
   "bibliographicLevel",
+  "bszId",
+  "bvbId",
   "describedBy",
   "description[]",
+  "disambiguatingDescription[]",
+  "conditionsOfAccess",
   "containedIn[]",
   "containsExampleOfWork[]",
   "contribution[]",
@@ -63,8 +81,10 @@ retain(
   "edition[]",
   "exampleOfWork",
   "fulltextOnline[]",
+  "gbvId",
   "hasItem[]",
   "secondaryForm[]",
+  "hebisId",
   "hbzId",
   "id",
   "inCollection[]",
@@ -72,6 +92,8 @@ retain(
   "issn[]",
   "ismn[]",
   "isPartOf[]",
+  "k10PlusId",
+  "kobvId",
   "language[]",
   "langNote[]",
   "license[]",
@@ -79,6 +101,7 @@ retain(
   "medium[]",
   "natureOfContent[]",
   "note[]",
+  "obvId",
   "oclcNumber[]",
   "otherTitleInformation[]",
   "publication[]",

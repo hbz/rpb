@@ -9,6 +9,7 @@
   "title" : "Die Alzeyer Kleinknechts, Band 2: Die @Alzeyer Kleinknechts ab der 5. Generation sowie ihre Verwandten und Vorfahren Schlink, Zollitsch und Becker",
   "almaMmsId" : "527546313",
   "oclcNumber" : [ "1501056568" ],
+  "hebisId" : "527546313",
   "otherTitleInformation" : [ "von 1795 bis 1969" ],
   "edition" : [ "Erweiterte Fassung" ],
   "publication" : [ {
@@ -25,6 +26,16 @@
       }
     }
   },
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "2025 Q 27",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/527546313:DE-36:2025+Q+27#!"
+  } ],
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1501056568",
     "label" : "OCLC-Ressource"
@@ -43,16 +54,6 @@
   "language" : [ {
     "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
     "label" : "Deutsch"
-  } ],
-  "hasItem" : [ {
-    "label" : "lobid Bestandsressource",
-    "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "2025 Q 27",
-    "heldBy" : {
-      "id" : "http://lobid.org/organisations/DE-36#!",
-      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    },
-    "id" : "http://lobid.org/items/527546313:DE-36:2025+Q+27#!"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

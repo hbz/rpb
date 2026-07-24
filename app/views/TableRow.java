@@ -56,7 +56,7 @@ public enum TableRow {
 			if (!labels.isPresent()) {
 				String[] refAndLabel = refAndLabel(property, value, labels);
 				return value.startsWith("http") ? String.format("<a title='%s' href='%s'>%s</a>",
-						refAndLabel[0], refAndLabel[0], refAndLabel[1]) : refAndLabel[0];
+						refAndLabel[0], refAndLabel[0], refAndLabel[1]) : refAndLabel[1];
 			}
 			String term = value;
 			if (param.equals("q")) {
@@ -228,9 +228,8 @@ public enum TableRow {
 					? value.replaceAll("http.+/", "/") // full URL -> relative link
 					: value, Lobid.resourceLabel(value) };
 		}
-		String label =
-				labels.isPresent() && labels.get().size() > 0 ? labels.get().get(0)
-						: value.startsWith("http") ? URI.create(value).getHost() : value;
+		String label = labels.isPresent() && labels.get().size() > 0 ? labels.get().get(0)
+				: value.startsWith("http") ? URI.create(value).getHost() : HtmlEscapers.htmlEscaper().escape(value);
 		return new String[] { value, label };
 	}
 

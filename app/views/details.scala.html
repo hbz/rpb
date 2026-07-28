@@ -46,9 +46,10 @@
 @mailtoOrdering(kind: String, doc: JsValue, emailAndDetails: Array[String]) = @{
   val Array(email, titleDetails, itemDetails) = emailAndDetails
   val subject = urlEncode("Bestellung: " + (doc \ "rpbId").as[String]).replace('+', ' ')
+  val isCommercial = kind=="kommerziellen"
   val body = urlEncode(s"""Guten Tag,
 
-ich würde gerne zu $kind Zwecken folgenden Titel bestellen:
+ich würde gerne zu $kind Zwecken folgenden Titel bestellen${if(isCommercial) "" else " (Privatpersonen, Studierende oder öffentliche Institutionen)"}:
 
 $titleDetails
 
@@ -56,7 +57,7 @@ $itemDetails
 
 Kontaktdaten (bitte ergänzen):
 
-${if(kind=="kommerziellen") """Firma / Institution:
+${if(isCommercial) """Firma / Institution:
 
 Ansprechpartner (Name, Vorname):""" else """Bestellt durch (unzutreffendes bitte löschen):
 - Studierende oder auszubildende Person

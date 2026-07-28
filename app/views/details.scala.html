@@ -38,7 +38,9 @@
     <div class="panel-body">
       <a href='@mailtoOrdering(kind, doc, emailAndDetails)'>
         Diesen Titel zu <b>@kind</b> Zwecken<br/>
-        <b>kostenpflichtig</b> (siehe Link oben) bestellen.</a>
+        <b>kostenpflichtig</b> (siehe Link oben) bestellen@if(kind=="nichtkommerziellen"){
+          <small>(Privatpersonen, Studierende oder öffentliche Institutionen)</small>}.
+      </a>
     </div>
   </div>
 }
@@ -46,7 +48,6 @@
 @mailtoOrdering(kind: String, doc: JsValue, emailAndDetails: Array[String]) = @{
   val Array(email, titleDetails, itemDetails) = emailAndDetails
   val subject = urlEncode("Bestellung: " + (doc \ "rpbId").as[String]).replace('+', ' ')
-  val contact = if(kind=="privaten") "Name, Vorname:" else "Firma / Institution:\n\nAnsprechpartner (Name, Vorname):"
   val body = urlEncode(s"""Guten Tag,
 
 ich würde gerne zu $kind Zwecken folgenden Titel bestellen:
@@ -57,7 +58,14 @@ $itemDetails
 
 Kontaktdaten (bitte ergänzen):
 
-$contact
+${if(kind=="kommerziellen") """Firma / Institution:
+
+Ansprechpartner (Name, Vorname):""" else """Bestellt durch (unzutreffendes bitte löschen):
+- Studierende oder auszubildende Person
+- Einer öffentlichen Institution angehörige Person
+- Privatperson
+
+Name, Vorname:"""}
 
 Straße, Hausnummer:
 
@@ -168,7 +176,7 @@ Mit freundlichen Grüßen
                 </a>
               </div>
               @orderingPanel("kommerziellen", doc, emailAndDetails)
-              @orderingPanel("privaten", doc, emailAndDetails)
+              @orderingPanel("nichtkommerziellen", doc, emailAndDetails)
             </div>
             }
           </div>

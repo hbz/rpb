@@ -31,6 +31,10 @@ fi
 echo "Changed files:"
 echo "$changed_files"
 
+#
+# Change to rpb repo
+#
+
 cd "$RPB_REPO"
 
 import_vocab() {
@@ -73,8 +77,9 @@ while IFS= read -r file; do
 done <<< "$changed_files"
 
 #
-# set/update local from remote
+# Change back to lbz-vocabs repo and
+# set/update local dev branch from remote
 #
 
-cd "$VOCABS_REPO" && git reset --hard origin/main
+cd "$VOCABS_REPO" && git reset --hard origin/dev
 

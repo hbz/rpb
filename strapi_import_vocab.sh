@@ -16,7 +16,7 @@ VOCABS_REPO=/home/sol/git/lbz-vocabs
 
 cd "$VOCABS_REPO"
 
-git switch dev
+git switch test
 
 # get changes from remote
 git fetch origin
@@ -78,8 +78,8 @@ done <<< "$changed_files"
 
 #
 # Change back to lbz-vocabs repo and
-# set/update local dev branch from remote
+# set/update local test branch from remote
 #
 
-cd "$VOCABS_REPO" && git reset --hard origin/dev
+cd "$VOCABS_REPO" && git reset --hard origin/test
 

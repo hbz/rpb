@@ -787,6 +787,9 @@ public class Lobid {
 	 * @return True, if i1 should come before i2
 	 */
 	public static boolean compareIsil(String i1, String i2) {
+		if(i1.isEmpty() || i2.isEmpty()) {
+			return !i1.isEmpty(); // if i1 is not empty: i1 before i2
+		}
 		String[] all1 = i1.split("-");
 		String[] all2 = i2.split("-");
 		if (all1.length == 3 && all2.length == 3) {

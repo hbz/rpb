@@ -30,7 +30,7 @@
 </p>
 <table style="display:none;" id="table" class="table table-striped table-condensed">
 </table>
-@if(items.size > 1){<a href="#" style="text-decoration-line: underline; text-decoration-style: dotted;" onclick="$('#table').show(); $(this).hide()">Details zum Bestand als Liste anzeigen</a>}
+<a href="#" style="text-decoration-line: underline; text-decoration-style: dotted;" onclick="$('#table').show(); $(this).hide()">Details zum Bestand als Liste anzeigen</a>
 <script>
 var layer = L.tileLayer('https://lobid.org/tiles/{z}/{x}/{y}.png');
 var rlp = new L.LatLng(49.7, 7.4)
@@ -55,7 +55,7 @@ map.addLayer(layer);
 @markers(items: Map[String,List[String]]) = {
     @for((key,i) <- items.keySet.toList.sortWith((k1:String,k2:String)=>Lobid.compareIsil(k1,k2)).zipWithIndex;
         owner = Application.CONFIG.getString("orgs.api")+"/"+key;
-        json = Json.parse(Lobid.cachedJsonCall(owner).toString);
+        json = Json.parse(if(key.isEmpty) "{}" else Lobid.cachedJsonCall(owner).toString);
         ownerUrl = if((json\\"url").isEmpty) owner else (json\\"url")(0).as[String];
         ownerName = if((json\\"name").isEmpty) "" else (json\\"name")(0).as[String]) {
         @for((itemId,i) <- items(key).zipWithIndex;

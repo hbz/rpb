@@ -6,8 +6,8 @@ source .env
 
 : "${HOST:?Set HOST environment variable}"
 : "${API_TOKEN:?Set API_TOKEN environment variable}"
+: "${RPB_REPO:?Set RPB_REPO environment variable}"
 
-RPB_REPO=/home/sol/git/rpb-test
 VOCABS_REPO=/home/sol/git/lbz-vocabs
 
 #

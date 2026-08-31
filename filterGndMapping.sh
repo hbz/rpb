@@ -14,7 +14,7 @@ data_files=(
 
 # See https://www.wikidata.org/wiki/Property:P227
 # adapted to handle both `-` and `n` (used in RPB)
-gnd_regex='1[0123]?[0-9]{7}[0-9X]|[47][0-9]{6}[n-][0-9]|[1-9][0-9]{0,7}[n-][0-9X]|3[0-9]{7}[0-9X]'
+gnd_regex='1[01234]?[0-9]{7}[0-9X]|[47][0-9]{6}[n-][0-9]|[1-9][0-9]{0,7}[n-][0-9X]|3[0-9]{7}[0-9X]'
 
 # Extract GND IDs used in current RPB and RPPD data
 ids_file=$(mktemp)

@@ -158,6 +158,15 @@ lookup("depiction[].1.id", "gnd_to_id", delete: "true")
 lookup("depiction[].1.url", "gnd_to_url", delete: "true")
 lookup("depiction[].1.thumbnail", "gnd_to_thumbnail", delete: "true")
 
+if exists("depiction.data.attributes") # strapi image data
+  copy_field("depiction.data.attributes.url", "depiction[].1.id")
+  copy_field("depiction.data.attributes.url", "depiction[].1.url")
+  copy_field("depiction.data.attributes.formats.thumbnail.url", "depiction[].1.thumbnail")
+  prepend("depiction[].1.id", "$[STRAPI_URL]")
+  prepend("depiction[].1.url", "$[STRAPI_URL]")
+  prepend("depiction[].1.thumbnail", "$[STRAPI_URL]")
+end
+
 # -------
 # #1nn (Berufe/Stellungen (m, R)) -> professionOrOccupation
 # Kommentar Doku: nach Möglichkeit aus Register 3, sonst Klartext gemäß GND, getrennt mit @

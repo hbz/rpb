@@ -1,0 +1,67 @@
+{
+  "@context" : "http://lobid.org/gnd/context.jsonld",
+  "id" : "https://d-nb.info/gnd/1048086690",
+  "rppdId" : "6ff5f4dc-f8a8-41aa-a723-6310f2d2de66",
+  "gndIdentifier" : "1048086690",
+  "type" : [ "AuthorityResource", "Person", "DifferentiatedPerson" ],
+  "preferredName" : "Johannes, Detlev",
+  "variantName" : [ "Johannes, Detlef Martin" ],
+  "depiction" : [ {
+    "id" : "https://rpb-cms.lobid.org/uploads/Detlev_Johannes_Foto_001_62c417e8b4.jpg",
+    "url" : "https://rpb-cms.lobid.org/uploads/Detlev_Johannes_Foto_001_62c417e8b4.jpg",
+    "thumbnail" : "https://rpb-cms.lobid.org/uploads/thumbnail_Detlev_Johannes_Foto_001_62c417e8b4.jpg"
+  } ],
+  "professionOrOccupation" : [ {
+    "label" : "Diplombibliothekar",
+    "id" : "https://d-nb.info/gnd/4150097-0"
+  }, {
+    "label" : "4204284-7",
+    "id" : "https://d-nb.info/gnd/4204284-7"
+  }, {
+    "label" : "Heimatkundler",
+    "id" : "https://d-nb.info/gnd/4313907-3"
+  }, {
+    "label" : "Schriftsteller",
+    "id" : "https://d-nb.info/gnd/4053309-8"
+  } ],
+  "placeOfActivity" : [ {
+    "label" : "Berlin",
+    "id" : "https://d-nb.info/gnd/4005728-8"
+  }, {
+    "label" : "Mannheim",
+    "id" : "https://d-nb.info/gnd/4037372-1"
+  }, {
+    "label" : "Worms, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31900000"
+  } ],
+  "dateOfBirth" : [ "1931-01-07" ],
+  "placeOfBirth" : [ {
+    "label" : "Burgbrohl",
+    "id" : "https://rpb.lobid.org/spatial#n13104202"
+  } ],
+  "dateOfDeath" : [ "2008-05-11" ],
+  "placeOfDeath" : [ {
+    "label" : "Worms, Kreisfreie Stadt",
+    "id" : "https://rpb.lobid.org/spatial#n31900000"
+  } ],
+  "publication" : [ "http://lobid.org/resources/990072004250206441#!", "http://lobid.org/resources/990027231430206441#!", "http://lobid.org/resources/990001750470206441#!", "http://lobid.org/resources/990140251580206441#!", "http://lobid.org/resources/990015356870206441#!", "http://lobid.org/resources/990119423450206441#!", "http://lobid.org/resources/990010420350206441#!", "http://lobid.org/resources/990140265940206441#!" ],
+  "gender" : [ {
+    "id" : "https://d-nb.info/standards/vocab/gnd/gender#male",
+    "label" : "Männlich"
+  } ],
+  "gndSubjectCategory" : [ {
+    "label" : "Information und Dokumentation",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#6.7p"
+  }, {
+    "label" : "Geographie, Heimat- und Länderkunde",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#19.1dp"
+  }, {
+    "label" : "Schreiben. Dichtung",
+    "id" : "https://d-nb.info/standards/vocab/gnd/gnd-sc.html#12.2p"
+  } ],
+  "describedBy" : {
+    "dateModified" : "2026-05-11",
+    "source" : [ "http://rpb.lobid.org/036t140034 Seite 74-76" ]
+  },
+  "biographicalOrHistoricalInformation" : [ "Detlev Martin Johannes wurde am 7.1.1931 als Sohn von Valentin und Angelika Johannes, geb. Seul, in Burgbrohl geboren. Seine Kindheit verbrachte er in Burgbrohl, Siegersdorf/Schlesien und Colditz/Sachsen. Sein Vater stammte aus einer alten Leiselheimer und Pfiffligheimer Famile und so verbrachte auch er in seiner Kindheit viel Zeit in Worms-Pfiffligheim. Nach einer kaufmännischen Lehre absolvierte er ein Studium der Bibliothekswissenschaften für den Dienst an Öffentlichen und Wissenschaftlichen Bibliotheken in Berlin. Es folgten bibliothekarische Tätigkeiten an der Universitätsbibliothek Mainz und der Bibliothek der Wirtschaftshochschule in Mannheim sowie ab 1959 an der Wormser Stadtbibliothek, deren Leitung er von 1980 bis 1994 übernahm.\nSeit 1974 beschäftigte er sich in seiner Freizeit mit heimatkundlichen Forschungen und schrieb neben mehreren Büchern zahlreiche Artikel über Worms und dessen Vororte Pfiffligheim, Hochheim und Leiselheim. Er war Mitbegründer der Heimatvereine Hochheim und Pfiffligheim. Im Jahr 2000 wurde ihm die Verdienstmedaille der Stadt Worms verliehen." ]
+}

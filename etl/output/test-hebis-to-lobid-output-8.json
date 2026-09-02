@@ -10,6 +10,7 @@
   "almaMmsId" : "478607776",
   "oclcNumber" : [ "1196889751" ],
   "dnbId" : "121992976X",
+  "k10PlusId" : "1733109382",
   "alternativeTitle" : [ "Festschrift zur Wiederindienststellung zweitausendzwanzig" ],
   "otherTitleInformation" : [ "Festschrift zur Wiederindienststellung 2020" ],
   "publication" : [ {
@@ -31,25 +32,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1196889751",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "https://d-nb.info/121992976X",
-    "label" : "DNB-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=478607776#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "tableOfContents" : [ {
-    "label" : "Inhaltsverzeichnis",
-    "id" : "https://d-nb.info/121992976X/04"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "172 Seiten : Illustrationen ; 30 cm",
   "natureOfContent" : [ {
     "label" : "Festschrift",
     "id" : "https://d-nb.info/gnd/4016928-5"
@@ -99,6 +81,25 @@
     },
     "id" : "http://lobid.org/items/478607776:DE-36:2021+Q+511#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1196889751",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "https://d-nb.info/121992976X",
+    "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=478607776#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "https://d-nb.info/121992976X/04"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "172 Seiten : Illustrationen ; 30 cm",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

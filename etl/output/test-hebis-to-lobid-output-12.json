@@ -29,29 +29,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1403376624",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "https://d-nb.info/1271796821",
-    "label" : "DNB-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=508037980#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "tableOfContents" : [ {
-    "label" : "Inhaltsverzeichnis",
-    "id" : "https://d-nb.info/1271796821/04"
-  } ],
-  "related" : [ {
-    "note" : [ "Online-Ausgabe" ],
-    "label" : "Auszeiten für die Seele im Rhein-Main-Gebiet"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "191 Seiten : Illustrationen, Karten ; 20 cm, 520 g",
   "natureOfContent" : [ {
     "label" : "Führer",
     "id" : "https://d-nb.info/gnd/4155569-7"
@@ -177,6 +154,29 @@
     },
     "id" : "http://lobid.org/items/508037980:DE-36:2023%2F589#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1403376624",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "https://d-nb.info/1271796821",
+    "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=508037980#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "https://d-nb.info/1271796821/04"
+  } ],
+  "related" : [ {
+    "note" : [ "Online-Ausgabe" ],
+    "label" : "Auszeiten für die Seele im Rhein-Main-Gebiet"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "191 Seiten : Illustrationen, Karten ; 20 cm, 520 g",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

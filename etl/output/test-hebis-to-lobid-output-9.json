@@ -9,6 +9,7 @@
   "title" : "Gau-Algesheim",
   "almaMmsId" : "090680634",
   "oclcNumber" : [ "45021318" ],
+  "hebisId" : "090680634",
   "otherTitleInformation" : [ "mit Kamera und Herz eines Winzers gesehen" ],
   "publication" : [ {
     "dateStatement" : "2000",
@@ -24,25 +25,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/45021318",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=090680634#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "isPartOf" : [ {
-    "hasSuperordinate" : [ {
-      "label" : "Beiträge zur Geschichte des Gau-Algesheimer Raumes"
-    } ],
-    "numbering" : "42",
-    "type" : [ "IsPartOfRelation" ]
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "72 Seiten : Illustrationen",
   "natureOfContent" : [ {
     "label" : "Bildband",
     "id" : "https://d-nb.info/gnd/4145395-5"
@@ -68,6 +50,25 @@
     },
     "id" : "http://lobid.org/items/090680634:DE-36:2000%2F38#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/45021318",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=090680634#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "isPartOf" : [ {
+    "hasSuperordinate" : [ {
+      "label" : "Beiträge zur Geschichte des Gau-Algesheimer Raumes"
+    } ],
+    "numbering" : "42",
+    "type" : [ "IsPartOfRelation" ]
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "72 Seiten : Illustrationen",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

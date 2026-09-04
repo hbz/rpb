@@ -150,13 +150,24 @@ move_field("_temp", "variantName[]")
 # Da wir keine Bilder bisher haben, nutze ich hier die Bilder vom GND Explorer.
 
 set_array("depiction[]")
-copy_field("gndIdentifier","depiction[].$append.id")
-copy_field("gndIdentifier","depiction[].1.url")
-copy_field("gndIdentifier","depiction[].1.thumbnail")
 
-lookup("depiction[].1.id", "gnd_to_id", delete: "true")
-lookup("depiction[].1.url", "gnd_to_url", delete: "true")
-lookup("depiction[].1.thumbnail", "gnd_to_thumbnail", delete: "true")
+unless exists("depiction.url") # not for strapi image data
+  copy_field("gndIdentifier","depiction[].$append.id")
+  copy_field("gndIdentifier","depiction[].1.url")
+  copy_field("gndIdentifier","depiction[].1.thumbnail")
+  lookup("depiction[].1.id", "gnd_to_id", delete: "true")
+  lookup("depiction[].1.url", "gnd_to_url", delete: "true")
+  lookup("depiction[].1.thumbnail", "gnd_to_thumbnail", delete: "true")
+end
+
+if exists("depiction.url") # only for strapi image data
+  paste("depiction[].$append.id", "depiction.url", "~#", "depictionId", "join_char": "")
+  copy_field("depiction.url", "depiction[].1.url")
+  copy_field("depiction.formats.thumbnail.url", "depiction[].1.thumbnail")
+  prepend("depiction[].1.id", "$[STRAPI_URL]")
+  prepend("depiction[].1.url", "$[STRAPI_URL]")
+  prepend("depiction[].1.thumbnail", "$[STRAPI_URL]")
+end
 
 # -------
 # #1nn (Berufe/Stellungen (m, R)) -> professionOrOccupation

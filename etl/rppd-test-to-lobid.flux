@@ -8,6 +8,7 @@
 
 default IN_FILE = "test-output-rppd.json"; // pass e.g. IN_FILE=test-rppd-export.json
 default RECORD_PATH = ""; // pass e.g. RECORD_PATH=data
+default STRAPI_URL = "https://rpb-cms.lobid.org";
 default dynamicMapPath ="./maps/test/";
 
 FLUX_DIR + "output/" + IN_FILE

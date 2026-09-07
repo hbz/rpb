@@ -9,11 +9,13 @@
 default IN_FILE = "output-rppd-strapi.ndjson"; // pass e.g. OUT_FILE=output-rppd-export.ndjson
 default RECORD_PATH = ""; // pass e.g. RECORD_PATH=data
 default OUT_FILE = "etl/output/bulk/rppd/bulk-rppd-${i}.jsonl"; // lobid-gnd expects *.jsonl suffix
+default STRAPI_URL = "https://rpb-cms.lobid.org";
 default dynamicMapPath ="./maps/";
 
 "etl/output/" + IN_FILE
 | open-file
 | as-lines
+| rpb.FirstRecordOnly
 | filter-strings(RECORD_PATH)
 | decode-json(recordPath=RECORD_PATH)
 | fix(FLUX_DIR + "rppd-to-lobid.fix",*)

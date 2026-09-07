@@ -12,6 +12,7 @@ zgrep -a '"type":"api::person.person","id":' etl/strapi-export.tar.gz > etl/outp
 # Then, we add the full backup exports (like for the title data), to include depictions:
 cat etl/persons.ndjson | grep '"data"' >> etl/output/rppd-export.jsonl
 cp etl/output/rppd-export.jsonl ../rppd/conf/ # used in rppd for robots.txt
-sbt --java-home $JAVA_HOME -mem 3000 "runMain rpb.ETL etl/rppd-to-lobid.flux IN_FILE=rppd-export.jsonl RECORD_PATH=data"
+tac etl/output/rppd-export.jsonl > etl/output/rppd-export-reversed.jsonl
+sbt --java-home $JAVA_HOME -mem 3000 "runMain rpb.ETL etl/rppd-to-lobid.flux IN_FILE=rppd-export-reversed.jsonl RECORD_PATH=data"
 
 # Indexing happens in rppd/transformAndIndexRppd.sh (lobid-gnd repo, branch 'rppd'), which calls this script

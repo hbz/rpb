@@ -15,6 +15,7 @@ default dynamicMapPath ="./maps/";
 "etl/output/" + IN_FILE
 | open-file
 | as-lines
+| rpb.FirstRecordOnly
 | filter-strings(RECORD_PATH)
 | decode-json(recordPath=RECORD_PATH)
 | fix(FLUX_DIR + "rppd-to-lobid.fix",*)

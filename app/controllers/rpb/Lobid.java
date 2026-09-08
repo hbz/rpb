@@ -832,7 +832,7 @@ public class Lobid {
 			return null;
 		}
 		return ImmutableMap.of(//
-				"DE-929", "info.rlb@lbz-rlp.de", //
+				"DE-929", "info.rlb@lbz.rlp.de", //
 				"DE-107", "fernleihe.plb@lbz.rlp.de", //
 				"DE-36", "stb.rpb@stadt.mainz.de", //
 				"DE-121", "fernleiheweba@trier.de") //

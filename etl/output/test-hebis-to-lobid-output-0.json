@@ -9,6 +9,7 @@
   "title" : "Wie wir wurden was wir sind - 10-jähriges Jubiläum des Mehrgenerationenhauses Ingelheim",
   "almaMmsId" : "514226781",
   "oclcNumber" : [ "1415743560" ],
+  "hebisId" : "514226781",
   "publication" : [ {
     "dateStatement" : "[2019?]",
     "startDate" : "2019",
@@ -23,18 +24,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1415743560",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=514226781#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "62 Seiten : Illustrationen",
   "natureOfContent" : [ {
     "label" : "Festschrift",
     "id" : "https://d-nb.info/gnd/4016928-5"
@@ -49,6 +38,18 @@
     },
     "id" : "http://lobid.org/items/514226781:DE-36:K+2023+Q+152#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1415743560",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=514226781#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "62 Seiten : Illustrationen",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

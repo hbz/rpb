@@ -26,26 +26,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1282186376",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "https://d-nb.info/1244538620",
-    "label" : "DNB-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=487803779#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "tableOfContents" : [ {
-    "label" : "Inhaltsverzeichnis",
-    "id" : "https://d-nb.info/1244538620/04"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "175 Seiten : Illustrationen ; 23.5 cm x 13.5 cm",
-  "note" : [ "Quellen- und Literaturverzeichnis Seite 172-175" ],
   "subject" : [ {
     "type" : [ "Concept" ],
     "source" : {
@@ -186,6 +166,26 @@
     },
     "id" : "http://lobid.org/items/487803779:DE-36:Mog+3175#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1282186376",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "https://d-nb.info/1244538620",
+    "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=487803779#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "https://d-nb.info/1244538620/04"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "175 Seiten : Illustrationen ; 23.5 cm x 13.5 cm",
+  "note" : [ "Quellen- und Literaturverzeichnis Seite 172-175" ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

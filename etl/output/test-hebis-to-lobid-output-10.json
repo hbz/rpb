@@ -11,6 +11,7 @@
   "isbn" : [ "3874394883", "9783874394888" ],
   "oclcNumber" : [ "76115483" ],
   "dnbId" : "958853371",
+  "hebisId" : "090358163",
   "otherTitleInformation" : [ "2000 Jahre einer Stadt ; [Stadtbegleiter]" ],
   "publication" : [ {
     "dateStatement" : "[ca. 2000]",
@@ -26,21 +27,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/76115483",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "https://d-nb.info/958853371",
-    "label" : "DNB-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=090358163#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "127 Seiten : Illustrationen, Karten",
   "natureOfContent" : [ {
     "label" : "Führer",
     "id" : "https://d-nb.info/gnd/4155569-7"
@@ -91,6 +77,21 @@
     },
     "id" : "http://lobid.org/items/090358163:DE-36:Mog+3537#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/76115483",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "https://d-nb.info/958853371",
+    "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=090358163#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "127 Seiten : Illustrationen, Karten",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

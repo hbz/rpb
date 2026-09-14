@@ -9,6 +9,7 @@
   "title" : "Alter Dom St. Johannis",
   "almaMmsId" : "512839662",
   "oclcNumber" : [ "1407066536" ],
+  "hebisId" : "512839662",
   "otherTitleInformation" : [ "1500 Jahre Geschichte im Herzen von Mainz" ],
   "publication" : [ {
     "dateStatement" : "[2023?]",
@@ -24,22 +25,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1407066536",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=512839662#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "related" : [ {
-    "note" : [ "Parallele Sprachausgabe englisch" ],
-    "label" : "The ancient cathedral St. John"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "1 gefaltetes Blatt ( 16 Seiten) : Illustrationen",
   "hasItem" : [ {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
@@ -59,6 +44,22 @@
     },
     "id" : "http://lobid.org/items/512839662:DE-36:Mog+m+7188%2C+2.+Ex.#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1407066536",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=512839662#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "related" : [ {
+    "note" : [ "Parallele Sprachausgabe englisch" ],
+    "label" : "The ancient cathedral St. John"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "1 gefaltetes Blatt ( 16 Seiten) : Illustrationen",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

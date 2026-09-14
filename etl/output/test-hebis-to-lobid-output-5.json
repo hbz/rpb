@@ -8,6 +8,7 @@
   } ],
   "title" : "Liederheft",
   "almaMmsId" : "475390555",
+  "hebisId" : "475390555",
   "publication" : [ {
     "dateStatement" : "2002",
     "startDate" : "2002",
@@ -22,15 +23,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=475390555#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "40 Seiten : Illustrationen",
   "hasItem" : [ {
     "label" : "lobid Bestandsressource",
     "type" : [ "Item", "PhysicalObject" ],
@@ -41,6 +33,15 @@
     },
     "id" : "http://lobid.org/items/475390555:DE-36:K+2021%2F46#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=475390555#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "40 Seiten : Illustrationen",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

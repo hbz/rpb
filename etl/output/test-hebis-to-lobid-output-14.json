@@ -25,37 +25,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1512396052",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "https://d-nb.info/1361254696",
-    "label" : "DNB-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=528269186#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "isPartOf" : [ {
-    "hasSuperordinate" : [ {
-      "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=457093552#!",
-      "label" : "Mainzer Stadtspaziergänge"
-    } ],
-    "numbering" : "12",
-    "type" : [ "IsPartOfRelation" ]
-  } ],
-  "tableOfContents" : [ {
-    "label" : "Inhaltsverzeichnis",
-    "id" : "http://scans.hebis.de/HEBCGI/show.pl?52826918_toc.pdf"
-  } ],
-  "description" : [ {
-    "label" : "Inhaltstext",
-    "id" : "https://deposit.dnb.de/cgi-bin/dokserv?id=c5a29e7bbe3f4bd19f58cc452828594f"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "160 Seiten : Illustrationen ; 27 cm",
   "subject" : [ {
     "notation" : "943",
     "type" : [ "Concept" ],
@@ -100,6 +69,37 @@
     },
     "id" : "http://lobid.org/items/528269186:DE-36:Mog%3A4%C2%B0+%2F1776#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1512396052",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "https://d-nb.info/1361254696",
+    "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=528269186#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "isPartOf" : [ {
+    "hasSuperordinate" : [ {
+      "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=457093552#!",
+      "label" : "Mainzer Stadtspaziergänge"
+    } ],
+    "numbering" : "12",
+    "type" : [ "IsPartOfRelation" ]
+  } ],
+  "tableOfContents" : [ {
+    "label" : "Inhaltsverzeichnis",
+    "id" : "http://scans.hebis.de/HEBCGI/show.pl?52826918_toc.pdf"
+  } ],
+  "description" : [ {
+    "label" : "Inhaltstext",
+    "id" : "https://deposit.dnb.de/cgi-bin/dokserv?id=c5a29e7bbe3f4bd19f58cc452828594f"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "160 Seiten : Illustrationen ; 27 cm",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

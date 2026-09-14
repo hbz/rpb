@@ -9,6 +9,7 @@
   "title" : "Sportwoche Ingelheim am Rhein vom 10.-18. September 1977",
   "almaMmsId" : "516707701",
   "oclcNumber" : [ "1428135055" ],
+  "hebisId" : "516707701",
   "otherTitleInformation" : [ "Programm und Vereinsspiegel der teilnehmenden Vereine :" ],
   "publication" : [ {
     "dateStatement" : "September 1977",
@@ -24,18 +25,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "http://worldcat.org/oclc/1428135055",
-    "label" : "OCLC-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=516707701#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
-  "extent" : "28 Seiten : Illustrationen",
   "natureOfContent" : [ {
     "label" : "Programmheft",
     "id" : "https://d-nb.info/gnd/4373950-7"
@@ -50,6 +39,18 @@
     },
     "id" : "http://lobid.org/items/516707701:DE-36:K+2024%2F20#!"
   } ],
+  "sameAs" : [ {
+    "id" : "http://worldcat.org/oclc/1428135055",
+    "label" : "OCLC-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=516707701#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
+  } ],
+  "extent" : "28 Seiten : Illustrationen",
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

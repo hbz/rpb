@@ -447,8 +447,8 @@ do put_macro("schlagwortfolge")
         end
       end
       unless exists("$i.t") # Work/Werktitel should not receive dateOfBirthAndDeath, datesOfBirth or dateOfDeath
-      copy_field("$i.d","subject[].$last.componentList[].$last.dateOfBirthAndDeath") # dates will be differentiated later in the process
-    end
+        copy_field("$i.d","subject[].$last.componentList[].$last.dateOfBirthAndDeath") # dates will be differentiated later in the process
+      end
     end
     join_field("subject[].$last.label"," | ")
   end

@@ -10,6 +10,7 @@
   "almaMmsId" : "488844266",
   "isbn" : [ "9783739271699", "3739271698" ],
   "oclcNumber" : [ "1288418997" ],
+  "hebisId" : "488844266",
   "otherTitleInformation" : [ "Mörder in USA aus Region Bingen, Alzey" ],
   "publication" : [ {
     "dateStatement" : "[2015]",
@@ -25,6 +26,16 @@
       }
     }
   },
+  "hasItem" : [ {
+    "label" : "lobid Bestandsressource",
+    "type" : [ "Item", "PhysicalObject" ],
+    "callNumber" : "2021/1406",
+    "heldBy" : {
+      "id" : "http://lobid.org/organisations/DE-36#!",
+      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
+    },
+    "id" : "http://lobid.org/items/488844266:DE-36:2021%2F1406#!"
+  } ],
   "sameAs" : [ {
     "id" : "http://worldcat.org/oclc/1288418997",
     "label" : "OCLC-Ressource"
@@ -37,16 +48,6 @@
     "label" : "Deutsch"
   } ],
   "extent" : "271 Seiten : Illustrationen",
-  "hasItem" : [ {
-    "label" : "lobid Bestandsressource",
-    "type" : [ "Item", "PhysicalObject" ],
-    "callNumber" : "2021/1406",
-    "heldBy" : {
-      "id" : "http://lobid.org/organisations/DE-36#!",
-      "label" : "Wissenschaftliche Stadtbibliothek Mainz"
-    },
-    "id" : "http://lobid.org/items/488844266:DE-36:2021%2F1406#!"
-  } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",
     "id" : "https://www.loc.gov/marc/bibliographic/bdleader.html#Monograph_Item"

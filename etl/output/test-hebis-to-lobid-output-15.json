@@ -9,6 +9,7 @@
   "title" : "Mainzer Stadtspaziergänge",
   "almaMmsId" : "457093552",
   "dnbId" : "1203676662",
+  "hebisId" : "457093552",
   "publication" : [ {
     "dateStatement" : "Dezember 2019-",
     "startDate" : "2019",
@@ -29,17 +30,6 @@
       }
     }
   },
-  "sameAs" : [ {
-    "id" : "https://d-nb.info/1203676662",
-    "label" : "DNB-Ressource"
-  }, {
-    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=457093552#!",
-    "label" : "HEBIS-Ressource"
-  } ],
-  "language" : [ {
-    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
-    "label" : "Deutsch"
-  } ],
   "subject" : [ {
     "notation" : "943",
     "type" : [ "Concept" ],
@@ -81,6 +71,17 @@
       "label" : "Wissenschaftliche Stadtbibliothek Mainz"
     },
     "id" : "http://lobid.org/items/457093552:DE-36:Zur+Fortsetzung+bestellt#!"
+  } ],
+  "sameAs" : [ {
+    "id" : "https://d-nb.info/1203676662",
+    "label" : "DNB-Ressource"
+  }, {
+    "id" : "http://cbsopac.rz.uni-frankfurt.de/DB=2.1/PPNSET?PPN=457093552#!",
+    "label" : "HEBIS-Ressource"
+  } ],
+  "language" : [ {
+    "id" : "http://id.loc.gov/vocabulary/iso639-2/ger",
+    "label" : "Deutsch"
   } ],
   "bibliographicLevel" : {
     "label" : "Monograph/Item",

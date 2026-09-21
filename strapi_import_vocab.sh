@@ -21,7 +21,7 @@ git switch main
 # get changes from remote
 git fetch origin
 
-changed_files=$(git diff --name-only origin/main...HEAD -- '*.ndjson')
+changed_files=$(git diff --name-only HEAD..origin/main -- '*.ndjson')
 
 if [ -z "$changed_files" ]; then
     echo "No ndjson files changed."

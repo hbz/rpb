@@ -592,7 +592,7 @@ public class Application extends Controller {
 
 	private static void uncache(List<String> ids) {
 		for (String id : ids) {
-			Cache.remove(String.format("%s-/rpb/%s", session("uuid"), id));
+			Cache.remove(String.format("%s-%s", session("uuid"), id));
 		}
 	}
 

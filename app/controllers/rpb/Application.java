@@ -319,11 +319,14 @@ public class Application extends Controller {
 		} else {
 			Logger.warn("No pagination session data for {}", id);
 		}
-		String cleanId = id.replace("#!", "").replace(ZDB_PREFIX, "");
-		String q = String.format("rpbId:%s OR hbzId:%s OR almaMmsId:%s OR zdbId:%s OR hebisId:%s OR id:\"https://lobid.org/resources/%s\"",
-				cleanId, cleanId, cleanId, cleanId, cleanId, cleanId);
-		return search(q,"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format),
+		return search(idQuery(id),"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format),
 				"", "", "", "", format);
+	}
+
+	private static String idQuery(String id) {
+		String cleanId = id.replace("#!", "").replace(ZDB_PREFIX, "");
+		return String.format("rpbId:%s OR hbzId:%s OR almaMmsId:%s OR zdbId:%s OR hebisId:%s OR id:\"https://lobid.org/resources/%s\"",
+				cleanId, cleanId, cleanId, cleanId, cleanId, cleanId);
 	}
 
 	/**
@@ -544,6 +547,12 @@ public class Application extends Controller {
 			final int size, String owner, String t, String sort, boolean showDetails,
 			String location, String word, String corporation, String raw,
 			String format) {
+		final String detailsKey = showDetails ? "detailsJson." + q : null;
+		if (showDetails) {
+			String cachedDoc = (String) Cache.get(detailsKey);
+			if (cachedDoc != null)
+				return Promise.pure(ok(details.render(CONFIG, cachedDoc, id)));
+		}
 		final WSRequest requestHolder = Lobid.request(q, person, name, subject, id,
 				publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 				owner, t, sort, location, word, corporation, raw);
@@ -570,6 +579,7 @@ public class Application extends Controller {
 				JsonNode nodes = Json.parse(s).get("member");
 				if (nodes != null && nodes.isArray() && nodes.size() == 1) {
 					json = nodes.get(0).toString();
+					Cache.set(detailsKey, json, ONE_DAY);
 				} else {
 					Logger.warn("No suitable data to show details for: {}", nodes);
 				}
@@ -996,7 +1006,7 @@ public class Application extends Controller {
 	}
 
 	private static Promise<Result> deleteFromIndex(String id) throws UnsupportedEncodingException {
-		Cache.remove(String.format("/%s", id));
+		Cache.remove("detailsJson." + idQuery(id));
 		WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
 		return request.delete().map(response -> status(response.getStatus(), response.getBody()));
 	}
@@ -1013,7 +1023,7 @@ public class Application extends Controller {
 			}
 		}
 		return dataPromise.flatMap(result -> {
-			Cache.remove(String.format("/%s", id));
+			Cache.remove("detailsJson." + idQuery(id));
 			WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
 			return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
 		});

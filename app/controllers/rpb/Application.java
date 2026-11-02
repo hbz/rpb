@@ -269,11 +269,13 @@ public class Application extends Controller {
 		}
 		String cacheId = request().queryString().isEmpty() ? request().uri()
 				: String.format("%s-%s", uuid, request().uri());
-		@SuppressWarnings("unchecked")
-		Promise<Result> cachedResult = (Promise<Result>) Cache.get(cacheId);
-		if (cachedResult != null)
-			return cachedResult;
-		Logger.debug("Not cached: {}, will cache for one hour", cacheId);
+		if(!details) {
+			@SuppressWarnings("unchecked")
+			Promise<Result> cachedResult = (Promise<Result>) Cache.get(cacheId);
+			if (cachedResult != null)
+				return cachedResult;
+			Logger.debug("Not cached: {}, will cache for one hour", cacheId);
+		}
 		final Form<String> form = queryForm.bindFromRequest();
 		if (form.hasErrors())
 			return Promise.promise(
@@ -285,7 +287,8 @@ public class Application extends Controller {
 				subject, id, publisher, issued, medium, rpbspatial, rpbsubject,
 				from, size, owner, t, sort, details, location, word, corporation, raw,
 				format.isEmpty() ? "html" : format);
-		cacheOnRedeem(cacheId, result, ONE_HOUR);
+		if(!details)
+			cacheOnRedeem(cacheId, result, ONE_HOUR);
 		return result;
 	}
 

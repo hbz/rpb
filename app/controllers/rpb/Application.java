@@ -269,11 +269,6 @@ public class Application extends Controller {
 		}
 		String cacheId = request().queryString().isEmpty() ? request().uri()
 				: String.format("%s-%s", uuid, request().uri());
-		@SuppressWarnings("unchecked")
-		Promise<Result> cachedResult = (Promise<Result>) Cache.get(cacheId);
-		if (cachedResult != null)
-			return cachedResult;
-		Logger.debug("Not cached: {}, will cache for one hour", cacheId);
 		final Form<String> form = queryForm.bindFromRequest();
 		if (form.hasErrors())
 			return Promise.promise(
@@ -284,8 +279,7 @@ public class Application extends Controller {
 		Promise<Result> result = okPromise(query != null ? query : q, person, name,
 				subject, id, publisher, issued, medium, rpbspatial, rpbsubject,
 				from, size, owner, t, sort, details, location, word, corporation, raw,
-				format.isEmpty() ? "html" : format);
-		cacheOnRedeem(cacheId, result, ONE_HOUR);
+				format.isEmpty() ? "html" : format, details ? null : cacheId);
 		return result;
 	}
 
@@ -316,11 +310,14 @@ public class Application extends Controller {
 		} else {
 			Logger.warn("No pagination session data for {}", id);
 		}
-		String cleanId = id.replace("#!", "").replace(ZDB_PREFIX, "");
-		String q = String.format("rpbId:%s OR hbzId:%s OR almaMmsId:%s OR zdbId:%s OR hebisId:%s OR id:\"https://lobid.org/resources/%s\"",
-				cleanId, cleanId, cleanId, cleanId, cleanId, cleanId);
-		return search(q,"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format),
+		return search(idQuery(id),"", "", "", "", "", "", "", "", "", 0, 1, "", "", "", "".equals(format) || "html".equals(format),
 				"", "", "", "", format);
+	}
+
+	private static String idQuery(String id) {
+		String cleanId = id.replace("#!", "").replace(ZDB_PREFIX, "");
+		return String.format("rpbId:%s OR hbzId:%s OR almaMmsId:%s OR zdbId:%s OR hebisId:%s OR id:\"https://lobid.org/resources/%s\"",
+				cleanId, cleanId, cleanId, cleanId, cleanId, cleanId);
 	}
 
 	/**
@@ -500,10 +497,10 @@ public class Application extends Controller {
 			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, final String owner, String t, String sort,
 			boolean details, String location, String word, String corporation,
-			String raw, String format) {
+			String raw, String format, String searchCacheId) {
 		final Promise<Result> result = call(q, person, name, subject, id, publisher,
 				issued, medium, rpbspatial, rpbsubject, from, size, owner, t, sort,
-				details, location, word, corporation, raw, format);
+				details, location, word, corporation, raw, format, searchCacheId);
 		return result.recover((Throwable throwable) -> {
 			Logger.error("Error on Lobid call with q={}, person={}, name={}, subject={}, id={}, publisher={},\n"
 					+ "issued={}, medium={}, rpbspatial={}, rpbsubject={}, from={}, size={}, owner={}, t={}, sort={},\n"
@@ -540,23 +537,33 @@ public class Application extends Controller {
 			final String rpbspatial, final String rpbsubject, final int from,
 			final int size, String owner, String t, String sort, boolean showDetails,
 			String location, String word, String corporation, String raw,
-			String format) {
+			String format, String searchCacheId) {
+		final String detailsKey = showDetails ? "detailsJson." + q : null;
+		if (showDetails) {
+			String cachedDoc = (String) Cache.get(detailsKey);
+			if (cachedDoc != null)
+				return Promise.pure(ok(details.render(CONFIG, cachedDoc, id)));
+		}
+		final String searchKey = searchCacheId == null ? null : "searchJson." + searchCacheId;
+		if (searchKey != null) {
+			String cached = (String) Cache.get(searchKey);
+			if (cached != null) {
+				establishLastSearch(q, cached);
+				return Promise.pure(searchResult(cached, q, person, name, subject, id,
+						publisher, issued, medium, rpbspatial, rpbsubject, from, size,
+						owner, t, sort, location, word, corporation, raw, format));
+			}
+			Logger.debug("Not cached: {}, will cache for one hour", searchKey);
+		}
 		final WSRequest requestHolder = Lobid.request(q, person, name, subject, id,
 				publisher, issued, medium, rpbspatial, rpbsubject, from, size,
 				owner, t, sort, location, word, corporation, raw);
 		return requestHolder.get().map((WSResponse response) -> {
-			Long hits = 0L;
 			String s = "{}";
 			if (response.getStatus() == Http.Status.OK) {
 				JsonNode json = response.asJson();
-				hits = Lobid.getTotalResults(json);
 				s = removeNonFormattingControlCharacters(json.toString());
-				if (!q.contains("rpbId:")) {
-					List<JsonNode> ids = json.findValues("rpbId");
-					uncache(
-							ids.stream().map(j -> j.asText()).collect(Collectors.toList()));
-					Cache.set(session("uuid") + "-lastSearch", ids.toString(), ONE_DAY);
-				}
+				establishLastSearch(q, s);
 			} else {
 				Logger.warn("{}: {} ({}, {})", response.getStatus(),
 						response.getStatusText(), requestHolder.getUrl(),
@@ -567,20 +574,49 @@ public class Application extends Controller {
 				JsonNode nodes = Json.parse(s).get("member");
 				if (nodes != null && nodes.isArray() && nodes.size() == 1) {
 					json = nodes.get(0).toString();
+					Cache.set(detailsKey, json, ONE_DAY);
 				} else {
 					Logger.warn("No suitable data to show details for: {}", nodes);
 				}
 				return ok(details.render(CONFIG, json, id));
 			}
 
-			return format.equals("html")
-					? ok(search.render(s, q, person, name, subject, id, publisher, issued,
-							medium, rpbspatial, rpbsubject, from, size, hits, owner, t,
-							sort, location, word, corporation, raw))
-					: ok(new ObjectMapper().writerWithDefaultPrettyPrinter()
-							.writeValueAsString(Json.parse(s)))
-									.as("application/json; charset=utf-8");
+			if (searchKey != null && response.getStatus() == Http.Status.OK)
+				Cache.set(searchKey, s, ONE_HOUR);
+			return searchResult(s, q, person, name, subject, id, publisher, issued,
+					medium, rpbspatial, rpbsubject, from, size, owner, t, sort,
+					location, word, corporation, raw, format);
 		});
+	}
+
+	private static void establishLastSearch(String q, String json) {
+		if (!q.contains("rpbId:")) {
+			List<JsonNode> ids = Json.parse(json).findValues("rpbId");
+			uncache(ids.stream().map(j -> j.asText()).collect(Collectors.toList()));
+			Cache.set(session("uuid") + "-lastSearch", ids.toString(), ONE_DAY);
+		}
+	}
+
+	private static Result searchResult(String s, final String q, final String person,
+			final String name, final String subject, final String id,
+			final String publisher, final String issued, final String medium,
+			final String rpbspatial, final String rpbsubject, final int from,
+			final int size, final String owner, String t, String sort,
+			String location, String word, String corporation, String raw, String format) {
+		JsonNode total = Json.parse(s).findValue("totalItems");
+		Long hits = total == null ? 0L : total.asLong();
+		if (format.equals("html"))
+			return ok(search.render(s, q, person, name, subject, id, publisher, issued,
+					medium, rpbspatial, rpbsubject, from, size, hits, owner, t,
+					sort, location, word, corporation, raw));
+		try {
+			return ok(new ObjectMapper().writerWithDefaultPrettyPrinter()
+					.writeValueAsString(Json.parse(s)))
+					.as("application/json; charset=utf-8");
+		} catch (JsonProcessingException e) {
+			Logger.error("Could not write JSON for search result", e);
+			return ok(s).as("application/json; charset=utf-8");
+		}
 	}
 
 	public static String removeNonFormattingControlCharacters(String string) {
@@ -589,7 +625,7 @@ public class Application extends Controller {
 
 	private static void uncache(List<String> ids) {
 		for (String id : ids) {
-			Cache.remove(String.format("%s-/rpb/%s", session("uuid"), id));
+			Cache.remove(String.format("%s-%s", session("uuid"), id));
 		}
 	}
 
@@ -993,7 +1029,7 @@ public class Application extends Controller {
 	}
 
 	private static Promise<Result> deleteFromIndex(String id) throws UnsupportedEncodingException {
-		Cache.remove(String.format("/%s", id));
+		Cache.remove("detailsJson." + idQuery(id));
 		WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
 		return request.delete().map(response -> status(response.getStatus(), response.getBody()));
 	}
@@ -1010,7 +1046,7 @@ public class Application extends Controller {
 			}
 		}
 		return dataPromise.flatMap(result -> {
-			Cache.remove(String.format("/%s", id));
+			Cache.remove("detailsJson." + idQuery(id));
 			WSRequest request = WS.url(elasticsearchUrl(id)).setHeader("Content-Type", "application/json");
 			return request.put(result).map(response -> status(response.getStatus(), response.getBody()));
 		});

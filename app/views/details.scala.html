@@ -101,8 +101,10 @@ Mit freundlichen Grüßen
               <ul class="pager">
                 @pageLink(last, "prev", "&larr;", "Voriger Treffer")
                 @defining(session("lastSearchUrl")){ lastSearchUrl =>
-                  <li><a href="@lastSearchUrl">Treffer @(last.indexOf((doc\\"rpbId")(0).as[String])+1) von @last.size in der 
-                  @if(lastSearchUrl contains rpb.routes.Application.showStars().toString()) {Merkliste} else {Trefferliste}</a></li>
+                  @defining(last.indexOf((doc\\"rpbId")(0).as[String])){ pos =>
+                    <li><a href="@lastSearchUrl">@if(pos >= 0) {Treffer @(pos+1) von @last.size in der }
+                    @if(lastSearchUrl contains rpb.routes.Application.showStars().toString()) {Merkliste} else {Trefferliste}</a></li>
+                  }
                 }
                 @pageLink(last, "next", "&rarr;", "Nächster Treffer")
               </ul>

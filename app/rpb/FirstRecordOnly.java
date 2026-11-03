@@ -3,6 +3,7 @@
 package rpb;
 
 import java.util.HashSet;
+import java.util.Optional;
 
 import org.metafacture.framework.MetafactureException;
 import org.metafacture.framework.ObjectReceiver;
@@ -26,7 +27,7 @@ public final class FirstRecordOnly extends DefaultObjectPipe<String, ObjectRecei
             JsonNode tree = MAPPER.readTree(obj);
             JsonNode data = tree.has("data") ? tree.get("data") : tree;
             if (data != null) {
-                JsonNode idNode = data.get("id");
+                JsonNode idNode = Optional.ofNullable(data.get("id")).orElse(data.get("rppdId"));
                 String id;
                 if (idNode != null && !ids.contains(id = idNode.asText())) {
                     getReceiver().process(obj);

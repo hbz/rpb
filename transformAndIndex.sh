@@ -27,8 +27,8 @@ sbt --java-home $JAVA_HOME "runMain rpb.ETL etl/rpb-sw.flux" # creates TSV looku
 # Instead, we use the backup exports created in Strapi lifecycle afterCreate and afterUpdate hooks (copy from backup/ in Strapi instance):
 cat etl/articles.ndjson | grep '"data"' | jq -c .data > etl/output/output-strapi.ndjson
 cat etl/independent_works.ndjson | grep '"data"' | jq -c .data >> etl/output/output-strapi.ndjson
-# External records:
-tac etl/external_records.ndjson | grep '"data"' | jq -c .data > etl/output/output-strapi-external.ndjson
+# External records, only most recent record for each ID via tac (latest first) and jq (only first for each ID):
+tac etl/external_records.ndjson | grep '"data"' | jq -cs 'map(.data) | reduce .[] as $r ({}; .[$r.id|tostring] //= $r) | .[]' > etl/output/output-strapi-external.ndjson
 cat etl/output/output-strapi-external.ndjson | grep '"nur RPB"\|"RPB und BiblioVino"' > etl/output/output-strapi-external-rpb.ndjson
 cat etl/output/output-strapi-external.ndjson | grep '"nur BiblioVino"\|"RPB und BiblioVino"' > etl/output/output-strapi-external-vino.ndjson
 # Remove old index data:
